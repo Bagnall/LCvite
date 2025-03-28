@@ -1,0 +1,1224 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "sp-flag.png",
+		"title": "Spanish Learning Object 2",
+		"targetLanguage": "spanish",
+		"subtitle": "ABOUT ME:  marital status, occupation"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "PhraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Hola, ¿estás bien?",
+				"Hi, are you well?",
+				"salut-ca-va.mp3"
+			],
+			[
+				"Hola yo estoy bien ¿y tu?",
+				"Hi, I'm fine and you?",
+				"salut-ca-va-et-toi.mp3"
+			],
+			[
+				"Muy bien, ¡gracias!",
+				"Very well, thank you!",
+				"tres-bien-merci.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Hola, señora Foucher. ¿Cómo está?",
+				"Hello, Mrs Foucher! How are you?",
+				"bonjour-madamefoucher-comment-ca-va.mp3"
+			],
+			[
+				"Hola Sr. Letort, estoy muy bien, gracias. ¿Y usted?",
+				"Hello Mr. Letort, I'm very well, thank you. And you?",
+				"bonjour-monsieur-letort-ca-va-tres-bien-et-vous.mp3"
+			],
+			[
+				"¡Estoy bien gracias!",
+				"I'm fine, thank you!",
+				"ca-va-merci.mp3"
+			],
+			[
+				""
+			],
+			[
+				"¿Cómo te llamas?",
+				"What's your name?",
+				"comment-t-appelles-tu.mp3"
+			],
+			[
+				"Mi nombre es Max. ¿Y tú eres…?",
+				"My name is Max. And you're….?",
+				"je-m-appelle-max-et-toi.mp3"
+			],
+			[
+				"Mi nombre es Camille.",
+				"My name's Camille.",
+				"je-m-appelle-camille.mp3"
+			],
+			[
+				""
+			],
+			[
+				"¿Cómo te llamas?",
+				"What's your name?",
+				"comment-vous-appelez-vous.mp3"
+			],
+			[
+				"Mi nombre es Isabelle Martin.",
+				"My name is Isabelle Martin.",
+				"je-m-appelle-isabelle-martin.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "Well done, you found them all!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"étudiant",
+				"student"
+			],
+			[
+				"élève",
+				"pupil"
+			],
+			[
+				"professeur",
+				"teacher"
+			],
+			[
+				"médecin",
+				"doctor"
+			],
+			[
+				"archiviste",
+				"archivist"
+			],
+			[
+				"bibliothécaire",
+				"librarian"
+			],
+			[
+				"administrateur",
+				"administrator"
+			],
+			[
+				"avocat",
+				"lawyer"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops"
+	},
+	"vocabulary1": {
+		"component": "PhraseTable",
+		"id": "vocabulary1",
+		"phrases": [
+			[
+				"Bonjour",
+				"hello, good morning, good afternoon",
+				"bonjour.mp3"
+			],
+			[
+				"Bonsoir",
+				"hello, good evening",
+				"bonsoir.mp3"
+			],
+			[
+				"Coucou",
+				"hi, cooee, peek-a-boo",
+				"coucou.mp3"
+			],
+			[
+				"Salut",
+				"hi, bye",
+				"salut.mp3"
+			],
+			[
+				"Au revoir",
+				"goodbye",
+				"au-revoir.mp3"
+			],
+			[
+				"A bientôt",
+				"See you soon!",
+				"a-bientot.mp3"
+			],
+			[
+				"Monsieur",
+				"sir, Mr",
+				"monsieur.mp3"
+			],
+			[
+				"Madame*",
+				"madam, Mrs / Ms",
+				"madame.mp3"
+			],
+			[
+				"Mademoiselle",
+				"young lady, Miss",
+				"mademoiselle.mp3"
+			],
+			[
+				"Messieurs-dames",
+				"ladies and gentlemen",
+				"messieurs-dames.mp3"
+			],
+			[
+				"jeune homme",
+				"young man",
+				"jeune-homme.mp3"
+			],
+			[
+				"mon petit (m) / ma petite(f)",
+				"poppet  (literally: my little one)",
+				"mon-petit-ma-petit.mp3"
+			],
+			[
+				"mon amour",
+				"my love",
+				"mon-amour.mp3"
+			],
+			[
+				"mon chéri (m) / ma chérie (f)",
+				"my darling",
+				"mon-cheri-ma-cherie.mp3"
+			],
+			[
+				"les enfants",
+				"children",
+				"les-enfants.mp3"
+			],
+			[
+				"tout le monde",
+				"Everyone (literally : all the world)",
+				"tout-le-monde.mp3"
+			],
+			[
+				"Ca va ?",
+				"Are you well / OK?  Are things alright/ OK?",
+				"ca-va-qm.mp3"
+			],
+			[
+				"Comment ça va ?",
+				"How are you? (literally: how's it going?)",
+				"comment-ca-va.mp3"
+			],
+			[
+				"Très bien",
+				"Very well",
+				"tres-bien.mp3"
+			],
+			[
+				"Ca va.",
+				"(I'm) fine",
+				"ca-va.mp3"
+			],
+			[
+				"Pas mal",
+				"Not bad",
+				"pas-mal.mp3"
+			],
+			[
+				"Comment t'appelles-tu* ?",
+				"What's your name?",
+				"comment-t-appelles-tu.mp3"
+			],
+			[
+				"Comment vous appelez-vous* ?",
+				"What's your name?",
+				"comment-vous-appelez-vous.mp3"
+			],
+			[
+				"Je m'appelle …",
+				"My name is …",
+				"je-m-appelle.mp3"
+			],
+			[
+				"Bonne journée !",
+				"Have a nice day!",
+				"bonne-journee.mp3"
+			],
+			[
+				"Bonne soirée !",
+				"Have a nice evening!   ",
+				"bonne-soiree.mp3"
+			],
+			[
+				"Bonne nuit !",
+				"Good night!",
+				"bonne-nuit.mp3"
+			],
+			[
+				"Bon voyage !",
+				"Have a safe journey! / Have a good trip!",
+				"bon-voyage.mp3"
+			],
+			[
+				"Bonnes vacances !",
+				"Enjoy your holiday!",
+				"bonnes-vacances.mp3"
+			],
+			[
+				"oui, non",
+				"Yes, no",
+				"oui-non.mp3"
+			],
+			[
+				"merci",
+				"thank you",
+				"merci.mp3"
+			],
+			[
+				"d'accord",
+				"OK then, alright",
+				"d-accord.mp3"
+			],
+			[
+				"aujourd'hui",
+				"today",
+				"aujourd-hui.mp3"
+			],
+			[
+				"enchanté.e",
+				"Pleased to meet you (literally: delighted)",
+				"enchante.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b>Mademoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
+			"<p>2 <b>Tu*</b> and <b>vous*</b> both mean 'you'.</p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. When returning question i.e.  when you ask 'and you? you use the form <b>toi</b> instead of <b>tu: Je m'appelle Michel et toi ?</b></p><p>You use <b>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
+		],
+		"id": "explanation1",
+		"titleText": "Grammar / Use of Language."
+	},
+	"jigsaw1": {
+		"component": "Jigsaw",
+		"correctImage": "/images/cyclist-horse.jpg",
+		"id": "jigsaw1",
+		"incorrectImage": "/images/parrot-jaguar.jpg",
+		"congratulationsText": "Well done! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
+		"descriptionTextComment": "Foreign language description of picture with nouns, verbs and lots of adjectives.'",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/cyclist-horse.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	},
+	"explanation2": {
+		"component": "Explanation",
+		"content": [
+			"<h2>How to pronounce:</h2>",
+			"<p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/non-existant.mp3'/></p>",
+			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words bonjour and bonsoir.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
+			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/non-existant.mp3'/></p>",
+			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French r is made in that very place. If you place your fingers on your neck (pic) you should feel a very slight vibration. You will have encountered this sound in the words bonjou<b>r</b>, bonsoi<b>r</b>, au <b>r</b>evoi<b>r</b>.</p>",
+			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/non-existant.mp3'/></p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   m<b>oi</b>, t<b>oi</b>, au rev<b>oi</b>r (sound files)</p><p>4 <b>The letter h</b>  (pic 'Shhh! As above?)</p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <b>h</b>omme, <b>h</b>orrible, <b>h</b>orizon (sound files)</p>"
+		],
+		"id": "explanation2",
+		"titleText": "Demystifying French Pronunciation."
+	},
+	"wordsIntoSlots1": {
+		"component": "Blanks",
+		"id": "wordsIntoSlots1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+		"listenDescriptionText": "Speech",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "table",
+		"words": [
+			"moi",
+			"roi",
+			"homme",
+			"hôtel",
+			"hôpital",
+			"bonjour",
+			"bonbon",
+			"au revoir",
+			"mon",
+			"trois",
+			"horrible",
+			"toi",
+			"quoi",
+			"froid",
+			"ton",
+			"non",
+			"bon",
+			"son",
+			"nom"
+		],
+		"soundFile": "non-existant.mp3",
+		"titleText": "Put the Words in the Order You Hear Them"
+	},
+	"wordparts1": {
+		"cheatText": "Cheat",
+		"component": "WordParts",
+		"congratulationsText": "Superb!",
+		"id": "wordparts1",
+		"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
+		"showHintsText": "Show hints when moving",
+		"phrases": [
+			"b[on]jou[r] m[on] ché[r]i",
+			"b[on]s[oi][r] m[on] amou[r]",
+			"au rev[oi]r ma ché[r]ie",
+			"quelle [h]o[r][r]eur Valé[r]ie"
+		],
+		"audio": [
+			"bonjour-mon-cheri.mp3",
+			"bonsoir-mon-amour.mp3",
+			"au-revoir-ma-cherie.mp3",
+			"quelle-horreur-valerie.mp3"
+		],
+		"titleText": "Select the parts of the words with the described sounds"
+	},
+	"phrases1": {
+		"component": "Blanks",
+		"id": "phrases1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "phrases",
+		"words": [
+			"mon",
+			"chérie",
+			"toi",
+			"va",
+			"très"
+		],
+		"phrases": [
+			"Coucou [mon] amour ! Ca [va] aujourd'hui ?",
+			"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
+			"Ça va !"
+		],
+		"audio": [
+			"phrase1.mp3",
+			"phrase2.mp3",
+			"phrase3.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"phrases2": {
+		"component": "Blanks",
+		"blanksType": "phrases",
+		"cheatText": "Cheat",
+		"congratulationsText": "Superb!",
+		"id": "phrases2",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"words": [
+			"comment",
+			"merci",
+			"vous"
+		],
+		"phrases": [
+			"Bonsoir Monsieur Galipot ! [comment] ça va ?",
+			"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
+			"Ah pas mal [merci] !"
+		],
+		"audio": [
+			"phrase4.mp3",
+			"phrase5.mp3",
+			"phrase6.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"phrases3": {
+		"blanksType": "phrases",
+		"cheatText": "Cheat",
+		"component": "Blanks",
+		"congratulationsText": "Very good!",
+		"id": "phrases3",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"words": [
+			"enfants",
+			"revoir",
+			"appelle",
+			"appelez",
+			"moi"
+		],
+		"phrases": [
+			"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+			"Bonjour Madame ! Je m' [appelle] Annie.",
+			"Et [moi], je m'appelle David.",
+			"D'accord. Très bien !",
+			"Merci Madame ! Bonne journée !",
+			"Au [revoir] les enfants !  Bonne journée !"
+		],
+		"audio": [
+			"phrase7.mp3",
+			"phrase8.mp3",
+			"phrase9.mp3",
+			"phrase10.mp3",
+			"phrase11.mp3",
+			"phrase12.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"monologues1": {
+		"component": "PhraseTable",
+		"id": "monologues1",
+		"phrases": [
+			[
+				"Salut,  je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
+				"Hi, I'm Sylvain. I'm single and I'm a geography student.",
+				"salut-je-suis-sylvain-je-suis-celibataire-je-suis-etudiant-en-geographie.mp3"
+			],
+			[
+				"Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.",
+				"Hello, my name's Jacqueline. I'm divorced. I'm a maths teacher",
+				"bonjour-je-m-appelle-jacqueline-je-suis-divorcee-je-suis-prof-de-maths.mp3"
+			],
+			[
+				"Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.",
+				"Good evening, my name's Olivier Durand. I've been married to Alex for three years and I'm a librarian.",
+				"bonsoir-je-m-appelle-olivier-durand-je-suis-marie-avec-alex-depuis-trois-ans-et-je-suis-bibliothecaire.mp3"
+			]
+		],
+		"titleText": "Monologues"
+	},
+	"vocabulary2": {
+		"component": "PhraseTable",
+		"id": "vocabulary2",
+		"phrases": [
+			[
+				"être*",
+				"to be",
+				"etre.mp3"
+			],
+			[
+				"marié.e",
+				"married",
+				"marie.mp3"
+			],
+			[
+				"divorcé.e",
+				"divorced",
+				"divorce.mp3"
+			],
+			[
+				"séparé.e",
+				"separated",
+				"separe.mp3"
+			],
+			[
+				"fiancé.e",
+				"engaged",
+				"fiance.mp3"
+			],
+			[
+				"pacsé.e",
+				"In a civil partnership",
+				"pacse.mp3"
+			],
+			[
+				"célibataire",
+				"single",
+				"celibataire.mp3"
+			],
+			[
+				"étudiant / étudiante",
+				"University student",
+				"etudiante.mp3"
+			],
+			[
+				"élève",
+				"school pupil",
+				"eleve.mp3"
+			],
+			[
+				"chercheur(m) / chercheuse(f)",
+				"researcher",
+				"chercheuse.mp3"
+			],
+			[
+				"doctorant / doctorante",
+				"PhD student",
+				"doctorant.mp3"
+			],
+			[
+				"professeur.e prof (m and f)",
+				"teacher, professeur",
+				"professeure.mp3"
+			],
+			[
+				"médecin (m and f)",
+				"doctor",
+				"medecin.mp3"
+			],
+			[
+				"archiviste",
+				"archiviste",
+				"archiviste.mp3"
+			],
+			[
+				"bibliothécaire",
+				"librarian",
+				"bibliothecaire.mp3"
+			],
+			[
+				"administrateur (m) administratrice(f)",
+				"administrator",
+				"administratrice.mp3"
+			],
+			[
+				"informaticien.ne",
+				"IT specialist",
+				"informaticien.mp3"
+			],
+			[
+				"avocat / avocate",
+				"lawyer",
+				"avocate.mp3"
+			],
+			[
+				"Que faites-vous* (dans la vie) ?",
+				"What do you do (for a living)?",
+				"que-faites-vous-dans-la-vie.mp3"
+			],
+			[
+				"Que fais-tu* (dans la vie) ?",
+				"What do you do (for a living)?",
+				"que-fais-tu-dans-la-vie.mp3"
+			],
+			[
+				"Quelle est ta / votre profession ?",
+				"What's your profession?",
+				"quelle-est-votre-profession.mp3"
+			],
+			[
+				"Quel est ton / votre métier ?",
+				"What's your profession?",
+				"quel-est-ton-metier.mp3"
+			],
+			[
+				"depuis",
+				"for (a period of time), since",
+				"depuis.mp3"
+			],
+			[
+				"malade",
+				"ill",
+				"malade.mp3"
+			],
+			[
+				"hier",
+				"yesterday",
+				"hier.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation3": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 Verbs in French</p><p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p><p><b>Être</b> to be (with French sound files)</p><table><tbody><tr><td>je suis</td><td>I am</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>tu* es</td><td>you are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>il** est</td><td>he is, it is </td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>elle** est</td><td>she is, it is</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>nous sommes</td><td>we are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>vous* êtes</td><td>you are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>ils***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>elles***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><hr/>",
+			"<p>2 Linguistic genders ( I think this lends itself to illustration/pic ?)</p><p>All French nouns have gender, not just people or animals but inanimate objects too. There are just two genders in French called masculine and feminine. This simply means that all nouns belong in one category or the other. Males e.g. father, uncle etc are masculine nouns and females e.g. mother, aunt etc are feminine nouns. Other nouns have intrinsic gender. This is not related to their owner, characteristics, manufacturer etc. It is possible to identify the gender of some nouns by their endings. (A list of these endings to be added/ linked)</p><p>The gender of the noun has implications for some grammatical features. e.g.</p><p>a. The indefinite article:</p><p>There are two ways of saying 'a' in French: <b>un</b> for masculine nouns e.g. <b>un</b> homme (a man), <b>un</b> métier (a profession/occupation) and <b>une</b> for a feminine noun e.g. <b>une</b> femme (a woman), <b>une</b> profession (a profession).</p><p>b. The definite article: (Sound files for the articles and the nouns)</p><p>For singular nouns, to say 'the' you use <b>le</b> for masculine nouns e.g. <b>le</b> professeur (the [male] teacher, <b>le</b> jour (the day). For feminine nouns you say <b>la</b> e.g. <b>la</b> professeure (the [female] teacher, <b>la</b> nuit (the night). When the singular noun begins with a vowel or mute h, then you use <b>l'</b> regardless of gender e.g. <b>l'</b>appartement (m) (the flat),  <b>l'</b>école (f) ( the school), <b>l'</b>homme (the man).</p>",
+			"<p>3 Subject pronouns:</p><ul><li><b>Il</b> is used to replace a masculine noun.</li><li><b>Elle</b> is used to replace a feminine noun.</li><li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li><li><b>Elles</b> is used to replace more than one feminine noun.</li></ul>"
+		],
+		"id": "explanation3",
+		"titleText": "Grammar / Use of Language."
+	},
+	"jigsaw2": {
+		"component": "Jigsaw",
+		"correctImage": "/images/parrot-jaguar.jpg",
+		"id": "jigsaw2",
+		"incorrectImage": "/images/cyclist-horse.jpg",
+		"congratulationsText": "Squawk! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Un beau perroquet dans une forêt luxuriante mangeant une noix du Brésil tout en regardant un jaguar au sol.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/parrot-jaguar.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	},
+	"explanation4": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 Silent letters at the end of a word (image to illustrate? = shhhh! or finger on lips? …)</p><p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. Listen to the following examples.</p><p>gran<b>d</b>, ron<b>d</b>,  lon<b>g</b>, tro<b>p</b>, depui<b>s</b>,  pa<b>s</b>, peti<b>t</b>, salu<b>t</b>, gâteau<b>x</b>, appele<b>z</b> (sound files)</p><p>The letter <b>e</b> is not pronounced at the end of a word:</p><p>Je m'appell<b>e</b> bibliothécair<b>e</b> célibatair<b>e</b>  (sound files)</p><p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p><p>ce, de, je,  le, me, ne, se, te</p><hr/><p>2 <b>Th</b></p><p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g. <b>Thomas</b>, <b>thé</b>, <b>théologie</b>, <b>maths</b> (sound files)</p>"
+		],
+		"id": "explanation4",
+		"titleText": "Demystifying Pronunciation."
+	},
+	"dropdowns3": {
+		"component": "DropDowns",
+		"id": "dropdowns3",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Select the correct part of être to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Tu [*es|est|êtes] fiancé ? ",
+			"Je [sommes|*suis|sont] mariée avec Steffi. ",
+			"Vous [est|*êtes|sommes] professeurs ?",
+			"Nous [es|êtes|*sommes] pacsés.",
+			"Il [es|*est|sont] étudiant en astronomie.",
+			"Ils [suis|est|*sont] jeunes.",
+			"Elle  [es|*est|êtes] chercheuse.",
+			"Elles [suis|sommes|*sont] étudiantes en éducation.",
+			"Jérome et moi [suis|sont|*sommes] divorcés maintenant."
+		],
+		"titleText": "Select the correct part of être to fill in the gaps."
+	},
+	"wordsIntoSlots2": {
+		"component": "Blanks",
+		"congratulationsText": "Well done!",
+		"id": "wordsIntoSlots2",
+		"instructionsText": "Match the questions and answers",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "questions-answers",
+		"questions": [
+			"Salut les enfants ! Tout va bien ?",
+			"Tu es archiviste ?",
+			"Monsieur Tondereau est journaliste ?",
+			"Que faites-vous dans la vie ?"
+		],
+		"answers": [
+			"Moi, oui, ça va … mais Jo est malade depuis hier.",
+			"Ah non ! je suis étudiante en histoire.",
+			"Non, il est bibliothécaire.",
+			"Je suis professeur de géographie."
+		],
+		"soundFiles": [
+			"salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
+			"tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
+			"monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
+			"que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+		],
+		"titleText": "Match the Answers to the Questions"
+	},
+	"phraseTable3": {
+		"component": "PhraseTable",
+		"id": "phraseTable3",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Male : Tu es française ?",
+				"Are you French ?",
+				"non-existant.mp3"
+			],
+			[
+				"Female : Ah non, je ne suis pas française !",
+				"Oh no, I'm not French!",
+				"non-existant.mp3"
+			],
+			[
+				"Male : Tu es de quelle nationalité ?",
+				"What nationality are you?",
+				"non-existant.mp3"
+			],
+			[
+				"Female : Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
+				"I'm Belgian. I come from Brussels. Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"Male : Je viens d'Espagne.",
+				"I come from Spain.",
+				"non-existant.mp3"
+			],
+			[
+				"D'où venez-vous, Monsieur ?",
+				"Where do you come from, sir? ",
+				"non-existant.mp3"
+			],
+			[
+				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.",
+				"I come from the USA. I'm American. My wife's Canadian.",
+				"non-existant.mp3"
+			],
+			[
+				"Elle vient du Québec. Et vous, vous êtes suisse ?",
+				"She comes from Quebec. And are you Swiss?",
+				"non-existant.mp3"
+			],
+			[
+				"Ah non, je suis luxembourgeoise.",
+				"Oh no, I'm Luxemburgish.",
+				"non-existant.mp3"
+			],
+			[
+				"Tu parles allemand ?",
+				"Do you speak German?",
+				"non-existant.mp3"
+			],
+			[
+				"Non, je ne parle pas allemand.",
+				"No, I don't speak German.",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parles-tu ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je parle français. C'est tout.",
+				"I speak French. That's all.",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
+				"I'm trilingual. I speak French, Arabic and a little bit of English.",
+				"non-existant.mp3"
+			],
+			[
+				"Et les enfants ?",
+				"And the children?",
+				"non-existant.mp3"
+			],
+			[
+				"Ils sont bilingues. Ils parlent français et arabe.",
+				"They're bilingual. They speak French and Arabic.",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Origins and Languages - Dialogues"
+	},
+	"phraseTable4": {
+		"component": "PhraseTable",
+		"id": "phraseTable4",
+		"instructionsText": "",
+		"header": [
+			"Nationalité",
+			"Pays",
+			"Nationality",
+			"Country",
+			""
+		],
+		"phrases": [
+			[
+				"algérien",
+				"Algérie (f)",
+				"Algerian",
+				"Algeria",
+				"non-existant.mp3"
+			],
+			[
+				"allemand",
+				"Allemagne (f)",
+				"German",
+				"Germany",
+				"non-existant.mp3"
+			],
+			[
+				"américain",
+				"Etats-Unis (mpl)",
+				"American",
+				"USA",
+				"non-existant.mp3"
+			],
+			[
+				"anglais",
+				"Angleterre (f)",
+				"English",
+				"England",
+				"non-existant.mp3"
+			],
+			[
+				"australien",
+				"Australie (f)",
+				"Australian",
+				"Australia",
+				"non-existant.mp3"
+			],
+			[
+				"belge",
+				"Belgique (f)",
+				"Belgian",
+				"Belgium",
+				"non-existant.mp3"
+			],
+			[
+				"britannique",
+				"Grande Bretagne (f)",
+				"British",
+				"Great Britain",
+				"non-existant.mp3"
+			],
+			[
+				"canadien",
+				"Canada (m)",
+				"Canadian",
+				"Canada",
+				"non-existant.mp3"
+			],
+			[
+				"chinois",
+				"Chine (f)",
+				"Chinese",
+				"China",
+				"non-existant.mp3"
+			],
+			[
+				"écossais",
+				"Ecosse (f)",
+				"Scottish",
+				"Scotland",
+				"non-existant.mp3"
+			],
+			[
+				"espagnol",
+				"Espagne (f)",
+				"Spanish",
+				"Spain",
+				"non-existant.mp3"
+			],
+			[
+				"français",
+				"France (f)",
+				"French",
+				"France",
+				"non-existant.mp3"
+			],
+			[
+				"gallois",
+				"Pays de Galles (m)",
+				"Welsh",
+				"Wales  ",
+				"non-existant.mp3"
+			],
+			[
+				"ghanéen",
+				"Ghana (m)",
+				"Ghanean",
+				"Ghana",
+				"non-existant.mp3"
+			],
+			[
+				"libanais",
+				"Liban (m)",
+				"Lebanese",
+				"Lebanon",
+				"non-existant.mp3"
+			],
+			[
+				"luxembourgeois",
+				"Luxembourg (m)",
+				"Luxembourgish",
+				"Luxemburg",
+				"non-existant.mp3"
+			],
+			[
+				"marocain",
+				"Maroc (m)",
+				"Maroccan",
+				"Morocco",
+				"non-existant.mp3"
+			],
+			[
+				"irlandais",
+				"Irelande (f) du Nord/ du Sud",
+				"Irish",
+				"Northern / Southern Ireland",
+				"non-existant.mp3"
+			],
+			[
+				"sénégalais",
+				"Sénégal (m)",
+				"Senegalese",
+				"Senegal",
+				"non-existant.mp3"
+			],
+			[
+				"tunisien",
+				"Tunisie (f)",
+				"Tunisian",
+				"Tunisia",
+				"non-existant.mp3"
+			],
+			[
+				"suisse",
+				"Suisse (f)",
+				"Swiss",
+				"Switzerland",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Origins and Languages - Vocabulary"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "phraseTable5",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"parler",
+				"to speak",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ? Vous parlez quelles langues ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je parle …, je ne parle pas anglais",
+				"I speak / I don't speak English.",
+				"non-existant.mp3"
+			],
+			[
+				"venir de",
+				"to come from",
+				"non-existant.mp3"
+			],
+			[
+				"D'où viens-tu ? Tu viens d'où ?",
+				"Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"D'où venez-vous ? Vous venez d'où ?",
+				"Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"Je viens de   / je ne viens pas de …",
+				"I come / don't come from …",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Origins and Languages - Vocabulary"
+	},
+	"dropdowns2": {
+		"component": "DropDowns",
+		"id": "dropdowns2",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Select the correct adjective of nationality.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Female : Je suis [marocain|*marocaine|africain|africaine].",
+			"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
+			"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+			"Female: Je suis [français|*française|anglais /anglaise].",
+			"Male: Je suis [*chinois|chinoise|gallois|galloise].",
+			"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+		],
+		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+		"audio": [
+			"je-suis-marocaine.mp3",
+			"je-suis-mexicaine.mp3",
+			"je-suis-canadien.mp3",
+			"je-suis-francaise.mp3",
+			"je-suis-chinois.mp3",
+			"je-suis-senegalaise.mp3"
+		],
+		"titleText": "Select the Correct Adjective of Nationality"
+	},
+	"dropdowns1": {
+		"component": "DropDowns",
+		"id": "dropdowns1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Fill in the gaps with de / du / d' / des as appropriate.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Je viens [*de|d'|du|des] France.",
+			"Je viens [*de|d'|du|des] Suisse.",
+			"Je viens [de|*d'|du|des] Orléans.",
+			"Je viens [de|d'|*du|des] Maroc.",
+			"Je viens [*de|d'|du|des] Tunisie.",
+			"Je viens [de|*d'|du|des] Ecosse.",
+			"Je viens [de|d'|*du|des] Gabon.",
+			"Je viens [de|d'|du|*Des] États-Unis."
+		],
+		"titleText": "Fill in the gaps with de / du / d' / des as appropriate."
+	},
+	"jigsaw3": {
+		"component": "Jigsaw",
+		"correctImage": "/images/car-windmill.jpg",
+		"id": "jigsaw3",
+		"incorrectImage": "/images/car-cliff-lift.jpg",
+		"congratulationsText": "Vroom! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/car-windmill.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	},
+	"phraseTable6": {
+		"component": "PhraseTable",
+		"id": "phraseTable6",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"une épicerie",
+				"small grocery store",
+				"non-existant.mp3"
+			],
+			[
+				"un marché",
+				"farmer's market",
+				"non-existant.mp3"
+			],
+			[
+				"une grande surface / un supermarché",
+				"supermarket",
+				"non-existant.mp3"
+			],
+			[
+				"un hypermarché",
+				"superstore, giant supermarket",
+				"non-existant.mp3"
+			],
+			[
+				"une boucherie",
+				"butcher shop",
+				"non-existant.mp3"
+			],
+			[
+				"une boulangerie",
+				"bakery",
+				"non-existant.mp3"
+			],
+			[
+				"une charcuterie",
+				"pork butcher",
+				"non-existant.mp3"
+			],
+			[
+				"une confiserie",
+				"candy store",
+				"non-existant.mp3"
+			],
+			[
+				"une crémerie, une laiterie",
+				"dairy",
+				"non-existant.mp3"
+			],
+			[
+				"une fromagerie",
+				"cheese shop",
+				"non-existant.mp3"
+			],
+			[
+				"un magasin de fruits et légumes",
+				"greengrocer",
+				"non-existant.mp3"
+			],
+			[
+				"un marchand de vins",
+				"wine shop",
+				"non-existant.mp3"
+			],
+			[
+				"une pâtisserie",
+				"pastry shop",
+				"non-existant.mp3"
+			],
+			[
+				"une poissonnerie",
+				"fish store",
+				"non-existant.mp3"
+			],
+			[
+				"une banque",
+				"bank",
+				"non-existant.mp3"
+			],
+			[
+				"un bistro, bistrot",
+				"café / bar",
+				"non-existant.mp3"
+			],
+			[
+				"une blanchisserie",
+				"laundromat",
+				"non-existant.mp3"
+			],
+			[
+				"un café",
+				"café",
+				"non-existant.mp3"
+			],
+			[
+				"une droguerie",
+				"drugstore",
+				"non-existant.mp3"
+			],
+			[
+				"un grand magasin",
+				"department store",
+				"non-existant.mp3"
+			],
+			[
+				"un kiosque",
+				"newsstand",
+				"non-existant.mp3"
+			],
+			[
+				"un magasin de confection / un magasin de vêtements",
+				"clothing store",
+				"non-existant.mp3"
+			],
+			[
+				"une pharmacie",
+				"pharmacy",
+				"non-existant.mp3"
+			],
+			[
+				"une poste",
+				"post office",
+				"non-existant.mp3"
+			],
+			[
+				"un pressing",
+				"dry cleaner",
+				"non-existant.mp3"
+			],
+			[
+				"un restaurant",
+				"restaurant",
+				"non-existant.mp3"
+			],
+			[
+				"une quincaillerie",
+				"hardware store",
+				"non-existant.mp3"
+			],
+			[
+				"un tabac",
+				"tobacco shop with bar/café",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "French Shops"
+	}
+}

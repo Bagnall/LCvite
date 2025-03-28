@@ -1,0 +1,494 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "fr-flag.png",
+		"title": "French Learning Object 2",
+		"subtitle": "ABOUT ME:  marital status, occupation",
+		"targetLanguage": "french"
+	},
+	"crossword1": {
+		"cheatText": "Cheat",
+		"component": "CrossWord",
+		"congratulationsText": "Well done!",
+		"id": "CrossWord1",
+		"instructionsText": "",
+		"words": [
+			[
+				"épicerie",
+				"grocers"
+			],
+			[
+				"supermarché",
+				"supermarket"
+			],
+			[
+				"boucherie",
+				"butcher shop"
+			],
+			[
+				"boulangerie",
+				"bakery"
+			],
+			[
+				"pâtisserie",
+				"pastry shop"
+			],
+			[
+				"poissonnerie",
+				"fish shop"
+			],
+			[
+				"bistro",
+				"café"
+			],
+			[
+				"pharmacie",
+				"pharmacy"
+			],
+			[
+				"poste",
+				"post office"
+			],
+			[
+				"tabac",
+				"tobacco shop"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops Crossword"
+	},
+	"phraseTable6": {
+		"component": "PhraseTable",
+		"id": "phraseTable6",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"une épicerie",
+				"small grocery store",
+				"non-existant.mp3"
+			],
+			[
+				"un marché",
+				"farmer's market",
+				"non-existant.mp3"
+			],
+			[
+				"une grande surface / un supermarché",
+				"supermarket",
+				"non-existant.mp3"
+			],
+			[
+				"un hypermarché",
+				"superstore, giant supermarket",
+				"non-existant.mp3"
+			],
+			[
+				"une boucherie",
+				"butcher shop",
+				"non-existant.mp3"
+			],
+			[
+				"une boulangerie",
+				"bakery",
+				"non-existant.mp3"
+			],
+			[
+				"une charcuterie",
+				"pork butcher",
+				"non-existant.mp3"
+			],
+			[
+				"une confiserie",
+				"candy store",
+				"non-existant.mp3"
+			],
+			[
+				"une crémerie, une laiterie",
+				"dairy",
+				"non-existant.mp3"
+			],
+			[
+				"une fromagerie",
+				"cheese shop",
+				"non-existant.mp3"
+			],
+			[
+				"un magasin de fruits et légumes",
+				"greengrocer",
+				"non-existant.mp3"
+			],
+			[
+				"un marchand de vins",
+				"wine shop",
+				"non-existant.mp3"
+			],
+			[
+				"une pâtisserie",
+				"pastry shop",
+				"non-existant.mp3"
+			],
+			[
+				"une poissonnerie",
+				"fish store",
+				"non-existant.mp3"
+			],
+			[
+				"une banque",
+				"bank",
+				"non-existant.mp3"
+			],
+			[
+				"un bistro, bistrot",
+				"café / bar",
+				"non-existant.mp3"
+			],
+			[
+				"une blanchisserie",
+				"laundromat",
+				"non-existant.mp3"
+			],
+			[
+				"un café",
+				"café",
+				"non-existant.mp3"
+			],
+			[
+				"une droguerie",
+				"drugstore",
+				"non-existant.mp3"
+			],
+			[
+				"un grand magasin",
+				"department store",
+				"non-existant.mp3"
+			],
+			[
+				"un kiosque",
+				"newsstand",
+				"non-existant.mp3"
+			],
+			[
+				"un magasin de confection / un magasin de vêtements",
+				"clothing store",
+				"non-existant.mp3"
+			],
+			[
+				"une pharmacie",
+				"pharmacy",
+				"non-existant.mp3"
+			],
+			[
+				"une poste",
+				"post office",
+				"non-existant.mp3"
+			],
+			[
+				"un pressing",
+				"dry cleaner",
+				"non-existant.mp3"
+			],
+			[
+				"un restaurant",
+				"restaurant",
+				"non-existant.mp3"
+			],
+			[
+				"une quincaillerie",
+				"hardware store",
+				"non-existant.mp3"
+			],
+			[
+				"un tabac",
+				"tobacco shop with bar/café",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Vocabulary - French Shops"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "Well done, you found them all!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"épicerie",
+				"grocers"
+			],
+			[
+				"supermarché",
+				"supermarket"
+			],
+			[
+				"boucherie",
+				"butcher shop"
+			],
+			[
+				"boulangerie",
+				"bakery"
+			],
+			[
+				"pâtisserie",
+				"pastry shop"
+			],
+			[
+				"poissonnerie",
+				"fish shop"
+			],
+			[
+				"bistro",
+				"café"
+			],
+			[
+				"pharmacie",
+				"pharmacy"
+			],
+			[
+				"poste",
+				"post office"
+			],
+			[
+				"tabac",
+				"tobacco shop"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops"
+	},
+	"monologues1": {
+		"component": "PhraseTable",
+		"id": "monologues1",
+		"phrases": [
+			[
+				"Salut,  je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
+				"Hi, I'm Sylvain. I'm single and I'm a geography student.",
+				"salut-je-suis-sylvain-je-suis-celibataire-je-suis-etudiant-en-geographie.mp3"
+			],
+			[
+				"Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.",
+				"Hello, my name's Jacqueline. I'm divorced. I'm a maths teacher",
+				"bonjour-je-m-appelle-jacqueline-je-suis-divorcee-je-suis-prof-de-maths.mp3"
+			],
+			[
+				"Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.",
+				"Good evening, my name's Olivier Durand. I've been married to Alex for three years and I'm a librarian.",
+				"bonsoir-je-m-appelle-olivier-durand-je-suis-marie-avec-alex-depuis-trois-ans-et-je-suis-bibliothecaire.mp3"
+			]
+		],
+		"titleText": "Monologues"
+	},
+	"vocabulary2": {
+		"component": "PhraseTable",
+		"id": "vocabulary2",
+		"phrases": [
+			[
+				"être*",
+				"to be",
+				"etre.mp3"
+			],
+			[
+				"marié.e",
+				"married",
+				"marie.mp3"
+			],
+			[
+				"divorcé.e",
+				"divorced",
+				"divorce.mp3"
+			],
+			[
+				"séparé.e",
+				"separated",
+				"separe.mp3"
+			],
+			[
+				"fiancé.e",
+				"engaged",
+				"fiance.mp3"
+			],
+			[
+				"pacsé.e",
+				"In a civil partnership",
+				"pacse.mp3"
+			],
+			[
+				"célibataire",
+				"single",
+				"celibataire.mp3"
+			],
+			[
+				"étudiant / étudiante",
+				"University student",
+				"etudiante.mp3"
+			],
+			[
+				"élève",
+				"school pupil",
+				"eleve.mp3"
+			],
+			[
+				"chercheur(m) / chercheuse(f)",
+				"researcher",
+				"chercheuse.mp3"
+			],
+			[
+				"doctorant / doctorante",
+				"PhD student",
+				"doctorant.mp3"
+			],
+			[
+				"professeur.e prof (m and f)",
+				"teacher, professeur",
+				"professeure.mp3"
+			],
+			[
+				"médecin (m and f)",
+				"doctor",
+				"medecin.mp3"
+			],
+			[
+				"archiviste",
+				"archiviste",
+				"archiviste.mp3"
+			],
+			[
+				"bibliothécaire",
+				"librarian",
+				"bibliothecaire.mp3"
+			],
+			[
+				"administrateur (m) administratrice(f)",
+				"administrator",
+				"administratrice.mp3"
+			],
+			[
+				"informaticien.ne",
+				"IT specialist",
+				"informaticien.mp3"
+			],
+			[
+				"avocat / avocate",
+				"lawyer",
+				"avocate.mp3"
+			],
+			[
+				"Que faites-vous* (dans la vie) ?",
+				"What do you do (for a living)?",
+				"que-faites-vous-dans-la-vie.mp3"
+			],
+			[
+				"Que fais-tu* (dans la vie) ?",
+				"What do you do (for a living)?",
+				"que-fais-tu-dans-la-vie.mp3"
+			],
+			[
+				"Quelle est ta / votre profession ?",
+				"What's your profession?",
+				"quelle-est-votre-profession.mp3"
+			],
+			[
+				"Quel est ton / votre métier ?",
+				"What's your profession?",
+				"quel-est-ton-metier.mp3"
+			],
+			[
+				"depuis",
+				"for (a period of time), since",
+				"depuis.mp3"
+			],
+			[
+				"malade",
+				"ill",
+				"malade.mp3"
+			],
+			[
+				"hier",
+				"yesterday",
+				"hier.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation3": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 Verbs in French</p><p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p><p><b>Être</b> to be (with French sound files)</p><table><tbody><tr><td>je suis</td><td>I am</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>tu* es</td><td>you are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>il** est</td><td>he is, it is </td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>elle** est</td><td>she is, it is</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>nous sommes</td><td>we are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>vous* êtes</td><td>you are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>ils***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><tr><td>elles***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/non-existant.mp3'/></td></tr><hr/>",
+			"<p>2 Linguistic genders ( I think this lends itself to illustration/pic ?)</p><p>All French nouns have gender, not just people or animals but inanimate objects too. There are just two genders in French called masculine and feminine. This simply means that all nouns belong in one category or the other. Males e.g. father, uncle etc are masculine nouns and females e.g. mother, aunt etc are feminine nouns. Other nouns have intrinsic gender. This is not related to their owner, characteristics, manufacturer etc. It is possible to identify the gender of some nouns by their endings. (A list of these endings to be added/ linked)</p><p>The gender of the noun has implications for some grammatical features. e.g.</p><p>a. The indefinite article:</p><p>There are two ways of saying 'a' in French: <b>un</b> for masculine nouns e.g. <b>un</b> homme (a man), <b>un</b> métier (a profession/occupation) and <b>une</b> for a feminine noun e.g. <b>une</b> femme (a woman), <b>une</b> profession (a profession).</p><p>b. The definite article: (Sound files for the articles and the nouns)</p><p>For singular nouns, to say 'the' you use <b>le</b> for masculine nouns e.g. <b>le</b> professeur (the [male] teacher, <b>le</b> jour (the day). For feminine nouns you say <b>la</b> e.g. <b>la</b> professeure (the [female] teacher, <b>la</b> nuit (the night). When the singular noun begins with a vowel or mute h, then you use <b>l'</b> regardless of gender e.g. <b>l'</b>appartement (m) (the flat),  <b>l'</b>école (f) ( the school), <b>l'</b>homme (the man).</p>",
+			"<p>3 Subject pronouns:</p><ul><li><b>Il</b> is used to replace a masculine noun.</li><li><b>Elle</b> is used to replace a feminine noun.</li><li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li><li><b>Elles</b> is used to replace more than one feminine noun.</li></ul>"
+		],
+		"id": "explanation3",
+		"titleText": "Grammar / Use of Language."
+	},
+	"jigsaw2": {
+		"component": "Jigsaw",
+		"correctImage": "/images/parrot-jaguar.jpg",
+		"id": "jigsaw2",
+		"incorrectImage": "/images/cyclist-horse.jpg",
+		"congratulationsText": "Squawk! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Un beau perroquet dans une forêt luxuriante mangeant une noix du Brésil tout en regardant un jaguar au sol.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/parrot-jaguar.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	},
+	"explanation4": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 Silent letters at the end of a word (image to illustrate? = shhhh! or finger on lips? …)</p><p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. Listen to the following examples.</p><p>gran<b>d</b>, ron<b>d</b>,  lon<b>g</b>, tro<b>p</b>, depui<b>s</b>,  pa<b>s</b>, peti<b>t</b>, salu<b>t</b>, gâteau<b>x</b>, appele<b>z</b> (sound files)</p><p>The letter <b>e</b> is not pronounced at the end of a word:</p><p>Je m'appell<b>e</b> bibliothécair<b>e</b> célibatair<b>e</b>  (sound files)</p><p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p><p>ce, de, je,  le, me, ne, se, te</p><hr/><p>2 <b>Th</b></p><p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g. <b>Thomas</b>, <b>thé</b>, <b>théologie</b>, <b>maths</b> (sound files)</p>"
+		],
+		"id": "explanation4",
+		"titleText": "Demystifying Pronunciation."
+	},
+	"dropdowns3": {
+		"component": "DropDowns",
+		"id": "dropdowns3",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Select the correct part of être to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Tu [*es|est|êtes] fiancé ? ",
+			"Je [sommes|*suis|sont] mariée avec Steffi. ",
+			"Vous [est|*êtes|sommes] professeurs ?",
+			"Nous [es|êtes|*sommes] pacsés.",
+			"Il [es|*est|sont] étudiant en astronomie.",
+			"Ils [suis|est|*sont] jeunes.",
+			"Elle  [es|*est|êtes] chercheuse.",
+			"Elles [suis|sommes|*sont] étudiantes en éducation.",
+			"Jérome et moi [suis|sont|*sommes] divorcés maintenant."
+		],
+		"titleText": "Select the correct part of être to fill in the gaps."
+	},
+	"wordsIntoSlots2": {
+		"component": "Blanks",
+		"congratulationsText": "Well done!",
+		"id": "wordsIntoSlots2",
+		"instructionsText": "Match the questions and answers",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "questions-answers",
+		"questions": [
+			"Salut les enfants ! Tout va bien ?",
+			"Tu es archiviste ?",
+			"Monsieur Tondereau est journaliste ?",
+			"Que faites-vous dans la vie ?"
+		],
+		"answers": [
+			"Moi, oui, ça va … mais Jo est malade depuis hier.",
+			"Ah non ! je suis étudiante en histoire.",
+			"Non, il est bibliothécaire.",
+			"Je suis professeur de géographie."
+		],
+		"soundFiles": [
+			"salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
+			"tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
+			"monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
+			"que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+		],
+		"titleText": "Match the Answers to the Questions"
+	}
+}

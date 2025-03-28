@@ -1,0 +1,415 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "fr-flag.png",
+		"title": "French Learning Object 3",
+		"subtitle": "ORIGINS and LANGUAGES",
+		"targetLanguage": "french"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "Well done, you found them all!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"étudiant",
+				"student"
+			],
+			[
+				"élève",
+				"pupil"
+			],
+			[
+				"professeur",
+				"teacher"
+			],
+			[
+				"médecin",
+				"doctor"
+			],
+			[
+				"archiviste",
+				"archivist"
+			],
+			[
+				"bibliothécaire",
+				"librarian"
+			],
+			[
+				"administrateur",
+				"administrator"
+			],
+			[
+				"avocat",
+				"lawyer"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops"
+	},
+	"phraseTable3": {
+		"component": "PhraseTable",
+		"id": "phraseTable3",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Male : Tu es française ?",
+				"Are you French ?",
+				"non-existant.mp3"
+			],
+			[
+				"Female : Ah non, je ne suis pas française !",
+				"Oh no, I'm not French!",
+				"non-existant.mp3"
+			],
+			[
+				"Male : Tu es de quelle nationalité ?",
+				"What nationality are you?",
+				"non-existant.mp3"
+			],
+			[
+				"Female : Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
+				"I'm Belgian. I come from Brussels. Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"Male : Je viens d'Espagne.",
+				"I come from Spain.",
+				"non-existant.mp3"
+			],
+			[
+				"D'où venez-vous, Monsieur ?",
+				"Where do you come from, sir? ",
+				"non-existant.mp3"
+			],
+			[
+				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.",
+				"I come from the USA. I'm American. My wife's Canadian.",
+				"non-existant.mp3"
+			],
+			[
+				"Elle vient du Québec. Et vous, vous êtes suisse ?",
+				"She comes from Quebec. And are you Swiss?",
+				"non-existant.mp3"
+			],
+			[
+				"Ah non, je suis luxembourgeoise.",
+				"Oh no, I'm Luxemburgish.",
+				"non-existant.mp3"
+			],
+			[
+				"Tu parles allemand ?",
+				"Do you speak German?",
+				"non-existant.mp3"
+			],
+			[
+				"Non, je ne parle pas allemand.",
+				"No, I don't speak German.",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parles-tu ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je parle français. C'est tout.",
+				"I speak French. That's all.",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
+				"I'm trilingual. I speak French, Arabic and a little bit of English.",
+				"non-existant.mp3"
+			],
+			[
+				"Et les enfants ?",
+				"And the children?",
+				"non-existant.mp3"
+			],
+			[
+				"Ils sont bilingues. Ils parlent français et arabe.",
+				"They're bilingual. They speak French and Arabic.",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"phraseTable4": {
+		"component": "PhraseTable",
+		"id": "phraseTable4",
+		"instructionsText": "",
+		"header": [
+			"Nationalité",
+			"Pays",
+			"Nationality",
+			"Country",
+			""
+		],
+		"phrases": [
+			[
+				"algérien",
+				"Algérie (f)",
+				"Algerian",
+				"Algeria",
+				"non-existant.mp3"
+			],
+			[
+				"allemand",
+				"Allemagne (f)",
+				"German",
+				"Germany",
+				"non-existant.mp3"
+			],
+			[
+				"américain",
+				"Etats-Unis (mpl)",
+				"American",
+				"USA",
+				"non-existant.mp3"
+			],
+			[
+				"anglais",
+				"Angleterre (f)",
+				"English",
+				"England",
+				"non-existant.mp3"
+			],
+			[
+				"australien",
+				"Australie (f)",
+				"Australian",
+				"Australia",
+				"non-existant.mp3"
+			],
+			[
+				"belge",
+				"Belgique (f)",
+				"Belgian",
+				"Belgium",
+				"non-existant.mp3"
+			],
+			[
+				"britannique",
+				"Grande Bretagne (f)",
+				"British",
+				"Great Britain",
+				"non-existant.mp3"
+			],
+			[
+				"canadien",
+				"Canada (m)",
+				"Canadian",
+				"Canada",
+				"non-existant.mp3"
+			],
+			[
+				"chinois",
+				"Chine (f)",
+				"Chinese",
+				"China",
+				"non-existant.mp3"
+			],
+			[
+				"écossais",
+				"Ecosse (f)",
+				"Scottish",
+				"Scotland",
+				"non-existant.mp3"
+			],
+			[
+				"espagnol",
+				"Espagne (f)",
+				"Spanish",
+				"Spain",
+				"non-existant.mp3"
+			],
+			[
+				"français",
+				"France (f)",
+				"French",
+				"France",
+				"non-existant.mp3"
+			],
+			[
+				"gallois",
+				"Pays de Galles (m)",
+				"Welsh",
+				"Wales  ",
+				"non-existant.mp3"
+			],
+			[
+				"ghanéen",
+				"Ghana (m)",
+				"Ghanean",
+				"Ghana",
+				"non-existant.mp3"
+			],
+			[
+				"libanais",
+				"Liban (m)",
+				"Lebanese",
+				"Lebanon",
+				"non-existant.mp3"
+			],
+			[
+				"luxembourgeois",
+				"Luxembourg (m)",
+				"Luxembourgish",
+				"Luxemburg",
+				"non-existant.mp3"
+			],
+			[
+				"marocain",
+				"Maroc (m)",
+				"Maroccan",
+				"Morocco",
+				"non-existant.mp3"
+			],
+			[
+				"irlandais",
+				"Irelande (f) du Nord/ du Sud",
+				"Irish",
+				"Northern / Southern Ireland",
+				"non-existant.mp3"
+			],
+			[
+				"sénégalais",
+				"Sénégal (m)",
+				"Senegalese",
+				"Senegal",
+				"non-existant.mp3"
+			],
+			[
+				"tunisien",
+				"Tunisie (f)",
+				"Tunisian",
+				"Tunisia",
+				"non-existant.mp3"
+			],
+			[
+				"suisse",
+				"Suisse (f)",
+				"Swiss",
+				"Switzerland",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "phraseTable5",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"parler",
+				"to speak",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ? Vous parlez quelles langues ?",
+				"Which languages do you speak?",
+				"non-existant.mp3"
+			],
+			[
+				"Je parle …, je ne parle pas anglais",
+				"I speak / I don't speak English.",
+				"non-existant.mp3"
+			],
+			[
+				"venir de",
+				"to come from",
+				"non-existant.mp3"
+			],
+			[
+				"D'où viens-tu ? Tu viens d'où ?",
+				"Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"D'où venez-vous ? Vous venez d'où ?",
+				"Where do you come from?",
+				"non-existant.mp3"
+			],
+			[
+				"Je viens de   / je ne viens pas de …",
+				"I come / don't come from …",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"dropdowns2": {
+		"component": "DropDowns",
+		"id": "dropdowns2",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Select the correct adjective of nationality.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Female : Je suis [marocain|*marocaine|africain|africaine].",
+			"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
+			"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+			"Female: Je suis [français|*française|anglais /anglaise].",
+			"Male: Je suis [*chinois|chinoise|gallois|galloise].",
+			"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+		],
+		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+		"audio": [
+			"je-suis-marocaine.mp3",
+			"je-suis-mexicaine.mp3",
+			"je-suis-canadien.mp3",
+			"je-suis-francaise.mp3",
+			"je-suis-chinois.mp3",
+			"je-suis-senegalaise.mp3"
+		],
+		"titleText": "Select the Correct Adjective of Nationality"
+	},
+	"dropdowns1": {
+		"component": "DropDowns",
+		"id": "dropdowns1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Fill in the gaps with de / du / d' / des as appropriate.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Je viens [*de|d'|du|des] France.",
+			"Je viens [*de|d'|du|des] Suisse.",
+			"Je viens [de|*d'|du|des] Orléans.",
+			"Je viens [de|d'|*du|des] Maroc.",
+			"Je viens [*de|d'|du|des] Tunisie.",
+			"Je viens [de|*d'|du|des] Ecosse.",
+			"Je viens [de|d'|*du|des] Gabon.",
+			"Je viens [de|d'|du|*Des] États-Unis."
+		],
+		"titleText": "Fill in the gaps with de / du / d' / des as appropriate."
+	},
+	"jigsaw3": {
+		"component": "Jigsaw",
+		"correctImage": "/images/car-windmill.jpg",
+		"id": "jigsaw3",
+		"incorrectImage": "/images/car-cliff-lift.jpg",
+		"congratulationsText": "Vroom! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/car-windmill.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	}
+}

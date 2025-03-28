@@ -1,0 +1,88 @@
+// WordGrid.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_variables.module.scss";
+
+html.debug {
+	.word-grid-container {
+		// span {
+		// 	border: 1px solid rgba(255, 0, 0, 0.2);
+		// }
+	}
+}
+$cell-dimension: 36px;
+.word-grid-container {
+	touch-action: none;
+	padding: 1rem;
+	// background: colours.$panel-back;
+	.word-grid-table-outer-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		.word-grid-table-container {
+			position: relative;
+			display: inline-block;
+		}
+	}
+	.word-list {
+		text-transform: capitalize;
+		span.found {
+			background: colours.$highlight;
+		}
+	}
+	table {
+		border-collapse: collapse;
+		user-select: none; /* Standard syntax */
+		td {
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			width: $cell-dimension;
+			height: $cell-dimension;
+			text-align: center;
+			text-transform: uppercase;
+			background: white;
+			font-weight: bold;
+		}
+		p {
+			margin: 0;
+			letter-spacing: 0.5rem;
+		}
+	}
+	.help {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-evenly;
+		width: 600px;
+	}
+
+	.hidden-help {
+		opacity: 0;
+		transition: opacity 4s;
+		&.show {
+			opacity: 1;
+			transition: opacity 4s;
+		}
+	}
+
+	.hints {
+		// padding: 1rem;
+		// display: flex;
+		// justify-content: space-evenly;
+		// width: 600px;
+	}
+
+	.hidden-hints {
+		opacity: 0;
+		transition: opacity 4s;
+		&.show {
+			opacity: 1;
+			transition: opacity 4s;
+		}
+	}
+	p.clue {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+}

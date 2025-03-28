@@ -1,0 +1,38 @@
+// Flag.scss
+
+@use "../../styles/_mixins.module.scss";
+
+.flag-container {
+	position: relative;
+	overflow: visible;
+	&::before {
+		@include mixins.standard-pseudo();
+		background-image: url("/public/images/flagpole.png");
+		background-repeat: no-repeat;
+		z-index: 0;
+		height: 200%;
+		background-size: 16.4%;
+		top: -6.2px;
+		left: -26.1px;
+	}
+	&.shadow {
+		&::before {
+			background-size: 14.4%;
+			top: 8.1px;
+			left: -9px;
+		}
+	}
+	canvas {
+		margin-top: 19px;
+		z-index: 1001;
+	}
+}
+.arabic {
+	.flag-container {
+		&::before {
+			background-size: 12.7%;
+			top: -0.7px;
+			left: -19.5px;
+		}
+	}
+}

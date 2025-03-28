@@ -1,0 +1,53 @@
+/*
+_colours.module.scss
+*/
+$text: #212529;
+
+$button-grey: #ececec;
+
+$disabled-background: #ececec;
+$button-disabled: $disabled-background;
+$disabled-foreground: gray;
+
+$button-border: #adadad;
+$button-highlight: cyan;
+
+$nav-tab-background: white;
+$nav-tab-border: #adadad;
+$correct-border: rgb(96, 214, 0);
+$correct-background: rgba(0, 255, 0, 0.2);
+
+$incorrect-border: red;
+$incorrect-background: rgba(255, 0, 0, 0.2);
+
+// $article-base-background: rgb(217, 216, 253);
+
+$french-orange: #fbc57b;
+$french-home: $french-orange;
+$french-button: $french-home;
+$french-article-base-background: rgb(217, 216, 253); //#eceeff;
+$french-panel-back: rgb(217, 216, 253);
+$french-body-back: #fffdec;
+
+$spanish-home: #9cbef2; // #9ce8f2;
+$spanish-button: #ed7102;
+$spanish-article-base-background: rgb(230, 162, 36);
+$spanish-panel-back: rgb(217, 216, 253);
+
+$arabic-home: #9cbef2; // #9ce8f2;
+$arabic-button: #ed7102;
+$arabic-article-base-background: rgb(240, 178, 64);
+$arabic-panel-back: rgb(217, 216, 253);
+
+$attention-green: #4fcb2e;
+$amber: #fc9725;
+$attention-red: #e72929;
+$highlight: rgb(136, 255, 0);
+
+:export {
+	text: $text; /* stylelint-disable-line */
+	attentionGreen: $attention-green;
+	amber: $amber;
+	attentionRed: $attention-red;
+	highlight: $highlight;
+}

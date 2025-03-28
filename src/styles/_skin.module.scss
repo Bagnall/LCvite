@@ -1,0 +1,304 @@
+/*
+_skin.module.scss
+*/
+@use "_colours.module.scss";
+@use "sass:color";
+
+@mixin affected_by_skin($home, $button, $background, $article-base-background, $panel-back, $body-back) {
+	background-color: $background;
+	.tabs-component-container {
+		background-color: $background;
+	}
+	body {
+		background-color: $body-back;
+	}
+
+	.home {
+		.radio-device {
+			&::before {
+				border-color: color.adjust($home, $blackness: 25%);
+			}
+			&.checked {
+				&::after {
+					background-color: color.adjust($home, $blackness: 25%);
+				}
+			}
+		}
+
+		.tristate-checkbox {
+			border-color: color.adjust($home, $blackness: 25%);
+			&.checked {
+				background-color: color.adjust($home, $blackness: 10%);
+				&.readonly {
+					background-color: transparent;
+					&::before,
+					&::after {
+						background-color: color.adjust($home, $blackness: 25%);
+					}
+				}
+			}
+			// &.disabled {
+			// 	border-color: $disabled-foreground;
+			// 	cursor: not-allowed;
+			// }
+		}
+
+		button {
+			&.button-info {
+				background-color: $button;
+			}
+		}
+		.pop-over,
+		#info {
+			border-color: $button;
+			.window-close {
+				background-color: $button;
+			}
+		}
+		table {
+			&.striped {
+				tr {
+					td {
+						background-color: color.adjust($home, $whiteness: 8%);
+					}
+					&:nth-of-type(even) {
+						td {
+							background-color: color.adjust($home, $whiteness: 18%);
+						}
+					}
+				}
+				td,
+				th {
+					border-color: color.adjust($home, $blackness: 25%);
+				}
+				th {
+					background-color: $home;
+					color: black;
+				}
+			}
+		}
+	}
+
+	.accordion {
+		.arrow {
+			background-color: color.adjust($article-base-background, $whiteness: 32%);
+		}
+		.align-right {
+			button {
+				background-color: $article-base-background;
+			}
+		}
+
+		.accordion-article {
+			.content {
+				> div {
+					border: 1px solid color.adjust($article-base-background, $blackness: 25%);
+				}
+			}
+
+			header {
+				a {
+					color: color.adjust($article-base-background, $blackness: 64%);
+				}
+				a:visited {
+					color: color.adjust($article-base-background, $blackness: 64%);
+				}
+				a:hover {
+					color: color.adjust($article-base-background, $blackness: 48%);
+				}
+				a:active {
+					color: #e00000;
+					text-shadow: 0 0 1px #ff0000;
+				}
+
+				a.logo > img,
+				img.logo {
+					border: 1px solid color.adjust($article-base-background, $blackness: 8%);
+				}
+			}
+			&.expanded {
+				> header {
+					border-bottom: 1px solid color.adjust($article-base-background, $blackness: 25%);
+				}
+			}
+
+			> .content > .accordion-article {
+				background-color: color.adjust($article-base-background, $blackness: 8%);
+				border: 1px solid color.adjust($article-base-background, $blackness: 16%);
+
+				.site {
+					border: 1px solid color.adjust($article-base-background, $blackness: 16%);
+				}
+				&.expanded {
+					> header {
+						border-bottom: 1px solid color.adjust($article-base-background, $blackness: 16%);
+					}
+				}
+				> header {
+					a.logo > img,
+					img.logo {
+						border: 1px solid color.adjust($article-base-background, $whiteness: 16%);
+					}
+					> .arrow {
+						background-color: color.adjust($article-base-background, $whiteness: 20%);
+					}
+				}
+			}
+			> .content > .accordion-article > .content > .accordion-article {
+				background-color: color.adjust($article-base-background, $blackness: 16%);
+				border: 1px solid color.adjust($article-base-background, $blackness: 24%);
+				.site {
+					border: 1px solid color.adjust($article-base-background, $blackness: 24%);
+				}
+				&.expanded {
+					> header {
+						border-bottom: 1px solid color.adjust($article-base-background, $blackness: 24%);
+					}
+				}
+				> header {
+					a.logo > img,
+					img.logo {
+						border: 1px solid color.adjust($article-base-background, $whiteness: 24%);
+					}
+				}
+			}
+			> .content > .accordion-article > .content > .accordion-article > .content > .accordion-article {
+				background-color: color.adjust($article-base-background, $blackness: 24%);
+				border: 1px solid color.adjust($article-base-background, $blackness: 32%);
+				.site {
+					border: 1px solid color.adjust($article-base-background, $blackness: 32%);
+				}
+				&.expanded {
+					> header {
+						border-bottom: 1px solid color.adjust($article-base-background, $blackness: 32%);
+					}
+				}
+				> header {
+					a.logo > img,
+					img.logo {
+						border: 1px solid color.adjust($article-base-background, $blackness: 32%);
+					}
+				}
+			}
+			> .content > .accordion-article > .content > .accordion-article > .content > .accordion-article > .content > .accordion-article {
+				background-color: color.adjust($article-base-background, $blackness: 32%);
+				border: 1px solid color.adjust($article-base-background, $blackness: 40%);
+				.site {
+					border: 1px solid color.adjust($article-base-background, $blackness: 40%);
+				}
+				&.expanded {
+					> header {
+						border-bottom: 1px solid color.adjust($article-base-background, $blackness: 40%);
+					}
+				}
+				> header {
+					a.logo > img,
+					img.logo {
+						border: 1px solid color.adjust($article-base-background, $blackness: 40%);
+					}
+				}
+			}
+		}
+		> .accordion-article {
+			background-color: $article-base-background;
+			border: 1px solid color.adjust($article-base-background, $blackness: 8%);
+		}
+		$content: color.adjust($article-base-background, $whiteness: 12%);
+	}
+	.container {
+		background: $panel-back;
+
+		table {
+			tbody {
+				tr {
+					&.spacer {
+						border-left: 1px solid $panel-back;
+						border-right: 1px solid $panel-back;
+						background: $panel-back;
+					}
+				}
+			}
+		}
+	}
+
+	$dialog: $home;
+	.dialog {
+		&-box {
+			border-color: $dialog;
+			background: white;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+			header {
+				height: 29px;
+				background: color.adjust($dialog, $whiteness: 20%);
+				button {
+					background-color: color.adjust($dialog, $whiteness: 10%);
+					border-radius: 0;
+					background-image: url("../images/cross.svg");
+
+					height: 29px;
+					width: 29px;
+					max-width: 29px;
+					max-height: 29px;
+					background-size: 60%;
+					background-repeat: no-repeat;
+					background-position: center center;
+				}
+			}
+			footer {
+				button {
+					background-color: $dialog;
+				}
+			}
+		}
+	}
+
+	button {
+		&.button-info {
+			background-color: $home;
+		}
+	}
+
+	.panel {
+		background: $article-base-background;
+	}
+
+	hr {
+		background: color.adjust($article-base-background, $blackness: 25%);
+	}
+}
+
+.french {
+	$french-home: green;
+	$background: white;
+	$button: colours.$french-button;
+	// $article-base-background: colours.$french-article-base-background;
+	$french-panel-back: colours.$french-article-base-background;
+	$french-body-back: white;
+	// $panel-back: $french-panel-back;
+	// $body-back: $french-body-back;
+	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back);
+}
+
+.spanish {
+	$spanish-home: rgb(247, 188, 28);
+	$background: #ffefcc;
+	$spanish-article-base-background: $spanish-home;
+	$spanish-panel-back: colours.$spanish-article-base-background;
+	$spanish-body-back: white;
+	$button: colours.$spanish-button;
+	// $panel-back: $spanish-panel-back;
+	// $body-back: $spanish-body-back;
+	@include affected_by_skin($spanish-home, $button, $background, $spanish-article-base-background, $spanish-panel-back, $spanish-body-back);
+}
+
+.arabic {
+	$arabic-home: rgb(230, 203, 130);
+	$background: #ffefcc;
+	$arabic-article-base-background: $arabic-home;
+	$arabic-panel-back: colours.$arabic-article-base-background;
+	$arabic-body-back: white;
+	$button: colours.$arabic-button;
+	// $panel-back: $arabic-panel-back;
+	// $body-back: $arabic-body-back;
+	@include affected_by_skin($arabic-home, $button, $background, $arabic-article-base-background, $arabic-panel-back, $arabic-body-back);
+}

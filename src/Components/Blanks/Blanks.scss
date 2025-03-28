@@ -1,0 +1,213 @@
+// Blanks.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.blanks-container {
+	touch-action: none;
+
+	> .blanks,
+	> .target {
+		display: block;
+		z-index: 1;
+	}
+
+	.blanks {
+		line-height: 1.4em;
+		overflow: visible;
+		min-height: 500px;
+		box-sizing: border-box;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.words-container {
+		overflow: visible;
+		// background: colours.$panel-back;
+		padding: 2rem 3rem;
+		top: 0;
+		z-index: 20;
+		transition-property: width;
+		transition-duration: 1s;
+		line-height: 3.5rem;
+		.draggable {
+			box-shadow: 1px 1px 1px black;
+			cursor: pointer;
+			z-index: 21;
+		}
+	}
+
+	.placeholders {
+		visibility: hidden; // It's just to get dimensions from a flexible/configurable list of content
+		top: 0;
+		// background: colours.$panel-back;
+		padding: 2rem 3rem;
+		position: absolute;
+		.word {
+			opacity: 0.5;
+		}
+	}
+
+	p.clue {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+
+	.help {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-evenly;
+		width: 600px;
+	}
+
+	.hidden-help {
+		opacity: 0;
+		transition: opacity 4s;
+		&.show {
+			opacity: 1;
+			transition: opacity 4s;
+		}
+	}
+
+	.audio-clip {
+		display: flex;
+		align-items: center;
+	}
+
+	&.type-table,
+	&.type-questions-answers {
+		.dragging,
+		.placed {
+			margin: 4px;
+		}
+	}
+	&.type-table,
+	&.type-questions-answers,
+	&.type-phrases {
+		.dragging {
+			box-shadow: 8px 8px 8px gray;
+		}
+	}
+	&.type-questions-answers,
+	&.type-phrases {
+		.placed {
+			box-shadow: 1px 1px 1px black;
+			transition: box-shadow 1s;
+		}
+	}
+
+	&.type-questions-answers {
+		> .blanks {
+			> .target {
+				min-width: 1010px;
+				table {
+					td:nth-child(3) {
+						border-width: 1px;
+						border-style: solid;
+						border-color: transparent;
+						opacity: 0;
+						pointer-events: none;
+						transition:
+							opacity,
+							border-color 1s;
+					}
+				}
+			}
+		}
+		&.complete {
+			> .blanks {
+				> .target {
+					table {
+						td:nth-child(3) {
+							background: white;
+							opacity: 1;
+							border-color: black;
+							border-width: 1px;
+							border-style: solid;
+							pointer-events: all;
+							transition:
+								opacity,
+								border-color 1s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.target {
+		background: lightgray;
+		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
+		padding: 1rem 2rem;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		font-weight: bold;
+
+		.audio-clip {
+			opacity: 0;
+			transition: opacity 1s;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+			li {
+				inset: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.word {
+					position: relative;
+				}
+				label {
+					font-weight: normal;
+					display: inline-flex;
+					margin-left: 3rem;
+				}
+			}
+		}
+		.word {
+			&.blank {
+				opacity: 0;
+			}
+		}
+		table {
+			text-align: left;
+			border-collapse: collapse;
+			td,
+			th {
+				font-size: 1rem;
+				border: 1px solid #000000;
+				padding: 0 4px;
+				font-weight: bold;
+				text-align: center;
+				background: white;
+				span {
+					margin: 4px;
+				}
+			}
+			tbody {
+				border: none;
+				tr {
+					&.spacer {
+						border-right: none;
+						td {
+							border-left: none;
+							border-right: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.complete {
+		.audio-clip {
+			opacity: 1;
+			transition: opacity 1s;
+		}
+	}
+}

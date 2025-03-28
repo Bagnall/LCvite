@@ -1,0 +1,207 @@
+// App.scss
+
+@use "./styles/_colours.module.scss";
+@use "./styles/_media-queries.module.scss";
+@use "./styles/_mixins.module.scss";
+@use "./styles/_skin.module.scss";
+@use "sass:color";
+
+html.debug {
+	.blanks-container .target .word.blank {
+		opacity: 0.2;
+	}
+}
+
+.app {
+	box-sizing: border-box;
+	line-height: 1.4em;
+	margin: 0;
+	overflow: hidden;
+}
+
+p > audio,
+audio.compact {
+	width: 210px;
+	height: 27px; // Half default height
+	vertical-align: middle;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	// background: color.adjust(colours.$article-base-background, $blackness: 25%);
+}
+
+.container {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	z-index: 1;
+	margin: 1rem auto;
+	max-width: 1200px;
+	touch-action: none;
+
+	overflow: visible;
+	padding: 2rem 3rem;
+	.instructions {
+		text-align: center;
+	}
+}
+
+body {
+	font-family: arial;
+	font-size: 16px;
+	color: black;
+	margin: 0;
+	// background-color: colours.$body-back; In skin
+}
+
+h1,
+h2,
+h3 {
+	clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+}
+
+h2 {
+	line-height: 2em;
+	font-size: 1.6em;
+}
+
+.arabic {
+	#content {
+		#hero {
+			background-image: url(/projects/richard/images/uae.jpg);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: auto;
+			// height: 282px;
+		}
+	}
+}
+.french {
+	#content {
+		#hero {
+			background-image: url(/projects/richard/images/street.png);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: 50%;
+			height: 282px;
+		}
+	}
+}
+.spanish {
+	#content {
+		#hero {
+			background-image: url(/projects/richard/images/barcelona.png);
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: auto;
+			// height: 282px;
+		}
+	}
+}
+#content {
+	width: 100vw;
+	max-width: 1400px;
+	text-align: left;
+	padding: 1rem 2rem 1rem 1rem;
+	margin: auto;
+	h1,
+	h2 {
+		display: flex;
+		justify-content: center;
+	}
+	ul {
+		margin: 2rem 0;
+	}
+	li {
+		margin: 1rem 0;
+		.video {
+			margin-left: -40px;
+		}
+	}
+	.video {
+		border-width: 5px;
+		border-style: ridge;
+		border-color: blue;
+		border-radius: 4px;
+		width: 560px;
+		height: 315px;
+		max-width: 90vw;
+		max-height: 90vh;
+	}
+	#hero {
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+		background-image: url(/projects/richard/images/street.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 50%;
+		height: 282px;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0.5rem;
+		overflow-y: hidden;
+		h1 {
+			margin-top: 10px;
+			color: white;
+			font-weight: bold;
+			text-shadow:
+				0px 0px 4px black,
+				0px 0px 4px black,
+				0px 0px 4px black,
+				0px 0px 4px black;
+			font-size: 3rem;
+			z-index: 1;
+		}
+		h2 {
+			margin: 0 0 0.5rem;
+			color: white;
+			font-weight: bold;
+			z-index: 1;
+			text-shadow:
+				0px 0px 4px black,
+				0px 0px 4px black,
+				0px 0px 4px black,
+				0px 0px 4px black;
+		}
+	}
+}
+
+@include media-queries.respond-above(m) {
+	$header-height: 8rem;
+
+	.content {
+		text-align: justify;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		li {
+			.video {
+				margin-left: 40px;
+			}
+		}
+		.video {
+			margin-left: 40px;
+		}
+	}
+
+	h3 {
+		margin: 1.8em 0 0.4em;
+	}
+
+	p {
+		line-height: 1.6em;
+	}
+}

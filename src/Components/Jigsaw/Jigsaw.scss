@@ -1,0 +1,97 @@
+// Jigsaw.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.jigsaw-container {
+	.jigsaw,
+	.target {
+		display: block;
+		z-index: 1;
+	}
+
+	.jigsaw {
+		// 629 x 508
+		line-height: 1.4em;
+		position: relative;
+		overflow: visible;
+		width: variables.$tile-size * 10px;
+		height: variables.$tile-size * 8px;
+		max-height: 1300px;
+		&::before {
+			content: "";
+			width: variables.$tile-size * 10px;
+			height: variables.$tile-size * 4px;
+			background: lightgray;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		transform: scale(0.4);
+		transform-origin: center top;
+		margin-bottom: variables.$tile-size * -2.4px;
+		box-sizing: border-box;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	p.clue {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+
+	.help {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-evenly;
+		width: 600px;
+	}
+
+	.hidden-help {
+		opacity: 0;
+		transition: opacity 4s;
+		&.show {
+			opacity: 1;
+			transition: opacity 4s;
+		}
+	}
+
+	.audio-clip {
+		display: flex;
+		align-items: center;
+	}
+
+	.target {
+		position: absolute;
+		top: variables.$tile-size * 4px + variables.$border-width * 3;
+		width: variables.$tile-size * 4px - variables.$tab-size * 3 - 10;
+		height: variables.$tile-size * 3px - variables.$tab-size - 8;
+		background: lightgray;
+		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
+		box-sizing: border-box;
+	}
+	@include media-queries.respond-above(m) {
+		.jigsaw {
+			transform: scale(0.4);
+		}
+	}
+	@include media-queries.respond-above(l) {
+		.jigsaw {
+			transform: scale(0.5);
+		}
+	}
+	@include media-queries.respond-above(xl) {
+		.jigsaw {
+			transform: scale(0.5);
+		}
+	}
+	@include media-queries.respond-above(xxl) {
+		.jigsaw {
+			transform: scale(0.7);
+		}
+	}
+}

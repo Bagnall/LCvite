@@ -1,0 +1,91 @@
+// DropDowns.scss
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_variables.module.scss";
+
+html.debug {
+	.drop-downs-container {
+		span {
+			border: 1px solid rgba(255, 0, 0, 0.2);
+		}
+	}
+}
+html.debug {
+	option.hint {
+		background-color: rgba(0, 255, 0, 0.1);
+	}
+}
+.drop-downs-container {
+	// background: colours.$panel-back;
+
+	p {
+		font-size: 1.4rem;
+		margin: 0;
+		select,
+		span {
+			// color: red;
+			font-size: 1.4rem;
+			min-width: 12rem;
+			display: inline-block;
+			outline: none;
+			&.correct {
+				border-color: colours.$correct-border;
+				background: colours.$correct-background;
+				pointer-events: none;
+			}
+			&.incorrect {
+				border-color: colours.$incorrect-border;
+				background: colours.$incorrect-background;
+			}
+		}
+	}
+
+	p.clue {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+
+	.help {
+		padding: 1rem;
+		// display: flex;
+		// justify-content: space-evenly;
+		// width: 600px;
+	}
+
+	.hidden-help {
+		opacity: 0;
+		transition: opacity 4s;
+		&.show {
+			opacity: 1;
+			transition: opacity 4s;
+		}
+	}
+	table {
+		text-align: left;
+		border-collapse: collapse;
+		background: white;
+		td,
+		th {
+			border: 1px solid #000000;
+			padding: 5px 4px;
+			font-weight: bold;
+		}
+		tbody {
+			border: none;
+			tr {
+				&.spacer {
+					border-left: none;
+					border-right: none;
+					td {
+						border-left: none;
+						border-right: none;
+					}
+				}
+			}
+		}
+		td {
+			font-size: 1rem;
+			padding: 0.25rem 1rem;
+		}
+	}
+}

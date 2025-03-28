@@ -1,0 +1,182 @@
+import './WordParts.scss';
+import {
+	AudioClip,
+} from '..';
+import React from 'react';
+import {resolveAsset} from '../../utility';
+
+export class WordParts extends React.PureComponent {
+
+	// Table of phrases with translatiopns column and sound files column.
+	// config is passed from the parent so that multiple exercises are possible.
+
+	constructor(props) {
+		super(props);
+		this.state = ({
+			...props.config,
+			failCount: 0,
+		});
+
+	}
+
+	autoSolve = () => {
+		// console.log("autoSolve");
+		const {
+			id = [],
+			nPlaced = 0,
+		} = this.state;
+
+		if (nPlaced < this.nToSolve) {
+			const targets = document.querySelectorAll(`#${id} span.target`);
+			const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+
+			wofAudio.play();
+
+			for (let i = 0; i < targets.length; i++) {
+				targets[i].classList.add('animate');
+			}
+			this.setState({
+				nPlaced: this.nToSolve
+			});
+
+		}
+	};
+
+	handlePartWordClick = (e) => {
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+
+		const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+		// console.log("handlePartWordClick");
+		wofAudio.play();
+		const {
+			congratulationsText,
+		} = this.state;
+		let {
+			nPlaced = 0,
+		} = this.state;
+		e.target.classList.add("animate");
+		nPlaced++;
+		if (nPlaced === this.nToSolve){
+
+			// Last piece of the jigsaw placed
+			const { showDialog } = this.props;
+			showDialog(congratulationsText);
+			tadaAudio.play();
+			this.setState({
+				complete: true,
+			});
+		}
+		this.setState({
+			nPlaced: nPlaced
+		});
+	};
+
+	handlePartWordError = (e) => {
+		// console.log("handlePartWordError");
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
+		let { failCount } = this.state;
+		errorAudio.play();
+		e.target.classList.add("error");
+
+		failCount++;
+		this.setState({
+			failCount: failCount
+		});
+	};
+
+	render = () => {
+		const {
+			audio,
+			cheatText,
+			failCount = 0,
+			id = [],
+			instructionsText,
+			nPlaced = 0,
+			phrases,
+			// showHintsText,
+		} = this.state;
+
+		const phraseList = new Array;
+		let nToSolve = 0;
+
+		const reg = /(\[.*?\])/;
+		for (let i = 0; i < phrases.length; i++) {
+
+			const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
+			const phrase = new Array;
+			for (let j = 0; j < phraseSplit.length; j++) {
+
+				if (phraseSplit[j][0] === '[') {
+					// span it as a target!
+					const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
+					nToSolve++;
+					phrase.push(<span className={`target`} onClick={this.handlePartWordClick} key={`${id}-phraseSpan${i}-${j}`}>{cleanedPhraseSplit}</span>);
+				}
+				else if(phraseSplit[j].length){
+					phrase.push(<span onClick={this.handlePartWordError} key={`${id}-phraseSpan${i}-${j}`}>{phraseSplit[j]}</span>);
+				}
+			}
+
+			phraseList.push(
+				<p>{ phrase }</p>
+			);
+		}
+
+		const rows = new Array();
+		for (let i = 0; i < phrases.length; i++){
+			const phrase = phrases[i];
+			const cells = new Array();
+			if (phrase[0] === '') {
+				// blank row
+				rows.push(
+					<tr className={`spacer`} key={`row${i}`}>
+						<td colSpan={3}></td>
+					</tr>
+				);
+			} else {
+				cells.push(
+					<td key={`row${i}cell1`}>
+						{phraseList[i]}
+					</td>
+				);
+				const soundFile = resolveAsset(`/sounds/${audio[i]}`);
+
+				cells.push(
+					<td key={`row${i}cell2`}>
+						<AudioClip label={""} soundFile={soundFile} />
+					</td>
+				);
+
+				rows.push(
+					<tr key={`row${i}`}>
+						{cells}
+					</tr>
+				);
+			}
+		}
+		this.nToSolve = nToSolve;
+		return (
+			<div
+				className={`word-parts-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}WordParts`}
+			>
+				<p className={`instructions`}>{instructionsText}</p>
+
+
+				<div className='help'>
+					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
+					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+				</div>
+
+				<table>
+					<tbody>
+						{rows}
+					</tbody>
+				</table>
+
+				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
+			</div>
+		);
+	};
+}
