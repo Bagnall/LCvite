@@ -2,10 +2,8 @@ import './WordParts.scss';
 import {
 	AudioClip,
 } from '..';
-import error from '../../sounds/error.mp3';
 import React from 'react';
-import tada from '../../sounds/tada.mp3';
-import wof from '../../sounds/wheel-of-fortune.mp3';
+import {	resolveAsset} from '../../utility';
 
 export class WordParts extends React.PureComponent {
 
@@ -27,8 +25,8 @@ export class WordParts extends React.PureComponent {
 			id = [],
 		} = this.state;
 		const targets = document.querySelectorAll(`#${id} span.target`);
-		const wofAudio = new Audio(wof);
-		// console.log("handlePartWordClick");
+		const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+
 		wofAudio.play();
 
 		for (let i = 0; i < targets.length; i++){
@@ -37,8 +35,9 @@ export class WordParts extends React.PureComponent {
 	};
 
 	handlePartWordClick = (e) => {
-		const tadaAudio = new Audio(tada);
-		const wofAudio = new Audio(wof);
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+
+		const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 		// console.log("handlePartWordClick");
 		wofAudio.play();
 		const {
@@ -66,7 +65,7 @@ export class WordParts extends React.PureComponent {
 
 	handlePartWordError = (e) => {
 		// console.log("handlePartWordError");
-		const errorAudio = new Audio(error);
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
 		let { failCount } = this.state;
 		errorAudio.play();
 		e.target.classList.add("error");
@@ -94,26 +93,21 @@ export class WordParts extends React.PureComponent {
 
 		const reg = /(\[.*?\])/;
 		for (let i = 0; i < phrases.length; i++) {
-			// console.log("phrase", phrases[i]);
+
 			const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
 			const phrase = new Array;
 			for (let j = 0; j < phraseSplit.length; j++) {
-				// console.log(`phraseSplit[${j}]`, phraseSplit[j]);
+
 				if (phraseSplit[j][0] === '[') {
-					// console.log("spinner!");
 					// span it as a target!
 					const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
-					// console.log("cleanedPhraseSplit", cleanedPhraseSplit);
 					nToSolve++;
 					phrase.push(<span className={`target`} onClick={this.handlePartWordClick} key={`${id}-phraseSpan${i}-${j}`}>{cleanedPhraseSplit}</span>);
 				}
 				else if(phraseSplit[j].length){
-					// console.log(`*phraseSplit[${j}]|${phraseSplit[j]}|`);
 					phrase.push(<span onClick={this.handlePartWordError} key={`${id}-phraseSpan${i}-${j}`}>{phraseSplit[j]}</span>);
 				}
 			}
-
-			// const soundFile = `src/sounds/${audio[i]}`;
 
 			phraseList.push(
 				<p>{ phrase }</p>
@@ -132,13 +126,12 @@ export class WordParts extends React.PureComponent {
 					</tr>
 				);
 			} else {
-				// for (let j = 0; j < 2; j++) {
 				cells.push(
 					<td key={`row${i}cell1`}>
 						{phraseList[i]}
 					</td>
 				);
-				const soundFile = `src/sounds/${audio[i]}`;
+				const soundFile = resolveAsset(`/sounds/${audio[i]}`);
 
 				cells.push(
 					<td key={`row${i}cell2`}>

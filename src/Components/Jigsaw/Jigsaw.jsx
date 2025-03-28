@@ -1,19 +1,16 @@
 import './Jigsaw.scss';
 import {
+	arrayIncludesObject,
+	resolveAsset,
+} from '../../utility';
+import {
 	AudioClip,
 	Piece,
 } from '../../Components';
 import {
-	arrayIncludesObject,
-	// handleResponse,
-} from '../../utility';
-import click from '../../sounds/click.mp3';
-import error from '../../sounds/error.mp3';
-import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
 import React from 'react';
-import tada from '../../sounds/tada.mp3';
 import Variables from '../../styles/_variables.module.scss';
 
 export class Jigsaw extends React.PureComponent {
@@ -106,27 +103,6 @@ export class Jigsaw extends React.PureComponent {
 	}
 
 	componentDidMount = () => {
-
-		// const { logError } = this.props;
-		// Read the config
-		// const headers = new Headers();
-		// headers.append("Content-Type", "application/json");
-
-		// const requestOptions = {
-		// 	headers: headers,
-		// 	method: 'GET',
-		// 	redirect: 'follow',
-		// };
-
-		// fetch(`${window.location.origin}/src/Components/Jigsaw/config.json`, requestOptions)
-		// 	.then(handleResponse)
-		// 	.then(res => {
-		// 		this.setState(res);
-		// 	})
-		// 	.catch(error => {
-		// 		const action = `Retrieving configuration`;
-		// 		logError(action, error);
-		// 	});
 
 		// Deduce the scale in use for this media break
 		const jigsaw = this.jigsawRef.current;
@@ -249,9 +225,9 @@ export class Jigsaw extends React.PureComponent {
 		// console.log("handleMouseUp", e)
 		e.target.classList.remove("dragging");
 		const targetTray = this.targetRef.current;
-		const tadaAudio = new Audio(tada);
-		const clickAudio = new Audio(click);
-		const errorAudio = new Audio(error);
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
 		} = this.state;
@@ -375,7 +351,7 @@ export class Jigsaw extends React.PureComponent {
 
 				<AudioClip
 					listenText={listenDescriptionText}
-					soundFile={soundFile}
+					soundFile={resolveAsset(soundFile)}
 				/>
 
 				<div className='help'>

@@ -3,6 +3,9 @@ import {
 	AudioClip,
 } from '../../Components';
 import React from 'react';
+import {
+	resolveAsset,
+} from '../../utility';
 
 export class PhraseTable extends React.PureComponent {
 
@@ -43,7 +46,7 @@ export class PhraseTable extends React.PureComponent {
 					);
 				}
 				if (phrase[2]) {
-					const soundFile = `/src/sounds/${phrase[2]}`;
+					const soundFile = resolveAsset(`/sounds/${phrase[2]}`);
 					cells.push(
 						<td key={`row${i}cell${3}`}>
 							<AudioClip label={""} soundFile={soundFile} />

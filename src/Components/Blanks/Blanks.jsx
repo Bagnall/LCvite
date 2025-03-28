@@ -3,17 +3,14 @@ import {
 	AudioClip,
 	Word,
 } from '../../Components';
-import click from '../../sounds/click.mp3';
-import error from '../../sounds/error.mp3';
+import {
+	resolveAsset,
+	shuffleArray
+} from '../../utility';
 import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
 import React from 'react';
-import {
-	// 	handleResponse,
-	shuffleArray
-} from '../../utility';
-import tada from '../../sounds/tada.mp3';
 import Variables from '../../styles/_variables.module.scss';
 
 export class Blanks extends React.PureComponent {
@@ -42,7 +39,6 @@ export class Blanks extends React.PureComponent {
 						<Word
 							className={`blank draggable`}
 							index={i}
-							// wordText={words[i]}
 							key={`words${i}`}>{words[i]}</Word>
 					);
 				}
@@ -68,9 +64,6 @@ export class Blanks extends React.PureComponent {
 
 				break;
 			}
-			// default: {
-
-			// }
 		}
 
 		this.state = ({
@@ -112,7 +105,6 @@ export class Blanks extends React.PureComponent {
 				<Word
 					className={`blank placed`}
 					index={index}
-					// wordText={words[i]}
 					x={targetX}
 					y={targetY}
 					key={`Word${index}`} >{blanksType === 'questions-answers' ? answers[i] : words[i]}</Word>
@@ -233,9 +225,9 @@ export class Blanks extends React.PureComponent {
 	handleMouseUp = () => {
 		// console.log("handleMouseUp", e)
 
-		const tadaAudio = new Audio(tada);
-		const clickAudio = new Audio(click);
-		const errorAudio = new Audio(error);
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
 		} = this.state;
@@ -382,7 +374,7 @@ export class Blanks extends React.PureComponent {
 						}
 					}
 
-					const soundFile = `src/sounds/${audio[i]}`;
+					const soundFile = resolveAsset(`/sounds/${audio[i]}`);
 
 					phraseList.push(
 						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
@@ -424,7 +416,7 @@ export class Blanks extends React.PureComponent {
 			}
 			case "questions-answers": {
 				for (let i = 1; i <= questions.length; i++) {
-					const soundFile = `src/sounds/${soundFiles[i - 1]}`;
+					const soundFile = resolveAsset(`/sounds/${soundFiles[i - 1]}`);
 					tableRows.push(
 						<tr key={`${id}row${i}`}>
 							<td>
@@ -452,7 +444,9 @@ export class Blanks extends React.PureComponent {
 			}
 			default: {
 				const action = "Not a valid type of Blanks";
-				logError(action, error);
+				logError(action, {
+					message: "Not a valid type of Blanks"
+				});
 			}
 		}
 

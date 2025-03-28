@@ -1,5 +1,6 @@
 import './Piece.scss';
 import React from 'react';
+import {resolveAsset} from '../../../utility';
 
 export class Piece extends React.PureComponent {
 
@@ -24,9 +25,9 @@ export class Piece extends React.PureComponent {
 		if (x !== undefined) styles.left = `${x}px`;
 		if (y !== undefined) styles.top = `${y}px`;
 		if (correctSet) {
-			styles.backgroundImage = `url(${correctImage})`;
+			styles.backgroundImage = `url(${resolveAsset(correctImage)})`;
 		} else {
-			styles.backgroundImage = `url(${incorrectImage})`;
+			styles.backgroundImage = `url(${resolveAsset(incorrectImage)})`;
 		}
 
 		// console.log("styles", styles);

@@ -1,12 +1,9 @@
 import './DropDowns.scss';
+import { replaceSelectWithSpan, resolveAsset } from '../../utility';
 import {
 	AudioClip,
 } from '..';
-import error from '../../sounds/error.mp3';
 import React from 'react';
-import tada from '../../sounds/tada.mp3';
-import ting from '../../sounds/ting.mp3';
-import { replaceSelectWithSpan } from '../../utility';
 
 export class DropDowns extends React.PureComponent {
 
@@ -33,8 +30,8 @@ export class DropDowns extends React.PureComponent {
 		} = this.state;
 		const {			showDialog } = this.props;
 
-		const errorAudio = new Audio(error);
-		const correctAudio = new Audio(ting);
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		const correctAudio = new Audio('/sounds/ting.mp3');
 		const { value } = event.target;
 		const cl = event.target.classList;
 		if (parseInt(value) === winner) {
@@ -43,7 +40,7 @@ export class DropDowns extends React.PureComponent {
 			replaceSelectWithSpan(event.target);
 			nPlaced++;
 			if (nPlaced === this.nToSolve) {
-				const tadaAudio = new Audio(tada);
+				const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 				showDialog(congratulationsText);
 				tadaAudio.play();
@@ -91,7 +88,7 @@ export class DropDowns extends React.PureComponent {
 			);
 			nSelects++;
 
-			({ lastIndex } = regex);// .lastIndex;
+			({ lastIndex } = regex);
 			index++;
 		}
 
@@ -115,7 +112,6 @@ export class DropDowns extends React.PureComponent {
 			instructionsText,
 			nPlaced = 0,
 			phrases,
-			// showHintsText,
 		} = this.state;
 
 		const phraseList = new Array;
@@ -139,13 +135,12 @@ export class DropDowns extends React.PureComponent {
 					</tr>
 				);
 			} else {
-				// for (let j = 0; j < 2; j++) {
 				cells.push(
 					<td key={`row${i}cell1`}>
 						{phraseList[i]}
 					</td>
 				);
-				const soundFile = `src/sounds/${audio[i]}`;
+				const soundFile = resolveAsset(`/sounds/${audio[i]}`);
 
 				if (audio[i]) {
 					cells.push(

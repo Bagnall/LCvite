@@ -17,13 +17,11 @@ import {
 	handleResponse,
 } from './utility';
 import React from 'react';
-import wof from './sounds/wheel-of-fortune.mp3';
 
 export default class App extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.wofAudio = new Audio(wof);
 
 		this.state = ({
 			dialogContent: '',
@@ -44,7 +42,7 @@ export default class App extends React.Component {
 			redirect: 'follow',
 		};
 
-		fetch(`${window.location.origin}/src/config.json`, requestOptions)
+		fetch(`./src/config.json`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
 				this.setState({ config: { ...res } });
@@ -81,20 +79,20 @@ export default class App extends React.Component {
 				status,
 				statusText = '',
 			} = error;
-			let NebulaMessage = '';
-			let NebulaStatus = '';
+			let Message = '';
+			let Status = '';
 			if (errorCode && errorMessage) { // Most likely an error from Metabolism Server
-				NebulaMessage += errorMessage;
-				NebulaStatus += errorCode;
+				Message += errorMessage;
+				Status += errorCode;
 			}
-			if (status) NebulaStatus = status;
-			if (message) NebulaMessage += message;
-			if (detail) NebulaMessage += detail;
+			if (status) Status = status;
+			if (message) Message += message;
+			if (detail) Message += detail;
 
 			errors.push({
 				action: action,
-				message: NebulaMessage,
-				statusCode: NebulaStatus,
+				message: Message,
+				statusCode: Status,
 				statusText: statusText,
 			});
 
@@ -141,23 +139,23 @@ export default class App extends React.Component {
 		const {
 			config,
 			dialogContent,
-			dropdowns1,
+			// dropdowns1,
 			errors,
-			jigsaw1,
-			jigsaw2,
-			jigsaw3,
-			monologues,
-			phrases1,
-			phrases2,
-			phrases3,
-			phraseTable1,
+			// jigsaw1,
+			// jigsaw2,
+			// jigsaw3,
+			// monologues,
+			// phrases1,
+			// phrases2,
+			// phrases3,
+			// phraseTable1,
 			refreshErrorLog,
 			showDialog = false,
-			vocabulary1,
-			vocabulary2,
-			wordparts1,
-			wordsIntoSlots1,
-			wordsIntoSlots2,
+			// vocabulary1,
+			// vocabulary2,
+			// wordparts1,
+			// wordsIntoSlots1,
+			// wordsIntoSlots2,
 		} = this.state;
 		const articles = new Array;
 

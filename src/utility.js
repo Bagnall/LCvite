@@ -213,6 +213,10 @@ export const shuffleArray = (array) => {
 	return array;
 };
 
+export const resolveAsset = (path = '') => {
+	return `${import.meta.env.BASE_URL}${path}`;
+};
+
 export const titleCase = (str) => {
 	const splitStr = str.toLowerCase().split(' ');
 	for (let i = 0; i < splitStr.length; i++) {

@@ -4,7 +4,7 @@ import {
 	Word,
 } from '../../Components';
 import click from '../../sounds/click.mp3';
-import error from '../../sounds/error.mp3';
+import error from '../../sounds/error.mp3?url';
 import {
 	mouseRelativeTo,
 } from '../../mouseUtility';

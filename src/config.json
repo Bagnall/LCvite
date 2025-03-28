@@ -66,7 +66,7 @@
 			[
 				"Je m’appelle Isabelle Martin.",
 				"My name is Isabelle Martin.",
-				"je-m-appelle-isabelle-Martin.mp3"
+				"je-m-appelle-isabelle-martin.mp3"
 			]
 		],
 		"titleText": "Dialogues"
@@ -272,16 +272,16 @@
 	},
 	"jigsaw1": {
 		"component": "Jigsaw",
-		"correctImage": "/src/images/cyclist-horse.jpg",
+		"correctImage": "/images/cyclist-horse.jpg",
 		"id": "jigsaw1",
-		"incorrectImage": "/src/images/parrot-jaguar.jpg",
+		"incorrectImage": "/images/parrot-jaguar.jpg",
 		"congratulationsText": "Well done! You solved the puzzle!",
 		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
 		"descriptionText": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
 		"descriptionTextComment": "Foreign language description of picture with nouns, verbs and lots of adjectives.'",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/src/sounds/cyclist-horse.mp3",
+		"soundFile": "/sounds/cyclist-horse.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
@@ -534,15 +534,15 @@
 	},
 	"jigsaw2": {
 		"component": "Jigsaw",
-		"correctImage": "/src/images/parrot-jaguar.jpg",
+		"correctImage": "/images/parrot-jaguar.jpg",
 		"id": "jigsaw2",
-		"incorrectImage": "/src/images/cyclist-horse.jpg",
+		"incorrectImage": "/images/cyclist-horse.jpg",
 		"congratulationsText": "Squawk! You solved the puzzle!",
 		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
 		"descriptionText": "Un beau perroquet dans une forêt luxuriante mangeant une noix du Brésil tout en regardant un jaguar au sol.",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/src/sounds/parrot-jaguar.mp3",
+		"soundFile": "/sounds/parrot-jaguar.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
@@ -586,10 +586,10 @@
 			"quelle [h]o[r][r]eur Valé[r]ie"
 		],
 		"audio": [
-			"bonjourmoncheri.mp3",
-			"bonsoirmonamour.mp3",
-			"aurevoirmacherie.mp3",
-			"quellehorreurvalerie.mp3"
+			"bonjour-mon-cheri.mp3",
+			"bonsoir-mon-amour.mp3",
+			"au-revoir-ma-cherie.mp3",
+			"quelle-horreur-valerie.mp3"
 		],
 		"titleText": "Select the parts of the words with the described sounds"
 	},
@@ -628,15 +628,15 @@
 	},
 	"jigsaw3": {
 		"component": "Jigsaw",
-		"correctImage": "/src/images/car-windmill.jpg",
+		"correctImage": "/images/car-windmill.jpg",
 		"id": "jigsaw3",
-		"incorrectImage": "/src/images/car-cliff-lift.jpg",
+		"incorrectImage": "/images/car-cliff-lift.jpg",
 		"congratulationsText": "Vroom! You solved the puzzle!",
 		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
 		"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/src/sounds/car-windmill.mp3",
+		"soundFile": "/sounds/car-windmill.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"

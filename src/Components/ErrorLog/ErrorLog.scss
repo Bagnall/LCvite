@@ -23,7 +23,7 @@ $error-log-width: 700px;
 	box-shadow: 0 0 4px gray;
 	max-width: $error-log-width;
 	transition:
-		top $transition-speed / 2,
+		top calc($transition-speed / 2),
 		max-height $transition-speed,
 		max-width $transition-speed,
 		left $transition-speed,
@@ -37,7 +37,7 @@ $error-log-width: 700px;
 	&.show {
 		top: 0;
 		transition:
-			top $transition-speed / 2,
+			top calc($transition-speed / 2),
 			max-height $transition-speed,
 			max-width $transition-speed,
 			left $transition-speed,
@@ -55,7 +55,7 @@ $error-log-width: 700px;
 			.header-buttons-left {
 				button {
 					&#collapse {
-						transition: transform $transition-speed / 2;
+						transition: transform calc($transition-speed / 2);
 						transform: rotateZ(180deg);
 					}
 				}
@@ -77,7 +77,7 @@ $error-log-width: 700px;
 		&.clear-error {
 			background: rgb(218, 0, 0);
 			mask-size: 40%;
-			mask-image: URL("../../images/whiteCross.svg");
+			mask-image: url("whiteCross.svg"); // Too hacky, need better solution so these graphical assets can be shared
 		}
 	}
 
@@ -101,7 +101,7 @@ $error-log-width: 700px;
 				background: $header-colour;
 				&#copyAll {
 					mask-size: 40%;
-					mask-image: URL("../../images/copy.svg");
+					mask-image: url("copy.svg"); // Too hacky, need better solution so these graphical assets can be shared
 				}
 			}
 		}
@@ -112,9 +112,9 @@ $error-log-width: 700px;
 			left: 0;
 			button {
 				&#collapse {
-					transition: transform $transition-speed / 2;
+					transition: transform calc($transition-speed / 2);
 					mask-size: 60%;
-					mask-image: URL("../../images/upArrow.svg");
+					mask-image: url("upArrow.svg"); // Too hacky, need better solution so these graphical assets can be shared
 				}
 			}
 		}
