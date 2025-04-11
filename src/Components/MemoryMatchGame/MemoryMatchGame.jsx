@@ -1,10 +1,15 @@
 // React component for bilingual memory matching game
 import './MemoryMatchGame.scss';
+// import '../MemoryMatchGame.scss';
 import React from 'react';
 import {
 	resolveAsset,
 	// shuffleArray
 } from '../../utility';
+import Variables from '../../styles/_variables.module.scss';
+import {
+	Card,
+} from '../../Components';
 
 const objects = [
 	// { "english": "umbrella", "french": "parapluie", "image": "https://source.unsplash.com/80x80/?umbrella" },
@@ -14,10 +19,10 @@ const objects = [
 	// { "english": "snow globe", "french": "boule à neige", "image": "https://source.unsplash.com/80x80/?snow%20globe" },
 	// { "english": "hourglass", "french": "sablier", "image": "https://source.unsplash.com/80x80/?hourglass" },
 	// { "english": "lava lamp", "french": "lampe à lave", "image": "https://source.unsplash.com/80x80/?lava%20lamp" },
-	{ "english": "telescope", "french": "télescope", "image": "https://source.unsplash.com/80x80/?telescope" },
-	{ "english": "paintbrush", "french": "pinceau", "image": "https://source.unsplash.com/80x80/?paintbrush" },
-	{ "english": "watering can", "french": "arrosoir", "image": "https://source.unsplash.com/80x80/?watering%20can" },
-	{ "english": "zipper", "french": "fermeture éclair", "image": "https://source.unsplash.com/80x80/?zipper" },
+	{ "english": "telescope", "french": "télescope", "image": "/images/memory/telescope.webp" },
+	{ "english": "paintbrush", "french": "pinceau", "image": "/images/memory/paintbrush.webp" },
+	{ "english": "watering can", "french": "arrosoir", "image": "/images/memory/wateringcan.webp" },
+	{ "english": "zipper", "french": "fermeture éclair", "image": "/images/memory/zip.jpg" },
 	{ "english": "chessboard", "french": "échiquier", "image": "/images/memory/chessboard.png" },
 	// { "english": "seashell", "french": "coquillage", "image": "https://source.unsplash.com/80x80/?seashell" },
 	// { "english": "mug", "french": "tasse", "image": "https://source.unsplash.com/80x80/?mug" },
@@ -51,7 +56,7 @@ const objects = [
 
 const getShuffledDeck = () => {
 	const imageCards = objects.map((obj, idx) => ({
-		id: `img-${idx}`,
+		id: `${idx}b`,
 		type: 'image',
 		content: obj.english,
 		match: obj.french,
@@ -59,7 +64,7 @@ const getShuffledDeck = () => {
 		image: obj.image
 	}));
 	const textCards = objects.map((obj, idx) => ({
-		id: `txt-${idx}`,
+		id: `${idx}a`,
 		type: 'text',
 		content: obj.french,
 		match: obj.english,
@@ -73,19 +78,24 @@ export class MemoryMatchGame extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
+			beenFlipped:[], // To have shade animations if/when flipping back
 			cards: getShuffledDeck(),
 			flipped: [],
+			// flipping: [],
 			matched: []
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick(card) {
-		const { cards, flipped, matched } = this.state;
+		const { beenFlipped, cards, flipped, matched } = this.state;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
 
 		const newFlipped = [...flipped, card.id];
-		this.setState({ flipped: newFlipped }, () => {
+		beenFlipped.push(card.id);
+		let { memoryCardTransitionTime } = Variables;
+		memoryCardTransitionTime = parseInt(memoryCardTransitionTime.replace('s', '')) * 1000;
+		this.setState({ beenFlipped: beenFlipped, flipped: newFlipped }, () => {
 			if (newFlipped.length === 2) {
 				const [first, second] = newFlipped;
 				const firstCard = cards.find(c => c.id === first);
@@ -94,47 +104,95 @@ export class MemoryMatchGame extends React.PureComponent {
 				if (firstCard.match === secondCard.content) {
 					this.setState({ matched: [...matched, firstCard.id, secondCard.id] });
 				}
-
-				setTimeout(() => this.setState({ flipped: [] }), 1000);
+				setTimeout(() => this.setState({ flipped: [] }), memoryCardTransitionTime);
 			}
 		});
+		// 	if (newFlipped.length === 2) {
+		// const [first, second] = newFlipped;
+		// const firstCard = cards.find(c => c.id === first);
+		// const secondCard = cards.find(c => c.id === second);
+
+		// if (firstCard.match === secondCard.content) {
+		// 	this.setState({ matched: [...matched, firstCard.id, secondCard.id] });
+		// }
+		// console.log("memoryCardTransitionTime", memoryCardTransitionTime);
+		// setTimeout(() => {
+		// 	this.setState({
+		// 		flipped: [],
+		// 		flipping: [first, second],
+		// 	});
+		// 	setTimeout(() => {
+		// 		this.setState({
+		// 			flipped: [],
+		// 			flipping: [],
+		// 		});
+		// 	}, memoryCardTransitionTime);
+		// stateObj = {...stateObj, flipped:[]};
+		// setTimeout(() => this.setState({ flipped: [] }), memoryCardTransitionTime);
+		// }
+		// } else {
+		// 	// newFlipping.push(card.id);
+		// 	// const foundIndex = newFlipping.indexOf(card.id);
+		// 	setTimeout(() => {
+		// 		// domCard.classList.remove('flipping');
+		// 		console.log("foundIndex", foundIndex);
+		// 		this.setState({
+		// 			flipping: foundIndex !== -1 ? newFlipping.splice(foundIndex, 1) : newFlipping
+		// 		});
+		// 	}, memoryCardTransitionTime);
+		// }
+		// setTimeout(() => {
+		// 	const { flipping } = stateObj;
+		// 	const foundIndex = flipping.indexOf(card.id);
+		// 	if (foundIndex !== -1) {
+		// 		newFlipping.splice(foundIndex, 1);
+		// 		stateObj = {...stateObj, flipping:newFlipping};
+		// 		this.setState(stateObj);
+		// 	}
+		// }, memoryCardTransitionTime);
+		// });
+
 	}
 
 	render() {
-		const { cards, flipped, matched } = this.state;
+		const { beenFlipped, cards, flipped, matched } = this.state;
+		const sortedMatches = cards.filter(card =>
+			matched.includes(card.id)
+		);
+		sortedMatches.sort((a, b) => {
+			if (a.id < b.id) {
+				return -1;
+			}
+			if (a.id > b.id) {
+				return 1;
+			}
+			return 0;
+		});
 		return (
-			<div className="memory-map-container"
-			>
-				{cards.map(card => (
-					<div
-						key={card.id}
-						className={`card ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''}`}
-						// style={{ backgroundColor: flipped.includes(card.id) || matched.includes(card.id) ? '#ebf8ff' : '#e2e8f0' }}
-						onClick={() => this.handleClick(card)}
-					>
-						<div className={`card-contents-container`}>
-
-							{card.type === 'text' ? (
-								<span className="text-lg font-medium" style={{ fontSize: '1.125rem', fontWeight: 500 }}>{card.content}</span>
-							) : (
-								<div
-									className={`card-image-container`}
-									style={{ backgroundImage: `url(${resolveAsset(card.image)})` }}
-								>
-									{/* <img
-											src={`${resolveAsset(card.image)}`}
-											alt={card.content}
-											className="mx-auto"
-											// style={{ display: 'block', margin: '0 auto' }}
-										/> */}
-								</div>
-							)}
-						</div>
-						<div className={`card-back`}>
-							<span className="text-gray-400 text-xl font-bold" style={{ color: '#cbd5e0', fontSize: '1.25rem', fontWeight: 700 }}>?</span>
-						</div>
-					</div>
-				))}
+			<div className="memory-map-container">
+				<div className="cards">
+					{cards.map(card => (
+						<Card
+							card={card}
+							className={`${beenFlipped.includes(card.id) || matched.includes(card.id) ? 'been-flipped' : ''} ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
+							handleClick={this.handleClick}
+							key={`card${card.id}`}
+						/>
+					))}
+				</div>
+				<div className="matches">
+					{sortedMatches.map(card =>
+						matched.includes(card.id) ?
+							(
+								<Card
+									card={card}
+									className={`${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
+									handleClick={this.handleClick}
+									key={`matchedCard${card.id}`}
+								/>
+							) : null
+					)}
+				</div>
 			</div>
 		);
 	}

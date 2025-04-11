@@ -14,6 +14,7 @@ export * from './Info';
 export * from './Jigsaw';
 export * from './Jigsaw/Piece';
 export * from './MemoryMatchGame';
+export * from './MemoryMatchGame/Card';
 export * from './PhraseTable';
 export * from './WordGrid';
 export * from './WordParts';

@@ -1,7 +1,7 @@
 import './WordGrid.scss';
 import React, { PureComponent } from 'react';
-import {resolveAsset} from '../../utility';
 import Colours from '../../styles/_colours.module.scss';
+import {resolveAsset} from '../../utility';
 
 const directions = [
 	{ x: 1, y: 0 }, // right

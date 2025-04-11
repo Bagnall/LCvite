@@ -5,6 +5,7 @@ $total-pieces: $pieces-per-board * 2;
 $board-width: 5;
 $board-height: 4;
 $border-width: 14;
+$memory-card-transition-time: 1s;
 
 /* stylelint-disable */
 :export {
@@ -15,6 +16,7 @@ $border-width: 14;
 	totalPieces: $total-pieces;
 	boardWidth: $board-width;
 	boardHeight: $board-height;
+	memoryCardTransitionTime: $memory-card-transition-time;
 }
 /* stylelint-enable */
 
