@@ -1,15 +1,9 @@
 // React component for bilingual memory matching game
 import './MemoryMatchGame.scss';
-// import '../MemoryMatchGame.scss';
+import {Card} from '../../Components';
 import React from 'react';
-import {
-	resolveAsset,
-	// shuffleArray
-} from '../../utility';
+import {resolveAsset} from '../../utility';
 import Variables from '../../styles/_variables.module.scss';
-import {
-	Card,
-} from '../../Components';
 
 const objects = [
 	// { "english": "umbrella", "french": "parapluie", "image": "https://source.unsplash.com/80x80/?umbrella" },
@@ -18,12 +12,12 @@ const objects = [
 	// { "english": "stapler", "french": "agrafeuse", "image": "https://source.unsplash.com/80x80/?stapler" },
 	// { "english": "snow globe", "french": "boule à neige", "image": "https://source.unsplash.com/80x80/?snow%20globe" },
 	// { "english": "hourglass", "french": "sablier", "image": "https://source.unsplash.com/80x80/?hourglass" },
-	// { "english": "lava lamp", "french": "lampe à lave", "image": "https://source.unsplash.com/80x80/?lava%20lamp" },
+	{ "english": "lava lamp", "french": "lampe à lave", "image": "/images/memory/lava-lamp.jpg" },
 	{ "english": "telescope", "french": "télescope", "image": "/images/memory/telescope.webp" },
-	{ "english": "paintbrush", "french": "pinceau", "image": "/images/memory/paintbrush.webp" },
-	{ "english": "watering can", "french": "arrosoir", "image": "/images/memory/wateringcan.webp" },
+	{ "english": "paintbrush", "french": "pinceau", "image": "/images/memory/paint-brush.webp" },
+	{ "english": "watering can", "french": "arrosoir", "image": "/images/memory/watering-can.webp" },
 	{ "english": "zipper", "french": "fermeture éclair", "image": "/images/memory/zip.jpg" },
-	{ "english": "chessboard", "french": "échiquier", "image": "/images/memory/chessboard.png" },
+	{ "english": "chessboard", "french": "échiquier", "image": "/images/memory/chess-board.png" },
 	// { "english": "seashell", "french": "coquillage", "image": "https://source.unsplash.com/80x80/?seashell" },
 	// { "english": "mug", "french": "tasse", "image": "https://source.unsplash.com/80x80/?mug" },
 	// { "english": "backpack", "french": "sac à dos", "image": "https://source.unsplash.com/80x80/?backpack" },
@@ -56,19 +50,18 @@ const objects = [
 
 const getShuffledDeck = () => {
 	const imageCards = objects.map((obj, idx) => ({
-		id: `${idx}b`,
-		type: 'image',
 		content: obj.english,
+		id: `${idx}b`,
+		image: obj.image,
 		match: obj.french,
-
-		image: obj.image
+		type: 'image',
 	}));
 	const textCards = objects.map((obj, idx) => ({
-		id: `${idx}a`,
-		type: 'text',
 		content: obj.french,
+		id: `${idx}a`,
+		image: `img-${idx}`,
 		match: obj.english,
-		image: `img-${idx}`
+		type: 'text',
 	}));
 	const combined = [...imageCards, ...textCards];
 	return combined.sort(() => Math.random() - 0.5);
@@ -81,7 +74,6 @@ export class MemoryMatchGame extends React.PureComponent {
 			beenFlipped:[], // To have shade animations if/when flipping back
 			cards: getShuffledDeck(),
 			flipped: [],
-			// flipping: [],
 			matched: []
 		};
 		this.handleClick = this.handleClick.bind(this);
@@ -90,6 +82,9 @@ export class MemoryMatchGame extends React.PureComponent {
 	handleClick(card) {
 		const { beenFlipped, cards, flipped, matched } = this.state;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const newFlipped = [...flipped, card.id];
 		beenFlipped.push(card.id);
@@ -102,56 +97,14 @@ export class MemoryMatchGame extends React.PureComponent {
 				const secondCard = cards.find(c => c.id === second);
 
 				if (firstCard.match === secondCard.content) {
+					correctAudio.play();
 					this.setState({ matched: [...matched, firstCard.id, secondCard.id] });
-				}
+				} // else {
+				// 	setTimeout(() => errorAudio.play(), memoryCardTransitionTime);
+				// }
 				setTimeout(() => this.setState({ flipped: [] }), memoryCardTransitionTime);
 			}
 		});
-		// 	if (newFlipped.length === 2) {
-		// const [first, second] = newFlipped;
-		// const firstCard = cards.find(c => c.id === first);
-		// const secondCard = cards.find(c => c.id === second);
-
-		// if (firstCard.match === secondCard.content) {
-		// 	this.setState({ matched: [...matched, firstCard.id, secondCard.id] });
-		// }
-		// console.log("memoryCardTransitionTime", memoryCardTransitionTime);
-		// setTimeout(() => {
-		// 	this.setState({
-		// 		flipped: [],
-		// 		flipping: [first, second],
-		// 	});
-		// 	setTimeout(() => {
-		// 		this.setState({
-		// 			flipped: [],
-		// 			flipping: [],
-		// 		});
-		// 	}, memoryCardTransitionTime);
-		// stateObj = {...stateObj, flipped:[]};
-		// setTimeout(() => this.setState({ flipped: [] }), memoryCardTransitionTime);
-		// }
-		// } else {
-		// 	// newFlipping.push(card.id);
-		// 	// const foundIndex = newFlipping.indexOf(card.id);
-		// 	setTimeout(() => {
-		// 		// domCard.classList.remove('flipping');
-		// 		console.log("foundIndex", foundIndex);
-		// 		this.setState({
-		// 			flipping: foundIndex !== -1 ? newFlipping.splice(foundIndex, 1) : newFlipping
-		// 		});
-		// 	}, memoryCardTransitionTime);
-		// }
-		// setTimeout(() => {
-		// 	const { flipping } = stateObj;
-		// 	const foundIndex = flipping.indexOf(card.id);
-		// 	if (foundIndex !== -1) {
-		// 		newFlipping.splice(foundIndex, 1);
-		// 		stateObj = {...stateObj, flipping:newFlipping};
-		// 		this.setState(stateObj);
-		// 	}
-		// }, memoryCardTransitionTime);
-		// });
-
 	}
 
 	render() {
@@ -170,6 +123,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div className="memory-map-container">
+				<h2>Cards</h2>
+				<h2>Matched pairs</h2>
 				<div className="cards">
 					{cards.map(card => (
 						<Card

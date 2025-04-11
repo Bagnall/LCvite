@@ -28,9 +28,7 @@ $blue: #302e9b;
 	.card-contents-container {
 		&:before {
 			@include mixins.standard-pseudo();
-			// animation: shadow $transition-time linear;
 			backface-visibility: hidden;
-			// background-color: rgba(255, 0, 0, 0.5);
 			border-radius: $border-radius;
 		}
 		top: 0;
@@ -58,13 +56,10 @@ $blue: #302e9b;
 		&:after {
 			@include mixins.standard-pseudo();
 			border-radius: $border-radius;
-			// animation: shadow $transition-time linear;
-			// background-color: rgba(0, 255, 0, 0.2);
 		}
 		border-radius: $border-radius;
 		position: absolute;
 		backface-visibility: hidden;
-		// background-color: red; //rgba(255, 0, 0, 0.4);
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -73,10 +68,9 @@ $blue: #302e9b;
 		justify-content: center;
 		width: 100%;
 		display: flex;
+		border: 8px solid white;
+		box-sizing: border-box;
 
-		// transition: background-color $transition-time;
-
-		// box-shadow:
 		background-image: repeating-linear-gradient(45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units)),
 			repeating-linear-gradient(-45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units));
 		span {
@@ -87,7 +81,7 @@ $blue: #302e9b;
 		.card-back {
 			&:before {
 				@include mixins.standard-pseudo();
-				animation: shadowHalf $transition-time/2 ease-in-out $transition-time/4;
+				animation: shadowHalf calc($transition-time/2) ease-in-out calc($transition-time/4);
 				border-radius: $border-radius;
 				// background-color: green;
 			}
@@ -103,10 +97,15 @@ $blue: #302e9b;
 	}
 
 	&.flipped {
+		transform: rotateX(180deg);
+		transition:
+			transform $transition-time,
+			box-shadow $transition-time;
+		box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.2);
 		.card-back {
 			&:before {
 				@include mixins.standard-pseudo();
-				animation: shadow $transition-time/2 ease-in-out;
+				animation: shadow calc($transition-time/2) ease-in-out;
 				border-radius: $border-radius;
 				// background-color: green;
 			}
@@ -114,7 +113,7 @@ $blue: #302e9b;
 		.card-contents-container {
 			&:after {
 				@include mixins.standard-pseudo();
-				animation: shadowHalf $transition-time/2 ease-in-out $transition-time/4;
+				animation: shadowHalf calc($transition-time/2) ease-in-out calc($transition-time/4);
 				border-radius: $border-radius;
 				// background-color: red;
 			}
