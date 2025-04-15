@@ -27,8 +27,8 @@
 
 	.words-container {
 		overflow: visible;
-		// background: colours.$panel-back;
-		padding: 2rem 3rem;
+		// background: colours.$panel-back; see skin.module
+		padding: 1rem 3rem;
 		top: 0;
 		z-index: 20;
 		transition-property: width;
@@ -99,7 +99,14 @@
 			transition: box-shadow 1s;
 		}
 	}
-
+	&.type-phrases {
+		li {
+			min-height: 70px;
+		}
+		.phrase {
+			margin-right: 1rem;
+		}
+	}
 	&.type-questions-answers {
 		> .blanks {
 			> .target {
@@ -140,7 +147,12 @@
 	}
 
 	.target {
-		background: lightgray;
+		// background: lightgray;
+		// background: #ebebeb;
+		// background: linear-gradient(45deg, rgba(235, 235, 235, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(241, 241, 241, 1) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
+		background: #ababab;
+		background: linear-gradient(45deg, rgba(171, 171, 171, 1) 0%, rgba(209, 209, 209, 1) 50%, rgb(218, 218, 218) 73%, rgba(212, 212, 212, 1) 77%, rgba(217, 217, 217, 1) 100%);
+
 		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
 		padding: 1rem 2rem;
 		margin-top: 1rem;

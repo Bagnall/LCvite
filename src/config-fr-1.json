@@ -6,40 +6,101 @@
 		"subtitle": "FIRST THINGS FIRST:  greetings, farewells and social niceties",
 		"targetLanguage": "french"
 	},
-	"crossword1": {
+	"memorycards1": {
 		"cheatText": "Cheat",
-		"component": "CrossWord",
-		"congratulationsText": "That was a roaring success!",
-		"id": "CrossWord1",
-		"instructionsText": "",
-		"words": [
-			[
-				"éléphant",
-				"elephant"
-			],
-			[
-				"girafe",
-				"giraffe"
-			],
-			[
-				"tigre",
-				"tiger"
-			],
-			[
-				"wombat",
-				"wombat"
-			],
-			[
-				"lemming",
-				"lemming"
-			],
-			[
-				"chimpanzé",
-				"chimpanzee"
-			]
+		"component": "MemoryMatchGame",
+		"congratulationsText": "Congratulations! You have a good memory!",
+		"id": "MemoryMatchGame1",
+		"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+		"nPairsToPlay": 6,
+		"cards": [
+			{
+				"audio": "/sounds/memory/lava-lamp.mp3",
+				"english": "lava lamp",
+				"french": "la lampe à lave",
+				"image": "/images/memory/lava-lamp.jpg"
+			},
+			{
+				"audio": "/sounds/memory/telescope.mp3",
+				"english": "telescope",
+				"french": "le télescope",
+				"image": "/images/memory/telescope.webp"
+			},
+			{
+				"audio": "/sounds/memory/paint-brush.mp3",
+				"english": "paintbrush",
+				"french": "le pinceau",
+				"image": "/images/memory/paint-brush.webp"
+			},
+			{
+				"audio": "/sounds/memory/watering-can.mp3",
+				"english": "watering can",
+				"french": "l'arrosoir",
+				"image": "/images/memory/watering-can.webp"
+			},
+			{
+				"audio": "/sounds/memory/zip.mp3",
+				"english": "zipper",
+				"french": "la fermeture éclair",
+				"image": "/images/memory/zip.jpg"
+			},
+			{
+				"audio": "/sounds/memory/chess-board.mp3",
+				"english": "chessboard",
+				"french": "l'échiquier",
+				"image": "/images/memory/chess-board.png"
+			},
+			{
+				"audio": "/sounds/memory/seashell.mp3",
+				"english": "seashell",
+				"french": "le coquillage",
+				"image": "/images/memory/seashell.webp"
+			},
+			{
+				"audio": "/sounds/memory/mug.mp3",
+				"english": "mug",
+				"french": "la tasse",
+				"image": "/images/memory/mug.webp"
+			},
+			{
+				"audio": "/sounds/memory/backpack.mp3",
+				"english": "backpack",
+				"french": "le sac à dos",
+				"image": "/images/memory/backpack.webp"
+			},
+			{
+				"audio": "/sounds/memory/umbrella.mp3",
+				"english": "umbrella",
+				"french": "le parapluie",
+				"image": "/images/memory/umbrella.png"
+			},
+			{
+				"audio": "/sounds/memory/stapler.mp3",
+				"english": "stapler",
+				"french": "l’agrafeuse",
+				"image": "/images/memory/stapler.png"
+			},
+			{
+				"audio": "/sounds/memory/spectacles.mp3",
+				"english": "spectacles",
+				"french": "les lunettes",
+				"image": "/images/memory/spectacles.png"
+			},
+			{
+				"audio": "/sounds/memory/hairbrush.mp3",
+				"english": "hair brush",
+				"french": "la brosse à cheveux",
+				"image": "/images/memory/hairbrush.png"
+			},
+			{
+				"audio": "/sounds/memory/postcard.mp3",
+				"english": "postcard",
+				"french": "la carte postale",
+				"image": "/images/memory/postcard.png"
+			}
 		],
 		"showHintsText": "Show hints",
-		"titleText": "Animals Crossword"
+		"titleText": "Memory Game"
 	},
 	"wordGrid1": {
 		"cheatText": "Cheat",
@@ -353,8 +414,7 @@
 	"explanation2": {
 		"component": "Explanation",
 		"content": [
-			"<h2>How to pronounce:</h2>",
-			"<p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/non-existant.mp3'/></p>",
+			"<h2>How to pronounce:</h2><p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/non-existant.mp3'/></p>",
 			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words bonjour and bonsoir.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
 			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/non-existant.mp3'/></p>",
 			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French r is made in that very place. If you place your fingers on your neck (pic) you should feel a very slight vibration. You will have encountered this sound in the words bonjou<b>r</b>, bonsoi<b>r</b>, au <b>r</b>evoi<b>r</b>.</p>",

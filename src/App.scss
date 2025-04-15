@@ -19,19 +19,19 @@ html.debug {
 	overflow: hidden;
 }
 
-p > audio,
-audio.compact {
-	width: 210px;
-	height: 27px; // Half default height
-	vertical-align: middle;
-}
-
 hr {
 	border: none;
 	height: 1px;
 	// background: color.adjust(colours.$article-base-background, $blackness: 25%);
 }
-
+.yorkshire-rose {
+	display: none;
+	width: 400px;
+	height: 400px;
+	background-image: url("/images/yorkshire-rose-css.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 .container {
 	position: relative;
 	display: flex;
@@ -85,18 +85,16 @@ h2 {
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: auto;
-			// height: 282px;
 		}
 	}
 }
 .french {
 	#content {
 		#hero {
-			background-image: url(/projects/richard/images/street.png);
+			background-image: url(/projects/richard/images/paris.png);
 			background-repeat: no-repeat;
 			background-position: center bottom;
-			background-size: 50%;
-			height: 282px;
+			background-size: cover;
 		}
 	}
 }
@@ -107,7 +105,6 @@ h2 {
 			background-repeat: no-repeat;
 			background-position: center top;
 			background-size: auto;
-			// height: 282px;
 		}
 	}
 }
@@ -115,7 +112,7 @@ h2 {
 	width: 100vw;
 	max-width: 1400px;
 	text-align: left;
-	padding: 1rem 2rem 1rem 1rem;
+	padding: 1rem 2rem;
 	margin: auto;
 	h1,
 	h2 {
@@ -124,6 +121,7 @@ h2 {
 	}
 	ul {
 		margin: 2rem 0;
+		padding-left: 1.2rem;
 	}
 	li {
 		margin: 1rem 0;
@@ -142,6 +140,8 @@ h2 {
 		max-height: 90vh;
 	}
 	#hero {
+		border-radius: 12px;
+		box-shadow: 2px 2px 8px darkgray;
 		padding: 1rem;
 		display: flex;
 		justify-content: center;

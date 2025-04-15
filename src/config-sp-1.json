@@ -1,12 +1,76 @@
 {
 	"settings": {
-		"showCongratulations": false,
-		"flag": "uae-flag.png",
-		"title": "Arabic Learning Object 2",
-		"subtitle": "ABOUT ME:  marital status, occupation",
-		"titleZ": "كائن التعلم الإماراتي 2",
-		"targetLanguage": "arabic",
-		"subtitleZ": "عنّي: الحالة الاجتماعية، المهنة"
+		"showCongratulations": true,
+		"flag": "sp-flag.png",
+		"title": "Spanish Learning Object 2",
+		"targetLanguage": "spanish",
+		"subtitle": "ABOUT ME:  marital status, occupation"
+	},
+	"memorycards1": {
+		"cheatText": "Cheat",
+		"component": "MemoryMatchGame",
+		"congratulationsText": "Congratulations! You have a good memory!",
+		"id": "MemoryMatchGame1",
+		"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+		"nPairsToPlay": 6,
+		"cards": [
+			{
+				"audio": "/sounds/memory/lava-lamp.mp3",
+				"english": "lava lamp",
+				"french": "la lampe à lave",
+				"image": "/images/memory/lava-lamp.jpg"
+			},
+			{
+				"audio": "/sounds/memory/telescope.mp3",
+				"english": "telescope",
+				"french": "le télescope",
+				"image": "/images/memory/telescope.webp"
+			},
+			{
+				"audio": "/sounds/memory/paint-brush.mp3",
+				"english": "paintbrush",
+				"french": "le pinceau",
+				"image": "/images/memory/paint-brush.webp"
+			},
+			{
+				"audio": "/sounds/memory/watering-can.mp3",
+				"english": "watering can",
+				"french": "l'arrosoir",
+				"image": "/images/memory/watering-can.webp"
+			},
+			{
+				"audio": "/sounds/memory/zip.mp3",
+				"english": "zipper",
+				"french": "la fermeture éclair",
+				"image": "/images/memory/zip.jpg"
+			},
+			{
+				"audio": "/sounds/memory/chess-board.mp3",
+				"english": "chessboard",
+				"french": "l'échiquier",
+				"image": "/images/memory/chess-board.png"
+			},
+			{
+				"audio": "/sounds/memory/seashell.mp3",
+				"english": "seashell",
+				"french": "le coquillage",
+				"image": "/images/memory/seashell.webp"
+			},
+			{
+				"audio": "/sounds/memory/mug.mp3",
+				"english": "mug",
+				"french": "la tasse",
+				"image": "/images/memory/mug.webp"
+			},
+			{
+				"audio": "/sounds/memory/backpack.mp3",
+				"english": "backpack",
+				"french": "le sac à dos",
+				"image": "/images/memory/backpack.webp"
+			}
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Memory Game"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
@@ -14,17 +78,17 @@
 		"instructionsText": "",
 		"phrases": [
 			[
-				"مرحباً، هل أنت بخير؟",
+				"Hola, ¿estás bien?",
 				"Hi, are you well?",
 				"salut-ca-va.mp3"
 			],
 			[
-				"مرحباً، أنا بخير، وأنت؟",
+				"Hola yo estoy bien ¿y tu?",
 				"Hi, I'm fine and you?",
 				"salut-ca-va-et-toi.mp3"
 			],
 			[
-				"حسنًا، شكرًا لك!",
+				"Muy bien, ¡gracias!",
 				"Very well, thank you!",
 				"tres-bien-merci.mp3"
 			],
@@ -32,17 +96,17 @@
 				""
 			],
 			[
-				"أهلاً سيدتي فوشيه! كيف حالك؟",
+				"Hola, señora Foucher. ¿Cómo está?",
 				"Hello, Mrs Foucher! How are you?",
 				"bonjour-madamefoucher-comment-ca-va.mp3"
 			],
 			[
-				"أهلاً سيد ليتورت، أنا بخير، شكراً لك. وأنت؟",
+				"Hola Sr. Letort, estoy muy bien, gracias. ¿Y usted?",
 				"Hello Mr. Letort, I'm very well, thank you. And you?",
 				"bonjour-monsieur-letort-ca-va-tres-bien-et-vous.mp3"
 			],
 			[
-				"أنا بخير شكرا لك!",
+				"¡Estoy bien gracias!",
 				"I'm fine, thank you!",
 				"ca-va-merci.mp3"
 			],
@@ -50,17 +114,17 @@
 				""
 			],
 			[
-				"ما اسمك؟",
+				"¿Cómo te llamas?",
 				"What's your name?",
 				"comment-t-appelles-tu.mp3"
 			],
 			[
-				"اسمي ماكس. وأنت...؟",
+				"Mi nombre es Max. ¿Y tú eres…?",
 				"My name is Max. And you're….?",
 				"je-m-appelle-max-et-toi.mp3"
 			],
 			[
-				"اسمي كاميل.",
+				"Mi nombre es Camille.",
 				"My name's Camille.",
 				"je-m-appelle-camille.mp3"
 			],
@@ -68,17 +132,60 @@
 				""
 			],
 			[
-				"ما اسمك؟",
+				"¿Cómo te llamas?",
 				"What's your name?",
 				"comment-vous-appelez-vous.mp3"
 			],
 			[
-				"اسمي ايزابيل مارتن.",
+				"Mi nombre es Isabelle Martin.",
 				"My name is Isabelle Martin.",
 				"je-m-appelle-isabelle-martin.mp3"
 			]
 		],
 		"titleText": "Dialogues"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "Well done, you found them all!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"étudiant",
+				"student"
+			],
+			[
+				"élève",
+				"pupil"
+			],
+			[
+				"professeur",
+				"teacher"
+			],
+			[
+				"médecin",
+				"doctor"
+			],
+			[
+				"archiviste",
+				"archivist"
+			],
+			[
+				"bibliothécaire",
+				"librarian"
+			],
+			[
+				"administrateur",
+				"administrator"
+			],
+			[
+				"avocat",
+				"lawyer"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops"
 	},
 	"vocabulary1": {
 		"component": "PhraseTable",
@@ -273,11 +380,11 @@
 		"incorrectImage": "/images/parrot-jaguar.jpg",
 		"congratulationsText": "Well done! You solved the puzzle!",
 		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
-		"descriptionText": "شاب يرتدي قميصًا أحمر، يركب دراجته الهوائية ويمر بجانب حصان في حقل في يوم مشمس.",
+		"descriptionText": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
 		"descriptionTextComment": "Foreign language description of picture with nouns, verbs and lots of adjectives.'",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/sounds/arabic-cyclist.mp3",
+		"soundFile": "/sounds/cyclist-horse.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"

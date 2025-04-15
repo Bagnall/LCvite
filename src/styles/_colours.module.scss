@@ -26,7 +26,7 @@ $french-orange: #fbc57b;
 $french-home: $french-orange;
 $french-button: $french-home;
 $french-article-base-background: rgb(217, 216, 253); //#eceeff;
-$french-panel-back: rgb(217, 216, 253);
+$french-panel-back: rgb(247, 247, 255);
 $french-body-back: #fffdec;
 
 $spanish-home: #9cbef2; // #9ce8f2;
@@ -43,7 +43,7 @@ $attention-green: #4fcb2e;
 $amber: #fc9725;
 $attention-red: #e72929;
 $highlight: rgb(136, 255, 0);
-
+$ivory: #eeeed2;
 :export {
 	text: $text; /* stylelint-disable-line */
 	attentionGreen: $attention-green;

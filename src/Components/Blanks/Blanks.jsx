@@ -23,7 +23,7 @@ export class Blanks extends React.PureComponent {
 		super(props);
 
 		// Grab some items from the DOM
-		this.congratulationsRef = React.createRef();
+		// this.congratulationsRef = React.createRef();
 		this.placeholdersRef = React.createRef();
 		this.wordsContainerRef = React.createRef();
 		const { config, id } = props;

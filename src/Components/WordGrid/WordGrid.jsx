@@ -8,6 +8,8 @@ const directions = [
 	{ x: 0, y: 1 }, // down
 	{ x: 1, y: 1 }, // down-right
 	{ x: 1, y: -1 }, // up-right
+	{ x: 1, y: 1 }, // down-right
+	{ x: 1, y: -1 }, // up-right
 ];
 
 function createEmptyGrid(size) {

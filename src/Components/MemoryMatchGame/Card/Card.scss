@@ -8,9 +8,12 @@ $transition-time: variables.$memory-card-transition-time;
 $units: 4px;
 $none: rgba(#fff, 0);
 $blue: #302e9b;
+$card-back-border-width: 8px;
 
 .card {
 	background-color: white;
+	background: #ffffff;
+	background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 79%, rgba(242, 242, 242, 1) 100%);
 	border-radius: $border-radius;
 	border: 1px solid #ccc;
 	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -42,6 +45,11 @@ $blue: #302e9b;
 		width: 100%;
 		height: 100%;
 		display: flex;
+		flex-direction: column;
+		// pointer-events: none;
+		// audio {
+		// 	z-index: 1;
+		// }
 		.card-image-container {
 			max-height: 100px;
 			background-size: contain;
@@ -53,9 +61,32 @@ $blue: #302e9b;
 		}
 	}
 	.card-back {
+		// &:after {
+		// 	@include mixins.standard-pseudo();
+		// 	border-radius: $border-radius;
+
+		// 	top: -$card-back-border-width;
+		// 	left: -$card-back-border-width;
+		// 	width: calc(100% + $card-back-border-width * 2);
+		// 	height: calc(100% + $card-back-border-width * 2);
+		// }
 		&:after {
 			@include mixins.standard-pseudo();
-			border-radius: $border-radius;
+			// mask-image: url("/images/memory/yorkshire-rose.png");
+			// mask-position: center;
+			// mask-repeat: no-repeat;
+			// mask-size: 60px;
+			// background-color: red;
+
+			background-image: url("/images/memory/yorkshire-rose.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 60px;
+
+			backface-visibility: hidden;
+			z-index: -1;
+			border: 3px solid $blue;
+			box-sizing: border-box;
 		}
 		border-radius: $border-radius;
 		position: absolute;
@@ -68,7 +99,7 @@ $blue: #302e9b;
 		justify-content: center;
 		width: 100%;
 		display: flex;
-		border: 8px solid white;
+		border: $card-back-border-width solid white;
 		box-sizing: border-box;
 
 		background-image: repeating-linear-gradient(45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units)),
@@ -84,6 +115,10 @@ $blue: #302e9b;
 				animation: shadowHalf calc($transition-time/2) ease-in-out calc($transition-time/4);
 				border-radius: $border-radius;
 				// background-color: green;
+				top: -$card-back-border-width;
+				left: -$card-back-border-width;
+				width: calc(100% + $card-back-border-width * 2);
+				height: calc(100% + $card-back-border-width * 2);
 			}
 		}
 		.card-contents-container {
@@ -108,6 +143,10 @@ $blue: #302e9b;
 				animation: shadow calc($transition-time/2) ease-in-out;
 				border-radius: $border-radius;
 				// background-color: green;
+				top: -$card-back-border-width;
+				left: -$card-back-border-width;
+				width: calc(100% + $card-back-border-width * 2);
+				height: calc(100% + $card-back-border-width * 2);
 			}
 		}
 		.card-contents-container {

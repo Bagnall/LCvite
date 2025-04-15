@@ -1,9 +1,9 @@
 // MemoryMatchGame.scss
 
 @use "../../styles/_colours.module.scss";
-// @use "../../styles/_media-queries.module.scss";
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
+@use "sass:math";
 
 html.debug {
 	.memory-map-container {
@@ -20,7 +20,11 @@ $blue: #302e9b;
 // $yellow: #bdb725;
 $border-radius: 10px;
 $transition-time: variables.$memory-card-transition-time;
-
+.memory-match-game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .memory-map-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -36,21 +40,11 @@ $transition-time: variables.$memory-card-transition-time;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(auto-fill, minmax(min(7rem, 100%), 1fr)); //repeat(5, 1fr);
-		// gap: 0.5rem;
 		grid-column-gap: 0.5rem;
 		grid-row-gap: 0.5rem;
 		max-width: 1000px;
 		margin: 0 auto;
 		perspective: 2000px;
-		// .card {
-		// 	opacity: 1;
-		// 	// transition: opacity $transition-time;
-		// 	&.matched {
-		// 		// opacity: 0.1;
-		// 		cursor: not-allowed;
-		// 		transition: opacity $transition-time;
-		// 	}
-		// }
 	}
 	.matches {
 		padding: 1.25rem; // To compensate for the 0.8 scale see below
@@ -60,32 +54,42 @@ $transition-time: variables.$memory-card-transition-time;
 		transform: scale(0.8);
 		transform-origin: top;
 		grid-template-columns: repeat(2, 1fr);
-
-		grid-template-rows: repeat(5, 1fr);
+		grid-template-rows: repeat(auto-fill, minmax(min(7rem, 11%), 6rem));
 		grid-column-gap: 0.5rem;
 		grid-row-gap: 0.5rem;
 		.card {
-			// transform: scale(0.5);
 			cursor: not-allowed;
-			// opacity: 0.1;
-			// transition: opacity $transition-time;
-			animation: reveal linear $transition-time;
-			transform: rotateX(180deg); //scale(0.6);
+			transform: rotateX(180deg);
 			&.flipped {
-				// 	// opacity: 1;
 				transition: opacity $transition-time;
-				// 	// transition-delay: $transition-time;
+			}
+			&.text {
+				transform: rotateX(180deg) rotateZ(10deg);
+				animation: revealText linear $transition-time;
+			}
+			&.image {
+				transform: rotateX(180deg) rotateZ(-10deg);
+				animation: revealImage linear $transition-time;
+			}
+			.audio-container {
+				display: none;
 			}
 		}
 	}
-	@keyframes reveal {
+	@keyframes revealText {
 		0% {
-			opacity: 0;
-			// transform: rotateX(180deg);
+			transform: rotateX(0deg) rotateZ(-5deg);
 		}
 		100% {
-			opacity: 1;
-			// transform: rotateX(0deg);
+			transform: rotateX(180deg) rotateZ(10deg);
+		}
+	}
+	@keyframes revealImage {
+		0% {
+			transform: rotateX(0deg) rotateZ(5deg);
+		}
+		100% {
+			transform: rotateX(180deg) rotateZ(-10deg);
 		}
 	}
 	@keyframes shadow {

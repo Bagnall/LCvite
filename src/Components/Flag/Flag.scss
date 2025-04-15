@@ -7,7 +7,7 @@
 	overflow: visible;
 	&::before {
 		@include mixins.standard-pseudo();
-		background-image: url("/public/images/flagpole.png");
+		background-image: url("/images/flagpole.png");
 		background-repeat: no-repeat;
 		z-index: 0;
 		height: 200%;

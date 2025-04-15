@@ -1,4 +1,5 @@
 import './Card.scss';
+import { AudioClip } from '../..';
 import React from 'react';
 import {
 	resolveAsset,
@@ -24,14 +25,14 @@ export class Card extends React.PureComponent {
 				<div className={`card-contents-container`}>
 
 					{card.type === 'text' ? (
-						<span className="text-lg font-medium" style={{ fontSize: '1.125rem', fontWeight: 500 }}>{card.content}</span>
+						<div className="text-lg font-medium" style={{ fontSize: '1.125rem', fontWeight: 500 }}>{card.content}</div>
 					) : (
 						<div
 							className={`card-image-container`}
 							style={{ backgroundImage: `url(${resolveAsset(card.image)})` }}
-						>
-						</div>
+						/>
 					)}
+					{card.type === 'text' && card.audio ? <AudioClip className={`super-compact`} soundFile={`${resolveAsset(card.audio)}`} /> : null}
 				</div>
 				<div className={`card-back`}>
 					<span className="text-gray-400 text-xl font-bold" style={{ color: '#cbd5e0', fontSize: '1.25rem', fontWeight: 700 }}>?</span>

@@ -1,6 +1,38 @@
 // AudioClip.scss
+@use "../../styles/_mixins.module.scss";
 
+$compact-dimension: 27px;
 .audio-clip {
 	display: flex;
 	align-items: center;
+}
+p > audio,
+audio.compact,
+audio.super-compact {
+	width: 210px;
+	height: $compact-dimension; // Half default height
+	vertical-align: middle;
+}
+div.audio-container {
+	width: $compact-dimension;
+	height: $compact-dimension; // Half default height
+	border-radius: calc($compact-dimension / 2);
+	background-color: #f1f3f4;
+	z-index: 1;
+	display: block;
+	position: relative;
+
+	&:hover {
+		background-color: #e5e7e8;
+	}
+	&::after {
+		@include mixins.standard-pseudo();
+		width: 0;
+		height: 0;
+		border-width: 8px 10px;
+		border-color: transparent transparent transparent black;
+		border-style: solid;
+		top: 5.5px;
+		left: 10px;
+	}
 }

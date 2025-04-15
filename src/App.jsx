@@ -312,6 +312,21 @@ export default class App extends React.Component {
 								</AccordionArticle>
 							);
 							break;
+						case 'MemoryMatchGame':
+							articles.push(
+								<AccordionArticle
+									id={`${id}Accordion`}
+									key={`${id}Accordion`}
+									title={titleText}
+								>
+									<MemoryMatchGame
+										config={value}
+										logError={this.logError}
+										showDialog={this.showDialog}
+									/>
+								</AccordionArticle>
+							);
+							break;
 						default:
 							articles.push(
 								<p>Component not implemented</p>
@@ -355,13 +370,14 @@ export default class App extends React.Component {
 							<h1>{title}</h1>
 							<h2>{subtitle}</h2>
 						</div>
+						{/* <div className={`yorkshire-rose`}></div> */}
 						<Accordion id={`accordion1`} key={`accordion1`}>
-							<AccordionArticle
+							{/* <AccordionArticle
 								id={`wordgrid1Accordion`}
 								title={`Memory Match Game`}
 							>
 								<MemoryMatchGame />
-							</AccordionArticle>
+							</AccordionArticle> */}
 							{/* <AccordionArticle
 								id={`wordgrid1Accordion`}
 								title={`Word Grid`}
