@@ -5,6 +5,7 @@
 @use "../../styles/_variables.module.scss";
 
 .jigsaw-container {
+	max-height: 790px;
 	.jigsaw,
 	.target {
 		display: block;
@@ -66,6 +67,7 @@
 	}
 
 	.target {
+		// border-radius: 16px;
 		position: absolute;
 		top: variables.$tile-size * 4px + variables.$border-width * 3;
 		width: variables.$tile-size * 4px - variables.$tab-size * 3 - 10;
@@ -74,22 +76,33 @@
 		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
 		box-sizing: border-box;
 	}
-	@include media-queries.respond-above(m) {
+}
+@include media-queries.respond-above(m) {
+	.jigsaw-container {
+		max-height: 830px;
 		.jigsaw {
 			transform: scale(0.4);
 		}
 	}
-	@include media-queries.respond-above(l) {
+}
+@include media-queries.respond-above(l) {
+	.jigsaw-container {
+		max-height: 930px;
 		.jigsaw {
 			transform: scale(0.5);
 		}
 	}
-	@include media-queries.respond-above(xl) {
+}
+@include media-queries.respond-above(xl) {
+	.jigsaw-container {
 		.jigsaw {
 			transform: scale(0.5);
 		}
 	}
-	@include media-queries.respond-above(xxl) {
+}
+@include media-queries.respond-above(xxl) {
+	.jigsaw-container {
+		max-height: initial;
 		.jigsaw {
 			transform: scale(0.7);
 		}

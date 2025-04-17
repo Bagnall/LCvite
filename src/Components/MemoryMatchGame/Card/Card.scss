@@ -1,6 +1,6 @@
 // Card.scss
 
-// @use "../../../styles/_mixins.module.scss";
+@use "../../../styles/_media-queries.module.scss";
 @use "../../../styles/_mixins.module.scss";
 @use "../../../styles/_variables.module.scss";
 $border-radius: 10px;
@@ -16,13 +16,16 @@ $card-back-border-width: 8px;
 	background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 79%, rgba(242, 242, 242, 1) 100%);
 	border-radius: $border-radius;
 	border: 1px solid #ccc;
-	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 1); // 0.2);
 	cursor: pointer;
-	height: 100px;
+	height: 100px * 0.5;
+	width: 160px * 0.5;
 	padding: 10px;
 	position: relative;
 	text-align: center;
-	width: 160px;
+	// font-size: 1.2rem;
+	font-weight: bold;
+
 	transform: rotateX(0deg);
 	transform-style: preserve-3d;
 	transition:
@@ -61,28 +64,12 @@ $card-back-border-width: 8px;
 		}
 	}
 	.card-back {
-		// &:after {
-		// 	@include mixins.standard-pseudo();
-		// 	border-radius: $border-radius;
-
-		// 	top: -$card-back-border-width;
-		// 	left: -$card-back-border-width;
-		// 	width: calc(100% + $card-back-border-width * 2);
-		// 	height: calc(100% + $card-back-border-width * 2);
-		// }
 		&:after {
 			@include mixins.standard-pseudo();
-			// mask-image: url("/images/memory/yorkshire-rose.png");
-			// mask-position: center;
-			// mask-repeat: no-repeat;
-			// mask-size: 60px;
-			// background-color: red;
-
 			background-image: url("/images/memory/yorkshire-rose.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: 60px;
-
 			backface-visibility: hidden;
 			z-index: -1;
 			border: 3px solid $blue;
@@ -136,7 +123,7 @@ $card-back-border-width: 8px;
 		transition:
 			transform $transition-time,
 			box-shadow $transition-time;
-		box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.2);
+		box-shadow: 2px -2px 2px rgba(0, 0, 0, 1); //0.2);
 		.card-back {
 			&:before {
 				@include mixins.standard-pseudo();
@@ -159,6 +146,71 @@ $card-back-border-width: 8px;
 		}
 	}
 }
+.cards {
+	.card {
+		height: 100px * 0.7;
+		width: 160px * 0.7;
+		font-size: 0.8rem;
+	}
+}
+.matches {
+	.card {
+		height: 100px * 0.6;
+		width: 160px * 0.6;
+		font-size: 0.6rem;
+	}
+}
+@include media-queries.respond-above(l) {
+	.cards {
+		.card {
+			// height: 100px * 0.8;
+			// width: 160px * 0.8;
+			font-size: 0.8rem;
+		}
+	}
+	.matches {
+		.card {
+			// height: 100px * 0.6;
+			// width: 160px * 0.6;
+			font-size: 0.7rem;
+		}
+	}
+}
+
+@include media-queries.respond-above(xl) {
+	.cards {
+		.card {
+			height: 100px * 0.8;
+			width: 160px * 0.8;
+			font-size: 0.9rem;
+		}
+	}
+	.matches {
+		.card {
+			height: 100px * 0.6;
+			width: 160px * 0.6;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@include media-queries.respond-above(xxl) {
+	.cards {
+		.card {
+			height: 100px;
+			width: 160px;
+			font-size: 1rem;
+		}
+	}
+	.matches {
+		.card {
+			height: 100px * 0.7;
+			width: 160px * 0.7;
+			// font-size: 0.8rem;
+		}
+	}
+}
+
 @keyframes shadow {
 	0% {
 		background-color: rgba(255, 0, 0, 0);

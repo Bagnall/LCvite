@@ -205,7 +205,34 @@ _skin.module.scss
 		}
 		$content: color.adjust($article-base-background, $whiteness: 12%);
 	}
-	.memory-map-container,
+	.blanks-container .target,
+	.memory-map-container {
+		background: url("/public/images/table-top.jpg");
+		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
+		border-radius: 6px;
+	}
+	.word-grid-container .table-top {
+		padding: 1rem 8rem;
+		background: url("/public/images/table-top.jpg");
+		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
+		border-radius: 6px;
+	}
+	.blanks-container,
+	.jigsaw-container,
+	.type-phrases {
+		.target {
+			background: url("/public/images/table-top.jpg");
+			box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
+			border: none;
+			border-radius: 6px;
+		}
+	}
+	.type-phrases {
+		.target {
+			color: white;
+		}
+	}
+	// .memory-map-container,
 	.word-grid-container,
 	.container {
 		background: color.adjust($article-base-background, $whiteness: 4%);

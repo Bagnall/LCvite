@@ -5,29 +5,31 @@
 @use "../../styles/_variables.module.scss";
 
 #congratulate {
-	position: fixed;
-	z-index: 1000;
-	display: flex;
-	inset: 0;
-	width: fit-content;
-	min-width: 80vw;
-	height: fit-content;
-	line-height: 160px;
-	margin: auto 10%;
-	text-align: center;
+	background-color: white;
 	background: white;
-	font-size: 160px;
-	color: darkblue;
+	border-radius: 20px;
 	border: variables.$border-width * 1px ridge darkblue;
-	transform-origin: center center;
-	transform: scale(0.01);
+	color: darkblue;
+	display: flex;
+	// font-size: 160px;
+	font-size: 80px;
+	height: fit-content;
+	inset: 0;
+	// line-height: 160px;
+	line-height: 90px;
+	margin: auto 10%;
+	min-height: 22vh;
+	min-width: 80vw;
 	opacity: 0;
 	padding: 4rem 0;
-	transition-property: transform, opacity;
+	position: fixed;
+	text-align: center;
+	transform-origin: center center;
+	transform: scale(0.01);
 	transition-duration: 1s;
-	border-radius: 20px;
-	background-color: white;
-	min-height: 22vh;
+	transition-property: transform, opacity;
+	width: fit-content;
+	z-index: 1000;
 	&.show {
 		justify-content: center;
 		align-items: center;
@@ -64,3 +66,10 @@
 		}
 	}
 }
+// @include media-queries.respond-above(l) {
+// 	// font-size: 160px;
+// 	// line-height: 160px;
+
+// }
+// @include media-queries.respond-above(xl) {
+// }

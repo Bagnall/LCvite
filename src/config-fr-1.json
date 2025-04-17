@@ -36,7 +36,7 @@
 				"audio": "/sounds/memory/watering-can.mp3",
 				"english": "watering can",
 				"french": "l'arrosoir",
-				"image": "/images/memory/watering-can.webp"
+				"image": "/images/memory/watering-can.jpg"
 			},
 			{
 				"audio": "/sounds/memory/zip.mp3",
@@ -48,7 +48,7 @@
 				"audio": "/sounds/memory/chess-board.mp3",
 				"english": "chessboard",
 				"french": "l'échiquier",
-				"image": "/images/memory/chess-board.png"
+				"image": "/images/memory/chess-board.jpg"
 			},
 			{
 				"audio": "/sounds/memory/seashell.mp3",
@@ -72,12 +72,12 @@
 				"audio": "/sounds/memory/umbrella.mp3",
 				"english": "umbrella",
 				"french": "le parapluie",
-				"image": "/images/memory/umbrella.png"
+				"image": "/images/memory/umbrella.jpg"
 			},
 			{
 				"audio": "/sounds/memory/stapler.mp3",
 				"english": "stapler",
-				"french": "l’agrafeuse",
+				"french": "l'agrafeuse",
 				"image": "/images/memory/stapler.png"
 			},
 			{
@@ -90,13 +90,13 @@
 				"audio": "/sounds/memory/hairbrush.mp3",
 				"english": "hair brush",
 				"french": "la brosse à cheveux",
-				"image": "/images/memory/hairbrush.png"
+				"image": "/images/memory/hairbrush.jpg"
 			},
 			{
 				"audio": "/sounds/memory/postcard.mp3",
 				"english": "postcard",
 				"french": "la carte postale",
-				"image": "/images/memory/postcard.png"
+				"image": "/images/memory/postcard.jpg"
 			}
 		],
 		"showHintsText": "Show hints",

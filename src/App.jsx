@@ -187,7 +187,7 @@ export default class App extends React.Component {
 		// but does mean that the whole thing has to be hard-coded.
 
 		if (config) {
-			for (const [key, value] of Object.entries(config)) {
+			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
 				const { id, component, titleText } = value;
 				if (component) {

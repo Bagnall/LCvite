@@ -2,6 +2,7 @@
 
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_media-queries.module.scss";
+@use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
 html.debug {
@@ -22,6 +23,7 @@ $cell-dimension: 36px;
 		flex-direction: column;
 		align-items: center;
 		.word-grid-table-container {
+			z-index: 1;
 			position: relative;
 			display: inline-block;
 			// background: linear-gradient(0% lightgray, 50% white, 100% lightgray);
@@ -41,6 +43,7 @@ $cell-dimension: 36px;
 	table {
 		border-collapse: collapse;
 		user-select: none; /* Standard syntax */
+		z-index: 1;
 		td {
 			border: 1px solid #ccc;
 			box-sizing: border-box;

@@ -201,10 +201,13 @@ export class MemoryMatchGame extends React.PureComponent {
 				<div className={`memory-match-game`}>
 					<p className='clue'>{descriptionText}&nbsp;</p>
 
-					<div className="memory-map-container" style={{ maxHeight: `${cards.length / 2 * 90}px` }}>
+					<div
+						className={`memory-map-container num${cards.length}cards`}
+						// style={{ maxHeight: `${cards.length / 2 * 90}px` }}
+					>
 						{/* dirty max-height, but the container won't shrink down for the scaled down content :-( */}
 						<h2>Cards</h2>
-						<h2>Matched pairs</h2>
+						<h2>Matched&nbsp;pairs</h2>
 						<div className="cards">
 							{cards.map(card => (
 								<Card
@@ -215,18 +218,22 @@ export class MemoryMatchGame extends React.PureComponent {
 								/>
 							))}
 						</div>
-						<div className="matches">
-							{sortedMatches.map(card =>
-								matched.includes(card.id) ?
-									(
-										<Card
-											card={card}
-											className={`${card.type} ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
-											handleClick={this.handleClick}
-											key={`matchedCard${card.id}`}
-										/>
-									) : null
-							)}
+						<div className={`matches-container`}>{/* To force align top */}
+							<div className="matches">
+								{sortedMatches.map(card =>
+									matched.includes(card.id) ?
+										(
+											<div key={`enclosingDivMatchedCard${card.id}`}>
+												<Card
+													card={card}
+													className={`${card.type} ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
+													handleClick={this.handleClick}
+													key={`matchedCard${card.id}`}
+												/>
+											</div>
+										) : null
+								)}
+							</div>
 						</div>
 					</div>
 					<p>{`${nTries} tries. ${nPairs} matched.`}</p>

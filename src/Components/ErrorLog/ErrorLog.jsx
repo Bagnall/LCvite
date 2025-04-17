@@ -22,7 +22,7 @@ export class ErrorLog extends React.Component {
 		} = this.props;
 
 		let errorList = '';
-		errors.forEach((error, index) => {
+		errors.forEach((error) => {
 			const {
 				action,
 				message,
@@ -114,7 +114,7 @@ export class ErrorLog extends React.Component {
 						<button
 							className='dismiss clear-error'
 							title='Dismiss error'
-							onClick={(e) => { clearError(index); }}
+							onClick={() => { clearError(index); }}
 						>X</button></td>
 				</tr >
 			);

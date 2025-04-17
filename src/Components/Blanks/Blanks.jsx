@@ -376,7 +376,7 @@ export class Blanks extends React.PureComponent {
 					const soundFile = resolveAsset(`/sounds/${audio[i]}`);
 					phraseList.push(
 						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-							className={`compact`}
+							className={`compact inset`}
 							soundFile={soundFile}
 						/></li>
 					);

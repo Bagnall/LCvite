@@ -21,11 +21,14 @@ export class Card extends React.PureComponent {
 				key={id}
 				className={`card ${className}`}
 				onClick={() => handleClick(card)}
+				title={`Click to flip`}
 			>
 				<div className={`card-contents-container`}>
 
 					{card.type === 'text' ? (
-						<div className="text-lg font-medium" style={{ fontSize: '1.125rem', fontWeight: 500 }}>{card.content}</div>
+						<div
+							// style={{ fontSize: '1.125rem', fontWeight: 500 }}
+						>{card.content}</div>
 					) : (
 						<div
 							className={`card-image-container`}

@@ -5,11 +5,13 @@ $total-pieces: $pieces-per-board * 2;
 $board-width: 5;
 $board-height: 4;
 $border-width: 14;
+$jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
 
 /* stylelint-disable */
 :export {
 	borderWidth: $border-width;
+	jigsawBorderWidth: $border-width;
 	tabSize: $tab-size;
 	tileSize: $tile-size;
 	piecesPerBoard: $pieces-per-board;

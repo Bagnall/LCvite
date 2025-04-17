@@ -30,7 +30,7 @@ export class Jigsaw extends React.PureComponent {
 			piecesPerBoard,
 			boardWidth,
 			boardHeight,
-			borderWidth,
+			jigsawBorderWidth,
 			tabSize,
 			tileSize,
 		} = Variables;
@@ -40,7 +40,7 @@ export class Jigsaw extends React.PureComponent {
 		boardHeight = parseInt(boardHeight);
 		tabSize = parseInt(tabSize);
 		tileSize = parseInt(tileSize);
-		borderWidth = parseInt(borderWidth);
+		jigsawBorderWidth = parseInt(jigsawBorderWidth);
 
 		// We will use Pieces to build up our JSX for the pieces
 		const Pieces = new Array;
@@ -94,7 +94,7 @@ export class Jigsaw extends React.PureComponent {
 		this.state = ({
 			...config,
 			Pieces: Pieces,
-			borderWidth: borderWidth,
+			jigsawBorderWidth: jigsawBorderWidth,
 			margin: tileSize / 4,
 			piecesPerBoard: piecesPerBoard,
 			tabSize: tabSize,
@@ -115,7 +115,7 @@ export class Jigsaw extends React.PureComponent {
 		// User has had enough, solve it
 		// console.log("autoSolve");
 		const {
-			borderWidth,
+			jigsawBorderWidth,
 			correctImage,
 			incorrectImage,
 			Pieces,
@@ -134,8 +134,8 @@ export class Jigsaw extends React.PureComponent {
 			if (i < 20) {
 				let targetX, targetY;
 				if (correctSet) {
-					targetX = (correctx * (tileSize - tabSize * 2) - tabSize) + targetTrayX + borderWidth;
-					targetY = (correcty * (tileSize - tabSize * 2) - tabSize) + targetTrayY + borderWidth;
+					targetX = (correctx * (tileSize - tabSize * 2) - tabSize) + targetTrayX + jigsawBorderWidth;
+					targetY = (correcty * (tileSize - tabSize * 2) - tabSize) + targetTrayY + jigsawBorderWidth;
 				} else {
 					targetX = x;
 					targetY = y;
@@ -245,7 +245,7 @@ export class Jigsaw extends React.PureComponent {
 		} else if (this.movingPiece !== undefined) {
 			// Check to see if it is close enough to its intended position
 			const {
-				borderWidth,
+				jigsawBorderWidth,
 				congratulationsText,
 				piecesPerBoard,
 				tabSize,
@@ -264,8 +264,8 @@ export class Jigsaw extends React.PureComponent {
 			if (this.inLimits()) {
 				// The eagle has landed
 				clickAudio.play();
-				this.movingPiece.style.left = `${targetX + targetTrayX + borderWidth}px`;
-				this.movingPiece.style.top = `${targetY + targetTrayY + borderWidth}px`;
+				this.movingPiece.style.left = `${targetX + targetTrayX + jigsawBorderWidth}px`;
+				this.movingPiece.style.top = `${targetY + targetTrayY + jigsawBorderWidth}px`;
 				this.movingPiece.classList.add("placed");
 				nPlaced++;
 				if (nPlaced === piecesPerBoard) {

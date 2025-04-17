@@ -8,8 +8,8 @@ const directions = [
 	{ x: 0, y: 1 }, // down
 	{ x: 1, y: 1 }, // down-right
 	{ x: 1, y: -1 }, // up-right
-	{ x: 1, y: 1 }, // down-right
-	{ x: 1, y: -1 }, // up-right
+	{ x: 1, y: 1 }, // down-right (repeated to try to favour more diagonals)
+	{ x: 1, y: -1 }, // up-right  "
 ];
 
 function createEmptyGrid(size) {
@@ -43,7 +43,7 @@ function placeWord(grid, word, solutionLines) {
 				ny = y + dir.y * j;
 				grid[ny][nx] = word[j];
 			}
-			solutionLines.push({ start: { col:x, row:y}, end: {col:nx, row:ny}});
+			solutionLines.push({end: {col:nx, row:ny}, start: { col:x, row:y} });
 			// console.log("success");
 			return true;
 		}
@@ -71,7 +71,7 @@ function generateWordGrid(words, solutionLines, logError) {
 	const grid = createEmptyGrid(estimatedSize);
 	let placedAll = false;
 	for (let i = 0; i < 200 && placedAll === false; i++) {
-		console.log(i, "th attempt");
+		console.log(i, "th attempt"); // eslint-disable-line
 		placedAll = true;
 		words.forEach(word => {
 			const success = placeWord(grid, word.toLowerCase(), solutionLines);
@@ -81,12 +81,12 @@ function generateWordGrid(words, solutionLines, logError) {
 			}
 		});
 		if (placedAll) {
-			console.log("placed all!", i);
+			console.log("placed all!", i); // eslint-disable-line
 			break;
 		}
 	}
 	if (!placedAll) {
-		console.log("Could not place all words in word grid, please refresh.", {});
+		console.log("Could not place all words in word grid, please refresh.", {}); // eslint-disable-line
 		logError("Could not place all words in word grid, please refresh.", {});
 	}
 	fillEmpty(grid);
@@ -126,7 +126,7 @@ export class WordGrid extends PureComponent {
 		this.setState({
 			isTouching: true,
 			line: null,
-			selection: [{ row, col }],
+			selection: [{ row, col }], // eslint-disable-line
 		});
 	};
 
@@ -156,11 +156,11 @@ export class WordGrid extends PureComponent {
 
 			if (!isStraight) return;
 
-			lines.push({ end: { row, col }, start });
+			lines.push({ end: { row, col }, start }); // eslint-disable-line
 			this.setState({
-				line: { end: { row, col }, start },
+				line: { end: { row, col }, start }, // eslint-disable-line
 				lines,
-				selection: [start, { row, col }],
+				selection: [start, { row, col }], // eslint-disable-line
 			});
 		}
 	};
@@ -216,8 +216,8 @@ export class WordGrid extends PureComponent {
 			showDialog(`You already found: ${letters}`);
 			this.setState({
 				isTouching: false,
-				selection: [],
 				line: null,
+				selection: [],
 			});
 		} else {
 			errorAudio.play();
@@ -225,10 +225,10 @@ export class WordGrid extends PureComponent {
 			failCount = Math.min(words.length, failCount);
 
 			this.setState({
-				isTouching: false,
 				failCount: failCount,
-				selection: [],
+				isTouching: false,
 				line: null,
+				selection: [],
 			});
 			// alert(`❌ Not found: ${letters}`);
 		}
@@ -249,13 +249,13 @@ export class WordGrid extends PureComponent {
 		) + 1;
 		const result = [];
 		for (let i = 0; i < length; i++) {
-			result.push({ row: start.row + i * dy, col: start.col + i * dx });
+			result.push({ col: start.col + i * dx, row: start.row + i * dy });
 		}
 		return result;
 	};
 
 	autoSolve = () => {
-		console.log("autosolve");
+		// console.log("autosolve");
 		this.setState({showSolution: true});
 	};
 
@@ -338,63 +338,67 @@ export class WordGrid extends PureComponent {
 						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
 						<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 					</div>
-					<div className="word-grid-table-container"
-						onMouseUp={this.handleMouseUp}
-						onTouchEnd={this.handleMouseUp}
-					>
-						<svg
-							width={grid.length * cellSize}
-							height={grid.length * cellSize}
-							style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none' }}
+					<div className={`table-top`}>
+						<div className="word-grid-table-container"
+							onMouseUp={this.handleMouseUp}
+							onTouchEnd={this.handleMouseUp}
 						>
-							{renderedFoundLines}
-							{renderedSolutionLines}
-							{line && (
-								<line
-									x1={line.start.col * cellSize + cellSize / 2}
-									y1={line.start.row * cellSize + cellSize / 2}
-									x2={line.end.col * cellSize + cellSize / 2}
-									y2={line.end.row * cellSize + cellSize / 2}
-									stroke="rgba(0, 120, 255, 0.5)"
-									strokeWidth="30"
-									strokeLinecap="round"
-								/>
-							)}
-						</svg>
-						<table className='word-grid'>
-							<tbody>
-								{grid.map((row, rowIndex) => (
-									<tr key={rowIndex}>
-										{row.map((cell, colIndex) => (
-											<td
-												data-row={rowIndex}
-												data-col={colIndex} key={colIndex}
-												onMouseDown={(e) => this.handleMouseDown(e, rowIndex, colIndex)}
-												onTouchStart={(e) => this.handleMouseDown(e, rowIndex, colIndex)}
-												onMouseEnter={(e) => this.handleMouseEnter(e, rowIndex, colIndex)}
-												onTouchMove={(e) => {
-													const [touch] = e.touches;
-													const el = document.elementFromPoint(
-														touch.clientX,
-														touch.clientY
-													);
-													if (el && el.closest('td')) {
-														const td = el.closest('td');
-														const row = td.getAttribute('data-row');
-														const col = td.getAttribute('data-col');
-														if (row !== null && col !== null) {
-															this.handleMouseEnter(e, row, col);
+							<svg
+								width={grid.length * cellSize}
+								height={grid.length * cellSize}
+								style={{ left: 0, pointerEvents: 'none', position: 'absolute', top: 0 }}
+							>
+								{renderedFoundLines}
+								{renderedSolutionLines}
+								{line && (
+									<line
+										x1={line.start.col * cellSize + cellSize / 2}
+										y1={line.start.row * cellSize + cellSize / 2}
+										x2={line.end.col * cellSize + cellSize / 2}
+										y2={line.end.row * cellSize + cellSize / 2}
+										stroke="rgba(0, 120, 255, 0.5)"
+										strokeWidth="30"
+										strokeLinecap="round"
+									/>
+								)}
+							</svg>
+							<table 								width={grid.length * cellSize}
+								height={grid.length * cellSize}
+								className='word-grid'>
+								<tbody>
+									{grid.map((row, rowIndex) => (
+										<tr key={rowIndex}>
+											{row.map((cell, colIndex) => (
+												<td
+													data-row={rowIndex}
+													data-col={colIndex} key={colIndex}
+													onMouseDown={(e) => this.handleMouseDown(e, rowIndex, colIndex)}
+													onTouchStart={(e) => this.handleMouseDown(e, rowIndex, colIndex)}
+													onMouseEnter={(e) => this.handleMouseEnter(e, rowIndex, colIndex)}
+													onTouchMove={(e) => {
+														const [touch] = e.touches;
+														const el = document.elementFromPoint(
+															touch.clientX,
+															touch.clientY
+														);
+														if (el && el.closest('td')) {
+															const td = el.closest('td');
+															const row = td.getAttribute('data-row');
+															const col = td.getAttribute('data-col');
+															if (row !== null && col !== null) {
+																this.handleMouseEnter(e, row, col);
+															}
 														}
-													}
-												}}
-											>
-												{cell}
-											</td>
-										))}
-									</tr>
-								))}
-							</tbody>
-						</table>
+													}}
+												>
+													{cell}
+												</td>
+											))}
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 				</div>
