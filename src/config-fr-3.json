@@ -15,35 +15,43 @@
 		"words": [
 			[
 				"étudiant",
-				"student"
+				"student",
+				"/sounds/fr/étudiant.mp3"
 			],
 			[
 				"élève",
-				"pupil"
+				"pupil",
+				"/sounds/fr/élève.mp3"
 			],
 			[
 				"professeur",
-				"teacher"
+				"teacher",
+				"/sounds/fr/professeur.mp3"
 			],
 			[
 				"médecin",
-				"doctor"
+				"doctor",
+				"/sounds/fr/médecin.mp3"
 			],
 			[
 				"archiviste",
-				"archivist"
+				"archivist",
+				"/sounds/fr/archiviste.mp3"
 			],
 			[
 				"bibliothécaire",
-				"librarian"
+				"librarian",
+				"/sounds/fr/bibliothécaire.mp3"
 			],
 			[
 				"administrateur",
-				"administrator"
+				"administrator",
+				"/sounds/fr/administrateur.mp3"
 			],
 			[
 				"avocat",
-				"lawyer"
+				"lawyer",
+				"/sounds/fr/avocat.mp3"
 			]
 		],
 		"showHintsText": "Show hints",

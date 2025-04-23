@@ -62,8 +62,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		const { showDialog } = this.props;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
 		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
-		const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
-		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const newFlipped = [...flipped, card.id];
 		beenFlipped.push(card.id);
@@ -77,12 +77,20 @@ export class MemoryMatchGame extends React.PureComponent {
 				const secondCard = cards.find(c => c.id === second);
 
 				if (firstCard.match === secondCard.content) {
-					correctAudio.play();
+					const { audio: soundFile } = { ...firstCard, ...secondCard };
+					const sound = new Audio(resolveAsset(`${soundFile}`));
 					nPairs++;
-					if (nPairs === cards.length / 2)showDialog(congratulationsText);
+					sound.onended = () => {
+						if (nPairs === cards.length / 2) {
+							tadaAudio.play();
+							showDialog(congratulationsText);
+						}
+					};
+					// console.log("soundFile", soundFile);
+					sound.play();
 					matched.push(firstCard.id, secondCard.id);
 					this.setState({
-						matched: matched, // [...matched, firstCard.id, secondCard.id],
+						matched: matched,
 						nPairs,
 						nTries,
 					});

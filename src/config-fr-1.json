@@ -111,27 +111,33 @@
 		"words": [
 			[
 				"éléphant",
-				"elephant"
+				"elephant",
+				"/sounds/fr/elephant.mp3"
 			],
 			[
 				"girafe",
-				"giraffe"
+				"giraffe",
+				"/sounds/fr/girafe.mp3"
 			],
 			[
 				"tigre",
-				"tiger"
+				"tiger",
+				"/sounds/fr/tigre.mp3"
 			],
 			[
 				"wombat",
-				"wombat"
+				"wombat",
+				"/sounds/fr/wombat.mp3"
 			],
 			[
 				"lemming",
-				"lemming"
+				"lemming",
+				"/sounds/fr/lemming.mp3"
 			],
 			[
 				"chimpanzé",
-				"chimpanzee"
+				"chimpanzee",
+				"/sounds/fr/chimpanze.mp3"
 			]
 		],
 		"showHintsText": "Show hints",

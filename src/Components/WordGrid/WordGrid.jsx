@@ -108,6 +108,7 @@ export class WordGrid extends PureComponent {
 		super(props);
 		const { config, logError } = props;
 		const { words } = config;
+		const soundFiles = words.map(w => w[2]);
 		const foreignWords = words.map(w => w[0]);
 		const localWords = words.map(w => w[1]);
 		const solutionLines = new Array;
@@ -127,6 +128,7 @@ export class WordGrid extends PureComponent {
 			nToSolve: words.length,
 			selection: [],
 			solutionLines: solutionLines,
+			soundFiles: soundFiles,
 			words: foreignWords,
 		});
 	}
@@ -184,6 +186,7 @@ export class WordGrid extends PureComponent {
 			grid,
 			nToSolve,
 			selection,
+			soundFiles,
 			words,
 		} = this.state;
 		let {
@@ -193,7 +196,7 @@ export class WordGrid extends PureComponent {
 		const { showDialog } = this.props;
 		if(nPlaced === nToSolve) return;
 		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
-		const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const positions = this.getLinearSelection(selection);
@@ -202,15 +205,25 @@ export class WordGrid extends PureComponent {
 		const found = (words.includes(letters) && !foundWords.includes(letters)) || (words.includes(reversed) && !foundWords.includes(reversed));
 		if (words.includes(reversed) && !foundWords.includes(reversed))letters = reversed;
 		if (found) {
+
+			let index = words.indexOf(letters);
+			if (index === -1) index = words.indexOf(reversed);
+			const soundFile = new Audio(resolveAsset(`/${soundFiles[index]}`));
+
 			nPlaced++;
 			nPlaced = Math.min(words.length, nPlaced);
 
 			if (nPlaced === nToSolve) {
 				const { showDialog } = this.props;
-				showDialog(congratulationsText);
-				tadaAudio.play();
+				soundFile.onended = () => {
+					tadaAudio.play();
+					showDialog(congratulationsText);
+				};
+				soundFile.play();
+				// tadaAudio.play();
 			} else {
-				correctAudio.play();
+				soundFile.play();
+				// correctAudio.play();
 			}
 			foundLines.push(line);
 			this.setState(prev => ({

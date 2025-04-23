@@ -310,43 +310,53 @@
 		"words": [
 			[
 				"épicerie",
-				"grocers"
+				"grocers",
+				"/sounds/fr/épicerie.mp3"
 			],
 			[
 				"supermarché",
-				"supermarket"
+				"supermarket",
+				"/sounds/fr/supermarché.mp3"
 			],
 			[
 				"boucherie",
-				"butcher shop"
+				"butcher shop",
+				"/sounds/fr/boucherie.mp3"
 			],
 			[
 				"boulangerie",
-				"bakery"
+				"bakery",
+				"/sounds/fr/boulangerie.mp3"
 			],
 			[
 				"pâtisserie",
-				"pastry shop"
+				"pastry shop",
+				"/sounds/fr/pâtisserie.mp3"
 			],
 			[
 				"poissonnerie",
-				"fish shop"
+				"fish shop",
+				"/sounds/fr/poissonnerie.mp3"
 			],
 			[
 				"bistro",
-				"café"
+				"café",
+				"/sounds/fr/bistro.mp3"
 			],
 			[
 				"pharmacie",
-				"pharmacy"
+				"pharmacy",
+				"/sounds/fr/pharmacie.mp3"
 			],
 			[
 				"poste",
-				"post office"
+				"post office",
+				"/sounds/fr/poste.mp3"
 			],
 			[
 				"tabac",
-				"tobacco shop"
+				"tobacco shop",
+				"/sounds/fr/tabac.mp3"
 			]
 		],
 		"showHintsText": "Show hints",
