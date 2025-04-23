@@ -59,7 +59,7 @@ export class PhraseTable extends React.PureComponent {
 				}
 				const lastCellIndex = phrases[i].length - 1;
 				if (phrase[lastCellIndex]) {
-					const soundFile = resolveAsset(`/sounds/${phrase[lastCellIndex]}`);
+					const soundFile = resolveAsset(`${phrase[lastCellIndex]}`);
 					cells.push(
 						<td key={`row${i}cell${lastCellIndex}`}>
 							<AudioClip className={`compact`} label={""} soundFile={soundFile} />

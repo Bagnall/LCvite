@@ -38,7 +38,7 @@
 				"audio": "/sounds/memory/watering-can.mp3",
 				"english": "watering can",
 				"french": "l'arrosoir",
-				"image": "/images/memory/watering-can.webp"
+				"image": "/images/memory/watering-can.jpg"
 			},
 			{
 				"audio": "/sounds/memory/zip.mp3",
@@ -50,7 +50,7 @@
 				"audio": "/sounds/memory/chess-board.mp3",
 				"english": "chessboard",
 				"french": "l'échiquier",
-				"image": "/images/memory/chess-board.png"
+				"image": "/images/memory/chess-board.jpg"
 			},
 			{
 				"audio": "/sounds/memory/seashell.mp3",

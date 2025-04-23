@@ -139,7 +139,7 @@ export class WordParts extends React.PureComponent {
 						{phraseList[i]}
 					</td>
 				);
-				const soundFile = resolveAsset(`/sounds/${audio[i]}`);
+				const soundFile = resolveAsset(`${audio[i]}`);
 
 				cells.push(
 					<td key={`row${i}cell2`}>

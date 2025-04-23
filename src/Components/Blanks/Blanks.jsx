@@ -373,7 +373,7 @@ export class Blanks extends React.PureComponent {
 						}
 					}
 
-					const soundFile = resolveAsset(`/sounds/${audio[i]}`);
+					const soundFile = resolveAsset(`${audio[i]}`);
 					phraseList.push(
 						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
 							className={`compact inset`}
@@ -414,7 +414,7 @@ export class Blanks extends React.PureComponent {
 			}
 			case "questions-answers": {
 				for (let i = 1; i <= questions.length; i++) {
-					const soundFile = resolveAsset(`/sounds/${soundFiles[i - 1]}`);
+					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
 					tableRows.push(
 						<tr key={`${id}row${i}`}>
 							<td>

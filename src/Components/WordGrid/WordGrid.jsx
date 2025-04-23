@@ -66,24 +66,34 @@ function fillEmpty(grid) {
 function generateWordGrid(words, solutionLines, logError) {
 	// Determine grid size: max word length + enough room
 	const longestWord = Math.max(...words.map(w => w.length));
-	const estimatedSize = Math.max(longestWord + 2, Math.ceil(Math.sqrt(words.join('').length * 2)));
+	let estimatedSize = Math.max(longestWord + 2, Math.ceil(Math.sqrt(words.join('').length * 2)));
+	console.log("estimatedSize", estimatedSize);
 
-	const grid = createEmptyGrid(estimatedSize);
+	let grid = createEmptyGrid(estimatedSize);
 	let placedAll = false;
-	for (let i = 0; i < 200 && placedAll === false; i++) {
-		console.log(i, "th attempt"); // eslint-disable-line
-		placedAll = true;
-		words.forEach(word => {
-			const success = placeWord(grid, word.toLowerCase(), solutionLines);
-			if (!success) {
+	for (let j = 0; j < 10 && placedAll === false; j++) {
+		for (let i = 0; i < 100 && placedAll === false; i++) { // Try 100 times
+			console.log(i, "th attempt"); // eslint-disable-line
+			placedAll = true;
+			words.forEach(word => {
+				const success = placeWord(grid, word.toLowerCase(), solutionLines);
+				if (!success) {
 				// console.warn(`Could not place: ${word}`);
-				placedAll = false;
+					placedAll = false;
+				}
+			});
+			if (placedAll) {
+				console.log("placed all! i", i); // eslint-disable-line
+				break;
 			}
-		});
+		}
 		if (placedAll) {
-			console.log("placed all!", i); // eslint-disable-line
+			console.log("placed all! j", j); // eslint-disable-line
 			break;
 		}
+		estimatedSize++;
+		console.log("estimatedSize", estimatedSize);
+		grid = createEmptyGrid(estimatedSize);
 	}
 	if (!placedAll) {
 		console.log("Could not place all words in word grid, please refresh.", {}); // eslint-disable-line

@@ -59,6 +59,8 @@ export default class App extends React.Component {
 			.then(res => {
 				const { settings } = res;
 				delete res["settings"];
+				const { title } = settings;
+				document.title = title;
 
 				this.setState({
 					config: { ...res },

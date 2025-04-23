@@ -14,7 +14,6 @@ html.debug {
 }
 $cell-dimension: 36px;
 .word-grid-container {
-	touch-action: none;
 	padding: 1rem;
 	// background: colours.$panel-back;
 	.word-grid-table-outer-container {
@@ -23,6 +22,7 @@ $cell-dimension: 36px;
 		flex-direction: column;
 		align-items: center;
 		.word-grid-table-container {
+			touch-action: none;
 			z-index: 1;
 			position: relative;
 			display: inline-block;

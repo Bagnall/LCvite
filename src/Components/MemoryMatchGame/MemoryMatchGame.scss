@@ -164,6 +164,9 @@ $transition-time: variables.$memory-card-transition-time;
 		&.num16cards {
 			min-height: 600px;
 		}
+		&.num20cards {
+			min-height: 760px;
+		}
 		.cards {
 			grid-template-columns: repeat(4, 1fr);
 			grid-row-gap: 0.5rem;
@@ -195,6 +198,9 @@ $transition-time: variables.$memory-card-transition-time;
 		min-height: 600px;
 		&.num16cards {
 			min-height: 730px;
+		}
+		&.num20cards {
+			min-height: 860px;
 		}
 		.matches {
 			min-width: 280px;

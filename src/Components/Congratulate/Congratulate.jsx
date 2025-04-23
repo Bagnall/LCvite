@@ -17,10 +17,10 @@ export class Congratulate extends React.PureComponent {
 		if (enabled) {
 			return (
 
-				<div id='congratulate' className={`${className}`}>
+				<dialog id='congratulate' className={`${className}`}>
 					<button className={`close`} onClick={hideDialog} >X</button>
 					{content}
-				</div>
+				</dialog>
 			);
 		};
 	};

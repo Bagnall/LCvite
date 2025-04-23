@@ -6,6 +6,102 @@
 		"subtitle": "ABOUT ME:  marital status, occupation",
 		"targetLanguage": "french"
 	},
+	"memorycards1": {
+		"cheatText": "Cheat",
+		"component": "MemoryMatchGame",
+		"congratulationsText": "Congratulations! You have a good memory!",
+		"id": "MemoryMatchGame1",
+		"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+		"nPairsToPlay": 10,
+		"cards": [
+			{
+				"audio": "/sounds/fr/memory/lava-lamp.mp3",
+				"english": "lava lamp",
+				"french": "la lampe à lave",
+				"image": "/images/memory/lava-lamp.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/telescope.mp3",
+				"english": "telescope",
+				"french": "le télescope",
+				"image": "/images/memory/telescope.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/paint-brush.mp3",
+				"english": "paintbrush",
+				"french": "le pinceau",
+				"image": "/images/memory/paint-brush.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/watering-can.mp3",
+				"english": "watering can",
+				"french": "l'arrosoir",
+				"image": "/images/memory/watering-can.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/zip.mp3",
+				"english": "zipper",
+				"french": "la fermeture éclair",
+				"image": "/images/memory/zip.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/chess-board.mp3",
+				"english": "chessboard",
+				"french": "l'échiquier",
+				"image": "/images/memory/chess-board.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/seashell.mp3",
+				"english": "seashell",
+				"french": "le coquillage",
+				"image": "/images/memory/seashell.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/mug.mp3",
+				"english": "mug",
+				"french": "la tasse",
+				"image": "/images/memory/mug.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/backpack.mp3",
+				"english": "backpack",
+				"french": "le sac à dos",
+				"image": "/images/memory/backpack.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/umbrella.mp3",
+				"english": "umbrella",
+				"french": "le parapluie",
+				"image": "/images/memory/umbrella.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/stapler.mp3",
+				"english": "stapler",
+				"french": "l'agrafeuse",
+				"image": "/images/memory/stapler.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/spectacles.mp3",
+				"english": "spectacles",
+				"french": "les lunettes",
+				"image": "/images/memory/spectacles.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/hairbrush.mp3",
+				"english": "hair brush",
+				"french": "la brosse à cheveux",
+				"image": "/images/memory/hairbrush.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/postcard.mp3",
+				"english": "postcard",
+				"french": "la carte postale",
+				"image": "/images/memory/postcard.jpg"
+			}
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Memory Game"
+	},
 	"crossword1": {
 		"cheatText": "Cheat",
 		"component": "CrossWord",
@@ -65,142 +161,142 @@
 			[
 				"une épicerie",
 				"small grocery store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un marché",
 				"farmer's market",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une grande surface / un supermarché",
 				"supermarket",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un hypermarché",
 				"superstore, giant supermarket",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une boucherie",
 				"butcher shop",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une boulangerie",
 				"bakery",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une charcuterie",
 				"pork butcher",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une confiserie",
 				"candy store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une crémerie, une laiterie",
 				"dairy",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une fromagerie",
 				"cheese shop",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un magasin de fruits et légumes",
 				"greengrocer",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un marchand de vins",
 				"wine shop",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une pâtisserie",
 				"pastry shop",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une poissonnerie",
 				"fish store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une banque",
 				"bank",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un bistro, bistrot",
 				"café / bar",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une blanchisserie",
 				"laundromat",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un café",
 				"café",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une droguerie",
 				"drugstore",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un grand magasin",
 				"department store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un kiosque",
 				"newsstand",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un magasin de confection / un magasin de vêtements",
 				"clothing store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une pharmacie",
 				"pharmacy",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une poste",
 				"post office",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un pressing",
 				"dry cleaner",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un restaurant",
 				"restaurant",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"une quincaillerie",
 				"hardware store",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"un tabac",
 				"tobacco shop with bar/café",
-				"non-existant.mp3"
+				"/sounds/fr/non-existant.mp3"
 			]
 		],
 		"titleText": "Vocabulary - French Shops"
@@ -263,17 +359,17 @@
 			[
 				"Salut,  je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
 				"Hi, I'm Sylvain. I'm single and I'm a geography student.",
-				"salut-je-suis-sylvain-je-suis-celibataire-je-suis-etudiant-en-geographie.mp3"
+				"/sounds/fr/salut-je-suis-sylvain-je-suis-celibataire-je-suis-etudiant-en-geographie.mp3"
 			],
 			[
 				"Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.",
 				"Hello, my name's Jacqueline. I'm divorced. I'm a maths teacher",
-				"bonjour-je-m-appelle-jacqueline-je-suis-divorcee-je-suis-prof-de-maths.mp3"
+				"/sounds/fr/bonjour-je-m-appelle-jacqueline-je-suis-divorcee-je-suis-prof-de-maths.mp3"
 			],
 			[
 				"Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.",
 				"Good evening, my name's Olivier Durand. I've been married to Alex for three years and I'm a librarian.",
-				"bonsoir-je-m-appelle-olivier-durand-je-suis-marie-avec-alex-depuis-trois-ans-et-je-suis-bibliothecaire.mp3"
+				"/sounds/fr/bonsoir-je-m-appelle-olivier-durand-je-suis-marie-avec-alex-depuis-trois-ans-et-je-suis-bibliothecaire.mp3"
 			]
 		],
 		"titleText": "Monologues"
@@ -285,127 +381,127 @@
 			[
 				"être*",
 				"to be",
-				"etre.mp3"
+				"/sounds/fr/etre.mp3"
 			],
 			[
 				"marié.e",
 				"married",
-				"marie.mp3"
+				"/sounds/fr/marie.mp3"
 			],
 			[
 				"divorcé.e",
 				"divorced",
-				"divorce.mp3"
+				"/sounds/fr/divorce.mp3"
 			],
 			[
 				"séparé.e",
 				"separated",
-				"separe.mp3"
+				"/sounds/fr/separe.mp3"
 			],
 			[
 				"fiancé.e",
 				"engaged",
-				"fiance.mp3"
+				"/sounds/fr/fiance.mp3"
 			],
 			[
 				"pacsé.e",
 				"In a civil partnership",
-				"pacse.mp3"
+				"/sounds/fr/pacse.mp3"
 			],
 			[
 				"célibataire",
 				"single",
-				"celibataire.mp3"
+				"/sounds/fr/celibataire.mp3"
 			],
 			[
 				"étudiant / étudiante",
 				"University student",
-				"etudiante.mp3"
+				"/sounds/fr/etudiante.mp3"
 			],
 			[
 				"élève",
 				"school pupil",
-				"eleve.mp3"
+				"/sounds/fr/eleve.mp3"
 			],
 			[
 				"chercheur(m) / chercheuse(f)",
 				"researcher",
-				"chercheuse.mp3"
+				"/sounds/fr/chercheuse.mp3"
 			],
 			[
 				"doctorant / doctorante",
 				"PhD student",
-				"doctorant.mp3"
+				"/sounds/fr/doctorant.mp3"
 			],
 			[
 				"professeur.e prof (m and f)",
 				"teacher, professeur",
-				"professeure.mp3"
+				"/sounds/fr/professeure.mp3"
 			],
 			[
 				"médecin (m and f)",
 				"doctor",
-				"medecin.mp3"
+				"/sounds/fr/medecin.mp3"
 			],
 			[
 				"archiviste",
 				"archiviste",
-				"archiviste.mp3"
+				"/sounds/fr/archiviste.mp3"
 			],
 			[
 				"bibliothécaire",
 				"librarian",
-				"bibliothecaire.mp3"
+				"/sounds/fr/bibliothecaire.mp3"
 			],
 			[
 				"administrateur (m) administratrice(f)",
 				"administrator",
-				"administratrice.mp3"
+				"/sounds/fr/administratrice.mp3"
 			],
 			[
 				"informaticien.ne",
 				"IT specialist",
-				"informaticien.mp3"
+				"/sounds/fr/informaticien.mp3"
 			],
 			[
 				"avocat / avocate",
 				"lawyer",
-				"avocate.mp3"
+				"/sounds/fr/avocate.mp3"
 			],
 			[
 				"Que faites-vous* (dans la vie) ?",
 				"What do you do (for a living)?",
-				"que-faites-vous-dans-la-vie.mp3"
+				"/sounds/fr/que-faites-vous-dans-la-vie.mp3"
 			],
 			[
 				"Que fais-tu* (dans la vie) ?",
 				"What do you do (for a living)?",
-				"que-fais-tu-dans-la-vie.mp3"
+				"/sounds/fr/que-fais-tu-dans-la-vie.mp3"
 			],
 			[
 				"Quelle est ta / votre profession ?",
 				"What's your profession?",
-				"quelle-est-votre-profession.mp3"
+				"/sounds/fr/quelle-est-votre-profession.mp3"
 			],
 			[
 				"Quel est ton / votre métier ?",
 				"What's your profession?",
-				"quel-est-ton-metier.mp3"
+				"/sounds/fr/quel-est-ton-metier.mp3"
 			],
 			[
 				"depuis",
 				"for (a period of time), since",
-				"depuis.mp3"
+				"/sounds/fr/depuis.mp3"
 			],
 			[
 				"malade",
 				"ill",
-				"malade.mp3"
+				"/sounds/fr/malade.mp3"
 			],
 			[
 				"hier",
 				"yesterday",
-				"hier.mp3"
+				"/sounds/fr/hier.mp3"
 			]
 		],
 		"titleText": "Vocabulary"
@@ -430,7 +526,7 @@
 		"descriptionText": "Un beau perroquet dans une forêt luxuriante mangeant une noix du Brésil tout en regardant un jaguar au sol.",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/sounds/parrot-jaguar.mp3",
+		"soundFile": "/sounds/fr/parrot-jaguar.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
@@ -484,10 +580,10 @@
 			"Je suis professeur de géographie."
 		],
 		"soundFiles": [
-			"salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
-			"tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
-			"monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
-			"que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+			"/sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
+			"/sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
+			"/sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
+			"/sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
 		],
 		"titleText": "Match the Answers to the Questions"
 	}

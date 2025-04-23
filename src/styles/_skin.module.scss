@@ -241,9 +241,9 @@ _skin.module.scss
 			tbody {
 				tr {
 					&.spacer {
-						border-left: 1px solid $panel-back;
-						border-right: 1px solid $panel-back;
-						background: $panel-back;
+						border-left: 1px solid $article-base-background; //$panel-back;
+						border-right: 1px solid $article-base-background; //$panel-back;
+						background: $article-base-background; //$panel-back;
 					}
 				}
 			}
