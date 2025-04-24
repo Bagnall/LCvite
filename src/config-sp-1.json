@@ -15,58 +15,88 @@
 		"nPairsToPlay": 6,
 		"cards": [
 			{
-				"audio": "/sounds/fr/memory/lava-lamp.mp3",
+				"audio": "/sounds/fr/memory/la lampe à lave.mp3",
 				"english": "lava lamp",
 				"french": "la lampe à lave",
 				"image": "/images/memory/lava-lamp.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/telescope.mp3",
+				"audio": "/sounds/fr/memory/le télescope.mp3",
 				"english": "telescope",
 				"french": "le télescope",
 				"image": "/images/memory/telescope.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/paint-brush.mp3",
+				"audio": "/sounds/fr/memory/le pinceau.mp3",
 				"english": "paintbrush",
 				"french": "le pinceau",
 				"image": "/images/memory/paint-brush.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/watering-can.mp3",
+				"audio": "/sounds/fr/memory/l'arrosoir.mp3",
 				"english": "watering can",
 				"french": "l'arrosoir",
 				"image": "/images/memory/watering-can.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/zip.mp3",
+				"audio": "/sounds/fr/memory/la fermeture éclair.mp3",
 				"english": "zipper",
 				"french": "la fermeture éclair",
 				"image": "/images/memory/zip.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/chess-board.mp3",
+				"audio": "/sounds/fr/memory/l'échiquier.mp3",
 				"english": "chessboard",
 				"french": "l'échiquier",
 				"image": "/images/memory/chess-board.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/seashell.mp3",
+				"audio": "/sounds/fr/memory/le coquillage.mp3",
 				"english": "seashell",
 				"french": "le coquillage",
 				"image": "/images/memory/seashell.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/mug.mp3",
+				"audio": "/sounds/fr/memory/la tasse.mp3",
 				"english": "mug",
 				"french": "la tasse",
 				"image": "/images/memory/mug.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/backpack.mp3",
+				"audio": "/sounds/fr/memory/le sac à dos.mp3",
 				"english": "backpack",
 				"french": "le sac à dos",
 				"image": "/images/memory/backpack.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/le parapluie.mp3",
+				"english": "umbrella",
+				"french": "le parapluie",
+				"image": "/images/memory/umbrella.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/l'agrafeuse.mp3",
+				"english": "stapler",
+				"french": "l'agrafeuse",
+				"image": "/images/memory/stapler.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/les lunettes.mp3",
+				"english": "spectacles",
+				"french": "les lunettes",
+				"image": "/images/memory/spectacles.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/la brosse à cheveux.mp3",
+				"english": "hair brush",
+				"french": "la brosse à cheveux",
+				"image": "/images/memory/hairbrush.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/la carte postale.mp3",
+				"english": "postcard",
+				"french": "la carte postale",
+				"image": "/images/memory/postcard.jpg"
 			}
 		],
 		"showHintsText": "Show hints",
@@ -615,7 +645,7 @@
 			[
 				"chercheur(m) / chercheuse(f)",
 				"researcher",
-				"chercheuse.mp3"
+				"chercheur, chercheur, chercheuse.mp3"
 			],
 			[
 				"doctorant / doctorante",
@@ -668,14 +698,14 @@
 				"que-fais-tu-dans-la-vie.mp3"
 			],
 			[
-				"Quelle est ta / votre profession ?",
+				"Quelle est ta profession ? Quelle est votre profession ?",
 				"What's your profession?",
-				"quelle-est-votre-profession.mp3"
+				"/sounds/fr/Quelle est ta profession Quelle est votre profession.mp3"
 			],
 			[
 				"Quel est ton / votre métier ?",
 				"What's your profession?",
-				"quel-est-ton-metier.mp3"
+				"/sounds/fr/Quel est ton métier Quel est votre métier.mp3"
 			],
 			[
 				"depuis",

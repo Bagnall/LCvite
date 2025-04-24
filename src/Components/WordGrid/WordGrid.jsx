@@ -12,6 +12,8 @@ const directions = [
 	{ x: 1, y: -1 }, // up-right  "
 ];
 
+// let lastDirection;
+
 function createEmptyGrid(size) {
 	return Array.from({ length: size }, () => Array(size).fill(''));
 }
@@ -33,6 +35,10 @@ function placeWord(grid, word, solutionLines) {
 	const attempts = 300;
 	for (let i = 0; i < attempts; i++) {
 		const dir = directions[Math.floor(Math.random() * directions.length)];
+		// console.log(10, dir);
+		// while (dir === lastDirection)dir = directions[Math.floor(Math.random() * directions.length)];
+		// console.log(20, dir);
+		// lastDirection = dir;
 		const x = Math.floor(Math.random() * size);
 		const y = Math.floor(Math.random() * size);
 		// console.log(`canPlaceWord(grid, ${ word }, ${ x}, ${ y },dir)`);

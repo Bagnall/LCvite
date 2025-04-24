@@ -207,13 +207,13 @@ _skin.module.scss
 	}
 	.blanks-container .target,
 	.memory-map-container {
-		background: url("/public/images/table-top.jpg");
+		background: url("/images/table-top.jpg");
 		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 		border-radius: 6px;
 	}
 	.word-grid-container .table-top {
 		padding: 1rem 8rem;
-		background: url("/public/images/table-top.jpg");
+		background: url("/images/table-top.jpg");
 		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 		border-radius: 6px;
 	}
@@ -221,7 +221,7 @@ _skin.module.scss
 	.jigsaw-container,
 	.type-phrases {
 		.target {
-			background: url("/public/images/table-top.jpg");
+			background: url("/images/table-top.jpg");
 			box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 			border: none;
 			border-radius: 6px;

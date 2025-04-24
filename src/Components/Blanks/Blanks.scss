@@ -116,10 +116,12 @@
 						border-width: 1px;
 						border-style: solid;
 						border-color: transparent;
-						opacity: 0;
+						max-width: 0;
+						padding: 0;
+						overflow-x: hidden;
 						pointer-events: none;
 						transition:
-							opacity,
+							max-width 6s,
 							border-color 1s;
 					}
 				}
@@ -131,13 +133,14 @@
 					table {
 						td:nth-child(3) {
 							background: white;
-							opacity: 1;
+							// opacity: 1;
+							max-width: 1000px;
 							border-color: black;
 							border-width: 1px;
 							border-style: solid;
 							pointer-events: all;
 							transition:
-								opacity,
+								max-width 6s,
 								border-color 1s;
 						}
 					}

@@ -15,85 +15,85 @@
 		"nPairsToPlay": 6,
 		"cards": [
 			{
-				"audio": "/sounds/fr/memory/lava-lamp.mp3",
+				"audio": "/sounds/fr/memory/la lampe à lave.mp3",
 				"english": "lava lamp",
 				"french": "la lampe à lave",
 				"image": "/images/memory/lava-lamp.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/telescope.mp3",
+				"audio": "/sounds/fr/memory/le télescope.mp3",
 				"english": "telescope",
 				"french": "le télescope",
 				"image": "/images/memory/telescope.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/paint-brush.mp3",
+				"audio": "/sounds/fr/memory/le pinceau.mp3",
 				"english": "paintbrush",
 				"french": "le pinceau",
 				"image": "/images/memory/paint-brush.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/watering-can.mp3",
+				"audio": "/sounds/fr/memory/l'arrosoir.mp3",
 				"english": "watering can",
 				"french": "l'arrosoir",
 				"image": "/images/memory/watering-can.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/zip.mp3",
+				"audio": "/sounds/fr/memory/la fermeture éclair.mp3",
 				"english": "zipper",
 				"french": "la fermeture éclair",
 				"image": "/images/memory/zip.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/chess-board.mp3",
+				"audio": "/sounds/fr/memory/l'échiquier.mp3",
 				"english": "chessboard",
 				"french": "l'échiquier",
 				"image": "/images/memory/chess-board.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/seashell.mp3",
+				"audio": "/sounds/fr/memory/le coquillage.mp3",
 				"english": "seashell",
 				"french": "le coquillage",
 				"image": "/images/memory/seashell.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/mug.mp3",
+				"audio": "/sounds/fr/memory/la tasse.mp3",
 				"english": "mug",
 				"french": "la tasse",
 				"image": "/images/memory/mug.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/backpack.mp3",
+				"audio": "/sounds/fr/memory/le sac à dos.mp3",
 				"english": "backpack",
 				"french": "le sac à dos",
 				"image": "/images/memory/backpack.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/umbrella.mp3",
+				"audio": "/sounds/fr/memory/le parapluie.mp3",
 				"english": "umbrella",
 				"french": "le parapluie",
 				"image": "/images/memory/umbrella.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/stapler.mp3",
+				"audio": "/sounds/fr/memory/l'agrafeuse.mp3",
 				"english": "stapler",
 				"french": "l'agrafeuse",
 				"image": "/images/memory/stapler.png"
 			},
 			{
-				"audio": "/sounds/fr/memory/spectacles.mp3",
+				"audio": "/sounds/fr/memory/les lunettes.mp3",
 				"english": "spectacles",
 				"french": "les lunettes",
 				"image": "/images/memory/spectacles.png"
 			},
 			{
-				"audio": "/sounds/fr/memory/hairbrush.mp3",
+				"audio": "/sounds/fr/memory/la brosse à cheveux.mp3",
 				"english": "hair brush",
 				"french": "la brosse à cheveux",
 				"image": "/images/memory/hairbrush.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/postcard.mp3",
+				"audio": "/sounds/fr/memory/la carte postale.mp3",
 				"english": "postcard",
 				"french": "la carte postale",
 				"image": "/images/memory/postcard.jpg"
@@ -151,17 +151,17 @@
 			[
 				"Salut, ça va ?",
 				"Hi, are you well?",
-				"/sounds/fr/salut-ca-va.mp3"
+				"/sounds/fr/Salut, ça va.mp3"
 			],
 			[
 				"Salut ! Ça va ! Et toi ?",
 				"Hi, I'm fine and you?",
-				"/sounds/fr/salut-ca-va-et-toi.mp3"
+				"/sounds/fr/Salut ! Ça va ! Et toi.mp3"
 			],
 			[
 				"Très bien, merci !",
 				"Very well, thank you!",
-				"/sounds/fr/tres-bien-merci.mp3"
+				"/sounds/fr/Très bien, merci !.mp3"
 			],
 			[
 				""
@@ -169,17 +169,17 @@
 			[
 				"Bonjour, Madame Foucher ! Comment ça va ?",
 				"Hello, Mme Foucher! How are you?",
-				"/sounds/fr/bonjour-madamefoucher-comment-ca-va.mp3"
+				"/sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
 			],
 			[
 				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
 				"Hello M Letort, I'm very well, thank you. And you?",
-				"/sounds/fr/bonjour-monsieur-letort-ca-va-tres-bien-et-vous.mp3"
+				"/sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
 			],
 			[
 				"Ça va, merci !",
 				"I'm fine, thank you!",
-				"/sounds/fr/ca-va-merci.mp3"
+				"/sounds/fr/Ça va, merci !.mp3"
 			],
 			[
 				""
@@ -187,17 +187,17 @@
 			[
 				"Comment t'appelles-tu* ?",
 				"What's your name?",
-				"/sounds/fr/comment-t-appelles-tu.mp3"
+				"/sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
 				"Je m'appelle Max, et toi* ?",
 				"My name is Max. And you're….?",
-				"/sounds/fr/je-m-appelle-max-et-toi.mp3"
+				"/sounds/fr/Je m'appelle Max, et toi.mp3"
 			],
 			[
 				"Je m'appelle Camille.",
 				"My name's Camille.",
-				"/sounds/fr/je-m-appelle-camille.mp3"
+				"/sounds/fr/Je m'appelle Camille.mp3"
 			],
 			[
 				""
@@ -205,12 +205,12 @@
 			[
 				"Comment vous* appelez-vous ?",
 				"What's your name?",
-				"/sounds/fr/comment-vous-appelez-vous.mp3"
+				"/sounds/fr/Comment vous appelez-vous.mp3"
 			],
 			[
 				"Je m'appelle Isabelle Martin.",
 				"My name is Isabelle Martin.",
-				"/sounds/fr/je-m-appelle-isabelle-martin.mp3"
+				"/sounds/fr/Je m'appelle Isabelle Martin.mp3"
 			]
 		],
 		"titleText": "Dialogues"
@@ -222,152 +222,152 @@
 			[
 				"Bonjour",
 				"hello, good morning, good afternoon",
-				"/sounds/fr/bonjour.mp3"
+				"/sounds/fr/Bonjour.mp3"
 			],
 			[
 				"Bonsoir",
 				"hello, good evening",
-				"/sounds/fr/bonsoir.mp3"
+				"/sounds/fr/Bonsoir.mp3"
 			],
 			[
 				"Coucou",
 				"hi, cooee, peek-a-boo",
-				"/sounds/fr/coucou.mp3"
+				"/sounds/fr/Coucou.mp3"
 			],
 			[
 				"Salut",
 				"hi, bye",
-				"/sounds/fr/salut.mp3"
+				"/sounds/fr/Salut.mp3"
 			],
 			[
 				"Au revoir",
 				"goodbye",
-				"/sounds/fr/au-revoir.mp3"
+				"/sounds/fr/Au revoir.mp3"
 			],
 			[
 				"A bientôt",
 				"See you soon!",
-				"/sounds/fr/a-bientot.mp3"
+				"/sounds/fr/A bientôt.mp3"
 			],
 			[
 				"Monsieur",
 				"sir, Mr",
-				"/sounds/fr/monsieur.mp3"
+				"/sounds/fr/Monsieur.mp3"
 			],
 			[
 				"Madame*",
 				"madam, Mrs / Ms",
-				"/sounds/fr/madame.mp3"
+				"/sounds/fr/Madame.mp3"
 			],
 			[
 				"Mademoiselle",
 				"young lady, Miss",
-				"/sounds/fr/mademoiselle.mp3"
+				"/sounds/fr/Mademoiselle.mp3"
 			],
 			[
 				"Messieurs-dames",
 				"ladies and gentlemen",
-				"/sounds/fr/messieurs-dames.mp3"
+				"/sounds/fr/Messieurs-dames.mp3"
 			],
 			[
 				"jeune homme",
 				"young man",
-				"/sounds/fr/jeune-homme.mp3"
+				"/sounds/fr/jeune homme.mp3"
 			],
 			[
 				"mon petit (m) / ma petite(f)",
 				"poppet  (literally: my little one)",
-				"/sounds/fr/mon-petit-ma-petit.mp3"
+				"/sounds/fr/mon petit ma petit.mp3"
 			],
 			[
 				"mon amour",
 				"my love",
-				"/sounds/fr/mon-amour.mp3"
+				"/sounds/fr/mon amour.mp3"
 			],
 			[
 				"mon chéri (m) / ma chérie (f)",
 				"my darling",
-				"/sounds/fr/mon-cheri-ma-cherie.mp3"
+				"/sounds/fr/mon cheri ma cherie.mp3"
 			],
 			[
 				"les enfants",
 				"children",
-				"/sounds/fr/les-enfants.mp3"
+				"/sounds/fr/les enfants.mp3"
 			],
 			[
 				"tout le monde",
 				"Everyone (literally : all the world)",
-				"/sounds/fr/tout-le-monde.mp3"
+				"/sounds/fr/tout le monde.mp3"
 			],
 			[
 				"Ca va ?",
 				"Are you well / OK?  Are things alright/ OK?",
-				"/sounds/fr/ca-va-qm.mp3"
+				"/sounds/fr/Ca va.mp3"
 			],
 			[
 				"Comment ça va ?",
 				"How are you? (literally: how's it going?)",
-				"/sounds/fr/comment-ca-va.mp3"
+				"/sounds/fr/Comment ça va.mp3"
 			],
 			[
 				"Très bien",
 				"Very well",
-				"/sounds/fr/tres-bien.mp3"
+				"/sounds/fr/Très bien.mp3"
 			],
 			[
 				"Ca va.",
 				"(I'm) fine",
-				"/sounds/fr/ca-va.mp3"
+				"/sounds/fr/Ca va.mp3"
 			],
 			[
 				"Pas mal",
 				"Not bad",
-				"/sounds/fr/pas-mal.mp3"
+				"/sounds/fr/Pas mal.mp3"
 			],
 			[
 				"Comment t'appelles-tu* ?",
 				"What's your name?",
-				"/sounds/fr/comment-t-appelles-tu.mp3"
+				"/sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
 				"Comment vous appelez-vous* ?",
 				"What's your name?",
-				"/sounds/fr/comment-vous-appelez-vous.mp3"
+				"/sounds/fr/Comment vous appelez-vous.mp3"
 			],
 			[
 				"Je m'appelle …",
 				"My name is …",
-				"/sounds/fr/je-m-appelle.mp3"
+				"/sounds/fr/Je m'appelle.mp3"
 			],
 			[
 				"Bonne journée !",
 				"Have a nice day!",
-				"/sounds/fr/bonne-journee.mp3"
+				"/sounds/fr/Bonne journée !.mp3"
 			],
 			[
 				"Bonne soirée !",
 				"Have a nice evening!   ",
-				"/sounds/fr/bonne-soiree.mp3"
+				"/sounds/fr/Bonne soirée !.mp3"
 			],
 			[
 				"Bonne nuit !",
 				"Good night!",
-				"/sounds/fr/bonne-nuit.mp3"
+				"/sounds/fr/Bonne nuit !.mp3"
 			],
 			[
 				"Bon voyage !",
 				"Have a safe journey! / Have a good trip!",
-				"/sounds/fr/bon-voyage.mp3"
+				"/sounds/fr/Bon voyage !.mp3"
 			],
 			[
 				"Bonnes vacances !",
 				"Enjoy your holiday!",
-				"/sounds/fr/bonnes-vacances.mp3"
+				"/sounds/fr/Bonnes vacances !.mp3"
 			],
 			[
 				"oui, non",
 				"Yes, no",
-				"/sounds/fr/oui-non.mp3"
+				"/sounds/fr/oui, non.mp3"
 			],
 			[
 				"merci",
@@ -377,17 +377,17 @@
 			[
 				"d'accord",
 				"OK then, alright",
-				"/sounds/fr/d-accord.mp3"
+				"/sounds/fr/d'accord.mp3"
 			],
 			[
 				"aujourd'hui",
 				"today",
-				"/sounds/fr/aujourd-hui.mp3"
+				"/sounds/fr/aujourd'hui.mp3"
 			],
 			[
 				"enchanté.e",
 				"Pleased to meet you (literally: delighted)",
-				"/sounds/fr/enchante.mp3"
+				"/sounds/fr/enchanté.mp3"
 			]
 		],
 		"titleText": "Vocabulary"
@@ -476,10 +476,10 @@
 			"quelle [h]o[r][r]eur Valé[r]ie"
 		],
 		"audio": [
-			"/sounds/fr/bonjour-mon-cheri.mp3",
-			"/sounds/fr/bonsoir-mon-amour.mp3",
-			"/sounds/fr/au-revoir-ma-cherie.mp3",
-			"/sounds/fr/quelle-horreur-valerie.mp3"
+			"/sounds/fr/bonjour mon chéri.mp3",
+			"/sounds/fr/bonsoir mon amour.mp3",
+			"/sounds/fr/au revoir ma chérie.mp3",
+			"/sounds/fr/quelle horreur valérie.mp3"
 		],
 		"titleText": "Select the parts of the words with the described sounds"
 	},
@@ -504,9 +504,9 @@
 			"Ça va !"
 		],
 		"audio": [
-			"/sounds/fr/phrase1.mp3",
-			"/sounds/fr/phrase2.mp3",
-			"/sounds/fr/phrase3.mp3"
+			"/sounds/fr/Coucou mon amour ! Ca va aujourd'hui.mp3",
+			"/sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
+			"/sounds/fr/Ça va !.mp3"
 		],
 		"titleText": "Fill in the Blanks"
 	},
@@ -529,9 +529,9 @@
 			"Ah pas mal [merci] !"
 		],
 		"audio": [
-			"/sounds/fr/phrase4.mp3",
-			"/sounds/fr/phrase5.mp3",
-			"/sounds/fr/phrase6.mp3"
+			"/sounds/fr/Bonsoir Monsieur Galipot ! comment ça va.mp3",
+			"/sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
+			"/sounds/fr/Ah pas mal merci !.mp3"
 		],
 		"titleText": "Fill in the Blanks"
 	},
@@ -559,12 +559,12 @@
 			"Au [revoir] les enfants !  Bonne journée !"
 		],
 		"audio": [
-			"/sounds/fr/phrase7.mp3",
-			"/sounds/fr/phrase8.mp3",
-			"/sounds/fr/phrase9.mp3",
-			"/sounds/fr/phrase10.mp3",
-			"/sounds/fr/phrase11.mp3",
-			"/sounds/fr/phrase12.mp3"
+			"/sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
+			"/sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
+			"/sounds/fr/Et moi, je m'appelle David.mp3",
+			"/sounds/fr/D'accord. Très bien !.mp3",
+			"/sounds/fr/Merci Madame ! Bonne journée !.mp3",
+			"/sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
 		],
 		"titleText": "Fill in the Blanks"
 	},

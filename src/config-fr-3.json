@@ -65,87 +65,87 @@
 			[
 				"Male : Tu es française ?",
 				"Are you French ?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Tu es française.mp3"
 			],
 			[
 				"Female : Ah non, je ne suis pas française !",
 				"Oh no, I'm not French!",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Ah non, je ne suis pas française !.mp3"
 			],
 			[
 				"Male : Tu es de quelle nationalité ?",
 				"What nationality are you?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Tu es de quelle nationalité.mp3"
 			],
 			[
 				"Female : Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
 				"I'm Belgian. I come from Brussels. Where do you come from?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
 			],
 			[
 				"Male : Je viens d'Espagne.",
 				"I come from Spain.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je viens d'Espagne.mp3"
 			],
 			[
 				"D'où venez-vous, Monsieur ?",
 				"Where do you come from, sir? ",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/D'où venez-vous, Monsieur.mp3"
 			],
 			[
 				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.",
 				"I come from the USA. I'm American. My wife's Canadian.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.mp3"
 			],
 			[
 				"Elle vient du Québec. Et vous, vous êtes suisse ?",
 				"She comes from Quebec. And are you Swiss?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Elle vient du Québec. Et vous, vous êtes suisse.mp3"
 			],
 			[
 				"Ah non, je suis luxembourgeoise.",
 				"Oh no, I'm Luxemburgish.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Ah non, je suis luxembourgeoise.mp3"
 			],
 			[
 				"Tu parles allemand ?",
 				"Do you speak German?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Tu parles allemand.mp3"
 			],
 			[
 				"Non, je ne parle pas allemand.",
 				"No, I don't speak German.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Non, je ne parle pas allemand.mp3"
 			],
 			[
 				"Quelles langues parles-tu ?",
 				"Which languages do you speak?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Quelles langues parles-tu.mp3"
 			],
 			[
 				"Je parle français. C'est tout.",
 				"I speak French. That's all.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je parle français. C'est tout.mp3"
 			],
 			[
 				"Quelles langues parlez-vous ?",
 				"Which languages do you speak?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Quelles langues parlez-vous.mp3"
 			],
 			[
 				"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
 				"I'm trilingual. I speak French, Arabic and a little bit of English.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3"
 			],
 			[
 				"Et les enfants ?",
 				"And the children?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Et les enfants.mp3"
 			],
 			[
 				"Ils sont bilingues. Ils parlent français et arabe.",
 				"They're bilingual. They speak French and Arabic.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
 			]
 		],
 		"titleText": "Dialogues"
@@ -167,147 +167,147 @@
 				"Algérie (f)",
 				"Algerian",
 				"Algeria",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"allemand",
 				"Allemagne (f)",
 				"German",
 				"Germany",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"américain",
 				"Etats-Unis (mpl)",
 				"American",
 				"USA",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"anglais",
 				"Angleterre (f)",
 				"English",
 				"England",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"australien",
 				"Australie (f)",
 				"Australian",
 				"Australia",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"belge",
 				"Belgique (f)",
 				"Belgian",
 				"Belgium",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"britannique",
 				"Grande Bretagne (f)",
 				"British",
 				"Great Britain",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"canadien",
 				"Canada (m)",
 				"Canadian",
 				"Canada",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"chinois",
 				"Chine (f)",
 				"Chinese",
 				"China",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"écossais",
 				"Ecosse (f)",
 				"Scottish",
 				"Scotland",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"espagnol",
 				"Espagne (f)",
 				"Spanish",
 				"Spain",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"français",
 				"France (f)",
 				"French",
 				"France",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"gallois",
 				"Pays de Galles (m)",
 				"Welsh",
 				"Wales  ",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"ghanéen",
 				"Ghana (m)",
 				"Ghanean",
 				"Ghana",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"libanais",
 				"Liban (m)",
 				"Lebanese",
 				"Lebanon",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"luxembourgeois",
 				"Luxembourg (m)",
 				"Luxembourgish",
 				"Luxemburg",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"marocain",
 				"Maroc (m)",
 				"Maroccan",
 				"Morocco",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"irlandais",
 				"Irelande (f) du Nord/ du Sud",
 				"Irish",
 				"Northern / Southern Ireland",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"sénégalais",
 				"Sénégal (m)",
 				"Senegalese",
 				"Senegal",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"tunisien",
 				"Tunisie (f)",
 				"Tunisian",
 				"Tunisia",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			],
 			[
 				"suisse",
 				"Suisse (f)",
 				"Swiss",
 				"Switzerland",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/non-existant.mp3"
 			]
 		],
 		"titleText": "Vocabulary"
@@ -320,42 +320,42 @@
 			[
 				"parler",
 				"to speak",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/parler.mp3"
 			],
 			[
 				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
 				"Which languages do you speak?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Quelles langues parles-tu Tu parles quelles langues.mp3"
 			],
 			[
-				"Quelles langues parlez-vous ? Vous parlez quelles langues ?",
+				"Quelles langues parlez-vous ? / Vous parlez quelles langues ?",
 				"Which languages do you speak?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Quelles langues parlez-vous Vous parlez quelles langues.mp3"
 			],
 			[
-				"Je parle …, je ne parle pas anglais",
+				"Je parle anglais / Je ne parle pas anglais",
 				"I speak / I don't speak English.",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/Je parle anglais Je ne parle pas anglais.mp3"
 			],
 			[
 				"venir de",
 				"to come from",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/venir de.mp3"
 			],
 			[
-				"D'où viens-tu ? Tu viens d'où ?",
+				"D'où viens-tu ? / Tu viens d'où ?",
 				"Where do you come from?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/D'où viens-tu Tu viens d'où.mp3"
 			],
 			[
-				"D'où venez-vous ? Vous venez d'où ?",
+				"D'où venez-vous ? / Vous venez d'où ?",
 				"Where do you come from?",
-				"/sounds/fr/non-existant.mp3/"
+				"/sounds/fr/D'où venez-vous Vous venez d'où.mp3"
 			],
 			[
-				"Je viens de   / je ne viens pas de …",
-				"I come / don't come from …",
-				"/sounds/fr/non-existant.mp3/"
+				"Je viens de … / je ne viens pas de …",
+				"I come from … / don't come from …",
+				"/sounds/fr/Je viens de  Je ne viens pas de.mp3"
 			]
 		],
 		"titleText": "Vocabulary"
@@ -377,12 +377,12 @@
 		],
 		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
 		"audio": [
-			"/sounds/fr/je-suis-marocaine.mp3",
-			"/sounds/fr/je-suis-mexicaine.mp3",
-			"/sounds/fr/je-suis-canadien.mp3",
-			"/sounds/fr/je-suis-francaise.mp3",
-			"/sounds/fr/je-suis-chinois.mp3",
-			"/sounds/fr/je-suis-senegalaise.mp3"
+			"/sounds/fr/je suis marocaine.mp3",
+			"/sounds/fr/je suis mexicaine.mp3",
+			"/sounds/fr/je suis canadien.mp3",
+			"/sounds/fr/je suis française.mp3",
+			"/sounds/fr/je suis chinois.mp3",
+			"/sounds/fr/je suis sénégalaise.mp3"
 		],
 		"titleText": "Select the Correct Adjective of Nationality"
 	},

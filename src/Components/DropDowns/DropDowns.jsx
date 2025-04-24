@@ -141,7 +141,7 @@ export class DropDowns extends React.PureComponent {
 				);
 
 				if (audio && audio[i]) {
-					const soundFile = resolveAsset(`/sounds/${audio[i]}`);
+					const soundFile = resolveAsset(`${audio[i]}`);
 
 					cells.push(
 						<td key={`row${i}cell2`}>
