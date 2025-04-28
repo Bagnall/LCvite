@@ -1,6 +1,7 @@
 /*
 _mixins.module.scss
 */
+@use "./colours.module";
 @use "./variables.module";
 
 @mixin header-footer-background {
@@ -26,6 +27,19 @@ _mixins.module.scss
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+@mixin correct-highlight() {
+	background-color: colours.$correct-background;
+	border: 1px solid colours.$correct-border;
+}
+
+@mixin incorrect-highlight() {
+	// 	border: 1px solid red;
+	// 	background: rgba(255, 0, 0, 0.2);
+
+	border: 1px solid colours.$incorrect-border;
+	background: colours.$incorrect-background;
 }
 
 @mixin threeSixtyRotate {

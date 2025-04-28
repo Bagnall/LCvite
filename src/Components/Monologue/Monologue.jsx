@@ -66,11 +66,11 @@ export class Monologue extends React.PureComponent {
 				result.unshift(`<span>${a[i - 1]}</span>`);
 				i--; j--;
 			} else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
-				result.unshift(`<span class='inserted'  title="inserted">${b[j - 1]}</span>`);
+				result.unshift(`<span class='inserted' title="inserted">${b[j - 1]}</span>`);
 				correct = false;
 				j--;
 			} else if (i > 0 && (j === 0 || dp[i][j - 1] < dp[i - 1][j])) {
-				result.unshift(`<span class='deleted' style="background-color:#ffeaea;text-decoration:line-through;" title="deleted">${a[i - 1]}</span>`);
+				result.unshift(`<span class='deleted' title="deleted">${a[i - 1]}</span>`);
 				correct = false;
 				i--;
 			}
@@ -87,8 +87,6 @@ export class Monologue extends React.PureComponent {
 
 
 	render() {
-
-
 		const {
 			compact,
 			content,
@@ -111,11 +109,11 @@ export class Monologue extends React.PureComponent {
 						:
 						(
 							<>
-								{/* // ({ compact ? */}
-								<input type = 'text' value = { userInput } onChange = { this.handleChange } />
-								{/* // 	:
-						// 	(<textarea value={userInput } onChange = {this.handleChange} ></textarea>)
-						// }) */}
+								{ compact ?
+									<input type = 'text' value = { userInput } onChange = { this.handleChange } />
+									:
+									<textarea value={userInput} onChange = {this.handleChange} ></textarea>
+								}
 								<button
 									className={``}
 									onClick={this.handleValidation}

@@ -5,12 +5,9 @@
 @use "../../styles/_variables.module.scss";
 
 .answer-table-container {
-	// background: colours.$panel-back;
-
 	table {
 		text-align: left;
 		border-collapse: collapse;
-		// background: white;
 		background: #ebebeb;
 		background: linear-gradient(45deg, rgb(245, 245, 245) 0%, rgba(255, 255, 255, 1) 50%, rgb(250, 250, 250) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
 

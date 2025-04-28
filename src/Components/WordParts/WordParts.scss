@@ -37,8 +37,7 @@ html.debug {
 			animation-duration: $tumble-time;
 			animation-timing-function: linear;
 			animation-iteration-count: $tumble-iterations;
-			background-color: colours.$correct-background;
-			border: 1px solid colours.$correct-border;
+			@include mixins.correct-highlight();
 			box-sizing: border-box;
 			display: inline-block;
 			&:before {
@@ -54,8 +53,7 @@ html.debug {
 			@include mixins.standard-pseudo();
 		}
 		&.error {
-			border: 1px solid colours.$incorrect-border;
-			background: colours.$incorrect-background;
+			@include mixins.incorrect-highlight();
 		}
 	}
 

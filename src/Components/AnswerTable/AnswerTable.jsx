@@ -22,6 +22,8 @@ export class AnswerTable extends React.PureComponent {
 		this.countCorrect = this.countCorrect.bind(this);
 	}
 
+	// nCorrect = 0;
+
 	countCorrect = () => {
 		const {
 			congratulationsText,
@@ -30,6 +32,7 @@ export class AnswerTable extends React.PureComponent {
 		let {
 			nCorrect,
 		} = this.state;
+		// let newNCorrect = nCorrect;
 		const { showDialog } = this.props;
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
@@ -83,7 +86,7 @@ export class AnswerTable extends React.PureComponent {
 				);
 				cells.push(
 					<td key={`row${i}cell1`}>
-						<Monologue content={phrase[1]} countCorrect={this.countCorrect} />
+						<Monologue content={phrase[1]} countCorrect={() => this.countCorrect} />
 					</td>
 				);
 				if (phrases[i].length - 1 > 2) {

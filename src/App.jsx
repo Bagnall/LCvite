@@ -37,9 +37,29 @@ export default class App extends React.Component {
 			errors: [],
 			showDialog: false,
 		});
+
+		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
+		// this.loadConfig = this.loadConfig.bind(this);
 	}
 
 	componentDidMount = () => {
+
+		const queryString = window.location.search;
+		// console.log(queryString);
+		const urlParams = new URLSearchParams(queryString);
+		// console.log(urlParams);
+		const configFile = urlParams.get('config');
+
+		if (configFile) 		this.loadConfig(`./src/${configFile}`);
+	};
+
+	// handleLoadConfig = (e) => {
+	// 	console.log("loadConfig", e.target.value);
+	// 	this.loadConfig(e.target.value);
+	// };
+
+	loadConfig = (configFile) => {
+		// console.log("loadConfig");
 
 		// Read the config
 		const headers = new Headers();
@@ -51,13 +71,7 @@ export default class App extends React.Component {
 			redirect: 'follow',
 		};
 
-		const queryString = window.location.search;
-		// console.log(queryString);
-		const urlParams = new URLSearchParams(queryString);
-		// console.log(urlParams);
-		const configFile = urlParams.get('config');
-
-		fetch(`./src/${configFile}`, requestOptions)
+		fetch(`${configFile}`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
 				const { settings } = res;
@@ -67,21 +81,13 @@ export default class App extends React.Component {
 
 				this.setState({
 					config: { ...res },
-					settings: {...settings }
+					settings: { ...settings }
 				});
 			})
 			.catch(error => {
-				const action = `Retrieving configuration`;
+				const action = `Loading configuration`;
 				this.logError(action, error);
 			});
-	};
-
-	hideDialog = () => {
-		// console.log("hideDialog");
-		this.setState({
-			dialogContent:'',
-			showDialog: false,
-		});
 	};
 
 	logError = (action, ...params) => {
@@ -137,13 +143,6 @@ export default class App extends React.Component {
 		});
 	};
 
-	showDialog = (content) => {
-		this.setState({
-			dialogContent: content,
-			showDialog: true,
-		});
-	};
-
 	clearError = (index) => {
 		const { errors } = this.state;
 		errors.splice(index, 1);
@@ -155,6 +154,21 @@ export default class App extends React.Component {
 	clearLog = () => {
 		this.setState({
 			errors: [],
+		});
+	};
+
+	hideDialog = () => {
+		// console.log("hideDialog");
+		this.setState({
+			dialogContent:'',
+			showDialog: false,
+		});
+	};
+
+	showDialog = (content) => {
+		this.setState({
+			dialogContent: content,
+			showDialog: true,
 		});
 	};
 
@@ -191,31 +205,34 @@ export default class App extends React.Component {
 		// uncomment the hard-coded components in the returned render below. This allows for more ad-hoc html inclusions,
 		// but does mean that the whole thing has to be hard-coded.
 
+		const content = "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.";
+		const soundFile = `/sounds/fr/max-monologue.mp3`;
+
+		articles.push(
+			<AccordionArticle
+				id={`monologue1Accordion`}
+				key={`monologue1Accordion`}
+				title={'Monologue'}
+			>
+				<div class='monologue-container'>
+					<AudioClip className={`compact`} soundFile={resolveAsset(soundFile)} label={``} />
+					<Monologue
+						compact={false}
+						content={content}
+						key={`monologue1`}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				</div>
+			</AccordionArticle>
+
+		);
 		if (config) {
 			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
 				const { id, component, titleText } = value;
 
-				const content = "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.";
-				const soundFile = `/sounds/fr/max-monologue.mp3`;
 
-				// articles.push(
-				// 	<AccordionArticle
-				// 		id={`monologue1Accordion`}
-				// 		key={`monologue1Accordion`}
-				// 		title={'Monologue'}
-				// 	>
-				// 		<AudioClip className={`compact`} soundFile={resolveAsset(soundFile)} label={``} />
-				// 		<Monologue
-				// 			compact={true}
-				// 			content={content}
-				// 			key={`monologue1`}
-				// 			logError={this.logError}
-				// 			showDialog={this.showDialog}
-				// 		/>
-				// 	</AccordionArticle>
-
-				// );
 
 				if (component) {
 					switch (component) {
@@ -405,222 +422,232 @@ export default class App extends React.Component {
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
-					<div id="content">
-						<div id='hero'>
-							{/* <Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} /> */}
-							<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
-							<h1>{title}</h1>
-							<h2>{subtitle}</h2>
-						</div>
-						{/* <div className={`yorkshire-rose`}></div> */}
-						<Accordion id={`accordion1`} key={`accordion1`}>
-							{/* <AccordionArticle
-								id={`wordgrid1Accordion`}
-								title={`Memory Match Game`}
-							>
-								<MemoryMatchGame />
-							</AccordionArticle> */}
-							{/* <AccordionArticle
-								id={`wordgrid1Accordion`}
-								title={`Word Grid`}
-							>
-								<WordGrid words={words} />
-							</AccordionArticle> */}
-							{/* <AccordionArticle
-								id={`parentAccordion`}
-								title={`Parent`}
-							>
-								<p>Parent accordion</p>
-								<AccordionArticle
-									id={`childAccordion`}
-									title={`Child`}
-								>
-									<p>Child accordion</p>
-									<AccordionArticle
-										id={`grandchildAccordion`}
-										title={`Grand Child`}
+					{config ?
+						<>
+							<div id="content">
+								<div id='hero'>
+									{/* <Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} /> */}
+									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
+									<h1>{title}</h1>
+									<h2>{subtitle}</h2>
+								</div>
+								{/* <div className={`yorkshire-rose`}></div> */}
+								<Accordion id={`accordion1`} key={`accordion1`}>
+									{/* <AccordionArticle
+										id={`wordgrid1Accordion`}
+										title={`Memory Match Game`}
 									>
-										<p>Grand Child accordion</p>
-									</AccordionArticle>
-								</AccordionArticle>
-
-							</AccordionArticle> */}
-
-							{articles}
-							{/* {dropdowns1 ? (
-								<AccordionArticle
-									id={`DropDowns1Accordion`}
-									title={`Select the Correct Adjective of Nationality`}
-								>
-									<DropDowns
-										config={dropdowns1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{wordparts1 ? (
-								<AccordionArticle
-									id={`AccordionWordParts1Accordion`}
-									title={`Select the parts of the words with the described sounds`}
-								>
-									<WordParts
-										config={wordparts1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{wordsIntoSlots2 ? (
-								<AccordionArticle
-									id={`AccordionWordsIntoSlots2Accordion`}
-									title={`Match the Answers to the Questions`}
-								>
-									<Blanks
-										config={wordsIntoSlots2}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-
-							) : null}
-							{wordsIntoSlots1 ? (
-								<AccordionArticle
-									id={`AccordionWordsIntoSlots1Accordion`}
-									title={`Put the words in the Order You Hear Them`}
-								>
-									<Blanks
-										config={wordsIntoSlots1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-
-							) : null}
-							{phraseTable1 ? (
-								<>
-									<AccordionArticle
-										id={`accordionPhraseTable1Accordion`}
-										title={`Dialogues`}
+										<MemoryMatchGame />
+									</AccordionArticle> */}
+									{/* <AccordionArticle
+										id={`wordgrid1Accordion`}
+										title={`Word Grid`}
 									>
-										<PhraseTable
-											config={phraseTable1}
-											logError={this.logError}
-											showDialog={this.showDialog}
-										/>
-									</AccordionArticle>
-								</>
-							) : null}
-							{vocabulary1 ? (
-								<AccordionArticle
-									id={`Vocabulary1Accordion`}
-									title={`Vocabulary`}
-								>
-									<PhraseTable
-										config={vocabulary1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{monologues ? (
-								<AccordionArticle
-									id={`MonologuesAccordion`}
-									title={`Monologues`}
-								>
-									<PhraseTable
-										config={monologues}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{vocabulary2 ? (
-								<AccordionArticle
-									id={`Vocabulary2Accordion`}
-									title={`Vocabulary`}
-								>
-									<PhraseTable
-										config={vocabulary2}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{phrases1 ? (
-								<AccordionArticle
-									id={`Phrases1Accordion`}
-									title={`Fill in the Blanks`}
-								>
-									<Blanks
-										config={phrases1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{phrases2 ? (
-								<AccordionArticle
-									id={`Phrases2Accordion`}
-									title={`Fill in the Blanks`}
-								>
-									<Blanks
-										config={phrases2}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{jigsaw1 ? (
-								<AccordionArticle
-									id={`Jigsaw1Accordion`}
-									title={`Complete the Jigsaw`}
-								>
-									<Jigsaw
-										config={jigsaw1}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{jigsaw2 ? (
-								<AccordionArticle
-									id={`Jigsaw2Accordion`}
-									title={`Complete the Jigsaw`}
-								>
-									<Jigsaw
-										config={jigsaw2}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{jigsaw3 ? (
-								<AccordionArticle
-									id={`Jigsaw3Accordion`}
-									title={`Complete the Jigsaw`}
-								>
-									<Jigsaw
-										config={jigsaw3}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null}
-							{phrases3 ? (
-								<AccordionArticle
-									id={`phrases3Accordion`}
-									title={`Fill in the blanks`}
-								>
-									<Blanks
-										config={phrases3}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							) : null} */}
-						</Accordion>
-					</div>
+										<WordGrid words={words} />
+									</AccordionArticle> */}
+									{/* <AccordionArticle
+										id={`parentAccordion`}
+										title={`Parent`}
+									>
+										<p>Parent accordion</p>
+										<AccordionArticle
+											id={`childAccordion`}
+											title={`Child`}
+										>
+											<p>Child accordion</p>
+											<AccordionArticle
+												id={`grandchildAccordion`}
+												title={`Grand Child`}
+											>
+												<p>Grand Child accordion</p>
+											</AccordionArticle>
+										</AccordionArticle>
+
+									</AccordionArticle> */}
+
+									{articles}
+									{/* {dropdowns1 ? (
+										<AccordionArticle
+											id={`DropDowns1Accordion`}
+											title={`Select the Correct Adjective of Nationality`}
+										>
+											<DropDowns
+												config={dropdowns1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{wordparts1 ? (
+										<AccordionArticle
+											id={`AccordionWordParts1Accordion`}
+											title={`Select the parts of the words with the described sounds`}
+										>
+											<WordParts
+												config={wordparts1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{wordsIntoSlots2 ? (
+										<AccordionArticle
+											id={`AccordionWordsIntoSlots2Accordion`}
+											title={`Match the Answers to the Questions`}
+										>
+											<Blanks
+												config={wordsIntoSlots2}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+
+									) : null}
+									{wordsIntoSlots1 ? (
+										<AccordionArticle
+											id={`AccordionWordsIntoSlots1Accordion`}
+											title={`Put the words in the Order You Hear Them`}
+										>
+											<Blanks
+												config={wordsIntoSlots1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+
+									) : null}
+									{phraseTable1 ? (
+										<>
+											<AccordionArticle
+												id={`accordionPhraseTable1Accordion`}
+												title={`Dialogues`}
+											>
+												<PhraseTable
+													config={phraseTable1}
+													logError={this.logError}
+													showDialog={this.showDialog}
+												/>
+											</AccordionArticle>
+										</>
+									) : null}
+									{vocabulary1 ? (
+										<AccordionArticle
+											id={`Vocabulary1Accordion`}
+											title={`Vocabulary`}
+										>
+											<PhraseTable
+												config={vocabulary1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{monologues ? (
+										<AccordionArticle
+											id={`MonologuesAccordion`}
+											title={`Monologues`}
+										>
+											<PhraseTable
+												config={monologues}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{vocabulary2 ? (
+										<AccordionArticle
+											id={`Vocabulary2Accordion`}
+											title={`Vocabulary`}
+										>
+											<PhraseTable
+												config={vocabulary2}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{phrases1 ? (
+										<AccordionArticle
+											id={`Phrases1Accordion`}
+											title={`Fill in the Blanks`}
+										>
+											<Blanks
+												config={phrases1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{phrases2 ? (
+										<AccordionArticle
+											id={`Phrases2Accordion`}
+											title={`Fill in the Blanks`}
+										>
+											<Blanks
+												config={phrases2}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{jigsaw1 ? (
+										<AccordionArticle
+											id={`Jigsaw1Accordion`}
+											title={`Complete the Jigsaw`}
+										>
+											<Jigsaw
+												config={jigsaw1}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{jigsaw2 ? (
+										<AccordionArticle
+											id={`Jigsaw2Accordion`}
+											title={`Complete the Jigsaw`}
+										>
+											<Jigsaw
+												config={jigsaw2}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{jigsaw3 ? (
+										<AccordionArticle
+											id={`Jigsaw3Accordion`}
+											title={`Complete the Jigsaw`}
+										>
+											<Jigsaw
+												config={jigsaw3}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null}
+									{phrases3 ? (
+										<AccordionArticle
+											id={`phrases3Accordion`}
+											title={`Fill in the blanks`}
+										>
+											<Blanks
+												config={phrases3}
+												logError={this.logError}
+												showDialog={this.showDialog}
+											/>
+										</AccordionArticle>
+									) : null} */}
+								</Accordion>
+							</div>
+						</>
+						:
+						<>
+
+							<h1>No configuration parameter given of the form</h1>
+							<h2>{`${window.location.href}/?config=config.json`}</h2>
+						</>
+					}
 					<Footer />
 				</div>
 
