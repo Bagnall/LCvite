@@ -50,7 +50,7 @@ export default class App extends React.Component {
 		// console.log(urlParams);
 		const configFile = urlParams.get('config');
 
-		if (configFile) 		this.loadConfig(`./src/${configFile}`);
+		if (configFile)this.loadConfig(`./src/${configFile}`);
 	};
 
 	// handleLoadConfig = (e) => {
@@ -205,28 +205,6 @@ export default class App extends React.Component {
 		// uncomment the hard-coded components in the returned render below. This allows for more ad-hoc html inclusions,
 		// but does mean that the whole thing has to be hard-coded.
 
-		const content = "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.";
-		const soundFile = `/sounds/fr/max-monologue.mp3`;
-
-		articles.push(
-			<AccordionArticle
-				id={`monologue1Accordion`}
-				key={`monologue1Accordion`}
-				title={'Monologue'}
-			>
-				<div class='monologue-container'>
-					<AudioClip className={`compact`} soundFile={resolveAsset(soundFile)} label={``} />
-					<Monologue
-						compact={false}
-						content={content}
-						key={`monologue1`}
-						logError={this.logError}
-						showDialog={this.showDialog}
-					/>
-				</div>
-			</AccordionArticle>
-
-		);
 		if (config) {
 			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
@@ -244,6 +222,21 @@ export default class App extends React.Component {
 									title={titleText}
 								>
 									<Explanation
+										config={value}
+										logError={this.logError}
+										showDialog={this.showDialog}
+									/>
+								</AccordionArticle>
+							);
+							break;
+						case 'Monologue':
+							articles.push(
+								<AccordionArticle
+									id={`${id}Accordion`}
+									key={`${id}Accordion`}
+									title={titleText}
+								>
+									<Monologue
 										config={value}
 										logError={this.logError}
 										showDialog={this.showDialog}

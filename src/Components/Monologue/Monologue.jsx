@@ -1,4 +1,5 @@
 import './Monologue.scss';
+import {AudioClip} from '../';
 import React from 'react';
 import {resolveAsset} from '../../utility';
 
@@ -7,17 +8,25 @@ export class Monologue extends React.PureComponent {
 		super(props);
 
 		const {
-			compact = true,
+			compact = false,
 			content,
 			soundFile,
+			config
 		} = this.props;
-
-		this.state = {
-			compact: compact,
-			content: content, // "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
-			showResult: false,
-			soundFile: soundFile, // `/sounds/fr/max-monologue.mp3`,
-		};
+		if (config) {
+			this.state = {
+				...props.config,
+				compact: compact,
+				showResult: false,
+			};
+		} else {
+			this.state = {
+				compact: compact,
+				content: content,
+				showResult: false,
+				soundFile: soundFile,
+			};
+		}
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleValidation = this.handleValidation.bind(this);
@@ -90,6 +99,8 @@ export class Monologue extends React.PureComponent {
 		const {
 			compact,
 			content,
+			id,
+			instructionsText,
 			showResult = false,
 			soundFile,
 			userInput = ``,
@@ -98,31 +109,58 @@ export class Monologue extends React.PureComponent {
 		let text = userInput;
 		if (showResult) text = this.highlightTextDiff(userInput, content);
 
-		return (
-			<>
+		if (compact) {
+			const {
+				id,
+			} = this.props;
 
-				<div
-					className={`monologue ${showResult ? 'show' : ''} ${compact ? 'compact' : ''}`}
-				>
-					{ showResult ?
-						(<div className={`result ${compact ? 'compact' : ''}`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
-						:
-						(
-							<>
-								{ compact ?
-									<input type = 'text' value = { userInput } onChange = { this.handleChange } />
-									:
-									<textarea value={userInput} onChange = {this.handleChange} ></textarea>
-								}
-								<button
-									className={``}
-									onClick={this.handleValidation}
-								>Check</button>
-							</>
-						)
-					}
-				</div>
-			</>
-		);
+			return (
+				<>
+
+					<div className={`monologue compact` } id={`monologue${id}`} >
+						{showResult ?
+							(<div className={`result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							:
+							(
+								<>
+									{compact ?
+										<input type='text' value={userInput} onChange={this.handleChange} />
+										:
+										<textarea value={userInput} onChange={this.handleChange} ></textarea>
+									}
+									<button
+										className={``}
+										onClick={this.handleValidation}
+									>Check</button>
+								</>
+							)
+						}
+					</div>
+				</>
+			);
+		} else {
+			return (
+				<>
+					<div className={`monologue`} id={`monologue${id}`} >
+						<p>{instructionsText}</p>
+						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
+						{showResult ?
+							(<div className={`result`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							:
+							(
+								<>
+									<textarea value={userInput} onChange={this.handleChange} ></textarea>
+									<button
+										className={``}
+										onClick={this.handleValidation}
+									>Check</button>
+								</>
+							)
+						}
+					</div>
+				</>
+			);
+
+		}
 	}
 }

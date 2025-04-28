@@ -86,7 +86,7 @@ export class AnswerTable extends React.PureComponent {
 				);
 				cells.push(
 					<td key={`row${i}cell1`}>
-						<Monologue content={phrase[1]} countCorrect={() => this.countCorrect} />
+						<Monologue compact={true} content={phrase[1]} countCorrect={() => this.countCorrect} />
 					</td>
 				);
 				if (phrases[i].length - 1 > 2) {
