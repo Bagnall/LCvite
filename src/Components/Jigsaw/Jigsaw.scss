@@ -6,6 +6,7 @@
 
 .jigsaw-container {
 	max-height: 790px;
+	touch-action: none;
 	.jigsaw,
 	.target {
 		display: block;

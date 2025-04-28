@@ -1,4 +1,5 @@
 export * from './Accordion';
+export * from './AnswerTable';
 export * from './AudioClip';
 export * from './Blanks';
 export * from './Blanks/Word';
@@ -15,6 +16,7 @@ export * from './Jigsaw';
 export * from './Jigsaw/Piece';
 export * from './MemoryMatchGame';
 export * from './MemoryMatchGame/Card';
+export * from './Monologue';
 export * from './PhraseTable';
 export * from './WordGrid';
 export * from './WordParts';

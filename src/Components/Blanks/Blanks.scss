@@ -96,7 +96,10 @@
 	&.type-phrases {
 		.placed {
 			box-shadow: 1px 1px 1px black;
-			transition: box-shadow 1s;
+			visibility: hidden;
+			transition:
+				box-shadow 1s,
+				visibility 0s 1s;
 		}
 	}
 	&.type-phrases {
@@ -110,7 +113,7 @@
 	&.type-questions-answers {
 		> .blanks {
 			> .target {
-				min-width: 1010px;
+				// min-width: 1010px;
 				table {
 					td:nth-child(3) {
 						border-width: 1px;
@@ -121,8 +124,8 @@
 						overflow-x: hidden;
 						pointer-events: none;
 						transition:
-							max-width 6s,
-							border-color 1s;
+							max-width 6s 1s,
+							border-color 1s 1s;
 					}
 				}
 			}
@@ -140,8 +143,8 @@
 							border-style: solid;
 							pointer-events: all;
 							transition:
-								max-width 6s,
-								border-color 1s;
+								max-width 6s 1s,
+								border-color 1s 1s;
 						}
 					}
 				}

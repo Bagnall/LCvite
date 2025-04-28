@@ -239,17 +239,15 @@ export class Blanks extends React.PureComponent {
 			const {
 				congratulationsText,
 				nToPlace,
-				// questions,
-				// words,
 			} = this.state;
 			let {
 				nPlaced = 0,
 			} = this.state;
 
-			let targetX, targetY;
+			let targetX, targetY, target;
 			const inLimitsResult = this.inLimits();
 			if (inLimitsResult.success) {
-				({ targetX, targetY } = inLimitsResult);
+				({ targetX, targetY, target } = inLimitsResult);
 				// The eagle has landed
 				this.movingPiece.classList.remove("draggable");
 				this.movingPiece.classList.remove('highlight');
@@ -258,6 +256,9 @@ export class Blanks extends React.PureComponent {
 				this.movingPiece.style.left = `${targetX}px`;
 				this.movingPiece.style.top = `${targetY}px`;
 				this.movingPiece.classList.add("placed");
+				// debugger;
+				console.log(target);
+				target.style.opacity = 1;
 				nPlaced++;
 				if (nPlaced === nToPlace) {
 
@@ -317,6 +318,7 @@ export class Blanks extends React.PureComponent {
 				success: true,
 				"targetX": targetX,
 				"targetY": targetY,
+				"target": targetWord,
 			};
 		}
 		return { success: false };

@@ -1,0 +1,41 @@
+// AnswerTable.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.answer-table-container {
+	// background: colours.$panel-back;
+
+	table {
+		text-align: left;
+		border-collapse: collapse;
+		// background: white;
+		background: #ebebeb;
+		background: linear-gradient(45deg, rgb(245, 245, 245) 0%, rgba(255, 255, 255, 1) 50%, rgb(250, 250, 250) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
+
+		td,
+		th {
+			border: 1px solid #000000;
+			padding: 5px 4px;
+			font-weight: bold;
+		}
+		tbody {
+			border: none;
+			tr {
+				&.spacer {
+					border-left: 1px solid red;
+					border-right: none;
+					td {
+						border-left: none;
+						border-right: none;
+					}
+				}
+			}
+		}
+		td {
+			font-size: 1rem;
+			padding: 0.25rem 1rem;
+		}
+	}
+}

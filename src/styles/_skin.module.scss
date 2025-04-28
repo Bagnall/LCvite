@@ -205,7 +205,7 @@ _skin.module.scss
 		}
 		$content: color.adjust($article-base-background, $whiteness: 12%);
 	}
-	.blanks-container .target,
+	// .blanks-container div.target,
 	.memory-map-container {
 		background: url("/images/table-top.jpg");
 		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
@@ -220,7 +220,7 @@ _skin.module.scss
 	.blanks-container,
 	.jigsaw-container,
 	.type-phrases {
-		.target {
+		div.target {
 			background: url("/images/table-top.jpg");
 			box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 			border: none;
@@ -306,6 +306,12 @@ _skin.module.scss
 	$panel-back: $french-panel-back;
 	// $body-back: $french-body-back;
 	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back);
+}
+
+.german {
+	$german-body-back: white;
+
+	@include affected_by_skin(colours.$german-home, colours.$german-button, $german-body-back, colours.$german-article-base-background, colours.$german-panel-back, $german-body-back);
 }
 
 .spanish {

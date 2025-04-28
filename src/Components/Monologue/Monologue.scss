@@ -1,0 +1,52 @@
+/*
+Monologue.scss
+*/
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_mixins.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.monologue {
+	table {
+		td {
+			&:nth-child(2) {
+				letter-spacing: 0.3rem;
+			}
+		}
+	}
+	div {
+		input {
+			border-style: solid;
+			border-width: 1px 0 1px 1px;
+			padding: 2px;
+		}
+		.result {
+			display: inline-block;
+			.deleted,
+			.inserted {
+				cursor: pointer;
+			}
+			.deleted {
+			}
+			.inserted {
+				background-color: #d4fcdc;
+			}
+		}
+	}
+
+	button {
+		&.button-info {
+			@include mixins.button-common;
+			background-color: lightGray;
+			border-radius: 10px;
+			width: 20px;
+			height: 20px;
+			padding: 0;
+			// border: 1px solid $button-border;
+			font-size: 1rem;
+			line-height: 20px;
+			font-family: "Times New Roman", Times, serif;
+			font-weight: bold;
+			margin-left: 8px;
+		}
+	}
+}

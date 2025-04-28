@@ -42,7 +42,7 @@ hr {
 	z-index: 1;
 	margin: 1rem auto;
 	max-width: 1200px;
-	touch-action: none;
+	// touch-action: none;
 
 	overflow: visible;
 	padding: 2rem 3rem;
@@ -92,6 +92,16 @@ h2 {
 	#content {
 		#hero {
 			background-image: url(/projects/richard/images/paris.jpg);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;
+		}
+	}
+}
+.german {
+	#content {
+		#hero {
+			background-image: url(/projects/richard/images/berlin.jpg);
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: cover;

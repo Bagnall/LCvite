@@ -23,11 +23,18 @@ $incorrect-background: rgba(255, 0, 0, 0.2);
 // $article-base-background: rgb(217, 216, 253);
 
 $french-orange: #fbc57b;
+
 $french-home: $french-orange;
 $french-button: $french-home;
 $french-article-base-background: rgb(217, 216, 253); //#eceeff;
 $french-panel-back: rgb(247, 247, 255);
-$french-body-back: #fffdec;
+
+$german-home: rgb(255, 254, 198);
+$german-button: $german-home;
+$german-article-base-background: rgb(223, 171, 30);
+$german-panel-back: rgb(255, 253, 228);
+
+// $french-body-back: #fffdec;
 
 $spanish-home: #9cbef2; // #9ce8f2;
 $spanish-button: #ed7102;

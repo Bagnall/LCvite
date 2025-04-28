@@ -44,6 +44,7 @@ $cell-dimension: 36px;
 		border-collapse: collapse;
 		user-select: none; /* Standard syntax */
 		z-index: 1;
+		cursor: pointer;
 		td {
 			border: 1px solid #ccc;
 			box-sizing: border-box;

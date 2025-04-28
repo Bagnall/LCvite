@@ -3,6 +3,8 @@ import './App.scss';
 import {
 	Accordion,
 	AccordionArticle,
+	AnswerTable,
+	AudioClip,
 	Blanks,
 	Congratulate,
 	CrossWord,
@@ -14,6 +16,7 @@ import {
 	Header,
 	Jigsaw,
 	MemoryMatchGame,
+	Monologue,
 	PhraseTable,
 	WordGrid,
 	WordParts,
@@ -192,6 +195,28 @@ export default class App extends React.Component {
 			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
 				const { id, component, titleText } = value;
+
+				const content = "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.";
+				const soundFile = `/sounds/fr/max-monologue.mp3`;
+
+				// articles.push(
+				// 	<AccordionArticle
+				// 		id={`monologue1Accordion`}
+				// 		key={`monologue1Accordion`}
+				// 		title={'Monologue'}
+				// 	>
+				// 		<AudioClip className={`compact`} soundFile={resolveAsset(soundFile)} label={``} />
+				// 		<Monologue
+				// 			compact={true}
+				// 			content={content}
+				// 			key={`monologue1`}
+				// 			logError={this.logError}
+				// 			showDialog={this.showDialog}
+				// 		/>
+				// 	</AccordionArticle>
+
+				// );
+
 				if (component) {
 					switch (component) {
 						case 'Explanation':
@@ -262,6 +287,21 @@ export default class App extends React.Component {
 									title={titleText}
 								>
 									<WordParts
+										config={value}
+										logError={this.logError}
+										showDialog={this.showDialog}
+									/>
+								</AccordionArticle>
+							);
+							break;
+						case 'AnswerTable':
+							articles.push(
+								<AccordionArticle
+									id={`${id}Accordion`}
+									key={`${id}Accordion`}
+									title={titleText}
+								>
+									<AnswerTable
 										config={value}
 										logError={this.logError}
 										showDialog={this.showDialog}

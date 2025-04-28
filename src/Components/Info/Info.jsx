@@ -14,6 +14,7 @@ export class Info extends React.PureComponent {
 	render() {
 
 		const {
+			id,
 			infoTitle,
 			infoMessage,
 		} = this.props;
@@ -32,7 +33,7 @@ export class Info extends React.PureComponent {
 				>i</button>
 				<div
 					className={`${showInfo ? 'show' : ''}`}
-					id='info'
+					id='${id}Info'
 				>
 					<header>
 						< button
