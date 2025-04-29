@@ -12,12 +12,12 @@ const getShuffledDeck = (cards, nCards) => {
 		content: obj.english,
 		id: `${idx}b`,
 		image: obj.image,
-		match: obj.french,
+		match: obj.foreignLanguage,
 		type: 'image',
 	}));
 	const textCards = cards.map((obj, idx) => ({
 		audio: obj.audio,
-		content: obj.french,
+		content: obj.foreignLanguage,
 		id: `${idx}a`,
 		image: `img-${idx}`,
 		match: obj.english,

@@ -79,41 +79,44 @@ export class Blanks extends React.PureComponent {
 		// User has had enough, solve it
 		// console.log("autoSolve");
 		const {
-			// answers,
-			// blanksType,
 			id,
-			wordTiles,
-			// words,
+			// wordTiles,
 		} = this.state;
 
-		const newWordTiles = new Array;
-		for (let i = 0; i < wordTiles.length; i++) {
-			const wordTile = wordTiles[i];
+		// const newWordTiles = new Array;
+		// for (let i = 0; i < wordTiles.length; i++) {
+		// 	const wordTile = wordTiles[i];
 
-			const { index } = wordTile.props;
+		// 	const { index } = wordTile.props;
 
-			const targetTile = document.querySelector(`#${id} .word${index}.target`);
+		// 	const targetTile = document.querySelector(`#${id} .word${index}.target`);
 
-			const style = window.getComputedStyle(targetTile);
-			let { marginLeft, marginTop } = style;
-			marginLeft = parseInt(marginLeft);
-			marginTop = parseInt(marginTop);
-			const targetX = parseInt(targetTile.offsetLeft - marginLeft);
-			const targetY = parseInt(targetTile.offsetTop - marginTop);
+		// 	const style = window.getComputedStyle(targetTile);
+		// 	let { marginLeft, marginTop } = style;
+		// 	marginLeft = parseInt(marginLeft);
+		// 	marginTop = parseInt(marginTop);
+		// 	const targetX = parseInt(targetTile.offsetLeft - marginLeft);
+		// 	const targetY = parseInt(targetTile.offsetTop - marginTop);
 
-			newWordTiles.push(
-				<Word
-					className={`blank placed`}
-					index={index}
-					x={targetX}
-					y={targetY}
-					key={`${id}word${index}`} >{wordTile.props.children}</Word>
-			);
+		// 	newWordTiles.push(
+		// 		<Word
+		// 			className={`blank placed`}
+		// 			index={index}
+		// 			x={targetX}
+		// 			y={targetY}
+		// 			key={`${id}word${index}`} >{wordTile.props.children}</Word>
+		// 	);
 
-		}
-		this.setState({
-			wordTiles: newWordTiles,
-		});
+		// }
+		// this.setState({
+		// 	wordTiles: newWordTiles,
+		// });
+
+		// console.log(`#${id} .word.target`);
+		const objectTiles = document.querySelectorAll(`#${id} .word.draggable`);
+		const targetTiles = document.querySelectorAll(`#${id} .word.target`);
+		targetTiles.forEach((w) => { w.style.opacity = 1; });
+		objectTiles.forEach((w) => { w.style.opacity = 0; });
 	};
 
 	handleHints = (e) => {

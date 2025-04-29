@@ -6,103 +6,6 @@
 		"subtitle": "FIRST THINGS FIRST:  greetings, farewells and social niceties",
 		"targetLanguage": "french"
 	},
-	"answerTable1": {
-		"component": "AnswerTable",
-		"congratulationsText": "Well done!",
-		"id": "AnswerTable1",
-		"instructionsText": "Write the feminine form in the empty cells, then click the check button.",
-		"header": [
-			"Masculine",
-			"feminine"
-		],
-		"phrases": [
-			[
-				"américain",
-				"américaine"
-			],
-			[
-				"asiatique",
-				"asiatique"
-			],
-			[
-				"brésilien",
-				"brésilienne"
-			],
-			[
-				"croate",
-				"croate"
-			],
-			[
-				"danois",
-				"danoise"
-			],
-			[
-				"italien",
-				"italienne"
-			],
-			[
-				"portugais",
-				"portugaise"
-			],
-			[
-				"russe",
-				"russe"
-			],
-			[
-				"ukrainien",
-				"ukrainien"
-			],
-			[
-				"célibataire",
-				"célibataire"
-			],
-			[
-				"fatigué",
-				"fatiguée"
-			],
-			[
-				"malade",
-				"malade"
-			],
-			[
-				"marié",
-				"mariée"
-			],
-			[
-				"dentiste",
-				"dentiste"
-			],
-			[
-				"doctorant",
-				"doctorante"
-			],
-			[
-				"étudiant",
-				"étudiante"
-			],
-			[
-				"informaticien",
-				"informaticienne"
-			],
-			[
-				"journaliste",
-				"journaliste"
-			],
-			[
-				"mécanicien",
-				"mécanicienne"
-			],
-			[
-				"médecin",
-				"médecin"
-			],
-			[
-				"pharmacien",
-				"pharmacienne"
-			]
-		],
-		"titleText": "Feminine Form"
-	},
 	"memorycards1": {
 		"cheatText": "Cheat",
 		"component": "MemoryMatchGame",
@@ -114,85 +17,85 @@
 			{
 				"audio": "/sounds/fr/memory/la lampe à lave.mp3",
 				"english": "lava lamp",
-				"french": "la lampe à lave",
+				"foreignLanguage": "la lampe à lave",
 				"image": "/images/memory/lava-lamp.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/le télescope.mp3",
 				"english": "telescope",
-				"french": "le télescope",
+				"foreignLanguage": "le télescope",
 				"image": "/images/memory/telescope.webp"
 			},
 			{
 				"audio": "/sounds/fr/memory/le pinceau.mp3",
 				"english": "paintbrush",
-				"french": "le pinceau",
+				"foreignLanguage": "le pinceau",
 				"image": "/images/memory/paint-brush.webp"
 			},
 			{
 				"audio": "/sounds/fr/memory/l'arrosoir.mp3",
 				"english": "watering can",
-				"french": "l'arrosoir",
+				"foreignLanguage": "l'arrosoir",
 				"image": "/images/memory/watering-can.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/la fermeture éclair.mp3",
 				"english": "zipper",
-				"french": "la fermeture éclair",
+				"foreignLanguage": "la fermeture éclair",
 				"image": "/images/memory/zip.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/l'échiquier.mp3",
 				"english": "chessboard",
-				"french": "l'échiquier",
+				"foreignLanguage": "l'échiquier",
 				"image": "/images/memory/chess-board.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/le coquillage.mp3",
 				"english": "seashell",
-				"french": "le coquillage",
+				"foreignLanguage": "le coquillage",
 				"image": "/images/memory/seashell.webp"
 			},
 			{
 				"audio": "/sounds/fr/memory/la tasse.mp3",
 				"english": "mug",
-				"french": "la tasse",
+				"foreignLanguage": "la tasse",
 				"image": "/images/memory/mug.webp"
 			},
 			{
 				"audio": "/sounds/fr/memory/le sac à dos.mp3",
 				"english": "backpack",
-				"french": "le sac à dos",
+				"foreignLanguage": "le sac à dos",
 				"image": "/images/memory/backpack.webp"
 			},
 			{
 				"audio": "/sounds/fr/memory/le parapluie.mp3",
 				"english": "umbrella",
-				"french": "le parapluie",
+				"foreignLanguage": "le parapluie",
 				"image": "/images/memory/umbrella.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/l'agrafeuse.mp3",
 				"english": "stapler",
-				"french": "l'agrafeuse",
+				"foreignLanguage": "l'agrafeuse",
 				"image": "/images/memory/stapler.png"
 			},
 			{
 				"audio": "/sounds/fr/memory/les lunettes.mp3",
 				"english": "spectacles",
-				"french": "les lunettes",
+				"foreignLanguage": "les lunettes",
 				"image": "/images/memory/spectacles.png"
 			},
 			{
 				"audio": "/sounds/fr/memory/la brosse à cheveux.mp3",
 				"english": "hair brush",
-				"french": "la brosse à cheveux",
+				"foreignLanguage": "la brosse à cheveux",
 				"image": "/images/memory/hairbrush.jpg"
 			},
 			{
 				"audio": "/sounds/fr/memory/la carte postale.mp3",
 				"english": "postcard",
-				"french": "la carte postale",
+				"foreignLanguage": "la carte postale",
 				"image": "/images/memory/postcard.jpg"
 			}
 		],
