@@ -389,7 +389,7 @@
 			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/non-existant.mp3'/></p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   m<b>oi</b>, t<b>oi</b>, au rev<b>oi</b>r (sound files)</p><p>4 <b>The letter h</b>  (pic 'Shhh! As above?)</p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <b>h</b>omme, <b>h</b>orrible, <b>h</b>orizon (sound files)</p>"
 		],
 		"id": "explanation2",
-		"titleText": "Demystifying French Pronunciation."
+		"titleText": "Demystifying French Pronunciation"
 	},
 	"wordsIntoSlots1": {
 		"component": "Blanks",
@@ -715,7 +715,7 @@
 			"<p>1 Silent letters at the end of a word (image to illustrate? = shhhh! or finger on lips? …)</p><p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. Listen to the following examples.</p><p>gran<b>d</b>, ron<b>d</b>,  lon<b>g</b>, tro<b>p</b>, depui<b>s</b>,  pa<b>s</b>, peti<b>t</b>, salu<b>t</b>, gâteau<b>x</b>, appele<b>z</b> (sound files)</p><p>The letter <b>e</b> is not pronounced at the end of a word:</p><p>Je m'appell<b>e</b> bibliothécair<b>e</b> célibatair<b>e</b>  (sound files)</p><p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p><p>ce, de, je,  le, me, ne, se, te</p><hr/><p>2 <b>Th</b></p><p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g. <b>Thomas</b>, <b>thé</b>, <b>théologie</b>, <b>maths</b> (sound files)</p>"
 		],
 		"id": "explanation4",
-		"titleText": "Demystifying Pronunciation."
+		"titleText": "Demystifying Pronunciation"
 	},
 	"dropdowns3": {
 		"component": "DropDowns",
