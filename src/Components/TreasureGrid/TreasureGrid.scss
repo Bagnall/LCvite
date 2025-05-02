@@ -1,0 +1,48 @@
+// TreasureGrid.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_mixins.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.treasure-grid {
+	font-family: sans-serif;
+	text-align: center;
+	padding: 1rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.5rem;
+	margin: 1rem auto;
+}
+
+.cell {
+	background-color: #f0f0f0;
+	border: 2px solid #ccc;
+	padding: 0.8rem;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.2s ease;
+	border-radius: 6px;
+}
+
+.cell:hover {
+	background-color: #e6f7ff;
+}
+
+.cell.selected {
+	background-color: #c6f6d5;
+	border-color: #38a169;
+	font-weight: bold;
+}
+
+.message {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 1rem;
+	color: #333;
+}

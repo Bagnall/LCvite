@@ -3,13 +3,13 @@ import react from '@vitejs/plugin-react-swc';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
 	assetsInclude: [
 		'**/*.mp3',
 		'**/*.jpg',
 		'**/*.svg'
 	],
-	base: '/projects/richard',
+	base: command === 'build' ? `./` : `/projects/richard/`,
 	build: {
 		assetsDir: "src",
 		rollupOptions: {
@@ -39,4 +39,4 @@ export default defineConfig({
 			]
 		})
 	],
-});
+}));
