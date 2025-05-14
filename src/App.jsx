@@ -457,7 +457,16 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
+									{/* <AccordionArticle
+										id={`scratchAccordion`}
+										title={`Scratch`}
+									>
+										<>
 
+
+										</>
+
+									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle

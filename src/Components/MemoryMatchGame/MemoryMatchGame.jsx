@@ -9,7 +9,7 @@ const getShuffledDeck = (cards, nCards) => {
 	cards = cards.sort(() => Math.random() - 0.5);
 	cards = cards.slice(0, nCards);
 	const imageCards = cards.map((obj, idx) => ({
-		content: obj.english,
+		content: obj.localLanguage,
 		id: `${idx}b`,
 		image: obj.image,
 		match: obj.foreignLanguage,
@@ -20,7 +20,7 @@ const getShuffledDeck = (cards, nCards) => {
 		content: obj.foreignLanguage,
 		id: `${idx}a`,
 		image: `img-${idx}`,
-		match: obj.english,
+		match: obj.localLanguage,
 		type: 'text',
 	}));
 	const combined = [...imageCards, ...textCards];

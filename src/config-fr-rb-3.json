@@ -1,0 +1,556 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "fr-flag.png",
+		"title": "French Learning Object 3",
+		"subtitle": "ORIGINS and LANGUAGES",
+		"targetLanguage": "french"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "Well done, you found them all!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"étudiant",
+				"student",
+				"sounds/fr/étudiant.mp3"
+			],
+			[
+				"élève",
+				"pupil",
+				"sounds/fr/élève.mp3"
+			],
+			[
+				"professeur",
+				"teacher",
+				"sounds/fr/professeur.mp3"
+			],
+			[
+				"médecin",
+				"doctor",
+				"sounds/fr/médecin.mp3"
+			],
+			[
+				"archiviste",
+				"archivist",
+				"sounds/fr/archiviste.mp3"
+			],
+			[
+				"bibliothécaire",
+				"librarian",
+				"sounds/fr/bibliothécaire.mp3"
+			],
+			[
+				"administrateur",
+				"administrator",
+				"sounds/fr/administrateur.mp3"
+			],
+			[
+				"avocat",
+				"lawyer",
+				"sounds/fr/avocat.mp3"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Occupations"
+	},
+	"phraseTable3": {
+		"component": "PhraseTable",
+		"id": "phraseTable3",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Male : Tu es française ?",
+				"Are you French ?",
+				"sounds/fr/Tu es française.mp3"
+			],
+			[
+				"Female : Ah non, je ne suis pas française !",
+				"Oh no, I'm not French!",
+				"sounds/fr/Ah non, je ne suis pas française !.mp3"
+			],
+			[
+				"Male : Tu es de quelle nationalité ?",
+				"What nationality are you?",
+				"sounds/fr/Tu es de quelle nationalité.mp3"
+			],
+			[
+				"Female : Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
+				"I'm Belgian. I come from Brussels. Where do you come from?",
+				"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
+			],
+			[
+				"Male : Je viens d'Espagne.",
+				"I come from Spain.",
+				"sounds/fr/Je viens d'Espagne.mp3"
+			],
+			[
+				"D'où venez-vous, Monsieur ?",
+				"Where do you come from, sir? ",
+				"sounds/fr/D'où venez-vous, Monsieur.mp3"
+			],
+			[
+				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.",
+				"I come from the USA. I'm American. My wife's Canadian.",
+				"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.mp3"
+			],
+			[
+				"Elle vient du Québec. Et vous, vous êtes suisse ?",
+				"She comes from Quebec. And are you Swiss?",
+				"sounds/fr/Elle vient du Québec. Et vous, vous êtes suisse.mp3"
+			],
+			[
+				"Ah non, je suis luxembourgeoise.",
+				"Oh no, I'm Luxemburgish.",
+				"sounds/fr/Ah non, je suis luxembourgeoise.mp3"
+			],
+			[
+				"Tu parles allemand ?",
+				"Do you speak German?",
+				"sounds/fr/Tu parles allemand.mp3"
+			],
+			[
+				"Non, je ne parle pas allemand.",
+				"No, I don't speak German.",
+				"sounds/fr/Non, je ne parle pas allemand.mp3"
+			],
+			[
+				"Quelles langues parles-tu ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parles-tu.mp3"
+			],
+			[
+				"Je parle français. C'est tout.",
+				"I speak French. That's all.",
+				"sounds/fr/Je parle français. C'est tout.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parlez-vous.mp3"
+			],
+			[
+				"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
+				"I'm trilingual. I speak French, Arabic and a little bit of English.",
+				"sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3"
+			],
+			[
+				"Et les enfants ?",
+				"And the children?",
+				"sounds/fr/Et les enfants.mp3"
+			],
+			[
+				"Ils sont bilingues. Ils parlent français et arabe.",
+				"They're bilingual. They speak French and Arabic.",
+				"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"phraseTable4": {
+		"component": "PhraseTable",
+		"id": "phraseTable4",
+		"instructionsText": "",
+		"header": [
+			"Nationalité",
+			"Pays",
+			"Nationality",
+			"Country",
+			""
+		],
+		"phrases": [
+			[
+				"algérien",
+				"Algérie (f)",
+				"Algerian",
+				"Algeria",
+				"sounds/fr/algérien Algérie.mp3"
+			],
+			[
+				"allemand",
+				"Allemagne (f)",
+				"German",
+				"Germany",
+				"sounds/fr/allemand Allemagne.mp3"
+			],
+			[
+				"américain",
+				"Etats-Unis (mpl)",
+				"American",
+				"USA",
+				"sounds/fr/américain Etats-Unis.mp3"
+			],
+			[
+				"anglais",
+				"Angleterre (f)",
+				"localLanguage",
+				"England",
+				"sounds/fr/anglais Angleterre.mp3"
+			],
+			[
+				"australien",
+				"Australie (f)",
+				"Australian",
+				"Australia",
+				"sounds/fr/australien Australie.mp3"
+			],
+			[
+				"belge",
+				"Belgique (f)",
+				"Belgian",
+				"Belgium",
+				"sounds/fr/belge Belgique.mp3"
+			],
+			[
+				"britannique",
+				"Grande Bretagne (f)",
+				"British",
+				"Great Britain",
+				"sounds/fr/britannique Grande Bretagne.mp3"
+			],
+			[
+				"canadien",
+				"Canada (m)",
+				"Canadian",
+				"Canada",
+				"sounds/fr/canadien Canada.mp3"
+			],
+			[
+				"chinois",
+				"Chine (f)",
+				"Chinese",
+				"China",
+				"sounds/fr/chinois Chine.mp3"
+			],
+			[
+				"écossais",
+				"Ecosse (f)",
+				"Scottish",
+				"Scotland",
+				"sounds/fr/écossais Ecosse.mp3"
+			],
+			[
+				"espagnol",
+				"Espagne (f)",
+				"Spanish",
+				"Spain",
+				"sounds/fr/espagnol Espagne.mp3"
+			],
+			[
+				"français",
+				"France (f)",
+				"foreignLanguage",
+				"France",
+				"sounds/fr/français France.mp3"
+			],
+			[
+				"gallois",
+				"Pays de Galles (m)",
+				"Welsh",
+				"Wales  ",
+				"sounds/fr/gallois Pays de Galles.mp3"
+			],
+			[
+				"ghanéen",
+				"Ghana (m)",
+				"Ghanean",
+				"Ghana",
+				"sounds/fr/ghanéen Ghana.mp3"
+			],
+			[
+				"libanais",
+				"Liban (m)",
+				"Lebanese",
+				"Lebanon",
+				"sounds/fr/libanais Liban.mp3"
+			],
+			[
+				"luxembourgeois",
+				"Luxembourg (m)",
+				"Luxembourgish",
+				"Luxemburg",
+				"sounds/fr/luxembourgeois Luxembourg.mp3"
+			],
+			[
+				"marocain",
+				"Maroc (m)",
+				"Maroccan",
+				"Morocco",
+				"sounds/fr/marocain Maroc.mp3"
+			],
+			[
+				"irlandais",
+				"Irelande (f) du Sud / du Nord",
+				"Irish",
+				"Southern Ireland / Northern Ireland",
+				"sounds/fr/irlandais Irelande du Sud Irelande du Nord.mp3"
+			],
+			[
+				"sénégalais",
+				"Sénégal (m)",
+				"Senegalese",
+				"Senegal",
+				"sounds/fr/sénégalais Sénégal.mp3"
+			],
+			[
+				"tunisien",
+				"Tunisie (f)",
+				"Tunisian",
+				"Tunisia",
+				"sounds/fr/tunisien Tunisie.mp3"
+			],
+			[
+				"suisse",
+				"Suisse (f)",
+				"Swiss",
+				"Switzerland",
+				"sounds/fr/suisse Suisse.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "phraseTable5",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"parler",
+				"to speak",
+				"sounds/fr/parler.mp3"
+			],
+			[
+				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parles-tu Tu parles quelles langues.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ? / Vous parlez quelles langues ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parlez-vous Vous parlez quelles langues.mp3"
+			],
+			[
+				"Je parle anglais / Je ne parle pas anglais",
+				"I speak / I don't speak English.",
+				"sounds/fr/Je parle anglais Je ne parle pas anglais.mp3"
+			],
+			[
+				"venir de",
+				"to come from",
+				"sounds/fr/venir de.mp3"
+			],
+			[
+				"D'où viens-tu ? / Tu viens d'où ?",
+				"Where do you come from?",
+				"sounds/fr/D'où viens-tu Tu viens d'où.mp3"
+			],
+			[
+				"D'où venez-vous ? / Vous venez d'où ?",
+				"Where do you come from?",
+				"sounds/fr/D'où venez-vous Vous venez d'où.mp3"
+			],
+			[
+				"Je viens de … / je ne viens pas de …",
+				"I come from … / don't come from …",
+				"sounds/fr/Je viens de  Je ne viens pas de.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation4": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>1. A bit about verbs in French:</b></p><p>There are three groups of regular verbs in French. The biggest of these is called the -er group, simply because the infinitive ends with the letters -er. Parler (to speak), habiter (to live), chanter (to sing), danser (to dance) are examples of - er verbs.</p><p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking' depending on the context.</p><table><thead><tr><th>parler</th><th>to speak</th></tr></thead><tbody><tr><td>je parle</td><td>I speak / am speaking</td></tr><tr><td>tu* parles</td><td>you speak / are speaking</td></tr><tr><td>il parle</td><td>he / it speaks / is speaking</td></tr><tr><td>elle parle</td><td>she / it speaks / is speaking</td></tr><tr><td>nous parlons</td><td>we speak / are speaking</td></tr><tr><td>vous* parlez</td><td>you speak / are speaking</td></tr><tr><td>ils parlent</td><td>they speak / are speaking</td></tr><tr><td>elles parlent</td><td>they speak / are speaking</td></tr></tbody></table><p>venir is a common irregular verb.</p><p>venir de&nbsp;&nbsp;&nbsp;to come from</p><table><tbody><tr><td>je viens (de Marseille)</td><td>I come (from Marseille)...</td></tr><tr><td>tu viens</td></tr><tr><td>il vient</td></tr><tr><td>elle vient</td></tr><tr><td>nous venons</td></tr><tr><td>vous venezx/td></tr><tr><td>ils viennent</td></tr><tr><td>elles viennent</td></tr></tbody></table>",
+			"<p><b>2 De</b></p><p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it’s followed by a place name. Look at the following examples illustrating the forms:</p><p>Je viens <span style='color: red;'>de</span> Paris (for towns, cities, villages)</p><p>Je viens <span style='color: green;'>de</span> Belgique (for feminine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: black;'>d’</span>Angleterre (for all singular place names beginning with a vowel or mute h)</p><p>Je viens <span style='color: cyan;'>du</span> Canada (for masculine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: purple;'>des</span> Seychelles (for plural countries)</p>",
+			"<p><b>3 Feminine forms of professions and adjectives</b></p><p>When describing a female or any feminine noun, you will often see the addition of a letter or letters to the original masculine noun or adjective.</p><ul><li>If the ending is <b>e</b> there is no addition: both masculine and feminine are the the same e.g. célibataire, journaliste, serbe etc.</li><li>If the last letter is a consonant, then generally <b>e</b> is added to form the feminine e.g. étudiant (m) étudiante (f), chinois(m), chinoise(f) <b>NB</b> médecin is an exception – this is for both a male and female doctor.</li><li>If the final letter is <b>é</b>, then an <b>e</b> is added for the feminine e.g.  marié (m), mariée (f)</li><li>If the ending is <b>en</b>, <b>ne</b> is added for the feminine e.g. informaticien (m)/ informaticienne(f), australien (m), australienne(f)</li></ul>"
+		],
+		"id": "explanation4",
+		"titleText": "Grammar / Use of Language."
+	},
+	"explanation5": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>To sound or not to sound?</b></p><ol><li><p>The third person verb ending <b>ent</b> is never pronounced. <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/> e.g. Ils parl<b><u>ent</u></b>, elles chant<b><u>ent</u></b>, ils dans<b><u>ent</u></b></p></li><li><p>Usually, the consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. However, these are sounded when the next word begins with a vowel or mute h. This is known as making a liaison. </p><p>Compare these: les professeurs / le<b>s é</b>tudiants – il est français / il es<b>t a</b>nglais- un grand poète / un gran<b>d ho</b>mme</p></li><li><p>The sound : ‘eh’</b></p></li></ol><p>Listen to the following:  vous parl<b>ez</b>, il <b>est</b> am<b>é</b>ricain <b>et</b> je suis ghan<b>é</b>enne, elle <b>est</b> mari<b>ée</b>, nous sommes fianc<b>és</b>, elles sont fatigu<b>ées</b>, <b>é</b>cout<b>er</b>, regard<b>er</b></p><p>You will notice that <b>-et</b>, <b>-ez</b>, <b>é</b>, <b>-ée</b>, <b>-és</b>, <b>-ées</b> and  also <b>-er</b> as an infinitive ending are all pronounced the same, as are  the words <b>est</b> and <b>es</b>.</p>"
+		],
+		"id": "explanation5",
+		"titleText": "Demystifying French Pronunciation"
+	},
+	"dropdowns2": {
+		"component": "DropDowns",
+		"id": "dropdowns2",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Female : Je suis [marocain|*marocaine|africain|africaine].",
+			"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
+			"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+			"Female: Je suis [français|*française|anglais /anglaise].",
+			"Male: Je suis [*chinois|chinoise|gallois|galloise].",
+			"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+		],
+		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+		"audio": [
+			"sounds/fr/je suis marocaine.mp3",
+			"sounds/fr/je suis mexicaine.mp3",
+			"sounds/fr/je suis canadien.mp3",
+			"sounds/fr/je suis française.mp3",
+			"sounds/fr/je suis chinois.mp3",
+			"sounds/fr/je suis sénégalaise.mp3"
+		],
+		"titleText": "Select the Correct Adjective of Nationality"
+	},
+	"dropdowns1": {
+		"component": "DropDowns",
+		"id": "dropdowns1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Fill in the gaps with de / du / d' / des as appropriate.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Je viens [*de|d'|du|des] France.",
+			"Je viens [*de|d'|du|des] Suisse.",
+			"Je viens [de|*d'|du|des] Orléans.",
+			"Je viens [de|d'|*du|des] Maroc.",
+			"Je viens [*de|d'|du|des] Tunisie.",
+			"Je viens [de|*d'|du|des] Ecosse.",
+			"Je viens [de|d'|*du|des] Gabon.",
+			"Je viens [de|d'|du|*Des] États-Unis."
+		],
+		"audio": [
+			"sounds/fr/Je viens de France.mp3",
+			"sounds/fr/Je viens de Suisse.mp3",
+			"sounds/fr/Je viens d'Orléans.mp3",
+			"sounds/fr/Je viens du Maroc.mp3",
+			"sounds/fr/Je viens de Tunisie.mp3",
+			"sounds/fr/Je viens d'Ecosse.mp3",
+			"sounds/fr/Je viens du Gabon.mp3",
+			"sounds/fr/Je viens Des États-Unis.mp3"
+		],
+		"titleText": "Fill in the gaps with de / du / d' / des as appropriate."
+	},
+	"answerTable1": {
+		"component": "AnswerTable",
+		"congratulationsText": "Well done!",
+		"id": "AnswerTable1",
+		"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the pronunciation. Write the feminine form in the empty cells, then click the check button.",
+		"header": [
+			"Masculine",
+			"feminine"
+		],
+		"phrases": [
+			[
+				"américain",
+				"américaine"
+			],
+			[
+				"asiatique",
+				"asiatique"
+			],
+			[
+				"brésilien",
+				"brésilienne"
+			],
+			[
+				"croate",
+				"croate"
+			],
+			[
+				"danois",
+				"danoise"
+			],
+			[
+				"italien",
+				"italienne"
+			],
+			[
+				"portugais",
+				"portugaise"
+			],
+			[
+				"russe",
+				"russe"
+			],
+			[
+				"ukrainien",
+				"ukrainien"
+			],
+			[
+				"célibataire",
+				"célibataire"
+			],
+			[
+				"fatigué",
+				"fatiguée"
+			],
+			[
+				"malade",
+				"malade"
+			],
+			[
+				"marié",
+				"mariée"
+			],
+			[
+				"dentiste",
+				"dentiste"
+			],
+			[
+				"doctorant",
+				"doctorante"
+			],
+			[
+				"étudiant",
+				"étudiante"
+			],
+			[
+				"informaticien",
+				"informaticienne"
+			],
+			[
+				"journaliste",
+				"journaliste"
+			],
+			[
+				"mécanicien",
+				"mécanicienne"
+			],
+			[
+				"médecin",
+				"médecin"
+			],
+			[
+				"pharmacien",
+				"pharmacienne"
+			]
+		],
+		"titleText": "Feminine Form"
+	},
+	"monologue1": {
+		"component": "Monologue",
+		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
+		"soundFile": "sounds/fr/max-monologue.mp3",
+		"id": "Monologue1",
+		"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
+		"titleText": "Write what you hear"
+	},
+	"jigsaw4": {
+		"component": "Jigsaw",
+		"correctImage": "/images/car-cliff-lift.jpg",
+		"id": "jigsaw4",
+		"incorrectImage": "/images/car-windmill.jpg",
+		"congratulationsText": "You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Une voiture bleue garée devant une station de remontée mécanique au Pays de Galles par une journée brumeuse.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "sounds/fr/car-cliff-lift.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	}
+}

@@ -1,0 +1,466 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "fr-flag.png",
+		"title": "French Learning Object 4",
+		"subtitle": "ORIGINS",
+		"targetLanguage": "french"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "phraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Où habites-tu ?",
+				"Where do you live?",
+				"non-existant.mp3"
+			],
+			[
+				"J'habite en Belgique.",
+				"I live in Belgium.",
+				"non-existant.mp3"
+			],
+			[
+				"Où exactement ?",
+				"Where exactly?",
+				"non-existant.mp3"
+			],
+			[
+				"A Bruxelles. Et toi ?",
+				"In Brussels. What about you?",
+				"non-existant.mp3"
+			],
+			[
+				"J'habite à Cardiff au Pays de Galles.",
+				"I live in Cardiff in Wales",
+				"non-existant.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Où habitez-vous ?",
+				"Where do you live ?",
+				"non-existant.mp3"
+			],
+			[
+				"J'habite aux Etats Unis.",
+				"I live in the USA",
+				"non-existant.mp3"
+			],
+			[
+				"Et moi, j'habite au Maroc.",
+				"And I live in Morocco.",
+				"non-existant.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Où se trouve la cathédrale de Notre Dame ?",
+				"Where is Notre Dame Cathedral?",
+				"non-existant.mp3"
+			],
+			[
+				"La cathédrale de Notre Dame se trouve à Paris !",
+				"Notre Dame Cathedral is in Paris!",
+				"non-existant.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Tu habites au centre-ville ?",
+				"Do you live in the city centre? ",
+				"non-existant.mp3"
+			],
+			[
+				"Non, j'habite dans un petit village à une heure d'ici.",
+				"No, I live in a small village an hour away from here.",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"phraseTable2": {
+		"component": "PhraseTable",
+		"id": "phraseTable2",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"habiter",
+				"to live",
+				"non-existant.mp3"
+			],
+			[
+				"où",
+				"where",
+				"non-existant.mp3"
+			],
+			[
+				"Où habites-tu ? Tu habites où ?",
+				"Where do you live?",
+				"non-existant.mp3"
+			],
+			[
+				"Où habitez-vous ? Vous habitez où ?",
+				"Where do you live?",
+				"non-existant.mp3"
+			],
+			[
+				"Où se trouve Lille ?  Lille se trouve en France.",
+				"Where is Lille? Lille is in France.",
+				"non-existant.mp3"
+			],
+			[
+				"Où es-tu né. e ? Où êtes-vous né.e ?",
+				"Where were you born?",
+				"non-existant.mp3"
+			],
+			[
+				"Je suis né.e …",
+				"I was born …",
+				"non-existant.mp3"
+			],
+			[
+				"au bord de la mer",
+				"at the seaside",
+				"non-existant.mp3"
+			],
+			[
+				" à la campagne",
+				"in the countryside",
+				"non-existant.mp3"
+			],
+			[
+				"à la montagne",
+				"In the mountains",
+				"non-existant.mp3"
+			],
+			[
+				"au centre-ville",
+				"in the town / city centre",
+				"non-existant.mp3"
+			],
+			[
+				"en banlieue",
+				"in the suburbs",
+				"non-existant.mp3"
+			],
+			[
+				"dans un petit / grand village",
+				"in a small / large village",
+				"non-existant.mp3"
+			],
+			[
+				"dans une petite / grande ville",
+				"In a small/ large town",
+				"non-existant.mp3"
+			],
+			[
+				"C'est près d'ici.",
+				"It's near here.",
+				"non-existant.mp3"
+			],
+			[
+				"C'est très loin d'ici.",
+				"It's a long way from here.",
+				"non-existant.mp3"
+			],
+			[
+				"C'est à 15 minutes d'ici.",
+				"It's 15 minutes away from here.",
+				"non-existant.mp3"
+			],
+			[
+				"C'est près de Cambridge.",
+				"It's near Cambridge.",
+				"non-existant.mp3"
+			],
+			[
+				"C'est à 20 kilomètres de Paris.",
+				"It's 20 km from Paris.",
+				"non-existant.mp3"
+			],
+			[
+				"dans une maison",
+				"in a house",
+				"non-existant.mp3"
+			],
+			[
+				"dans un immeuble",
+				"in a block of flats",
+				"non-existant.mp3"
+			],
+			[
+				"dans un appartement",
+				"in a flat",
+				"non-existant.mp3"
+			],
+			[
+				"en résidence universitaire",
+				"in university accommodation",
+				"non-existant.mp3"
+			],
+			[
+				"en colocation",
+				"in a flat / house share",
+				"non-existant.mp3"
+			],
+			[
+				"seul.e",
+				"alone",
+				"non-existant.mp3"
+			],
+			[
+				"aimer",
+				"to love, to like",
+				"non-existant.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p>In French there are several words that translate the word 'in'. If you are saying '<b>in</b>' <b>with a proper noun</b> i.e. a place name, you will see  à   en  au  aux   dans le . The chart below shows when each of these is used.</p><table><tbody><tr><td>à</td><td>Londres, Cambridge, Marseille</td><td>towns, cities, villages</td></tr><tr><td>à</td><td>Singapour, Hongkong, Taiwan</td><td>islands and archipelagos without gender</td></tr><tr><td>au</td><td>Maroc, Canada, Chili</td><td>masculine countries beginning with a consonant</td></tr><tr><td>en</td><td>France, Suisse, Chine</td><td>all feminine countries</td></tr><tr><td>en</td><td>Afghanistan, Iran, Andorre</td><td>masculine countries beginning with a vowel</td></tr><tr><td>en</td><td>Provence, Nouvelle Calédonie</td><td>feminine provinces and regions </td></tr><tr><td>en</td><td>Océanie, Afrique, Amérique du nord /du sud, Europe, Asie, Antarctique</td><td>the continents</td></tr><tr><td>aux</td><td>Pays Bas, Seychelles, États-Unis</td><td>plurals</td></tr><tr><td>dans le</td><td>Cambridgeshire, Derbyshire, Pas-de-Calais, Colorado</td><td>masculine provinces and regions including the British counties</td></tr></tbody></table>"
+		],
+		"id": "explanation1",
+		"titleText": "Grammar / Use of Language."
+	},
+	"explanation2": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>How to pronounce:</b></p><p>another nasal vowel. This is the sound which is how the letters -in- are pronounced <b>when they end a word or occur before a consonant</b> as in these examples: <a class='sound-link' href='/sounds/fr/Singapour.mp3' alt='Singapour'/>Singapour</a>, <a class='sound-link' href='/sounds/fr/Inde.mp3' alt='Inde'>Inde</a>, <a class='sound-link' href='/sounds/fr/indien.mp3' alt='indien'>indien</a>, <a class='sound-link' href='/sounds/fr/Finlande.mp3' alt='Finlande'>Finlande</a>, <a class='sound-link' href='/sounds/fr/jardin.mp3' alt='jardin'>jardin</a>. The tongue and the mouth all have work to do in its production whilst air passes through nose and mouth.</p><p><b>NB</b> This is a useful sound to practise as the following are also pronounced in the same way <b>when they end a word or occur before a consonant:</b></p><p><b>ain</b>, <b>aim</b>, <b>ein</b>, <b>im</b>, <b>ym</b>, <b>yn</b>, <b>eim</b>.</p><p>Here are some examples of words containing the sound to practise:</p><p><a class='sound-link' href='/sounds/fr/marocain.mp3' alt='marocain'>maroc<b>ain</b></a>, <a class='sound-link' href='/sounds/fr/faim.mp3' alt='faim'>f<b>aim</b></a>, <a class='sound-link' href='/sounds/fr/peinture.mp3' alt='peinture'>p<b>ein</b>ture</a>, <a class='sound-link' href='/sounds/fr/impossible.mp3' alt='impossible'><b>im</b>possible</a>, <a class='sound-link' href='/sounds/fr/symbole.mp3' alt='symbole'>s<b>ym</b>bole</a>, <a class='sound-link' href='/sounds/fr/lynx.mp3' alt='lynx'>l<b>yn</b>x</a>, <a class='sound-link' href='/sounds/fr/Reims.mp3' alt='Reims'>R<b>eim</b>s</a>.</p><p>When the letters <b>en</b> or <b>ens</b> end a word this also pronounced (ain) </p><p><a class='sound-link' href='/sounds/fr/australien.mp3' alt='australien'>australi<b>en</b></a>, <a class='sound-link' href='/sounds/fr/européen.mp3' alt='européen'>europé<b>en</b></a>, <a  class='sound-link' href='/sounds/fr/ghanéens.mp3' alt='ghanéens'>ghané<b>ens</b></a>, <a class='sound-link' href='/sounds/fr/indiens.mp3' alt='indiens'>indi<b>ens</b></a>.</p>"
+		],
+		"id": "explanation2",
+		"titleText": "Demystifying French Pronunciation."
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "phraseTable5",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"parler",
+				"to speak",
+				"sounds/fr/parler.mp3"
+			],
+			[
+				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parles-tu Tu parles quelles langues.mp3"
+			],
+			[
+				"Quelles langues parlez-vous ? / Vous parlez quelles langues ?",
+				"Which languages do you speak?",
+				"sounds/fr/Quelles langues parlez-vous Vous parlez quelles langues.mp3"
+			],
+			[
+				"Je parle anglais / Je ne parle pas anglais",
+				"I speak / I don't speak English.",
+				"sounds/fr/Je parle anglais Je ne parle pas anglais.mp3"
+			],
+			[
+				"venir de",
+				"to come from",
+				"sounds/fr/venir de.mp3"
+			],
+			[
+				"D'où viens-tu ? / Tu viens d'où ?",
+				"Where do you come from?",
+				"sounds/fr/D'où viens-tu Tu viens d'où.mp3"
+			],
+			[
+				"D'où venez-vous ? / Vous venez d'où ?",
+				"Where do you come from?",
+				"sounds/fr/D'où venez-vous Vous venez d'où.mp3"
+			],
+			[
+				"Je viens de … / je ne viens pas de …",
+				"I come from … / don't come from …",
+				"sounds/fr/Je viens de  Je ne viens pas de.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation4": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>1. A bit about verbs in French:</b></p><p>There are three groups of regular verbs in French. The biggest of these is called the -er group, simply because the infinitive ends with the letters -er. Parler (to speak), habiter (to live), chanter (to sing), danser (to dance) are examples of - er verbs.</p><p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking' depending on the context.</p><table><thead><tr><th>parler</th><th>to speak</th></tr></thead><tbody><tr><td>je parle</td><td>I speak / am speaking</td></tr><tr><td>tu* parles</td><td>you speak / are speaking</td></tr><tr><td>il parle</td><td>he / it speaks / is speaking</td></tr><tr><td>elle parle</td><td>she / it speaks / is speaking</td></tr><tr><td>nous parlons</td><td>we speak / are speaking</td></tr><tr><td>vous* parlez</td><td>you speak / are speaking</td></tr><tr><td>ils parlent</td><td>they speak / are speaking</td></tr><tr><td>elles parlent</td><td>they speak / are speaking</td></tr></tbody></table><p>venir is a common irregular verb.</p><p>venir de&nbsp;&nbsp;&nbsp;to come from</p><table><tbody><tr><td>je viens (de Marseille)</td><td>I come (from Marseille)...</td></tr><tr><td>tu viens</td></tr><tr><td>il vient</td></tr><tr><td>elle vient</td></tr><tr><td>nous venons</td></tr><tr><td>vous venezx/td></tr><tr><td>ils viennent</td></tr><tr><td>elles viennent</td></tr></tbody></table>",
+			"<p><b>2 De</b></p><p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p><p>Je viens <span style='color: red;'>de</span> Paris (for towns, cities, villages)</p><p>Je viens <span style='color: green;'>de</span> Belgique (for feminine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: black;'>d'</span>Angleterre (for all singular place names beginning with a vowel or mute h)</p><p>Je viens <span style='color: cyan;'>du</span> Canada (for masculine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: purple;'>des</span> Seychelles (for plural countries)</p>",
+			"<p><b>3 Feminine forms of professions and adjectives</b></p><p>When describing a female or any feminine noun, you will often see the addition of a letter or letters to the original masculine noun or adjective.</p><ul><li>If the ending is <b>e</b> there is no addition: both masculine and feminine are the the same e.g. célibataire, journaliste, serbe etc.</li><li>If the last letter is a consonant, then generally <b>e</b> is added to form the feminine e.g. étudiant (m) étudiante (f), chinois(m), chinoise(f) <b>NB</b> médecin is an exception – this is for both a male and female doctor.</li><li>If the final letter is <b>é</b>, then an <b>e</b> is added for the feminine e.g.  marié (m), mariée (f)</li><li>If the ending is <b>en</b>, <b>ne</b> is added for the feminine e.g. informaticien (m)/ informaticienne(f), australien (m), australienne(f)</li></ul>"
+		],
+		"id": "explanation4",
+		"titleText": "Grammar / Use of Language."
+	},
+	"explanation5": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>To sound or not to sound?</b></p><ol><li><p>The third person verb ending <b>ent</b> is never pronounced. <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/> e.g. Ils parl<b><u>ent</u></b>, elles chant<b><u>ent</u></b>, ils dans<b><u>ent</u></b></p></li><li><p>Usually, the consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. However, these are sounded when the next word begins with a vowel or mute h. This is known as making a liaison. </p><p>Compare these: les professeurs / le<b>s é</b>tudiants – il est français / il es<b>t a</b>nglais- un grand poète / un gran<b>d ho</b>mme</p></li><li><p>The sound : 'eh'</b></p></li></ol><p>Listen to the following:  vous parl<b>ez</b>, il <b>est</b> am<b>é</b>ricain <b>et</b> je suis ghan<b>é</b>enne, elle <b>est</b> mari<b>ée</b>, nous sommes fianc<b>és</b>, elles sont fatigu<b>ées</b>, <b>é</b>cout<b>er</b>, regard<b>er</b></p><p>You will notice that <b>-et</b>, <b>-ez</b>, <b>é</b>, <b>-ée</b>, <b>-és</b>, <b>-ées</b> and  also <b>-er</b> as an infinitive ending are all pronounced the same, as are  the words <b>est</b> and <b>es</b>.</p>"
+		],
+		"id": "explanation5",
+		"titleText": "Demystifying French Pronunciation"
+	},
+	"dropdowns2": {
+		"component": "DropDowns",
+		"id": "dropdowns2",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Female : Je suis [marocain|*marocaine|africain|africaine].",
+			"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
+			"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+			"Female: Je suis [français|*française|anglais /anglaise].",
+			"Male: Je suis [*chinois|chinoise|gallois|galloise].",
+			"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+		],
+		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+		"audio": [
+			"sounds/fr/je suis marocaine.mp3",
+			"sounds/fr/je suis mexicaine.mp3",
+			"sounds/fr/je suis canadien.mp3",
+			"sounds/fr/je suis française.mp3",
+			"sounds/fr/je suis chinois.mp3",
+			"sounds/fr/je suis sénégalaise.mp3"
+		],
+		"titleText": "Select the Correct Adjective of Nationality"
+	},
+	"dropdowns1": {
+		"component": "DropDowns",
+		"id": "dropdowns1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Fill in the gaps with de / du / d' / des as appropriate.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Je viens [*de|d'|du|des] France.",
+			"Je viens [*de|d'|du|des] Suisse.",
+			"Je viens [de|*d'|du|des] Orléans.",
+			"Je viens [de|d'|*du|des] Maroc.",
+			"Je viens [*de|d'|du|des] Tunisie.",
+			"Je viens [de|*d'|du|des] Ecosse.",
+			"Je viens [de|d'|*du|des] Gabon.",
+			"Je viens [de|d'|du|*Des] États-Unis."
+		],
+		"audio": [
+			"sounds/fr/Je viens de France.mp3",
+			"sounds/fr/Je viens de Suisse.mp3",
+			"sounds/fr/Je viens d'Orléans.mp3",
+			"sounds/fr/Je viens du Maroc.mp3",
+			"sounds/fr/Je viens de Tunisie.mp3",
+			"sounds/fr/Je viens d'Ecosse.mp3",
+			"sounds/fr/Je viens du Gabon.mp3",
+			"sounds/fr/Je viens Des États-Unis.mp3"
+		],
+		"titleText": "Fill in the gaps with de / du / d' / des as appropriate."
+	},
+	"answerTable1": {
+		"component": "AnswerTable",
+		"congratulationsText": "Well done!",
+		"id": "AnswerTable1",
+		"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the pronunciation. Write the feminine form in the empty cells, then click the check button.",
+		"header": [
+			"Masculine",
+			"feminine"
+		],
+		"phrases": [
+			[
+				"américain",
+				"américaine"
+			],
+			[
+				"asiatique",
+				"asiatique"
+			],
+			[
+				"brésilien",
+				"brésilienne"
+			],
+			[
+				"croate",
+				"croate"
+			],
+			[
+				"danois",
+				"danoise"
+			],
+			[
+				"italien",
+				"italienne"
+			],
+			[
+				"portugais",
+				"portugaise"
+			],
+			[
+				"russe",
+				"russe"
+			],
+			[
+				"ukrainien",
+				"ukrainien"
+			],
+			[
+				"célibataire",
+				"célibataire"
+			],
+			[
+				"fatigué",
+				"fatiguée"
+			],
+			[
+				"malade",
+				"malade"
+			],
+			[
+				"marié",
+				"mariée"
+			],
+			[
+				"dentiste",
+				"dentiste"
+			],
+			[
+				"doctorant",
+				"doctorante"
+			],
+			[
+				"étudiant",
+				"étudiante"
+			],
+			[
+				"informaticien",
+				"informaticienne"
+			],
+			[
+				"journaliste",
+				"journaliste"
+			],
+			[
+				"mécanicien",
+				"mécanicienne"
+			],
+			[
+				"médecin",
+				"médecin"
+			],
+			[
+				"pharmacien",
+				"pharmacienne"
+			]
+		],
+		"titleText": "Feminine Form"
+	},
+	"monologue1": {
+		"component": "Monologue",
+		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
+		"soundFile": "sounds/fr/max-monologue.mp3",
+		"id": "Monologue1",
+		"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
+		"titleText": "Write what you hear"
+	}
+}

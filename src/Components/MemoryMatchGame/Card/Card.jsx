@@ -26,9 +26,7 @@ export class Card extends React.PureComponent {
 				<div className={`card-contents-container`}>
 
 					{card.type === 'text' ? (
-						<div
-							// style={{ fontSize: '1.125rem', fontWeight: 500 }}
-						>{card.content}</div>
+						<div>{card.content}</div>
 					) : (
 						<div
 							className={`card-image-container`}

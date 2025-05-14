@@ -13,13 +13,8 @@ export class AudioClip extends React.PureComponent {
 
 	playSound = () => {
 		const { soundFile } = this.props;
-		// console.log("soundFile", soundFile, resolveAsset(soundFile));
-		// const soundFileAudio = new Audio(resolveAsset(soundFile));
 		const soundFileAudio = new Audio(soundFile);
-		// const soundFileAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		soundFileAudio.play();
-
-		// console.log("playSound");
 	};
 
 	render = () => {
@@ -34,9 +29,7 @@ export class AudioClip extends React.PureComponent {
 				<div className={`audio-container super-compact`}
 					onClick={this.playSound}
 					title={`play`}
-				>
-					{/* <audio controls><source src={soundFile} /></audio> */}
-				</div>
+				/>
 			);
 		} else if (className.includes('compact')) {
 			return (

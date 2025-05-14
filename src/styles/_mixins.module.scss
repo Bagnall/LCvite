@@ -20,6 +20,36 @@ _mixins.module.scss
 	}
 }
 
+@mixin standard-table() {
+	table {
+		text-align: left;
+		border-collapse: collapse;
+		background: #ebebeb;
+		background: linear-gradient(45deg, rgb(245, 245, 245) 0%, rgba(255, 255, 255, 1) 50%, rgb(250, 250, 250) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
+
+		td,
+		th {
+			border: 1px solid #000000;
+			font-weight: bold;
+		}
+		tbody {
+			border: none;
+			tr {
+				&.spacer {
+					td {
+						border-left: none;
+						border-right: none;
+					}
+				}
+			}
+		}
+		td {
+			font-size: 1rem;
+			padding: 0.25rem 1rem;
+		}
+	}
+}
+
 @mixin standard-pseudo() {
 	content: "";
 	position: absolute;

@@ -15,6 +15,7 @@ audio.super-compact {
 	&.inset {
 		&.compact {
 			border-radius: calc($compact-dimension / 2);
+			min-width: 160px;
 		}
 		box-shadow:
 			-3px -3px 3px rgba(0, 0, 0, 0.4),

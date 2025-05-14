@@ -4,18 +4,18 @@
 @use "../../styles/_media-queries.module.scss";
 
 header.main-header {
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: block;
 	@include mixins.header-footer-background;
-	margin: 0;
 	color: white;
+	display: block;
+	left: 0;
 	line-height: 3rem;
+	margin: 0;
 	text-align: center;
-
+	top: 0;
+	width: 100%;
 	h1 {
 		margin: 0;
+		font-size: 1.3em;
 	}
 	h2 {
 		margin: 0;
@@ -24,4 +24,11 @@ header.main-header {
 		}
 	}
 	box-shadow: 0 8px 8px lightgray;
+}
+@include media-queries.respond-above(m) {
+	header.main-header {
+		h1 {
+			font-size: 2rem;
+		}
+	}
 }

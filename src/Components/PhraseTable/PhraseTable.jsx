@@ -21,6 +21,7 @@ export class PhraseTable extends React.PureComponent {
 
 	render = () => {
 		const {
+			footnote = '',
 			header,
 			id = [],
 			instructionsText,
@@ -93,6 +94,7 @@ export class PhraseTable extends React.PureComponent {
 						{rows}
 					</tbody>
 				</table>
+				{footnote}
 			</div>
 		);
 	};

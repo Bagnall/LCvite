@@ -1,0 +1,586 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "de-flag.png",
+		"title": "German Learning Object 1",
+		"subtitle": "FIRST THINGS FIRST:  greetings, farewells and social niceties",
+		"targetLanguage": "german"
+	},
+	"memorycards1": {
+		"cheatText": "Cheat",
+		"component": "MemoryMatchGame",
+		"congratulationsText": "Congratulations! You have a good memory!",
+		"id": "MemoryMatchGame1",
+		"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+		"nPairsToPlay": 6,
+		"cards": [
+			{
+				"audio": "/sounds/fr/memory/la lampe à lave.mp3",
+				"localLanguage": "lava lamp",
+				"foreignLanguage": "la lampe à lave",
+				"image": "/images/memory/lava-lamp.jpg"
+			},
+			{
+				"audio": "/sounds/de/memory/der Tisch.mp3",
+				"localLanguage": "table",
+				"foreignLanguage": "der Tisch",
+				"image": "/images/memory/table.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/le pinceau.mp3",
+				"localLanguage": "paintbrush",
+				"foreignLanguage": "le pinceau",
+				"image": "/images/memory/paint-brush.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/l'arrosoir.mp3",
+				"localLanguage": "watering can",
+				"foreignLanguage": "l'arrosoir",
+				"image": "/images/memory/watering-can.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/la fermeture éclair.mp3",
+				"localLanguage": "zipper",
+				"foreignLanguage": "la fermeture éclair",
+				"image": "/images/memory/zip.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/l'échiquier.mp3",
+				"localLanguage": "chessboard",
+				"foreignLanguage": "l'échiquier",
+				"image": "/images/memory/chess-board.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/le coquillage.mp3",
+				"localLanguage": "seashell",
+				"foreignLanguage": "le coquillage",
+				"image": "/images/memory/seashell.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/la tasse.mp3",
+				"localLanguage": "mug",
+				"foreignLanguage": "la tasse",
+				"image": "/images/memory/mug.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/le sac à dos.mp3",
+				"localLanguage": "backpack",
+				"foreignLanguage": "le sac à dos",
+				"image": "/images/memory/backpack.webp"
+			},
+			{
+				"audio": "/sounds/fr/memory/le parapluie.mp3",
+				"localLanguage": "umbrella",
+				"foreignLanguage": "le parapluie",
+				"image": "/images/memory/umbrella.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/l'agrafeuse.mp3",
+				"localLanguage": "stapler",
+				"foreignLanguage": "l'agrafeuse",
+				"image": "/images/memory/stapler.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/les lunettes.mp3",
+				"localLanguage": "spectacles",
+				"foreignLanguage": "les lunettes",
+				"image": "/images/memory/spectacles.png"
+			},
+			{
+				"audio": "/sounds/fr/memory/la brosse à cheveux.mp3",
+				"localLanguage": "hair brush",
+				"foreignLanguage": "la brosse à cheveux",
+				"image": "/images/memory/hairbrush.jpg"
+			},
+			{
+				"audio": "/sounds/fr/memory/la carte postale.mp3",
+				"localLanguage": "postcard",
+				"foreignLanguage": "la carte postale",
+				"image": "/images/memory/postcard.jpg"
+			}
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Memory Game"
+	},
+	"wordGrid1": {
+		"cheatText": "Cheat",
+		"component": "WordGrid",
+		"congratulationsText": "That was a roaring success!",
+		"id": "WordGrid1",
+		"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+		"words": [
+			[
+				"éléphant",
+				"elephant",
+				"/sounds/fr/elephant.mp3"
+			],
+			[
+				"girafe",
+				"giraffe",
+				"/sounds/fr/girafe.mp3"
+			],
+			[
+				"tigre",
+				"tiger",
+				"/sounds/fr/tigre.mp3"
+			],
+			[
+				"wombat",
+				"wombat",
+				"/sounds/fr/wombat.mp3"
+			],
+			[
+				"lemming",
+				"lemming",
+				"/sounds/fr/lemming.mp3"
+			],
+			[
+				"chimpanzé",
+				"chimpanzee",
+				"/sounds/fr/chimpanze.mp3"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Animals"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "PhraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Salut, ça va ?",
+				"Hi, are you well?",
+				"/sounds/fr/Salut, ça va.mp3"
+			],
+			[
+				"Salut ! Ça va ! Et toi ?",
+				"Hi, I'm fine and you?",
+				"/sounds/fr/Salut ! Ça va ! Et toi.mp3"
+			],
+			[
+				"Très bien, merci !",
+				"Very well, thank you!",
+				"/sounds/fr/Très bien, merci !.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Bonjour, Madame Foucher ! Comment ça va ?",
+				"Hello, Mme Foucher! How are you?",
+				"/sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
+			],
+			[
+				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
+				"Hello M Letort, I'm very well, thank you. And you?",
+				"/sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
+			],
+			[
+				"Ça va, merci !",
+				"I'm fine, thank you!",
+				"/sounds/fr/Ça va, merci !.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Comment t'appelles-tu* ?",
+				"What's your name?",
+				"/sounds/fr/Comment t'appelles-tu.mp3"
+			],
+			[
+				"Je m'appelle Max, et toi* ?",
+				"My name is Max. And you're….?",
+				"/sounds/fr/Je m'appelle Max, et toi.mp3"
+			],
+			[
+				"Je m'appelle Camille.",
+				"My name's Camille.",
+				"/sounds/fr/Je m'appelle Camille.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Comment vous* appelez-vous ?",
+				"What's your name?",
+				"/sounds/fr/Comment vous appelez-vous.mp3"
+			],
+			[
+				"Je m'appelle Isabelle Martin.",
+				"My name is Isabelle Martin.",
+				"/sounds/fr/Je m'appelle Isabelle Martin.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"vocabulary1": {
+		"component": "PhraseTable",
+		"id": "vocabulary1",
+		"phrases": [
+			[
+				"Bonjour",
+				"hello, good morning, good afternoon",
+				"/sounds/fr/Bonjour.mp3"
+			],
+			[
+				"Bonsoir",
+				"hello, good evening",
+				"/sounds/fr/Bonsoir.mp3"
+			],
+			[
+				"Coucou",
+				"hi, cooee, peek-a-boo",
+				"/sounds/fr/Coucou.mp3"
+			],
+			[
+				"Salut",
+				"hi, bye",
+				"/sounds/fr/Salut.mp3"
+			],
+			[
+				"Au revoir",
+				"goodbye",
+				"/sounds/fr/Au revoir.mp3"
+			],
+			[
+				"A bientôt",
+				"See you soon!",
+				"/sounds/fr/A bientôt.mp3"
+			],
+			[
+				"Monsieur",
+				"sir, Mr",
+				"/sounds/fr/Monsieur.mp3"
+			],
+			[
+				"Madame*",
+				"madam, Mrs / Ms",
+				"/sounds/fr/Madame.mp3"
+			],
+			[
+				"Mademoiselle",
+				"young lady, Miss",
+				"/sounds/fr/Mademoiselle.mp3"
+			],
+			[
+				"Messieurs-dames",
+				"ladies and gentlemen",
+				"/sounds/fr/Messieurs-dames.mp3"
+			],
+			[
+				"jeune homme",
+				"young man",
+				"/sounds/fr/jeune homme.mp3"
+			],
+			[
+				"mon petit (m) / ma petite(f)",
+				"poppet  (literally: my little one)",
+				"/sounds/fr/mon petit ma petit.mp3"
+			],
+			[
+				"mon amour",
+				"my love",
+				"/sounds/fr/mon amour.mp3"
+			],
+			[
+				"mon chéri (m) / ma chérie (f)",
+				"my darling",
+				"/sounds/fr/mon cheri ma cherie.mp3"
+			],
+			[
+				"les enfants",
+				"children",
+				"/sounds/fr/les enfants.mp3"
+			],
+			[
+				"tout le monde",
+				"Everyone (literally : all the world)",
+				"/sounds/fr/tout le monde.mp3"
+			],
+			[
+				"Ca va ?",
+				"Are you well / OK?  Are things alright/ OK?",
+				"/sounds/fr/Ca va.mp3"
+			],
+			[
+				"Comment ça va ?",
+				"How are you? (literally: how's it going?)",
+				"/sounds/fr/Comment ça va.mp3"
+			],
+			[
+				"Très bien",
+				"Very well",
+				"/sounds/fr/Très bien.mp3"
+			],
+			[
+				"Ca va.",
+				"(I'm) fine",
+				"/sounds/fr/Ca va.mp3"
+			],
+			[
+				"Pas mal",
+				"Not bad",
+				"/sounds/fr/Pas mal.mp3"
+			],
+			[
+				"Comment t'appelles-tu* ?",
+				"What's your name?",
+				"/sounds/fr/Comment t'appelles-tu.mp3"
+			],
+			[
+				"Comment vous appelez-vous* ?",
+				"What's your name?",
+				"/sounds/fr/Comment vous appelez-vous.mp3"
+			],
+			[
+				"Je m'appelle …",
+				"My name is …",
+				"/sounds/fr/Je m'appelle.mp3"
+			],
+			[
+				"Bonne journée !",
+				"Have a nice day!",
+				"/sounds/fr/Bonne journée !.mp3"
+			],
+			[
+				"Bonne soirée !",
+				"Have a nice evening!   ",
+				"/sounds/fr/Bonne soirée !.mp3"
+			],
+			[
+				"Bonne nuit !",
+				"Good night!",
+				"/sounds/fr/Bonne nuit !.mp3"
+			],
+			[
+				"Bon voyage !",
+				"Have a safe journey! / Have a good trip!",
+				"/sounds/fr/Bon voyage !.mp3"
+			],
+			[
+				"Bonnes vacances !",
+				"Enjoy your holiday!",
+				"/sounds/fr/Bonnes vacances !.mp3"
+			],
+			[
+				"oui, non",
+				"Yes, no",
+				"/sounds/fr/oui, non.mp3"
+			],
+			[
+				"merci",
+				"thank you",
+				"/sounds/fr/merci.mp3"
+			],
+			[
+				"d'accord",
+				"OK then, alright",
+				"/sounds/fr/d'accord.mp3"
+			],
+			[
+				"aujourd'hui",
+				"today",
+				"/sounds/fr/aujourd'hui.mp3"
+			],
+			[
+				"enchanté.e",
+				"Pleased to meet you (literally: delighted)",
+				"/sounds/fr/enchanté.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b>Mademoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
+			"<p>2 <b>Tu*</b> and <b>vous*</b> both mean 'you'.</p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. When returning question i.e.  when you ask 'and you? you use the form <b>toi</b> instead of <b>tu: Je m'appelle Michel et toi ?</b></p><p>You use <b>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
+		],
+		"id": "explanation1",
+		"titleText": "Grammar / Use of Language."
+	},
+	"jigsaw1": {
+		"component": "Jigsaw",
+		"correctImage": "/images/cyclist-horse.jpg",
+		"id": "jigsaw1",
+		"incorrectImage": "/images/parrot-jaguar.jpg",
+		"congratulationsText": "Well done! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
+		"descriptionTextComment": "Foreign language description of picture with nouns, verbs and lots of adjectives.'",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/fr/cyclist-horse.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	},
+	"explanation2": {
+		"component": "Explanation",
+		"content": [
+			"<h2>How to pronounce:</h2><p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/fr/non-existant.mp3'/></p>",
+			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words bonjour and bonsoir.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
+			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/fr/non-existant.mp3'/></p>",
+			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French r is made in that very place. If you place your fingers on your neck (pic) you should feel a very slight vibration. You will have encountered this sound in the words bonjou<b>r</b>, bonsoi<b>r</b>, au <b>r</b>evoi<b>r</b>.</p>",
+			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/fr/non-existant.mp3'/></p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   m<b>oi</b>, t<b>oi</b>, au rev<b>oi</b>r (sound files)</p><p>4 <b>The letter h</b>  (pic 'Shhh! As above?)</p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <b>h</b>omme, <b>h</b>orrible, <b>h</b>orizon (sound files)</p>"
+		],
+		"id": "explanation2",
+		"titleText": "Demystifying French Pronunciation."
+	},
+	"wordsIntoSlots1": {
+		"component": "Blanks",
+		"id": "wordsIntoSlots1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+		"listenDescriptionText": "Speech",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "table",
+		"words": [
+			"moi",
+			"roi",
+			"homme",
+			"hôtel",
+			"hôpital",
+			"bonjour",
+			"bonbon",
+			"au revoir",
+			"mon",
+			"trois",
+			"horrible",
+			"toi",
+			"quoi",
+			"froid",
+			"ton",
+			"non",
+			"bon",
+			"son",
+			"nom"
+		],
+		"soundFile": "/sounds/fr/non-existant.mp3",
+		"titleText": "Put the Words in the Order You Hear Them"
+	},
+	"wordparts1": {
+		"cheatText": "Cheat",
+		"component": "WordParts",
+		"congratulationsText": "Superb!",
+		"id": "wordparts1",
+		"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
+		"showHintsText": "Show hints when moving",
+		"phrases": [
+			"b[on]jou[r] m[on] ché[r]i",
+			"b[on]s[oi][r] m[on] amou[r]",
+			"au [r]ev[oi][r] ma ché[r]ie",
+			"quelle [h]o[r][r]eur Valé[r]ie"
+		],
+		"audio": [
+			"/sounds/fr/bonjour mon chéri.mp3",
+			"/sounds/fr/bonsoir mon amour.mp3",
+			"/sounds/fr/au revoir ma chérie.mp3",
+			"/sounds/fr/quelle horreur valérie.mp3"
+		],
+		"titleText": "Select the parts of the words with the described sounds"
+	},
+	"phrases1": {
+		"component": "Blanks",
+		"id": "phrases1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "phrases",
+		"words": [
+			"mon",
+			"chérie",
+			"toi",
+			"va",
+			"très"
+		],
+		"phrases": [
+			"Coucou [mon] amour ! Ca [va] aujourd'hui ?",
+			"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
+			"Ça va !"
+		],
+		"audio": [
+			"/sounds/fr/Coucou mon amour ! Ca va aujourd'hui.mp3",
+			"/sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
+			"/sounds/fr/Ça va !.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"phrases2": {
+		"component": "Blanks",
+		"blanksType": "phrases",
+		"cheatText": "Cheat",
+		"congratulationsText": "Superb!",
+		"id": "phrases2",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"words": [
+			"comment",
+			"merci",
+			"vous"
+		],
+		"phrases": [
+			"Bonsoir Monsieur Galipot ! [comment] ça va ?",
+			"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
+			"Ah pas mal [merci] !"
+		],
+		"audio": [
+			"/sounds/fr/Bonsoir Monsieur Galipot ! comment ça va.mp3",
+			"/sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
+			"/sounds/fr/Ah pas mal merci !.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"phrases3": {
+		"blanksType": "phrases",
+		"cheatText": "Cheat",
+		"component": "Blanks",
+		"congratulationsText": "Very good!",
+		"id": "phrases3",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"words": [
+			"enfants",
+			"revoir",
+			"appelle",
+			"appelez",
+			"moi"
+		],
+		"phrases": [
+			"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+			"Bonjour Madame ! Je m' [appelle] Annie.",
+			"Et [moi], je m'appelle David.",
+			"D'accord. Très bien !",
+			"Merci Madame ! Bonne journée !",
+			"Au [revoir] les enfants !  Bonne journée !"
+		],
+		"audio": [
+			"/sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
+			"/sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
+			"/sounds/fr/Et moi, je m'appelle David.mp3",
+			"/sounds/fr/D'accord. Très bien !.mp3",
+			"/sounds/fr/Merci Madame ! Bonne journée !.mp3",
+			"/sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	},
+	"jigsaw3": {
+		"component": "Jigsaw",
+		"correctImage": "/images/car-windmill.jpg",
+		"id": "jigsaw3",
+		"incorrectImage": "/images/car-cliff-lift.jpg",
+		"congratulationsText": "Vroom! You solved the puzzle!",
+		"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+		"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
+		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+		"showHintsText": "Show hints when moving",
+		"soundFile": "/sounds/fr/car-windmill.mp3",
+		"cheatText": "Cheat",
+		"listenDescriptionText": "Listen to the description",
+		"titleText": "Complete the Jigsaw"
+	}
+}

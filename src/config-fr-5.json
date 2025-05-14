@@ -1,0 +1,263 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "fr-flag.png",
+		"title": "French Learning Object 5",
+		"subtitle": "House and Home",
+		"targetLanguage": "french"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "phraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"J'habite dans un appartement au premier étage d'un grand immeuble.  J'ai une petite cuisine et une salle de séjour et un petit balcon aussi. Ma chambre n'est pas grande, mais elle est confortable. Derrière l'immeuble il y a un jardin communautaire.",
+				"I live in a flat on the first floor of a large block of flats. I've got a small kitchen, a living room and a small balcony as well. My bedroom isn't big, but it's comfortable. Behind the block of flats there's a communal garden.",
+				"/sounds/fr/LO5 monologue1.mp3"
+			],
+			[
+				"Cette année, je loue une maison.  Elle est petite. Au rez-de-chaussée, il y a la cuisine et la salle de séjour. A l'étage, il y a deux chambres, une pour moi et une autre pour mes invités. La salle de bains et les toilettes se trouvent à l'étage aussi.",
+				"This year I'm renting a house. It's small. On the ground floor there's the kitchen and the living room. Upstairs there are two bedrooms, one for me and another one for my guests. The bathroom and toilet are upstairs too.",
+				"/sounds/fr/LO5 monologue2.mp3"
+			],
+			[
+				"Mes parents ont une grande maison à la campagne.  Au rez-de-chaussée, il y a une grande cuisine et une buanderie ainsi qu'un salon et une salle à manger et une petite salle de séjour. Ils n'ont pas de bureau.  Au premier étage, il y a une salle de bains, des toilettes, une salle de douche et quatre chambres. Ils ont une cave aussi où ils mettent leur vin !",
+				"My parents have a big house in the countryside. On the ground floor there's a big kitchen, a utility room as well as a lounge and a dining room and a small living room. They don't have a study. On the first floor there's a bathroom, a toilet, a shower room and four bedrooms. They've also got a cellar where they put their wine!",
+				"/sounds/fr/LO5 monologue3.mp3"
+			]
+		],
+		"titleText": "Monologues"
+	},
+	"phraseTable2": {
+		"component": "PhraseTable",
+		"id": "phraseTable2",
+		"instructionsText": "",
+		"footnote": "* In France the plural form is used even if there is just one facility. In other francophone countries, the singular 'la toilette' occurs.",
+		"phrases": [
+			[
+				"logement (m)",
+				"accommodation",
+				"/sounds/fr/logement.mp3"
+			],
+			[
+				"louer",
+				"to rent  / hire",
+				"/sounds/fr/louer.mp3"
+			],
+			[
+				"loyer (m)",
+				"rent ",
+				"/sounds/fr/loyer.mp3"
+			],
+			[
+				"colocataire  (m/f)",
+				"flat /house mate",
+				"/sounds/fr/colocataire.mp3"
+			],
+			[
+				"au sous-sol",
+				"in the basement",
+				"/sounds/fr/au sous-sol.mp3"
+			],
+			[
+				"au rez-de-chaussée",
+				"on the ground floor",
+				"/sounds/fr/au rez-de-chaussée.mp3"
+			],
+			[
+				"au premier / deuxième / troisième étage",
+				"on the first / second / third floor",
+				"/sounds/fr/au premier étage au deuxième étage au troisième étage.mp3"
+			],
+			[
+				"chambre (f)",
+				"bedroom",
+				"/sounds/fr/chambre.mp3"
+			],
+			[
+				"salle (f) de bains",
+				"bathroom",
+				"/sounds/fr/salle de bains.mp3"
+			],
+			[
+				"salle (f) de douche",
+				"shower room",
+				"/sounds/fr/salle de douche.mp3"
+			],
+			[
+				"toilettes (fpl)",
+				"* toilet",
+				"/sounds/fr/toilettes.mp3"
+			],
+			[
+				"salon (m)",
+				"lounge",
+				"/sounds/fr/salon.mp3"
+			],
+			[
+				"salle (f) de séjour",
+				"living room",
+				"/sounds/fr/salle de séjour.mp3"
+			],
+			[
+				"salle (f) à manger",
+				"dining room",
+				"/sounds/fr/salle à manger.mp3"
+			],
+			[
+				"cuisine (f)",
+				"kitchen",
+				"/sounds/fr/cuisine.mp3"
+			],
+			[
+				"buanderie (f)",
+				"utility / laundry room",
+				"/sounds/fr/buanderie.mp3"
+			],
+			[
+				"cave (f)",
+				"cellar",
+				"/sounds/fr/cave.mp3"
+			],
+			[
+				"grenier (m)",
+				"attic ",
+				"/sounds/fr/grenier.mp3"
+			],
+			[
+				"balcon (m)",
+				"balcony",
+				"/sounds/fr/balcon.mp3"
+			],
+			[
+				"jardin (m)",
+				"garden",
+				"/sounds/fr/jardin.mp3"
+			],
+			[
+				"derrière",
+				"behind",
+				"/sounds/fr/derrière.mp3"
+			],
+			[
+				"devant",
+				"in front of",
+				"/sounds/fr/devant.mp3"
+			],
+			[
+				"à l'étage",
+				"upstairs",
+				"/sounds/fr/à l'étage.mp3"
+			],
+			[
+				"confortable",
+				"comfortable",
+				"/sounds/fr/confortable.mp3"
+			],
+			[
+				"spacieux / spacieuse",
+				"spacious ",
+				"/sounds/fr/spacieux spacieuse.mp3"
+			],
+			[
+				"lumineux / lumineuse",
+				"light",
+				"/sounds/fr/lumineux lumineuse.mp3"
+			],
+			[
+				"délicieux / délicieuse",
+				"delicious",
+				"/sounds/fr/délicieux délicieuse.mp3"
+			],
+			[
+				"dangereux / dangereuse",
+				"dangerous",
+				"/sounds/fr/dangereux dangereuse.mp3"
+			],
+			[
+				"courageux / courageuse",
+				"courageous /brave",
+				"/sounds/fr/courageux courageuse.mp3"
+			],
+			[
+				"ambitieux / ambitieuse",
+				"ambitious",
+				"/sounds/fr/ambitieux ambitieuse.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>1</b> In French there are some verbs which are <b>only ever used in the third person singular: il</b>. </p><p><b>Il y a</b> meaning 'there is' or 'there are' is one of these. <br />e.g. </p><p><a class='sound-link' href='/sounds/fr/Il y a un petit jardin devant la maison.mp3' alt='centre'>Il y a un petit jardin devant la maison</a>. There is a small garden in front of the house.<br/><a class='sound-link' href='/sounds/fr/Il y a trois chambres au premier étage.mp3' alt='centre'>Il y a trois chambres au premier étage</a>. There are three bedrooms on the first floor. </p><p>Here are a few more examples of verbs which work in the same way:</p><p>From the verb <b>pleuvoir: Il pleut</b> - e.g. <b>Il pleut</b> aujourd'hui   It's raining today. <br/>From the verb <b>neiger:     Il neige</b> - e.g. <b>Il neige</b> en hiver          It snows in the winter.<br/>From the verb <b>falloir:      Il faut</b> -    e.g.  <b>Il faut</b> écouter         It's necessary / you need to listen. </p><p><b>2 More about adjectival agreement</b>. Som adjectives end -eux e.g.   spacieux, lumineux.  </p><p>There is no change for the masculine plural.<br/>The feminine form of the adjective is formed by removing the x and replacing with -se i.e. spacieuse, lumineuse.<br/>To form the feminine plural an s is added to this. Look at these examples:</p><p>Le salon est spaci<b>eux</b>.<br/>La cuisine est spaci<b>euse</b>.<br/>Les appartements sont spaci<b>eux</b>.<br/>Les chambres sont spaci<b>euses</b>.</p>"
+		],
+		"id": "explanation1",
+		"titleText": "Grammar / Use of Language."
+	},
+	"explanation2": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>How to pronounce:</b></p><p>the third of the nasal vowels, <b>[an]</b> which is how the letters an, am, en and em are pronounced.  Listen to the following examples:</p><p><a class='sound-link' href='/sounds/fr/blanc.mp3' alt='blanc'>blanc</a> <a class='sound-link' href='/sounds/fr/chambre.mp3' alt='chambre'>chambre</a> <a class='sound-link' href='/sounds/fr/dans.mp3' alt='dans'>dans</a> <a class='sound-link' href='/sounds/fr/enfant.mp3' alt='enfant'>enfant</a> <a class='sound-link' href='/sounds/fr/ensemble.mp3' alt='ensemble'>ensemble</a> <a class='sound-link' href='/sounds/fr/centre.mp3' alt='centre'>centre</a></p>"
+		],
+		"id": "explanation2",
+		"titleText": "Demystifying French Pronunciation."
+	},
+	"dropdowns1": {
+		"component": "DropDowns",
+		"id": "dropdowns1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"phrases": [
+			"Le bureau est [*lumineux|lumineuse/ lumineuses].",
+			"La cave est [dangereux|*dangereuse|dangereuses].",
+			"Mme Leserre est très [curieux|*curieuse|curieuses].",
+			"Pauline, tu es très [courageux|*courageuse|courageuses]. ",
+			"Le Champagne est [*délicieux|délicieuse|délicieuses].",
+			"Les étudiantes sont [ambitieux|ambitieuse|*ambitieuses]."
+		],
+		"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+		"audio": [
+			"sounds/fr/Le bureau est lumineux.mp3",
+			"sounds/fr/La cave est dangereuse.mp3",
+			"sounds/fr/Mme Leserre est très curieuse.mp3",
+			"sounds/fr/Pauline, tu es très courageuse.mp3",
+			"sounds/fr/Le Champagne est délicieux.mp3",
+			"sounds/fr/Les étudiantes sont ambitieuses.mp3"
+		],
+		"titleText": "Select the correct form of the adjective to fill in the gaps"
+	},
+	"phrases1": {
+		"component": "Blanks",
+		"id": "phrases1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Drag the words to fill in the gaps.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "phrases",
+		"words": [
+			"seule",
+			"balcon",
+			"très",
+			"confortable",
+			"lumineuse",
+			"toilettes",
+			"est",
+			"une",
+			"deux",
+			"petite",
+			"un",
+			"moi"
+		],
+		"phrases": [
+			"J'habite [seule]. Mon appartement n'est pas [très] grand, mais il est très [confortable].  Il y a [une] salle de séjour [lumineuse]. Elle [est] très jolie. J'ai un petit [balcon] – c'est super !  Il y a [deux] chambres, une pour [moi] et une autre [petite] chambre pour mes invités. J'ai une salle de bains et des [toilettes], bien sûr ! Il y a [un] jardin devant l'immeuble."
+		],
+		"audio": [
+			"sounds/fr/LO5 phrases1.mp3"
+		],
+		"titleText": "Fill in the Blanks"
+	}
+}

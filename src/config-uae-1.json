@@ -17,86 +17,86 @@
 		"nPairsToPlay": 6,
 		"cards": [
 			{
-				"audio": "/sounds/fr/memory/la lampe à lave.mp3",
-				"english": "lava lamp",
+				"audio": "sounds/fr/memory/la lampe à lave.mp3",
+				"localLanguage": "lava lamp",
 				"foreignLanguage": "la lampe à lave",
 				"image": "/images/memory/lava-lamp.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/le télescope.mp3",
-				"english": "telescope",
+				"audio": "sounds/fr/memory/le télescope.mp3",
+				"localLanguage": "telescope",
 				"foreignLanguage": "le télescope",
 				"image": "/images/memory/telescope.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/le pinceau.mp3",
-				"english": "paintbrush",
+				"audio": "sounds/fr/memory/le pinceau.mp3",
+				"localLanguage": "paintbrush",
 				"foreignLanguage": "le pinceau",
 				"image": "/images/memory/paint-brush.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/l'arrosoir.mp3",
-				"english": "watering can",
+				"audio": "sounds/fr/memory/l'arrosoir.mp3",
+				"localLanguage": "watering can",
 				"foreignLanguage": "l'arrosoir",
 				"image": "/images/memory/watering-can.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/la fermeture éclair.mp3",
-				"english": "zipper",
+				"audio": "sounds/fr/memory/la fermeture éclair.mp3",
+				"localLanguage": "zipper",
 				"foreignLanguage": "la fermeture éclair",
 				"image": "/images/memory/zip.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/l'échiquier.mp3",
-				"english": "chessboard",
+				"audio": "sounds/fr/memory/l'échiquier.mp3",
+				"localLanguage": "chessboard",
 				"foreignLanguage": "l'échiquier",
 				"image": "/images/memory/chess-board.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/le coquillage.mp3",
-				"english": "seashell",
+				"audio": "sounds/fr/memory/le coquillage.mp3",
+				"localLanguage": "seashell",
 				"foreignLanguage": "le coquillage",
 				"image": "/images/memory/seashell.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/la tasse.mp3",
-				"english": "mug",
+				"audio": "sounds/fr/memory/la tasse.mp3",
+				"localLanguage": "mug",
 				"foreignLanguage": "la tasse",
 				"image": "/images/memory/mug.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/le sac à dos.mp3",
-				"english": "backpack",
+				"audio": "sounds/fr/memory/le sac à dos.mp3",
+				"localLanguage": "backpack",
 				"foreignLanguage": "le sac à dos",
 				"image": "/images/memory/backpack.webp"
 			},
 			{
-				"audio": "/sounds/fr/memory/le parapluie.mp3",
-				"english": "umbrella",
+				"audio": "sounds/fr/memory/le parapluie.mp3",
+				"localLanguage": "umbrella",
 				"foreignLanguage": "le parapluie",
 				"image": "/images/memory/umbrella.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/l'agrafeuse.mp3",
-				"english": "stapler",
+				"audio": "sounds/fr/memory/l'agrafeuse.mp3",
+				"localLanguage": "stapler",
 				"foreignLanguage": "l'agrafeuse",
 				"image": "/images/memory/stapler.png"
 			},
 			{
-				"audio": "/sounds/fr/memory/les lunettes.mp3",
-				"english": "spectacles",
+				"audio": "sounds/fr/memory/les lunettes.mp3",
+				"localLanguage": "spectacles",
 				"foreignLanguage": "les lunettes",
 				"image": "/images/memory/spectacles.png"
 			},
 			{
-				"audio": "/sounds/fr/memory/la brosse à cheveux.mp3",
-				"english": "hair brush",
+				"audio": "sounds/fr/memory/la brosse à cheveux.mp3",
+				"localLanguage": "hair brush",
 				"foreignLanguage": "la brosse à cheveux",
 				"image": "/images/memory/hairbrush.jpg"
 			},
 			{
-				"audio": "/sounds/fr/memory/la carte postale.mp3",
-				"english": "postcard",
+				"audio": "sounds/fr/memory/la carte postale.mp3",
+				"localLanguage": "postcard",
 				"foreignLanguage": "la carte postale",
 				"image": "/images/memory/postcard.jpg"
 			}
@@ -373,7 +373,7 @@
 		"descriptionTextComment": "Foreign language description of picture with nouns, verbs and lots of adjectives.'",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/sounds/arabic-cyclist.mp3",
+		"soundFile": "sounds/arabic-cyclist.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
@@ -659,12 +659,12 @@
 			[
 				"Quelle est ta profession ? Quelle est votre profession ?",
 				"What's your profession?",
-				"/sounds/fr/Quelle est ta profession Quelle est votre profession.mp3"
+				"sounds/fr/Quelle est ta profession Quelle est votre profession.mp3"
 			],
 			[
 				"Quel est ton / votre métier ?",
 				"What's your profession?",
-				"/sounds/fr/Quel est ton métier Quel est votre métier.mp3"
+				"sounds/fr/Quel est ton métier Quel est votre métier.mp3"
 			],
 			[
 				"depuis",
@@ -704,7 +704,7 @@
 		"descriptionText": "Un beau perroquet dans une forêt luxuriante mangeant une noix du Brésil tout en regardant un jaguar au sol.",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/sounds/parrot-jaguar.mp3",
+		"soundFile": "sounds/parrot-jaguar.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
@@ -894,7 +894,7 @@
 			[
 				"anglais",
 				"Angleterre (f)",
-				"English",
+				"localLanguage",
 				"England",
 				"non-existant.mp3"
 			],
@@ -950,7 +950,7 @@
 			[
 				"français",
 				"France (f)",
-				"French",
+				"foreignLanguage",
 				"France",
 				"non-existant.mp3"
 			],
@@ -1123,7 +1123,7 @@
 		"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
-		"soundFile": "/sounds/car-windmill.mp3",
+		"soundFile": "sounds/car-windmill.mp3",
 		"cheatText": "Cheat",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
