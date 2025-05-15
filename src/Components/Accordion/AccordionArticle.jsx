@@ -74,6 +74,7 @@ export class AccordionArticle extends React.PureComponent {
 			<article
 				className={`accordion-article ${expanded ? 'expanded' : ''}`}
 				id={`${id}`}
+				key={`article${id}`}
 			>
 				<header>
 					<div

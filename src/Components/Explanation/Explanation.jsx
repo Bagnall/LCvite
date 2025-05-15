@@ -38,7 +38,7 @@ export class Explanation extends React.PureComponent {
 		const contents = new Array;
 		for (let i = 0; i < content.length; i++){
 			contents.push(
-				<Panel id={`${id}${i}`} content={content[i]} key={`${id}-Panel${i}`}></Panel>
+				<Panel id={`${id}-${i}`} content={content[i]} key={`${id}-Panel${i}`}></Panel>
 			);
 		}
 		return (

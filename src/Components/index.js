@@ -10,6 +10,7 @@ export * from './ErrorLog';
 export * from './Explanation';
 export * from './Flag';
 export * from './Footer';
+export * from './Group';
 export * from './Header';
 export * from './Info';
 export * from './Jigsaw';

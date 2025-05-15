@@ -4,6 +4,6 @@
 @use "../../styles/_mixins.module.scss";
 @use "sass:color";
 
-.explanation {
+.explanation-container .panel {
 	@include mixins.standard-table();
 }

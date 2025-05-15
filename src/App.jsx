@@ -40,6 +40,7 @@ export default class App extends React.Component {
 
 		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
 		// this.loadConfig = this.loadConfig.bind(this);
+		this.renderComponent = this.renderComponent.bind(this);
 	}
 
 	componentDidMount = () => {
@@ -50,7 +51,7 @@ export default class App extends React.Component {
 		// console.log(urlParams);
 		const configFile = urlParams.get('config');
 
-		if (configFile)this.loadConfig(`./src/${configFile}`);
+		if (configFile) this.loadConfig(`./src/${configFile}`);
 	};
 
 	// handleLoadConfig = (e) => {
@@ -160,7 +161,7 @@ export default class App extends React.Component {
 	hideDialog = () => {
 		// console.log("hideDialog");
 		this.setState({
-			dialogContent:'',
+			dialogContent: '',
 			showDialog: false,
 		});
 	};
@@ -171,6 +172,204 @@ export default class App extends React.Component {
 			showDialog: true,
 		});
 	};
+
+	renderComponent = (value, articles) => {
+		// console.log(`renderComponent`);
+		// console.log(value);
+		const { id, component, titleText } = value;
+		// console.log(`component [${component}]`);
+		switch (component) {
+			case 'AnswerTable': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<AnswerTable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Blanks': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Blanks
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'DropDowns': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<DropDowns
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Explanation': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Explanation
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Group': {
+				const renderedGroupContent = new Array;
+				const { content: groupContent = [] } = value;
+				// console.log("groupContent", groupContent);
+
+				groupContent.forEach((child) => {
+					for (const [/* key */, v] of Object.entries(child)) {
+						this.renderComponent(v, renderedGroupContent);
+					}
+				});
+
+				articles.push(
+					<AccordionArticle
+						id={`Group${id}Accordion`}
+						key={`$Group{id}Accordion`}
+						title={titleText}
+					>
+						{renderedGroupContent}
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Jigsaw': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Jigsaw
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'MemoryMatchGame': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<MemoryMatchGame
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Monologue': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Monologue
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'PhraseTable': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<PhraseTable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'WordGrid': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={`Word Grid`}
+					>
+						<WordGrid
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'WordParts': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<WordParts
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			default: {
+				articles.push(
+					<p>Component {component} not implemented</p>
+				);
+			}
+		}
+		// return articles;
+	};
+
 
 	render = () => {
 		const {
@@ -208,182 +407,185 @@ export default class App extends React.Component {
 		if (config) {
 			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
-				const { id, component, titleText } = value;
-
-
+				// const { id, component, content: groupContent = [], titleText } = value;
+				const { component } = value;
+				// const renderedGroupContent = new Array;
+				// if (groupContent.length > 0) {
+				// 	groupContent.forEach((child) => {
+				// 		this.renderComponent(child, renderedGroupContent);
+				// 	});
+				// }
 
 				if (component) {
-					switch (component) {
-						case 'Explanation':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<Explanation
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'Monologue':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<Monologue
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'DropDowns':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<DropDowns
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'WordGrid':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={`Word Grid`}
-								>
-									<WordGrid
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'CrossWord':
-							// articles.push(
-							// 	<AccordionArticle
-							// 		id={`${id}Accordion`}
-							// 		key={`${id}Accordion`}
-							// 		title={titleText}
-							// 	>
-							// 		<CrossWord
-							// 			config={value}
-							// 			logError={this.logError}
-							// 			showDialog={this.showDialog}
-							// 		/>
-							// 	</AccordionArticle>
-							// );
-							break;
-						case 'WordParts':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<WordParts
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'AnswerTable':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<AnswerTable
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'PhraseTable':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<PhraseTable
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'Blanks':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<Blanks
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'Jigsaw':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<Jigsaw
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						case 'MemoryMatchGame':
-							articles.push(
-								<AccordionArticle
-									id={`${id}Accordion`}
-									key={`${id}Accordion`}
-									title={titleText}
-								>
-									<MemoryMatchGame
-										config={value}
-										logError={this.logError}
-										showDialog={this.showDialog}
-									/>
-								</AccordionArticle>
-							);
-							break;
-						default:
-							articles.push(
-								<p>Component not implemented</p>
-							);
-					}
+					// articles =
+					this.renderComponent(value, articles);
+					// switch (component) {
+					// 	case 'Explanation':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<Explanation
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'Monologue':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<Monologue
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'DropDowns':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<DropDowns
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'WordGrid':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={`Word Grid`}
+					// 			>
+					// 				<WordGrid
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'Group':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`Group${id}Accordion`}
+					// 				key={`$Group{id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				{/* {content} */}
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'WordParts':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<WordParts
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'AnswerTable':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<AnswerTable
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'PhraseTable':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<PhraseTable
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'Blanks':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<Blanks
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'Jigsaw':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<Jigsaw
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	case 'MemoryMatchGame':
+					// 		articles.push(
+					// 			<AccordionArticle
+					// 				id={`${id}Accordion`}
+					// 				key={`${id}Accordion`}
+					// 				title={titleText}
+					// 			>
+					// 				<MemoryMatchGame
+					// 					config={value}
+					// 					logError={this.logError}
+					// 					showDialog={this.showDialog}
+					// 				/>
+					// 			</AccordionArticle>
+					// 		);
+					// 		break;
+					// 	default:
+					// 		articles.push(
+					// 			<p>Component not implemented</p>
+					// 		);
+					// }
 				}
 			}
 		}
