@@ -248,14 +248,45 @@
 					],
 					"id": "explanation3",
 					"titleText": "1. Nonsense Rhyme."
-				},
+				}
+			},
+			{
 				"explanation4": {
 					"component": "Explanation",
 					"content": [
-						"<p><b>How to pronounce:</b></p><p>another nasal vowel. This is the sound which is how the letters -in- are pronounced <b>when they end a word or occur before a consonant</b> as in these examples: <a class='sound-link' href='/sounds/fr/Singapour.mp3' alt='Singapour'/>Singapour</a>, <a class='sound-link' href='/sounds/fr/Inde.mp3' alt='Inde'>Inde</a>, <a class='sound-link' href='/sounds/fr/indien.mp3' alt='indien'>indien</a>, <a class='sound-link' href='/sounds/fr/Finlande.mp3' alt='Finlande'>Finlande</a>, <a class='sound-link' href='/sounds/fr/jardin.mp3' alt='jardin'>jardin</a>. The tongue and the mouth all have work to do in its production whilst air passes through nose and mouth.</p><p><b>NB</b> This is a useful sound to practise as the following are also pronounced in the same way <b>when they end a word or occur before a consonant:</b></p><p><b>ain</b>, <b>aim</b>, <b>ein</b>, <b>im</b>, <b>ym</b>, <b>yn</b>, <b>eim</b>.</p><p>Here are some examples of words containing the sound to practise:</p><p><a class='sound-link' href='/sounds/fr/marocain.mp3' alt='marocain'>maroc<b>ain</b></a>, <a class='sound-link' href='/sounds/fr/faim.mp3' alt='faim'>f<b>aim</b></a>, <a class='sound-link' href='/sounds/fr/peinture.mp3' alt='peinture'>p<b>ein</b>ture</a>, <a class='sound-link' href='/sounds/fr/impossible.mp3' alt='impossible'><b>im</b>possible</a>, <a class='sound-link' href='/sounds/fr/symbole.mp3' alt='symbole'>s<b>ym</b>bole</a>, <a class='sound-link' href='/sounds/fr/lynx.mp3' alt='lynx'>l<b>yn</b>x</a>, <a class='sound-link' href='/sounds/fr/Reims.mp3' alt='Reims'>R<b>eim</b>s</a>.</p><p>When the letters <b>en</b> or <b>ens</b> end a word this also pronounced (ain) </p><p><a class='sound-link' href='/sounds/fr/australien.mp3' alt='australien'>australi<b>en</b></a>, <a class='sound-link' href='/sounds/fr/européen.mp3' alt='européen'>europé<b>en</b></a>, <a  class='sound-link' href='/sounds/fr/ghanéens.mp3' alt='ghanéens'>ghané<b>ens</b></a>, <a class='sound-link' href='/sounds/fr/indiens.mp3' alt='indiens'>indi<b>ens</b></a>.</p>"
+						"<p>Try to make other nonsense rhymes yourself using the words below containing the sound <a class='sound-link' href='/sounds/fr/ain.mp3'>ain</a> to fill in the gaps</p>"
 					],
 					"id": "explanation4",
-					"titleText": "Demystifying French Pronunciation."
+					"titleText": "2. You Try! MORE TO GO HERE WHEN I FIGURE OUT WHAT'S REQUIRED. Free text or fill the gaps?"
+				}
+			},
+			{
+				"dropdowns3": {
+					"component": "DropDowns",
+					"id": "dropdowns3",
+					"congratulationsText": "Well done!",
+					"instructionsText": "Select the correct preposition to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"titleText": "3. Prepositions",
+					"cheatText": "Cheat",
+					"phrases": [
+						"[à|*au|en|aux|dans le] Canada.",
+						"[à|au|*en|aux|dans le] France.",
+						"[*à|au|en|aux|dans le] Taiwan.",
+						"[à|*au|en|aux|dans le] Japon.",
+						"[*à|au|en|aux|dans le] Bordeaux.",
+						"[à|au|*en|aux|dans le] Nouvelle Zélande.",
+						"[à|au|*en|aux|dans le] Chine.",
+						"[à|au|*en|aux|dans le] Turquie.",
+						"[à|au|*en|aux|dans le] Suisse.",
+						"[à|*au|en|aux|dans le] Sénégal.",
+						"[à|au|en|*aux|dans le] Etats-Unis.",
+						"[à|au|*en|aux|dans le] Angleterre.",
+						"[à|au|*en|aux|dans le] Algérie.",
+						"[à|au|*en|aux|dans le] Afghanistan.",
+						"[*à|au|en|aux|dans le] Bruxelles.",
+						"[à|au|en|aux|*dans le] Yorkshire."
+					]
 				}
 			}
 		],

@@ -53,8 +53,8 @@ export class PhraseTable extends React.PureComponent {
 			} else {
 				for (let j = 0; j < phrases[i].length - 1; j++) {
 					cells.push(
-						<td key={`row${i}cell${j}`}>
-							{phrase[j]}
+						<td key={`row${i}cell${j}`} dangerouslySetInnerHTML={{ __html: phrase[j] }}>
+							{/* {phrase[j]} */}
 						</td>
 					);
 				}

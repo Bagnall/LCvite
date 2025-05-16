@@ -61,6 +61,7 @@ export class AccordionArticle extends React.PureComponent {
 	render() {
 		const {
 			children,
+			className,
 			info,
 			title,
 		} = this.props;
@@ -72,7 +73,7 @@ export class AccordionArticle extends React.PureComponent {
 
 		return (
 			<article
-				className={`accordion-article ${expanded ? 'expanded' : ''}`}
+				className={`accordion-article ${expanded ? 'expanded' : ''} ${className ? className : ''}`}
 				id={`${id}`}
 				key={`article${id}`}
 			>

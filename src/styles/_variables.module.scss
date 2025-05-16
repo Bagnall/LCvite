@@ -7,6 +7,8 @@ $board-height: 4;
 $border-width: 14;
 $jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
+$transition-time: 1s;
+$word-transition-time: $transition-time;
 
 /* stylelint-disable */
 :export {
@@ -19,6 +21,7 @@ $memory-card-transition-time: 1s;
 	boardWidth: $board-width;
 	boardHeight: $board-height;
 	memoryCardTransitionTime: $memory-card-transition-time;
+	wordTransitionTime: $word-transition-time;
 }
 /* stylelint-enable */
 
@@ -41,4 +44,3 @@ $progress-indicator-width: 200px;
 $progress-indicator-height: 26px;
 $table-horizontal-margin: 40px;
 $toolbar-small-dimension: 36px;
-$transition-time: 1s;

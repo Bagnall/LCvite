@@ -6,4 +6,10 @@
 
 .explanation-container .panel {
 	@include mixins.standard-table();
+
+	// .speak {
+	// 	color: blue;
+	// 	text-decoration: underline;
+	// 	cursor: pointer;
+	// }
 }

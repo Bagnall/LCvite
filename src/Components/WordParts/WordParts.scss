@@ -27,8 +27,8 @@ html.debug {
 		border: 1px solid transparent;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 1.2rem;
-		padding: 0.5rem 0;
+		font-size: 1rem; //1.2rem;
+		padding: 0.25rem 0; //0.5rem 0;
 		position: relative;
 		transform-style: preserve-3d;
 		user-select: none;
@@ -133,6 +133,14 @@ html.debug {
 	}
 	100% {
 		background-color: rgba(255, 0, 0, 0);
+	}
+}
+@include media-queries.respond-above(m) {
+	.word-parts-container {
+		span {
+			font-size: 1.2rem;
+			padding: 0.5rem 0;
+		}
 	}
 }
 @include media-queries.respond-above(xxl) {

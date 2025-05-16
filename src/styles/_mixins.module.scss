@@ -2,6 +2,7 @@
 _mixins.module.scss
 */
 @use "./colours.module";
+@use "./media-queries.module";
 @use "./variables.module";
 
 @mixin header-footer-background {
@@ -44,8 +45,16 @@ _mixins.module.scss
 			}
 		}
 		td {
-			font-size: 1rem;
-			padding: 0.25rem 1rem;
+			font-size: 0.7rem; //1rem;
+			padding: 0.25rem 0.25rem;
+		}
+	}
+	@include media-queries.respond-above(s) {
+		table {
+			td {
+				font-size: 1rem;
+				padding: 0.25rem 1rem;
+			}
 		}
 	}
 }

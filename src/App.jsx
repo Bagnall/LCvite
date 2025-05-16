@@ -18,6 +18,7 @@ import {
 	MemoryMatchGame,
 	Monologue,
 	PhraseTable,
+	ReadAloud,
 	WordGrid,
 	WordParts,
 } from './Components';
@@ -52,6 +53,20 @@ export default class App extends React.Component {
 		const configFile = urlParams.get('config');
 
 		if (configFile) this.loadConfig(`./src/${configFile}`);
+
+
+		const speeches = document.querySelectorAll('.speak');
+		speeches.forEach((speech) => {
+			speech.setAttribute('title', 'Click to play sound');
+			// speech.removeEventListener('click', speak); // Prevent duplicates
+			console.log("speech.setup", speech.setup);
+			if (speech.setup) {
+				// Do nowt!
+			} else {
+				speech.addEventListener('click', speak);
+			}
+			speech.setup = true;
+		});
 	};
 
 	// handleLoadConfig = (e) => {
@@ -256,6 +271,7 @@ export default class App extends React.Component {
 
 				articles.push(
 					<AccordionArticle
+						className={`group`}
 						id={`Group${id}Accordion`}
 						key={`$Group{id}Accordion`}
 						title={titleText}
@@ -321,6 +337,22 @@ export default class App extends React.Component {
 						title={titleText}
 					>
 						<PhraseTable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'ReadAloud': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<ReadAloud
 							config={value}
 							logError={this.logError}
 							showDialog={this.showDialog}

@@ -261,7 +261,7 @@ export class Blanks extends React.PureComponent {
 				this.movingPiece.classList.add("placed");
 				// debugger;
 				console.log(target);
-				target.style.opacity = 1;
+				setTimeout(() => target.style.opacity = 1, 1000); // Corresponds to SCSS transition times
 				nPlaced++;
 				if (nPlaced === nToPlace) {
 
@@ -390,7 +390,8 @@ export class Blanks extends React.PureComponent {
 			}
 			case "table": {
 				const nRows = parseInt(words.length / 2) + words.length % 2;
-				for (let i = 1; i <= nRows; i++)
+				for (let i = 1; i <= nRows; i++) {
+					const phrase = words[i - 1].replace(/ /g, '\u00a0');
 					tableRows.push(
 						<tr key={`${id}row${i}`}>
 							<td>{i}.</td>
@@ -398,7 +399,7 @@ export class Blanks extends React.PureComponent {
 								<Word
 									className={`blank target`}
 									index={i - 1}
-									key={`${id}word${i}`}>{words[i - 1]}</Word>
+									key={`${id}word${i}`}>{phrase}</Word>
 							</td>
 							{i < words.length / 2 ?
 								<>
@@ -415,6 +416,7 @@ export class Blanks extends React.PureComponent {
 							}
 						</tr>
 					);
+				}
 				break;
 			}
 			case "questions-answers": {

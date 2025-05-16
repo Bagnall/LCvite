@@ -52,9 +52,14 @@ $common-left-margin: 20px;
 }
 
 @mixin showArticleContent {
+	&.group {
+		> .content {
+			max-height: 4560px;
+		}
+	}
 	> .content {
 		transition: all 0.5s ease-in-out;
-		max-height: 2240px; //900px; // Good for all but system management accordion which now gets set dynamically.
+		max-height: 2240px;
 		> article {
 			@include showArticle;
 		}

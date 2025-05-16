@@ -1,6 +1,7 @@
 // Word.scss
 
 @use "../../../styles/_colours.module.scss";
+@use "../../../styles/_media-queries.module.scss";
 @use "../../../styles/_mixins.module.scss";
 @use "../../../styles/_variables.module.scss";
 
@@ -24,26 +25,29 @@
 @mixin ph {
 	// box-shadow: 8px 8px 8px gray;
 	border: 0px; //1px solid transparent;
-	padding: 0.5rem 1rem;
+	padding: 0.25rem 0.5rem;
 	background: colours.$ivory;
 	font-size: 1.2rem;
 	font-weight: bold;
 	line-height: 1.4rem;
 	min-height: 1.4rem;
 	display: inline-block;
+
+	@include media-queries.respond-above(s) {
+		padding: 0.5rem 1rem;
+	}
 }
 .word {
 	z-index: 10;
 	transition-property: left, top, box-shadow;
-	transition-duration: 1s;
+	transition-duration: 1s; //$word-transition-time;
 	// cursor: pointer;
 	user-select: none;
 	border-radius: 6px;
 
 	&.blank {
-		@include ph;
 		position: relative;
-		margin: 1rem;
+		margin: 0.25rem;
 		&::after {
 			@include mixins.standard-pseudo();
 			border-radius: 6px;
@@ -51,6 +55,7 @@
 				-2px -2px 2px inset black,
 				2px 2px 2px inset white;
 		}
+		@include ph;
 	}
 	&.placeholder,
 	&.target {
@@ -60,7 +65,7 @@
 	&.dragged {
 		position: absolute;
 		transition-property: left, top, box-shadow;
-		transition-duration: 1s;
+		transition-duration: 1s; //$word-transition-time;
 		cursor: grab;
 	}
 
@@ -70,7 +75,7 @@
 		transition:
 			left 0s,
 			top 0s,
-			box-shadow 1s;
+			box-shadow 1s; // $word-transition-time;
 		// transition-duration: 0s;
 		cursor: grab;
 		box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
@@ -80,6 +85,13 @@
 		position: absolute;
 		cursor: default;
 		transition-property: left, top;
-		transition-duration: 1s;
+		transition-duration: 1s; //$word-transition-time;
+	}
+}
+@include media-queries.respond-above(s) {
+	.word {
+		&.blank {
+			margin: 1rem;
+		}
 	}
 }

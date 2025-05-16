@@ -16,7 +16,7 @@
 	.blanks {
 		line-height: 1.4em;
 		overflow: visible;
-		min-height: 500px;
+		//min-height: 500px; // Why?
 		box-sizing: border-box;
 		display: flex;
 		flex-wrap: nowrap;
@@ -28,12 +28,12 @@
 	.words-container {
 		overflow: visible;
 		// background: colours.$panel-back; see skin.module
-		padding: 1rem 3rem;
+		padding: 0.5rem 1rem; // break 1rem 3rem;
 		top: 0;
 		z-index: 20;
 		transition-property: width;
 		transition-duration: 1s;
-		line-height: 3.5rem;
+		line-height: 0.5rem; //3.5rem;
 		.draggable {
 			box-shadow: 1px 1px 1px black;
 			cursor: pointer;
@@ -58,7 +58,7 @@
 	}
 
 	.help {
-		padding: 1rem;
+		padding: 0 1rem;
 		display: flex;
 		justify-content: space-evenly;
 		width: 600px;
@@ -93,7 +93,8 @@
 		}
 	}
 	&.type-questions-answers,
-	&.type-phrases {
+	&.type-phrases,
+	&.type-table {
 		.placed {
 			box-shadow: 1px 1px 1px black;
 			visibility: hidden;
@@ -232,7 +233,13 @@
 	&.complete {
 		.audio-clip {
 			opacity: 1;
-			transition: opacity 1s;
+			transition: opacity 1s 1s;
 		}
+	}
+}
+
+@include media-queries.respond-above(s) {
+	.words-container {
+		line-height: 3.5rem;
 	}
 }

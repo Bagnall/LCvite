@@ -186,6 +186,51 @@ export const isAlphaNumeric = (str) => { // Within the rules for datasets
 	return true;
 };
 
+export const speak = (e) => {
+	console.log("speak");
+	e.preventDefault();
+
+	const synth = window.speechSynthesis;
+	let voices = synth.getVoices().sort(function (a, b) {
+		const aname = a.name.toUpperCase();
+		const bname = b.name.toUpperCase();
+
+		if (aname < bname) {
+			return -1;
+		} else if (aname === bname) {
+			return 0;
+		} else {
+			return +1;
+		}
+	});
+
+	voices = voices.filter((s) => s.lang === 'fr-FR'); // && s.localService);
+
+	const utterThis = new SpeechSynthesisUtterance(e.target.innerText);
+	utterThis.onend = function (event) {
+		console.log("SpeechSynthesisUtterance.onend");
+	};
+
+	utterThis.onerror = function (event) {
+		console.error("SpeechSynthesisUtterance.onerror");
+	};
+
+	utterThis.lang = 'fr-FR';// voices[2].lang;
+	utterThis.name = 'Google français'; // voices[2].name;
+	utterThis.voiceURI = 'Google français';
+	[utterThis.voice] = voices;
+	utterThis.pitch = 1; // pitch.value;
+	utterThis.rate = 1; // rate.value;
+	synth.speak(utterThis);
+
+	utterThis.onpause = (event) => {
+		const char = event.utterance.text.charAt(event.charIndex);
+		console.log(
+			`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+		);
+	};
+};
+
 export const replaceSelectWithSpan = (selectElement) => {
 	const selectedText = selectElement.options[selectElement.selectedIndex].text;
 	const span = document.createElement('span');

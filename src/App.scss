@@ -149,6 +149,11 @@ h2 {
 		max-width: 90vw;
 		max-height: 90vh;
 	}
+	.speak {
+		color: blue;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 	#hero {
 		align-items: center;
 		background-image: url(/projects/richard/images/paris.jpg);
