@@ -4,6 +4,7 @@
 		"flag": "sp-flag.png",
 		"title": "Spanish Learning Object 2",
 		"targetLanguage": "spanish",
+		"targetLanguageCode": "es-US",
 		"subtitle": "ABOUT ME:  marital status, occupation"
 	},
 	"memorycards1": {

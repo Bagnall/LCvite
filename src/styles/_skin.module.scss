@@ -296,7 +296,7 @@ _skin.module.scss
 	}
 }
 
-.french {
+.fr-FR {
 	$french-home: green;
 	$background: white;
 	$button: colours.$french-button;
@@ -308,13 +308,13 @@ _skin.module.scss
 	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back);
 }
 
-.german {
+.de-DE {
 	$german-body-back: white;
 
 	@include affected_by_skin(colours.$german-home, colours.$german-button, $german-body-back, colours.$german-article-base-background, colours.$german-panel-back, $german-body-back);
 }
 
-.spanish {
+.es-US {
 	$spanish-home: rgb(247, 188, 28);
 	$background: #ffefcc;
 	$spanish-article-base-background: $spanish-home;

@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"title": "French Learning Object 2",
 		"subtitle": "ABOUT ME:  marital status, occupation",
-		"targetLanguage": "french"
+		"targetLanguage": "french",
+		"targetLanguageCode": "fr-FR"
 	},
 	"monologues1": {
 		"component": "PhraseTable",

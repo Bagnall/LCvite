@@ -58,7 +58,11 @@ export class Explanation extends React.PureComponent {
 
 	render = () => {
 		const { config } = this.props;
-		const { content, id } = config;
+		const {
+			content,
+			htmlContent,
+			id
+		} = config;
 		const contents = new Array;
 		for (let i = 0; i < content.length; i++){
 			contents.push(
@@ -71,6 +75,8 @@ export class Explanation extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+
 				{contents}
 			</div>
 		);

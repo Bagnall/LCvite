@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"title": "French Learning Object 1",
 		"subtitle": "FIRST THINGS FIRST:  greetings, farewells and social niceties",
-		"targetLanguage": "french"
+		"targetLanguage": "french",
+		"targetLanguageCode": "fr-FR"
 	},
 	"memorycards1": {
 		"cheatText": "Cheat",

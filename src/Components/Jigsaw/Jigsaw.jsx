@@ -325,6 +325,7 @@ export class Jigsaw extends React.PureComponent {
 			cheatText,
 			descriptionText,
 			failCount,
+			htmlContent,
 			id,
 			instructionsText,
 			listenDescriptionText,
@@ -346,6 +347,7 @@ export class Jigsaw extends React.PureComponent {
 				onMouseMove={this.handleMouseMove}
 				onMouseUp={this.handleMouseUp}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 				<p className='clue'>{descriptionText}&nbsp;</p>
 

@@ -88,7 +88,7 @@ h2 {
 		}
 	}
 }
-.french {
+.fr-FR {
 	#content {
 		#hero {
 			background-image: url(/images/paris.jpg);
@@ -98,7 +98,7 @@ h2 {
 		}
 	}
 }
-.german {
+.de-DE {
 	#content {
 		#hero {
 			background-image: url(/projects/richard/images/berlin.jpg);
@@ -108,7 +108,7 @@ h2 {
 		}
 	}
 }
-.spanish {
+.es-US {
 	#content {
 		#hero {
 			background-image: url(/projects/richard/images/barcelona.jpg);
@@ -149,10 +149,16 @@ h2 {
 		max-width: 90vw;
 		max-height: 90vh;
 	}
+	.html-content {
+		width: 100%;
+	}
 	.speak {
 		color: blue;
 		text-decoration: underline;
 		cursor: pointer;
+	}
+	.footnote {
+		font-size: 0.8rem;
 	}
 	#hero {
 		align-items: center;

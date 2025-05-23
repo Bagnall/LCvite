@@ -1,7 +1,10 @@
 import './ReadAloud.scss';
 // import {AudioClip} from '../';
 import React, { useRef } from 'react';
-// import {resolveAsset} from '../../utility';
+import {
+	highlightTextDiff,
+	resolveAsset,
+} from '../../utility';
 
 export class ReadAloud extends React.PureComponent {
 	constructor(props) {
@@ -12,21 +15,37 @@ export class ReadAloud extends React.PureComponent {
 		this.recordAndScore = this.recordAndScore.bind(this);
 		this.diagnose = this.diagnose.bind(this);
 		// this.highlightTextDiff = this.highlightTextDiff.bind(this);
+		this.handleNoMatch = this.handleNoMatch.bind(this);
+		this.handleError = this.handleError.bind(this);
+		this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
 
+		this.comparisonRef = React.createRef();
 		this.resultRef = React.createRef();
 
-		const SpchRecognition = /* SpeechRecognition ||*/ webkitSpeechRecognition;
-		const SpchGrammarList = /* SpeechGrammarList || */window.webkitSpeechGrammarList;
-		const SpchRecognitionEvent = /* SpeechRecognitionEvent ||*/ webkitSpeechRecognitionEvent;
+		let SpchRecognition;
+		try {
+			SpchRecognition = SpeechRecognition;
+		} catch (err) {
+			SpchRecognition = webkitSpeechRecognition;
+		}
+		let SpchGrammarList;
+		try {
+			SpchGrammarList = SpeechGrammarList;
+		} catch (err) {
+			SpchGrammarList = window.webkitSpeechGrammarList;
+		}
+		// const SpchGrammarList = /* SpeechGrammarList || */window.webkitSpeechGrammarList;
+		// const SpchRecognitionEvent = /* SpeechRecognitionEvent ||*/ webkitSpeechRecognitionEvent;
 
-		const phrases = [phrase, 'rouge', 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', 'crimson', 'cyan', 'fuchsia', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'indigo', 'ivory', 'khaki', 'lavender', 'lime', 'linen', 'magenta', 'maroon', 'moccasin', 'navy', 'olive', 'orange', 'orchid', 'peru', 'pink', 'plum', 'purple', 'red', 'salmon', 'sienna', 'silver', 'snow', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'white', 'yellow'];
+		const phrases = [phrase];
 		const recognition = new SpchRecognition();
 		if (SpchGrammarList) {
-			// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
-			// This code is provided as a demonstration of possible capability. You may choose not to use it.
+		// 	// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
+		// 	// This code is provided as a demonstration of possible capability. You may choose not to use it.
 			const speechRecognitionList = new SpchGrammarList();
 			//   const grammar = `#JSGF V1.0; grammar colors; public <color> = ${ colors.join(' | ') } ;`;
-			const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
+			// const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
+			const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrase };`;
 			speechRecognitionList.addFromString(grammar, 1);
 			recognition.grammars = speechRecognitionList;
 		}
@@ -36,46 +55,67 @@ export class ReadAloud extends React.PureComponent {
 		recognition.maxAlternatives = 1;
 
 		recognition.onresult = this.diagnose;
-		// function(event) {
-		// 	// The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-		// 	// The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
-		// 	// It has a getter so it can be accessed like an array
-		// 	// The first [0] returns the SpeechRecognitionResult at the last position.
-		// 	// Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
-		// 	// These also have getters so they can be accessed like arrays.
-		// 	// The second [0] returns the SpeechRecognitionAlternative at position 0.
-		// 	// We then return the transcript property of the SpeechRecognitionAlternative object
-		// 	const phrase = event.results[0][0].transcript;
-		// 	this.resultRef.current.textContent = `Result received: ${ phrase }.`;
-		// 	//   bg.style.backgroundColor = color;
-		// 	console.log(`Confidence: ${ event.results[0][0].confidence}`);
-		// };
 
-		recognition.onspeechend = function() {
-			recognition.stop();
-		};
+		recognition.onspeechend = this.handleSpeechEnd;
 
-		recognition.onnomatch = function(event) {
-			this.resultRef.current.textContent = "I didn't understand your phrase, sorry.";
-		};
+		recognition.onnomatch = this.handleNoMatch;
 
-		recognition.onerror = function(event) {
-			this.resultRef.current.textContent = `Error occurred in recognition: ${ event.error}`;
-		};
+		recognition.onerror = this.handleError;
+
+		let cannotRun = '';
+		navigator.getUserMedia({ audio: true }, () => { }, (error) => {
+			cannotRun = error;
+			if (error === 'NO_DEVICES_FOUND') {
+				cannotRun = 'You need an enabled microphone to complete this exercise';// NO_DEVICES_FOUND (no microphone or microphone disabled)
+			}
+		});
 
 		const {
 			config
 		} = this.props;
+
 		if (config) {
 			this.state = {
 				...props.config,
-				// phrase: phrase,
+				// phrase: phrase, // From the config
+				cannotRun: cannotRun,
+				firstTry: true,
 				recognition: recognition,
+				recording: false,
 			};
 		}
 	}
 
+	handleNoMatch = (e) => {
+		this.resultRef.current.textContent = "I didn't understand your phrase, sorry.";
+		this.setState({
+			firstTry: false,
+			recording: false,
+		});
+	};
+
+	handleError = (e) => {
+		this.resultRef.current.textContent = `Error occurred in recognition: ${e.error}`;
+		this.setState({
+			firstTry: false,
+			recording: false,
+		});
+	};
+
+	handleSpeechEnd = (e) => {
+		const { recognition } = this.state;
+		recognition.stop();
+		this.diagnose(e);
+		this.setState({
+			firstTry: false,
+			recording: false,
+		});
+	};
+
 	diagnose = (e) => {
+		console.log("diagnose");
+		const { phrase } = this.state;
+		const { countCorrect } = this.props;
 		// The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
 		// The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
 		// It has a getter so it can be accessed like an array
@@ -84,109 +124,86 @@ export class ReadAloud extends React.PureComponent {
 		// These also have getters so they can be accessed like arrays.
 		// The second [0] returns the SpeechRecognitionAlternative at position 0.
 		// We then return the transcript property of the SpeechRecognitionAlternative object
-		const phrase = e.results[0][0].transcript;
-		this.resultRef.current.textContent = `Result received: ${ phrase }.`;
-		//   bg.style.backgroundColor = color;
-		console.log(`Confidence: ${ e.results[0][0].confidence}`);
-	};
+		let understood;
+		try {
+			understood = e.results[0][0].transcript;
+		}
+		catch (error) {
+			understood = '';
+		}
+		// this.resultRef.current.textContent = `I heard: <italic>${ understood }</italic> .`;
 
+		let confidence;
+		try {
+			confidence = e.results[0][0].confidence;
+		}
+		catch (error) {
+			confidence = '';
+		}
+		const comparison = highlightTextDiff(understood, phrase, countCorrect);
+		this.setState({
+			comparison: comparison,
+			confidence: confidence,
+			understood: understood,
+		});
+	};
 
 	recordAndScore = () => {
 		console.log("recordAndScore");
 
 		const {
-			// phrase,
 			recognition,
 		} = this.state;
 
-		// const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-		// const SpeechGrammarList = SpeechGrammarList || window.webkitSpeechGrammarList;
-		// const SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
-
-		// const phrases = [phrase, 'rouge', 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', 'crimson', 'cyan', 'fuchsia', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'indigo', 'ivory', 'khaki', 'lavender', 'lime', 'linen', 'magenta', 'maroon', 'moccasin', 'navy', 'olive', 'orange', 'orchid', 'peru', 'pink', 'plum', 'purple', 'red', 'salmon', 'sienna', 'silver', 'snow', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'white', 'yellow'];
-
-		// const recognition = new SpeechRecognition();
-		// if (SpeechGrammarList) {
-		// 	// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
-		// 	// This code is provided as a demonstration of possible capability. You may choose not to use it.
-		// 	const speechRecognitionList = new SpeechGrammarList();
-		// 	//   const grammar = `#JSGF V1.0; grammar colors; public <color> = ${ colors.join(' | ') } ;`;
-		// 	const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
-		// 	speechRecognitionList.addFromString(grammar, 1);
-		// 	recognition.grammars = speechRecognitionList;
-		// }
-		// recognition.continuous = false;
-		// recognition.lang = 'fr-FR';
-		// recognition.interimResults = false;
-		// recognition.maxAlternatives = 1;
-
-		const diagnostic = this.resultRef.current; // document.querySelector('.output');
-		// const bg = document.querySelector('html');
-		// const hints = document.querySelector('.hints');
-
-		// let colorHTML = '';
-		// colors.forEach(function(v, i, a){
-		//   console.log(v, i);
-		//   colorHTML += `<span style="background-color:${ v };"> ${ v } </span>`;
-		// });
-		// hints.innerHTML = `Tap/click then say a color to change the background color of the app. Try ${ colorHTML }.`;
-
-		// document.body.onclick = function() {
 		recognition.start();
-		console.log('Ready to receive a color command. SHOW A MICROPHONE animated!');
-		// };
-
-		// recognition.onresult = function(event) {
-		// 	// The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-		// 	// The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
-		// 	// It has a getter so it can be accessed like an array
-		// 	// The first [0] returns the SpeechRecognitionResult at the last position.
-		// 	// Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
-		// 	// These also have getters so they can be accessed like arrays.
-		// 	// The second [0] returns the SpeechRecognitionAlternative at position 0.
-		// 	// We then return the transcript property of the SpeechRecognitionAlternative object
-		// 	const phrase = event.results[0][0].transcript;
-		// 	diagnostic.textContent = `Result received: ${ phrase }.`;
-		// 	//   bg.style.backgroundColor = color;
-		// 	console.log(`Confidence: ${ event.results[0][0].confidence}`);
-		// };
-
-		// recognition.onspeechend = function() {
-		// 	recognition.stop();
-		// };
-
-		// recognition.onnomatch = function(event) {
-		// 	diagnostic.textContent = "I didn't understand your phrase, sorry.";
-		// };
-
-		// recognition.onerror = function(event) {
-		// 	diagnostic.textContent = `Error occurred in recognition: ${ event.error}`;
-		// };
-
-
+		// console.log('Ready to receive a color command. SHOW A MICROPHONE animated!');
+		this.setState({
+			recording: true,
+		});
 	};
 
 	render() {
 		const {
+			cannotRun = '',
+			comparison = '',
+			confidence,
+			firstTry = true,
+			htmlContent,
 			id,
 			instructionsText,
 			phrase,
+			recording,
+			understood = '',
 		} = this.state;
 
-		return (
-			<>
-				<div className={`monologue`} id={`monologue${id}`} >
-					<p>{instructionsText}</p>
-					{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
-					<p><b><span className='speak'>{phrase}</span></b></p>
-					<button
-						className={``}
-						onClick={this.recordAndScore}
-					>Check</button>
-					<p ref={this.resultRef}></p>
+		if (cannotRun !== '') {
+			return (
+				<div className={`read-aloud-container`} ref={this.resultRef}>{cannotRun}</div>
+			);
+		} else {
+			return (
+				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
+					<div className={`instructions`}>
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						<p>{instructionsText}</p>
+						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
+						<p><b><span className='speak phrase'>{phrase}</span></b></p>
+					</div>
+					<div className='recording-container'>
+						<img src={resolveAsset('/images/microphone-on.png')} alt='microphone on air' style={{ "display": "none" }} />
+						<button
+							className={``}
+							onClick={this.recordAndScore}
+						>{firstTry ? 'Record' : 'Try again?'}</button>
+					</div>
+					{/* <p>Recording: {recording ? 'true' : 'false'}</p> */}
+					<div className={`form`}>
+						<p ref={this.resultRef}>{`${understood !== '' ? 'I heard: ' : ''}`}<span className='understood'>{`${ understood !== '' ? understood : ''}`}</span></p>
+						{/* <label>Confidence: {confidence ? parseInt(parseFloat(confidence) * 100) : 0}%</label> */}
+						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: `${comparison}` }} />
+					</div>
 				</div>
-			</>
-		);
-
+			);
+		}
 	}
 }

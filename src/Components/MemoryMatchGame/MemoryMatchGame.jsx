@@ -111,6 +111,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			cards,
 			descriptionText,
 			flipped,
+			htmlContent,
 			instructionsText,
 			matched,
 			nPairs,
@@ -129,7 +130,8 @@ export class MemoryMatchGame extends React.PureComponent {
 			return 0;
 		});
 		return (
-			<>
+			<div className={`memory-match-game-container`}>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 				<div className={`memory-match-game`}>
 					<p className='clue'>{descriptionText}&nbsp;</p>
@@ -172,7 +174,7 @@ export class MemoryMatchGame extends React.PureComponent {
 					<p>{`${nTries} tries. ${nPairs} matched.`}</p>
 
 				</div>
-			</>
+			</div>
 		);
 	}
 }

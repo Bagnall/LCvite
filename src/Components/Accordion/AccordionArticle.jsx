@@ -80,8 +80,13 @@ export class AccordionArticle extends React.PureComponent {
 				<header>
 					<div
 						className={`arrow ${expanded ? 'expanded' : ''}`}
-						onClick={this.toggleExpanded} />
-					<h2>
+						onClick={this.toggleExpanded}
+						title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+					/>
+					<h2
+						onClick={this.toggleExpanded}
+						title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+					>
 						{title}
 						{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
 					</h2>

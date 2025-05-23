@@ -241,6 +241,9 @@ $common-left-margin: 20px;
 					display: none;
 				}
 			}
+			h2 {
+				cursor: pointer;
+			}
 		}
 		&.expanded {
 			page-break-inside: avoid;

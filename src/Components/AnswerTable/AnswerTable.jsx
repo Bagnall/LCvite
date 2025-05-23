@@ -50,6 +50,7 @@ export class AnswerTable extends React.PureComponent {
 	render = () => {
 		const {
 			header,
+			htmlContent,
 			id = [],
 			instructionsText,
 			nCorrect = 0,
@@ -87,7 +88,7 @@ export class AnswerTable extends React.PureComponent {
 				);
 				cells.push(
 					<td key={`row${i}cell1`}>
-						<Monologue compact={true} content={phrase[1]} countCorrect={this.countCorrect} />
+						<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
 					</td>
 				);
 				if (phrases[i].length - 1 > 2) {
@@ -114,6 +115,7 @@ export class AnswerTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 				<table>
 					{header ?

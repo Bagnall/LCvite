@@ -25,6 +25,7 @@ import {
 import {
 	handleResponse,
 	resolveAsset,
+	speak,
 } from './utility';
 import React from 'react';
 
@@ -40,7 +41,9 @@ export default class App extends React.Component {
 		});
 
 		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
-		// this.loadConfig = this.loadConfig.bind(this);
+		this.loadConfig = this.loadConfig.bind(this);
+		this.initialiseSpeeches = this.initialiseSpeeches.bind(this);
+		this.initialiseSynth = this.initialiseSynth.bind(this);
 		this.renderComponent = this.renderComponent.bind(this);
 	}
 
@@ -53,26 +56,78 @@ export default class App extends React.Component {
 		const configFile = urlParams.get('config');
 
 		if (configFile) this.loadConfig(`./src/${configFile}`);
+	};
 
+	// componentDidUpdate = () => {
+	// 	console.log("componentDidUpdate");
 
-		const speeches = document.querySelectorAll('.speak');
-		speeches.forEach((speech) => {
-			speech.setAttribute('title', 'Click to play sound');
-			// speech.removeEventListener('click', speak); // Prevent duplicates
-			console.log("speech.setup", speech.setup);
-			if (speech.setup) {
-				// Do nowt!
-			} else {
-				speech.addEventListener('click', speak);
-			}
-			speech.setup = true;
+	// };
+
+	expandAllAccordions = () => {
+
+		console.log("expandAllAccordions");
+		// Not good as it does not affect state of accordion, in particular 'expanded' true/false.
+		const closedArticles = document.querySelectorAll('article.accordion-article:not(.expanded)');
+		const closedArrows = document.querySelectorAll('div.arrow:not(.expanded)');
+		console.log("closedArticles", closedArticles);
+		closedArticles.forEach((closedArticle) => {
+			closedArticle.classList.add('expanded');
+		});
+		closedArrows.forEach((closedArrow) => {
+			closedArrow.classList.add('expanded');
 		});
 	};
 
-	// handleLoadConfig = (e) => {
-	// 	console.log("loadConfig", e.target.value);
-	// 	this.loadConfig(e.target.value);
-	// };
+	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
+		// console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
+
+		if (targetLanguageCode && synth && voices && voices.length > 1) {
+			// console.log("initialiseSpeeches", voices.length);
+			const speeches = document.querySelectorAll('.speak');
+			speeches.forEach((speech) => {
+				// console.log("Setting speeches", voices.length);
+				speech.setAttribute('title', 'Click to play sound');
+				// speech.removeEventListener('click', speak); // Prevent duplicates
+				// console.log("speech.setup", speech.setup);
+				if (speech.setup) {
+					// Do nowt!
+				} else {
+					speech.addEventListener('click', (e) => speak(e, synth, targetLanguageCode, voices));
+				}
+				speech.setup = true;
+			});
+		}
+
+	};
+
+	initialiseSynth = (targetLanguageCode) => {
+		// console.log("initialiseSynth");
+
+		const synth = window.speechSynthesis;
+		let voices = [];
+		// console.log("synth", synth);
+		synth.onvoiceschanged = () => {
+			// console.log("onvoiceschanged");
+			voices = synth.getVoices();
+			// console.log("voices", voices);
+			voices.sort(function (a, b) {
+				const aname = a.name.toUpperCase();
+				const bname = b.name.toUpperCase();
+
+				if (aname < bname) {
+					return -1;
+				} else if (aname === bname) {
+					return 0;
+				} else {
+					return +1;
+				}
+			});
+
+			voices = voices.filter((s) => s.lang === targetLanguageCode);
+			this.initialiseSpeeches(synth, targetLanguageCode, voices);
+
+		};
+	};
 
 	loadConfig = (configFile) => {
 		// console.log("loadConfig");
@@ -92,13 +147,19 @@ export default class App extends React.Component {
 			.then(res => {
 				const { settings } = res;
 				delete res["settings"];
-				const { title } = settings;
+				const {
+					targetLanguageCode,
+					title,
+				} = settings;
 				document.title = title;
 
 				this.setState({
 					config: { ...res },
 					settings: { ...settings }
 				});
+
+				this.initialiseSynth(targetLanguageCode);
+
 			})
 			.catch(error => {
 				const action = `Loading configuration`;
@@ -366,7 +427,7 @@ export default class App extends React.Component {
 					<AccordionArticle
 						id={`${id}Accordion`}
 						key={`${id}Accordion`}
-						title={`Word Grid`}
+						title={titleText}
 					>
 						<WordGrid
 							config={value}
@@ -625,16 +686,16 @@ export default class App extends React.Component {
 		let flag = '';
 		let title = '';
 		let subtitle = '';
-		let targetLanguage = '';
+		let targetLanguageCode = '';
 		if (settings) {
 			if (settings.flag) flag = `/images/${settings.flag}`;
-			({ targetLanguage, title, subtitle } = settings);
+			({ targetLanguageCode, title, subtitle } = settings);
+			this.targetLanguageCode = targetLanguageCode;
 		}
-		// const words = ["ELEPHANT", "GIRAFFE", "TIGER", "WOMBAT", "LEMMING"];
 
 		return (
 			<>
-				<div className={`app ${targetLanguage ? targetLanguage : ''}`}>
+				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`}>
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}
@@ -658,7 +719,6 @@ export default class App extends React.Component {
 									<h1>{title}</h1>
 									<h2>{subtitle}</h2>
 								</div>
-								{/* <div className={`yorkshire-rose`}></div> */}
 								<Accordion id={`accordion1`} key={`accordion1`}>
 									{/* <AccordionArticle
 										id={`wordgrid1Accordion`}
@@ -696,10 +756,7 @@ export default class App extends React.Component {
 										title={`Scratch`}
 									>
 										<>
-
-
 										</>
-
 									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (

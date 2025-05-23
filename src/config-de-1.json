@@ -4,7 +4,8 @@
 		"flag": "de-flag.png",
 		"title": "German Learning Object 1",
 		"subtitle": "FIRST THINGS FIRST:  greetings, farewells and social niceties",
-		"targetLanguage": "german"
+		"targetLanguage": "german",
+		"targetLanguageCode": "de-DE"
 	},
 	"memorycards1": {
 		"cheatText": "Cheat",

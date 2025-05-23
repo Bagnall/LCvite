@@ -6,83 +6,16 @@ Monologue.scss
 @use "../../styles/_variables.module.scss";
 
 .monologue-container {
-	display: flex;
-	flex-direction: column;
-}
-.monologue {
+	// display: flex;
+	// flex-direction: column;
+	padding: 20px;
+	// }
+	// .monologue-container {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	textarea,
-	.result {
-		margin: 1rem 0;
-		min-width: 60vw;
-		width: 60vw;
-		min-height: 30vh;
-
-		white-space: normal; /* allow wrapping at word boundaries */
-		overflow-wrap: anywhere; /* if a word is very long, break if needed */
-		word-break: keep-word; /* experimental: fallback is overflow-wrap */
-		span {
-			display: inline;
-		}
-	}
-	div {
-		&.result {
-			background: white;
-			line-height: 2rem;
-			span {
-				vertical-align: bottom;
-				padding: 4px;
-				min-width: 12px;
-				min-height: 24px;
-				border: 1px solid transparent;
-			}
-			.deleted,
-			.inserted {
-				cursor: pointer;
-			}
-			.deleted {
-				@include mixins.incorrect-highlight();
-				text-decoration: line-through;
-			}
-			.inserted {
-				@include mixins.correct-highlight();
-			}
-		}
-	}
 	&.compact {
-		flex-direction: row;
-		align-items: flex-start;
-		input {
-			border-style: solid;
-			border-width: 1px 0 1px 1px;
-			padding: 2px;
-		}
-		.result {
-			margin: auto 0;
-			min-width: auto;
-			width: auto;
-			min-height: auto;
-
-			background: white;
-		}
-
-		button {
-			&.button-info {
-				@include mixins.button-common;
-				background-color: lightGray;
-				border-radius: 10px;
-				width: 20px;
-				height: 20px;
-				padding: 0;
-				// border: 1px solid $button-border;
-				font-size: 1rem;
-				line-height: 20px;
-				font-family: "Times New Roman", Times, serif;
-				font-weight: bold;
-				margin-left: 8px;
-			}
-		}
+		padding: 8px 12px;
 	}
+	@include mixins.comparison();
 }

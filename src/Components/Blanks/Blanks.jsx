@@ -335,6 +335,7 @@ export class Blanks extends React.PureComponent {
 			complete = false,
 			cheatText,
 			failCount,
+			htmlContent,
 			id = '',
 			instructionsText,
 			listenDescriptionText,
@@ -464,10 +465,12 @@ export class Blanks extends React.PureComponent {
 				onTouchEnd={this.handleMouseUp}
 				key={`${id}Blanks`}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip
+						className={`compact`}
 						listenText={listenDescriptionText}
 						soundFile={soundFile}
 					/>

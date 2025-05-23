@@ -89,6 +89,7 @@ export class WordParts extends React.PureComponent {
 			audio,
 			cheatText,
 			failCount = 0,
+			htmlContent,
 			id = [],
 			instructionsText,
 			nPlaced = 0,
@@ -143,7 +144,7 @@ export class WordParts extends React.PureComponent {
 
 				cells.push(
 					<td key={`row${i}cell2`}>
-						<AudioClip label={""} soundFile={soundFile} />
+						<AudioClip className={`compact`} soundFile={soundFile} />
 					</td>
 				);
 
@@ -161,6 +162,7 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 
 

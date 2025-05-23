@@ -23,6 +23,7 @@ export class PhraseTable extends React.PureComponent {
 		const {
 			footnote = '',
 			header,
+			htmlContent,
 			id = [],
 			instructionsText,
 			phrases,
@@ -82,6 +83,7 @@ export class PhraseTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 				<table>
 					{header ?
@@ -94,7 +96,7 @@ export class PhraseTable extends React.PureComponent {
 						{rows}
 					</tbody>
 				</table>
-				{footnote}
+				{footnote ? <p className='footnote'>{footnote}</p> : null}
 			</div>
 		);
 	};

@@ -296,6 +296,7 @@ export class WordGrid extends PureComponent {
 			foundLines,
 			foundWords,
 			grid,
+			htmlContent,
 			id,
 			instructionsText,
 			line,
@@ -355,6 +356,7 @@ export class WordGrid extends PureComponent {
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				<p className={`instructions`}>{instructionsText}</p>
 				<p className={`word-list`}>{localWordsRendered}</p>
 

@@ -169,6 +169,54 @@ export const handleResponseCSV = (response) => {
 		});
 };
 
+export const highlightTextDiff = (a, b, countCorrect, sounds = false) => {
+	const m = a.length, n = b.length;
+	const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+	const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+	const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+	// const {
+	// 	countCorrect = () => { },
+	// } = this.props;
+
+	// Fill LCS table
+	for (let i = 1; i <= m; i++) {
+		for (let j = 1; j <= n; j++) {
+			if (a[i - 1] === b[j - 1]) {
+				dp[i][j] = dp[i - 1][j - 1] + 1;
+			} else {
+				dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+			}
+		}
+	}
+
+	// Backtrack to build diff
+	let i = m, j = n;
+	const result = [];
+	let correct = true;
+	while (i > 0 || j > 0) {
+		if (i > 0 && j > 0 && a[i - 1] === b[j - 1]) {
+			result.unshift(`<span>${a[i - 1]}</span>`);
+			i--; j--;
+		} else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
+			result.unshift(`<span class='inserted' title="inserted">${b[j - 1]}</span>`);
+			correct = false;
+			j--;
+		} else if (i > 0 && (j === 0 || dp[i][j - 1] < dp[i - 1][j])) {
+			result.unshift(`<span class='deleted' title="deleted">${a[i - 1]}</span>`);
+			correct = false;
+			i--;
+		}
+	}
+	if (correct) {
+		if(sounds)correctAudio.play();
+		countCorrect();
+	} else {
+		if(sounds)errorAudio.play();
+	}
+
+	return result.join('');
+};
+
 export const isAlphaNumeric = (str) => { // Within the rules for datasets
 	let code, i, len;
 
@@ -186,42 +234,20 @@ export const isAlphaNumeric = (str) => { // Within the rules for datasets
 	return true;
 };
 
-export const speak = (e) => {
-	console.log("speak");
+export const speak = (e, synth, targetLanguageCode, voices) => {
+	// console.log("speak", synth, targetLanguageCode, voices);
 	e.preventDefault();
 
-	const synth = window.speechSynthesis;
-	let voices = synth.getVoices().sort(function (a, b) {
-		const aname = a.name.toUpperCase();
-		const bname = b.name.toUpperCase();
-
-		if (aname < bname) {
-			return -1;
-		} else if (aname === bname) {
-			return 0;
-		} else {
-			return +1;
-		}
-	});
-
-	voices = voices.filter((s) => s.lang === 'fr-FR'); // && s.localService);
-
-	const utterThis = new SpeechSynthesisUtterance(e.target.innerText);
-	utterThis.onend = function (event) {
+	let {target} = e;
+	while (!target.classList.contains('speak')) target = target.parentNode;
+	const utterThis = new SpeechSynthesisUtterance(target.innerText);
+	utterThis.onend = () => {
 		console.log("SpeechSynthesisUtterance.onend");
 	};
 
-	utterThis.onerror = function (event) {
+	utterThis.onerror = () => {
 		console.error("SpeechSynthesisUtterance.onerror");
 	};
-
-	utterThis.lang = 'fr-FR';// voices[2].lang;
-	utterThis.name = 'Google français'; // voices[2].name;
-	utterThis.voiceURI = 'Google français';
-	[utterThis.voice] = voices;
-	utterThis.pitch = 1; // pitch.value;
-	utterThis.rate = 1; // rate.value;
-	synth.speak(utterThis);
 
 	utterThis.onpause = (event) => {
 		const char = event.utterance.text.charAt(event.charIndex);
@@ -229,6 +255,35 @@ export const speak = (e) => {
 			`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
 		);
 	};
+
+	utterThis.lang = targetLanguageCode;
+	switch (targetLanguageCode){
+		case "fr-FR": {
+			utterThis.name = 'Google français';
+			utterThis.voiceURI = 'Google français';
+			break;
+		}
+		case "de-DE": {
+			utterThis.name = 'Google Deutsch';
+			utterThis.voiceURI = 'Google Deutsch';
+			break;
+		}
+		case "es-ES": {
+			utterThis.name = 'Google español';
+			utterThis.voiceURI = 'Google español';
+			break;
+		}
+		default: {
+			utterThis.name = 'Google français';
+			utterThis.voiceURI = 'Google français';
+			break;
+		}
+	}
+	[utterThis.voice] = voices;
+	utterThis.pitch = 1;
+	utterThis.rate = 1;
+	synth.speak(utterThis);
+
 };
 
 export const replaceSelectWithSpan = (selectElement) => {

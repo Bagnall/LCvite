@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"title": "French Learning Object 3",
 		"subtitle": "ORIGINS and LANGUAGES",
-		"targetLanguage": "french"
+		"targetLanguage": "french",
+		"targetLanguageCode": "fr-FR"
 	},
 	"wordGrid1": {
 		"cheatText": "Cheat",

@@ -107,6 +107,7 @@ export class DropDowns extends React.PureComponent {
 			audio,
 			cheatText,
 			failCount = 0,
+			htmlContent = '',
 			id = [],
 			instructionsText,
 			nPlaced = 0,
@@ -145,7 +146,7 @@ export class DropDowns extends React.PureComponent {
 
 					cells.push(
 						<td key={`row${i}cell2`}>
-							<AudioClip label={""} soundFile={soundFile} />
+							<AudioClip className={`compact`} label={""} soundFile={soundFile} />
 						</td>
 					);
 				}
@@ -164,8 +165,10 @@ export class DropDowns extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}DropDowns]`}
 			>
-				<p className={`instructions`}>{instructionsText}</p>
 
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+
+				<p className={`instructions`}>{instructionsText}</p>
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
