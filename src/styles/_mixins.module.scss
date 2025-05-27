@@ -25,8 +25,8 @@ _mixins.module.scss
 	textarea,
 	.comparison-result {
 		margin: 1rem 0;
-		min-width: 60vw;
-		width: 60vw;
+		// min-width: 80vw;
+		width: calc(100% - 6px);
 		min-height: 30vh;
 
 		white-space: normal; /* allow wrapping at word boundaries */
@@ -92,6 +92,13 @@ _mixins.module.scss
 				font-weight: bold;
 				margin-left: 8px;
 			}
+		}
+	}
+	@include media-queries.respond-above(s) {
+		textarea,
+		.comparison-result {
+			width: 60vw;
+			min-width: 60vw;
 		}
 	}
 }

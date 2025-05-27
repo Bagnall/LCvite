@@ -4,6 +4,7 @@
 @use "./styles/_media-queries.module.scss";
 @use "./styles/_mixins.module.scss";
 @use "./styles/_skin.module.scss";
+@use "./styles/_variables.module.scss";
 @use "sass:color";
 
 html.debug {
@@ -32,6 +33,7 @@ hr {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+
 .container {
 	position: relative;
 	display: flex;
@@ -41,11 +43,12 @@ hr {
 	flex-direction: column;
 	z-index: 1;
 	margin: 1rem auto;
-	max-width: 1200px;
+	// max-width: 1200px;
 	// touch-action: none;
 
 	overflow: visible;
-	padding: 2rem 3rem;
+	padding: 0.5rem; // 3rem;
+	box-sizing: border-box;
 	.instructions {
 		text-align: center;
 	}
@@ -150,7 +153,16 @@ h2 {
 		max-height: 90vh;
 	}
 	.html-content {
-		width: 100%;
+		width: 100%; // calc(100% - 42px);
+		border-radius: 12px;
+		// overflow: hidden;
+		// padding: 0px; // variables.$common-left-margin / 2;
+		box-sizing: border-box;
+		// margin: 2%;
+		padding: 1%;
+	}
+	> .html-content {
+		padding: variables.$common-left-margin;
 	}
 	.speak {
 		color: blue;
@@ -186,7 +198,7 @@ h2 {
 				0px 0px 4px black,
 				0px 0px 4px black;
 			font-size: 2rem;
-			line-height: 1rem;
+			line-height: 2.2rem;
 			z-index: 1;
 		}
 		h2 {
@@ -202,27 +214,16 @@ h2 {
 				0px 0px 4px black;
 		}
 	}
+	// .container {
+	// padding: 10px;
+	// }
 }
 
-// @include media-queries.respond-below(m) {
-// 	body {
-// 		* {
-// 			display: none;
-// 		}
-// 		&::before {
-// 			content: "Please use a modern tablet or PC";
-// 			width: 100vw;
-// 			height: 100vh;
-// 			position: absolute;
-// 			display: flex;
-// 			font-size: 2rem;
-// 			font-weight: bold;
-// 			// background-color: red;
-// 			align-items: center;
-// 			justify-content: center;
-// 		}
-// 	}
-// }
+@include media-queries.respond-above(s) {
+	.container {
+		padding: 2rem 3rem;
+	}
+}
 @include media-queries.respond-above(m) {
 	$header-height: 8rem;
 	#content {

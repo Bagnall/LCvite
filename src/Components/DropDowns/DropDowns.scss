@@ -16,16 +16,15 @@ html.debug {
 	}
 }
 .drop-downs-container {
-	// background: colours.$panel-back;
-
 	p {
-		// font-size: 1.4rem;
 		margin: 0;
 		select,
 		span {
-			// color: red;
-			font-size: 1.4rem;
-			min-width: 12rem;
+			font-size: 0.8rem;
+			padding: 0;
+
+			// font-size: 1.4rem;
+			min-width: 9rem;
 			display: inline-block;
 			outline: none;
 			&.correct {
@@ -47,9 +46,6 @@ html.debug {
 
 	.help {
 		padding: 1rem;
-		// display: flex;
-		// justify-content: space-evenly;
-		// width: 600px;
 	}
 
 	.hidden-help {
@@ -84,8 +80,33 @@ html.debug {
 			}
 		}
 		td {
-			font-size: 1rem;
-			padding: 0.25rem 1rem;
+			font-size: 0.8rem;
+			padding: 0.1rem;
+		}
+	}
+}
+@include media-queries.respond-above(m) {
+	.drop-downs-container {
+		p {
+			select,
+			span {
+				font-size: 1.2rem; //1.2rem;
+				padding: 0.25rem 0;
+
+				// font-size: 1.4rem;
+				min-width: 12rem;
+			}
+		}
+
+		// span {
+		// 	font-size: 1.2rem;
+		// 	padding: 0.5rem 0;
+		// }
+		table {
+			td {
+				font-size: 1rem;
+				padding: 0.25rem 1rem;
+			}
 		}
 	}
 }

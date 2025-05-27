@@ -44,7 +44,7 @@ $common-left-margin: 20px;
 	clear: both;
 	height: auto;
 	line-height: normal;
-	margin: 2% 2%;
+	margin: 2% 0; //2%;
 	opacity: 1;
 	overflow: hidden;
 	padding: 1% 2%;
@@ -54,12 +54,12 @@ $common-left-margin: 20px;
 @mixin showArticleContent {
 	&.group {
 		> .content {
-			max-height: 4560px;
+			max-height: 5600px;
 		}
 	}
 	> .content {
 		transition: all 0.5s ease-in-out;
-		max-height: 2240px;
+		max-height: 2300px;
 		> article {
 			@include showArticle;
 		}

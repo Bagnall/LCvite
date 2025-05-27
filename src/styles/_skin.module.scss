@@ -205,18 +205,20 @@ _skin.module.scss
 		}
 		$content: color.adjust($article-base-background, $whiteness: 12%);
 	}
-	// .blanks-container div.target,
+
 	.memory-map-container {
 		background: url("/images/table-top.jpg");
 		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 		border-radius: 6px;
 	}
+
 	.word-grid-container .table-top {
 		padding: 1rem 8rem;
 		background: url("/images/table-top.jpg");
 		box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4);
 		border-radius: 6px;
 	}
+
 	.blanks-container,
 	.jigsaw-container,
 	.type-phrases {
@@ -227,11 +229,13 @@ _skin.module.scss
 			border-radius: 6px;
 		}
 	}
+
 	.type-phrases {
 		.target {
 			color: white;
 		}
 	}
+
 	// .memory-map-container,
 	.word-grid-container,
 	.container {

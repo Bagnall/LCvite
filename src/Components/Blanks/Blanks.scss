@@ -27,6 +27,12 @@
 
 	.words-container {
 		overflow: visible;
+
+		// display: flex;
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: center;
+
 		// background: colours.$panel-back; see skin.module
 		padding: 0.5rem 1rem; // break 1rem 3rem;
 		top: 0;
@@ -38,6 +44,8 @@
 			box-shadow: 1px 1px 1px black;
 			cursor: pointer;
 			z-index: 21;
+			// min-width: 57%;
+			text-align: center;
 		}
 	}
 
@@ -131,6 +139,18 @@
 				}
 			}
 		}
+		.words-container {
+			span {
+				width: 30vw;
+				text-align: center;
+			}
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+		}
 		&.complete {
 			> .blanks {
 				> .target {
@@ -151,6 +171,10 @@
 				}
 			}
 		}
+		.word {
+			// background: red;
+			width: 30vw;
+		}
 	}
 	&.type-table {
 		.help {
@@ -166,7 +190,7 @@
 		background: linear-gradient(45deg, rgba(171, 171, 171, 1) 0%, rgba(209, 209, 209, 1) 50%, rgb(218, 218, 218) 73%, rgba(212, 212, 212, 1) 77%, rgba(217, 217, 217, 1) 100%);
 
 		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
-		padding: 1rem 2rem;
+		padding: 0.3rem;
 		margin-top: 1rem;
 		font-size: 1.2rem;
 		font-weight: bold;
@@ -198,6 +222,7 @@
 			&.blank {
 				opacity: 0;
 				color: black;
+				// width: 30vw;
 			}
 		}
 		table {
@@ -246,5 +271,10 @@
 @include media-queries.respond-above(s) {
 	.words-container {
 		line-height: 3.5rem;
+	}
+	.blanks-container {
+		.target {
+			padding: 1rem 2rem;
+		}
 	}
 }

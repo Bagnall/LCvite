@@ -1,4 +1,5 @@
 // AudioClip.scss
+@use "../../styles/_media-queries.module.scss";
 @use "../../styles/_mixins.module.scss";
 
 $compact-dimension: 27px;
@@ -9,7 +10,7 @@ $compact-dimension: 27px;
 p > audio,
 audio.compact,
 audio.super-compact {
-	width: 210px;
+	width: 200px;
 	height: $compact-dimension; // Half default height
 	vertical-align: middle;
 	&.inset {
@@ -45,5 +46,10 @@ div.audio-container {
 		border-style: solid;
 		top: 5.5px;
 		left: 10px;
+	}
+}
+@include media-queries.respond-above(m) {
+	audio.super-compact {
+		width: 210px;
 	}
 }

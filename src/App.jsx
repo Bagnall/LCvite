@@ -287,6 +287,22 @@ export default class App extends React.Component {
 				);
 				break;
 			}
+			case 'CrossWord': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<CrossWord
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
 			case 'DropDowns': {
 				articles.push(
 					<AccordionArticle
@@ -330,13 +346,19 @@ export default class App extends React.Component {
 					}
 				});
 
+				const {
+					htmlContent,
+					id,
+				} = value;
+
 				articles.push(
 					<AccordionArticle
 						className={`group`}
 						id={`Group${id}Accordion`}
-						key={`$Group{id}Accordion`}
+						key={`Group${id}Accordion`}
 						title={titleText}
 					>
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{renderedGroupContent}
 					</AccordionArticle>
 				);

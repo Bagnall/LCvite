@@ -27,8 +27,8 @@ html.debug {
 		border: 1px solid transparent;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 1rem; //1.2rem;
-		padding: 0.25rem 0; //0.5rem 0;
+		font-size: 0.8rem; //1rem; //1.2rem;
+		padding: 0; //0.1rem 0; //0.5rem 0;
 		position: relative;
 		transform-style: preserve-3d;
 		user-select: none;
@@ -74,15 +74,16 @@ html.debug {
 			transition: opacity 4s;
 		}
 	}
+
 	table {
 		text-align: left;
 		border-collapse: collapse;
 		background: white;
-		td,
-		th {
+		td {
 			border: 1px solid #000000;
-			padding: 5px 4px;
 			font-weight: bold;
+			font-size: 0.8rem;
+			padding: 0.1rem;
 		}
 		tbody {
 			border: none;
@@ -96,10 +97,6 @@ html.debug {
 					}
 				}
 			}
-		}
-		td {
-			font-size: 1rem;
-			padding: 0.25rem 1rem;
 		}
 	}
 }
@@ -140,6 +137,12 @@ html.debug {
 		span {
 			font-size: 1.2rem;
 			padding: 0.5rem 0;
+		}
+		table {
+			td {
+				font-size: 1rem;
+				padding: 0.25rem 1rem;
+			}
 		}
 	}
 }

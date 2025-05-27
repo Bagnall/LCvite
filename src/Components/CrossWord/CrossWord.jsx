@@ -1,3 +1,4 @@
+import './CrossWord.scss';
 import React, { PureComponent } from 'react';
 
 // Create a 2D grid filled with null values
@@ -169,7 +170,8 @@ export class CrossWord extends PureComponent {
 			activeClueIndex: null,
 			grid,
 			placements,
-			filled: createEmptyGrid(grid.length)
+			filled: createEmptyGrid(grid.length),
+			...config
 		};
 	}
 
@@ -208,18 +210,28 @@ export class CrossWord extends PureComponent {
 		const highlightCell = (r, c) => {
 			return this.state.selected && this.state.selected.some(p => p.row === r && p.col === c);
 		};
-		const { grid, filled, placements } = this.state;
+		const {
+			grid,
+			filled,
+			htmlContent,
+			placements,
+			instructionsText,
+		} = this.state;
 		const cellSize = 32;
 		const clues = this.getClues();
 		const numberedCells = new Map();
 		placements.forEach((p, i) => {
 			numberedCells.set(`${p.row},${p.col}`, i + 1);
 		});
-
+		console.log("instructionsText", instructionsText);
 		return (
 			<div>
-				<div style={{ display: 'flex' }}>
-					<table style={{ borderCollapse: 'collapse' }}>
+				<div className={`crossword-container`}>
+					<div className={`instructions`}>
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						<p className={`instructions`}>{instructionsText}</p>
+					</div>
+					<table className={`board`} style={{ borderCollapse: 'collapse' }}>
 						<tbody>
 							{grid.map((row, rIdx) => (
 								<tr key={rIdx}>
@@ -285,7 +297,7 @@ export class CrossWord extends PureComponent {
 							))}
 						</tbody>
 					</table>
-					<div style={{ paddingLeft: 20 }}>
+					<div className={`clues`} >
 						<h4>Clues</h4>
 						<ol>
 							{placements.map((placement, i) => {

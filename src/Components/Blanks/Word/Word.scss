@@ -88,7 +88,7 @@
 		transition-duration: 1s; //$word-transition-time;
 	}
 }
-@include media-queries.respond-above(s) {
+@include media-queries.respond-above(l) {
 	.word {
 		&.blank {
 			margin: 1rem;

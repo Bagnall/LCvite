@@ -2,20 +2,29 @@
 Monologue.scss
 */
 @use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.module.scss";
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
 .monologue-container {
-	// display: flex;
-	// flex-direction: column;
 	padding: 20px;
-	// }
-	// .monologue-container {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	&.compact {
 		padding: 8px 12px;
 	}
+	// textarea {
+	// 	width: 100vw;
+	// 	min-width: 100vw;
+	// }
 	@include mixins.comparison();
 }
+// @include media-queries.respond-above(s) {
+// 	.monologue-container {
+// 		textarea {
+// 			width: 60vw;
+// 			min-width: 60vw;
+// 		}
+// 	}
+// }
