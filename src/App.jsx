@@ -24,6 +24,7 @@ import {
 } from './Components';
 import {
 	handleResponse,
+	isTouchChrome,
 	resolveAsset,
 	speak,
 } from './utility';
@@ -111,10 +112,20 @@ export default class App extends React.Component {
 		const synth = window.speechSynthesis;
 		let voices = [];
 		// console.log("synth", synth);
+		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
+		if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+			document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+		}
+
 		synth.onvoiceschanged = () => {
 			// console.log("onvoiceschanged");
 			// show speak highlighting
-			document.getElementsByTagName('html')[0].classList.add('can-speak');
+
+			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+				document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+			}else{
+				document.getElementsByTagName('html')[0].classList.add('can-speak');
+			}
 			voices = synth.getVoices();
 			// console.log("voices", voices);
 			voices.sort(function (a, b) {
@@ -350,6 +361,7 @@ export default class App extends React.Component {
 
 				groupContent.forEach((child) => {
 					for (const [/* key */, v] of Object.entries(child)) {
+						// console.log("v", v.id);
 						this.renderComponent(v, renderedGroupContent);
 					}
 				});
@@ -358,7 +370,7 @@ export default class App extends React.Component {
 					htmlContent,
 					id,
 				} = value;
-				console.log(`Group${id}Accordion`);
+				// console.log(`Group${id}Accordion`);
 				articles.push(
 					<AccordionArticle
 						className={`group`}
@@ -366,7 +378,7 @@ export default class App extends React.Component {
 						key={`Group${id}Accordion`}
 						title={titleText}
 					>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{renderedGroupContent}
 					</AccordionArticle>
 				);
@@ -486,7 +498,7 @@ export default class App extends React.Component {
 			}
 			default: {
 				articles.push(
-					<p>Component {component} not implemented</p>
+					<p key={`notImplemented${id}`}>Component {component} not implemented</p>
 				);
 			}
 		}
@@ -724,7 +736,7 @@ export default class App extends React.Component {
 
 		return (
 			<>
-				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`}>
+				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`} key={`languageDiv`}>
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}
@@ -739,11 +751,11 @@ export default class App extends React.Component {
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
-					<div id='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div>
+					<div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div>
 					{config ?
 						<>
-							<div id="content">
-								<div id='hero'>
+							<div id="content" key="content">
+								<div id='hero' key='hero'>
 									{/* <Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} /> */}
 									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
 									<h1>{title}</h1>

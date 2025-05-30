@@ -20,9 +20,12 @@ export const appendScript = (scriptToAppend, DOMnode, callback) => {
 	script.onload = () => callback;
 };
 
-export const clearCanvas = (canvas) => {
-	const context = canvas.getContext('2d');
-	context.clearRect(0, 0, canvas.width, canvas.height);
+export const arrayIncludesObject = (seeking, arrayToSearch) => {
+
+	// For an array of objects, checks if it includes the object in question
+	return arrayToSearch.some(element => {
+		return JSON.stringify(seeking) === JSON.stringify(element);
+	});
 };
 
 export const base64ToBlob = (base64String, contentType = '') => {
@@ -37,12 +40,9 @@ export const base64ToBlob = (base64String, contentType = '') => {
 	return new Blob([byteArray], { type: contentType });
 };
 
-export const arrayIncludesObject = (seeking, arrayToSearch) => {
-
-	// For an array of objects, checks if it includes the object in question
-	return arrayToSearch.some(element => {
-		return JSON.stringify(seeking) === JSON.stringify(element);
-	});
+export const clearCanvas = (canvas) => {
+	const context = canvas.getContext('2d');
+	context.clearRect(0, 0, canvas.width, canvas.height);
 };
 
 export const copyObject = (originalObject) => {
@@ -113,27 +113,6 @@ export const handleResponse = (response) => {
 		});
 };
 
-export const handleResponseText = (response) => {
-	// Used in all API calls
-	if (response.status === 204) return Promise.resolve(true);
-	return response.text()
-		.then((res) => {
-			if (!response.ok) {
-				const error = {
-					...res,
-					...{
-						message: res.message,
-						status: response.status,
-						statusText: response.statusText,
-					}
-				};
-				return Promise.reject(error);
-			}
-			return res;
-		});
-};
-
-
 export const handleResponseCSV = (response) => {
 	// Used in all CSV API calls
 	if (response.status === 204 /* || response.status === 200 */) return Promise.resolve(true);
@@ -166,6 +145,26 @@ export const handleResponseCSV = (response) => {
 				}
 			}
 			return text;
+		});
+};
+
+export const handleResponseText = (response) => {
+	// Used in all API calls
+	if (response.status === 204) return Promise.resolve(true);
+	return response.text()
+		.then((res) => {
+			if (!response.ok) {
+				const error = {
+					...res,
+					...{
+						message: res.message,
+						status: response.status,
+						statusText: response.statusText,
+					}
+				};
+				return Promise.reject(error);
+			}
+			return res;
 		});
 };
 
@@ -234,6 +233,56 @@ export const isAlphaNumeric = (str) => { // Within the rules for datasets
 	return true;
 };
 
+export const isTouchChrome = () => {
+	const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+	const ua = navigator.userAgent;
+	const {vendor} = navigator;
+
+	const isChrome = /Chrome/.test(ua) && /Google Inc/.test(vendor);
+	const isEdge = /Edg\//.test(ua); // Detect Edge explicitly
+
+	return isTouchDevice && isChrome && !isEdge;
+};
+
+export const replaceSelectWithSpan = (selectElement) => {
+	const selectedText = selectElement.options[selectElement.selectedIndex].text;
+	const span = document.createElement('span');
+	span.textContent = selectedText;
+	// span.className = 'replaced-select'; // Optional: for styling
+	selectElement.classList.forEach(cls => span.classList.add(cls));
+
+	// Replace the <select> in the DOM
+	selectElement.parentNode.replaceChild(span, selectElement);
+};
+
+export const resolveAsset = (path = '') => {
+	return `${import.meta.env.BASE_URL}${path}`;
+};
+
+export const resolveAssetHTML = (html) => {
+	const base = import.meta.env.BASE_URL || '/';
+	return html.replace(/(src|href)=["'](?!https?:\/\/)([^"']+)["']/g, (match, attr, path) => {
+		const resolved = path.startsWith(base) ? path : `${base}${path}`;
+		return `${attr}="${resolved}"`;
+	});
+};
+
+export const shuffleArray = (array) => {
+	let currentIndex = array.length;
+
+	// While there remain elements to shuffle...
+	while (currentIndex !== 0) {
+
+		// Pick a remaining element...
+		const randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+	}
+	return array;
+};
+
 export const speak = (e, synth, targetLanguageCode, voices) => {
 	// console.log("speak", synth, targetLanguageCode, voices);
 	// alert("speak", synth, targetLanguageCode, voices);
@@ -283,45 +332,6 @@ export const speak = (e, synth, targetLanguageCode, voices) => {
 	utterThis.rate = 1;
 	synth.speak(utterThis);
 
-};
-
-export const replaceSelectWithSpan = (selectElement) => {
-	const selectedText = selectElement.options[selectElement.selectedIndex].text;
-	const span = document.createElement('span');
-	span.textContent = selectedText;
-	// span.className = 'replaced-select'; // Optional: for styling
-	selectElement.classList.forEach(cls => span.classList.add(cls));
-
-	// Replace the <select> in the DOM
-	selectElement.parentNode.replaceChild(span, selectElement);
-};
-
-export const shuffleArray = (array) => {
-	let currentIndex = array.length;
-
-	// While there remain elements to shuffle...
-	while (currentIndex !== 0) {
-
-		// Pick a remaining element...
-		const randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex--;
-
-		// And swap it with the current element.
-		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-	}
-	return array;
-};
-
-export const resolveAsset = (path = '') => {
-	return `${import.meta.env.BASE_URL}${path}`;
-};
-
-export const resolveAssetHTML = (html) => {
-	const base = import.meta.env.BASE_URL || '/';
-	return html.replace(/(src|href)=["'](?!https?:\/\/)([^"']+)["']/g, (match, attr, path) => {
-		const resolved = path.startsWith(base) ? path : `${base}${path}`;
-		return `${attr}="${resolved}"`;
-	});
 };
 
 export const titleCase = (str) => {
