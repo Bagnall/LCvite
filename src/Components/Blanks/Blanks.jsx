@@ -260,7 +260,7 @@ export class Blanks extends React.PureComponent {
 				this.movingPiece.style.top = `${targetY}px`;
 				this.movingPiece.classList.add("placed");
 				// debugger;
-				console.log(target);
+				// console.log(target);
 				setTimeout(() => target.style.opacity = 1, 1000); // Corresponds to SCSS transition times
 				nPlaced++;
 				if (nPlaced === nToPlace) {
@@ -318,10 +318,10 @@ export class Blanks extends React.PureComponent {
 		top = parseInt(top);
 		if (Math.abs(left - targetX) < margin && Math.abs(top - targetY) < margin) {
 			return {
-				success: true,
+				"target": targetWord,
 				"targetX": targetX,
 				"targetY": targetY,
-				"target": targetWord,
+				success: true,
 			};
 		}
 		return { success: false };

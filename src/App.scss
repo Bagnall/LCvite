@@ -13,6 +13,69 @@ html.debug {
 	}
 }
 
+html.can-speak {
+	#content {
+		.speak {
+			color: blue;
+			text-decoration: underline;
+			cursor: pointer;
+			// following doesn't help eliminate contextual search :-(
+			-webkit-user-select: none; /* Chrome/Safari */
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+			user-select: none; /* Standard */
+		}
+	}
+	#SpeechSynthesisError {
+		display: none;
+		// opacity: 0;
+		// transition: opacity 0;
+		animation-name: none;
+	}
+}
+#SpeechSynthesisError {
+	background-color: white;
+	background: white;
+	border-radius: 20px;
+	border: variables.$border-width * 1px ridge darkblue;
+	color: darkblue;
+	// display: flex;
+	font-size: 40px;
+	height: fit-content;
+	inset: 0;
+	line-height: 60px;
+	margin: auto;
+	min-height: 22vh;
+	min-width: 80vw;
+	padding: 1rem 0;
+	position: fixed;
+	text-align: center;
+	width: fit-content;
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+	// opacity: 1;
+	// transition: opacity 0; //1s 2s;
+	touch-action: none;
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 600ms;
+	animation-timing-function: ease;
+	animation-delay: 400ms;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		display: none;
+	}
+	10% {
+		display: flex;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .app {
 	box-sizing: border-box;
 	line-height: 1.4em;
@@ -163,11 +226,6 @@ h2 {
 	}
 	> .html-content {
 		padding: variables.$common-left-margin;
-	}
-	.speak {
-		color: blue;
-		text-decoration: underline;
-		cursor: pointer;
 	}
 	.footnote {
 		font-size: 0.8rem;

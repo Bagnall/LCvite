@@ -1,3 +1,4 @@
+@use "_media-queries.module.scss";
 $tab-size: 31;
 $tile-size: 181;
 $pieces-per-board: 20;
@@ -9,10 +10,14 @@ $jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
 $transition-time: 1s;
 $word-transition-time: $transition-time;
-
+$cell-dimension: 24px;
+@include media-queries.respond-above(m) {
+	$cell-dimension: 36px;
+}
 /* stylelint-disable */
 :export {
 	borderWidth: $border-width;
+	cellDimension: $cell-dimension;
 	jigsawBorderWidth: $border-width;
 	tabSize: $tab-size;
 	tileSize: $tile-size;

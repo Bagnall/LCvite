@@ -1,10 +1,10 @@
 import './ReadAloud.scss';
 // import {AudioClip} from '../';
-import React, { useRef } from 'react';
 import {
 	highlightTextDiff,
 	resolveAsset,
 } from '../../utility';
+import React from 'react';
 
 export class ReadAloud extends React.PureComponent {
 	constructor(props) {
@@ -14,7 +14,6 @@ export class ReadAloud extends React.PureComponent {
 
 		this.recordAndScore = this.recordAndScore.bind(this);
 		this.diagnose = this.diagnose.bind(this);
-		// this.highlightTextDiff = this.highlightTextDiff.bind(this);
 		this.handleNoMatch = this.handleNoMatch.bind(this);
 		this.handleError = this.handleError.bind(this);
 		this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
@@ -22,60 +21,51 @@ export class ReadAloud extends React.PureComponent {
 		this.comparisonRef = React.createRef();
 		this.resultRef = React.createRef();
 
-		let SpchRecognition;
-		try {
-			SpchRecognition = SpeechRecognition;
-		} catch (err) {
-			SpchRecognition = webkitSpeechRecognition;
-		}
-		let SpchGrammarList;
-		try {
-			SpchGrammarList = SpeechGrammarList;
-		} catch (err) {
-			SpchGrammarList = window.webkitSpeechGrammarList;
-		}
-		// const SpchGrammarList = /* SpeechGrammarList || */window.webkitSpeechGrammarList;
-		// const SpchRecognitionEvent = /* SpeechRecognitionEvent ||*/ webkitSpeechRecognitionEvent;
-
-		const phrases = [phrase];
-		const recognition = new SpchRecognition();
-		if (SpchGrammarList) {
-		// 	// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
-		// 	// This code is provided as a demonstration of possible capability. You may choose not to use it.
-			const speechRecognitionList = new SpchGrammarList();
-			//   const grammar = `#JSGF V1.0; grammar colors; public <color> = ${ colors.join(' | ') } ;`;
-			// const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
-			const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrase };`;
-			speechRecognitionList.addFromString(grammar, 1);
-			recognition.grammars = speechRecognitionList;
-		}
-		recognition.continuous = false;
-		recognition.lang = 'fr-FR';
-		recognition.interimResults = false;
-		recognition.maxAlternatives = 1;
-
-		recognition.onresult = this.diagnose;
-
-		recognition.onspeechend = this.handleSpeechEnd;
-
-		recognition.onnomatch = this.handleNoMatch;
-
-		recognition.onerror = this.handleError;
-
+		const { SpchRecognition, SpchGrammarList } = this.initialiseSpeechRecognition();
+		const _this = this;
 		let cannotRun = '';
-		navigator.getUserMedia({ audio: true }, () => { }, (error) => {
-			cannotRun = error;
-			if (error === 'NO_DEVICES_FOUND') {
-				cannotRun = 'You need an enabled microphone to complete this exercise';// NO_DEVICES_FOUND (no microphone or microphone disabled)
-			}
-		});
+		let recognition = null;
+		if (SpchRecognition && SpchGrammarList) {
+			// const phrases = [phrase];
+			recognition = new SpchRecognition();
+			if (recognition) {
+				if (SpchGrammarList) {
+					// 	// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
+					// 	// This code is provided as a demonstration of possible capability. You may choose not to use it.
+					const speechRecognitionList = new SpchGrammarList();
+					//   const grammar = `#JSGF V1.0; grammar colors; public <color> = ${ colors.join(' | ') } ;`;
+					// const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
+					const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${phrase};`;
+					speechRecognitionList.addFromString(grammar, 1);
+					recognition.grammars = speechRecognitionList;
+				}
+				recognition.continuous = false;
+				recognition.lang = 'fr-FR';
+				recognition.interimResults = false;
+				recognition.maxAlternatives = 1;
 
+				recognition.onresult = _this.diagnose;
+
+				recognition.onspeechend = _this.handleSpeechEnd;
+
+				recognition.onnomatch = _this.handleNoMatch;
+
+				recognition.onerror = _this.handleError;
+
+				navigator.getUserMedia({ audio: true }, () => { }, (error) => {
+					cannotRun = error;
+					if (error === 'NO_DEVICES_FOUND') {
+						cannotRun = 'You need an enabled microphone to complete this exercise';// NO_DEVICES_FOUND (no microphone or microphone disabled)
+					}
+				});
+			}
+		}
 		const {
 			config
-		} = this.props;
+		} = _this.props;
 
 		if (config) {
-			this.state = {
+			_this.state = {
 				...props.config,
 				// phrase: phrase, // From the config
 				cannotRun: cannotRun,
@@ -83,8 +73,7 @@ export class ReadAloud extends React.PureComponent {
 				recognition: recognition,
 				recording: false,
 			};
-		}
-	}
+		}	}
 
 	handleNoMatch = (e) => {
 		this.resultRef.current.textContent = "I didn't understand your phrase, sorry.";
@@ -112,8 +101,36 @@ export class ReadAloud extends React.PureComponent {
 		});
 	};
 
+	initialiseSpeechRecognition = () => {
+		let SpchRecognition;
+		try {
+			SpchRecognition = SpeechRecognition;
+		} catch (err) {
+			try {
+				SpchRecognition = webkitSpeechRecognition;
+			}
+			catch (err) {
+				// console.log(err);
+				return true;
+			}
+		}
+		let SpchGrammarList;
+		try {
+			SpchGrammarList = SpeechGrammarList;
+		} catch (err) {
+			try {
+				SpchGrammarList = window.webkitSpeechGrammarList;
+			}
+			catch (err) {
+				// console.log(err);
+				return true;
+			}
+		}
+		return {"SpchRecognition": SpchRecognition, "SpchGrammarList":SpchGrammarList};
+	};
+
 	diagnose = (e) => {
-		console.log("diagnose");
+		// console.log("diagnose");
 		const { phrase } = this.state;
 		const { countCorrect } = this.props;
 		// The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
@@ -135,7 +152,7 @@ export class ReadAloud extends React.PureComponent {
 
 		let confidence;
 		try {
-			confidence = e.results[0][0].confidence;
+			({ confidence } = e.results[0][0]);
 		}
 		catch (error) {
 			confidence = '';
@@ -149,7 +166,7 @@ export class ReadAloud extends React.PureComponent {
 	};
 
 	recordAndScore = () => {
-		console.log("recordAndScore");
+		// console.log("recordAndScore");
 
 		const {
 			recognition,
@@ -166,7 +183,7 @@ export class ReadAloud extends React.PureComponent {
 		const {
 			cannotRun = '',
 			comparison = '',
-			confidence,
+			// confidence,
 			firstTry = true,
 			htmlContent,
 			id,

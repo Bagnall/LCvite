@@ -111,21 +111,24 @@ $breakpoints: (
 	}
 }
 
-html.debug body::before {
+html body::before {
 	content: "S";
 	background: rgba(200, 0, 0, 0.5);
 	color: white;
 	width: 80px;
 	height: 26px;
 	position: fixed;
+	left: -9999px; // Hide but have it possible to interrogate in JS
 	top: 0;
-	left: 0;
 	z-index: 99;
 	text-align: center;
 	border-radius: 0 0 12px 0;
 }
+html.debug body::before {
+	left: 0;
+}
 @include respond-above(s) {
-	html.debug body::before {
+	html body::before {
 		content: "S (P)";
 		@media screen and (orientation: landscape) {
 			content: "S (L)";
@@ -133,7 +136,7 @@ html.debug body::before {
 	}
 }
 @include respond-above(m) {
-	html.debug body::before {
+	html body::before {
 		content: "M (P)";
 		@media screen and (orientation: landscape) {
 			content: "M (L)";
@@ -141,7 +144,7 @@ html.debug body::before {
 	}
 }
 @include respond-above(l) {
-	html.debug body::before {
+	html body::before {
 		content: "L (P)";
 		@media screen and (orientation: landscape) {
 			content: "L (L)";
@@ -149,7 +152,7 @@ html.debug body::before {
 	}
 }
 @include respond-above(xl) {
-	html.debug body::before {
+	html body::before {
 		content: "XL (P)";
 		@media screen and (orientation: landscape) {
 			content: "XL (L)";
@@ -157,7 +160,7 @@ html.debug body::before {
 	}
 }
 @include respond-above(xxl) {
-	html.debug body::before {
+	html body::before {
 		content: "XXL (P)";
 		@media screen and (orientation: landscape) {
 			content: "XXL (L)";

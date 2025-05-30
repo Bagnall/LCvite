@@ -12,7 +12,14 @@ html.debug {
 		// }
 	}
 }
-$cell-dimension: 36px;
+// $cell-dimension: 36px;
+
+// /* stylelint-disable */
+// :export {
+// 	cellSize: $cell-dimension;
+// }
+// /* stylelint-enable */
+
 .word-grid-container {
 	padding: 1rem;
 	// background: colours.$panel-back;
@@ -48,8 +55,8 @@ $cell-dimension: 36px;
 		td {
 			border: 1px solid #ccc;
 			box-sizing: border-box;
-			width: $cell-dimension;
-			height: $cell-dimension;
+			width: variables.$cell-dimension;
+			height: variables.$cell-dimension;
 			text-align: center;
 			text-transform: uppercase;
 			// background: white;

@@ -223,7 +223,7 @@ export class CrossWord extends PureComponent {
 		placements.forEach((p, i) => {
 			numberedCells.set(`${p.row},${p.col}`, i + 1);
 		});
-		console.log("instructionsText", instructionsText);
+		// console.log("instructionsText", instructionsText);
 		return (
 			<div>
 				<div className={`crossword-container`}>

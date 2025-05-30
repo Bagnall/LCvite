@@ -28,8 +28,8 @@ _mixins.module.scss
 		// min-width: 80vw;
 		width: calc(100% - 6px);
 		min-height: 30vh;
-
-		white-space: normal; /* allow wrapping at word boundaries */
+		border: 1px solid black;
+		white-space: break-spaces; // normal; /* allow wrapping at word boundaries */
 		overflow-wrap: anywhere; /* if a word is very long, break if needed */
 		word-break: keep-word; /* experimental: fallback is overflow-wrap */
 		span {

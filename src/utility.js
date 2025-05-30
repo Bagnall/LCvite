@@ -236,24 +236,23 @@ export const isAlphaNumeric = (str) => { // Within the rules for datasets
 
 export const speak = (e, synth, targetLanguageCode, voices) => {
 	// console.log("speak", synth, targetLanguageCode, voices);
+	// alert("speak", synth, targetLanguageCode, voices);
 	e.preventDefault();
 
 	let {target} = e;
 	while (!target.classList.contains('speak')) target = target.parentNode;
 	const utterThis = new SpeechSynthesisUtterance(target.innerText);
 	utterThis.onend = () => {
-		console.log("SpeechSynthesisUtterance.onend");
+		console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
 	};
 
 	utterThis.onerror = () => {
-		console.error("SpeechSynthesisUtterance.onerror");
+		console.error("SpeechSynthesisUtterance.onerror"); // eslint-disable-line
 	};
 
 	utterThis.onpause = (event) => {
 		const char = event.utterance.text.charAt(event.charIndex);
-		console.log(
-			`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
-		);
+		console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`); // eslint-disable-line
 	};
 
 	utterThis.lang = targetLanguageCode;

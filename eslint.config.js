@@ -58,7 +58,7 @@ export default [
 				"error"
 			],
 			"no-console": [
-				"warn"
+				"error"
 			],
 			"no-const-assign": [
 				"error"

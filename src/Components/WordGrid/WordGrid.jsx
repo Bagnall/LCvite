@@ -2,6 +2,7 @@ import './WordGrid.scss';
 import React, { PureComponent } from 'react';
 import Colours from '../../styles/_colours.module.scss';
 import {resolveAsset} from '../../utility';
+import Variables from '../../styles/_variables.module.scss';
 
 const directions = [
 	{ x: 1, y: 0 }, // right
@@ -73,13 +74,13 @@ function generateWordGrid(words, solutionLines, logError) {
 	// Determine grid size: max word length + enough room
 	const longestWord = Math.max(...words.map(w => w.length));
 	let estimatedSize = Math.max(longestWord + 2, Math.ceil(Math.sqrt(words.join('').length * 2)));
-	console.log("estimatedSize", estimatedSize);
+	// console.log("estimatedSize", estimatedSize);
 
 	let grid = createEmptyGrid(estimatedSize);
 	let placedAll = false;
 	for (let j = 0; j < 10 && placedAll === false; j++) {
 		for (let i = 0; i < 100 && placedAll === false; i++) { // Try 100 times
-			console.log(i, "th attempt"); // eslint-disable-line
+			// console.log(i, "th attempt"); // eslint-disable-line
 			placedAll = true;
 			words.forEach(word => {
 				const success = placeWord(grid, word.toLowerCase(), solutionLines);
@@ -89,16 +90,16 @@ function generateWordGrid(words, solutionLines, logError) {
 				}
 			});
 			if (placedAll) {
-				console.log("placed all! i", i); // eslint-disable-line
+				// console.log("placed all! i", i); // eslint-disable-line
 				break;
 			}
 		}
 		if (placedAll) {
-			console.log("placed all! j", j); // eslint-disable-line
+			// console.log("placed all! j", j); // eslint-disable-line
 			break;
 		}
 		estimatedSize++;
-		console.log("estimatedSize", estimatedSize);
+		// console.log("estimatedSize", estimatedSize);
 		grid = createEmptyGrid(estimatedSize);
 	}
 	if (!placedAll) {
@@ -310,19 +311,23 @@ export class WordGrid extends PureComponent {
 			// words
 		} = this.state;
 		// console.log("lines", lines, "line", line);
-		const cellSize = 36;
+		let cellDimension = 36;
+		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
+		// console.log("media", media, media[1]);
+		if (media[1] === 'S' || media[1] === 'M') cellDimension = 24;
 		const renderedFoundLines = new Array();
 		const { highlight } = Colours;
+		const strokeWidth = cellDimension / 1.2;
 		foundLines.forEach((l, index) => renderedFoundLines.push(
 			<line
 				key={`line${index}`}
-				x1={l.start.col * cellSize + cellSize / 2}
-				y1={l.start.row * cellSize + cellSize / 2}
-				x2={l.end.col * cellSize + cellSize / 2}
-				y2={l.end.row * cellSize + cellSize / 2}
+				x1={l.start.col * cellDimension + cellDimension / 2}
+				y1={l.start.row * cellDimension + cellDimension / 2}
+				x2={l.end.col * cellDimension + cellDimension / 2}
+				y2={l.end.row * cellDimension + cellDimension / 2}
 				opacity={0.6}
 				stroke={highlight}
-				strokeWidth="30"
+				strokeWidth={strokeWidth}
 				strokeLinecap="round"
 			/>
 		));
@@ -331,12 +336,12 @@ export class WordGrid extends PureComponent {
 			solutionLines.forEach((l, index) => renderedSolutionLines.push(
 				<line
 					key={`line${index}`}
-					x1={l.start.col * cellSize + cellSize / 2}
-					y1={l.start.row * cellSize + cellSize / 2}
-					x2={l.end.col * cellSize + cellSize / 2}
-					y2={l.end.row * cellSize + cellSize / 2}
+					x1={l.start.col * cellDimension + cellDimension / 2}
+					y1={l.start.row * cellDimension + cellDimension / 2}
+					x2={l.end.col * cellDimension + cellDimension / 2}
+					y2={l.end.row * cellDimension + cellDimension / 2}
 					stroke="rgba(255, 255, 0, 0.3)"
-					strokeWidth="30"
+					strokeWidth={strokeWidth}
 					strokeLinecap="round"
 				/>
 			));
@@ -375,26 +380,26 @@ export class WordGrid extends PureComponent {
 							onTouchEnd={this.handleMouseUp}
 						>
 							<svg
-								width={grid.length * cellSize}
-								height={grid.length * cellSize}
+								width={grid.length * cellDimension}
+								height={grid.length * cellDimension}
 								style={{ left: 0, pointerEvents: 'none', position: 'absolute', top: 0 }}
 							>
 								{renderedFoundLines}
 								{renderedSolutionLines}
 								{line && (
 									<line
-										x1={line.start.col * cellSize + cellSize / 2}
-										y1={line.start.row * cellSize + cellSize / 2}
-										x2={line.end.col * cellSize + cellSize / 2}
-										y2={line.end.row * cellSize + cellSize / 2}
+										x1={line.start.col * cellDimension + cellDimension / 2}
+										y1={line.start.row * cellDimension + cellDimension / 2}
+										x2={line.end.col * cellDimension + cellDimension / 2}
+										y2={line.end.row * cellDimension + cellDimension / 2}
 										stroke="rgba(0, 120, 255, 0.5)"
-										strokeWidth="30"
+										strokeWidth={strokeWidth}
 										strokeLinecap="round"
 									/>
 								)}
 							</svg>
-							<table 								width={grid.length * cellSize}
-								height={grid.length * cellSize}
+							<table 								width={grid.length * cellDimension}
+								height={grid.length * cellDimension}
 								className='word-grid'>
 								<tbody>
 									{grid.map((row, rowIndex) => (

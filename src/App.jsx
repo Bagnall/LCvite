@@ -81,23 +81,28 @@ export default class App extends React.Component {
 	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
 		// console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
 
-		if (targetLanguageCode && synth && voices && voices.length > 1) {
-			// console.log("initialiseSpeeches", voices.length);
-			const speeches = document.querySelectorAll('.speak');
-			speeches.forEach((speech) => {
+		// console.log("initialiseSpeeches", voices.length);
+		const speeches = document.querySelectorAll('.speak');
+		speeches.forEach((speech) => {
+			if (targetLanguageCode && synth && voices && voices.length > 1) {
 				// console.log("Setting speeches", voices.length);
 				speech.setAttribute('title', 'Click to play sound');
+				speech.setAttribute('aria-label', 'Non-selectable text');
 				// speech.removeEventListener('click', speak); // Prevent duplicates
 				// console.log("speech.setup", speech.setup);
 				if (speech.setup) {
 					// Do nowt!
 				} else {
 					speech.addEventListener('click', (e) => speak(e, synth, targetLanguageCode, voices));
+					// following doesn't help eliminate contextual search :-(
+					speech.addEventListener('tap', (e) => speak(e, synth, targetLanguageCode, voices));
+					speech.addEventListener('contextmenu', function (e) {
+						e.preventDefault();
+					}, { passive: false });
 				}
-				speech.setup = true;
-			});
-		}
-
+			}
+			speech.setup = true;
+		});
 	};
 
 	initialiseSynth = (targetLanguageCode) => {
@@ -108,6 +113,8 @@ export default class App extends React.Component {
 		// console.log("synth", synth);
 		synth.onvoiceschanged = () => {
 			// console.log("onvoiceschanged");
+			// show speak highlighting
+			document.getElementsByTagName('html')[0].classList.add('can-speak');
 			voices = synth.getVoices();
 			// console.log("voices", voices);
 			voices.sort(function (a, b) {
@@ -254,6 +261,7 @@ export default class App extends React.Component {
 		// console.log(value);
 		const { id, component, titleText } = value;
 		// console.log(`component [${component}]`);
+		// console.log("renderComponent id=", id);
 		switch (component) {
 			case 'AnswerTable': {
 				articles.push(
@@ -287,22 +295,22 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'CrossWord': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<CrossWord
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
+			// case 'CrossWord': {
+			// 	articles.push(
+			// 		<AccordionArticle
+			// 			id={`${id}Accordion`}
+			// 			key={`${id}Accordion`}
+			// 			title={titleText}
+			// 		>
+			// 			<CrossWord
+			// 				config={value}
+			// 				logError={this.logError}
+			// 				showDialog={this.showDialog}
+			// 			/>
+			// 		</AccordionArticle>
+			// 	);
+			// 	break;
+			// }
 			case 'DropDowns': {
 				articles.push(
 					<AccordionArticle
@@ -350,7 +358,7 @@ export default class App extends React.Component {
 					htmlContent,
 					id,
 				} = value;
-
+				console.log(`Group${id}Accordion`);
 				articles.push(
 					<AccordionArticle
 						className={`group`}
@@ -484,7 +492,6 @@ export default class App extends React.Component {
 		}
 		// return articles;
 	};
-
 
 	render = () => {
 		const {
@@ -732,6 +739,7 @@ export default class App extends React.Component {
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
+					<div id='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div>
 					{config ?
 						<>
 							<div id="content">

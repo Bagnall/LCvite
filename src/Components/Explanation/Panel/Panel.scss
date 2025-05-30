@@ -6,6 +6,6 @@
 .panel {
 	// background: colours.$article-base-background;
 	padding: 1rem;
-	width: 100%;
+	width: calc(100% - 2rem);
 	margin-top: 1rem;
 }
