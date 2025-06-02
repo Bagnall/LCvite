@@ -19,23 +19,23 @@ ReadAloud.scss
 		"form microphone";
 	.recording-container {
 		height: 160px;
-		width: 60px;
+		width: 80px;
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: column;
 		align-items: center;
 		background-image: url(/public/images/microphone-off.png);
 		background-repeat: no-repeat;
-		background-position: top center;
+		background-position: center 4px;
 		background-size: 80%;
 		margin: 20px;
 		align-self: center;
 		justify-self: end;
-		button {
-			font-size: 1.2rem;
-			border-radius: 4px;
-			cursor: pointer;
-		}
+		// button {
+		font-size: 1.2rem;
+		border-radius: 4px;
+		cursor: pointer;
+		// }
 		grid-area: microphone;
 	}
 	&.recording {

@@ -43,6 +43,8 @@ export default class App extends React.Component {
 
 		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
 		this.loadConfig = this.loadConfig.bind(this);
+		this.hideDialog = this.hideDialog.bind(this);
+		this.hideSpeechError = this.hideSpeechError.bind(this);
 		this.initialiseSpeeches = this.initialiseSpeeches.bind(this);
 		this.initialiseSynth = this.initialiseSynth.bind(this);
 		this.renderComponent = this.renderComponent.bind(this);
@@ -66,11 +68,11 @@ export default class App extends React.Component {
 
 	expandAllAccordions = () => {
 
-		console.log("expandAllAccordions");
+		console.log("expandAllAccordions"); // eslint-disable-line
 		// Not good as it does not affect state of accordion, in particular 'expanded' true/false.
 		const closedArticles = document.querySelectorAll('article.accordion-article:not(.expanded)');
 		const closedArrows = document.querySelectorAll('div.arrow:not(.expanded)');
-		console.log("closedArticles", closedArticles);
+		console.log("closedArticles", closedArticles); // eslint-disable-line
 		closedArticles.forEach((closedArticle) => {
 			closedArticle.classList.add('expanded');
 		});
@@ -114,7 +116,11 @@ export default class App extends React.Component {
 		// console.log("synth", synth);
 		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
 		if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-			document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+
+			this.logError('InitialiseSynth', {
+				message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+			});
+			// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
 		}
 
 		synth.onvoiceschanged = () => {
@@ -122,9 +128,16 @@ export default class App extends React.Component {
 			// show speak highlighting
 
 			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-				document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+				this.logError('InitialiseSynth', {
+					message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+				});
+				// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
 			}else{
 				document.getElementsByTagName('html')[0].classList.add('can-speak');
+				this.setState({
+					showSpeechError: false,
+				});
+
 			}
 			voices = synth.getVoices();
 			// console.log("voices", voices);
@@ -145,6 +158,9 @@ export default class App extends React.Component {
 			this.initialiseSpeeches(synth, targetLanguageCode, voices);
 
 		};
+		this.setState({
+			showSpeechError: true,
+		});
 	};
 
 	loadConfig = (configFile) => {
@@ -257,6 +273,14 @@ export default class App extends React.Component {
 		this.setState({
 			dialogContent: '',
 			showDialog: false,
+		});
+	};
+
+	hideSpeechError = () => {
+		// console.log("hideSpeechError");
+		this.setState({
+			dialogContent: '',
+			showSpeechError: false,
 		});
 	};
 
@@ -527,6 +551,7 @@ export default class App extends React.Component {
 			// wordsIntoSlots1,
 			// wordsIntoSlots2,
 			settings,
+			showSpeechError = false,
 		} = this.state;
 		const articles = new Array;
 
@@ -751,7 +776,14 @@ export default class App extends React.Component {
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
-					<div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div>
+					<Congratulate
+						className={`${showSpeechError ? 'show' : ''}`}
+						enabled={true}
+						hideDialog={this.hideSpeechError}
+						id='SpeechSynthesisError'
+						content={`This browser cannot perform speech synthesis. Please use another such as Chrome`}
+					/>
+					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
 					{config ?
 						<>
 							<div id="content" key="content">

@@ -206,13 +206,13 @@ export class ReadAloud extends React.PureComponent {
 						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>
-					<div className='recording-container'>
-						<img src={resolveAsset('/images/microphone-on.png')} alt='microphone on air' style={{ "display": "none" }} />
-						<button
-							className={``}
-							onClick={this.recordAndScore}
-						>{firstTry ? 'Record' : 'Try again?'}</button>
-					</div>
+					{/* <div className='recording-container'>
+						<img src={resolveAsset('/images/microphone-on.png')} alt='microphone on air' style={{ "display": "none" }} /> */}
+					<button
+						className={`recording-container`}
+						onClick={this.recordAndScore}
+					>{firstTry ? 'Record' : 'Try again?'}</button>
+					{/* </div> */}
 					{/* <p>Recording: {recording ? 'true' : 'false'}</p> */}
 					<div className={`form`}>
 						<p ref={this.resultRef}>{`${understood !== '' ? 'I heard: ' : ''}`}<span className='understood'>{`${ understood !== '' ? understood : ''}`}</span></p>
