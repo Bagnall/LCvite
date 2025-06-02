@@ -15,8 +15,11 @@ _skin.module.scss
 
 	.main-menu {
 		li {
-			background-color: $menu;
-			// color: white;
+			a {
+				background-color: $menu;
+				// color: white;
+				display: inline-block;
+			}
 		}
 	}
 

@@ -291,9 +291,9 @@ export const speak = (e, synth, targetLanguageCode, voices) => {
 	let {target} = e;
 	while (!target.classList.contains('speak')) target = target.parentNode;
 	const utterThis = new SpeechSynthesisUtterance(target.innerText);
-	utterThis.onend = () => {
-		console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
-	};
+	// utterThis.onend = () => {
+	// 	console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
+	// };
 
 	utterThis.onerror = () => {
 		console.error("SpeechSynthesisUtterance.onerror"); // eslint-disable-line

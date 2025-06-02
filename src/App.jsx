@@ -582,7 +582,14 @@ export default class App extends React.Component {
 						case 0: {
 							// First
 							renderedMenu.push(
-								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
 							);
 							if (currentLearningObject >= 2) renderedMenu.push(
 								<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
@@ -595,7 +602,14 @@ export default class App extends React.Component {
 								<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
 							);
 							renderedMenu.push(
-								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
 							);
 							break;
 						}
@@ -603,7 +617,14 @@ export default class App extends React.Component {
 						case currentLearningObject:
 						case currentLearningObject + 1: {
 							renderedMenu.push(
-								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
 							);
 							break;
 						}
@@ -612,7 +633,15 @@ export default class App extends React.Component {
 			}else {
 				learningObjects.forEach((learningObject, index) => {
 					renderedMenu.push(
-						<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+						<li
+							className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+							key={`menu-item-${index}`}
+							onClick={() => this.selectLearningObject(index)}
+						>
+							<a
+								href={`${baseURL}?config=${learningObject.file}`}
+							>{learningObject.title}</a>
+						</li>
 					);
 				});
 			}
