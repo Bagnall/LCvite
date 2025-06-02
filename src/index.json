@@ -1,0 +1,28 @@
+{
+	"learningObjects": [
+		{
+			"title": "Learning Object 1",
+			"file": "config-fr-1.json"
+		},
+		{
+			"title": "Learning Object 2",
+			"file": "config-fr-2.json"
+		},
+		{
+			"title": "Learning Object 3",
+			"file": "config-fr-3.json"
+		},
+		{
+			"title": "Learning Object 4",
+			"file": "config-fr-4.json"
+		},
+		{
+			"title": "Learning Object 5",
+			"file": "config-fr-5.json"
+		},
+		{
+			"title": "Learning Object 6",
+			"file": "config-fr-6.json"
+		}
+	]
+}

@@ -88,6 +88,7 @@ hr {
 	height: 1px;
 	// background: color.adjust(colours.$article-base-background, $blackness: 25%);
 }
+
 .yorkshire-rose {
 	display: none;
 	width: 400px;
@@ -275,6 +276,48 @@ h2 {
 	// .container {
 	// padding: 10px;
 	// }
+
+	ul.main-menu {
+		width: 100%;
+		margin: 0 0 0.5rem 0;
+		display: flex;
+		list-style-type: none;
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding: 0;
+		flex-wrap: wrap;
+		li {
+			padding: 0.5rem 1rem;
+			margin: 0.25rem;
+			text-indent: 0;
+			&.menu-item {
+				border: 1px solid rgb(0, 0, 0);
+				text-align: center;
+				border-radius: 8px;
+				box-shadow:
+					inset -4px -4px 8px rgba(0, 0, 0, 0.6),
+					inset 4px 4px 8px rgba(255, 255, 255, 0.6);
+			}
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+			&.ellipses {
+				color: black;
+				background-color: transparent;
+			}
+			a {
+				// font-size: 0.5rem;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			&.highlight {
+				box-shadow:
+					inset 4px 4px 8px rgba(0, 0, 0, 0.6),
+					inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+			}
+		}
+	}
 }
 
 @include media-queries.respond-above(s) {

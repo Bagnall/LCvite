@@ -43,11 +43,13 @@ export default class App extends React.Component {
 
 		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
 		this.loadConfig = this.loadConfig.bind(this);
+		this.loadIndex = this.loadIndex.bind(this);
 		this.hideDialog = this.hideDialog.bind(this);
 		this.hideSpeechError = this.hideSpeechError.bind(this);
 		this.initialiseSpeeches = this.initialiseSpeeches.bind(this);
 		this.initialiseSynth = this.initialiseSynth.bind(this);
 		this.renderComponent = this.renderComponent.bind(this);
+		this.selectLearningObject = this.selectLearningObject.bind(this);
 	}
 
 	componentDidMount = () => {
@@ -59,6 +61,7 @@ export default class App extends React.Component {
 		const configFile = urlParams.get('config');
 
 		if (configFile) this.loadConfig(`./src/${configFile}`);
+		this.loadIndex();
 	};
 
 	// componentDidUpdate = () => {
@@ -115,22 +118,22 @@ export default class App extends React.Component {
 		let voices = [];
 		// console.log("synth", synth);
 		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
-		if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+		// if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
 
-			this.logError('InitialiseSynth', {
-				message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-			});
-			// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
-		}
+		// this.logError('InitialiseSynth', {
+		// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+		// });
+		// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+		// }
 
 		synth.onvoiceschanged = () => {
 			// console.log("onvoiceschanged");
 			// show speak highlighting
 
 			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-				this.logError('InitialiseSynth', {
-					message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-				});
+				// this.logError('InitialiseSynth', {
+				// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+				// });
 				// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
 			}else{
 				document.getElementsByTagName('html')[0].classList.add('can-speak');
@@ -197,6 +200,39 @@ export default class App extends React.Component {
 			})
 			.catch(error => {
 				const action = `Loading configuration`;
+				this.logError(action, error);
+			});
+	};
+
+	loadIndex = () => {
+		// console.log("loadIndex");
+
+		// Read the index file
+		const headers = new Headers();
+		headers.append("Content-Type", "application/json");
+
+		const requestOptions = {
+			headers: headers,
+			method: 'GET',
+			redirect: 'follow',
+		};
+
+		let currentLearningObject = 0;
+		if (sessionStorage.getItem("currentLearningObject")) currentLearningObject = parseInt(sessionStorage.getItem("currentLearningObject"));
+
+		fetch(`./src/index.json`, requestOptions)
+			.then(handleResponse)
+			.then(res => {
+				// console.log("res", res);
+				const { learningObjects } = res;
+
+				this.setState({
+					currentLearningObject: currentLearningObject,
+					learningObjects: learningObjects,
+				});
+			})
+			.catch(error => {
+				const action = `Loading index`;
 				this.logError(action, error);
 			});
 	};
@@ -529,6 +565,71 @@ export default class App extends React.Component {
 		// return articles;
 	};
 
+	renderMenu = () => {
+		// console.log("renderMenu");
+		const {
+			currentLearningObject,
+			learningObjects
+		} = this.state;
+		const renderedMenu = new Array;
+		const nLearningObjects = learningObjects.length;
+		if (learningObjects) {
+			const baseURL = window.location.href.split('?')[0];
+			if (nLearningObjects > 6){
+				learningObjects.forEach((learningObject, index) => {
+					// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
+					switch (index) {
+						case 0: {
+							// First
+							renderedMenu.push(
+								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+							);
+							if (currentLearningObject >= 2) renderedMenu.push(
+								<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
+							);
+							break;
+						}
+						case nLearningObjects - 1: {
+							// Last
+							if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
+								<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
+							);
+							renderedMenu.push(
+								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+							);
+							break;
+						}
+						case currentLearningObject - 1:
+						case currentLearningObject:
+						case currentLearningObject + 1: {
+							renderedMenu.push(
+								<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+							);
+							break;
+						}
+					}
+				});
+			}else {
+				learningObjects.forEach((learningObject, index) => {
+					renderedMenu.push(
+						<li onClick={() => this.selectLearningObject(index)} className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`} key={`menu-item-${index}`}><a href={`${baseURL}?config=${learningObject.file}`}>{learningObject.title}</a></li>
+					);
+				});
+			}
+		}
+		return (
+			<ul className={`main-menu`}>{renderedMenu}</ul>
+		);
+	};
+
+	selectLearningObject = (index) => {
+		console.log("selectLearningObject", index);
+		this.setState({
+			currentLearningObject: index,
+		});
+		sessionStorage.setItem("currentLearningObject", index);
+	};
+
 	render = () => {
 		const {
 			config,
@@ -538,6 +639,7 @@ export default class App extends React.Component {
 			// jigsaw1,
 			// jigsaw2,
 			// jigsaw3,
+			learningObjects,
 			// monologues,
 			// phrases1,
 			// phrases2,
@@ -781,7 +883,7 @@ export default class App extends React.Component {
 						enabled={true}
 						hideDialog={this.hideSpeechError}
 						id='SpeechSynthesisError'
-						content={`This browser cannot perform speech synthesis. Please use another such as Chrome`}
+						content={`This browser cannot perform speech synthesis. Please use a PC and a browser such as Chrome`}
 					/>
 					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
 					{config ?
@@ -793,6 +895,7 @@ export default class App extends React.Component {
 									<h1>{title}</h1>
 									<h2>{subtitle}</h2>
 								</div>
+								{this.renderMenu()}
 								<Accordion id={`accordion1`} key={`accordion1`}>
 									{/* <AccordionArticle
 										id={`wordgrid1Accordion`}

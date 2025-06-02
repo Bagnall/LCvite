@@ -4,13 +4,20 @@ _skin.module.scss
 @use "_colours.module.scss";
 @use "sass:color";
 
-@mixin affected_by_skin($home, $button, $background, $article-base-background, $panel-back, $body-back) {
+@mixin affected_by_skin($home, $button, $background, $article-base-background, $panel-back, $body-back, $menu) {
 	background-color: $background;
 	.tabs-component-container {
 		background-color: $background;
 	}
 	body {
 		background-color: $body-back;
+	}
+
+	.main-menu {
+		li {
+			background-color: $menu;
+			// color: white;
+		}
 	}
 
 	.home {
@@ -308,14 +315,16 @@ _skin.module.scss
 	$french-panel-back: colours.$french-panel-back;
 	$french-body-back: white;
 	$panel-back: $french-panel-back;
+	$menu: blue;
 	// $body-back: $french-body-back;
-	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back);
+	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back, $menu);
 }
 
 .de-DE {
 	$german-body-back: white;
+	$menu: blue;
 
-	@include affected_by_skin(colours.$german-home, colours.$german-button, $german-body-back, colours.$german-article-base-background, colours.$german-panel-back, $german-body-back);
+	@include affected_by_skin(colours.$german-home, colours.$german-button, $german-body-back, colours.$german-article-base-background, colours.$german-panel-back, $german-body-back, $menu);
 }
 
 .es-US {
@@ -326,8 +335,10 @@ _skin.module.scss
 	$spanish-body-back: white;
 	$button: colours.$spanish-button;
 	$panel-back: $spanish-panel-back;
+	$menu: rgb(206, 134, 0);
+
 	// $body-back: $spanish-body-back;
-	@include affected_by_skin($spanish-home, $button, $background, $spanish-article-base-background, $spanish-panel-back, $spanish-body-back);
+	@include affected_by_skin($spanish-home, $button, $background, $spanish-article-base-background, $spanish-panel-back, $spanish-body-back, $menu);
 }
 
 .arabic {
@@ -338,6 +349,7 @@ _skin.module.scss
 	$arabic-body-back: white;
 	$button: colours.$arabic-button;
 	$panel-back: $arabic-panel-back;
+	$menu: rgb(206, 134, 0);
 	// $body-back: $arabic-body-back;
-	@include affected_by_skin($arabic-home, $button, $background, $arabic-article-base-background, $arabic-panel-back, $arabic-body-back);
+	@include affected_by_skin($arabic-home, $button, $background, $arabic-article-base-background, $arabic-panel-back, $arabic-body-back, $menu);
 }

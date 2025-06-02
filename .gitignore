@@ -26,3 +26,4 @@ dist-ssr
 *.sw?
 *.bak
 public/images/table-top.png
+yarn.lock
