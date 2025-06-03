@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import './App.scss';
 import {
 	Accordion,
@@ -41,7 +40,6 @@ export default class App extends React.Component {
 			showDialog: false,
 		});
 
-		// this.handleLoadConfig = this.handleLoadConfig.bind(this);
 		this.loadConfig = this.loadConfig.bind(this);
 		this.loadIndex = this.loadIndex.bind(this);
 		this.hideDialog = this.hideDialog.bind(this);
@@ -51,6 +49,20 @@ export default class App extends React.Component {
 		this.renderComponent = this.renderComponent.bind(this);
 		this.selectLearningObject = this.selectLearningObject.bind(this);
 	}
+
+	clearError = (index) => {
+		const { errors } = this.state;
+		errors.splice(index, 1);
+		this.setState({
+			errors: errors,
+		});
+	};
+
+	clearLog = () => {
+		this.setState({
+			errors: [],
+		});
+	};
 
 	componentDidMount = () => {
 
@@ -64,11 +76,6 @@ export default class App extends React.Component {
 		this.loadIndex();
 	};
 
-	// componentDidUpdate = () => {
-	// 	console.log("componentDidUpdate");
-
-	// };
-
 	expandAllAccordions = () => {
 
 		console.log("expandAllAccordions"); // eslint-disable-line
@@ -81,6 +88,22 @@ export default class App extends React.Component {
 		});
 		closedArrows.forEach((closedArrow) => {
 			closedArrow.classList.add('expanded');
+		});
+	};
+
+	hideDialog = () => {
+		// console.log("hideDialog");
+		this.setState({
+			dialogContent: '',
+			showDialog: false,
+		});
+	};
+
+	hideSpeechError = () => {
+		// console.log("hideSpeechError");
+		this.setState({
+			dialogContent: '',
+			showSpeechError: false,
 		});
 	};
 
@@ -127,7 +150,7 @@ export default class App extends React.Component {
 		// }
 
 		synth.onvoiceschanged = () => {
-			// console.log("onvoiceschanged");
+			console.log("onvoiceschanged");
 			// show speak highlighting
 
 			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
@@ -161,9 +184,9 @@ export default class App extends React.Component {
 			this.initialiseSpeeches(synth, targetLanguageCode, voices);
 
 		};
-		this.setState({
-			showSpeechError: true,
-		});
+		// this.setState({
+		// 	showSpeechError: true,
+		// });
 	};
 
 	loadConfig = (configFile) => {
@@ -288,375 +311,6 @@ export default class App extends React.Component {
 			refreshErrorLog: !refreshErrorLog,
 			showSpinner: false,
 		});
-	};
-
-	clearError = (index) => {
-		const { errors } = this.state;
-		errors.splice(index, 1);
-		this.setState({
-			errors: errors,
-		});
-	};
-
-	clearLog = () => {
-		this.setState({
-			errors: [],
-		});
-	};
-
-	hideDialog = () => {
-		// console.log("hideDialog");
-		this.setState({
-			dialogContent: '',
-			showDialog: false,
-		});
-	};
-
-	hideSpeechError = () => {
-		// console.log("hideSpeechError");
-		this.setState({
-			dialogContent: '',
-			showSpeechError: false,
-		});
-	};
-
-	showDialog = (content) => {
-		this.setState({
-			dialogContent: content,
-			showDialog: true,
-		});
-	};
-
-	renderComponent = (value, articles) => {
-		// console.log(`renderComponent`);
-		// console.log(value);
-		const { id, component, titleText } = value;
-		// console.log(`component [${component}]`);
-		// console.log("renderComponent id=", id);
-		switch (component) {
-			case 'AnswerTable': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<AnswerTable
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'Blanks': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<Blanks
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			// case 'CrossWord': {
-			// 	articles.push(
-			// 		<AccordionArticle
-			// 			id={`${id}Accordion`}
-			// 			key={`${id}Accordion`}
-			// 			title={titleText}
-			// 		>
-			// 			<CrossWord
-			// 				config={value}
-			// 				logError={this.logError}
-			// 				showDialog={this.showDialog}
-			// 			/>
-			// 		</AccordionArticle>
-			// 	);
-			// 	break;
-			// }
-			case 'DropDowns': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<DropDowns
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'Explanation': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<Explanation
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'Group': {
-				const renderedGroupContent = new Array;
-				const { content: groupContent = [] } = value;
-				// console.log("groupContent", groupContent);
-
-				groupContent.forEach((child) => {
-					for (const [/* key */, v] of Object.entries(child)) {
-						// console.log("v", v.id);
-						this.renderComponent(v, renderedGroupContent);
-					}
-				});
-
-				const {
-					htmlContent,
-					id,
-				} = value;
-				// console.log(`Group${id}Accordion`);
-				articles.push(
-					<AccordionArticle
-						className={`group`}
-						id={`Group${id}Accordion`}
-						key={`Group${id}Accordion`}
-						title={titleText}
-					>
-						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{renderedGroupContent}
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'Jigsaw': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<Jigsaw
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'MemoryMatchGame': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<MemoryMatchGame
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'Monologue': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<Monologue
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'PhraseTable': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<PhraseTable
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'ReadAloud': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<ReadAloud
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'WordGrid': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<WordGrid
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case 'WordParts': {
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						title={titleText}
-					>
-						<WordParts
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			default: {
-				articles.push(
-					<p key={`notImplemented${id}`}>Component {component} not implemented</p>
-				);
-			}
-		}
-		// return articles;
-	};
-
-	renderMenu = () => {
-		// console.log("renderMenu");
-		const {
-			currentLearningObject,
-			learningObjects
-		} = this.state;
-		const renderedMenu = new Array;
-		const nLearningObjects = learningObjects.length;
-		if (learningObjects) {
-			const baseURL = window.location.href.split('?')[0];
-			if (nLearningObjects > 6){
-				learningObjects.forEach((learningObject, index) => {
-					// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
-					switch (index) {
-						case 0: {
-							// First
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							if (currentLearningObject >= 2) renderedMenu.push(
-								<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
-							);
-							break;
-						}
-						case nLearningObjects - 1: {
-							// Last
-							if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
-								<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
-							);
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							break;
-						}
-						case currentLearningObject - 1:
-						case currentLearningObject:
-						case currentLearningObject + 1: {
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							break;
-						}
-					}
-				});
-			}else {
-				learningObjects.forEach((learningObject, index) => {
-					renderedMenu.push(
-						<li
-							className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-							key={`menu-item-${index}`}
-							onClick={() => this.selectLearningObject(index)}
-						>
-							<a
-								href={`${baseURL}?config=${learningObject.file}`}
-							>{learningObject.title}</a>
-						</li>
-					);
-				});
-			}
-		}
-		return (
-			<ul className={`main-menu`}>{renderedMenu}</ul>
-		);
-	};
-
-	selectLearningObject = (index) => {
-		console.log("selectLearningObject", index);
-		this.setState({
-			currentLearningObject: index,
-		});
-		sessionStorage.setItem("currentLearningObject", index);
 	};
 
 	render = () => {
@@ -912,7 +566,7 @@ export default class App extends React.Component {
 						enabled={true}
 						hideDialog={this.hideSpeechError}
 						id='SpeechSynthesisError'
-						content={`This browser cannot perform speech synthesis. Please use a PC and a browser such as Chrome`}
+						content={`This browser cannot perform speech synthesis. Please use a larger device and a browser such as Chrome`}
 					/>
 					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
 					{config ?
@@ -1152,6 +806,345 @@ export default class App extends React.Component {
 
 			</>
 		);
+	};
+
+	renderComponent = (value, articles) => {
+		// console.log(`renderComponent`);
+		// console.log(value);
+		const { id, component, titleText } = value;
+		// console.log(`component [${component}]`);
+		// console.log("renderComponent id=", id);
+		switch (component) {
+			case 'AnswerTable': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<AnswerTable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Blanks': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Blanks
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			// case 'CrossWord': {
+			// 	articles.push(
+			// 		<AccordionArticle
+			// 			id={`${id}Accordion`}
+			// 			key={`${id}Accordion`}
+			// 			title={titleText}
+			// 		>
+			// 			<CrossWord
+			// 				config={value}
+			// 				logError={this.logError}
+			// 				showDialog={this.showDialog}
+			// 			/>
+			// 		</AccordionArticle>
+			// 	);
+			// 	break;
+			// }
+			case 'DropDowns': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<DropDowns
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Explanation': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Explanation
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Group': {
+				const renderedGroupContent = new Array;
+				const { content: groupContent = [] } = value;
+				// console.log("groupContent", groupContent);
+
+				groupContent.forEach((child) => {
+					for (const [/* key */, v] of Object.entries(child)) {
+						// console.log("v", v.id);
+						this.renderComponent(v, renderedGroupContent);
+					}
+				});
+
+				const {
+					htmlContent,
+					id,
+				} = value;
+				// console.log(`Group${id}Accordion`);
+				articles.push(
+					<AccordionArticle
+						className={`group`}
+						id={`Group${id}Accordion`}
+						key={`Group${id}Accordion`}
+						title={titleText}
+					>
+						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{renderedGroupContent}
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Jigsaw': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Jigsaw
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'MemoryMatchGame': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<MemoryMatchGame
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Monologue': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<Monologue
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'PhraseTable': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<PhraseTable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'ReadAloud': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<ReadAloud
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'WordGrid': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<WordGrid
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'WordParts': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						title={titleText}
+					>
+						<WordParts
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			default: {
+				articles.push(
+					<p key={`notImplemented${id}`}>Component {component} not implemented</p>
+				);
+			}
+		}
+		// return articles;
+	};
+
+	renderMenu = () => {
+		// console.log("renderMenu");
+		const {
+			currentLearningObject,
+			learningObjects
+		} = this.state;
+		const renderedMenu = new Array;
+		if (learningObjects !== undefined) {
+			const nLearningObjects = learningObjects.length;
+			const baseURL = window.location.href.split('?')[0];
+			if (nLearningObjects > 6){
+				learningObjects.forEach((learningObject, index) => {
+					// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
+					switch (index) {
+						case 0: {
+							// First
+							renderedMenu.push(
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
+							);
+							if (currentLearningObject >= 2) renderedMenu.push(
+								<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
+							);
+							break;
+						}
+						case nLearningObjects - 1: {
+							// Last
+							if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
+								<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
+							);
+							renderedMenu.push(
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
+							);
+							break;
+						}
+						case currentLearningObject - 1:
+						case currentLearningObject:
+						case currentLearningObject + 1: {
+							renderedMenu.push(
+								<li
+									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+									key={`menu-item-${index}`}>
+									<a
+										href={`${baseURL}?config=${learningObject.file}`}
+										onClick={() => this.selectLearningObject(index)}
+									>{learningObject.title}</a>
+								</li>
+							);
+							break;
+						}
+					}
+				});
+			}else {
+				learningObjects.forEach((learningObject, index) => {
+					renderedMenu.push(
+						<li
+							className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+							key={`menu-item-${index}`}
+							onClick={() => this.selectLearningObject(index)}
+						>
+							<a
+								href={`${baseURL}?config=${learningObject.file}`}
+							>{learningObject.title}</a>
+						</li>
+					);
+				});
+			}
+		}
+		return (
+			<ul className={`main-menu`}>{renderedMenu}</ul>
+		);
+	};
+
+	selectLearningObject = (index) => {
+		console.log("selectLearningObject", index);
+		this.setState({
+			currentLearningObject: index,
+		});
+		sessionStorage.setItem("currentLearningObject", index);
+	};
+
+	showDialog = (content) => {
+		this.setState({
+			dialogContent: content,
+			showDialog: true,
+		});
 	};
 }
 

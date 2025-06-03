@@ -5,11 +5,14 @@ export class Flag extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.canvasRef = createRef();
-
-		this.loadFlag = this.loadFlag.bind(this);
+		this.flagLoaded = false;
+		this.totalFrames = 60;
+		this.frameIndex = 0;
+		this.filmCanvas = null;
+		this.filmCtx = null;
+		this.usingCachedFrames = false;
+		this.time = 0;
 	}
-
-	flagLoaded = false;
 
 	componentDidMount = () => {
 		this.loadFlag();
@@ -20,80 +23,86 @@ export class Flag extends PureComponent {
 	};
 
 	loadFlag = () => {
+		if (this.flagLoaded) return;
 
-		if (!this.flagLoaded) {
-			// Set up canvas etc.
-			const canvas = this.canvasRef.current;
-			const ctx = canvas.getContext('2d');
-			const DPR = window.devicePixelRatio || 1;
-			const image = new Image();
+		const canvas = this.canvasRef.current;
+		const ctx = canvas.getContext('2d');
+		const DPR = window.devicePixelRatio || 1;
+		const image = new Image();
 
-			image.onload = () => {
-				const { width } = image;
-				const { height } = image;
-				const amplitude = 8;
+		image.onload = () => {
+			const { width, height } = image;
+			const amplitude = 8;
+			const shadowBuffer = this.props.shadow ? 20 : 0;
+			const totalWidth = width + shadowBuffer * 2;
+			const totalHeight = height + amplitude * 2 + shadowBuffer * 2;
 
-				// const shadowBuffer = this.props.shadow ? 10 : 0;
-				// canvas.width = width * DPR + shadowBuffer;
-				// canvas.height = (height + amplitude * 2 + shadowBuffer) * DPR;
-				// canvas.style.width = `${width + shadowBuffer }px`;
-				// canvas.style.height = `${height + amplitude * 2 + shadowBuffer}px`;
-				// ctx.scale(DPR, DPR);
+			canvas.width = totalWidth * DPR;
+			canvas.height = totalHeight * DPR;
+			canvas.style.width = `${totalWidth}px`;
+			canvas.style.height = `${totalHeight}px`;
+			ctx.setTransform(DPR, 0, 0, DPR, shadowBuffer, shadowBuffer);
 
-				const shadowBuffer = this.props.shadow ? 20 : 0;
-				canvas.width = (width + shadowBuffer * 2) * DPR;
-				canvas.height = (height + amplitude * 2 + shadowBuffer * 2) * DPR;
-				canvas.style.width = `${width + shadowBuffer * 2}px`;
-				canvas.style.height = `${height + amplitude * 2 + shadowBuffer * 2}px`;
-				ctx.setTransform(DPR, 0, 0, DPR, shadowBuffer, shadowBuffer); // shifts drawing
+			// Set up visible film strip canvas
+			this.filmCanvas = document.createElement('canvas');
+			this.filmCanvas.width = width * this.totalFrames;
+			this.filmCanvas.height = height + amplitude * 2;
+			this.filmCtx = this.filmCanvas.getContext('2d');
 
-				const offCanvas = document.createElement('canvas');
-				offCanvas.width = width;
-				offCanvas.height = height;
-				const offCtx = offCanvas.getContext('2d');
-				offCtx.drawImage(image, 0, 0);
+			// Debug visibility
+			this.filmCanvas.style.position = 'absolute';
+			this.filmCanvas.style.top = '0';
+			this.filmCanvas.style.left = '0';
+			this.filmCanvas.style.zIndex = '1000';
+			// document.body.appendChild(this.filmCanvas);
 
-				let time = 0;
+			const offCanvas = document.createElement('canvas');
+			offCanvas.width = width;
+			offCanvas.height = height;
+			const offCtx = offCanvas.getContext('2d');
+			offCtx.drawImage(image, 0, 0);
 
-				const draw = () => {
-					const { fix, shadow: showDropShadow } = this.props;
+			const draw = () => {
+				const { fix, shadow: showDropShadow } = this.props;
 
-					if (showDropShadow) {
-						ctx.shadowColor = 'rgba(0, 0, 0, 0.25)';
-						ctx.shadowBlur = 8;
-						ctx.shadowOffsetX = 8;
-						ctx.shadowOffsetY = 6;
-					} else {
-						ctx.shadowColor = 'transparent';
-						ctx.shadowBlur = 0;
-						ctx.shadowOffsetX = 0;
-						ctx.shadowOffsetY = 0;
-					}
-					// ctx.clearRect(0, 0, width + shadowBuffer, height + amplitude * 2 + shadowBuffer);
-					ctx.clearRect(-shadowBuffer, -shadowBuffer, width + shadowBuffer * 2, height + amplitude * 2 + shadowBuffer * 2);
-					const modAmplitude = amplitude;
-					let modHeight = height;
+				if (showDropShadow) {
+					ctx.shadowColor = 'rgba(0, 0, 0, 0.25)';
+					ctx.shadowBlur = 8;
+					ctx.shadowOffsetX = 8;
+					ctx.shadowOffsetY = 6;
+				} else {
+					ctx.shadowColor = 'transparent';
+					ctx.shadowBlur = 0;
+					ctx.shadowOffsetX = 0;
+					ctx.shadowOffsetY = 0;
+				}
+
+				ctx.clearRect(-shadowBuffer, -shadowBuffer, totalWidth, totalHeight);
+
+				const modHeight = height;
+				const modAmplitude = amplitude;
+
+				if (!this.usingCachedFrames) {
+					// Full render
 					for (let x = 0; x < width; x++) {
 						let waveOffset;
 						switch (fix) {
 							case 'left':
-								waveOffset = Math.sin(((x - time) * 0.05) - (time * 0.05)) * amplitude * x / width; // * x / width : fixes left edge
+								waveOffset = Math.sin(((x - this.time) * 0.05) - (this.time * 0.05)) * amplitude * x / width;
 								break;
 							case 'right':
-								waveOffset = Math.sin(((x - time) * 0.05) - (time * 0.05)) * amplitude * (width - x) / width; // * x / width : fixes left edge
+								waveOffset = Math.sin(((x - this.time) * 0.05) - (this.time * 0.05)) * amplitude * (width - x) / width;
 								break;
 							case 'top':
-								// This doesn't work yet
-								waveOffset = 0; // Math.sin(((x - time) * 0.05)) * amplitude; // * x / width : fixes top edge
-								modHeight = height + amplitude * Math.sin(((x - time) * 0.05)) - amplitude;
+								waveOffset = 0;
 								break;
 							default:
-								waveOffset = Math.sin(((x - time) * 0.05) - (time * 0.05)) * amplitude;
+								waveOffset = Math.sin(((x - this.time) * 0.05) - (this.time * 0.05)) * amplitude;
 						}
 
-						// Light and shadow effect
-						const light = Math.sin(((x - time) * 0.05 - (time * 0.05)) + Math.PI / 2) * 0.5 + 0.5; // 0 to 1
+						const light = Math.sin(((x - this.time) * 0.05 - (this.time * 0.05)) + Math.PI / 2) * 0.5 + 0.5;
 						ctx.globalAlpha = 1;
+
 						ctx.drawImage(
 							offCanvas,
 							x, 0, 1, modHeight,
@@ -107,17 +116,40 @@ export class Flag extends PureComponent {
 						ctx.fillRect(x, waveOffset + modAmplitude, 1, modHeight);
 					}
 
-					time += 0.5;
-					requestAnimationFrame(draw);
-				};
+					// Save current frame to film strip
+					if (this.frameIndex < this.totalFrames) {
+						this.filmCtx.drawImage(
+							canvas,
+							shadowBuffer, shadowBuffer,
+							width, modHeight + modAmplitude * 2,
+							this.frameIndex * width, 0,
+							width, modHeight + modAmplitude * 2
+						);
+						this.frameIndex++;
+					}
+					if (this.frameIndex === this.totalFrames) {
+						this.usingCachedFrames = true;
+					}
+				} else {
+					const currentFrame = Math.floor(this.time % this.totalFrames);
+					ctx.drawImage(
+						this.filmCanvas,
+						currentFrame * width, 0,
+						width, height + amplitude * 2,
+						0, 0,
+						width, height + amplitude * 2
+					);
+				}
 
-				draw();
+				this.time = (this.time + 1) % this.totalFrames;
+				requestAnimationFrame(draw);
 			};
 
-			image.src = this.props.flag;
+			draw();
+		};
 
-			this.flagLoaded = true;
-		}
+		image.src = this.props.flag;
+		this.flagLoaded = true;
 	};
 
 	render() {

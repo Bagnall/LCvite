@@ -20,6 +20,13 @@ _skin.module.scss
 				// color: white;
 				display: inline-block;
 			}
+			&.ellipses {
+				background-color: $menu;
+				&::before,
+				&::after {
+					background-color: $menu;
+				}
+			}
 		}
 	}
 

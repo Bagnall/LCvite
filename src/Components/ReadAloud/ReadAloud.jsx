@@ -1,8 +1,6 @@
 import './ReadAloud.scss';
-// import {AudioClip} from '../';
 import {
 	highlightTextDiff,
-	resolveAsset,
 } from '../../utility';
 import React from 'react';
 
@@ -26,12 +24,11 @@ export class ReadAloud extends React.PureComponent {
 		let cannotRun = '';
 		let recognition = null;
 		if (SpchRecognition && SpchGrammarList) {
-			// const phrases = [phrase];
 			recognition = new SpchRecognition();
 			if (recognition) {
 				if (SpchGrammarList) {
-					// 	// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
-					// 	// This code is provided as a demonstration of possible capability. You may choose not to use it.
+					// SpeechGrammarList is not currently available in Safari, and does not have any effect in any other browser.
+					// This code is provided as a demonstration of possible capability. You may choose not to use it.
 					const speechRecognitionList = new SpchGrammarList();
 					//   const grammar = `#JSGF V1.0; grammar colors; public <color> = ${ colors.join(' | ') } ;`;
 					// const grammar = `#JSGF V1.0; grammar phrases; public <phrase> = ${ phrases.join(' | ') } ;`;
@@ -104,19 +101,18 @@ export class ReadAloud extends React.PureComponent {
 	initialiseSpeechRecognition = () => {
 		let SpchRecognition;
 		try {
-			SpchRecognition = SpeechRecognition;
+			SpchRecognition = window.SpeechRecognition;
 		} catch (err) {
 			try {
-				SpchRecognition = webkitSpeechRecognition;
+				SpchRecognition = window.webkitSpeechRecognition;
 			}
 			catch (err) {
-				// console.log(err);
 				return true;
 			}
 		}
 		let SpchGrammarList;
 		try {
-			SpchGrammarList = SpeechGrammarList;
+			SpchGrammarList = window.SpeechGrammarList;
 		} catch (err) {
 			try {
 				SpchGrammarList = window.webkitSpeechGrammarList;
@@ -126,7 +122,10 @@ export class ReadAloud extends React.PureComponent {
 				return true;
 			}
 		}
-		return {"SpchRecognition": SpchRecognition, "SpchGrammarList":SpchGrammarList};
+		return {
+			"SpchGrammarList": SpchGrammarList,
+			"SpchRecognition": SpchRecognition,
+		};
 	};
 
 	diagnose = (e) => {

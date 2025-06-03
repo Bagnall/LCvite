@@ -286,6 +286,7 @@ h2 {
 		justify-content: space-evenly;
 		padding: 0;
 		flex-wrap: wrap;
+		align-items: center;
 		li {
 			margin: 0.25rem;
 			text-indent: 0;
@@ -298,8 +299,35 @@ h2 {
 			text-decoration: none;
 			font-weight: bold;
 			&.ellipses {
+				$ellipses-diameter: 10px;
 				color: black;
-				background-color: transparent;
+				// background-color: transparent;
+				text-indent: -9999px;
+				width: $ellipses-diameter;
+				height: $ellipses-diameter;
+				// background: red;
+				border-radius: $ellipses-diameter / 2;
+				position: relative;
+				box-shadow:
+					inset -2px -2px 3px rgba(0, 0, 0, 0.6),
+					inset 2px 2px 3px rgba(255, 255, 255, 0.6);
+				&::before,
+				&::after {
+					box-shadow:
+						inset -2px -2px 3px rgba(0, 0, 0, 0.6),
+						inset 2px 2px 3px rgba(255, 255, 255, 0.6);
+					content: "";
+					position: absolute;
+					top: 0;
+					left: $ellipses-diameter * 1.5;
+					width: $ellipses-diameter;
+					height: $ellipses-diameter;
+					// background: red;
+					border-radius: $ellipses-diameter / 2;
+				}
+				&::after {
+					left: -$ellipses-diameter * 1.5;
+				}
 			}
 			a {
 				// border: 1px solid rgb(0, 0, 0);
