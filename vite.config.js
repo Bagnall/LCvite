@@ -1,8 +1,17 @@
-import { defineConfig } from 'vite';
+import { createLogger, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-
 // https://vite.dev/config/
+
+const logger = createLogger();
+const loggerWarn = logger.warn;
+
+logger.warn = (msg, options) => {
+	// Ignore 'esbuild css minify thing is not a known CSS property'
+	if (msg.includes('esbuild css minify') && msg.includes(' is not a known CSS property')) return;
+	loggerWarn(msg, options);
+};
+
 export default defineConfig(({ command }) => ({
 	assetsInclude: [
 		'**/*.mp3',
@@ -12,6 +21,7 @@ export default defineConfig(({ command }) => ({
 	base: command === 'build' ? `./` : `/projects/richard/`,
 	build: {
 		assetsDir: "src",
+		emptyOutDir: false,
 		rollupOptions: {
 			output: {
 				assetFileNames: `src/[name].[ext]`,
@@ -20,6 +30,7 @@ export default defineConfig(({ command }) => ({
 			}
 		}
 	},
+	customLogger: logger,
 	plugins: [
 		react(),
 		viteStaticCopy({
@@ -38,5 +49,5 @@ export default defineConfig(({ command }) => ({
 				}
 			]
 		})
-	],
+	]
 }));

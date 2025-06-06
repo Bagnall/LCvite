@@ -27,12 +27,47 @@ export class Blanks extends React.PureComponent {
 		this.placeholdersRef = React.createRef();
 		this.wordsContainerRef = React.createRef();
 		const { config, id } = props;
-		const { answers, questions, blanksType, words } = config;
+		const { answers, audio, questions, blanksType, phrases 	} = config;
+		const {words = []} = config;
 		let wordTiles = new Array;
 		let nToPlace = 0;
+		const phraseList = new Array;
 		switch (blanksType) {
-			case 'phrases':
-			case 'table':
+			case 'phrases': {
+				let wordTileIndex = 0;
+				for (let i = 0; i < phrases.length; i++) {
+					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
+					const phrase = new Array;
+					for (let j = 0; j < phraseSplit.length; j++) {
+						if (phraseSplit[j][0] === '[') {
+							// span it as a target!
+							const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
+							// word${index} must be the first class (Done in Word component)
+							wordTiles.push(
+								<Word
+									className={`blank draggable`}
+									index={wordTileIndex}
+									key={`${id}word${wordTileIndex + 1}`}>{cleanedPhraseSplit}</Word>
+							);
+							wordTileIndex++;
+
+							words.push(cleanedPhraseSplit);
+							nToPlace++;
+						}
+					}
+
+					const soundFile = resolveAsset(`${audio[i]}`);
+					phraseList.push(
+						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+							className={`compact inset`}
+							soundFile={soundFile}
+						/></li>
+					);
+				}
+				wordTiles = shuffleArray(wordTiles);
+				break;
+			}
+			case 'table': {
 				nToPlace = words.length;
 				for (let i = 0; i < nToPlace; i++) {
 					wordTiles.push(
@@ -44,6 +79,7 @@ export class Blanks extends React.PureComponent {
 				}
 				wordTiles = shuffleArray(wordTiles);
 				break;
+			}
 			case "questions-answers": {
 				let mixer = new Array;
 				nToPlace = questions.length;
@@ -71,6 +107,7 @@ export class Blanks extends React.PureComponent {
 			margin: 20,
 			nToPlace: nToPlace,
 			wordTiles: wordTiles,
+			words: words,
 		});
 	}
 
@@ -125,7 +162,7 @@ export class Blanks extends React.PureComponent {
 	};
 
 	handleMouseDown = (e) => {
-		// console.log("handleMouseDown", e);
+		console.log("handleMouseDown", e);
 		if (e.button && e.button !== 0) return;
 		e.preventDefault();
 		e.stopPropagation();
@@ -198,7 +235,7 @@ export class Blanks extends React.PureComponent {
 	};
 
 	handleMouseMove = (e) => {
-		// console.log("handleMouseMove",e)
+		// console.log("handleMouseMove", this.movingPiece !== undefined);// , e);
 
 		if (this.movingPiece && this.movingPiece.classList.contains("dragging")) {
 			let { height, marginLeft, marginTop, paddingLeft, paddingTop, width } = window.getComputedStyle(this.movingPiece);
@@ -225,9 +262,9 @@ export class Blanks extends React.PureComponent {
 		}
 	};
 
-	handleMouseUp = () => {
-		// console.log("handleMouseUp", e)
-
+	handleMouseUp = (e) => {
+		// console.log("handleMouseUp", this.movingPiece !== undefined);
+		e.stopPropagation();
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
 		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
@@ -236,8 +273,7 @@ export class Blanks extends React.PureComponent {
 		} = this.state;
 
 		// Check valid spot and valid set of tiles
-		if (this.movingPiece) {
-			this.movingPiece.classList.remove("dragging");
+		if (this.movingPiece !== undefined) {
 
 			const {
 				congratulationsText,
@@ -252,16 +288,25 @@ export class Blanks extends React.PureComponent {
 			if (inLimitsResult.success) {
 				({ targetX, targetY, target } = inLimitsResult);
 				// The eagle has landed
-				this.movingPiece.classList.remove("draggable");
-				this.movingPiece.classList.remove('highlight');
 				clickAudio.play();
 
 				this.movingPiece.style.left = `${targetX}px`;
 				this.movingPiece.style.top = `${targetY}px`;
-				this.movingPiece.classList.add("placed");
 				// debugger;
 				// console.log(target);
-				setTimeout(() => target.style.opacity = 1, 1000); // Corresponds to SCSS transition times
+				// const _this = this;
+				if (this.movingPiece) {
+					this.movingPiece.classList.remove("dragging");
+					this.movingPiece.classList.add("placed");
+					this.movingPiece.classList.remove("draggable");
+					this.movingPiece.classList.remove('highlight');
+					// console.log(10, "Removing movingPiece");
+					this.movingPiece = undefined;
+				}
+				// setTimeout(() => {
+				target.style.opacity = 1;
+				// }
+				// , 1); // 000); // Corresponds to SCSS transition times
 				nPlaced++;
 				if (nPlaced === nToPlace) {
 
@@ -277,6 +322,7 @@ export class Blanks extends React.PureComponent {
 					nPlaced: nPlaced
 				});
 			} else {
+				this.movingPiece.classList.remove("dragging");
 
 				// Nowhere near!
 				this.movingPiece.style.left = `${this.startX}px`;
@@ -287,8 +333,8 @@ export class Blanks extends React.PureComponent {
 					failCount: failCount
 				});
 				errorAudio.play();
+				this.movingPiece = undefined;
 			}
-			this.movingPiece = undefined;
 		}
 	};
 
@@ -346,6 +392,8 @@ export class Blanks extends React.PureComponent {
 			soundFile,
 			soundFiles,
 			words = [],
+		} = this.state;
+		let {
 			wordTiles,
 		} = this.state;
 		const { logError } = this.props;
@@ -356,17 +404,19 @@ export class Blanks extends React.PureComponent {
 		// phrases, table or questions/answers?
 		switch (blanksType) {
 			case 'phrases': {
-				const reg = /\]| /;
+				// const reg = /\]| /;
+				// const reg = /(?:(?<=\])|(?<!\[))\s+(?=\[|[^\]])/;
+				// words = []; // render is called multiple times in dev env, so don't add to it twice!
+				// wordTiles = []; // render is called multiple times in dev env, so don't add to it twice!
+				// let wordTileIndex = 0;
 				for (let i = 0; i < phrases.length; i++) {
-					const phraseSplit = phrases[i].split(reg);
+					// const phraseSplit = phrases[i].split(reg);
+					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
 					const phrase = new Array;
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
-							// span it as a target!
-							// word${index} must be the first class
 							const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
 
-							// Find the corresponding placeholder to determine its correct index
 							let foundIndex;
 							for (let i = 0; i < words.length; i++) {
 								if (words[i] === cleanedPhraseSplit) foundIndex = i;
@@ -387,6 +437,7 @@ export class Blanks extends React.PureComponent {
 						/></li>
 					);
 				}
+				wordTiles = shuffleArray(wordTiles);
 				break;
 			}
 			case "table": {

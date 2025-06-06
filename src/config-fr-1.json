@@ -347,7 +347,7 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"blanksType": "phrases",
-					"words": [
+					"words NOT NEEDED": [
 						"mon",
 						"chérie",
 						"toi",
@@ -376,7 +376,7 @@
 					"id": "phrases2",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"words": [
+					"words NOT NEEDED": [
 						"comment",
 						"merci",
 						"vous"
@@ -403,7 +403,7 @@
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"words": [
+					"words NOT NEEDED": [
 						"enfants",
 						"revoir",
 						"appelle",

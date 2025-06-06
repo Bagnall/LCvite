@@ -245,6 +245,7 @@ export const isTouchChrome = () => {
 };
 
 export const replaceSelectWithSpan = (selectElement) => {
+	// console.log("replaceSelectWithSpan");
 	const selectedText = selectElement.options[selectElement.selectedIndex].text;
 	const span = document.createElement('span');
 	span.textContent = selectedText;

@@ -32,6 +32,10 @@ export class Card extends React.PureComponent {
 							className={`card-image-container`}
 							style={{ backgroundImage: `url(${resolveAsset(card.image)})` }}
 						/>
+						// <div
+						// 	className={`card-image-container`}
+						// 	style={{ backgroundImage: `url(${resolveAsset(card.image)})` }}
+						// >{`url(${resolveAsset(card.image)})`}</div>
 					)}
 					{card.type === 'text' && card.audio ? <AudioClip className={`super-compact`} soundFile={`${resolveAsset(card.audio)}`} /> : null}
 				</div>

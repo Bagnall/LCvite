@@ -181,7 +181,7 @@
 				"answerTable1": {
 					"component": "AnswerTable",
 					"congratulationsText": "Well done!",
-					"htmlContent": "<p>The <b>AnswerTable</b> component, uses phrases to populate the left column of a table. The seecond of each phrase is the correct answer to the question. The user must type  the correct answer into the input in the right hand column and press the 'Check'. Button. The text box is a compact <b>Monologue</b> component, see below.</p>",
+					"htmlContent": "<p>The <b>AnswerTable</b> component, uses phrases to populate the left column of a table. The second of each phrase is the correct answer to the question. The user must type  the correct answer into the input in the right hand column and press the 'Check'. Button. The text box is a compact <b>Monologue</b> component, see below.</p>",
 					"id": "AnswerTable1",
 					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the pronunciation. Write the feminine form in the empty cells, then click the check button.",
 					"header": [
@@ -362,7 +362,7 @@
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"words": [
+					"words NOT NEEDED": [
 						"enfants",
 						"revoir",
 						"appelle",
@@ -652,85 +652,85 @@
 							"audio": "sounds/fr/memory/la lampe à lave.mp3",
 							"localLanguage": "lava lamp",
 							"foreignLanguage": "la lampe à lave",
-							"image": "/images/memory/lava-lamp.jpg"
+							"image": "images/memory/lava-lamp.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/le télescope.mp3",
 							"localLanguage": "telescope",
 							"foreignLanguage": "le télescope",
-							"image": "/images/memory/telescope.webp"
+							"image": "images/memory/telescope.webp"
 						},
 						{
 							"audio": "sounds/fr/memory/le pinceau.mp3",
 							"localLanguage": "paintbrush",
 							"foreignLanguage": "le pinceau",
-							"image": "/images/memory/paint-brush.webp"
+							"image": "images/memory/paint-brush.webp"
 						},
 						{
 							"audio": "sounds/fr/memory/l'arrosoir.mp3",
 							"localLanguage": "watering can",
 							"foreignLanguage": "l'arrosoir",
-							"image": "/images/memory/watering-can.jpg"
+							"image": "images/memory/watering-can.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/la fermeture éclair.mp3",
 							"localLanguage": "zipper",
 							"foreignLanguage": "la fermeture éclair",
-							"image": "/images/memory/zip.jpg"
+							"image": "images/memory/zip.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/l'échiquier.mp3",
 							"localLanguage": "chessboard",
 							"foreignLanguage": "l'échiquier",
-							"image": "/images/memory/chess-board.jpg"
+							"image": "images/memory/chess-board.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/le coquillage.mp3",
 							"localLanguage": "seashell",
 							"foreignLanguage": "le coquillage",
-							"image": "/images/memory/seashell.webp"
+							"image": "images/memory/seashell.webp"
 						},
 						{
 							"audio": "sounds/fr/memory/la tasse.mp3",
 							"localLanguage": "mug",
 							"foreignLanguage": "la tasse",
-							"image": "/images/memory/mug.webp"
+							"image": "images/memory/mug.webp"
 						},
 						{
 							"audio": "sounds/fr/memory/le sac à dos.mp3",
 							"localLanguage": "backpack",
 							"foreignLanguage": "le sac à dos",
-							"image": "/images/memory/backpack.webp"
+							"image": "images/memory/backpack.webp"
 						},
 						{
 							"audio": "sounds/fr/memory/le parapluie.mp3",
 							"localLanguage": "umbrella",
 							"foreignLanguage": "le parapluie",
-							"image": "/images/memory/umbrella.jpg"
+							"image": "images/memory/umbrella.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/l'agrafeuse.mp3",
 							"localLanguage": "stapler",
 							"foreignLanguage": "l'agrafeuse",
-							"image": "/images/memory/stapler.png"
+							"image": "images/memory/stapler.png"
 						},
 						{
 							"audio": "sounds/fr/memory/les lunettes.mp3",
 							"localLanguage": "spectacles",
 							"foreignLanguage": "les lunettes",
-							"image": "/images/memory/spectacles.png"
+							"image": "images/memory/spectacles.png"
 						},
 						{
 							"audio": "sounds/fr/memory/la brosse à cheveux.mp3",
 							"localLanguage": "hair brush",
 							"foreignLanguage": "la brosse à cheveux",
-							"image": "/images/memory/hairbrush.jpg"
+							"image": "images/memory/hairbrush.jpg"
 						},
 						{
 							"audio": "sounds/fr/memory/la carte postale.mp3",
 							"localLanguage": "postcard",
 							"foreignLanguage": "la carte postale",
-							"image": "/images/memory/postcard.jpg"
+							"image": "images/memory/postcard.jpg"
 						}
 					],
 					"showHintsText": "Show hints",
@@ -751,73 +751,73 @@
 							"audio": "sounds/fr/la salle de bains.mp3",
 							"localLanguage": "bathroom",
 							"foreignLanguage": "salle de bains",
-							"image": "/images/memory-rooms/bathroom.jpg"
+							"image": "images/memory-rooms/bathroom.jpg"
 						},
 						{
 							"audio": "sounds/fr/la chambre.mp3",
 							"localLanguage": "bedroom",
 							"foreignLanguage": "chambre",
-							"image": "/images/memory-rooms/bedroom.jpg"
+							"image": "images/memory-rooms/bedroom.jpg"
 						},
 						{
 							"audio": "sounds/fr/la cave.mp3",
 							"localLanguage": "wine cellar",
 							"foreignLanguage": "cave",
-							"image": "/images/memory-rooms/cellar.jpg"
+							"image": "images/memory-rooms/cellar.jpg"
 						},
 						{
 							"audio": "sounds/fr/la salle de douche.mp3",
 							"localLanguage": "shower room",
 							"foreignLanguage": "salle de douche",
-							"image": "/images/memory-rooms/shower-room.jpg"
+							"image": "images/memory-rooms/shower-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/la salle à manger.mp3",
 							"localLanguage": "dining room",
 							"foreignLanguage": "salle à manger",
-							"image": "/images/memory-rooms/dining-room.jpg"
+							"image": "images/memory-rooms/dining-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/la buanderie.mp3",
 							"localLanguage": "utility room",
 							"foreignLanguage": "buanderie",
-							"image": "/images/memory-rooms/utility-room.jpg"
+							"image": "images/memory-rooms/utility-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/le salon.mp3",
 							"localLanguage": "lounge",
 							"foreignLanguage": "salon",
-							"image": "/images/memory-rooms/lounge.jpg"
+							"image": "images/memory-rooms/lounge.jpg"
 						},
 						{
 							"audio": "sounds/fr/les toilettes.mp3",
 							"localLanguage": "toilet",
 							"foreignLanguage": "toilettes",
-							"image": "/images/memory-rooms/toilet.jpg"
+							"image": "images/memory-rooms/toilet.jpg"
 						},
 						{
 							"audio": "sounds/fr/le grenier.mp3",
 							"localLanguage": "loft/attic",
 							"foreignLanguage": "grenier",
-							"image": "/images/memory-rooms/attic.jpg"
+							"image": "images/memory-rooms/attic.jpg"
 						},
 						{
 							"audio": "sounds/fr/le balcon.mp3",
 							"localLanguage": "balcony",
 							"foreignLanguage": "balcon",
-							"image": "/images/memory-rooms/balcony.jpg"
+							"image": "images/memory-rooms/balcony.jpg"
 						},
 						{
 							"audio": "sounds/fr/la cuisine.mp3",
 							"localLanguage": "kitchen",
 							"foreignLanguage": "cuisine",
-							"image": "/images/memory-rooms/kitchen.jpg"
+							"image": "images/memory-rooms/kitchen.jpg"
 						},
 						{
 							"audio": "sounds/fr/le bureau.mp3",
 							"localLanguage": "study",
 							"foreignLanguage": "bureau",
-							"image": "/images/memory-rooms/study.jpg"
+							"image": "images/memory-rooms/study.jpg"
 						}
 					],
 					"showHintsText": "Show hints",
@@ -838,121 +838,121 @@
 							"audio": "sounds/fr/le chat.mp3",
 							"localLanguage": "cat",
 							"foreignLanguage": "le chat",
-							"image": "/images/memory-animals/cat.jpg"
+							"image": "images/memory-animals/cat.jpg"
 						},
 						{
 							"audio": "sounds/fr/le chien.mp3",
 							"localLanguage": "dog",
 							"foreignLanguage": "le chien",
-							"image": "/images/memory-animals/dog.jpg"
+							"image": "images/memory-animals/dog.jpg"
 						},
 						{
 							"audio": "sounds/fr/le lapin.mp3",
 							"localLanguage": "rabbit",
 							"foreignLanguage": "le lapin",
-							"image": "/images/memory-animals/rabbit.jpg"
+							"image": "images/memory-animals/rabbit.jpg"
 						},
 						{
 							"audio": "sounds/fr/le cheval.mp3",
 							"localLanguage": "horse",
 							"foreignLanguage": "le cheval",
-							"image": "/images/memory-animals/horse.jpg"
+							"image": "images/memory-animals/horse.jpg"
 						},
 						{
 							"audio": "sounds/fr/la vache.mp3",
 							"localLanguage": "cow",
 							"foreignLanguage": "la vache",
-							"image": "/images/memory-animals/cow.jpg"
+							"image": "images/memory-animals/cow.jpg"
 						},
 						{
 							"audio": "sounds/fr/le mouton.mp3",
 							"localLanguage": "sheep",
 							"foreignLanguage": "le mouton",
-							"image": "/images/memory-animals/sheep.jpg"
+							"image": "images/memory-animals/sheep.jpg"
 						},
 						{
 							"audio": "sounds/fr/la chèvre.mp3",
 							"localLanguage": "goat",
 							"foreignLanguage": "la chèvre",
-							"image": "/images/memory-animals/goat.jpg"
+							"image": "images/memory-animals/goat.jpg"
 						},
 						{
 							"audio": "sounds/fr/le cochon.mp3",
 							"localLanguage": "pig",
 							"foreignLanguage": "le cochon",
-							"image": "/images/memory-animals/pig.jpg"
+							"image": "images/memory-animals/pig.jpg"
 						},
 						{
 							"audio": "sounds/fr/la poule.mp3",
 							"localLanguage": "chicken",
 							"foreignLanguage": "la poule",
-							"image": "/images/memory-animals/chicken.jpg"
+							"image": "images/memory-animals/chicken.jpg"
 						},
 						{
 							"audio": "sounds/fr/le canard.mp3",
 							"localLanguage": "duck",
 							"foreignLanguage": "le canard",
-							"image": "/images/memory-animals/duck.jpg"
+							"image": "images/memory-animals/duck.jpg"
 						},
 						{
 							"audio": "sounds/fr/l'éléphant.mp3",
 							"localLanguage": "elephant",
 							"foreignLanguage": "l'éléphant",
-							"image": "/images/memory-animals/elephant.jpg"
+							"image": "images/memory-animals/elephant.jpg"
 						},
 						{
 							"audio": "sounds/fr/la girafe.mp3",
 							"localLanguage": "giraffe",
 							"foreignLanguage": "la girafe",
-							"image": "/images/memory-animals/giraffe.jpg"
+							"image": "images/memory-animals/giraffe.jpg"
 						},
 						{
 							"audio": "sounds/fr/le lion.mp3",
 							"localLanguage": "lion",
 							"foreignLanguage": "le lion",
-							"image": "/images/memory-animals/lion.jpg"
+							"image": "images/memory-animals/lion.jpg"
 						},
 						{
 							"audio": "sounds/fr/le tigre.mp3",
 							"localLanguage": "tiger",
 							"foreignLanguage": "le tigre",
-							"image": "/images/memory-animals/tiger.jpg"
+							"image": "images/memory-animals/tiger.jpg"
 						},
 						{
 							"audio": "sounds/fr/l’ours.mp3",
 							"localLanguage": "bear",
 							"foreignLanguage": "l’ours",
-							"image": "/images/memory-animals/bear.jpg"
+							"image": "images/memory-animals/bear.jpg"
 						},
 						{
 							"audio": "sounds/fr/le singe.mp3",
 							"localLanguage": "monkey",
 							"foreignLanguage": "le singe",
-							"image": "/images/memory-animals/monkey.jpg"
+							"image": "images/memory-animals/monkey.jpg"
 						},
 						{
 							"audio": "sounds/fr/le renard.mp3",
 							"localLanguage": "fox",
 							"foreignLanguage": "le renard",
-							"image": "/images/memory-animals/fox.jpg"
+							"image": "images/memory-animals/fox.jpg"
 						},
 						{
 							"audio": "sounds/fr/le loup.mp3",
 							"localLanguage": "wolf",
 							"foreignLanguage": "le loup",
-							"image": "/images/memory-animals/wolf.jpg"
+							"image": "images/memory-animals/wolf.jpg"
 						},
 						{
 							"audio": "sounds/fr/la souris.mp3",
 							"localLanguage": "mouse",
 							"foreignLanguage": "la souris",
-							"image": "/images/memory-animals/mouse.jpg"
+							"image": "images/memory-animals/mouse.jpg"
 						},
 						{
 							"audio": "sounds/fr/la grenouille.mp3",
 							"localLanguage": "frog",
 							"foreignLanguage": "la grenouille",
-							"image": "/images/memory-animals/frog.jpg"
+							"image": "images/memory-animals/frog.jpg"
 						}
 					],
 					"showHintsText": "Show hints",

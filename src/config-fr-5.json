@@ -221,73 +221,73 @@
 							"audio": "sounds/fr/la salle de bains.mp3",
 							"localLanguage": "bathroom",
 							"foreignLanguage": "salle de bains",
-							"image": "/images/memory-rooms/bathroom.jpg"
+							"image": "images/memory-rooms/bathroom.jpg"
 						},
 						{
 							"audio": "sounds/fr/la chambre.mp3",
 							"localLanguage": "bedroom",
 							"foreignLanguage": "chambre",
-							"image": "/images/memory-rooms/bedroom.jpg"
+							"image": "images/memory-rooms/bedroom.jpg"
 						},
 						{
 							"audio": "sounds/fr/la cave.mp3",
 							"localLanguage": "wine cellar",
 							"foreignLanguage": "cave",
-							"image": "/images/memory-rooms/cellar.jpg"
+							"image": "images/memory-rooms/cellar.jpg"
 						},
 						{
 							"audio": "sounds/fr/la salle de douche.mp3",
 							"localLanguage": "shower room",
 							"foreignLanguage": "salle de douche",
-							"image": "/images/memory-rooms/shower-room.jpg"
+							"image": "images/memory-rooms/shower-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/la salle à manger.mp3",
 							"localLanguage": "dining room",
 							"foreignLanguage": "salle à manger",
-							"image": "/images/memory-rooms/dining-room.jpg"
+							"image": "images/memory-rooms/dining-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/la buanderie.mp3",
 							"localLanguage": "utility room",
 							"foreignLanguage": "buanderie",
-							"image": "/images/memory-rooms/utility-room.jpg"
+							"image": "images/memory-rooms/utility-room.jpg"
 						},
 						{
 							"audio": "sounds/fr/le salon.mp3",
 							"localLanguage": "lounge",
 							"foreignLanguage": "salon",
-							"image": "/images/memory-rooms/lounge.jpg"
+							"image": "images/memory-rooms/lounge.jpg"
 						},
 						{
 							"audio": "sounds/fr/les toilettes.mp3",
 							"localLanguage": "toilet",
 							"foreignLanguage": "toilettes",
-							"image": "/images/memory-rooms/toilet.jpg"
+							"image": "images/memory-rooms/toilet.jpg"
 						},
 						{
 							"audio": "sounds/fr/le grenier.mp3",
 							"localLanguage": "loft/attic",
 							"foreignLanguage": "grenier",
-							"image": "/images/memory-rooms/attic.jpg"
+							"image": "images/memory-rooms/attic.jpg"
 						},
 						{
 							"audio": "sounds/fr/le balcon.mp3",
 							"localLanguage": "balcony",
 							"foreignLanguage": "balcon",
-							"image": "/images/memory-rooms/balcony.jpg"
+							"image": "images/memory-rooms/balcony.jpg"
 						},
 						{
 							"audio": "sounds/fr/la cuisine.mp3",
 							"localLanguage": "kitchen",
 							"foreignLanguage": "cuisine",
-							"image": "/images/memory-rooms/kitchen.jpg"
+							"image": "images/memory-rooms/kitchen.jpg"
 						},
 						{
 							"audio": "sounds/fr/le bureau.mp3",
 							"localLanguage": "study",
 							"foreignLanguage": "bureau",
-							"image": "/images/memory-rooms/study.jpg"
+							"image": "images/memory-rooms/study.jpg"
 						}
 					],
 					"showHintsText": "Show hints",
@@ -370,7 +370,7 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"blanksType": "phrases",
-					"words": [
+					"words NOT NEEDED": [
 						"seule",
 						"balcon",
 						"très",

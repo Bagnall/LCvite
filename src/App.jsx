@@ -150,7 +150,7 @@ export default class App extends React.Component {
 		// }
 
 		synth.onvoiceschanged = () => {
-			console.log("onvoiceschanged");
+			// console.log("onvoiceschanged");
 			// show speak highlighting
 
 			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
@@ -322,7 +322,7 @@ export default class App extends React.Component {
 			// jigsaw1,
 			// jigsaw2,
 			// jigsaw3,
-			learningObjects,
+			// learningObjects,
 			// monologues,
 			// phrases1,
 			// phrases2,
@@ -573,7 +573,6 @@ export default class App extends React.Component {
 						<>
 							<div id="content" key="content">
 								<div id='hero' key='hero'>
-									{/* <Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} /> */}
 									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
 									<h1>{title}</h1>
 									<h2>{subtitle}</h2>
@@ -615,8 +614,6 @@ export default class App extends React.Component {
 										id={`scratchAccordion`}
 										title={`Scratch`}
 									>
-										<>
-										</>
 									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (
@@ -795,11 +792,10 @@ export default class App extends React.Component {
 							</div>
 						</>
 						:
-						<>
-
+						<div className={`no-config`}>
 							<h1>No configuration parameter given of the form</h1>
 							<h2>{`${window.location.href}/?config=config.json`}</h2>
-						</>
+						</div>
 					}
 					<Footer />
 				</div>
@@ -1055,8 +1051,9 @@ export default class App extends React.Component {
 		const renderedMenu = new Array;
 		if (learningObjects !== undefined) {
 			const nLearningObjects = learningObjects.length;
-			const baseURL = window.location.href.split('?')[0];
-			if (nLearningObjects > 6){
+			const { href } = window.location;
+			const [baseURL] = href.split('?');
+			if (nLearningObjects > 6) {
 				learningObjects.forEach((learningObject, index) => {
 					// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
 					switch (index) {

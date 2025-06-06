@@ -33,6 +33,14 @@ html.can-speak {
 		animation-name: none;
 	}
 }
+.no-config {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 600ms;
+	animation-timing-function: ease;
+	animation-delay: 400ms;
+	animation-fill-mode: forwards;
+}
 #SpeechSynthesisError {
 	background-color: white;
 	background: white;
@@ -306,7 +314,7 @@ h2 {
 				width: $ellipses-diameter;
 				height: $ellipses-diameter;
 				// background: red;
-				border-radius: $ellipses-diameter / 2;
+				border-radius: calc($ellipses-diameter / 2);
 				position: relative;
 				box-shadow:
 					inset -2px -2px 3px rgba(0, 0, 0, 0.6),
@@ -319,14 +327,14 @@ h2 {
 					content: "";
 					position: absolute;
 					top: 0;
-					left: $ellipses-diameter * 1.5;
+					left: calc($ellipses-diameter * 1.5);
 					width: $ellipses-diameter;
 					height: $ellipses-diameter;
 					// background: red;
-					border-radius: $ellipses-diameter / 2;
+					border-radius: calc($ellipses-diameter / 2);
 				}
 				&::after {
-					left: -$ellipses-diameter * 1.5;
+					left: calc($ellipses-diameter * -1.5);
 				}
 			}
 			a {

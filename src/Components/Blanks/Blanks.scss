@@ -47,7 +47,8 @@
 			// min-width: 57%;
 			text-align: center;
 		}
-		.dragging {
+		.dragging,
+		.placed {
 			z-index: 22;
 		}
 	}
