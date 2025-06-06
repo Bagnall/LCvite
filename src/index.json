@@ -23,6 +23,14 @@
 		{
 			"title": "Learning Object 6",
 			"file": "config-fr-6.json"
+		},
+		{
+			"title": "Learning Object 7",
+			"file": "config-fr-7.json"
+		},
+		{
+			"title": "DEMO",
+			"file": "config-fr-demo.json"
 		}
 	]
 }
