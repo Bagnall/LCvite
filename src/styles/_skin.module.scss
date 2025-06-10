@@ -329,7 +329,18 @@ _skin.module.scss
 	// $body-back: $french-body-back;
 	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back, $menu);
 }
-
+.uk-UA {
+	$french-home: green;
+	$background: white;
+	$button: colours.$french-button;
+	// $article-base-background: colours.$french-article-base-background;
+	$french-panel-back: colours.$french-panel-back;
+	$french-body-back: white;
+	$panel-back: $french-panel-back;
+	$menu: blue;
+	// $body-back: $french-body-back;
+	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back, $menu);
+}
 .de-DE {
 	$german-body-back: white;
 	$menu: blue;

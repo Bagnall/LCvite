@@ -1,0 +1,423 @@
+{
+	"settings": {
+		"class": "lo-1",
+		"flag": "ukraine-flag.png",
+		"showCongratulations": true,
+		"subtitle": "First Things First: greetings, farewells and social niceties",
+		"targetLanguage": "ukrainian",
+		"targetLanguageCode": "uk-UA",
+		"title": "Ukrainian Learning Object 1"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "PhraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Привіт, у тебе все добре?",
+				"Hi, are you well?",
+				"sounds/ukraine/Привіт, у тебе все добре.mp3"
+			],
+			[
+				"Привіт, у мене все добре, а у тебе?",
+				"Hi, I'm fine and you?",
+				"sounds/ukraine/Привіт, у мене все добре, а у тебе.mp3"
+			],
+			[
+				"Дуже добре, дякую!",
+				"Very well, thank you!",
+				"sounds/ukraine/Дуже добре, дякую!.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Привіт, пані Фуше! Як справи?",
+				"Hello, Mrs Foucher! How are you?",
+				"sounds/ukraine/Привіт, пані Фуше! Як справи.mp3"
+			],
+			[
+				"Привіт, пане Леторт, у мене все дуже добре, дякую. А у вас?",
+				"Hello Mr Letort, I'm very well, thank you. And you?",
+				"sounds/ukraine/Привіт, пане Леторт, у мене все дуже добре, дякую. А у вас.mp3"
+			],
+			[
+				"У мене все добре, дякую!",
+				"I'm fine, thank you!",
+				"sounds/ukraine/У мене все добре, дякую!.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Як тебе звати?",
+				"What's your name?",
+				"sounds/ukraine/Як тебе звати.mp3"
+			],
+			[
+				"Мене звати Макс. А ти…?",
+				"My name is Max. And you're….?",
+				"sounds/ukraine/Мене звати Макс. А ти….mp3"
+			],
+			[
+				"Мене звати Аліна.",
+				"My name's Alina.",
+				"sounds/ukraine/Мене звати Аліна.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p>This is the first line of the Ukrainian National Anthem: '<span class='speak'>Ще не вмерла України і слава, і воля</span>, but Chrome doesn't have a Ukrainian voice.'</p>"
+		],
+		"id": "explanation1",
+		"titleText": "Test of Browser Text To Speech."
+	},
+	"vocabulary1": {
+		"component": "PhraseTable",
+		"id": "vocabulary1",
+		"phrases": [
+			[
+				"Bonjour",
+				"hello, good morning, good afternoon",
+				"sounds/ukraine/Bonjour.mp3"
+			],
+			[
+				"Bonsoir",
+				"hello, good evening",
+				"sounds/ukraine/Bonsoir.mp3"
+			],
+			[
+				"Coucou",
+				"hi, cooee, peek-a-boo",
+				"sounds/ukraine/Coucou.mp3"
+			],
+			[
+				"Salut",
+				"hi, bye",
+				"sounds/ukraine/Salut.mp3"
+			],
+			[
+				"Au revoir",
+				"goodbye",
+				"sounds/ukraine/Au revoir.mp3"
+			],
+			[
+				"A bientôt",
+				"See you soon!",
+				"sounds/ukraine/A bientôt.mp3"
+			],
+			[
+				"Monsieur",
+				"sir, Mr",
+				"sounds/ukraine/Monsieur.mp3"
+			],
+			[
+				"<a href='./?config=config-fr-1.json#madame'>Madame*</a>",
+				"madam, Mrs / Ms",
+				"sounds/ukraine/Madame.mp3"
+			],
+			[
+				"Mademoiselle",
+				"young lady, Miss",
+				"sounds/ukraine/Mademoiselle.mp3"
+			],
+			[
+				"Messieurs-dames",
+				"ladies and gentlemen",
+				"sounds/ukraine/Messieurs-dames.mp3"
+			],
+			[
+				"jeune homme",
+				"young man",
+				"sounds/ukraine/jeune homme.mp3"
+			],
+			[
+				"mon petit (m) / ma petite(f)",
+				"poppet  (literally: my little one)",
+				"sounds/ukraine/mon petit ma petit.mp3"
+			],
+			[
+				"mon amour",
+				"my love",
+				"sounds/ukraine/mon amour.mp3"
+			],
+			[
+				"mon chéri (m) / ma chérie (f)",
+				"my darling",
+				"sounds/ukraine/mon cheri ma cherie.mp3"
+			],
+			[
+				"les enfants",
+				"children",
+				"sounds/ukraine/les enfants.mp3"
+			],
+			[
+				"tout le monde",
+				"Everyone (literally : all the world)",
+				"sounds/ukraine/tout le monde.mp3"
+			],
+			[
+				"Ca va ?",
+				"Are you well / OK?  Are things alright/ OK?",
+				"sounds/ukraine/Ca va.mp3"
+			],
+			[
+				"Comment ça va ?",
+				"How are you? (literally: how's it going?)",
+				"sounds/ukraine/Comment ça va.mp3"
+			],
+			[
+				"Très bien",
+				"Very well",
+				"sounds/ukraine/Très bien.mp3"
+			],
+			[
+				"Ca va.",
+				"(I'm) fine",
+				"sounds/ukraine/Ca va.mp3"
+			],
+			[
+				"Pas mal",
+				"Not bad",
+				"sounds/ukraine/Pas mal.mp3"
+			],
+			[
+				"Comment t'appelles-<a href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
+				"What's your name?",
+				"sounds/ukraine/Comment t'appelles-tu.mp3"
+			],
+			[
+				"Comment vous appelez-<a href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
+				"What's your name?",
+				"sounds/ukraine/Comment vous appelez-vous.mp3"
+			],
+			[
+				"Je m'appelle …",
+				"My name is …",
+				"sounds/ukraine/Je m'appelle.mp3"
+			],
+			[
+				"Bonne journée !",
+				"Have a nice day!",
+				"sounds/ukraine/Bonne journée !.mp3"
+			],
+			[
+				"Bonne soirée !",
+				"Have a nice evening!   ",
+				"sounds/ukraine/Bonne soirée !.mp3"
+			],
+			[
+				"Bonne nuit !",
+				"Good night!",
+				"sounds/ukraine/Bonne nuit !.mp3"
+			],
+			[
+				"Bon voyage !",
+				"Have a safe journey! / Have a good trip!",
+				"sounds/ukraine/Bon voyage !.mp3"
+			],
+			[
+				"Bonnes vacances !",
+				"Enjoy your holiday!",
+				"sounds/ukraine/Bonnes vacances !.mp3"
+			],
+			[
+				"oui, non",
+				"Yes, no",
+				"sounds/ukraine/oui, non.mp3"
+			],
+			[
+				"merci",
+				"thank you",
+				"sounds/ukraine/merci.mp3"
+			],
+			[
+				"d'accord",
+				"OK then, alright",
+				"sounds/ukraine/d'accord.mp3"
+			],
+			[
+				"aujourd'hui",
+				"today",
+				"sounds/ukraine/aujourd'hui.mp3"
+			],
+			[
+				"enchanté.e",
+				"Pleased to meet you (literally: delighted)",
+				"sounds/ukraine/enchanté.mp3"
+			]
+		],
+		"titleText": "Vocabulary"
+	},
+	"explanation2": {
+		"component": "Explanation",
+		"content": [
+			"<h2>How to pronounce:</h2><p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/ukraine/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
+			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words bonjour and bonsoir.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
+			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/ukraine/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
+			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French r is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration. You will have encountered this sound in the words bonjou<b>r</b>, bonsoi<b>r</b>, au <b>r</b>evoi<b>r</b>.</p>",
+			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/ukraine/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   <a class='sound-link' href='/sounds/ukraine/moi.mp3' alt='moi'/>m<b>oi</b></a>, <a class='sound-link' href='/sounds/ukraine/toi.mp3' alt='toi'/>t<b>oi</b></a>, <a class='sound-link' href='/sounds/ukraine/Au revoir.mp3' alt='au revoir'/>au rev<b>oi</b>r</a></p><p>4 <b>The letter h</b>  <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/></p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <a class='sound-link' href='/sounds/ukraine/homme.mp3' alt='homme'/><b>h</b>omme</a>, <a class='sound-link' href='/sounds/ukraine/horrible.mp3' alt='horrible'/><b>h</b>orrible</a>, <a class='sound-link' href='/sounds/ukraine/horizon.mp3' alt='horizon'/><b>h</b>orizon</a>.</p>"
+		],
+		"id": "explanation2",
+		"titleText": "Demystifying French Pronunciation"
+	},
+	"group1": {
+		"component": "Group",
+		"content": [
+			{
+				"wordsIntoSlots1": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots1",
+					"congratulationsText": "Well done!",
+					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"moi",
+						"roi",
+						"homme",
+						"hôtel",
+						"hôpital",
+						"bonjour",
+						"bonbon",
+						"au revoir",
+						"mon",
+						"trois",
+						"horrible",
+						"toi",
+						"quoi",
+						"froid",
+						"ton",
+						"non",
+						"bon",
+						"son",
+						"nom"
+					],
+					"soundFile": "sounds/ukraine/LO1 words-in-order.mp3",
+					"titleText": "1. Put the Words in the Order You Hear Them"
+				}
+			},
+			{
+				"wordparts1": {
+					"cheatText": "Cheat",
+					"component": "WordParts",
+					"congratulationsText": "Superb!",
+					"id": "wordparts1",
+					"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
+					"showHintsText": "Show hints when moving",
+					"phrases": [
+						"b[on]jou[r] m[on] ché[r]i",
+						"b[on]s[oi][r] m[on] amou[r]",
+						"au [r]ev[oi][r] ma ché[r]ie",
+						"quelle [h]o[r][r]eur Valé[r]ie"
+					],
+					"audio": [
+						"sounds/ukraine/bonjour mon chéri.mp3",
+						"sounds/ukraine/bonsoir mon amour.mp3",
+						"sounds/ukraine/au revoir ma chérie.mp3",
+						"sounds/ukraine/quelle horreur valérie.mp3"
+					],
+					"titleText": "2. Select the parts of the words with the described sounds"
+				}
+			},
+			{
+				"phrases1": {
+					"component": "Blanks",
+					"id": "phrases1",
+					"congratulationsText": "Well done!",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "phrases",
+					"words NOT NEEDED": [
+						"mon",
+						"chérie",
+						"toi",
+						"va",
+						"très"
+					],
+					"phrases": [
+						"Coucou [mon] amour ! Ca [va] aujourd'hui ?",
+						"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
+						"Ça va !"
+					],
+					"audio": [
+						"sounds/ukraine/Coucou mon amour ! Ca va aujourd'hui.mp3",
+						"sounds/ukraine/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
+						"sounds/ukraine/Ça va !.mp3"
+					],
+					"titleText": "3. Fill in the Blanks"
+				}
+			},
+			{
+				"phrases2": {
+					"component": "Blanks",
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"congratulationsText": "Superbe !",
+					"id": "phrases2",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"words NOT NEEDED": [
+						"comment",
+						"merci",
+						"vous"
+					],
+					"phrases": [
+						"Bonsoir Monsieur Galipot ! [comment] ça va ?",
+						"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
+						"Ah pas mal [merci] !"
+					],
+					"audio": [
+						"sounds/ukraine/Bonsoir Monsieur Galipot ! comment ça va.mp3",
+						"sounds/ukraine/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
+						"sounds/ukraine/Ah pas mal merci !.mp3"
+					],
+					"titleText": "4. Fill in the Blanks"
+				}
+			},
+			{
+				"phrases3": {
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"component": "Blanks",
+					"congratulationsText": "Très bien !",
+					"id": "phrases3",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"words NOT NEEDED": [
+						"enfants",
+						"revoir",
+						"appelle",
+						"appelez",
+						"moi"
+					],
+					"phrases": [
+						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+						"Bonjour Madame ! Je m' [appelle] Annie.",
+						"Et [moi], je m'appelle David.",
+						"D'accord. Très bien !",
+						"Merci Madame ! Bonne journée !",
+						"Au [revoir] les enfants !  Bonne journée !"
+					],
+					"audio": [
+						"sounds/ukraine/Bonjour les enfants. Comment vous appelez-vous.mp3",
+						"sounds/ukraine/Bonjour Madame ! Je m' appelle Annie.mp3",
+						"sounds/ukraine/Et moi, je m'appelle David.mp3",
+						"sounds/ukraine/D'accord. Très bien !.mp3",
+						"sounds/ukraine/Merci Madame ! Bonne journée !.mp3",
+						"sounds/ukraine/Au revoir les enfants !  Bonne journée !.mp3"
+					],
+					"titleText": "5. Fill in the Blanks"
+				}
+			}
+		],
+		"id": "group1",
+		"titleText": "Exercises"
+	}
+}
