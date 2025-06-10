@@ -69,13 +69,20 @@
 
 	.target {
 		// border-radius: 16px;
-		position: absolute;
-		top: variables.$tile-size * 4px + variables.$border-width * 3;
 		width: variables.$tile-size * 4px - variables.$tab-size * 3 - 10;
 		height: variables.$tile-size * 3px - variables.$tab-size - 8;
 		background: lightgray;
 		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
 		box-sizing: border-box;
+	}
+	.target,
+	.time-taken {
+		position: absolute;
+		top: variables.$tile-size * 4px + variables.$border-width * 3;
+	}
+	.time-taken {
+		right: 0;
+		font-size: 2rem;
 	}
 }
 @include media-queries.respond-above(m) {

@@ -295,6 +295,7 @@ h2 {
 		padding: 0;
 		flex-wrap: wrap;
 		align-items: center;
+		$ellipses-diameter: 10px;
 		li {
 			margin: 0.25rem;
 			text-indent: 0;
@@ -307,35 +308,29 @@ h2 {
 			text-decoration: none;
 			font-weight: bold;
 			&.ellipses {
-				$ellipses-diameter: 10px;
 				color: black;
-				// background-color: transparent;
 				text-indent: -9999px;
-				width: $ellipses-diameter;
-				height: $ellipses-diameter;
-				// background: red;
-				border-radius: calc($ellipses-diameter / 2);
 				position: relative;
-				box-shadow:
-					inset -2px -2px 3px rgba(0, 0, 0, 0.6),
-					inset 2px 2px 3px rgba(255, 255, 255, 0.6);
 				&::before,
 				&::after {
-					box-shadow:
-						inset -2px -2px 3px rgba(0, 0, 0, 0.6),
-						inset 2px 2px 3px rgba(255, 255, 255, 0.6);
 					content: "";
 					position: absolute;
 					top: 0;
 					left: calc($ellipses-diameter * 1.5);
-					width: $ellipses-diameter;
-					height: $ellipses-diameter;
-					// background: red;
-					border-radius: calc($ellipses-diameter / 2);
 				}
 				&::after {
 					left: calc($ellipses-diameter * -1.5);
 				}
+			}
+			&.ellipses,
+			&.ellipses::after,
+			&.ellipses::before {
+				box-shadow:
+					inset -2px -2px 3px rgba(0, 0, 0, 0.6),
+					inset 2px 2px 3px rgba(255, 255, 255, 0.6);
+				width: $ellipses-diameter;
+				height: $ellipses-diameter;
+				border-radius: calc($ellipses-diameter / 2);
 			}
 			a {
 				// border: 1px solid rgb(0, 0, 0);

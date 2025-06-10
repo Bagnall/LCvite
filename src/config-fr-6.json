@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-6",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object 6",
+		"showCongratulations": true,
 		"subtitle": "Family, friends and neighbours",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 6"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

@@ -208,10 +208,12 @@ export default class App extends React.Component {
 				const { settings } = res;
 				delete res["settings"];
 				const {
+					class: configClass,
 					targetLanguageCode,
 					title,
 				} = settings;
 				document.title = title;
+				if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
 
 				this.setState({
 					config: { ...res },

@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-demo",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object, Component Demo",
+		"showCongratulations": true,
 		"subtitle": "Sample components to pick from",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object, Component Demo"
 	},
 	"explanation1": {
 		"component": "Explanation",

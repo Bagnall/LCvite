@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-4",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object 4",
+		"showCongratulations": true,
 		"subtitle": "Origins",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 4"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

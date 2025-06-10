@@ -182,6 +182,12 @@ export class Jigsaw extends React.PureComponent {
 
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e)
+		let{
+			startTime,
+		} = this.state;
+		if (!startTime) startTime = new Date();
+		this.setState({ startTime });
+
 		if (e.button && e.button !== 0) return;
 		if (e.target.classList.contains('piece') && !e.target.classList.contains('placed')) { // Not context menu (right mouse)
 			this.movingPiece = e.target;
@@ -248,6 +254,7 @@ export class Jigsaw extends React.PureComponent {
 				jigsawBorderWidth,
 				congratulationsText,
 				piecesPerBoard,
+				startTime,
 				tabSize,
 				tileSize,
 			} = this.state;
@@ -269,12 +276,26 @@ export class Jigsaw extends React.PureComponent {
 				this.movingPiece.classList.add("placed");
 				nPlaced++;
 				if (nPlaced === piecesPerBoard) {
-
 					// Last piece of the jigsaw placed
-					// this.congratulationsRef.current.classList.add("show");
-					const { showDialog } = this.props;
-					showDialog(congratulationsText);
-					tadaAudio.play();
+					let timeReport = '';
+
+					const endTime = new Date();
+					const diffMs = endTime - startTime; // milliseconds
+					const totalSeconds = Math.floor(diffMs / 1000);
+					const minutes = Math.floor(totalSeconds / 60);
+					const seconds = totalSeconds % 60;
+					if (minutes !== 0) {
+						timeReport = `Completed in ${minutes} minute${minutes > 1 ? 's' : ''} and ${seconds} second${seconds > 1 ? 's' : ''}.`;
+					} else {
+						timeReport = `Completed in ${seconds} second${seconds > 1 ? 's' : ''}.`;
+					}
+					this.setState({
+						timeReport: timeReport,
+					}, () => {
+						const { showDialog } = this.props;
+						showDialog(congratulationsText);
+						tadaAudio.play();
+					});
 				}
 				this.setState({ nPlaced: nPlaced });
 			} else {
@@ -333,6 +354,7 @@ export class Jigsaw extends React.PureComponent {
 			showHints = false,
 			showHintsText,
 			soundFile,
+			timeReport = '',
 		} = this.state;
 
 		return (
@@ -381,7 +403,7 @@ export class Jigsaw extends React.PureComponent {
 						onMouseUp={this.handleMouseUp}
 						ref={this.targetRef}
 					>
-					</div>
+					</div><p className='time-taken'>{timeReport}</p>
 				</div>
 			</div>
 		);

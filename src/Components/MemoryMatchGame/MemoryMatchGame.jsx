@@ -42,7 +42,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			flipped: [],
 			matched: [],
 			nPairs: 0,
-			nTries:0,
+			nTries: 0,
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -58,7 +58,10 @@ export class MemoryMatchGame extends React.PureComponent {
 		let{
 			nPairs,
 			nTries,
+			startTime,
 		} = this.state;
+		if (!startTime)	startTime = new Date();
+
 		const { showDialog } = this.props;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
 		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
@@ -69,7 +72,7 @@ export class MemoryMatchGame extends React.PureComponent {
 		beenFlipped.push(card.id);
 		let { memoryCardTransitionTime } = Variables;
 		memoryCardTransitionTime = parseInt(memoryCardTransitionTime.replace('s', '')) * 1000;
-		this.setState({ beenFlipped: beenFlipped, flipped: newFlipped }, () => {
+		this.setState({ beenFlipped: beenFlipped, flipped: newFlipped, startTime }, () => {
 			if (newFlipped.length === 2) {
 				nTries++;
 				const [first, second] = newFlipped;
@@ -80,10 +83,25 @@ export class MemoryMatchGame extends React.PureComponent {
 					const { audio: soundFile } = { ...firstCard, ...secondCard };
 					const sound = new Audio(resolveAsset(`${soundFile}`));
 					nPairs++;
+					let timeReport = '';
 					sound.onended = () => {
 						if (nPairs === cards.length / 2) {
-							tadaAudio.play();
-							showDialog(congratulationsText);
+							const endTime = new Date();
+							const diffMs = endTime - startTime; // milliseconds
+							const totalSeconds = Math.floor(diffMs / 1000);
+							const minutes = Math.floor(totalSeconds / 60);
+							const seconds = totalSeconds % 60;
+							if (minutes !== 0) {
+								timeReport = ` Completed in ${minutes} minute${minutes > 1 ? 's' : ''} and ${seconds} second${seconds > 1 ? 's' : ''}.`;
+							} else {
+								timeReport = ` Completed in ${seconds} second${seconds > 1 ? 's' : ''}.`;
+							}
+							this.setState({
+								timeReport: timeReport,
+							}, () => {
+								tadaAudio.play();
+								showDialog(congratulationsText);
+							});
 						}
 					};
 					// console.log("soundFile", soundFile);
@@ -116,6 +134,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			matched,
 			nPairs,
 			nTries,
+			timeReport = '',
 		} = this.state;
 		const sortedMatches = cards.filter(card =>
 			matched.includes(card.id)
@@ -171,7 +190,7 @@ export class MemoryMatchGame extends React.PureComponent {
 							</div>
 						</div>
 					</div>
-					<p>{`${nTries} tries. ${nPairs} matched.`}</p>
+					<p>{`${nTries} tries. ${nPairs} matched.${timeReport}`}</p>
 
 				</div>
 			</div>

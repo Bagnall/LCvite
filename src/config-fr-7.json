@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-7",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object 7",
+		"showCongratulations": true,
 		"subtitle": "Opinions matter: Likes and dislikes",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 7"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

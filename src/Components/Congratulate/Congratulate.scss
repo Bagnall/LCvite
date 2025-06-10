@@ -48,7 +48,7 @@
 		border-radius: 8px;
 		&::after {
 			@include mixins.standard-pseudo();
-			mask-image: url("../../../public/images/cross.svg");
+			mask-image: url("/images/cross.svg");
 			mask-position: center center;
 			mask-repeat: no-repeat;
 			background-color: rgb(0, 0, 139); //blue;

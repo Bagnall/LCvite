@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-1",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object 1",
+		"showCongratulations": true,
 		"subtitle": "First Things First: greetings, farewells and social niceties",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 1"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

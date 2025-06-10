@@ -1,11 +1,12 @@
 {
 	"settings": {
-		"showCongratulations": true,
+		"class": "lo-5",
 		"flag": "fr-flag.png",
-		"title": "French Learning Object 5",
+		"showCongratulations": true,
 		"subtitle": "House and Home",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 5"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
