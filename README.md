@@ -25,7 +25,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Configuring the learning object
 
-There is a config.json file which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user.
+There is a config.json file which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user. See https://docs.google.com/document/d/1shg4Bptm3AtaO2e2_8pEZOcXBdwoS7zD3sK5Au3L-Fo/edit?usp=sharing
 
 ## Customising Jigsaw
 
