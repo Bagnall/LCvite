@@ -14,27 +14,30 @@
 		"instructionsText": "",
 		"phrases": [
 			[
-				"Male : Tu es française ?",
+				"Tu es française ?",
 				"Are you French ?",
 				"sounds/fr/Tu es française.mp3"
 			],
 			[
-				"Female : Ah non, je ne suis pas française !",
+				"Ah non, je ne suis pas française !",
 				"Oh no, I'm not French!",
 				"sounds/fr/Ah non, je ne suis pas française !.mp3"
 			],
 			[
-				"Male : Tu es de quelle nationalité ?",
+				"Tu es de quelle nationalité ?",
 				"What nationality are you?",
 				"sounds/fr/Tu es de quelle nationalité.mp3"
 			],
 			[
-				"Female : Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
+				"Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
 				"I'm Belgian. I come from Brussels. Where do you come from?",
 				"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
 			],
 			[
-				"Male : Je viens d'Espagne.",
+				""
+			],
+			[
+				"Je viens d'Espagne.",
 				"I come from Spain.",
 				"sounds/fr/Je viens d'Espagne.mp3"
 			],
@@ -57,6 +60,9 @@
 				"Ah non, je suis luxembourgeoise.",
 				"Oh no, I'm Luxemburgish.",
 				"sounds/fr/Ah non, je suis luxembourgeoise.mp3"
+			],
+			[
+				""
 			],
 			[
 				"Tu parles allemand ?",

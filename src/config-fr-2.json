@@ -14,7 +14,7 @@
 		"phrases": [
 			[
 				"Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
-				"Hi, I'm Sylvain. I'm single and I'm a geography student.",
+				"Hi, I'm Sylvain. I'm single. I'm a geography student.",
 				"sounds/fr/Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.mp3"
 			],
 			[
@@ -70,7 +70,7 @@
 				"sounds/fr/célibataire.mp3"
 			],
 			[
-				"étudiant / étudiante",
+				"étudiant(m) / étudiante(f)",
 				"University student",
 				"sounds/fr/étudiant, étudiante.mp3"
 			],
@@ -85,12 +85,12 @@
 				"sounds/fr/chercheur, chercheuse.mp3"
 			],
 			[
-				"doctorant / doctorante",
+				"doctorant(m) / doctorante(f)",
 				"PhD student",
 				"sounds/fr/doctorant, doctorante.mp3"
 			],
 			[
-				"professeur.e prof (m and f)",
+				"professeur(m) / professeure(f) / prof (m and f)",
 				"teacher, professeur",
 				"sounds/fr/professeur, professeure.mp3"
 			],
@@ -110,17 +110,17 @@
 				"sounds/fr/bibliothécaire.mp3"
 			],
 			[
-				"administrateur (m) administratrice(f)",
+				"administrateur (m) / administratrice(f)",
 				"administrator",
 				"sounds/fr/administrateur, administratrice.mp3"
 			],
 			[
-				"informaticien.ne",
+				"informaticien(m) informaticienne(f)",
 				"IT specialist",
 				"sounds/fr/informaticien, informaticienne.mp3"
 			],
 			[
-				"avocat / avocate",
+				"avocat(m) / avocate(f)",
 				"lawyer",
 				"sounds/fr/avocat, avocate.mp3"
 			],
@@ -165,9 +165,9 @@
 	"explanation3": {
 		"component": "Explanation",
 		"content": [
-			"<p><b>1. Verbs in French</b></p><p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p><p><b>Être</b> to be</p><table><tbody><tr><td>je suis</td><td>I am</td><td><audio class='compact' controls src='/sounds/fr/je suis.mp3'/></td></tr><tr><td>tu* es</td><td>you are</td><td><audio class='compact' controls src='/sounds/fr/tu es.mp3'/></td></tr><tr><td>il** est</td><td>he is, it is </td><td><audio class='compact' controls src='/sounds/fr/il est.mp3'/></td></tr><tr><td>elle** est</td><td>she is, it is</td><td><audio class='compact' controls src='/sounds/fr/elle est.mp3'/></td></tr><tr><td>nous sommes</td><td>we are</td><td><audio class='compact' controls src='/sounds/fr/nous sommes.mp3'/></td></tr><tr><td>vous* êtes</td><td>you are</td><td><audio class='compact' controls src='/sounds/fr/vous êtes.mp3'/></td></tr><tr><td>ils***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/fr/ils sont.mp3'/></td></tr><tr><td>elles***  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/fr/elles sont.mp3'/></td></tr><hr/>",
+			"<p><b>1. Verbs in French</b></p><p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p><p><b>Être</b> to be</p><table><tbody><tr><td>je suis</td><td>I am</td><td><audio class='compact' controls src='/sounds/fr/je suis.mp3'/></td></tr><tr><td>tu* es</td><td>you are</td><td><audio class='compact' controls src='/sounds/fr/tu es.mp3'/></td></tr><tr><td><a href='./?config=config-fr-2.json#subject-pronouns'>il</a> est</td><td>he is, it is </td><td><audio class='compact' controls src='/sounds/fr/il est.mp3'/></td></tr><tr><td><a href='./?config=config-fr-2.json#subject-pronouns'>elle</a> est</td><td>she is, it is</td><td><audio class='compact' controls src='/sounds/fr/elle est.mp3'/></td></tr><tr><td>nous sommes</td><td>we are</td><td><audio class='compact' controls src='/sounds/fr/nous sommes.mp3'/></td></tr><tr><td>vous* êtes</td><td>you are</td><td><audio class='compact' controls src='/sounds/fr/vous êtes.mp3'/></td></tr><tr><td><a href='./?config=config-fr-2.json#subject-pronouns'>ils</a>  sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/fr/ils sont.mp3'/></td></tr><tr><td><a href='./?config=config-fr-2.json#subject-pronouns'>elles</a> sont</td><td>they are</td><td><audio class='compact' controls src='/sounds/fr/elles sont.mp3'/></td></tr><hr/>",
 			"<p><b>2. Linguistic genders</b> ( I think this lends itself to illustration/pic ?)</p><p>All French nouns have gender, not just people or animals but inanimate objects too. There are just two genders in French called masculine and feminine. This simply means that all nouns belong in one category or the other. Males e.g. father, uncle etc are masculine nouns and females e.g. mother, aunt etc are feminine nouns. Other nouns have intrinsic gender. This is not related to their owner, characteristics, manufacturer etc. It is possible to identify the gender of some nouns by their endings. (A list of these endings to be added/ linked)</p><p>The gender of the noun has implications for some grammatical features. e.g.</p><p>a. The indefinite article:</p><p>There are two ways of saying 'a' in French: <b class='speak'>un</b> for masculine nouns e.g. <b class='speak'>un</b> homme (a man), <b class='speak'>un</b> métier (a profession/occupation) and <b class='speak'>une</b> for a feminine noun e.g. <b class='speak'>une</b> femme (a woman), <b class='speak'>une</b> profession (a profession).</p><p>b. The definite article:</p><p>For singular nouns, to say 'the' you use <b class='speak'>le</b> for masculine nouns e.g. <b class='speak'>le</b> professeur (the [male] teacher, <b class='speak'>le</b> jour (the day). For feminine nouns you say <b class='speak'>la</b> e.g. <b class='speak'>la</b> professeure (the [female] teacher, <b class='speak'>la</b> nuit (the night). When the singular noun begins with a vowel or mute h, then you use <b>l'</b> regardless of gender e.g. <b>l'</b>appartement (m) (the flat),  <b>l'</b>école (f) (the school), <b>l'</b>homme (the man).</p>",
-			"<p><b>3. Subject pronouns</b></p><ul><li><b>Il</b> is used to replace a masculine noun.</li><li><b>Elle</b> is used to replace a feminine noun.</li><li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li><li><b>Elles</b> is used to replace more than one feminine noun.</li></ul>"
+			"<p><a name='subject-pronouns'/><b>3. Subject pronouns</b></p><ul><li><b>Il</b> is used to replace a masculine noun.</li><li><b>Elle</b> is used to replace a feminine noun.</li><li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li><li><b>Elles</b> is used to replace more than one feminine noun.</li></ul>"
 		],
 		"id": "explanation3",
 		"titleText": "Grammar / Use of Language"
