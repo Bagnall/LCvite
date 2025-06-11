@@ -319,7 +319,7 @@
 			"<p><b>3 Feminine forms of professions and adjectives</b></p><p>When describing a female or any feminine noun, you will often see the addition of a letter or letters to the original masculine noun or adjective.</p><ul><li>If the ending is <b>e</b> there is no addition: both masculine and feminine are the the same e.g. célibataire, journaliste, serbe etc.</li><li>If the last letter is a consonant, then generally <b>e</b> is added to form the feminine e.g. étudiant (m) étudiante (f), chinois(m), chinoise(f) <b>NB</b> médecin is an exception – this is for both a male and female doctor.</li><li>If the final letter is <b>é</b>, then an <b>e</b> is added for the feminine e.g.  marié (m), mariée (f)</li><li>If the ending is <b>en</b>, <b>ne</b> is added for the feminine e.g. informaticien (m)/ informaticienne(f), australien (m), australienne(f)</li></ul>"
 		],
 		"id": "explanation4",
-		"titleText": "Grammar / Use of Language."
+		"titleText": "Grammar / Use of Language"
 	},
 	"explanation5": {
 		"component": "Explanation",
@@ -397,7 +397,7 @@
 					"component": "AnswerTable",
 					"congratulationsText": "Well done!",
 					"id": "AnswerTable1",
-					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the pronunciation. Write the feminine form in the empty cells, then click the check button.",
+					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
 					"header": [
 						"Masculine",
 						"feminine"

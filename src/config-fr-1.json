@@ -260,19 +260,19 @@
 	"explanation1": {
 		"component": "Explanation",
 		"content": [
-			"<p><a name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b>Mademoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
-			"<p><a name='tuvous'/>2 <a class='sound-link' href='/sounds/fr/tu.mp3' alt='tu'><b>Tu*</b></a> and <a class='sound-link' href='/sounds/fr/vous.mp3' alt='vous'><b>vous*</b></a> both mean 'you'.</p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b>tu: Je m'appelle Michel et toi ?</b></p><p>You use <b>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
+			"<p><a name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b class='speak'>Mademoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
+			"<p><a name='tuvous'/>2 <a class='sound-link' href='/sounds/fr/tu.mp3' alt='tu'><b>Tu*</b></a> and <b class='speak'>vous*</b> both mean 'you'.</p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b class='speak'>tu:</b> <b class='speak'>Je m'appelle Michel et toi ?</b></p><p>You use <b class='speak'>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
 		],
 		"id": "explanation1",
-		"titleText": "Grammar / Use of Language."
+		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {
 		"component": "Explanation",
 		"content": [
 			"<h2>How to pronounce:</h2><p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
-			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words bonjour and bonsoir.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
+			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words <span class='speak'>bonjour</span> and <span class='speak'>bonsoir</span>.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
 			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
-			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French r is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration. You will have encountered this sound in the words bonjou<b>r</b>, bonsoi<b>r</b>, au <b>r</b>evoi<b>r</b>.</p>",
+			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration. You will have encountered this sound in the words <span class='speak'>bonjou<b>r</b></span>, <span class='speak'>bonsoi<b>r</b></span>, <span class='speak'>au <b>r</b>evoi<b>r</b></span>.</p>",
 			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   <a class='sound-link' href='/sounds/fr/moi.mp3' alt='moi'/>m<b>oi</b></a>, <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/>t<b>oi</b></a>, <a class='sound-link' href='/sounds/fr/Au revoir.mp3' alt='au revoir'/>au rev<b>oi</b>r</a></p><p>4 <b>The letter h</b>  <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/></p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <a class='sound-link' href='/sounds/fr/homme.mp3' alt='homme'/><b>h</b>omme</a>, <a class='sound-link' href='/sounds/fr/horrible.mp3' alt='horrible'/><b>h</b>orrible</a>, <a class='sound-link' href='/sounds/fr/horizon.mp3' alt='horizon'/><b>h</b>orizon</a>.</p>"
 		],
 		"id": "explanation2",
@@ -286,7 +286,7 @@
 					"component": "Blanks",
 					"id": "wordsIntoSlots1",
 					"congratulationsText": "Well done!",
-					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"instructionsTextHTML": "You will hear words containing <b>on</b> / <b>om</b> or <b>oi</b> or <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -313,7 +313,7 @@
 						"nom"
 					],
 					"soundFile": "sounds/fr/LO1 words-in-order.mp3",
-					"titleText": "1. Put the Words in the Order You Hear Them"
+					"titleText": "1. Put the words in the order you hear them"
 				}
 			},
 			{

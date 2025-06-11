@@ -196,7 +196,7 @@
 			"<p><b>2 Verbs in French continued</b></p><p><b>Avoir</b> is one of the many irregular verbs in French. It means <b>to have</b>. e.g. J'ai une soeur.</p><p>It occurs very frequently and so is worth memorising if possible.</p><table><thead><tr><th>Avoir</th><th>to have</th></tr></thead><tbody><tr><td class='speak'>j'ai</td><td>I have</td></tr><tr><td class='speak'>tu as</td><td>you have</td></tr><tr><td class='speak'>il a</td><td>he has, it has</td></tr><tr><td class='speak'>elle a</td><td>she has, it has</td></tr><tr><td class='speak'>nous avons</td><td>we have</td></tr><tr><td class='speak'>vous avez</td><td>you have</td></tr><tr><td class='speak'>ils ont</td><td>they have</td></tr><tr><td class='speak'>elles ont</td><td>they have</td></tr></tbody></table><p>The verb <b>avoir</b> occurs in some expressions when in English the verb <b>to be</b> or sometimes <b>to feel</b> would be used. Here are some of these expressions:</p><table><tbody><tr><td><b>avoir … ans</b></td><td>to be … years old</td><td>e.g. <b class='speak'>J'ai 25 ans.</b></td><td>I'm 25 years old.</td></tr><tr><td><b>avoir soif </b></td><td>to be thirsty</td><td>e.g. <b class='speak'>J'ai soif. </b></td><td>I'm thirsty.</td></tr><tr><td><b>avoir faim </b></td><td>to be hungry</td><td>e.g. <b class='speak'>Elle a faim.</b></td><td>She's hungry.</td></tr><tr><td><b>avoir peur </b></td><td>to be frightened</td><td>e.g. <b class='speak'>Il a peur.</b></td><td>He's frightened.</td></tr><tr><td><b>avoir froid</b></td><td>to be / feel cold</td><td>e.g. <b class='speak'>Tu as froid ?</b></td><td>Are you / do you feel cold?</td></tr><tr><td><b>avoir chaud</b></td><td>to be / feel hot</td><td>e.g. <b class='speak'>Vous avez chaud?</b></td><td>Are you hot / do you feel hot?</td></tr></tbody></table>"
 		],
 		"id": "explanation1",
-		"titleText": "Grammar / Use of Language."
+		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {
 		"component": "Explanation",
@@ -204,7 +204,7 @@
 			"<p><b>How to pronounce double l in French:</b></p><p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.</p><p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <b>double l</b> is pronounced <b>l</b> (sound file please). e.g.  <b class='speak'>une balle</b> (a ball), <b class='speak'>Elle est belle</b>. (She is beautiful.) <b class='speak'>Elle est folle</b>. (She is crazy.) <b class='speak'>une bulle</b> (a bubble). There are no exceptions here!</p><p>2i  after the vowel <b>I</b>, <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g. <b class='speak'>une fille</b>, <b class='speak'>une famille</b>, <b class='speak'>un billet</b> (a ticket)</p><p>2ii if the vowel i is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g. <b class='speak'>une bouteille</b> (a bottle), <b class='speak'>une feuille</b> (a leaf).</p><p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <i><b>i</b></i>.  The most common are :  <b class='speak'>la ville</b>, <b class='speak'>le village</b>, <b class='speak'>la villa</b>, <b class='speak'>mille</b> (a thousand), <b class='speak'>un million</b> (a million), <b class='speak'>un milliard</b> (a billion), <b class='speak'>tranquille</b> (quiet), <b class='speak'>Lille</b>, <b class='speak'>Gilles</b>.  The best thing to do is to learn these off by heart.</p>"
 		],
 		"id": "explanation2",
-		"titleText": "Demystifying French Pronunciation."
+		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {
 		"component": "Group",
@@ -414,6 +414,6 @@
 			}
 		],
 		"id": "group1",
-		"titleText": "Exercises."
+		"titleText": "Exercises"
 	}
 }

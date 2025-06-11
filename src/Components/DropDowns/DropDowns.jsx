@@ -241,6 +241,7 @@ export class DropDowns extends React.PureComponent {
 			htmlContent = '',
 			id = [],
 			instructionsText,
+			instructionsTextHTML,
 			// nPlaced = 0,
 			phrases = [],
 			phrasesHTML = '',
@@ -329,7 +330,7 @@ export class DropDowns extends React.PureComponent {
 
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
-				<p className={`instructions`}>{instructionsText}</p>
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}

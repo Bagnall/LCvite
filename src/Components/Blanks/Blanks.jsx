@@ -162,7 +162,7 @@ export class Blanks extends React.PureComponent {
 	};
 
 	handleMouseDown = (e) => {
-		console.log("handleMouseDown", e);
+		// console.log("handleMouseDown", e);
 		if (e.button && e.button !== 0) return;
 		e.preventDefault();
 		e.stopPropagation();
@@ -364,10 +364,10 @@ export class Blanks extends React.PureComponent {
 		top = parseInt(top);
 		if (Math.abs(left - targetX) < margin && Math.abs(top - targetY) < margin) {
 			return {
+				success: true,
 				"target": targetWord,
 				"targetX": targetX,
 				"targetY": targetY,
-				success: true,
 			};
 		}
 		return { success: false };
@@ -384,6 +384,7 @@ export class Blanks extends React.PureComponent {
 			htmlContent,
 			id = '',
 			instructionsText,
+			instructionsTextHTML,
 			listenDescriptionText,
 			showHints = false,
 			showHintsText,
@@ -517,7 +518,7 @@ export class Blanks extends React.PureComponent {
 				key={`${id}Blanks`}
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				<p className={`instructions`}>{instructionsText}</p>
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip

@@ -56,6 +56,7 @@ export class Monologue extends React.PureComponent {
 			htmlContent,
 			id,
 			instructionsText,
+			instructionsTextHTML,
 			showResult = false,
 			soundFile,
 			userInput = ``,
@@ -102,7 +103,7 @@ export class Monologue extends React.PureComponent {
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						<p>{instructionsText}</p>
+						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
 						{showResult ?
 							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)

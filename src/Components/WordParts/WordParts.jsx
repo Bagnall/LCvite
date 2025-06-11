@@ -92,6 +92,7 @@ export class WordParts extends React.PureComponent {
 			htmlContent,
 			id = [],
 			instructionsText,
+			instructionsTextHTML,
 			nPlaced = 0,
 			phrases,
 			// showHintsText,
@@ -163,7 +164,7 @@ export class WordParts extends React.PureComponent {
 				key={`${id}WordParts`}
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				<p className={`instructions`}>{instructionsText}</p>
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
 
 
 				<div className='help'>
