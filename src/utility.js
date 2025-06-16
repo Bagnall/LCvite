@@ -168,6 +168,51 @@ export const handleResponseText = (response) => {
 		});
 };
 
+export const handleSpecialLinkClick = (e) => {
+	// Wow, we need this (unfortunately) so that we can hyperlink between parts of the document, most importantly,
+	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
+	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
+
+	// console.log("handleSpecialLinkClick", e);
+	e.preventDefault();
+	const href = e.target.getAttribute('href');
+
+	const [, name] = href.split('#');
+
+	const specialAnchorTargets = document.querySelectorAll(`a.special-anchor-target[name='${name}']`);
+	if (specialAnchorTargets.length === 1) { // Should only ever be one!
+		const [specialAnchorTarget] = specialAnchorTargets;
+		// And it should be within an accordion (or even nested accordions)
+		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
+
+		while (accordionArticle) {
+			// Expand it!
+			try {
+				const ref = window.refs.find((r) => {
+					return r !== null && r.props.id === accordionArticle.id;
+				});
+
+				ref.setState({ expanded: true },
+					() => setTimeout(() => {
+						// Flash a highlight colour to help the user to spot it.
+						specialAnchorTarget.classList.add('flash');
+						// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
+						const targetRect = specialAnchorTarget.getBoundingClientRect();
+						scrollTo({ behavior: 'smooth', left: targetRect.left, top: 3000/* targetRect.top*/ });
+						setTimeout(() => {specialAnchorTarget.classList.remove('flash');}, 5000); // Remove the flashing highlight afte a suitable delay
+					}, 500)
+				);
+			}catch (err) {
+				console.log(err); // eslint-disable-line
+			}
+			accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
+		}
+
+	}
+	// console.log("specialAnchorTargets", specialAnchorTargets);
+
+};
+
 export const highlightTextDiff = (a, b, countCorrect, sounds = false) => {
 	const m = a.length, n = b.length;
 	const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));

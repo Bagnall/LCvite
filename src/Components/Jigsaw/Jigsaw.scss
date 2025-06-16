@@ -87,7 +87,7 @@
 }
 @include media-queries.respond-above(m) {
 	.jigsaw-container {
-		max-height: 990px;
+		max-height: 870px;
 		.jigsaw {
 			transform: scale(0.4);
 		}
@@ -95,7 +95,7 @@
 }
 @include media-queries.respond-above(l) {
 	.jigsaw-container {
-		max-height: 970px;
+		max-height: 990px;
 		.jigsaw {
 			transform: scale(0.5);
 		}
@@ -110,7 +110,8 @@
 }
 @include media-queries.respond-above(xxl) {
 	.jigsaw-container {
-		max-height: initial;
+		max-height: 1100px;
+
 		.jigsaw {
 			transform: scale(0.6);
 		}

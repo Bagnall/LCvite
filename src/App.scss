@@ -15,6 +15,7 @@ html.debug {
 
 html.can-speak {
 	#content {
+		.special-anchor,
 		.speak {
 			color: blue;
 			text-decoration: underline;
@@ -31,6 +32,23 @@ html.can-speak {
 		// opacity: 0;
 		// transition: opacity 0;
 		animation-name: none;
+	}
+}
+.flash {
+	animation-name: flash-animation;
+	animation-duration: 1000ms;
+	animation-timing-function: ease;
+	animation-iteration-count: 6;
+}
+@keyframes flash-animation {
+	0% {
+		background-color: rgba(166, 255, 0, 0);
+	}
+	50% {
+		background-color: rgba(166, 255, 0, 1);
+	}
+	100% {
+		background-color: rgba(166, 255, 0, 0);
 	}
 }
 .no-config {

@@ -177,16 +177,13 @@ export class DropDowns extends React.PureComponent {
 		const regex = /\[([^\]]+)\]/g;
 		let result = '';
 		let lastIndex = 0;
-		let match;
-		// let index = 0;
-		// let nSelects = 0;
 		const {
 			id,
 			solved = [],
 			wrong = [],
 		} = this.state;
 
-		if ((match = regex.exec(htmlString)) !== null) {
+		if ((regex.exec(htmlString)) !== null) {
 			htmlString.replace(regex, (match, contents, offset) => {
 				// Append text before this match
 				result += htmlString.slice(lastIndex, offset);
@@ -197,29 +194,16 @@ export class DropDowns extends React.PureComponent {
 
 				const nodeId = `${id}select${nSelects}`;
 				let selectHTML = '';
-				// if (solved.includes(nodeId)) {
-				// 	// console.log("span it!");
-				// 	selectHTML += `<span class='correct' id="${nodeId}" key="${nodeId}" >`;
-				// 	cleanOptions.forEach((opt, i) => {
-				// 		// const classAttr = i === winner ? ' class="correct"' : '';
-				// 		if (i === winner) selectHTML += `${opt}`;
-				// 	});
-				// 	selectHTML += '</span>';
-				// } else {
-				// Build select HTML
-				// console.log("wrong", wrong);
 				selectHTML += `<select class="${wrong.includes(nodeId) && !solved.includes(nodeId) ? 'incorrect' : ''}" id="${nodeId}" key="${nodeId}" ><option>-</option>`;
 				cleanOptions.forEach((opt, i) => {
 					const classAttr = i === winner ? ' class="hint"' : '';
 					selectHTML += `<option value="${i}"${classAttr}>${opt}</option>`;
 				});
 				selectHTML += '</select>';
-				// }
 				nSelects++;
 
 				result += selectHTML;
 				lastIndex = offset + match.length;
-				// index++;
 			});
 		}
 

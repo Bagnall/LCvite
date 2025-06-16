@@ -11,7 +11,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "PhraseTable1",
-		"instructionsText": "",
+		"instructionsTextHTMLXXX": "<a class='special-anchor' href='./?config=config-fr-1.json#nested'>SPECIAL ANCHOR</a>",
 		"phrases": [
 			[
 				"Salut, ça va ?",
@@ -37,7 +37,7 @@
 				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
 			],
 			[
-				"Bonjour Monsieur Letort ! Ça va très bien. Et <a href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
+				"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
 				"Hello M Letort, I'm very well, thank you. And you?",
 				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
 			],
@@ -50,12 +50,12 @@
 				""
 			],
 			[
-				"Comment t'appelles-<a href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
+				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Je m'appelle Max, et <a href='./?config=config-fr-1.json#madame'>toi*</a> ?",
+				"Je m'appelle Max, et <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>toi*</a> ?",
 				"My name is Max. And you're….?",
 				"sounds/fr/Je m'appelle Max, et toi.mp3"
 			],
@@ -68,7 +68,7 @@
 				""
 			],
 			[
-				"Comment <a href='./?config=config-fr-1.json#tuvous'>vous*</a> appelez-vous ?",
+				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> appelez-vous ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],
@@ -120,7 +120,7 @@
 				"sounds/fr/Monsieur.mp3"
 			],
 			[
-				"<a href='./?config=config-fr-1.json#madame'>Madame*</a>",
+				"<a class='special-anchor' href='./?config=config-fr-1.json#madame'>Madame*</a>",
 				"madam, Mrs / Ms",
 				"sounds/fr/Madame.mp3"
 			],
@@ -190,12 +190,12 @@
 				"sounds/fr/Pas mal.mp3"
 			],
 			[
-				"Comment t'appelles-<a href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
+				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Comment vous appelez-<a href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
+				"Comment vous appelez-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],
@@ -260,8 +260,8 @@
 	"explanation1": {
 		"component": "Explanation",
 		"content": [
-			"<p><a name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b class='speak'>Mademoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
-			"<p><a name='tuvous'/>2 <a class='sound-link' href='/sounds/fr/tu.mp3' alt='tu'><b>Tu*</b></a> and <b class='speak'>vous</b>* both mean 'you'.</p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b class='speak'>tu:</b> <b class='speak'>Je m'appelle Michel et toi ?</b></p><p>You use <b class='speak'>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
+			"<p><a class='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b class='speak'>Mademoiselle</b></a>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
+			"<p><a class='special-anchor-target' name='tuvous'>2 <b class='speak'>Tu</b>* and <b class='speak'>vous</b>* both mean 'you'.</a></p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b class='speak'>tu:</b> <b class='speak'>Je m'appelle Michel et toi ?</b></p><p>You use <b class='speak'>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
 		],
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
@@ -296,6 +296,7 @@
 						"roi",
 						"homme",
 						"hôtel",
+						"loi",
 						"hôpital",
 						"bonjour",
 						"bonbon",
@@ -403,6 +404,7 @@
 					"congratulationsText": "Très bien !",
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
+					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
 					"showHintsText": "Show hints when moving",
 					"words NOT NEEDED": [
 						"enfants",
@@ -412,7 +414,7 @@
 						"moi"
 					],
 					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+						"Bonjour les</a> [enfants]. Comment vous [appelez]-vous ?",
 						"Bonjour Madame ! Je m' [appelle] Annie.",
 						"Et [moi], je m'appelle David.",
 						"D'accord. Très bien !",

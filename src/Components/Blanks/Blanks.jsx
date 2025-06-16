@@ -454,7 +454,7 @@ export class Blanks extends React.PureComponent {
 									index={i - 1}
 									key={`${id}word${i}`}>{phrase}</Word>
 							</td>
-							{i < words.length / 2 ?
+							{i <= words.length / 2 ?
 								<>
 									<td>{i + nRows}.</td>
 									<td>
@@ -522,7 +522,6 @@ export class Blanks extends React.PureComponent {
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip
-						className={`compact`}
 						listenText={listenDescriptionText}
 						soundFile={soundFile}
 					/>
