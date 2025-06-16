@@ -34,12 +34,12 @@
 				"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
 			],
 			[
-				""
-			],
-			[
 				"Je viens d'Espagne.",
 				"I come from Spain.",
 				"sounds/fr/Je viens d'Espagne.mp3"
+			],
+			[
+				""
 			],
 			[
 				"D'où venez-vous, Monsieur ?",
@@ -47,14 +47,9 @@
 				"sounds/fr/D'où venez-vous, Monsieur.mp3"
 			],
 			[
-				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.",
-				"I come from the USA. I'm American. My wife's Canadian.",
-				"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne.mp3"
-			],
-			[
-				"Elle vient du Québec. Et vous, vous êtes suisse ?",
-				"She comes from Quebec. And are you Swiss?",
-				"sounds/fr/Elle vient du Québec. Et vous, vous êtes suisse.mp3"
+				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse ?",
+				"I come from the USA. I'm American. My wife's Canadian. She comes from Quebec. And are you Swiss?",
+				"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse.mp3"
 			],
 			[
 				"Ah non, je suis luxembourgeoise.",
@@ -83,6 +78,9 @@
 				"Je parle français. C'est tout.",
 				"I speak French. That's all.",
 				"sounds/fr/Je parle français. C'est tout.mp3"
+			],
+			[
+				""
 			],
 			[
 				"Quelles langues parlez-vous ?",

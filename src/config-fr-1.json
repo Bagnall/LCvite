@@ -55,7 +55,7 @@
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Je m'appelle Max, et <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>toi*</a> ?",
+				"Je m'appelle Max, et <a class='special-anchor' href='./?config=config-fr-1.json#toi'>toi*</a> ?",
 				"My name is Max. And you're….?",
 				"sounds/fr/Je m'appelle Max, et toi.mp3"
 			],
@@ -142,7 +142,7 @@
 			[
 				"mon petit (m) / ma petite(f)",
 				"poppet  (literally: my little one)",
-				"sounds/fr/mon petit ma petit.mp3"
+				"sounds/fr/mon petit ma petite.mp3"
 			],
 			[
 				"mon amour",
@@ -167,7 +167,7 @@
 			[
 				"Ça va ?",
 				"Are you well / OK?  Are things alright/ OK?",
-				"sounds/fr/Ça va.mp3"
+				"sounds/fr/Ça va (q).mp3"
 			],
 			[
 				"Comment ça va ?",
@@ -195,7 +195,7 @@
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Comment vous appelez-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
+				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> appelez-vous ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],
@@ -259,9 +259,10 @@
 	},
 	"explanation1": {
 		"component": "Explanation",
+		"oldContent": "<p><a class='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <span class='audio-link' title='play' onclick='()=>{const soundFileAudio = new Audio(`/sounds/fr/Mademoiselle.mp3`); soundFileAudio.play();}'>Madamoiselle</span> <audio class='compact' src='/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio> <audio class='super-compact' src='/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio> <audio class='link' src='/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
 		"content": [
-			"<p><a class='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b class='speak'>Mademoiselle</b></a>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
-			"<p><a class='special-anchor-target' name='tuvous'>2 <b class='speak'>Tu</b>* and <b class='speak'>vous</b>* both mean 'you'.</a></p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b class='speak'>tu:</b> <b class='speak'>Je m'appelle Michel et toi ?</b></p><p>You use <b class='speak'>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
+			"<p><a class='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b class='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as <b class='speak'>Madamoiselle</b>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p><table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table>",
+			"<p><a class='special-anchor-target' name='tuvous'>2 <b class='speak'>Tu</b>* and <b class='speak'>vous</b>* both mean 'you'.</a></p><p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend, a classmate or a child etc. <a class='special-anchor-target' name='toi'/>When returning question i.e.  when you ask 'and you? you use the form <a class='sound-link' href='/sounds/fr/toi.mp3' alt='toi'/><b>toi</b></a> instead of <b class='speak'>tu:</b> <b class='speak'>Je m'appelle Michel et toi ?</b></p><p>You use <b class='speak'>vous</b> when addressing an adult that you don't know e.g.  a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor, a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person whatever your relationship to them.</p>"
 		],
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
@@ -329,7 +330,7 @@
 						"b[on]jou[r] m[on] ché[r]i",
 						"b[on]s[oi][r] m[on] amou[r]",
 						"au [r]ev[oi][r] ma ché[r]ie",
-						"quelle [h]o[r][r]eu[r] Valé[r]ie !"
+						"quelle [h]o[rr]eu[r] Valé[r]ie !"
 					],
 					"audio": [
 						"sounds/fr/bonjour mon chéri.mp3",

@@ -651,6 +651,25 @@ export default class App extends React.Component {
 										id={`scratchAccordion`}
 										title={`Scratch`}
 									>
+										<>
+											<p>
+												<a className='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b className='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as </a></p>
+											<ol>
+												<li><audio controls className='compact' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
+												<li><audio controls className='super-compact' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
+												<li><audio controls className='link' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
+											</ol>
+											<p>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p>
+											<table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table></>
+									</AccordionArticle> */}
+									{/* <AccordionArticle
+										id={`scratchAccordion`}
+										title={`Scratch`}
+									>
+										<>
+											<p>Begin<AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Mademoiselle.mp3`)}></AudioClip>end.</p>
+											<p>Begin <AudioClip className={`audio-link`} soundFile={resolveAsset(`/sounds/fr/Mademoiselle.mp3`)}>Madamoiselle</AudioClip> end.</p>
+										</>
 									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (

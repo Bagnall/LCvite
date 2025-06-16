@@ -171,13 +171,13 @@ h2 {
 	font-size: 1.6em;
 }
 
-.arabic {
+.ar-AE {
 	#content {
 		#hero {
 			background-image: url(/projects/richard/images/uae.jpg);
 			background-repeat: no-repeat;
 			background-position: center bottom;
-			background-size: auto;
+			background-size: cover;
 		}
 	}
 }
@@ -312,6 +312,16 @@ h2 {
 	// .container {
 	// padding: 10px;
 	// }
+	span.audio-link,
+	a {
+		color: blue;
+		cursor: pointer;
+		text-decoration: underline;
+		&.special-anchor-target {
+			color: initial;
+			text-decoration: initial;
+		}
+	}
 
 	ul.main-menu {
 		width: 100%;

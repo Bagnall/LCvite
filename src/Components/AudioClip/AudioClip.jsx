@@ -20,16 +20,24 @@ export class AudioClip extends React.PureComponent {
 	render = () => {
 		const {
 			className = '',
+			children,
 			listenText = '',
 			soundFile,
 		} = this.props;
 
-		if (className.includes('super-compact')) {
+		if (className.includes('link')) {
+			return (
+				<span className={`audio-link`}
+					onClick={this.playSound}
+					title={`play`}
+				>{children}</span>
+			);
+		} else if (className.includes('super-compact')) {
 			return (
 				<div className={`audio-container super-compact`}
 					onClick={this.playSound}
 					title={`play`}
-				/>
+				></div>
 			);
 		} else if (className.includes('compact')) {
 			return (
