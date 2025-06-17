@@ -14,19 +14,65 @@
 		"instructionsText": "",
 		"phrases": [
 			[
-				"Tu as des frères et des sœurs ? Oui, j'ai un grand frère et deux petites sœurs. Et toi ?  Je n'ai pas de frères, mais j'ai une sœur-jumelle.",
-				"Have you got brothers and sisters? Yes, I have a big (older) brother and two little (younger) sisters. What about you? I haven't got any brothers, but I've got a twin sister.",
-				"sounds/fr/LO6 dialogue1.mp3"
+				"Tu as des frères et des sœurs ?",
+				"Have you got brothers and sisters?",
+				"sounds/fr/Tu as des frères et des sœurs.mp3"
 			],
 			[
-				"Vous avez des frères et des sœurs ? Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ? J'ai un demi-frère et une demi-sœur.",
-				"Have you got brothers and sisters? No, I've got neither brothers nor sisters. I'm an only child. What about you? I've got a half-brother and a half-sister.",
+				"Oui, j'ai un grand frère et deux petites sœurs. Et toi ?",
+				"Yes, I have a big (older) brother and two little (younger) sisters. What about you?",
+				"sounds/fr/Oui, j'ai un grand frère et deux petites sœurs. Et toi.mp3"
+			],
+			[
+				"Je n'ai pas de frères, mais j'ai une sœur-jumelle.",
+				"I haven't got any brothers, but I've got a twin sister.",
+				"sounds/fr/Je n'ai pas de frères, mais j'ai une sœur-jumelle.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Vous avez des frères et des sœurs ?",
+				"Have you got brothers and sisters?",
+				"sounds/fr/Vous avez des frères et des sœurs.mp3"
+			],
+			[
+				"Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ?",
+				"No, I've got neither brothers nor sisters. I'm an only child. What about you?",
 				"sounds/fr/LO6 dialogue2.mp3"
 			],
 			[
-				"Caroline, vous avez des enfants ? Ah non, nous n'avons pas d'enfants, pas encore ! Et vous ? Oui, j'ai un fils. Il a quel âge ? C'est un bébé. Il a cinq mois.",
-				"Caroline, do you have any children? Oh no, we haven't got any children, not yet. What about you? Yes, I've got a son. How old is he? He's a baby. He's five months old.",
-				"sounds/fr/LO6 dialogue3.mp3"
+				"J'ai un demi-frère et une demi-sœur.",
+				"I've got a half-brother and a half-sister.",
+				"sounds/fr/LO6 dialogue2.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Caroline, vous avez des enfants ?",
+				"Caroline, do you have any children?",
+				"sounds/fr/Caroline, vous avez des enfants.mp3"
+			],
+			[
+				"Ah non, nous n'avons pas d'enfants, pas encore ! Et vous ?",
+				"Oh no, we haven't got any children, not yet. What about you?",
+				"sounds/fr/Ah non, nous n'avons pas d'enfants, pas encore ! Et vous.mp3"
+			],
+			[
+				"Oui, j'ai un fils.",
+				"Yes, I've got a son.",
+				"sounds/fr/Oui, j'ai un fils.mp3"
+			],
+			[
+				"Il a quel âge ?",
+				"How old is he?",
+				"sounds/fr/Il a quel âge.mp3"
+			],
+			[
+				"C'est un bébé. Il a cinq mois.",
+				"He's a baby. He's five months old.",
+				"sounds/fr/C'est un bébé. Il a cinq mois.mp3"
 			]
 		],
 		"titleText": "Dialogues"
@@ -240,7 +286,7 @@
 					"id": "dropdowns2",
 					"congratulationsText": "Well done!",
 					"instructionsText": "All the words containing double ll are in bold. Do you know which are pronounced 'l' and which 'y'?   Select y or l in the box below. Once you've completed the task listen to the texts.",
-					"htmlContent": "<table><tbody><tr><td>La famille de Camille habite à Paris.</br>La fille de Camille est très gentille.</br>La fille de sa fille s'appelle Myrtille.</br>Elle aime les tilleuls* de Versailles.</td></tr><tr><td>Annabelle a une belle-fille.<br/>Elle s'appelle Isabelle.<br/>Isabelle n'est pas belle<br/>Mais Isabelle est très gentille<br/>Isabelle habite à Lille <br/>Elle y habite avec Gilles.<br/>Ce n'est pas très tranquille.<br/>Mais quelle belle ville, la ville de Lille !</td></tr></tbody></table><p class='footnote'>*les tilleuls - lime trees</p>",
+					"htmlContent": "<table><tbody><tr><td><span class='speak'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='speak'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='speak'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='speak'><b>Elle</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr><tr><td><span class='speak'><b>Annabelle</b> a une <b>belle-fille</b>.</span><br/><span class='speak'><b>Elle s'appelle Isabelle</b>.</span><br/><span class='speak'><b>Isabelle</b> n'est pas <b>belle</b><br/>Mais <b>Isabelle</b> est très <b>gentille</b>.</span><br/><span class='speak'><b>Isabelle</b> habite à <b>Lille</b></span><br/><span class='speak'><b>Elle</b> y habite avec <b>Gilles</b>.</span><br/><span class='speak'>Ce n'est pas très <b>tranquille</b>.</span><br/><span class='speak'>Mais <b>quelle belle ville</b>, la <b>ville</b> de <b>Lille</b> !</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p>",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
@@ -291,7 +337,7 @@
 					"component": "DropDowns",
 					"id": "dropdowns3",
 					"congratulationsText": "Well done!",
-					"instructionsText": "Fill in the gaps with the correct part of avoir.",
+					"instructionsTextHTML": "Fill in the gaps with the correct part of <b>avoir</b>.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [

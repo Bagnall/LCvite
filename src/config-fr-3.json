@@ -319,7 +319,7 @@
 		"component": "Explanation",
 		"content": [
 			"<p><b>1. A bit about verbs in French:</b></p><p>There are three groups of regular verbs in French. The biggest of these is called the -er group, simply because the infinitive ends with the letters -er. Parler (to speak), habiter (to live), chanter (to sing), danser (to dance) are examples of - er verbs.</p><p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking' depending on the context.</p><table><thead><tr><th><span class='speak'>parler</span></th><th>to speak</th></tr></thead><tbody><tr><td><span class='speak'>je parle</span></td><td>I speak / am speaking</td></tr><tr><td><span class='speak'>tu parles</span></td><td>you speak / are speaking</td></tr><tr><td><span class='speak'>il parle</span></td><td>he / it speaks / is speaking</td></tr><tr><td><span class='speak'>elle parle</span></td><td>she / it speaks / is speaking</td></tr><tr><td><span class='speak'>nous parlons</span></td><td>we speak / are speaking</td></tr><tr><td><span class='speak'>vous parlez</span></td><td>you speak / are speaking</td></tr><tr><td><span class='speak'>ils parlent</span></td><td>they speak / are speaking</td></tr><tr><td><span class='speak'>elles parlent</span></td><td>they speak / are speaking</td></tr></tbody></table><p>venir is a common irregular verb.</p><p><span class='speak'>venir de</span> to come from</p><table><tbody><tr><td><span class='speak'>je viens</span> (de Marseille)</td><td>I come (from Marseille)...</td></tr><tr><td><span class='speak'>tu viens</span></td></tr><tr><td><span class='speak'>il vient</span></td></tr><tr><td><span class='speak'>elle vient</span></td></tr><tr><td><span class='speak'>nous venons</span></td></tr><tr><td><span class='speak'>vous venez</span></td></tr><tr><td><span class='speak'>ils viennent</span></td></tr><tr><td><span class='speak'>elles viennent</span></td></tr></tbody></table>",
-			"<p><b>2 De</b></p><p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p><p>Je viens <span style='color: red;'><b>de</b></span> Paris (for towns, cities, villages)</p><p>Je viens <span style='color: green;'><b>de</b></span> Belgique (for feminine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: black;'>d'</span>Angleterre (for all singular place names beginning with a vowel or mute h)</p><p>Je viens <span style='color: cyan;'><b>du</b></span> Canada (for masculine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: purple;'><b>des</b></span> Seychelles (for plural countries)</p>",
+			"<p><b>2 De</b></p><p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p><p>Je viens <span style='color: red;'><b>de</b></span> Paris (for towns, cities, villages)</p><p>Je viens <span style='color: green;'><b>de</b></span> Belgique (for feminine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: black;'><b>d'</b></span>Angleterre (for all singular place names beginning with a vowel or mute h)</p><p>Je viens <span style='color: cyan;'><b>du</b></span> Canada (for masculine countries and regions beginning with a consonant)</p><p>Je viens <span style='color: purple;'><b>des</b></span> Seychelles (for plural countries)</p>",
 			"<p><b>3 Feminine forms of professions and adjectives</b></p><p>When describing a female or any feminine noun, you will often see the addition of a letter or letters to the original masculine noun or adjective.</p><ul><li>If the ending is <b>e</b> there is no addition: both masculine and feminine are the the same e.g. <span class='speak'>célibataire</span>, <span class='speak'>journaliste</span>, <span class='speak'>serbe</span> etc.</li><li>If the last letter is a consonant, then generally <b>e</b> is added to form the feminine e.g. <span class='speak'>étudiant</span> (m) <span class='speak'>étudiante</span> (f), <span class='speak'>chinois</span> (m), <span class='speak'>chinoise</span> (f) <b>NB</b> <span class='speak'>médecin</span> is an exception – this is for both a male and female doctor.</li><li>If the final letter is <b>é</b>, then an <b>e</b> is added for the feminine e.g.  <span class='speak'>marié</span> (m), <span class='speak'>mariée</span> (f)</li><li>If the ending is <b>en</b>, <b>ne</b> is added for the feminine e.g. <span class='speak'>informaticien</span> (m) / <span class='speak'>informaticienne</span> (f), <span class='speak'>australien</span> (m), <span class='speak'>australienne</span> (f)</li></ul>"
 		],
 		"id": "explanation4",
@@ -404,92 +404,114 @@
 					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
 					"header": [
 						"Masculine",
-						"feminine"
+						"feminine",
+						"Listen (m & f)"
 					],
 					"phrases": [
 						[
 							"américain",
-							"américaine"
+							"américaine",
+							"sounds/fr/américain américaine.mp3"
 						],
 						[
 							"asiatique",
-							"asiatique"
+							"asiatique",
+							"sounds/fr/asiatique(m) asiatique(f).mp3"
 						],
 						[
 							"brésilien",
-							"brésilienne"
+							"brésilienne",
+							"sounds/fr/brésilien brésilienne.mp3"
 						],
 						[
 							"croate",
-							"croate"
+							"croate",
+							"sounds/fr/croate(m) croate(f).mp3"
 						],
 						[
 							"danois",
-							"danoise"
+							"danoise",
+							"sounds/fr/danois danoise.mp3"
 						],
 						[
 							"italien",
-							"italienne"
+							"italienne",
+							"sounds/fr/italien italienne.mp3"
 						],
 						[
 							"portugais",
-							"portugaise"
+							"portugaise",
+							"sounds/fr/portugais portugaise.mp3"
 						],
 						[
 							"russe",
-							"russe"
+							"russe",
+							"sounds/fr/russe(m) russe(f).mp3"
 						],
 						[
 							"ukrainien",
-							"ukrainien"
+							"ukrainien",
+							"sounds/fr/ukrainien(m) ukrainien(f).mp3"
 						],
 						[
 							"célibataire",
-							"célibataire"
+							"célibataire",
+							"sounds/fr/célibataire(m) célibataire(f).mp3"
 						],
 						[
 							"fatigué",
-							"fatiguée"
+							"fatiguée",
+							"sounds/fr/fatigué fatiguée.mp3"
 						],
 						[
 							"malade",
-							"malade"
+							"malade",
+							"sounds/fr/malade(m) malade(f).mp3"
 						],
 						[
 							"marié",
-							"mariée"
+							"mariée",
+							"sounds/fr/marié mariée.mp3"
 						],
 						[
 							"dentiste",
-							"dentiste"
+							"dentiste",
+							"sounds/fr/dentiste(m) dentiste(f).mp3"
 						],
 						[
 							"doctorant",
-							"doctorante"
+							"doctorante",
+							"sounds/fr/doctorant doctorante.mp3"
 						],
 						[
 							"étudiant",
-							"étudiante"
+							"étudiante",
+							"sounds/fr/étudiant étudiante.mp3"
 						],
 						[
 							"informaticien",
-							"informaticienne"
+							"informaticienne",
+							"sounds/fr/informaticien informaticienne.mp3"
 						],
 						[
 							"journaliste",
-							"journaliste"
+							"journaliste",
+							"sounds/fr/journaliste(m) journaliste(f).mp3"
 						],
 						[
 							"mécanicien",
-							"mécanicienne"
+							"mécanicienne",
+							"sounds/fr/mécanicien mécanicienne.mp3"
 						],
 						[
 							"médecin",
-							"médecin"
+							"médecin",
+							"sounds/fr/médecin(m) médecin(f).mp3"
 						],
 						[
 							"pharmacien",
-							"pharmacienne"
+							"pharmacienne",
+							"sounds/fr/pharmacien pharmacienne.mp3"
 						]
 					],
 					"titleText": "3. Feminine Form"

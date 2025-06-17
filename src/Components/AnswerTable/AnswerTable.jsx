@@ -92,7 +92,7 @@ export class AnswerTable extends React.PureComponent {
 						<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
 					</td>
 				);
-				if (phrases[i].length - 1 > 2) {
+				if (longestRow > 2) {
 					const soundCellIndex = 2;
 					const soundFile = resolveAsset(`${phrase[soundCellIndex]}`);
 					cells.push(

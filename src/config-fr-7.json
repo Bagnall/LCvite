@@ -274,19 +274,19 @@
 				"sounds/fr/parce que.mp3"
 			],
 			[
-				"bruyant",
+				"bruyant (m) bruyante (f)",
 				"noisy",
-				"sounds/fr/bruyant.mp3"
+				"sounds/fr/bruyant bruyante.mp3"
 			],
 			[
-				"ennuyeux",
+				"ennuyeux (m) ennuyeuse (f)",
 				"boring",
-				"sounds/fr/ennuyeux.mp3"
+				"sounds/fr/ennuyeux ennuyeuse.mp3"
 			],
 			[
-				"intéressant",
+				"intéressant (m) intéressante (f)",
 				"interesting",
-				"sounds/fr/intéressant.mp3"
+				"sounds/fr/intéressant intéressante.mp3"
 			],
 			[
 				"tranquille",
@@ -307,7 +307,7 @@
 	"explanation2": {
 		"component": "Explanation",
 		"content": [
-			"<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p><p><span class='speak'>le cricket</span>, <span class='speak'>le tennis</span>, <span class='speak'>le foot</span> (despite what you will have learnt previously,  the final consonant is sounded here)</p><p><span class='speak'>le shopping</span>, <span class='speak'>le bowling</span>, <span class='speak'>le week-end</span></p>"
+			"<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p><p><span class='speak'>le cricket</span>, <span class='speak'>le tennis</span>, <span class='speak'>le foot</span>, <span class='speak'>le shopping</span>, <span class='speak'>le bowling</span>, <span class='speak'>le week-end</span></p><p>(despite what you will have learnt previously, the final consonant is sounded here)</p>"
 		],
 		"id": "explanation2",
 		"titleText": "Demystifying French Pronunciation"

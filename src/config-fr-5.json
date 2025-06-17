@@ -193,7 +193,7 @@
 	"explanation1": {
 		"component": "Explanation",
 		"content": [
-			"<p><b>1</b> In French there are some verbs which are <b>only ever used in the third person singular: il</b>. </p><p><b>Il y a</b> meaning 'there is' or 'there are' is one of these. <br />e.g. </p><p><a class='sound-link' href='/sounds/fr/Il y a un petit jardin devant la maison.mp3' alt='centre'>Il y a un petit jardin devant la maison</a>. There is a small garden in front of the house.<br/><a class='sound-link' href='/sounds/fr/Il y a trois chambres au premier étage.mp3' alt='centre'>Il y a trois chambres au premier étage</a>. There are three bedrooms on the first floor. </p><p>Here are a few more examples of verbs which work in the same way:</p><p>From the verb <b>pleuvoir: Il pleut</b> - e.g. <span class='speak'><b>Il pleut</b> aujourd'hui</span>   It's raining today. <br/>From the verb <b>neiger:     Il neige</b> - e.g. <span class='speak'><b>Il neige</b> en hiver</span>          It snows in the winter.<br/>From the verb <b>falloir:      Il faut</b> -    e.g.  <span class='speak'><b>Il faut</b> écouter</span>         It's necessary / you need to listen. </p><p><b>2 More about adjectival agreement</b>. Som adjectives end -eux e.g.   spacieux, lumineux.  </p><p>There is no change for the masculine plural.<br/>The feminine form of the adjective is formed by removing the x and replacing with -se i.e. spacieuse, lumineuse.<br/>To form the feminine plural an s is added to this. Look at these examples:</p><p><span class='speak'>Le salon est spaci<b>eux</b></span>.<br/><span class='speak'>La cuisine est spaci<b>euse</b></span>.<br/><span class='speak'>Les appartements sont spaci<b>eux</b></span>.<br/><span class='speak'>Les chambres sont spaci<b>euses</b></span>.</p>"
+			"<p><b>1</b> In French there are some verbs which are <b>only ever used in the third person singular: il</b>. </p><p><b>Il y a</b> meaning 'there is' or 'there are' is one of these. <br />e.g. </p><p><a class='sound-link' href='/sounds/fr/Il y a un petit jardin devant la maison.mp3' alt='centre'>Il y a un petit jardin devant la maison</a>. There is a small garden in front of the house.<br/><a class='sound-link' href='/sounds/fr/Il y a trois chambres au premier étage.mp3' alt='centre'>Il y a trois chambres au premier étage</a>. There are three bedrooms on the first floor. </p><p>Here are a few more examples of verbs which work in the same way:</p><p>From the verb <b class='speak'>pleuvoir</b>: <b class='speak'>Il pleut</b> - e.g. <span class='speak'><b>Il pleut</b> aujourd'hui</span>   It's raining today. <br/>From the verb <b class='speak'>neiger</b>: <b class='speak'>Il neige</b> - e.g. <span class='speak'><b>Il neige</b> en hiver</span> It snows in the winter.<br/>From the verb <b class='speak'>falloir</b>: <b class='speak'>Il faut</b> -    e.g.  <span class='speak'><b>Il faut</b> écouter</span> It's necessary / you need to listen. </p><p><b>2 More about adjectival agreement</b>. Some adjectives end -eux e.g.   <b class='speak'>spacieux</b>, <b class='speak'>lumineux</b>.</p><p>There is no change for the masculine plural.<br/>The feminine form of the adjective is formed by removing the x and replacing with -se i.e. <b class='speak'>spacieuse</b>, <b class='speak'>lumineuse</b>.<br/>To form the feminine plural an s is added to this. Look at these examples:</p><p><span class='speak'>Le salon est spaci<b>eux</b></span>.<br/><span class='speak'>La cuisine est spaci<b>euse</b></span>.<br/><span class='speak'>Les appartements sont spaci<b>eux</b></span>.<br/><span class='speak'>Les chambres sont spaci<b>euses</b></span>.</p>"
 		],
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
@@ -216,7 +216,7 @@
 					"congratulationsText": "Congratulations! You know your way around the house!",
 					"id": "MemoryMatchGame1",
 					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
-					"nPairsToPlay": 6,
+					"nPairsToPlay": 8,
 					"cards": [
 						{
 							"audio": "sounds/fr/la salle de bains.mp3",
@@ -292,7 +292,7 @@
 						}
 					],
 					"showHintsText": "Show hints",
-					"titleText": "1. Memory Game"
+					"titleText": "1. Learn the Rooms of the House"
 				}
 			},
 			{
