@@ -518,12 +518,53 @@
 				}
 			},
 			{
-				"monologue1": {
-					"component": "Monologue",
-					"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
-					"soundFile": "sounds/fr/max-monologue.mp3",
-					"id": "Monologue1",
-					"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
+				"answerTable2": {
+					"component": "AnswerTable",
+					"congratulationsText": "Well done!",
+					"id": "AnswerTable2",
+					"instructionsText": "Write what you hear.",
+					"phrases": [
+						[
+							"",
+							"Je suis marié avec Lucie.",
+							"sounds/fr/Je suis marié avec Lucie.mp3"
+						],
+						[
+							"",
+							"Je suis canadien et je viens de Montréal.",
+							"sounds/fr/Je suis canadien et je viens de Montréal.mp3"
+						],
+						[
+							"",
+							"Lucie est anglaise.",
+							"sounds/fr/Lucie est anglaise.mp3"
+						],
+						[
+							"",
+							"Elle vient de Bristol.",
+							"sounds/fr/Elle vient de Bristol.mp3"
+						],
+						[
+							"",
+							"Elle parle anglais et un petit peu français.",
+							"sounds/fr/Elle parle anglais et un petit peu français.mp3"
+						],
+						[
+							"",
+							"Je suis bilingue.",
+							"sounds/fr/Je suis bilingue.mp3"
+						],
+						[
+							"",
+							"Je parle anglais et français.",
+							"sounds/fr/Je parle anglais et français.mp3"
+						],
+						[
+							"",
+							"Je suis professeur de maths et Lucie est avocate.",
+							"sounds/fr/Je suis professeur de maths et Lucie est avocate.mp3"
+						]
+					],
 					"titleText": "4. Write what you hear"
 				}
 			}

@@ -74,7 +74,7 @@ export class AnswerTable extends React.PureComponent {
 		for (let i = 0; i < phrases.length; i++){
 			const phrase = phrases[i];
 			const cells = new Array();
-			if (phrase[0] === '') {
+			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
 					<tr className={`spacer`} key={`row${i}`}>
@@ -82,16 +82,20 @@ export class AnswerTable extends React.PureComponent {
 					</tr>
 				);
 			} else {
-				cells.push(
-					<td key={`row${i}cell0`}>
-						{phrase[0]}
-					</td>
-				);
-				cells.push(
-					<td key={`row${i}cell1`}>
-						<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
-					</td>
-				);
+				if (phrase[0] !== '') {
+					cells.push(
+						<td key={`row${i}cell0`}>
+							{phrase[0]}
+						</td>
+					);
+				}
+				if (phrase[1] !== '') {
+					cells.push(
+						<td key={`row${i}cell1`}>
+							<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
+						</td>
+					);
+				}
 				if (longestRow > 2) {
 					const soundCellIndex = 2;
 					const soundFile = resolveAsset(`${phrase[soundCellIndex]}`);
