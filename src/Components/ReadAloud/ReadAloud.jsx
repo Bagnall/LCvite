@@ -99,32 +99,16 @@ export class ReadAloud extends React.PureComponent {
 	};
 
 	initialiseSpeechRecognition = () => {
-		let SpchRecognition;
-		try {
-			SpchRecognition = window.SpeechRecognition;
-		} catch (err) {
-			try {
-				SpchRecognition = window.webkitSpeechRecognition;
-			}
-			catch (err) {
-				return true;
-			}
+		const SpchRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		const SpchGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
+
+		if (!SpchRecognition || !SpchGrammarList) {
+			return true; // Fallback or error indicator
 		}
-		let SpchGrammarList;
-		try {
-			SpchGrammarList = window.SpeechGrammarList;
-		} catch (err) {
-			try {
-				SpchGrammarList = window.webkitSpeechGrammarList;
-			}
-			catch (err) {
-				// console.log(err);
-				return true;
-			}
-		}
+
 		return {
-			"SpchGrammarList": SpchGrammarList,
-			"SpchRecognition": SpchRecognition,
+			SpchGrammarList,
+			SpchRecognition,
 		};
 	};
 
