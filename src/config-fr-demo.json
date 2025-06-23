@@ -828,12 +828,12 @@
 			{
 				"memorycards3": {
 					"cheatText": "Cheat",
-					"component": "MemoryMatchGameZ",
+					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
 					"id": "MemoryMatchGame3",
 					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
-					"nPairsToPlay": 12,
+					"nPairsToPlay": 20,
 					"cards": [
 						{
 							"audio": "sounds/fr/le chat.mp3",
@@ -920,9 +920,9 @@
 							"image": "images/memory-animals/tiger.jpg"
 						},
 						{
-							"audio": "sounds/fr/l’ours.mp3",
+							"audio": "sounds/fr/l'ours.mp3",
 							"localLanguage": "bear",
-							"foreignLanguage": "l’ours",
+							"foreignLanguage": "l'ours",
 							"image": "images/memory-animals/bear.jpg"
 						},
 						{
@@ -957,7 +957,7 @@
 						}
 					],
 					"showHintsText": "Show hints",
-					"titleText": "Rooms of a House"
+					"titleText": "Animals"
 				}
 			}
 		],

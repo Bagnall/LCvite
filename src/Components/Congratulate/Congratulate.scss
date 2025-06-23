@@ -9,6 +9,7 @@
 	background: white;
 	border-radius: 20px;
 	border: variables.$border-width * 1px ridge darkblue;
+	box-sizing: border-box;
 	color: darkblue;
 	display: flex;
 	font-size: 40px;
