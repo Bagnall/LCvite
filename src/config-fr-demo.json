@@ -961,59 +961,7 @@
 				}
 			}
 		],
-		"id": "groupWord3",
+		"id": "connectFour1",
 		"titleText": "Memory Cards"
-	},
-	"crossword1": {
-		"cheatText": "Cheat",
-		"component": "CrossWord",
-		"congratulationsText": "Well done!",
-		"htmlContent": "<p>The <b>CrossWord</b> component is very experimental and incomplete.",
-		"id": "CrossWord1",
-		"instructionsText": "Simply type the letters for the answers into the grid.",
-		"words": [
-			[
-				"épicerie",
-				"grocers"
-			],
-			[
-				"supermarché",
-				"supermarket"
-			],
-			[
-				"boucherie",
-				"butcher shop"
-			],
-			[
-				"boulangerie",
-				"bakery"
-			],
-			[
-				"pâtisserie",
-				"pastry shop"
-			],
-			[
-				"poissonnerie",
-				"fish shop"
-			],
-			[
-				"bistro",
-				"café"
-			],
-			[
-				"pharmacie",
-				"pharmacy"
-			],
-			[
-				"poste",
-				"post office"
-			],
-			[
-				"tabac",
-				"tobacco shop"
-			]
-		],
-		"showHintsText": "Show hints",
-		"titleText": "Shops Crossword"
 	}
 }
