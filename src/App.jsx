@@ -3,10 +3,8 @@ import {
 	Accordion,
 	AccordionArticle,
 	AnswerTable,
-	AudioClip,
 	Blanks,
 	Congratulate,
-	CrossWord,
 	DropDowns,
 	ErrorLog,
 	Explanation,
@@ -901,22 +899,6 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			// case 'CrossWord': {
-			// 	articles.push(
-			// 		<AccordionArticle
-			// 			id={`${id}Accordion`}
-			// 			key={`${id}Accordion`}
-			// 			title={titleText}
-			// 		>
-			// 			<CrossWord
-			// 				config={value}
-			// 				logError={this.logError}
-			// 				showDialog={this.showDialog}
-			// 			/>
-			// 		</AccordionArticle>
-			// 	);
-			// 	break;
-			// }
 			case 'DropDowns': {
 				articles.push(
 					<AccordionArticle
