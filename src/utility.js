@@ -46,6 +46,7 @@ export const clearCanvas = (canvas) => {
 };
 
 export const copyObject = (originalObject) => {
+	// console.log("copyObject", originalObject);
 	if (originalObject) return JSON.parse(JSON.stringify(originalObject)); // If you know of a better solution, please enlighten me.
 	return;
 };
@@ -329,14 +330,18 @@ export const shuffleArray = (array) => {
 	return array;
 };
 
-export const speak = (e, synth, targetLanguageCode, voices) => {
+export const speak = (e, synth, targetLanguageCode, voices, text) => {
 	// console.log("speak", synth, targetLanguageCode, voices);
 	// alert("speak", synth, targetLanguageCode, voices);
 	e.preventDefault();
-
-	let {target} = e;
-	while (!target.classList.contains('speak')) target = target.parentNode;
-	const utterThis = new SpeechSynthesisUtterance(target.innerText);
+	let utterThis;
+	if (text !== undefined) {
+		utterThis = new SpeechSynthesisUtterance(text);
+	} else {
+		let { target } = e;
+		while (!target.classList.contains('speak')) target = target.parentNode;
+		utterThis = new SpeechSynthesisUtterance(target.innerText);
+	}
 	// utterThis.onend = () => {
 	// 	console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
 	// };
