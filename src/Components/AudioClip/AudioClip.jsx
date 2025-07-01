@@ -21,6 +21,7 @@ export class AudioClip extends React.PureComponent {
 		const {
 			className = '',
 			children,
+			id,
 			listenText = '',
 			soundFile,
 		} = this.props;
@@ -44,11 +45,22 @@ export class AudioClip extends React.PureComponent {
 				<audio className={`${className ? className : ''}`} controls ><source src={soundFile}/></audio>
 			);
 		} else {
-			return (
-				<label className='audio-clip'>{listenText}{listenText === '' ? '' : ':'}&nbsp;
-					<audio className={`${className ? className : ''}`} controls ><source src={soundFile}/></audio>
-				</label>
-			);
+			if (listenText !== '') {
+				return (
+					<label className='audio-clip' for={`${id}`}>{listenText}{listenText === '' ? '' : ':'}&nbsp;
+						<audio
+							className={`${className ? className : ''}`}
+							controls
+							id={`${id}`}
+						><source src={soundFile}
+							/></audio>
+					</label>
+				);
+			} else {
+				return (
+					<audio className={`${className ? className : ''}`} controls ><source src={soundFile} /></audio>
+				);
+			}
 		}
 	};
 }

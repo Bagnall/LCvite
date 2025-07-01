@@ -130,85 +130,161 @@ export default class App extends React.Component {
 	};
 
 	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
-		// console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
+		console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
 
 		// console.log("initialiseSpeeches", voices.length);
 		const speeches = document.querySelectorAll('.speak');
 		speeches.forEach((speech) => {
 			if (targetLanguageCode && synth && voices && voices.length > 1) {
 				// console.log("Setting speeches", voices.length);
-				speech.setAttribute('title', 'Click to play sound');
-				speech.setAttribute('aria-label', 'Non-selectable text');
-				// speech.removeEventListener('click', speak); // Prevent duplicates
-				// console.log("speech.setup", speech.setup);
-				if (speech.setup) {
+				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
-				} else {
+				// } else {
+					speech.setAttribute('title', 'Click to play sound');
+					speech.setAttribute('aria-label', 'Non-selectable text');
+					speech.setAttribute('setup', 'true');
 					speech.addEventListener('click', (e) => speak(e, synth, targetLanguageCode, voices));
+
 					// following doesn't help eliminate contextual search :-(
-					speech.addEventListener('tap', (e) => speak(e, synth, targetLanguageCode, voices));
-					speech.addEventListener('contextmenu', function (e) {
-						e.preventDefault();
-					}, { passive: false });
+					// speech.addEventListener('tap', (e) => speak(e, synth, targetLanguageCode, voices));
+					// speech.addEventListener('contextmenu', function (e) {
+					// 	e.preventDefault();
+					// }, { passive: false });
+					speech.setup = true;
 				}
 			}
-			speech.setup = true;
 		});
 	};
 
+	// initialiseSynth = (targetLanguageCode) => {
+	// 	// console.log("initialiseSynth");
+	// 	const { showSpeechError } = this.state;
+	// 	const synth = window.speechSynthesis;
+	// 	let voices = [];
+	// 	// console.log("synth", synth);
+	// 	// if (showSpeechError === undefined) {
+	// 	const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
+	// 	// if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+
+	// 	// this.logError('InitialiseSynth', {
+	// 	// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+	// 	// });
+	// 	// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+	// 	// }
+	// 	const isFirefox = typeof navigator !== 'undefined' && /firefox/i.test(navigator.userAgent);
+
+	// 	if (isFirefox) {
+	// 		setTimeout(() => {
+	// 			voices = synth.getVoices();
+	// 			// console.log("voices", voices);
+	// 			voices.sort(function (a, b) {
+	// 				const aname = a.name.toUpperCase();
+	// 				const bname = b.name.toUpperCase();
+
+	// 				if (aname < bname) {
+	// 					return -1;
+	// 				} else if (aname === bname) {
+	// 					return 0;
+	// 				} else {
+	// 					return +1;
+	// 				}
+	// 			});
+
+	// 			voices = voices.filter((s) => s.lang === targetLanguageCode);
+	// 			this.initialiseSpeeches(synth, targetLanguageCode, voices);
+	// 			document.getElementsByTagName('html')[0].classList.add('can-speak');
+	// 			this.setState({
+	// 				showSpeechError: false,
+	// 			});
+
+	// 		}, 1000);
+	// 	}
+	// 	synth.onvoiceschanged = () => {
+	// 		// console.log("onvoiceschanged");
+	// 		// show speak highlighting
+
+	// 		if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+	// 			// this.logError('InitialiseSynth', {
+	// 			// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
+	// 			// });
+	// 			// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
+	// 		} else {
+	// 			document.getElementsByTagName('html')[0].classList.add('can-speak');
+	// 			this.setState({
+	// 				showSpeechError: false,
+	// 			});
+
+	// 		}
+	// 		voices = synth.getVoices();
+	// 		// console.log("voices", voices);
+	// 		voices.sort(function (a, b) {
+	// 			const aname = a.name.toUpperCase();
+	// 			const bname = b.name.toUpperCase();
+
+	// 			if (aname < bname) {
+	// 				return -1;
+	// 			} else if (aname === bname) {
+	// 				return 0;
+	// 			} else {
+	// 				return +1;
+	// 			}
+	// 		});
+
+	// 		voices = voices.filter((s) => s.lang === targetLanguageCode);
+	// 		this.initialiseSpeeches(synth, targetLanguageCode, voices);
+
+	// 	};
+	// 	// }
+	// 	// this.setState({
+	// 	// 	showSpeechError: true,
+	// 	// });
+	// };
+
 	initialiseSynth = (targetLanguageCode) => {
-		// console.log("initialiseSynth");
-
+		console.log("initialiseSynth");
 		const synth = window.speechSynthesis;
-		let voices = [];
-		// console.log("synth", synth);
-		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
-		// if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
+		const { showSpeechError } = this.state;
 
-		// this.logError('InitialiseSynth', {
-		// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-		// });
-		// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
-		// }
+		const mediaContent = window
+			.getComputedStyle(document.body, '::before')
+			.getPropertyValue('content');
 
-		synth.onvoiceschanged = () => {
-			// console.log("onvoiceschanged");
-			// show speak highlighting
+		const isFirefox = /firefox/i.test(navigator.userAgent);
 
-			if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-				// this.logError('InitialiseSynth', {
-				// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-				// });
-				// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
-			}else{
-				document.getElementsByTagName('html')[0].classList.add('can-speak');
-				this.setState({
-					showSpeechError: false,
-				});
+		const sortVoices = (voices) =>
+			voices.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
 
-			}
-			voices = synth.getVoices();
-			// console.log("voices", voices);
-			voices.sort(function (a, b) {
-				const aname = a.name.toUpperCase();
-				const bname = b.name.toUpperCase();
+		const filterVoicesByLang = (voices, lang) =>
+			voices.filter((voice) => voice.lang === lang);
 
-				if (aname < bname) {
-					return -1;
-				} else if (aname === bname) {
-					return 0;
-				} else {
-					return +1;
-				}
-			});
-
-			voices = voices.filter((s) => s.lang === targetLanguageCode);
-			this.initialiseSpeeches(synth, targetLanguageCode, voices);
-
+		const enableSpeech = (voices) => {
+			const filteredVoices = filterVoicesByLang(sortVoices(voices), targetLanguageCode);
+			this.initialiseSpeeches(synth, targetLanguageCode, filteredVoices);
+			document.documentElement.classList.add('can-speak');
+			this.setState({ showSpeechError: false });
 		};
-		// this.setState({
-		// 	showSpeechError: true,
-		// });
+
+		// Firefox requires a delay before voices are populated
+		if (isFirefox) {
+			console.log("Firefox fallback");
+			setTimeout(() => {
+				const voices = synth.getVoices();
+				enableSpeech(voices);
+			}, 1000);
+		}
+
+		// Non-Firefox
+		synth.onvoiceschanged = () => {
+			console.log("onvoiceschanged");
+
+			if ((mediaContent[1] === 'S' || mediaContent[1] === 'M') && isTouchChrome()) {
+			// Context-search issue workaround for Chrome on touch devices
+			// Optional: display error to user
+			} else {
+				const voices = synth.getVoices();
+				enableSpeech(voices);
+			}
+		};
 	};
 
 	loadConfig = (configFile) => {

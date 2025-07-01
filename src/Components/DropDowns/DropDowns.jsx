@@ -133,7 +133,7 @@ export class DropDowns extends React.PureComponent {
 		let lastIndex = 0;
 		let match;
 		// let index = 0;
-		nSelects = 0;
+		// nSelects = 0;
 
 		while ((match = regex.exec(str)) !== null) {
 			// Text before the current match
@@ -272,7 +272,7 @@ export class DropDowns extends React.PureComponent {
 
 						cells.push(
 							<td key={`row${i}cell2`}>
-								<AudioClip className={`compact`} label={""} soundFile={soundFile} />
+								<AudioClip className={`compact`} soundFile={soundFile} />
 							</td>
 						);
 					}

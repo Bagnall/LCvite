@@ -84,7 +84,12 @@ export class Monologue extends React.PureComponent {
 							(
 								<>
 									{compact ?
-										<input type='text' value={userInput} onChange={this.handleChange} />
+										<input
+											id={`monologue${id}text`}
+											onChange={this.handleChange}
+											type='text'
+											value={userInput}
+										/>
 										:
 										<textarea value={userInput} onChange={this.handleChange} ></textarea>
 									}

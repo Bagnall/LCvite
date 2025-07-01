@@ -963,5 +963,76 @@
 		],
 		"id": "connectFour1",
 		"titleText": "Memory Cards"
+	},
+	"connectFour1": {
+		"cheatText": "Cheat",
+		"component": "ConnectFour",
+		"congratulationsText": "Congratulations!",
+		"htmlContentXXX": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
+		"id": "ConnectFour1",
+		"instructionsText": "Simple Connect Four",
+		"showHintsText": "Show hints",
+		"titleText": "ConnectFour"
+	},
+	"mockney1": {
+		"cheatText": "Cheat",
+		"component": "Mockney",
+		"congratulationsText": "Congratulations!",
+		"id": "Mockney1",
+		"instructionsText": "Type text to translate to mockney",
+		"showHintsText": "Show hints",
+		"titleText": "Mockney"
+	},
+	"crossword1": {
+		"cheatText": "Cheat",
+		"component": "CrossWord",
+		"congratulationsText": "Well done!",
+		"htmlContent": "<p>The <b>CrossWord</b> component is very experimental and incomplete.",
+		"id": "CrossWord1",
+		"instructionsText": "Simply type the letters for the answers into the grid.",
+		"words": [
+			[
+				"épicerie",
+				"grocers"
+			],
+			[
+				"supermarché",
+				"supermarket"
+			],
+			[
+				"boucherie",
+				"butcher shop"
+			],
+			[
+				"boulangerie",
+				"bakery"
+			],
+			[
+				"pâtisserie",
+				"pastry shop"
+			],
+			[
+				"poissonnerie",
+				"fish shop"
+			],
+			[
+				"bistro",
+				"café"
+			],
+			[
+				"pharmacie",
+				"pharmacy"
+			],
+			[
+				"poste",
+				"post office"
+			],
+			[
+				"tabac",
+				"tobacco shop"
+			]
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Shops Crossword"
 	}
 }

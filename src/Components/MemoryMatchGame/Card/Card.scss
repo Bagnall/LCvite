@@ -61,7 +61,7 @@ $card-back-border-width: 8px;
 	.card-back {
 		&:after {
 			@include mixins.standard-pseudo();
-			background-image: url("images/memory/yorkshire-rose.png");
+			background-image: url("/projects/richard/images/memory/yorkshire-rose.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: 60px;

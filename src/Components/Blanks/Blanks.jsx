@@ -522,6 +522,7 @@ export class Blanks extends React.PureComponent {
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip
+						id={`bollox`}
 						listenText={listenDescriptionText}
 						soundFile={soundFile}
 					/>
@@ -530,7 +531,7 @@ export class Blanks extends React.PureComponent {
 				}
 
 				<div className='help'>
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
+					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input id={`showHintsId-${id ? id : ''}`} type='checkbox' onChange={this.handleHints} /></label>
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
 				<div
