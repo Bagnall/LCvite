@@ -67,20 +67,28 @@ export default class App extends React.Component {
 
 	componentDidMount = () => {
 
+		console.log("componentDidMount");
 		const queryString = window.location.search;
 		// console.log(queryString);
 		const urlParams = new URLSearchParams(queryString);
 		// console.log(urlParams);
 		const configFile = urlParams.get('config');
 
-		if (configFile) this.loadConfig(`./src/${configFile}`);
+		let configPromise;
+		if (configFile) configPromise = this.loadConfig(`./src/${configFile}`);
 		this.loadIndex();
 		this.initialiseSpecialAnchors();
+
+		configPromise.then(this.initialiseSynth);
 
 	};
 
 	componentDidUpdate = () => {
+		console.log("componentDidUpdate");
+
+		// const { targetLanguageCode } = this.state;
 		this.initialiseSpecialAnchors();
+		// this.initialiseSynth(targetLanguageCode);
 
 	};
 
@@ -135,7 +143,7 @@ export default class App extends React.Component {
 		// console.log("initialiseSpeeches", voices.length);
 		const speeches = document.querySelectorAll('.speak');
 		speeches.forEach((speech) => {
-			if (targetLanguageCode && synth && voices && voices.length > 1) {
+			if (targetLanguageCode && synth && voices && voices.length >= 1) {
 				// console.log("Setting speeches", voices.length);
 				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
@@ -240,10 +248,10 @@ export default class App extends React.Component {
 	// 	// });
 	// };
 
-	initialiseSynth = (targetLanguageCode) => {
+	initialiseSynth = () => {
 		console.log("initialiseSynth");
+		const { targetLanguageCode } = this.state;
 		const synth = window.speechSynthesis;
-		const { showSpeechError } = this.state;
 
 		const mediaContent = window
 			.getComputedStyle(document.body, '::before')
@@ -288,7 +296,7 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile) => {
-		// console.log("loadConfig");
+		console.log("loadConfig");
 
 		// Read the config
 		const headers = new Headers();
@@ -300,31 +308,36 @@ export default class App extends React.Component {
 			redirect: 'follow',
 		};
 
-		fetch(`${configFile}`, requestOptions)
-			.then(handleResponse)
-			.then(res => {
-				const { settings } = res;
-				delete res["settings"];
-				const {
-					class: configClass,
-					targetLanguageCode,
-					title,
-				} = settings;
-				document.title = title;
-				if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
+		return new Promise((resolve, reject) => {
+			fetch(`${configFile}`, requestOptions)
+				.then(handleResponse)
+				.then(res => {
+					const { settings } = res;
+					delete res["settings"];
+					const {
+						class: configClass,
+						targetLanguageCode,
+						title,
+					} = settings;
+					document.title = title;
+					if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
 
-				this.setState({
-					config: { ...res },
-					settings: { ...settings }
+					// 🔁 Return a Promise that resolves only when setState is done
+
+					this.setState({
+						config: { ...res },
+						settings: { ...settings },
+						targetLanguageCode,
+					},
+					() => resolve({ targetLanguageCode })
+					);
+				})
+				.catch(error => {
+					const action = `Loading configuration`;
+					this.logError(action, error);
+					reject();
 				});
-
-				this.initialiseSynth(targetLanguageCode);
-
-			})
-			.catch(error => {
-				const action = `Loading configuration`;
-				this.logError(action, error);
-			});
+		});
 	};
 
 	loadIndex = () => {

@@ -331,7 +331,7 @@ export const shuffleArray = (array) => {
 };
 
 export const speak = (e, synth, targetLanguageCode, voices, text) => {
-	// console.log("speak", synth, targetLanguageCode, voices);
+	console.log("speak", synth, targetLanguageCode, voices);
 	// alert("speak", synth, targetLanguageCode, voices);
 	e.preventDefault();
 	let utterThis;
@@ -342,9 +342,9 @@ export const speak = (e, synth, targetLanguageCode, voices, text) => {
 		while (!target.classList.contains('speak')) target = target.parentNode;
 		utterThis = new SpeechSynthesisUtterance(target.innerText);
 	}
-	// utterThis.onend = () => {
-	// 	console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
-	// };
+	utterThis.onend = () => {
+		console.log("SpeechSynthesisUtterance.onend"); // eslint-disable-line
+	};
 
 	utterThis.onerror = () => {
 		console.error("SpeechSynthesisUtterance.onerror"); // eslint-disable-line

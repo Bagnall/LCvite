@@ -7,7 +7,23 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🚀 Getting Started
+# 🚀 Getting Started
+
+## Install node & npm
+
+https://nodejs.org/en/download/ and click on 'Windows Installer (.msi)
+
+## Install yarn
+
+Install via npm
+
+It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system.
+
+Once you have npm installed you can run the following both to install and upgrade Yarn:
+
+**npm install --global yarn**
+
+## Clone this repository
 
 git clone https://github.com/Bagnall/LCvite
 cd LCvite
@@ -16,12 +32,7 @@ npm run dev
 
 ## Run app
 
-npm run dev
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
+**npm run dev**
 
 ## Configuring the learning object
 
