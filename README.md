@@ -23,6 +23,10 @@ Once you have npm installed you can run the following both to install and upgrad
 
 **npm install --global yarn**
 
+better still use the windows installer:
+
+**https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable**
+
 ## Clone this repository
 
 git clone https://github.com/Bagnall/LCvite
@@ -32,7 +36,7 @@ npm run dev
 
 ## Run app
 
-**npm run dev**
+**yarn dev**
 
 ## Configuring the learning object
 

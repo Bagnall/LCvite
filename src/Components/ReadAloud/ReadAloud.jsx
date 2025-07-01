@@ -56,6 +56,8 @@ export class ReadAloud extends React.PureComponent {
 					}
 				});
 			}
+		} else {
+			cannotRun = `This browser does not have speech recognition capabilities. Try Chrome`;
 		}
 		const {
 			config
