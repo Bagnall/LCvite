@@ -290,6 +290,12 @@ export const isTouchChrome = () => {
 	return isTouchDevice && isChrome && !isEdge;
 };
 
+export const playAudioLink = (soundFile) => {
+	console.log("playAudioLink", soundFile);
+	const soundFileAudio = new Audio(resolveAsset(soundFile));
+	soundFileAudio.play();
+};
+
 export const replaceSelectWithSpan = (selectElement) => {
 	// console.log("replaceSelectWithSpan");
 	const selectedText = selectElement.options[selectElement.selectedIndex].text;
@@ -331,7 +337,7 @@ export const shuffleArray = (array) => {
 };
 
 export const speak = (e, synth, targetLanguageCode, voices, text) => {
-	console.log("speak", synth, targetLanguageCode, voices);
+	// console.log("speak", synth, targetLanguageCode, voices);
 	// alert("speak", synth, targetLanguageCode, voices);
 	e.preventDefault();
 	let utterThis;

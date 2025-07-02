@@ -29,25 +29,28 @@ better still use the windows installer:
 
 ## Clone this repository
 
-git clone https://github.com/Bagnall/LCvite
-cd LCvite
-npm install
-npm run dev
+1. **git clone https://github.com/Bagnall/LCvite**\
+1. **cd LCvite**\
+2. **npm install**\
+3. **npm run dev**
 
 ## Run app
 
 **yarn dev**
 
+## Build app
+
+**yarn build**
+
 ## Configuring the learning object
 
-There is a config.json file which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user. See https://docs.google.com/document/d/1shg4Bptm3AtaO2e2_8pEZOcXBdwoS7zD3sK5Au3L-Fo/edit?usp=sharing
+There is an **index.json** file which lists the various learning object configuration files. It is used to construct a navigation menu.
 
-## Customising Jigsaw
-
-The description text should be in the language being learned and should describe the correct.jpg picture sufficiently for the user to pick correct tiles from the pool of correct and incorrect tiles.
+There are **config\*.json** files which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user. See https://docs.google.com/document/d/1shg4Bptm3AtaO2e2_8pEZOcXBdwoS7zD3sK5Au3L-Fo/edit?usp=sharing
 
 ## Badges
 
 ![Node](https://img.shields.io/badge/node-18.x-brightgreen)
 ![Vite](https://img.shields.io/badge/built%20with-vite-646cff.svg?logo=vite)
 
+54_10.500_N_2_20.75_W

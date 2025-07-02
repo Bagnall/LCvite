@@ -47,7 +47,7 @@ export class AudioClip extends React.PureComponent {
 		} else {
 			if (listenText !== '') {
 				return (
-					<label className='audio-clip' for={`${id}`}>{listenText}{listenText === '' ? '' : ':'}&nbsp;
+					<label className='audio-clip' htmlFor={`${id}`}>{listenText}{listenText === '' ? '' : ':'}&nbsp;
 						<audio
 							className={`${className ? className : ''}`}
 							controls

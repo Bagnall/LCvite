@@ -23,6 +23,7 @@ import {
 	handleResponse,
 	handleSpecialLinkClick,
 	isTouchChrome,
+	playAudioLink,
 	resolveAsset,
 	speak,
 } from './utility';
@@ -144,6 +145,7 @@ export default class App extends React.Component {
 		const speeches = document.querySelectorAll('.speak');
 		speeches.forEach((speech) => {
 			if (targetLanguageCode && synth && voices && voices.length >= 1) {
+				console.log("There's a '.speak' that I missed");
 				// console.log("Setting speeches", voices.length);
 				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
@@ -162,91 +164,23 @@ export default class App extends React.Component {
 				}
 			}
 		});
+
+		const audioLinks = document.querySelectorAll('.audio-link');
+		audioLinks.forEach((audioLink) => {
+			// console.log(audioLink.getAttribute('sound-file'));
+			if (audioLink.setup !== true && audioLink.getAttribute('setup') !== true) {
+				const soundFile = audioLink.getAttribute('sound-file');
+				if (!soundFile) {
+					alert("Error: Undefined soundfile!"); // User must never see this!
+				} else {
+					audioLink.setAttribute('title', 'Click to play sound');
+					audioLink.setAttribute('setup', 'true');
+					audioLink.addEventListener('click', () => playAudioLink(soundFile));
+					audioLink.setup = true;
+				}
+			}
+		});
 	};
-
-	// initialiseSynth = (targetLanguageCode) => {
-	// 	// console.log("initialiseSynth");
-	// 	const { showSpeechError } = this.state;
-	// 	const synth = window.speechSynthesis;
-	// 	let voices = [];
-	// 	// console.log("synth", synth);
-	// 	// if (showSpeechError === undefined) {
-	// 	const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
-	// 	// if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-
-	// 	// this.logError('InitialiseSynth', {
-	// 	// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-	// 	// });
-	// 	// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
-	// 	// }
-	// 	const isFirefox = typeof navigator !== 'undefined' && /firefox/i.test(navigator.userAgent);
-
-	// 	if (isFirefox) {
-	// 		setTimeout(() => {
-	// 			voices = synth.getVoices();
-	// 			// console.log("voices", voices);
-	// 			voices.sort(function (a, b) {
-	// 				const aname = a.name.toUpperCase();
-	// 				const bname = b.name.toUpperCase();
-
-	// 				if (aname < bname) {
-	// 					return -1;
-	// 				} else if (aname === bname) {
-	// 					return 0;
-	// 				} else {
-	// 					return +1;
-	// 				}
-	// 			});
-
-	// 			voices = voices.filter((s) => s.lang === targetLanguageCode);
-	// 			this.initialiseSpeeches(synth, targetLanguageCode, voices);
-	// 			document.getElementsByTagName('html')[0].classList.add('can-speak');
-	// 			this.setState({
-	// 				showSpeechError: false,
-	// 			});
-
-	// 		}, 1000);
-	// 	}
-	// 	synth.onvoiceschanged = () => {
-	// 		// console.log("onvoiceschanged");
-	// 		// show speak highlighting
-
-	// 		if ((media[1] === 'S' || media[1] === 'M') && isTouchChrome()) { // Until Chrome puts a stop to Context-search preventing click on text
-	// 			// this.logError('InitialiseSynth', {
-	// 			// 	message: 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.'
-	// 			// });
-	// 			// document.getElementById('SpeechSynthesisError').innerText = 'Chrome cannot play back browser based sounds because of context search on text preventing click events. Please use a PC based browser.';
-	// 		} else {
-	// 			document.getElementsByTagName('html')[0].classList.add('can-speak');
-	// 			this.setState({
-	// 				showSpeechError: false,
-	// 			});
-
-	// 		}
-	// 		voices = synth.getVoices();
-	// 		// console.log("voices", voices);
-	// 		voices.sort(function (a, b) {
-	// 			const aname = a.name.toUpperCase();
-	// 			const bname = b.name.toUpperCase();
-
-	// 			if (aname < bname) {
-	// 				return -1;
-	// 			} else if (aname === bname) {
-	// 				return 0;
-	// 			} else {
-	// 				return +1;
-	// 			}
-	// 		});
-
-	// 		voices = voices.filter((s) => s.lang === targetLanguageCode);
-	// 		this.initialiseSpeeches(synth, targetLanguageCode, voices);
-
-	// 	};
-	// 	// }
-	// 	// this.setState({
-	// 	// 	showSpeechError: true,
-	// 	// });
-	// };
 
 	initialiseSynth = () => {
 		console.log("initialiseSynth");
@@ -296,7 +230,7 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile) => {
-		console.log("loadConfig");
+		// console.log("loadConfig");
 
 		// Read the config
 		const headers = new Headers();
