@@ -68,7 +68,7 @@ export default class App extends React.Component {
 
 	componentDidMount = () => {
 
-		console.log("componentDidMount");
+		// console.log("componentDidMount");
 		const queryString = window.location.search;
 		// console.log(queryString);
 		const urlParams = new URLSearchParams(queryString);
@@ -85,7 +85,7 @@ export default class App extends React.Component {
 	};
 
 	componentDidUpdate = () => {
-		console.log("componentDidUpdate");
+		// console.log("componentDidUpdate");
 
 		// const { targetLanguageCode } = this.state;
 		this.initialiseSpecialAnchors();
@@ -183,7 +183,7 @@ export default class App extends React.Component {
 	};
 
 	initialiseSynth = () => {
-		console.log("initialiseSynth");
+		// console.log("initialiseSynth");
 		const { targetLanguageCode } = this.state;
 		const synth = window.speechSynthesis;
 
@@ -208,7 +208,7 @@ export default class App extends React.Component {
 
 		// Firefox requires a delay before voices are populated
 		if (isFirefox) {
-			console.log("Firefox fallback");
+			// console.log("Firefox fallback");
 			setTimeout(() => {
 				const voices = synth.getVoices();
 				enableSpeech(voices);
@@ -217,7 +217,7 @@ export default class App extends React.Component {
 
 		// Non-Firefox
 		synth.onvoiceschanged = () => {
-			console.log("onvoiceschanged");
+			// console.log("onvoiceschanged");
 
 			if ((mediaContent[1] === 'S' || mediaContent[1] === 'M') && isTouchChrome()) {
 			// Context-search issue workaround for Chrome on touch devices
