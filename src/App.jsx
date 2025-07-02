@@ -145,7 +145,7 @@ export default class App extends React.Component {
 		const speeches = document.querySelectorAll('.speak');
 		speeches.forEach((speech) => {
 			if (targetLanguageCode && synth && voices && voices.length >= 1) {
-				console.log("There's a '.speak' that I missed");
+				console.error("There's a '.speak' that I missed");
 				// console.log("Setting speeches", voices.length);
 				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
