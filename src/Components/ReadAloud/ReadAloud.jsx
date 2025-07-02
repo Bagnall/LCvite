@@ -74,7 +74,7 @@ export class ReadAloud extends React.PureComponent {
 			};
 		}	}
 
-	handleNoMatch = (e) => {
+	handleNoMatch = () => {
 		this.resultRef.current.textContent = "I didn't understand your phrase, sorry.";
 		this.setState({
 			firstTry: false,
