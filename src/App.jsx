@@ -139,7 +139,7 @@ export default class App extends React.Component {
 	};
 
 	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
-		console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
+		// console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
 
 		// console.log("initialiseSpeeches", voices.length);
 		const speeches = document.querySelectorAll('.speak');
@@ -167,7 +167,7 @@ export default class App extends React.Component {
 
 		const audioLinks = document.querySelectorAll('.audio-link');
 		audioLinks.forEach((audioLink) => {
-			// console.log(audioLink.getAttribute('sound-file'));
+			console.log(audioLink.getAttribute('sound-file'));
 			if (audioLink.setup !== true && audioLink.getAttribute('setup') !== true) {
 				const soundFile = audioLink.getAttribute('sound-file');
 				if (!soundFile) {
@@ -668,30 +668,87 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
-									{/* <AccordionArticle
-										id={`scratchAccordion`}
-										title={`Scratch`}
+									<AccordionArticle
+										id={`scratchAccordion1`}
+										title={`Scratch 1`}
 									>
 										<>
-											<p>
-												<a className='special-anchor-target' name='madame'>1 In French there is no equivalent to the English Ms. To be politically correct a woman is addressed as <b className='speak'>Madame</b> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as </a></p>
 											<ol>
-												<li><audio controls className='compact' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
-												<li><audio controls className='super-compact' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
-												<li><audio controls className='link' src='/projects/richard/sounds/fr/Mademoiselle.mp3'><b>Mademoiselle</b></audio></li>
+												<li>
+													More about adjectives: There are some adjectives ending in <b>f</b>, e.g. sport<b>if</b>, act<b>if</b>.
+													The feminine form of such words ends in <b>-ve</b>.
+													e.g. Mon frère est sport<b>if</b>.  Ma sœur est sporti<b>ve</b>.
+												</li>
+												<li><br/>
+													<ol type="i">
+														<li>The verb <b>faire</b>, meaning both 'to make' and 'to do', is a frequently occurring very  irregular verb. Here it is conjugated in the present tense:<br/>
+															je <b>fais</b><br/>
+															tu <b>fais</b><br/>
+															il / elle <b>fait</b><br/>
+															nous <b>faisons</b><br/>
+															vous <b>faites</b><br/>
+															ils / elles <b>font</b><br/>
+														</li>
+														<li>
+															In English you can express what you do or make simply by adding the activity after the verb e.g. 'I do gymnastics' or
+															'I do gardening' or 'I make cakes'. In French, you also need something called the partitive article:
+															<b>du</b> for masculine nouns, <b>de la</b> for feminine nouns, <b>de l'</b> before a vowel or silent h and <b>des</b>
+															for plurals.<br/>
+															The partitive is usually translated by "some" or "any," i.e an unspecified amount, or is often left out entirely as in the examples below. <br/>
+															<b>Je fais de la gymnastique</b> I do gymnastics    <br/>
+															<b>Je fais du jardinage</b> I do gardening<br/>
+															<b>Je fais des gâteaux</b> I make cakes<br/>
+														</li>
+													</ol>
+												</li>
+												<li>
+													<br/>
+													<ol type="i">
+														<li>
+															The regular <b>-er</b>  verb <b>jouer</b> meaning to play is useful when talking about pastimes.
+															You use the partitive article after the verb <b>jouer</b> when speaking about playing a musical instrument:<br />
+															<b>Je joue du piano</b>  I play the piano <br/>
+															<b>Je joue de la clarinette</b> I play the clarinet
+														</li>
+														<li>
+															When you use the verb <b>jouer</b> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
+															You use <b>jouer à</b>.  If the activity is masculine it's <b>jouer au</b>, if feminine, <b>jouer à la</b>,
+															if  starting with a vowel or silent h then <b>jouer à l'</b> and for plurals <b>jouer aux</b>.<br/>
+															<br/>
+															e.g. Je joue au football I play football<br/>
+															Je joue à la pétanque I play pétanque
+														</li>
+													</ol>
+												</li>
+												<li>
+													The ending of a noun often helps you to know its gender. For example, all nouns ending <b>-tion</b> or  <b>-ie</b> are feminine.<br />
+													e.g .l'action, la nation, la natation, la biologie,  la géographie, la sociologie  <br/>
+													<br/>
+													All nouns ending <b>-isme</b> are masculine.<br/>
+													e.g. l'athlétisme, l'existentialisme, le socialisme
+												</li>
 											</ol>
-											<p>. <b>Mademoiselle</b> is otherwise reserved for a teenage girl.</p>
-											<table><tbody><tr><td>Abbreviations:</td><td>Monsieur - <b>M</b>.</td></tr><tr><td></td><td>Madame - <b>Mme</b>.</td></tr><tr><td></td><td>Mademoiselle - <b>Mlle</b>.</td></tr></tbody></table></>
-									</AccordionArticle> */}
-									{/* <AccordionArticle
-										id={`scratchAccordion`}
-										title={`Scratch`}
+										</>
+									</AccordionArticle>
+									<AccordionArticle
+										id={`scratchAccordion2`}
+										title={`Scratch 2`}
 									>
 										<>
-											<p>Begin<AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Mademoiselle.mp3`)}></AudioClip>end.</p>
-											<p>Begin <AudioClip className={`audio-link`} soundFile={resolveAsset(`/sounds/fr/Mademoiselle.mp3`)}>Madamoiselle</AudioClip> end.</p>
+											<p><b>How to pronounce: -tion</b> in French. In this combination the letter <b>t</b> is pronounced as if it were an <b>s</b>.</p>
+											<p>Here are some examples of words containing or ending <b>–tion</b>.</p>
+											<p>
+												<span class='audio-link' sound-file='/sounds/fr/l&apos;action.mp3'>l'action</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/l&apos;attention.mp3'>l'attention</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/l&apos;équitation.mp3'>l'équitation</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/l&apos;exposition.mp3'>l'exposition</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/la natation.mp3'>la natation</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/la nation.mp3'>la nation</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/la nationalité.mp3'>la nationalité</span>,&nbsp;
+												<span class='audio-link' sound-file='/sounds/fr/la situation.mp3'>la situation</span>
+											</p>
 										</>
-									</AccordionArticle> */}
+									</AccordionArticle>
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle

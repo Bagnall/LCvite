@@ -26,45 +26,12 @@ export class DropDowns extends React.PureComponent {
 	}
 
 	componentDidMount = () => {
+		// console.log("DropDowns componentDidMount", this.nPlaced);
 		this.setUpChangeEvents();
 	};
 	componentDidUpdate = () => {
+		// console.log("DropDowns componentDidUpdate", this.nPlaced);
 		this.setUpChangeEvents();
-	};
-
-	setUpChangeEvents = () => {
-		const {
-			id,
-			phrases = [],
-			phrasesHTML = '',
-		} = this.state;
-		// console.log(`setUpChangeEvents #${id} select`);
-		const selectors = document.querySelectorAll(`#${id} select`);
-		// console.log("selectors", selectors);
-		if (phrases.length === 0 && phrasesHTML !== ''){
-			selectors.forEach((selector, index) => {
-				if (selector.setup) {
-					// Do nowt!
-				} else {
-
-					// Deduce the winner from the hint class
-					// console.log(`#select${id} option`);
-					const options = document.querySelectorAll(`#${id}select${index} option`);
-					let winner = 0;
-					options.forEach((option) => {
-						if (option.classList.contains('hint')) {
-							winner = parseInt(option.value);
-						}
-					});
-					// console.log("options", options);
-
-					selector.onchange = (e) => this.handleSelectChange(e, winner);
-				}
-
-				selector.setup = true;
-			});
-		}
-
 	};
 
 	handleSelectChange = (event, winner) => {
@@ -119,7 +86,7 @@ export class DropDowns extends React.PureComponent {
 		}
 	};
 
-	parseBracketedOptions = (nSelects = 0, str) => {
+	parseBracketedOptions = (str) => {
 		// console.log("parseBracketedOptions");
 		const {
 			id,
@@ -133,7 +100,7 @@ export class DropDowns extends React.PureComponent {
 		let lastIndex = 0;
 		let match;
 		// let index = 0;
-		// nSelects = 0;
+		let nSelects = 0;
 
 		while ((match = regex.exec(str)) !== null) {
 			// Text before the current match
@@ -172,8 +139,43 @@ export class DropDowns extends React.PureComponent {
 		};
 	};
 
-	transformBracketedHTML = (nSelects = 0, htmlString) => {
-		// console.log("transformBracketedHTML");
+	setUpChangeEvents = () => {
+		const {
+			id,
+			phrases = [],
+			phrasesHTML = '',
+		} = this.state;
+		// console.log(`setUpChangeEvents #${id} select`);
+		const selectors = document.querySelectorAll(`#${id} select`);
+		// console.log("selectors", selectors);
+		if (phrases.length === 0 && phrasesHTML !== ''){
+			selectors.forEach((selector, index) => {
+				if (selector.setup) {
+					// Do nowt!
+				} else {
+
+					// Deduce the winner from the hint class
+					// console.log(`#select${id} option`);
+					const options = document.querySelectorAll(`#${id}select${index} option`);
+					let winner = 0;
+					options.forEach((option) => {
+						if (option.classList.contains('hint')) {
+							winner = parseInt(option.value);
+						}
+					});
+					// console.log("options", options);
+
+					selector.onchange = (e) => this.handleSelectChange(e, winner);
+				}
+
+				selector.setup = true;
+			});
+		}
+
+	};
+
+	transformBracketedHTML = (htmlString) => {
+		// console.log("transformBracketedHTML", nSelects);
 		const regex = /\[([^\]]+)\]/g;
 		let result = '';
 		let lastIndex = 0;
@@ -182,6 +184,7 @@ export class DropDowns extends React.PureComponent {
 			solved = [],
 			wrong = [],
 		} = this.state;
+		let nSelects = 0;
 
 		if ((regex.exec(htmlString)) !== null) {
 			htmlString.replace(regex, (match, contents, offset) => {
@@ -244,7 +247,7 @@ export class DropDowns extends React.PureComponent {
 			const phraseList = new Array;
 
 			for (let i = 0; i < phrases.length; i++) {
-				({ nSelects, jsx } = this.parseBracketedOptions(nSelects, phrases[i]));
+				({ nSelects, jsx } = this.parseBracketedOptions(phrases[i]));
 				phraseList.push(jsx);
 				this.nToSolve += nSelects;
 			}
@@ -294,7 +297,7 @@ export class DropDowns extends React.PureComponent {
 			);
 		} else {
 			// We have HTML content
-			({ nSelects, html } = this.transformBracketedHTML(nSelects, phrasesHTML));
+			({ nSelects, html } = this.transformBracketedHTML(phrasesHTML));
 			this.nToSolve = nSelects;
 			content = (
 				<div>
@@ -312,9 +315,10 @@ export class DropDowns extends React.PureComponent {
 				key={`${id}DropDowns]`}
 			>
 
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent && htmlContent !== '' ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}

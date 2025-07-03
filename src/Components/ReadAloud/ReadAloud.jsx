@@ -188,7 +188,8 @@ export class ReadAloud extends React.PureComponent {
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>

@@ -85,7 +85,8 @@ export class PhraseTable extends React.PureComponent {
 				key={`${id}PhraseTable`}
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 				<table>
 					{header ?
 						<thead>

@@ -108,7 +108,8 @@ export class Monologue extends React.PureComponent {
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
 						{showResult ?
 							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)

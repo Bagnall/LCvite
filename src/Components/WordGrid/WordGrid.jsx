@@ -363,7 +363,8 @@ export class WordGrid extends PureComponent {
 		return (
 			<div className="word-grid-container" id={id} key={id}>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 				<p className={`word-list`}>{localWordsRendered}</p>
 
 				<p className={`hidden-hints ${showHints ? 'show' : ''}`}>You're looking for these words:</p>

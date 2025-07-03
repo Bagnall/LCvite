@@ -189,7 +189,8 @@ export class ConnectFour extends PureComponent {
 					<h1>Connect Four</h1>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} />}
+						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 					</div>
 					<table className={`board`} style={{ borderCollapse: 'collapse' }}>
 						<tbody>
