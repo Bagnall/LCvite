@@ -1,5 +1,6 @@
 export * from './Accordion';
 export * from './AnswerTable';
+export * from './Attribution';
 export * from './AudioClip';
 export * from './Blanks';
 export * from './Blanks/Word';

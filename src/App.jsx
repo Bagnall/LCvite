@@ -1217,16 +1217,22 @@ export default class App extends React.Component {
 				// console.log("Component name:", component);
 				// console.log("AllCustomComponents", AllCustomComponents);
 				const CustomComponent = AllCustomComponents[component];
-				articles.push(
-					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-						title={titleText}
-					>
-						<CustomComponent/>
-					</AccordionArticle>
-				);
+				if (CustomComponent) {
+					articles.push(
+						<AccordionArticle
+							id={`${id}Accordion`}
+							key={`${id}Accordion`}
+							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							title={titleText}
+						>
+							<CustomComponent id={id} />
+						</AccordionArticle>
+					);
+				} else {
+					articles.push(
+						<p key={`notImplemented${id}`}>Component {component} not implemented</p>
+					);
+				}
 			}
 		}
 		// return articles;

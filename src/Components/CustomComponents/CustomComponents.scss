@@ -2,7 +2,9 @@
 
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_media-queries.module.scss";
+@use "../../styles/mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
 .custom-content {
+	@include mixins.standard-table();
 }

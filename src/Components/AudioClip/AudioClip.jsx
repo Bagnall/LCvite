@@ -8,7 +8,6 @@ export class AudioClip extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.playSound = this.playSound.bind(this);
-
 	}
 
 	playSound = () => {

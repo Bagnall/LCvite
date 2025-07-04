@@ -262,9 +262,9 @@ _skin.module.scss
 			tbody {
 				tr {
 					&.spacer {
-						border-left: 1px solid $article-base-background; //$panel-back;
-						border-right: 1px solid $article-base-background; //$panel-back;
-						background: $article-base-background; //$panel-back;
+						border-left: 1px solid color.adjust($article-base-background, $whiteness: 4%); //$article-base-background;
+						border-right: 1px solid color.adjust($article-base-background, $whiteness: 4%); //$article-base-background;
+						background: color.adjust($article-base-background, $whiteness: 4%); //$article-base-background;
 					}
 				}
 			}
@@ -310,6 +310,17 @@ _skin.module.scss
 
 	.panel {
 		background: $panel-back;
+		table {
+			tbody {
+				tr {
+					&.spacer {
+						border-left: 1px solid $panel-back;
+						border-right: 1px solid $panel-back;
+						background: $panel-back;
+					}
+				}
+			}
+		}
 	}
 
 	hr {
