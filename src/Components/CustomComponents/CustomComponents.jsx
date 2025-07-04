@@ -35,7 +35,7 @@ export class LO9Grammar extends PureComponent {
 					<ol>
 						<li>
 							<p>Within France telephone numbers have 10 digits. For landlines the first two are the area code. These are:</p>
-							<div style={{ "display": "flex", "width": "50%", "float": "right", "flex-direction": "column", "align-items": "center" }}>
+							<div style={{ "display": "flex", "width": "50%", "float": "right", "flexDirection": "column", "alignItems": "center" }}>
 								<Figure
 									className={`centre max1000`}
 									src={resolveAsset(`/images/Carte_indicatifs_téléphoniques_français.svg`)}
@@ -57,7 +57,7 @@ export class LO9Grammar extends PureComponent {
 							</table>
 
 							<p>Mobile numbers have the prefix 06 or 07.</p>
-							<p>Telephone numbers are given in two-digit groups: e.g.  <AudioClip className={`link`} soundFile={resolveAsset(`/sounds/fr/07 11 15 22 55.mp3`)}>07 11 15 22 55</AudioClip> ( sound file)</p>
+							<p>Telephone numbers are given in two-digit groups: e.g.  <AudioClip className={`link`} soundFile={`/sounds/fr/07 11 15 22 55.mp3`}>07 11 15 22 55</AudioClip> ( sound file)</p>
 						</li>
 						<li>
 							<p>Bien is usually translated as 'well' or 'good'. However, here's an exception: It can sometimes be translated as 'isn't it', 'aren't you' etc or 'indeed' to verify something, as in the following examples:</p>
@@ -65,7 +65,7 @@ export class LO9Grammar extends PureComponent {
 								<tbody>
 									<tr><td>C'est bien le 06 22 14 66 33 ?</td><td>This is 06 22 14 66 33, isn't it?</td></tr>
 									<tr><td>C'est bien ça!</td><td>That's right / It is indeed.</td></tr>
-									<tr class='spacer'><td colspan="2"></td></tr>
+									<tr class='spacer'><td colSpan="2"></td></tr>
 									<tr><td>Vous êtes bien Madame Galipot ?</td><td>You are Mme Galipot aren't you?</td></tr>
 									<tr><td>C'est bien ça!</td><td>That's right / I am indeed.</td></tr>
 								</tbody>

@@ -28,8 +28,7 @@ export class AudioClip extends React.PureComponent {
 		if (className.includes('link')) {
 			return (
 				<span className={`audio-link`}
-					onClick={this.playSound}
-					title={`play`}
+					sound-file={soundFile}
 				>{children}</span>
 			);
 		} else if (className.includes('super-compact')) {
