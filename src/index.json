@@ -33,6 +33,10 @@
 			"file": "config-fr-8.json"
 		},
 		{
+			"title": "Learning Object 9",
+			"file": "config-fr-9.json"
+		},
+		{
 			"title": "DEMO",
 			"file": "config-fr-demo.json"
 		}
