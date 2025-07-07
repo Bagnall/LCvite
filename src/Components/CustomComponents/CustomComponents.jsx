@@ -141,7 +141,7 @@ export class LO9Grammar extends PureComponent {
 								<tbody>
 									<tr><td><AudioClip className={`link`} soundFile={`/sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></td><td>This is 06 22 14 66 33, isn't it?</td></tr>
 									<tr><td><AudioClip className={`link`} soundFile={`/sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td><td>That's right / It is indeed.</td></tr>
-									<tr class='spacer'><td colSpan="2"></td></tr>
+									<tr className='spacer'><td colSpan="2"></td></tr>
 									<tr><td><AudioClip className={`link`} soundFile={`/sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></td><td>You are Mme Galipot aren't you?</td></tr>
 									<tr><td><AudioClip className={`link`} soundFile={`/sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td><td>That's right / I am indeed.</td></tr>
 								</tbody>

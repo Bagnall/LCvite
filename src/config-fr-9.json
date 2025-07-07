@@ -316,7 +316,37 @@
 						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame !.mp3",
 						"sounds/fr/Au revoir Madame !.mp3"
 					],
-					"titleText": "2. In the following sentences and questions select du, de la, de l' or des as appropriate."
+					"titleText": "2. Select the correct word to fill in the gaps in the following conversations."
+				}
+			},
+			{
+				"phrases1": {
+					"component": "Blanks",
+					"id": "phrases1",
+					"congratulationsText": "Excellent !",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "phrases",
+					"phrases": [
+						"Âllo, oui ?",
+						"Bonjour, c’est bien le 05 24 07 19 55 ?",
+						"[Oui, c’est bien ça.]",
+						"Dominique est là, s’iI vous plaît ?",
+						"[Oui, c’est Dominique à l’appareil.]",
+						"Dominique tu veux prendre un verre avec moi ce soir ?",
+						"[Oui, je veux bien. A quelle heure ?]",
+						"À huit heures ?",
+						"[Oui, d’accord. Tu veux aller où ?]",
+						"Au nouveau café au centre-ville ?",
+						"[Oui, très bien ! J’aime beaucoup le nouveau café.]"
+					],
+					"audio": [
+						"sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3",
+						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
+						"sounds/fr/Ça va !.mp3"
+					],
+					"titleText": "3. Select the appropriate responses in the box to answer the questions in the conversation below"
 				}
 			},
 			{
@@ -350,23 +380,23 @@
 				}
 			},
 			{
-				"phrases1": {
+				"phrases2": {
 					"blanksType": "phrases",
 					"cheatText": "Cheat",
 					"component": "Blanks",
 					"congratulationsText": "Very good!",
-					"id": "phrases1",
+					"id": "phrases2",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
 						"Je ne fais pas [grand' chose]. Je fais la [grasse matinée]. Je vois mes [amis]. Quelquefois, je vais au [cinéma] ou je vais en [boîte]. Ça dépend !",
 						"Le samedi, je fais de l' [aviron]. Je prends mon [déjeuner] au café avec mon copain. Je vais en ville pour faire du [shopping]. Le soir, je sors avec [mes] amies.",
-						"Le dimanche, [je fais] de la natation. L'après-midi, s'il fait [beau], je fais [de la] randonnée avec ma sœur . S'il fait mauvais, je fais de la [peinture] ou je regarde la [télé]."
+						"Le dimanche, [je fais] de la natation. L'après-midi, s'il fait [beau], je fais [de la] randonnée avec ma sœur. S'il fait mauvais, je fais de la [peinture] ou je regarde la [télé]."
 					],
 					"audio": [
-						"sounds/fr/Je ne fais pas grand' chose Je fais la grasse matinée Je vois mes amis Quelquefois, je vais au cinéma ou je vais en boîte Ça dépend.mp3",
-						"sounds/fr/Le samedi, je fais de l'aviron Je prends mon déjeuner au café avec mon copain  Je vais en ville pour faire du shopping Le soir, je sors avec mes amies.mp3",
-						"sounds/fr/Le dimanche, je fais de la natation L'après-midi, s'il fait beau, je fais de la randonnée avec ma sœur S'il fait mauvais, je fais de la peinture ou je regarde la télé.mp3"
+						"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend.mp3",
+						"sounds/fr/Le samedi, je fais de l'aviron Je prends mon déjeuner au café avec mon copain. Je vais en ville pour faire du shopping. Le soir, je sors avec mes amies.mp3",
+						"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec ma sœur. S'il fait mauvais, je fais de la peinture ou je regarde la télé.mp3"
 					],
 					"titleText": "3 Select what you hear to fill in the gaps."
 				}
