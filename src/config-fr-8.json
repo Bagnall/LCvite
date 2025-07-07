@@ -232,17 +232,14 @@
 		"titleText": "Vocabulary"
 	},
 	"explanation1": {
-		"component": "Explanation",
-		"content": [
-			"Currently being worked in scratch 1"
-		],
-		"id": "explanation1",
+		"component": "LO8Grammar",
+		"id": "LO8Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {
 		"component": "Explanation",
 		"content": [
-			"Currently being worked in scratch 2"
+			"<p><b>How to pronounce: -tion</b> in French. In this combination the letter <b>t</b> is pronounced as if it were an <b>s</b>.</p><p>Here are some examples of words containing or ending <b>–tion</b>.</p><p><span class='audio-link' sound-file='/sounds/fr/l&apos;action.mp3'>l'action</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/l&apos;attention.mp3'>l'attention</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/l&apos;équitation.mp3'>l'équitation</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/l&apos;exposition.mp3'>l'exposition</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/la natation.mp3'>la natation</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/la nation.mp3'>la nation</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/la nationalité.mp3'>la nationalité</span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/la situation.mp3'>la situation</span></p>"
 		],
 		"id": "explanation2",
 		"titleText": "Demystifying French Pronunciation"

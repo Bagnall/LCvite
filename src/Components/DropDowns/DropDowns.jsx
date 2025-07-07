@@ -256,7 +256,7 @@ export class DropDowns extends React.PureComponent {
 			for (let i = 0; i < phrases.length; i++) {
 				const phrase = phrases[i];
 				const cells = new Array();
-				if (phrase[0] === '' && phrase.length === 1) {
+				if ((phrase[0] === undefined || phrase[0] === '') && phrase.length === 0) {
 					// blank row
 					rows.push(
 						<tr className={`spacer`} key={`row${i}`}>

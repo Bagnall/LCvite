@@ -16,6 +16,12 @@
 			border: 1px solid #000000;
 			padding: 5px 4px;
 			font-weight: bold;
+			span.inline-monologue {
+				white-space: nowrap;
+				.monologue-container {
+					display: inline-flex;
+				}
+			}
 		}
 		tbody {
 			border: none;

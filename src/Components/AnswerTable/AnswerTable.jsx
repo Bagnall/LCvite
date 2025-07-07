@@ -90,11 +90,25 @@ export class AnswerTable extends React.PureComponent {
 					);
 				}
 				if (phrase[1] !== '') {
-					cells.push(
-						<td key={`row${i}cell1`}>
-							<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
-						</td>
-					);
+					const openIndex = phrase[1].indexOf('[');
+					const closeIndex = phrase[1].indexOf(']');
+
+					if (openIndex !== -1 && closeIndex !== -1 || closeIndex < openIndex) {
+						const before = phrase[1].slice(0, openIndex);
+						const between = phrase[1].slice(openIndex + 1, closeIndex);
+						const after = phrase[1].slice(closeIndex + 1);
+						cells.push(
+							<td key={`row${i}cell1`}>
+								<span className='inline-monologue'>{before ? before : null}<Monologue compact={true} id={`Monologue${i}`} content={between} countCorrect={this.countCorrect} />{after ? after : null}</span>
+							</td>
+						);
+					} else {
+						cells.push(
+							<td key={`row${i}cell1`}>
+								<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
+							</td>
+						);
+					}
 				}
 				if (longestRow > 2) {
 					const soundCellIndex = 2;

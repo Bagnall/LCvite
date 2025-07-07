@@ -123,6 +123,11 @@
 		"id": "explanation4",
 		"titleText": "Explanation"
 	},
+	"custom1": {
+		"component": "LO9Grammar",
+		"id": "LO9Grammar",
+		"titleText": "Grammar / Use of Language"
+	},
 	"group": {
 		"component": "Group",
 		"content": [

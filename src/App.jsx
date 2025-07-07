@@ -3,6 +3,7 @@ import {
 	Accordion,
 	AccordionArticle,
 	AnswerTable,
+	AudioClip,
 	Blanks,
 	Congratulate,
 	DropDowns,
@@ -671,87 +672,34 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
-									<AccordionArticle
+									{/* <AccordionArticle
 										id={`scratchAccordion1`}
 										title={`Scratch 1`}
 									>
-										<>
-											<ol>
-												<li>
-													More about adjectives: There are some adjectives ending in <b>f</b>, e.g. sport<b>if</b>, act<b>if</b>.
-													The feminine form of such words ends in <b>-ve</b>.
-													e.g. Mon frère est sport<b>if</b>.  Ma sœur est sporti<b>ve</b>.
-												</li>
-												<li><br/>
-													<ol type="i">
-														<li>The verb <b>faire</b>, meaning both 'to make' and 'to do', is a frequently occurring very  irregular verb. Here it is conjugated in the present tense:<br/>
-															je <b>fais</b><br/>
-															tu <b>fais</b><br/>
-															il / elle <b>fait</b><br/>
-															nous <b>faisons</b><br/>
-															vous <b>faites</b><br/>
-															ils / elles <b>font</b><br/>
-														</li>
-														<li>
-															In English you can express what you do or make simply by adding the activity after the verb e.g. 'I do gymnastics' or
-															'I do gardening' or 'I make cakes'. In French, you also need something called the partitive article:
-															<b>du</b> for masculine nouns, <b>de la</b> for feminine nouns, <b>de l'</b> before a vowel or silent h and <b>des</b>
-															for plurals.<br/>
-															The partitive is usually translated by "some" or "any," i.e an unspecified amount, or is often left out entirely as in the examples below. <br/>
-															<b>Je fais de la gymnastique</b> I do gymnastics    <br/>
-															<b>Je fais du jardinage</b> I do gardening<br/>
-															<b>Je fais des gâteaux</b> I make cakes<br/>
-														</li>
-													</ol>
-												</li>
-												<li>
-													<br/>
-													<ol type="i">
-														<li>
-															The regular <b>-er</b>  verb <b>jouer</b> meaning to play is useful when talking about pastimes.
-															You use the partitive article after the verb <b>jouer</b> when speaking about playing a musical instrument:<br />
-															<b>Je joue du piano</b>  I play the piano <br/>
-															<b>Je joue de la clarinette</b> I play the clarinet
-														</li>
-														<li>
-															When you use the verb <b>jouer</b> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
-															You use <b>jouer à</b>.  If the activity is masculine it's <b>jouer au</b>, if feminine, <b>jouer à la</b>,
-															if  starting with a vowel or silent h then <b>jouer à l'</b> and for plurals <b>jouer aux</b>.<br/>
-															<br/>
-															e.g. Je joue au football I play football<br/>
-															Je joue à la pétanque I play pétanque
-														</li>
-													</ol>
-												</li>
-												<li>
-													The ending of a noun often helps you to know its gender. For example, all nouns ending <b>-tion</b> or  <b>-ie</b> are feminine.<br />
-													e.g .l'action, la nation, la natation, la biologie,  la géographie, la sociologie  <br/>
-													<br/>
-													All nouns ending <b>-isme</b> are masculine.<br/>
-													e.g. l'athlétisme, l'existentialisme, le socialisme
-												</li>
-											</ol>
-										</>
-									</AccordionArticle>
-									<AccordionArticle
-										id={`scratchAccordion2`}
-										title={`Scratch 2`}
-									>
-										<>
-											<p><b>How to pronounce: -tion</b> in French. In this combination the letter <b>t</b> is pronounced as if it were an <b>s</b>.</p>
-											<p>Here are some examples of words containing or ending <b>–tion</b>.</p>
-											<p>
-												<span class='audio-link' sound-file='/sounds/fr/l&apos;action.mp3'>l'action</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/l&apos;attention.mp3'>l'attention</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/l&apos;équitation.mp3'>l'équitation</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/l&apos;exposition.mp3'>l'exposition</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/la natation.mp3'>la natation</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/la nation.mp3'>la nation</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/la nationalité.mp3'>la nationalité</span>,&nbsp;
-												<span class='audio-link' sound-file='/sounds/fr/la situation.mp3'>la situation</span>
-											</p>
-										</>
-									</AccordionArticle>
+										<div
+											className={`container`}
+										>
+											<div
+												className={`panel`}
+											>
+												<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p>
+												<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed:  cinq, six, sept, huit, neuf, dix. (Sound files)</p>
+												<p>However, <b>NB</b>, when&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/six.mp3`} ><b>six</b></AudioClip>,&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/huit.mp3`} ><b>huit</b></AudioClip> or&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/dix.mp3`} ><b>dix</b></AudioClip> are followed by a word starting with a consonant, the final consonant of the number is <b>not</b> pronounced.</p>
+												<p>e.g.&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/six villages.mp3`} ><b>six villages</b></AudioClip>,&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/huit villes.mp3`} ><b>huit villes</b></AudioClip>,&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/dix pays.mp3`} ><b>dix pays</b></AudioClip></p>
+												<p>The last consonant of the number is pronounced as might be anticipated if the word following the number begins with a vowel.</p>
+												<p>e.g.&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/six enfants.mp3`} ><b>six enfants</b></AudioClip>,&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/huit étudiants.mp3`} ><b>huit étudiants</b></AudioClip>,&nbsp;
+													<AudioClip className={`link`} soundFile={`/sounds/fr/dix élèves.mp3`} ><b>dix élèves</b></AudioClip></p>
+											</div>
+										</div>
+									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle
