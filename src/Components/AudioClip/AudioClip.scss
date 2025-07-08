@@ -2,7 +2,14 @@
 @use "../../styles/_media-queries.module.scss";
 @use "../../styles/_mixins.module.scss";
 
-$compact-dimension: 27px;
+:root {
+	--compact-dimension: 27px;
+}
+/* stylelint-disable */
+// :export {
+// 	--compact-Dimension: --compact-dimension; /* stylelint-disable-line */
+// }
+/* stylelint-enable */
 .audio-clip {
 	display: flex;
 	align-items: center;
@@ -11,11 +18,11 @@ p > audio,
 audio.compact,
 audio.super-compact {
 	width: 200px;
-	height: $compact-dimension; // Half default height
+	height: var(--compact-dimension); // Half default height
 	vertical-align: middle;
 	&.inset {
 		&.compact {
-			border-radius: calc($compact-dimension / 2);
+			border-radius: calc(var(--compact-dimension) / 2);
 			min-width: 160px;
 		}
 		box-shadow:
@@ -25,20 +32,46 @@ audio.super-compact {
 			3px -3px 3px rgba(2555, 255, 255, 0.4);
 	}
 }
+
 .audio-link {
 	display: inline-block;
+	position: relative;
+	&::after {
+		content: "";
+		width: var(--progress-width);
+		height: 1px;
+		position: absolute;
+		bottom: 4px;
+		left: 0;
+		background-color: blue;
+	}
+	&.playing {
+		text-decoration: none !important;
+		--progress-width: 0%;
+	}
 }
+
+.audio-ring {
+	// textAlign: center;
+}
+
 div.audio-container {
-	width: $compact-dimension;
-	height: $compact-dimension; // Half default height
-	border-radius: calc($compact-dimension / 2);
 	background-color: #f1f3f4;
 	z-index: 1;
 	display: block;
 	position: relative;
-	&.super-compact {
-		cursor: pointer;
-	}
+}
+
+.circular-audio-progress {
+	width: var(--compact-dimension);
+	height: var(--compact-dimension);
+	border-radius: calc(var(--compact-dimension) / 2);
+	background-image: url("speaker.svg");
+	background-size: calc(var(--compact-dimension) * 3 / 5);
+	background-position: 2px 2px;
+	background-repeat: no-repeat;
+	background-color: red; //transparent;
+	cursor: pointer;
 	&:hover {
 		background-color: #e5e7e8;
 	}
@@ -47,13 +80,9 @@ div.audio-container {
 		@include mixins.standard-pseudo();
 		width: 0;
 		height: 0;
-		border-width: 8px 10px;
-		border-color: transparent transparent transparent black;
-		border-style: solid;
-		top: 5.5px;
-		left: 10px;
 	}
 	&.playing {
+		background-image: none;
 		&::after {
 			width: 4px;
 			height: 14px;
@@ -71,6 +100,10 @@ div.audio-container {
 			background-color: black;
 			border-width: 0;
 		}
+	}
+	svg {
+		width: 100%;
+		height: 100%;
 	}
 }
 @include media-queries.respond-above(m) {

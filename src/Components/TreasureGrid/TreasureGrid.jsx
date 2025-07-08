@@ -39,10 +39,10 @@ const correctPath = [
 export class TreasureGrid extends PureComponent {
 	constructor(props) {
 		super(props);
-		this.state = {
-	  path: [],
-	  message: ''
-		};
+		this.state = ({
+			path: [],
+			message: ''
+		});
 	}
 
 	handleClick = (row, col) => {
@@ -52,13 +52,13 @@ export class TreasureGrid extends PureComponent {
 		const isMatch = newPath.every(([r, c], i) => correct[i] && correct[i][0] === r && correct[i][1] === c);
 
 		if (!isMatch) {
-	  this.setState({ message: '❌ Incorrect path! Try again.' });
-	  setTimeout(() => {
+			this.setState({ message: '❌ Incorrect path! Try again.' });
+			setTimeout(() => {
 				this.setState({ path: [], message: '' });
-	  }, 1000);
+			}, 1000);
 		} else {
-	  const msg = newPath.length === correctPath.length ? '🎉 You found the treasure path!' : '';
-	  this.setState({ path: newPath, message: msg });
+			const msg = newPath.length === correctPath.length ? '🎉 You found the treasure path!' : '';
+			this.setState({ path: newPath, message: msg });
 		}
 	};
 
@@ -68,24 +68,24 @@ export class TreasureGrid extends PureComponent {
 
 	render() {
 		return (
-	  <div className="treasure-grid">
+			<div className="treasure-grid">
 				<h2>Translation Treasure Grid</h2>
 				<p>Follow the translation trail to find the treasure! Start at "chat".</p>
 				<div className="grid">
-		  {gridData.map((row, rIdx) =>
+					{gridData.map((row, rIdx) =>
 						row.map((cell, cIdx) => (
-			  <div
+							<div
 								key={`${rIdx}-${cIdx}`}
 								className={`cell ${this.isInPath(rIdx, cIdx) ? 'selected' : ''}`}
 								onClick={() => this.handleClick(rIdx, cIdx)}
-			  >
+							>
 								{cell}
-			  </div>
+							</div>
 						))
-		  )}
+					)}
 				</div>
 				{this.state.message && <p className="message">{this.state.message}</p>}
-	  </div>
+			</div>
 		);
 	}
 }

@@ -165,14 +165,14 @@ export class CrossWord extends PureComponent {
 		const { words } = config;
 		this.wordPairs = words;
 		const { grid, placements } = generateSimpleCrossword(this.wordPairs);
-		this.state = {
+		this.state = ({
 			selected: null,
 			activeClueIndex: null,
 			grid,
 			placements,
 			filled: createEmptyGrid(grid.length),
 			...config
-		};
+		});
 	}
 
 	handleChange = (e, row, col) => {

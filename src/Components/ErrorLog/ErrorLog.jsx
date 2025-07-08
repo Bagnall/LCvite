@@ -6,9 +6,9 @@ export class ErrorLog extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
+		this.state = ({
 			collapse: false,
-		};
+		});
 
 		this.copyErrors = this.copyErrors.bind(this);
 		this.expand = this.expand.bind(this);

@@ -5,9 +5,9 @@ export class Info extends React.PureComponent {
 	constructor(props) {
 		super(props);
 
-		this.state = {
+		this.state = ({
 			showInfo: false,
-		};
+		});
 
 	}
 

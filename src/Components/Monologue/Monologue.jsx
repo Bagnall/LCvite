@@ -17,18 +17,18 @@ export class Monologue extends React.PureComponent {
 			config
 		} = this.props;
 		if (config) {
-			this.state = {
+			this.state = ({
 				...props.config,
 				compact: compact,
 				showResult: false,
-			};
+			});
 		} else {
-			this.state = {
+			this.state = ({
 				compact: compact,
 				content: content,
 				showResult: false,
 				soundFile: soundFile,
-			};
+			});
 		}
 
 		this.handleChange = this.handleChange.bind(this);

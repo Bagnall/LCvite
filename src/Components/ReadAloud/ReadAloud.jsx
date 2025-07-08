@@ -64,15 +64,16 @@ export class ReadAloud extends React.PureComponent {
 		} = _this.props;
 
 		if (config) {
-			_this.state = {
+			_this.state = ({
 				...props.config,
 				// phrase: phrase, // From the config
 				cannotRun: cannotRun,
 				firstTry: true,
 				recognition: recognition,
 				recording: false,
-			};
-		}	}
+			});
+		}
+	}
 
 	handleNoMatch = () => {
 		this.resultRef.current.textContent = "I didn't understand your phrase, sorry.";

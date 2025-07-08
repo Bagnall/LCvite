@@ -156,7 +156,7 @@ export class ConnectFour extends PureComponent {
 		// debugger;
 		// debugger;
 		// const { grid, placements } = generateSimpleCrossword(this.wordPairs);
-		this.state = {
+		this.state = ({
 			gameTree: gameTree,
 			// gameTreeInitialised: true;
 			// selected: null,
@@ -165,7 +165,7 @@ export class ConnectFour extends PureComponent {
 			// placements,
 			// filled: createEmptyGrid(grid.length),
 			...config
-		};
+		});
 	}
 
 	componentDidMount = () => {

@@ -154,7 +154,7 @@ export default class App extends React.Component {
 				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
 				// } else {
-					speech.setAttribute('title', 'Click to play sound');
+					// speech.setAttribute('title', 'Click to play sound');
 					speech.setAttribute('aria-label', 'Non-selectable text');
 					speech.setAttribute('setup', 'true');
 					speech.addEventListener('click', (e) => speak(e, synth, targetLanguageCode, voices));
@@ -177,7 +177,7 @@ export default class App extends React.Component {
 				// if (!soundFile) {
 				// 	alert("Error: Undefined soundfile!"); // User must never see this!
 				// } else {
-				audioLink.setAttribute('title', 'Click to play sound');
+				// audioLink.setAttribute('title', 'Click to play sound');
 				audioLink.setAttribute('setup', 'true');
 				audioLink.addEventListener('click', () => playAudioLink(soundFile));
 				audioLink.setup = true;

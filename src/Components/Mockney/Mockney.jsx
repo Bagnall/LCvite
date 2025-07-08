@@ -129,10 +129,10 @@ export class Mockney extends PureComponent {
 			['sly ', "s "],
 		];
 
-		this.state = {
+		this.state = ({
 			translations: translations,
 			...config
-		};
+		});
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSpeak = this.handleSpeak.bind(this);

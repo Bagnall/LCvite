@@ -35,7 +35,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			nPairsToPlay,
 		} = this.props.config;
 
-		this.state = {
+		this.state = ({
 			...this.props.config,
 			beenFlipped:[], // To have shade animations if/when flipping back
 			cards: getShuffledDeck(cards, nPairsToPlay),
@@ -43,7 +43,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			matched: [],
 			nPairs: 0,
 			nTries: 0,
-		};
+		});
 		this.handleClick = this.handleClick.bind(this);
 	}
 
