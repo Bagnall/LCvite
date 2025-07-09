@@ -149,7 +149,7 @@ export default class App extends React.Component {
 		const speeches = document.querySelectorAll('.speak');
 		speeches.forEach((speech) => {
 			if (targetLanguageCode && synth && voices && voices.length >= 1) {
-				console.error("There's a '.speak' that I missed");
+				console.error("There's a '.speak' that I missed"); // eslint-ignore-line
 				// console.log("Setting speeches", voices.length);
 				if (speech.setup !== true && speech.getAttribute('setup') !== true){
 					// Do nowt!
@@ -171,17 +171,15 @@ export default class App extends React.Component {
 
 		const audioLinks = document.querySelectorAll('.audio-link');
 		audioLinks.forEach((audioLink) => {
-			console.log(audioLink.getAttribute('sound-file'));
+			// console.log(audioLink.getAttribute('sound-file'));
 			if (audioLink.setup !== true && audioLink.getAttribute('setup') !== true) {
 				const soundFile = audioLink.getAttribute('sound-file');
-				// if (!soundFile) {
-				// 	alert("Error: Undefined soundfile!"); // User must never see this!
-				// } else {
-				// audioLink.setAttribute('title', 'Click to play sound');
-				audioLink.setAttribute('setup', 'true');
-				audioLink.addEventListener('click', () => playAudioLink(soundFile));
-				audioLink.setup = true;
-				// }
+				// console.log("soundFile", soundFile);
+				if (soundFile !== null){ // i.e. not fully loaded yet
+					audioLink.setAttribute('setup', 'true');
+					audioLink.addEventListener('click', () => playAudioLink(soundFile));
+					audioLink.setup = true;
+				}
 			}
 		});
 	};

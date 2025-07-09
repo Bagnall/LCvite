@@ -4,14 +4,12 @@ import React from 'react';
 export class AudioClip extends React.PureComponent {
 	constructor(props) {
 		super(props);
-		this.state = ({
-			status: 'stopped'
-		});
 		this.initialiseProgress = this.initialiseProgress.bind(this);
 		this.notePlaying = this.notePlaying.bind(this);
 		this.playSound = this.playSound.bind(this);
 
 		this.audioRef = React.createRef();
+		this.status = 'stopped';
 	}
 
 	notePlaying = (useRef) => {
@@ -19,24 +17,21 @@ export class AudioClip extends React.PureComponent {
 		if (useRef) {
 			this.initialiseProgress(this.audioRef.current);
 		}
-		this.setState({
-			status: "playing"
-		});
+		this.status = "playing";
 	};
 
 	handleClick = () => {
 		// console.log("handleClick (only for super-compact and link)");
 		const {
 			soundFileAudio,
-			status
 		} = this.state;
-		switch (status) {
+		switch (this.status) {
 			case 'stopped':
 				this.playSound();
 				break;
 			case 'paused':
+				this.status = 'playing';
 				soundFileAudio.play();
-				this.setState({status: 'playing'});
 				break;
 			case 'playing':
 				this.pause();
@@ -61,19 +56,20 @@ export class AudioClip extends React.PureComponent {
 		const soundFileAudio = new Audio(soundFile);
 		this.initialiseProgress(soundFileAudio);
 		soundFileAudio.onended = () => {
-			this.setState({ status: 'stopped' });
+			this.status = 'stopped';
 		};
 		soundFileAudio.play();
+		this.status = 'playing';
 		this.setState({
 			soundFileAudio: soundFileAudio,
-			status: 'playing',
 		});
 	};
 
 	pause = () => {
 		const { soundFileAudio } = this.state;
+		this.status = 'paused';
+
 		soundFileAudio.pause();
-		this.setState({ status: 'paused' });
 	};
 
 	render = () => {
@@ -84,9 +80,9 @@ export class AudioClip extends React.PureComponent {
 			listenText = '',
 			soundFile,
 		} = this.props;
-		const {
-			progress = '0%',
-		} = this.state;
+		// const {
+		// 	progress = '0%',
+		// } = this.state;
 
 		if (className.includes('link')) {
 			return (
@@ -107,7 +103,7 @@ export class AudioClip extends React.PureComponent {
 		} else if (className.includes('compact')) {
 			return (
 				<audio
-					className={`${className ? className : ''} ${progress}`}
+					className={`${className ? className : ''}`}
 					controls
 					onPlay={() => this.notePlaying(true)}
 					ref={this.audioRef}
@@ -118,7 +114,7 @@ export class AudioClip extends React.PureComponent {
 				return (
 					<label className='audio-clip' htmlFor={`${id}`}>{listenText}{listenText === '' ? '' : ':'}&nbsp;
 						<audio
-							className={`${className ? className : ''} ${progress}`}
+							className={`${className ? className : ''}`}
 							controls
 							id={`${id}`}
 							onPlay={() => this.notePlaying(true)}
@@ -130,7 +126,7 @@ export class AudioClip extends React.PureComponent {
 			} else {
 				return (
 					<audio
-						className={`${className ? className : ''} ${progress ? progress : null}`}
+						className={`${className ? className : ''}`}
 						controls
 						onPlay={() => this.notePlaying(true)}
 						ref={this.audioRef}
@@ -150,6 +146,8 @@ class CircularAudioProgress extends React.Component {
 			duration: 0,
 			progress: 0,
 		});
+
+		this.pause = this.pause.bind(this);
 	}
 
 	componentDidMount = () => {
@@ -186,12 +184,11 @@ class CircularAudioProgress extends React.Component {
 		// console.log("handleClick (only for super-compact and link)");
 		const {
 			soundFileAudio,
-			status
 		} = this.state;
-		switch (status) {
+		switch (this.status) {
 			case 'paused':
+				this.status = 'playing';
 				soundFileAudio.play();
-				this.setState({status: 'playing'});
 				break;
 			case 'playing':
 				this.pause();
@@ -220,23 +217,21 @@ class CircularAudioProgress extends React.Component {
 	pause = () => {
 		const { soundFileAudio } = this.state;
 		soundFileAudio.pause();
-		this.setState({ status: 'paused' });
+		this.status = 'paused';
 	};
 
 	playSound = () => {
 		const { soundFile } = this.props;
-		this.setState({
-			status: "playing"
-		});
+		this.status = "playing";
 		const soundFileAudio = new Audio(soundFile);
 		// this.initialiseProgress(soundFileAudio);
 		soundFileAudio.onended = () => {
-			this.setState({ status: 'stopped' });
+			this.status = 'stopped';
 		};
 		soundFileAudio.play();
+		this.status = 'playing';
 		this.setState({
 			soundFileAudio: soundFileAudio,
-			status: 'playing',
 		});
 	};
 
@@ -257,57 +252,55 @@ class CircularAudioProgress extends React.Component {
 
 	render = () => {
 		const { strokeWidth = 2, colour = '#f90', bgColour = '#ddd' } = this.props;
-		const { status } = this.state;
 		const root = getComputedStyle(document.documentElement);
 		let compactDimension = root.getPropertyValue('--compact-dimension').trim();
 		compactDimension = parseInt(compactDimension);
-		// const {
-		// 	compactDimension
-		// } = Variables;
-		// const compactDimension = 27;
 		const size = compactDimension;
 		const radius = (size - strokeWidth) / 2;
 		const circumference = 2 * Math.PI * radius;
-
-		return (
-			<div
-				className={`audio-container super-compact circular-audio-progress ${status}`}
-				onClick={this.handleClick}
-				onPlay={() => this.notePlaying(false)}
-				ref={this.audioRef}
-				title={`${status !== 'paused' ? 'Click to play' : 'Click to pause'}`}
-				style={{
-					backgroundPosition: `center center`,
-					backgroundSize: `${compactDimension / 2}px`,
-				}}
-			>
-				<svg width={size} height={size}>
-					{/* Background ring */}
-					<circle
-						cx={size / 2}
-						cy={size / 2}
-						r={radius}
-						stroke={bgColour}
-						strokeWidth={strokeWidth}
-						fill="none"
-					/>
-					{/* Progress ring */}
-					<circle
-						ref={this.circleRef}
-						cx={size / 2}
-						cy={size / 2}
-						r={radius}
-						stroke={colour}
-						strokeWidth={strokeWidth}
-						fill="none"
-						strokeDasharray={circumference}
-						strokeDashoffset={circumference}
-						transform={`rotate(-90 ${size / 2} ${size / 2})`}
-						style={{ transition: 'stroke-dashoffset 0.2s linear' }}
-					/>
-				</svg>
-			</div>
-		);
+		if (isNaN(size)){
+			return null;
+		} else {
+			return (
+				<div
+					className={`audio-container super-compact circular-audio-progress ${this.status}`}
+					onClick={this.handleClick}
+					onPlay={() => this.notePlaying(false)}
+					ref={this.audioRef}
+					title={`${this.status !== 'paused' ? 'Click to play' : 'Click to pause'}`}
+					style={{
+						backgroundPosition: `center center`,
+						backgroundSize: `${compactDimension / 2}px`,
+					}}
+				>
+					<svg width={size} height={size}>
+						{/* Background ring */}
+						<circle
+							cx={size / 2}
+							cy={size / 2}
+							r={radius}
+							stroke={bgColour}
+							strokeWidth={strokeWidth}
+							fill="none"
+						/>
+						{/* Progress ring */}
+						<circle
+							ref={this.circleRef}
+							cx={size / 2}
+							cy={size / 2}
+							r={radius}
+							stroke={colour}
+							strokeWidth={strokeWidth}
+							fill="none"
+							strokeDasharray={circumference}
+							strokeDashoffset={circumference}
+							transform={`rotate(-90 ${size / 2} ${size / 2})`}
+							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
+						/>
+					</svg>
+				</div>
+			);
+		}
 	};
 }
 
@@ -340,21 +333,22 @@ class LinkAudioProgress extends CircularAudioProgress {
 		const { progress, duration } = this.state;
 		// console.log("progress", progress, "duration", duration);
 		this.linkRef.current.style.setProperty('--progress-width', `${100 * progress / duration}%`);
+		// this.linkRef.current.setAttribute('title', 'Click to pause');
 	};
 
 	render = () => {
 		const { children } = this.props;
-		const {
-			status
-		} = this.state;
+		// const {
+		// 	status
+		// } = this.state;
 
 		return (
 			<span
-				className={`audio-link ${status}`}
+				className={`audio-link ${this.status}`}
 				onClick={this.handleClick}
 				onPlay={() => this.notePlaying(false)}
 				ref={this.linkRef}
-				title={`${status !== 'paused' ? 'Click to play' : 'Click to pause'}`}
+				title={`${this.status !== 'paused' ? 'Click to play' : 'Click to pause'}`}
 			>{children}</span>
 		);
 	};

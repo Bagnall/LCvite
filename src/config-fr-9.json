@@ -330,75 +330,31 @@
 					"blanksType": "phrases",
 					"phrases": [
 						"Âllo, oui ?",
-						"Bonjour, c’est bien le 05 24 07 19 55 ?",
-						"[Oui, c’est bien ça.]",
-						"Dominique est là, s’iI vous plaît ?",
-						"[Oui, c’est Dominique à l’appareil.]",
+						"Bonjour, c'est bien le 05 24 07 19 55 ?",
+						"[Oui, c'est bien ça.]",
+						"Dominique est là, s'iI vous plaît ?",
+						"[Oui, c'est Dominique à l'appareil.]",
 						"Dominique tu veux prendre un verre avec moi ce soir ?",
 						"[Oui, je veux bien. A quelle heure ?]",
 						"À huit heures ?",
-						"[Oui, d’accord. Tu veux aller où ?]",
+						"[Oui, d'accord. Tu veux aller où ?]",
 						"Au nouveau café au centre-ville ?",
-						"[Oui, très bien ! J’aime beaucoup le nouveau café.]"
+						"[Oui, très bien ! J'aime beaucoup le nouveau café.]"
 					],
 					"audio": [
-						"sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3",
-						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
-						"sounds/fr/Ça va !.mp3"
+						"sounds/fr/Âllo, oui (male).mp3",
+						"sounds/fr/Bonjour, c'est bien le 05 24 07 19 55.mp3",
+						"sounds/fr/Oui, c'est bien ça (male).mp3",
+						"sounds/fr/Dominique est là, s'iI vous plaît.mp3",
+						"sounds/fr/Oui, c'est Dominique à l'appareil.mp3",
+						"sounds/fr/Dominique tu veux prendre un verre avec moi ce soir.mp3",
+						"sounds/fr/Oui, je veux bien. A quelle heure (male).mp3",
+						"sounds/fr/À huit heures.mp3",
+						"sounds/fr/Oui, d'accord. Tu veux aller où.mp3",
+						"sounds/fr/Au nouveau café au centre-ville.mp3",
+						"sounds/fr/Oui, très bien ! J'aime beaucoup le nouveau café.mp3"
 					],
 					"titleText": "3. Select the appropriate responses in the box to answer the questions in the conversation below"
-				}
-			},
-			{
-				"dropdowns2": {
-					"component": "DropDowns",
-					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
-					"instructionsText": "Julien est très sportif:",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Le lundi, il joue [*au|à la|à l'|aux] foot.",
-						"Le mardi, il joue [*au|à la|à l'|aux] tennis.",
-						"Le mercredi, il joue [*au|à la|à l'|aux] volley.",
-						"Le jeudi, il joue [au|*à la|à l'|aux] pétanque.",
-						"Le vendredi, il joue [au|à la|à l'|*aux] boules",
-						"Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis",
-						"Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [*au|à la|à l'|aux] échecs avec son frère."
-					],
-					"phrasesHTMLXX": "<p>Julien est très sportif:<br/>Le lundi, il joue [*au|à la|à l'|aux] foot.<br/>Le mardi, il joue [*au|à la|à l'|aux] tennis.<br/>Le mercredi, il joue [*au|à la|à l'|aux] volley.<br/>Le jeudi, il joue [au|*à la|à l'|aux] pétanque.<br/>Le vendredi, il joue [au|à la|à l'|*aux] boules<br/>Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis<br/>Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [*au|à la|à l'|aux] échecs avec son frère.</p>",
-					"audio": [
-						"sounds/fr/Je fais du shopping.mp3",
-						"sounds/fr/Vous faites du jogging le matin.mp3",
-						"sounds/fr/Tu fais de l'aviron.mp3",
-						"sounds/fr/J'aime faire du lèche-vitrine.mp3",
-						"sounds/fr/Ma sœur aime faire de la peinture.mp3",
-						"sounds/fr/Je  fais de l'équitation pendant mon temps libre.mp3",
-						"sounds/fr/Je joue de la batterie.mp3"
-					],
-					"titleText": "3. In the following sentences and questions select au , à la, à l' or aux as appropriate."
-				}
-			},
-			{
-				"phrases2": {
-					"blanksType": "phrases",
-					"cheatText": "Cheat",
-					"component": "Blanks",
-					"congratulationsText": "Very good!",
-					"id": "phrases2",
-					"instructionsText": "Drag the words to fill in the gaps.",
-					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Je ne fais pas [grand' chose]. Je fais la [grasse matinée]. Je vois mes [amis]. Quelquefois, je vais au [cinéma] ou je vais en [boîte]. Ça dépend !",
-						"Le samedi, je fais de l' [aviron]. Je prends mon [déjeuner] au café avec mon copain. Je vais en ville pour faire du [shopping]. Le soir, je sors avec [mes] amies.",
-						"Le dimanche, [je fais] de la natation. L'après-midi, s'il fait [beau], je fais [de la] randonnée avec ma sœur. S'il fait mauvais, je fais de la [peinture] ou je regarde la [télé]."
-					],
-					"audio": [
-						"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend.mp3",
-						"sounds/fr/Le samedi, je fais de l'aviron Je prends mon déjeuner au café avec mon copain. Je vais en ville pour faire du shopping. Le soir, je sors avec mes amies.mp3",
-						"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec ma sœur. S'il fait mauvais, je fais de la peinture ou je regarde la télé.mp3"
-					],
-					"titleText": "3 Select what you hear to fill in the gaps."
 				}
 			}
 		],

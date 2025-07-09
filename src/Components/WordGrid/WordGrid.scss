@@ -5,20 +5,13 @@
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
-html.debug {
-	.word-grid-container {
-		// span {
-		// 	border: 1px solid rgba(255, 0, 0, 0.2);
-		// }
-	}
-}
-// $cell-dimension: 36px;
-
-// /* stylelint-disable */
-// :export {
-// 	cellSize: $cell-dimension;
+// html.debug {
+// 	.word-grid-container {
+// 		// span {
+// 		// 	border: 1px solid rgba(255, 0, 0, 0.2);
+// 		// }
+// 	}
 // }
-// /* stylelint-enable */
 
 .word-grid-container {
 	padding: 1rem;
