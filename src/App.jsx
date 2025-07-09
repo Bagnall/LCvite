@@ -670,7 +670,7 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
-									<AccordionArticle
+									{/* <AccordionArticle
 										id={`scratchAccordion1`}
 										title={`Scratch 1`}
 									>
@@ -703,7 +703,7 @@ export default class App extends React.Component {
 													<AudioClip className={`link`} soundFile={`/sounds/fr/dix élèves.mp3`} ><b>dix élèves</b></AudioClip></p>
 											</div>
 										</div>
-									</AccordionArticle>
+									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle

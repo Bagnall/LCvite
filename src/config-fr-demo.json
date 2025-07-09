@@ -16,6 +16,11 @@
 		"id": "explanation1",
 		"titleText": "The .speak class"
 	},
+	"audioClip1": {
+		"component": "AudioClipSamples",
+		"id": "AudioClip1",
+		"titleText": "AudioClip Types and Samples"
+	},
 	"readaloud1": {
 		"component": "ReadAloud",
 		"id": "ReadAloud1",
