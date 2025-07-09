@@ -33,6 +33,7 @@ audio.super-compact {
 	position: relative;
 	text-decoration: none !important;
 	--progress-width: 100%;
+	white-space: nowrap;
 	&::after {
 		content: "";
 		width: var(--progress-width);
