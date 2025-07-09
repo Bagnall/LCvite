@@ -317,144 +317,155 @@
 		"component": "Group",
 		"content": [
 			{
-				"answerTable1": {
-					"component": "AnswerTable",
-					"congratulationsText": "Well done!",
-					"id": "AnswerTable1",
-					"instructionsTextXX": "Listen to the following phone numbers and type them into the space provided.",
-					"header": [
-						"Question",
-						"Answer",
-						"Listen"
-					],
-					"phrases": [
-						[
-							"Quel est ton numéro de portable ?",
-							"C'est le [06 10 15 24 35]",
-							"/sounds/fr/C'est le 06 10 15 24 35.mp3"
-						],
-						[
-							"Quel est ton numéro de portable ?",
-							"C'est le [07 12 18 36 47]",
-							"/sounds/fr/C'est le 07 12 18 36 47.mp3"
-						],
-						[
-							"Quel est votre numéro de portable ?",
-							"C'est le [07 26 19 49 50]",
-							"/sounds/fr/C'est le 07 26 19 49 50.mp3"
-						],
-						[
-							"Quel est ton numéro de portable ?",
-							"C'est le [06 28 21 53 62]",
-							"/sounds/fr/C'est le 06 28 21 53 62.mp3"
-						],
-						[
-							"Quel est votre numéro de téléphone ?",
-							"C'est le [02 30 43 53 67]",
-							"/sounds/fr/C'est le 02 30 43 53 67.mp3"
-						],
-						[
-							"Quel est votre numéro de téléphone ?",
-							"C'est le [05 31 46 60 68]",
-							"/sounds/fr/C'est le 05 31 46 60 68.mp3"
-						],
-						[
-							"Quel est ton numéro de téléphone ?",
-							"C'est le [03 44 55 66 70]",
-							"/sounds/fr/C'est le 03 44 55 66 70.mp3"
-						],
-						[
-							"Quel est ton numéro de téléphone ?",
-							"C'est le [01 59 69 62 73]",
-							"/sounds/fr/C'est le 01 59 69 62 73.mp3"
-						],
-						[
-							"Quel est ton numéro de téléphone ?",
-							"C'est le [04 66 71 77 80]",
-							"/sounds/fr/C'est le 04 66 71 77 80.mp3"
-						],
-						[
-							"Quel est ton numéro de téléphone ?",
-							"C'est le [01 88 11 13 90]",
-							"/sounds/fr/C'est le 01 88 11 13 90.mp3"
-						]
-					],
-					"titleText": "1 Listen to the following phone numbers and type them into the space provided. "
-				}
-			},
-			{
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
-					"instructionsText": "",
+					"congratulationsText": "Je veux vous féliciter !",
+					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> '(Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
-					"phrases": [
-						"Âllo, oui ?",
-						"Bonjour Madame, c'est [combien|*bien] le 02 25 09 10 44 ?",
-						"Ah non, Monsieur, je suis [désolé|*désolée]. Il y a [un|*une] erreur ! C'est [*le|la] 02 25 09 10 47.",
-						"Oh! Excusez-moi ! Au revoir Madame !",
-						"Au revoir Monsieur !",
-						"",
-						"Âllo, oui ?",
-						"Bonjour Madame, [*c'est|ces] bien le 03 25 09 13 45 ?",
-						"Ah non, Madame, je suis [*désolée|désolées] Il y a une [horreur|*erreur] ! C'est [*le|les] 03 26  09 13  47.",
-						"Oh! Excusez-moi ! Au revoir Madame !",
-						"Au revoir Madame !"
-					],
+					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p>",
 					"audio": [
-						"sounds/fr/Âllo, oui.mp3",
-						"sounds/fr/Bonjour Madame, c'est bien le 02 25 09 10 44.mp3",
-						"sounds/fr/Ah non, Monsieur, je suis désolée. Il y a une erreur ! C'est le 02 25 09 10 47.mp3",
-						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame ! (male).mp3",
-						"sounds/fr/Au revoir Monsieur !.mp3",
-						"",
-						"sounds/fr/Âllo, oui.mp3",
-						"sounds/fr/Bonjour Madame, c'est bien le 03 25 09 13 45.mp3",
-						"sounds/fr/Ah non, Madame, je suis désolée Il y a une erreur ! C'est le 03 26 09 13 47.mp3",
-						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame !.mp3",
-						"sounds/fr/Au revoir Madame !.mp3"
+						"sounds/fr/Chacun à son goût !.mp3"
 					],
-					"titleText": "2. Select the correct word to fill in the gaps in the following conversations."
+					"titleText": "1. Chacun à son goût !"
 				}
 			},
 			{
-				"phrases1": {
+				"wordsIntoSlots1": {
 					"component": "Blanks",
-					"id": "phrases1",
-					"congratulationsText": "Excellent !",
-					"instructionsText": "Drag the words to fill in the gaps.",
+					"congratulationsText": "Well done!",
+					"id": "wordsIntoSlots1",
+					"instructionsText": "Match the French with the English",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
-					"blanksType": "phrases",
+					"blanksType": "questions-answers",
+					"questions": [
+						"Martin veut acheter un vélo.",
+						"Mes amis veulent visiter la vieille ville.",
+						"Vous voulez prendre un rendez-vous pour demain ?",
+						"Nous voulons jouer au badminton demain soir.",
+						"Ils veulent faire du shopping demain matin ?",
+						"Je veux aller au cinéma vendredi.",
+						"Tu veux habiter au centre-ville ?",
+						"Elles ne veulent pas jouer au foot aujourd'hui.",
+						"Angèle veut prendre un verre avec ses amis.",
+						"Je ne veux pas chanter dans la chorale."
+					],
+					"answers": [
+						"Martin wants to buy a bike.",
+						"My friends want to visit the old town.",
+						"Do you want to make an appointment for tomorrow?",
+						"We want to play badminton tomorrow evening.",
+						"Do they want to do some shopping tomorrow morning?",
+						"I want to go to the cinema on Friday.",
+						"Do you want to live in the town centre?",
+						"They don't want to play football today.",
+						"Angèle wants to have a drink with her friends.",
+						"I don't want to sing in the choir."
+					],
+					"soundFiles": [
+						"sounds/fr/Martin veut acheter un vélo.mp3",
+						"sounds/fr/Mes amis veulent visiter la vieille ville.mp3",
+						"sounds/fr/Vous voulez prendre un rendez-vous pour demain.mp3",
+						"sounds/fr/Nous voulons jouer au badminton demain soir.mp3",
+						"sounds/fr/Ils veulent faire du shopping demain matin.mp3",
+						"sounds/fr/Je veux aller au cinéma vendredi.mp3",
+						"sounds/fr/Tu veux habiter au centre-ville.mp3",
+						"sounds/fr/Elles ne veulent pas jouer au foot aujourd'hui.mp3",
+						"sounds/fr/Angèle veut prendre un verre avec ses amis.mp3",
+						"sounds/fr/Je ne veux pas chanter dans la chorale.mp3"
+					],
+					"titleText": "2. Match the French with the English"
+				}
+			},
+			{
+				"dropdowns3": {
+					"component": "DropDowns",
+					"id": "dropdowns3",
+					"congratulationsText": "Well done!",
+					"instructionsTextHTML": "Select <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
 					"phrases": [
-						"Âllo, oui ?",
-						"Bonjour, c'est bien le 05 24 07 19 55 ?",
-						"[Oui, c'est bien ça.]",
-						"Dominique est là, s'iI vous plaît ?",
-						"[Oui, c'est Dominique à l'appareil.]",
-						"Dominique tu veux prendre un verre avec moi ce soir ?",
-						"[Oui, je veux bien. A quelle heure ?]",
-						"À huit heures ?",
-						"[Oui, d'accord. Tu veux aller où ?]",
-						"Au nouveau café au centre-ville ?",
-						"[Oui, très bien ! J'aime beaucoup le nouveau café.]"
+						"Je vais [au|*à la|à l'|aux] bibliothèque.",
+						"Ma copine travaille [au|*à la|à l'|aux] pharmacie.",
+						"Je vais [*au|à la|à l'|aux] centre commercial.",
+						"Nous allons [au|*à la|à l'|aux] piscine.",
+						"Les enfants sont [au|à la|*à l'|aux]école.",
+						"Mon bureau se trouve [*au|à la|à l'|aux] centre-ville.",
+						"Vous allez [au|à la|*à l'|aux]exposition ?",
+						"Le professeur écrit une lettre [au|à la|à l'|*aux] étudiants.",
+						"Tu veux dîner [*au|à la|à l'|aux] restaurant ce soir ?",
+						"J'aime passer mes vacances [au|à la|à l'|*aux] pays francophones."
 					],
 					"audio": [
-						"sounds/fr/Âllo, oui (male).mp3",
-						"sounds/fr/Bonjour, c'est bien le 05 24 07 19 55.mp3",
-						"sounds/fr/Oui, c'est bien ça (male).mp3",
-						"sounds/fr/Dominique est là, s'iI vous plaît.mp3",
-						"sounds/fr/Oui, c'est Dominique à l'appareil.mp3",
-						"sounds/fr/Dominique tu veux prendre un verre avec moi ce soir.mp3",
-						"sounds/fr/Oui, je veux bien. A quelle heure (male).mp3",
-						"sounds/fr/À huit heures.mp3",
-						"sounds/fr/Oui, d'accord. Tu veux aller où.mp3",
-						"sounds/fr/Au nouveau café au centre-ville.mp3",
-						"sounds/fr/Oui, très bien ! J'aime beaucoup le nouveau café.mp3"
+						"sounds/fr/Je vais à la bibliothèque.mp3",
+						"sounds/fr/Ma copine travaille à la pharmacie.mp3",
+						"sounds/fr/Je vais au centre commercial.mp3",
+						"sounds/fr/Nous allons à la piscine.mp3",
+						"sounds/fr/Les enfants sont à l'école.mp3",
+						"sounds/fr/Mon bureau se trouve au centre-ville.mp3",
+						"sounds/fr/Vous allez à l'exposition.mp3",
+						"sounds/fr/Le professeur écrit une lettre aux étudiants.mp3",
+						"sounds/fr/Tu veux dîner au restaurant ce soir.mp3",
+						"sounds/fr/J'aime passer mes vacances aux pays francophones.mp3"
 					],
-					"titleText": "3. Select the appropriate responses in the box to answer the questions in the conversation below"
+					"titleText": "3. Select au, à la, à l' or aux as appropriate."
+				}
+			},
+			{
+				"monologues1": {
+					"component": "AnswerTable",
+					"id": "monologues1",
+					"phrases": [
+						[
+							"",
+							"Patrick, tu veux jouer au tennis aujourd'hui ?",
+							"sounds/fr/Patrick, tu veux jouer au tennis aujourd'hui.mp3"
+						],
+						[
+							"",
+							"Je ne sais pas. À quelle heure ?",
+							"sounds/fr/Je ne sais pas. À quelle heure.mp3"
+						],
+						[
+							"",
+							"À 2 heures. Ça va ?",
+							"sounds/fr/À 2 heures. Ça va.mp3"
+						],
+						[
+							"",
+							"Ah non, à 2 heures ça ne va pas ! Ce n'est pas possible !",
+							"sounds/fr/Ah non, à 2 heures ça ne va pas ! Ce n'est pas possible !.mp3"
+						],
+						[
+							"",
+							"Oh c'est dommage ! Pourquoi ? Tu as cours aujourd'hui ?",
+							"sounds/fr/Oh c'est dommage ! Pourquoi Tu as cours aujourd'hui.mp3"
+						],
+						[
+							"",
+							"Non, je n'ai pas de cours aujourd'hui, mais j'ai un rendez-vous avec mon prof à 2 heures.",
+							"sounds/fr/Non, je n'ai pas de cours aujourd'hui, mais j'ai un rendez-vous avec mon prof à 2 heures.mp3"
+						],
+						[
+							"",
+							"À 4 heures donc ?",
+							"sounds/fr/À 4 heures donc.mp3"
+						],
+						[
+							"",
+							"Ah oui, je veux bien. Je suis libre à partir de 4 heures !",
+							"sounds/fr/Ah oui, je veux bien. Je suis libre à partir de 4 heures !.mp3"
+						],
+						[
+							"",
+							"D'accord ! À plus !",
+							"sounds/fr/D'accord ! À plus !.mp3"
+						]
+					],
+					"titleText": "4. Type what you hear"
 				}
 			}
 		],

@@ -127,20 +127,20 @@
 		> .blanks {
 			> .target {
 				// min-width: 1010px;
-				table {
-					td:nth-child(3) {
-						border-width: 1px;
-						border-style: solid;
-						border-color: transparent;
-						max-width: 0;
-						padding: 0;
-						overflow-x: hidden;
-						pointer-events: none;
-						transition:
-							max-width 6s 1s,
-							border-color 1s 1s;
-					}
-				}
+				// table {
+				// 	td:nth-child(3) {
+				// 		border-width: 1px;
+				// 		border-style: solid;
+				// 		border-color: transparent;
+				// 		max-width: 0;
+				// 		padding: 0;
+				// 		overflow-x: hidden;
+				// 		pointer-events: none;
+				// 		transition:
+				// 			max-width 6s 1s,
+				// 			border-color 1s 1s;
+				// 	}
+				// }
 			}
 		}
 		.words-container {
