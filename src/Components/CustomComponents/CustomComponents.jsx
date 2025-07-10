@@ -4,10 +4,10 @@ import {
 	AudioClip,
 	Figure,
 } from '../../Components';
+import { PureComponent } from 'react';
 import {
 	resolveAsset,
 } from '../../utility';
-import { PureComponent } from 'react';
 
 // This was intended as a way to allow custom content to be included in a config.json file.
 // However, it's hard to work with a single line of HTML (as used in the Explanation component) and although I've used it elsewhere too, dangerouslySetInnerHTML
@@ -19,6 +19,66 @@ import { PureComponent } from 'react';
 // 	"titleText": "Grammar / Use of Language"
 // },
 
+export class LO1Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent1`}
+				>
+					<p><a className='special-anchor-target' name='madame' />1 In French there is no equivalent to the English Ms.
+						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip>&nbsp;
+						regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+						for a teenage girl.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>Abbreviations:</td>
+								<td>Monsieur - <b>M</b>.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Madame - <b>Mme</b>.</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Mademoiselle - <b>Mlle</b>.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel2` : ''}`}
+					key={`${id}CustomComponent2`}
+				>
+					<p><a className='special-anchor-target' name='tuvous'>2
+						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip>* and
+						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>*
+						both mean 'you'.</a></p>
+					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
+						a classmate or a child etc. <a className='special-anchor-target' name='toi' />When returning question i.e. when you ask 'and you?' you use the
+						form&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip> instead of&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu:</b></AudioClip>&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle Michel et toi.mp3`}><b>Je m'appelle Michel et toi ?</b></AudioClip></p>
+					<p>You use <AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip> when addressing an adult that you don't know e.g.
+						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
+						a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person
+							whatever your relationship to them.</p>
+				</div>
+			</div>
+		);
+	};
+}
 export class LO8Grammar extends PureComponent {
 	render() {
 		const { id } = this.props;
@@ -159,7 +219,7 @@ export class L10Grammar extends PureComponent {
 		const { id } = this.props;
 		return (
 			<div
-				className={`lo9-grammar-container explanation-container container`}
+				className={`lo10-grammar-container explanation-container container`}
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>

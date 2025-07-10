@@ -670,7 +670,7 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
-									{/* <AccordionArticle
+									<AccordionArticle
 										id={`scratchAccordion1`}
 										title={`Scratch 1`}
 									>
@@ -686,24 +686,9 @@ export default class App extends React.Component {
 												<div>super-compact: <AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
 												<div>default: <AudioClip className={``} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
 
-												<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p>
-												<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed:  cinq, six, sept, huit, neuf, dix. (Sound files)</p>
-												<p>However, <b>NB</b>, when&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/six.mp3`} ><b>six</b></AudioClip>,&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/huit.mp3`} ><b>huit</b></AudioClip> or&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/dix.mp3`} ><b>dix</b></AudioClip> are followed by a word starting with a consonant, the final consonant of the number is <b>not</b> pronounced.</p>
-												<p>e.g.&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/six villages.mp3`} ><b>six villages</b></AudioClip>,&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/huit villes.mp3`} ><b>huit villes</b></AudioClip>,&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/dix pays.mp3`} ><b>dix pays</b></AudioClip></p>
-												<p>The last consonant of the number is pronounced as might be anticipated if the word following the number begins with a vowel.</p>
-												<p>e.g.&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/six enfants.mp3`} ><b>six enfants</b></AudioClip>,&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/huit étudiants.mp3`} ><b>huit étudiants</b></AudioClip>,&nbsp;
-													<AudioClip className={`link`} soundFile={`/sounds/fr/dix élèves.mp3`} ><b>dix élèves</b></AudioClip></p>
 											</div>
 										</div>
-									</AccordionArticle> */}
+									</AccordionArticle>
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle

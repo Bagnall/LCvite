@@ -51,10 +51,6 @@ audio.super-compact {
 	}
 }
 
-.audio-ring {
-	// textAlign: center;
-}
-
 div.audio-container {
 	background-color: #f1f3f4;
 	z-index: 1;
@@ -66,11 +62,6 @@ div.audio-container {
 	width: var(--compact-dimension);
 	height: var(--compact-dimension);
 	border-radius: calc(var(--compact-dimension) / 2);
-	background-image: url("speaker.svg");
-	background-size: calc(var(--compact-dimension) * 3 / 5);
-	background-position: 2px 2px;
-	background-repeat: no-repeat;
-	background-color: red; //transparent;
 	cursor: pointer;
 	&:hover {
 		background-color: #e5e7e8;
@@ -81,24 +72,32 @@ div.audio-container {
 		width: 0;
 		height: 0;
 	}
+	&::before {
+		// Arrow icon constructed from a border segment. Smart huh?
+		@include mixins.standard-pseudo();
+		width: 0;
+		height: 0;
+		border-width: 7.9px 10px;
+		border-color: transparent transparent transparent black;
+		border-style: solid;
+		top: 5.1px;
+		left: 10px;
+	}
 	&.playing {
-		background-image: none;
+		// Pause icon (2 vertical bars)
+		&::before,
 		&::after {
 			width: 4px;
 			height: 14px;
 			top: 6px;
-			left: 8px;
 			background-color: black;
-			border-width: 0;
+		}
+		&::after {
+			left: 8px;
 		}
 		&::before {
-			@include mixins.standard-pseudo();
-			width: 4px;
-			height: 14px;
-			top: 6px;
 			left: 15px;
-			background-color: black;
-			border-width: 0;
+			border-width: 0; // Undo the arrow border thickness
 		}
 	}
 	svg {
