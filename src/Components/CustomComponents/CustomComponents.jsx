@@ -60,8 +60,8 @@ export class LO1Grammar extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}CustomComponent2`}
 				>
-					<p><a className='special-anchor-target' name='tuvous'>2
-						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip>* and
+					<p><a className='special-anchor-target' name='tuvous'>2&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip>* and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>*
 						both mean 'you'.</a></p>
 					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
@@ -74,6 +74,121 @@ export class LO1Grammar extends PureComponent {
 						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
 						a health professional, a legal advisor, an acquaintance of your parents etc.</p><p><b>Vous</b> is used when addressing more than one person
 							whatever your relationship to them.</p>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO1Demystify extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-demystify-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<h1 style={{ textAlign: 'left' }}>How to pronounce:</h1>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+					<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel2` : ''}`}
+					key={`${id}Panel2`}
+				>
+					<p>2 The letter <b>r</b>  <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+					<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way.
+						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
+						It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement,
+						the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration.
+						You will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjou<b>r</b></AudioClip>,
+					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,
+					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel3` : ''}`}
+					key={`${id}Panel3`}
+				>
+					<p>3 The diphthong (vowel combination) oi in French. <AudioClip soundFile={`sounds/fr/non-existant.mp3`}/> WE NEED A SOUND FILE FOR THIS</p>
+					<p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,
+						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,
+						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
+					</p>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel4` : ''}`}
+					key={`${id}Panel4`}
+				>
+					<p>4 <b>The letter h</b> <img src={resolveAsset('images/shh.jpg')} style={{ verticalAlign: 'middle' }} alt="lady with finger to lips. Shh" title="lady with finger to lips. Shh"/>
+					</p>
+					<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
+						<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
+						<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >
+						<b>h</b>orizon</AudioClip>.</p>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO3Demystify extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo3-demystify-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p><b>To sound or not to sound?</b></p>
+					<ol>
+						<li><p>The third person verb ending <b>ent</b> is never pronounced. <img src={resolveAsset('/images/shh.jpg')} style={{ verticalAlign: 'middle' }} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
+							e.g.
+							<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip></p>
+						</li>
+						<li>
+							<p>Usually, the consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
+								However, these are sounded when the next word begins with a vowel or mute h. This is known as making a liaison. </p>
+							<p>Compare these:&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/les professeurs.mp3`}>les professeurs</AudioClip> /&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/les étudiants.mp3`}>le<b>s é</b>tudiants</AudioClip> –&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/il est français.mp3`}>il est français</AudioClip> /&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/il est anglais.mp3`}>il es<b>t a</b>nglais</AudioClip> -&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/un grand poète.mp3`}>un grand poète</AudioClip> /&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/un grand homme.mp3`}>un gran<b>d ho</b>mme</AudioClip></p>
+						</li>
+						<li>
+							<p>The sound : <b>'eh'</b></p>
+							<p>Listen to the following:
+								<AudioClip className={`link`} soundFile={`sounds/fr/vous parlez.mp3`}>vous parl<b>ez</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/il est américain.mp3`}>il <b>est</b> am<b>é</b>ricain</AudioClip> <b>et</b>&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/je suis ghanéenne.mp3`}>je suis ghan<b>é</b>enne</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/elle est mariée.mp3`}>elle <b>est</b> mari<b>ée</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/nous sommes fiancés.mp3`}>nous sommes fianc<b>és</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/elles sont fatiguées.mp3`}>elles sont fatigu<b>ées</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/écouter.mp3`}><b>é</b>cout<b>er</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/regarder.mp3`}>regard<b>er</b></AudioClip></p><p>You will notice that&nbsp;
+								<b>-et</b>, <b>-ez</b>, <b>é</b>, <b>-ée</b>, <b>-és</b>, <b>-ées</b> and  also <b>-er</b> as an infinitive ending are
+							all pronounced the same, as are  the words <b>est</b> and <b>es</b>.
+							</p>
+						</li>
+					</ol>
 				</div>
 			</div>
 		);

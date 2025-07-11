@@ -262,16 +262,9 @@
 		"id": "LO1Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"explanation2": {
-		"component": "Explanation",
-		"content": [
-			"<h2>How to pronounce:</h2><p>1 <b>-on</b> / <b>om</b> <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
-			"<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words <span class='audio-link' sound-file='/sounds/fr/Bonjour.mp3'>bonjour</span> and <span class='audio-link' sound-file='/sounds/fr/Bonsoir.mp3'>bonsoir</span>.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>",
-			"<p>2 The letter <b>r</b>  <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p>",
-			"<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way. It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish. It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement, the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration. You will have encountered this sound in the words <span class='audio-link' sound-file='/sounds/fr/Bonjour.mp3'>bonjou<b>r</b></span>, <span class='audio-link' sound-file='/sounds/fr/Bonsoir.mp3'>bonsoi<b>r</b></span>, <span class='audio-link' sound-file='/sounds/fr/Au revoir.mp3'>au <b>r</b>evoi<b>r</b></span>.</p>",
-			"<p>3 The diphthong (vowel combination) oi in French. <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS</p><p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   <span class='audio-link' sound-file='/sounds/fr/moi.mp3'/>m<b>oi</b></span>, <span class='audio-link' sound-file='/sounds/fr/toi.mp3'/>t<b>oi</b></span>, <span class='audio-link' sound-file='/sounds/fr/Au revoir.mp3'/>au rev<b>oi</b>r</span></p><p>4 <b>The letter h</b>  <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/></p><p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <span class='audio-link' sound-file='/sounds/fr/homme.mp3'/><b>h</b>omme</span>, <span class='audio-link' sound-file='/sounds/fr/horrible.mp3'/><b>h</b>orrible</span>, <span class='audio-link' sound-file='/sounds/fr/horizon.mp3'/><b>h</b>orizon</span>.</p>"
-		],
-		"id": "explanation2",
+	"customComponent2": {
+		"component": "LO1Demystify",
+		"id": "LO1Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {

@@ -8,3 +8,6 @@
 .custom-content {
 	@include mixins.standard-table();
 }
+.lo1-demystify-container {
+	align-items: flex-start;
+}
