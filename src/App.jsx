@@ -80,12 +80,13 @@ export default class App extends React.Component {
 		const configFile = urlParams.get('config');
 
 		let configPromise;
-		if (configFile) configPromise = this.loadConfig(`./src/${configFile}`);
-		this.loadIndex();
-		this.initialiseSpecialAnchors();
+		if (configFile) {
+			configPromise = this.loadConfig(`./src/${configFile}`);
+			this.loadIndex();
+			this.initialiseSpecialAnchors();
 
-		configPromise.then(this.initialiseSynth);
-
+			configPromise.then(this.initialiseSynth);
+		}
 	};
 
 	componentDidUpdate = () => {

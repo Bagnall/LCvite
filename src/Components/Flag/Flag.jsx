@@ -128,7 +128,7 @@ export class Flag extends PureComponent {
 						this.frameIndex++;
 					}
 					if (this.frameIndex === this.totalFrames) {
-						this.usingCachedFrames = true;
+						this.usingCachedFrames = false; // true; for now to test on phones.
 					}
 				} else {
 					const currentFrame = Math.floor(this.time % this.totalFrames);
