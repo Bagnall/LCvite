@@ -194,6 +194,139 @@ export class LO3Demystify extends PureComponent {
 		);
 	};
 }
+
+export class LO6Grammar extends PureComponent {
+	render() {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo6-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<p>In French, the gender of the noun has implications for the <b>possessive adjectives</b>. There are two ways of saying 'my' for singular nouns in French: <b>mon</b> for masculine nouns e.g. <b>mon</b> frère (my brother), <b>mon</b> jardin (my garden) and <b>ma</b> for feminine nouns e.g. <b>ma</b> femme (my wife), <b>ma</b> maison (my house). It is important to remember that the gender of the noun itself is what matters here, and not the gender of the 'owner'.  There is only one way of saying 'my' for plural nouns: e.g. <b>mes</b> oncles (my uncles), <b>mes</b> tantes (my aunts).<br />Here is a complete list of the possessive adjectives.</p><table><tbody><tr><td>mon, ma, mes</td>
+						<td>my</td>
+					</tr>
+					<tr><td>ton, ta, tes</td>
+						<td>your (sing)</td>
+					</tr>
+					<tr><td>son, sa, ses *</td>
+						<td>his  / her</td>
+					</tr>
+					<tr><td>notre (sing), nos (pl)</td>
+						<td>our</td>
+					</tr>
+					<tr><td>votre (sing), vos (pl)</td>
+						<td>your (formal, pl)</td>
+					</tr>
+					<tr><td>leur (sing), leurs (pl)</td>
+						<td>their</td>
+					</tr></tbody></table><p className='footnote'>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
+					<p><b>2 Verbs in French continued</b></p><p><b>Avoir</b> is one of the many irregular verbs in French. It means <b>to have</b>.
+						e.g. J'ai une soeur.</p><p>It occurs very frequently and so is worth memorising if possible.</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Avoir</th>
+								<th>to have</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><AudioClip className={`link`} soundFile={`sounds/fr/j'ai.mp3`}>j'ai</AudioClip></td>
+								<td>I have</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/tu as.mp3`}>tu as</AudioClip></td>
+								<td>you have</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/il a.mp3`}>il a</AudioClip></td>
+								<td>he has, it has</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/elle a.mp3`}>elle a</AudioClip></td>
+								<td>she has, it has</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous avons.mp3`}>nous avons</AudioClip></td>
+								<td>we have</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous avez.mp3`}>vous avez</AudioClip></td>
+								<td>you have</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils ont.mp3`}>ils ont</AudioClip></td>
+								<td>they have</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/elles ont.mp3`}>elles ont</AudioClip></td>
+								<td>they have</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>The verb <b>avoir</b> occurs in some expressions when in English the
+						verb <b>to be</b> or sometimes <b>to feel</b> would be used. Here are some of these expressions:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td><b>avoir … ans</b></td>
+								<td>to be … years old</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai 25 ans.mp3`}><b>J'ai 25 ans.</b></AudioClip></td>
+								<td>I'm 25 years old.</td>
+							</tr>
+							<tr><td><b>avoir soif </b></td>
+								<td>to be thirsty</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai soif.mp3`}><b>J'ai soif. </b></AudioClip></td>
+								<td>I'm thirsty.</td>
+							</tr>
+							<tr><td><b>avoir faim </b></td>
+								<td>to be hungry</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Elle a faim.mp3`}><b>Elle a faim.</b></AudioClip></td>
+								<td>She's hungry.</td>
+							</tr>
+							<tr><td><b>avoir peur </b></td>
+								<td>to be frightened</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Il a peur.mp3`}><b>Il a peur.</b></AudioClip></td>
+								<td>He's frightened.</td>
+							</tr>
+							<tr><td><b>avoir froid</b></td>
+								<td>to be / feel cold</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Tu as froid.mp3`}><b>Tu as froid ?</b></AudioClip></td>
+								<td>Are you / do you feel cold?</td>
+							</tr>
+							<tr><td><b>avoir chaud</b></td>
+								<td>to be / feel hot</td>
+								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Vous avez chaud.mp3`}><b>Vous avez chaud ?</b></AudioClip></td>
+								<td>Are you hot / do you feel hot?</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		);
+	}
+}
+
+export class LO6Demystify extends PureComponent {
+	render() {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo6-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+				</div>
+			</div>
+		);
+	}
+}
+
 export class LO8Grammar extends PureComponent {
 	render() {
 		const { id } = this.props;
@@ -298,12 +431,21 @@ export class LO9Grammar extends PureComponent {
 							<table>
 								<tbody>
 									<tr>
-										<td>Île-de-France</td><td>01</td>
+										<td>Île-de-France</td>
+										<td>01</td>
 									</tr>
-									<tr><td>Northwest France</td><td>02</td></tr>
-									<tr><td>Northeast France</td><td>03</td></tr>
-									<tr><td>Southeast France</td><td>04</td></tr>
-									<tr><td>Southwest France</td><td>05</td></tr>
+									<tr><td>Northwest France</td>
+										<td>02</td>
+									</tr>
+									<tr><td>Northeast France</td>
+										<td>03</td>
+									</tr>
+									<tr><td>Southeast France</td>
+										<td>04</td>
+									</tr>
+									<tr><td>Southwest France</td>
+										<td>05</td>
+									</tr>
 								</tbody>
 							</table>
 
@@ -314,11 +456,20 @@ export class LO9Grammar extends PureComponent {
 							<p>Bien is usually translated as 'well' or 'good'. However, here's an exception: It can sometimes be translated as 'isn't it', 'aren't you' etc or 'indeed' to verify something, as in the following examples:</p>
 							<table>
 								<tbody>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></td><td>This is 06 22 14 66 33, isn't it?</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td><td>That's right / It is indeed.</td></tr>
-									<tr className='spacer'><td colSpan="2"></td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></td><td>You are Mme Galipot aren't you?</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td><td>That's right / I am indeed.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></td>
+										<td>This is 06 22 14 66 33, isn't it?</td>
+									</tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td>
+										<td>That's right / It is indeed.</td>
+									</tr>
+									<tr className='spacer'><td colSpan="2"></td>
+									</tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></td>
+										<td>You are Mme Galipot aren't you?</td>
+									</tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td>
+										<td>That's right / I am indeed.</td>
+									</tr>
 								</tbody>
 							</table>
 						</li>
