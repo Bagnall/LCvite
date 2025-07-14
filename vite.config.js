@@ -40,6 +40,10 @@ export default defineConfig(({ command }) => ({
 					src: 'src/config*.json' // path to your file
 				},
 				{
+					dest: './src', // destination inside dist/
+					src: 'src/index.json' // path to your file
+				},
+				{
 					dest: '/sounds',
 					src: './public/sounds'
 				},
