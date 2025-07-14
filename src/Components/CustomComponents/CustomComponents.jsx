@@ -141,6 +141,174 @@ export class LO1Demystify extends PureComponent {
 	};
 }
 
+export class LO2Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo2-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p><b>1. Verbs in French</b></p>
+					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p>
+					<p><b>Être</b> to be</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>je suis</td>
+								<td>I am</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/je suis.mp3`} /></td>
+							</tr>
+							<tr>
+								<td>tu* es</td>
+								<td>you are</td>
+								<td><AudioClip className='compact' soundFile={`sounds/fr/tu es.mp3`} /></td>
+							</tr>
+							<tr>
+								<td><a href='./?config=config-fr-2.json#subject-pronouns'>il</a> est</td>
+								<td>he is, it is </td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></td>
+							</tr>
+							<tr>
+								<td><a href='./?config=config-fr-2.json#subject-pronouns'>elle</a> est</td>
+								<td>she is, it is</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elle est.mp3`} /></td>
+							</tr>
+							<tr>
+								<td>nous sommes</td>
+								<td>we are</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/nous sommes.mp3`} /></td>
+							</tr>
+							<tr>
+								<td>vous* êtes</td>
+								<td>you are</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></td>
+							</tr>
+							<tr>
+								<td><a href='./?config=config-fr-2.json#subject-pronouns'>ils</a> sont</td>
+								<td>they are</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/ils sont.mp3`} /></td>
+							</tr>
+							<tr>
+								<td><a href='./?config=config-fr-2.json#subject-pronouns'>elles</a> sont</td>
+								<td>they are</td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elles sont.mp3`} /></td>
+							</tr>
+						</tbody>
+					</table>
+					<hr />
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel2` : ''}`}
+					key={`${id}Panel2`}
+				>
+					<p><b>2. Linguistic genders</b> ( I think this lends itself to illustration/pic ?)</p>
+					<p>All French nouns have gender, not just people or animals but inanimate objects too.
+						There are just two genders in French called masculine and feminine.
+						This simply means that all nouns belong in one category or the other.
+						Males e.g. father, uncle etc are masculine nouns and females e.g. mother, aunt etc are feminine nouns.
+						Other nouns have intrinsic gender. This is not related to their owner, characteristics, manufacturer etc.
+						It is possible to identify the gender of some nouns by their endings. (A list of these endings to be added/ linked)</p>
+					<p>The gender of the noun has implications for some grammatical features. e.g.</p>
+					<p>a. The indefinite article:</p>
+					<p>There are two ways of saying 'a' in French:&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> for masculine nouns e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> homme (a man),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> métier (a profession/occupation) and&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> for a feminine noun e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> femme (a woman),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> profession (a profession).</p>
+					<p>b. The definite article:</p>
+					<p>For singular nouns, to say 'the' you use&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> for masculine nouns e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> professeur (the [male] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> jour (the day). For feminine nouns you say&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> professeure (the [female] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> nuit (the night).
+						When the singular noun begins with a vowel or mute h, then you use <b>l'</b> regardless of gender e.g.&nbsp;
+						<b>l'</b>appartement (m) (the flat),  <b>l'</b>école (f) (the school), <b>l'</b>homme (the man).</p>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel3` : ''}`}
+					key={`${id}Panel3`}
+				>
+					<p><a name='subject-pronouns' /><b>3. Subject pronouns</b></p>
+					<ul>
+						<li><b>Il</b> is used to replace a masculine noun.</li>
+						<li><b>Elle</b> is used to replace a feminine noun.</li>
+						<li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li>
+						<li><b>Elles</b> is used to replace more than one feminine noun.</li>
+					</ul>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO2Demystify extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo2-demystify-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p>1 Silent letters at the end of a word&nbsp;
+						<img src={resolveAsset(`images/shh.jpg`)} className={`lo2-demystify-shh`} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' /></p>
+					<p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
+						Listen to the following examples.</p>
+					<p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/grand.mp3`} alt={`grand`}>gran<b>d</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/rond.mp3`} alt={`rond`}>ron<b>d</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/long.mp3`} alt={`long`}>lon<b>g</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/trop.mp3`} alt={`trop`}>tro<b>p</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/depuis.mp3`} alt={`depuis`}>depui<b>s</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/pas.mp3`} alt={`pas`}>pa<b>s</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/petit.mp3`} alt={`petit`}>peti<b>t</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Salut.mp3`} alt={`salut`}>salu<b>t</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/gâteaux.mp3`} alt={`gâteaux`}>gâteau<b>x</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/appelez.mp3`} alt={`appelez`}>appele<b>z</b></AudioClip></p>
+					<p>The letter <b>e</b> is not pronounced at the end of a word:</p>
+					<p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle.mp3`} alt={`Je m'appelle`}>Je m'appell<b>e</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/bibliothécaire.mp3`} alt={`bibliothécaire`}>bibliothécair<b>e</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/célibataire.mp3`} alt={`célibataire`}>célibatair<b>e</b></AudioClip></p>
+					<p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p>
+					<p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/ce.mp3`}>ce</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}>de</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/je.mp3`}>je</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}>le</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/me.mp3`}>me</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/ne.mp3`}>ne</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/se.mp3`}>se</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/te.mp3`}>te</AudioClip></p><hr /><p>2 <b>Th</b></p>&nbsp;
+					<p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g.
+						<AudioClip className={`link`} soundFile={`sounds/fr/Thomas.mp3`} alt={`Thomas`}><b>Thomas</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/thé.mp3`} alt={`thé`}><b>thé</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/théologie.mp3`} alt={`théologie`}><b>théologie</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/maths.mp3`} alt={`maths`}><b>maths</b></AudioClip></p>
+				</div>
+			</div>
+		);
+	};
+};
+
 export class LO3Demystify extends PureComponent {
 	render = () => {
 		const { id } = this.props;
@@ -436,7 +604,6 @@ export class LO6Demystify extends PureComponent {
 		);
 	}
 }
-
 
 export class LO7Grammar extends PureComponent {
 	render() {

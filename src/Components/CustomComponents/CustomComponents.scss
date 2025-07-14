@@ -8,6 +8,11 @@
 .custom-content {
 	@include mixins.standard-table();
 }
-.lo1-demystify-container {
+#LO1Demystify {
 	align-items: flex-start;
+}
+#LO2Demystify {
+	img.lo2-demystify-shh {
+		vertical-align: middle;
+	}
 }
