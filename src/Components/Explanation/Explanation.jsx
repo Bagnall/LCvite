@@ -11,7 +11,7 @@ export class Explanation extends React.PureComponent {
 	// However, it's hard to work with a single line of HTML and although I've used it elsewhere too, dangerouslySetInnerHTML
 	// is not a recommended practise. So as an alternative, I created CustomComponents where a custom component can be made as a more
 	// readable JSX content with images and individual styling, it can still be accessed by using a config.json tag such as:
-	// "explanation1": {
+	// "customComponent1": {
 	// 	"component": "LO9Grammar", // There must be a CustomComponet with this name present. "LO9" is the learning object, "Grammar" aludes to the section within the page.
 	// 	"id": "LO9Grammar", // Good practise to have the ID match the component name
 	// 	"titleText": "Grammar / Use of Language"

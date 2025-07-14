@@ -200,17 +200,14 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"explanation1": {
+	"customComponet1": {
 		"component": "LO9Grammar",
 		"id": "LO9Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"explanation2": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p><p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed:  cinq, six, sept, huit, neuf, dix.</p><p>However, <b>NB</b>, when&nbsp;<span class='audio-link' sound-file='/sounds/fr/six.mp3' title='Click to play sound' setup='true'><b>six</b></span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/huit.mp3' title='Click to play sound' setup='true'><b>huit</b></span> or&nbsp;<span class='audio-link' sound-file='/sounds/fr/dix.mp3' title='Click to play sound' setup='true'><b>dix</b></span> are followed by a word starting with a consonant, the final consonant of the number is <b>not</b> pronounced.</p><p>e.g.&nbsp;<span class='audio-link' sound-file='/sounds/fr/six villages.mp3' title='Click to play sound' setup='true'><b>six villages</b></span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/huit villes.mp3' title='Click to play sound' setup='true'><b>huit villes</b></span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/dix pays.mp3' title='Click to play sound' setup='true'><b>dix pays</b></span></p><p>The last consonant of the number is pronounced as might be anticipated if the word following the number begins with a vowel.</p><p>e.g.&nbsp;<span class='audio-link' sound-file='/sounds/fr/six enfants.mp3' title='Click to play sound' setup='true'><b>six enfants</b></span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/huit étudiants.mp3' title='Click to play sound' setup='true'><b>huit étudiants</b></span>,&nbsp;<span class='audio-link' sound-file='/sounds/fr/dix élèves.mp3' title='Click to play sound' setup='true'><b>dix élèves</b></span></p>"
-		],
-		"id": "explanation2",
+	"customComponet2": {
+		"component": "LO9Demystify",
+		"id": "LO9Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {

@@ -597,6 +597,34 @@ export class LO8Grammar extends PureComponent {
 		);
 	}
 }
+export class LO8Demystify extends PureComponent {
+	render() {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo8-demystify-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p>
+					<p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/le cricket.mp3`}>le cricket</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le tennis.mp3`}>le tennis</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le foot.mp3`}>le foot</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le shopping.mp3`}>le shopping</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le bowling.mp3`}>le bowling</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le week-end.mp3`}>le week-end</AudioClip></p>
+					<p>(despite what you will have learnt previously, the final consonant is sounded here)</p>
+				</div>
+			</div>
+		);
+	}
+}
 
 export class LO9Grammar extends PureComponent {
 	render() {
@@ -670,6 +698,43 @@ export class LO9Grammar extends PureComponent {
 							</table>
 						</li>
 					</ol>
+				</div>
+			</div>
+		);
+	}
+}
+
+export class LO9Demystify extends PureComponent {
+	render() {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo9-demystify-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p>
+					<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed: cinq, six, sept, huit, neuf, dix.</p>
+					<p>However, <b>NB</b>, when&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/six.mp3`}><b>six</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/huit.mp3`}><b>huit</b></AudioClip> or&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/dix.mp3`}><b>dix</b></AudioClip> are followed by a word starting with a consonant,
+						the final consonant of the number is <b>not</b> pronounced.</p>
+					<p>e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/six villages.mp3`}><b>six villages</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/huit villes.mp3`}><b>huit villes</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/dix pays.mp3`}><b>dix pays</b></AudioClip></p>
+					<p>The last consonant of the number is pronounced as might be anticipated if the word following the number begins with a vowel.</p>
+					<p>e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/six enfants.mp3`}><b>six enfants</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/huit étudiants.mp3`}><b>huit étudiants</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/dix élèves.mp3`}><b>dix élèves</b></AudioClip>
+					</p>
 				</div>
 			</div>
 		);

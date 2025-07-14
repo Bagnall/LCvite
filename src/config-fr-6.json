@@ -237,12 +237,12 @@
 	},
 	"customComponent1": {
 		"component": "LO6Grammar",
-		"id": "explanation1",
+		"id": "LO6Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
 	"customComponent2": {
 		"component": "LO6Demystify",
-		"id": "customComponent2",
+		"id": "LO6Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {

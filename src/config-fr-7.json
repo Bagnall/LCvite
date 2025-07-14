@@ -298,15 +298,12 @@
 	},
 	"customComponent1": {
 		"component": "LO7Grammar",
-		"id": "customComponent1",
+		"id": "LO7Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
 	"customComponent2": {
 		"component": "LO7Demystify",
-		"content": [
-			"<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p><p><span class='audio-link' sound-file='/sounds/fr/le cricket.mp3'>le cricket</span>, <span class='audio-link' sound-file='/sounds/fr/le tennis.mp3'>le tennis</span>, <span class='audio-link' sound-file='/sounds/fr/le foot.mp3'>le foot</span>, <span class='audio-link' sound-file='/sounds/fr/le shopping.mp3'>le shopping</span>, <span class='audio-link' sound-file='/sounds/fr/le bowling.mp3'>le bowling</span>, <span class='audio-link' sound-file='/sounds/fr/le week-end.mp3'>le week-end</span></p><p>(despite what you will have learnt previously, the final consonant is sounded here)</p>"
-		],
-		"id": "customComponent2",
+		"id": "LO7Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {

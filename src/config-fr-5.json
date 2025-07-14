@@ -192,12 +192,12 @@
 	},
 	"customeComponent1": {
 		"component": "LO5Grammar",
-		"id": "customComponent1",
+		"id": "LO5Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {
 		"component": "LO5Demystify",
-		"id": "customComponent2",
+		"id": "LO5Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group": {
