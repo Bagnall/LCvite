@@ -192,15 +192,12 @@
 	},
 	"customeComponent1": {
 		"component": "LO5Grammar",
-		"id": "customeComponent1",
+		"id": "customComponent1",
 		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>How to pronounce:</b></p><p>the third of the nasal vowels, <b>[an]</b> which is how the letters an, am, en and em are pronounced.  Listen to the following examples:</p><p><span class='audio-link' sound-file='/sounds/fr/blanc.mp3' alt='blanc'>blanc</span> <span class='audio-link' sound-file='/sounds/fr/chambre.mp3' alt='chambre'>chambre</span> <span class='audio-link' sound-file='/sounds/fr/dans.mp3' alt='dans'>dans</span> <span class='audio-link' sound-file='/sounds/fr/enfant.mp3' alt='enfant'>enfant</span> <span class='audio-link' sound-file='/sounds/fr/ensemble.mp3' alt='ensemble'>ensemble</span> <span class='audio-link' sound-file='/sounds/fr/centre.mp3' alt='centre'>centre</span></p>"
-		],
-		"id": "explanation2",
+		"component": "LO5Demystify",
+		"id": "customComponent2",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group": {

@@ -240,12 +240,9 @@
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
 	},
-	"explanation2": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>How to pronounce double l in French:</b></p><p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.</p><p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <b>double l</b> is pronounced <b>l</b> (sound file please). e.g.  <span class='audio-link' sound-file='/sounds/fr/une balle.mp3'><b>une balle</b></span> (a ball), <span class='audio-link' sound-file='/sounds/fr/Elle est belle.mp3'><b>Elle est belle</b></span>. (She is beautiful.) <span class='audio-link' sound-file='/sounds/fr/Elle est folle.mp3'><b>Elle est folle</b></span>. (She is crazy.) <span class='audio-link' sound-file='/sounds/fr/une bulle.mp3'><b>une bulle</b></span> (a bubble). There are no exceptions here!</p><p>2i  after the vowel <b>I</b>, <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g. <span class='audio-link' sound-file='/sounds/fr/une fille.mp3'><b>une fille</b></span>, <span class='audio-link' sound-file='/sounds/fr/une famille.mp3'><b>une famille</b></span>, <span class='audio-link' sound-file='/sounds/fr/un billet.mp3'><b>un billet</b></span> (a ticket)</p><p>2ii if the vowel i is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g. <span class='audio-link' sound-file='/sounds/fr/une bouteille.mp3'><b>une bouteille</b></span> (a bottle), <span class='audio-link' sound-file='/sounds/fr/une feuille.mp3'><b>une feuille</b></span> (a leaf).</p><p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <i><b>i</b></i>.  The most common are :  <span class='audio-link' sound-file='/sounds/fr/la ville.mp3'><b>la ville</b></span>, <span class='audio-link' sound-file='/sounds/fr/le village.mp3'><b>le village</b></span>, <span class='audio-link' sound-file='/sounds/fr/la villa.mp3'><b>la villa</b></span>, <span class='audio-link' sound-file='/sounds/fr/mille.mp3'><b>mille</b></span> (a thousand), <span class='audio-link' sound-file='/sounds/fr/un million.mp3'><b>un million</b></span> (a million), <span class='audio-link' sound-file='/sounds/fr/un milliard.mp3'><b>un milliard</b></span> (a billion), <span class='audio-link' sound-file='/sounds/fr/tranquille.mp3'><b>tranquille</b></span> (quiet), <span class='audio-link' sound-file='/sounds/fr/Lille.mp3'><b>Lille</b></span>, <span class='audio-link' sound-file='/sounds/fr/Gilles.mp3'><b>Gilles</b></span>. The best thing to do is to learn these off by heart.</p>"
-		],
-		"id": "explanation2",
+	"customComponent2": {
+		"component": "LO6Demystify",
+		"id": "customComponent2",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group1": {
