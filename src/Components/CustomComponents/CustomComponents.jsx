@@ -309,6 +309,167 @@ export class LO2Demystify extends PureComponent {
 	};
 };
 
+export class LO3Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo3-grammar-container container explanation-container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p><b>1. A bit about verbs in French:</b></p>
+					<p>There are three groups of regular verbs in French. The biggest of these is called the -er group, simply because the infinitive ends with the letters -er. Parler (to speak), habiter (to live), chanter (to sing), danser (to dance) are examples of - er verbs.</p>
+					<p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking'
+						depending on the context.</p>
+					<table>
+						<thead>
+							<tr>
+								<th>
+									<AudioClip className={`link`} soundFile={`sounds/fr/parler.mp3`}>parler</AudioClip></th>
+								<th>to speak</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/je parle.mp3`}>je parle</AudioClip></td>
+								<td>I speak / am speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/tu parles.mp3`}>tu parles</AudioClip></td>
+								<td>you speak / are speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/il parle.mp3`}>il parle</AudioClip></td>
+								<td>he / it speaks / is speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elle parle.mp3`}>elle parle</AudioClip></td>
+								<td>she / it speaks / is speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/nous parlons.mp3`}>nous parlons</AudioClip></td>
+								<td>we speak / are speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/vous parlez.mp3`}>vous parlez</AudioClip></td>
+								<td>you speak / are speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>ils parlent</AudioClip></td>
+								<td>they speak / are speaking</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elles parlent.mp3`}>elles parlent</AudioClip></td>
+								<td>they speak / are speaking</td>
+							</tr>
+						</tbody>
+					</table><p>venir is a common irregular verb.</p>
+					<p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/venir de.mp3`}>venir de</AudioClip> to come from</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/je viens.mp3`}>je viens</AudioClip> (de Marseille)</td>
+								<td>I come (from Marseille)...</td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/tu viens.mp3`}>tu viens</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/il vient.mp3`}>il vient</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elle vient.mp3`}>elle vient</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/nous venons.mp3`}>nous venons</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/vous venez.mp3`}>vous venez</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/ils viennent.mp3`}>ils viennent</AudioClip></td>
+							</tr>
+							<tr>
+								<td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elles viennent.mp3`}>elles viennent</AudioClip></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel2` : ''}`}
+					key={`${id}Panel2`}
+				>
+					<p><b>2 De</b></p>
+					<p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p>
+					<p>Je viens <span style={{color: "red"}}><b>de</b></span> Paris (for towns, cities, villages)</p>
+					<p>Je viens <span style={{color: "green"}}><b>de</b></span> Belgique (for feminine countries and regions beginning with a consonant)</p>
+					<p>Je viens <span style={{color: "black"}}><b>d'</b></span>Angleterre (for all singular place names beginning with a vowel or mute h)</p>
+					<p>Je viens <span style={{color: "cyan"}}><b>du</b></span> Canada (for masculine countries and regions beginning with a consonant)</p>
+					<p>Je viens <span style={{color: "purple"}}><b>des</b></span> Seychelles (for plural countries)</p>
+				</div>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel3` : ''}`}
+					key={`${id}Panel3`}
+				>
+					<p><b>3 Feminine forms of professions and adjectives</b></p>
+					<p>When describing a female or any feminine noun, you will often see the addition of a letter or letters to the original masculine
+						noun or adjective.</p>
+					<ul>
+						<li>If the ending is <b>e</b> there is no addition: both masculine and feminine are the the same e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/célibataire.mp3`}>célibataire</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/journaliste.mp3`}>journaliste</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/serbe.mp3`}>serbe</AudioClip> etc.
+						</li>
+						<li>If the last letter is a consonant, then generally <b>e</b> is added to form the feminine e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/étudiant.mp3`}>étudiant</AudioClip> (m)&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/étudiante.mp3`}>étudiante</AudioClip> (f),&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/chinois.mp3`}>chinois</AudioClip> (m),&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/chinoise.mp3`}>chinoise</AudioClip> (f) <b>NB</b>&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/médecin.mp3`}>médecin</AudioClip> is an exception -&nbsp;
+							this is for both a male and female doctor.
+						</li>
+						<li>If the final letter is <b>é</b>, then an <b>e</b> is added for the feminine e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/marié.mp3`}>marié</AudioClip> (m),&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/mariée.mp3`}>mariée</AudioClip> (f)
+						</li>
+						<li>If the ending is <b>en</b>, <b>ne</b> is added for the feminine e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/informaticien.mp3`}>informaticien</AudioClip> (m) /&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/informaticienne.mp3`}>informaticienne</AudioClip> (f),&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/australien.mp3`}>australien</AudioClip> (m),&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/australienne.mp3`}>australienne</AudioClip> (f)
+						</li>
+					</ul>
+				</div>
+			</div>
+		);
+	};
+}
+
 export class LO3Demystify extends PureComponent {
 	render = () => {
 		const { id } = this.props;
@@ -359,6 +520,49 @@ export class LO3Demystify extends PureComponent {
 							</p>
 						</li>
 					</ol>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO4Demystify extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo4-demystify-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p><b>How to pronounce:</b></p>
+					<p>another nasal vowel. This is the sound <AudioClip className={`link`} soundFile={`sounds/fr/non-existant.mp3`}>WE NEED A SOUND FILE FOR THIS</AudioClip>&nbsp;
+						which is how the letters <b>-in-</b> are pronounced <b>when they end a word or occur before a consonant</b> as in these examples:&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Singapour.mp3`}>S<b>in</b>gapour</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Inde.mp3`}><b>In</b>de</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/indien.mp3`}><b>in</b>dien</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Finlande.mp3`}>F<b>in</b>lande</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/jardin.mp3`}>jard<b>in</b></AudioClip>. The tongue and the mouth all have work to do in its production whilst air passes through nose and mouth.</p>
+					<p><b>NB</b> This is a useful sound to practise as the following are also pronounced in the same way <b>when they end a word or occur before a consonant:</b></p>
+					<p><b>ain</b>, <b>aim</b>, <b>ein</b>, <b>im</b>, <b>ym</b>, <b>yn</b>, <b>eim</b>.</p>
+					<p>Here are some examples of words containing the sound to practise:</p>
+					<p><AudioClip className={`link`} soundFile={`sounds/fr/marocain.mp3`}>maroc<b>ain</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/faim.mp3`}>f<b>aim</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/peinture.mp3`}>p<b>ein</b>ture</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/impossible.mp3`}><b>im</b>possible</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/symbole.mp3`}>s<b>ym</b>bole</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/lynx.mp3`}>l<b>yn</b>x</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Reims.mp3`}>R<b>eim</b>s</AudioClip>.</p>
+					<p>When the letters <b>en</b> or <b>ens</b> end a word this also pronounced (ain) </p>
+					<p><AudioClip className={`link`} soundFile={`sounds/fr/australien.mp3`}>australi<b>en</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/européen.mp3`}>europé<b>en</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/ghanéens.mp3`}>ghané<b>ens</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/indiens.mp3`}>indi<b>ens</b></AudioClip>.</p>
 				</div>
 			</div>
 		);

@@ -231,12 +231,9 @@
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
 	},
-	"explanation2": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>How to pronounce:</b></p><p>another nasal vowel. This is the sound <audio controls src='/sounds/fr/non-existant.mp3'></audio> WE NEED A SOUND FILE FOR THIS which is how the letters <b>-in-</b> are pronounced <b>when they end a word or occur before a consonant</b> as in these examples: <span class='audio-link' sound-file='/sounds/fr/Singapour.mp3' alt='Singapour'/>S<b>in</b>gapour</span>, <span class='audio-link' sound-file='/sounds/fr/Inde.mp3' alt='Inde'><b>In</b>de</span>, <span class='audio-link' sound-file='/sounds/fr/indien.mp3' alt='indien'><b>in</b>dien</span>, <span class='audio-link' sound-file='/sounds/fr/Finlande.mp3' alt='Finlande'>F<b>in</b>lande</span>, <span class='audio-link' sound-file='/sounds/fr/jardin.mp3' alt='jardin'>jard<b>in</b></span>. The tongue and the mouth all have work to do in its production whilst air passes through nose and mouth.</p><p><b>NB</b> This is a useful sound to practise as the following are also pronounced in the same way <b>when they end a word or occur before a consonant:</b></p><p><b>ain</b>, <b>aim</b>, <b>ein</b>, <b>im</b>, <b>ym</b>, <b>yn</b>, <b>eim</b>.</p><p>Here are some examples of words containing the sound to practise:</p><p><span class='audio-link' sound-file='/sounds/fr/marocain.mp3' alt='marocain'>maroc<b>ain</b></span>, <span class='audio-link' sound-file='/sounds/fr/faim.mp3' alt='faim'>f<b>aim</b></span>, <span class='audio-link' sound-file='/sounds/fr/peinture.mp3' alt='peinture'>p<b>ein</b>ture</span>, <span class='audio-link' sound-file='/sounds/fr/impossible.mp3' alt='impossible'><b>im</b>possible</span>, <span class='audio-link' sound-file='/sounds/fr/symbole.mp3' alt='symbole'>s<b>ym</b>bole</span>, <span class='audio-link' sound-file='/sounds/fr/lynx.mp3' alt='lynx'>l<b>yn</b>x</span>, <span class='audio-link' sound-file='/sounds/fr/Reims.mp3' alt='Reims'>R<b>eim</b>s</span>.</p><p>When the letters <b>en</b> or <b>ens</b> end a word this also pronounced (ain) </p><p><span class='audio-link' sound-file='/sounds/fr/australien.mp3' alt='australien'>australi<b>en</b></span>, <span class='audio-link' sound-file='/sounds/fr/européen.mp3' alt='européen'>europé<b>en</b></span>, <span class='audio-link' sound-file='/sounds/fr/ghanéens.mp3' alt='ghanéens'>ghané<b>ens</b></span>, <span class='audio-link' sound-file='/sounds/fr/indiens.mp3' alt='indiens'>indi<b>ens</b></span>.</p>"
-		],
-		"id": "explanation2",
+	"customComponent1": {
+		"component": "LO4Demystify",
+		"id": "LO4Demystify",
 		"titleText": "Demystifying French Pronunciation"
 	},
 	"group": {
