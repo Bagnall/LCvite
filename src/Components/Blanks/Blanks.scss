@@ -145,7 +145,7 @@
 		}
 		.words-container {
 			span {
-				width: 30vw;
+				// width: 30vw;
 				text-align: center;
 			}
 
@@ -177,7 +177,7 @@
 		}
 		.word {
 			// background: red;
-			width: 30vw;
+			// width: 30vw;
 		}
 	}
 	&.type-table {
@@ -195,7 +195,7 @@
 
 		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
 		padding: 0.3rem;
-		margin-top: 1rem;
+		// margin-top: 1rem;
 		font-size: 1.2rem;
 		font-weight: bold;
 
@@ -250,6 +250,9 @@
 				span {
 					margin: 4px;
 				}
+			}
+			td:nth-of-type(2) {
+				text-align: left;
 			}
 			tbody {
 				border: none;

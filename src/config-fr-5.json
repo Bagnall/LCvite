@@ -190,12 +190,9 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"explanation1": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>1</b> In French there are some verbs which are <b>only ever used in the third person singular: il</b>. </p><p><b>Il y a</b> meaning 'there is' or 'there are' is one of these. <br />e.g. </p><p><span class='audio-link' sound-file='/sounds/fr/Il y a un petit jardin devant la maison.mp3' alt='centre'>Il y a un petit jardin devant la maison</span>. There is a small garden in front of the house.<br/><span class='audio-link' sound-file='/sounds/fr/Il y a trois chambres au premier étage.mp3' alt='centre'>Il y a trois chambres au premier étage</span>. There are three bedrooms on the first floor. </p><p>Here are a few more examples of verbs which work in the same way:</p><p>From the verb <span class='audio-link' sound-file='/sounds/fr/pleuvoir.mp3'><b>pleuvoir</b></span>: <span class='audio-link' sound-file='/sounds/fr/Il pleut.mp3'><b>Il pleut</b></span> - e.g. <span class='audio-link' sound-file='/sounds/fr/Il pleut.mp3'><b>Il pleut</b></span> aujourd'hui</span>   It's raining today. <br/>From the verb <span class='audio-link' sound-file='/sounds/fr/neiger.mp3'><b>neiger</b></span>: <span class='audio-link' sound-file='/sounds/fr/Il neige.mp3'><b>Il neige</b></span> - e.g. <span class='audio-link' sound-file='/sounds/fr/Il neige.mp3'><b>Il neige</b></span> en hiver</span> It snows in the winter.<br/>From the verb <span class='audio-link' sound-file='/sounds/fr/falloir.mp3'><b>falloir</b></span>: <span class='audio-link' sound-file='/sounds/fr/Il faut.mp3'><b>Il faut</b></span> -    e.g.  <span class='audio-link' sound-file='/sounds/fr/Il faut.mp3'><b>Il faut</b></span> écouter</span> It's necessary / you need to listen. </p><p><b>2 More about adjectival agreement</b>. Some adjectives end -eux e.g.   <span class='audio-link' sound-file='/sounds/fr/spacieux.mp3'><b>spacieux</b></span>, <span class='audio-link' sound-file='/sounds/fr/lumineux.mp3'><b>lumineux</b></span>.</p><p>There is no change for the masculine plural.<br/>The feminine form of the adjective is formed by removing the x and replacing with -se i.e. <span class='audio-link' sound-file='/sounds/fr/spacieuse.mp3'><b>spacieuse</b></span>, <span class='audio-link' sound-file='/sounds/fr/lumineuse.mp3'><b>lumineuse</b></span>.<br/>To form the feminine plural an s is added to this. Look at these examples:</p><p><span class='audio-link' sound-file='/sounds/fr/Le salon est spacieux.mp3'>Le salon est spaci<b>eux</b></span>.<br/><span class='audio-link' sound-file='/sounds/fr/La cuisine est spacieuse.mp3'>La cuisine est spaci<b>euse</b></span>.<br/><span class='audio-link' sound-file='/sounds/fr/Les appartements sont spacieux.mp3'>Les appartements sont spaci<b>eux</b></span>.<br/><span class='audio-link' sound-file='/sounds/fr/Les chambres sont spacieuses.mp3'>Les chambres sont spaci<b>euses</b></span>.</p>"
-		],
-		"id": "explanation1",
+	"customeComponent1": {
+		"component": "LO5Grammar",
+		"id": "customeComponent1",
 		"titleText": "Grammar / Use of Language"
 	},
 	"explanation2": {

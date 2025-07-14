@@ -34,7 +34,7 @@
 	display: inline-block;
 
 	@include media-queries.respond-above(s) {
-		padding: 0.5rem 1rem;
+		padding: 0.4rem 1rem;
 	}
 }
 .word {
