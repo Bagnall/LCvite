@@ -49,7 +49,7 @@
 				// font-family: Arial;
 				fill: white;
 			}
-
+			will-change: transform;
 			&:hover {
 				transform: scale(1.1); // or more if you prefer
 				z-index: 2;

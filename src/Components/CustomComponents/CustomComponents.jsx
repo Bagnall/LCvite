@@ -129,7 +129,12 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel4` : ''}`}
 					key={`${id}Panel4`}
 				>
-					<p>4 <b>The letter h</b> <img src={resolveAsset('images/shh.jpg')} style={{ verticalAlign: 'middle' }} alt="lady with finger to lips. Shh" title="lady with finger to lips. Shh"/>
+					<p>4 <b>The letter h</b> <img
+						src={resolveAsset('images/shh.jpg')}
+						style={{
+							verticalAlign: 'middle', border: '1px solid rgba(0,0,0,0.5)' }}
+						alt="lady with finger to lips.Shh"
+						title="lady with finger to lips.Shh" />
 					</p>
 					<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
 						<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
@@ -269,7 +274,11 @@ export class LO2Demystify extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p>1 Silent letters at the end of a word&nbsp;
-						<img src={resolveAsset(`images/shh.jpg`)} className={`lo2-demystify-shh`} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' /></p>
+						<img
+							src={resolveAsset(`images/shh.jpg`)}
+							className={`lo2-demystify-shh`}
+							alt='lady with finger to lips. Shh'
+							style={{border: "1px solid rgba(0,0,0,0.5)"}} title='lady with finger to lips. Shh' /></p>
 					<p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
 						Listen to the following examples.</p>
 					<p>
@@ -486,8 +495,8 @@ export class LO3Demystify extends PureComponent {
 				>
 					<p><b>To sound or not to sound?</b></p>
 					<ol>
-						<li><p>The third person verb ending <b>ent</b> is never pronounced. <img src={resolveAsset('/images/shh.jpg')} style={{ verticalAlign: 'middle' }} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
-							e.g.
+						<li><p>The third person verb ending <b>ent</b> is never pronounced.&nbsp;&nbsp;<img src={resolveAsset('/images/shh.jpg')} style={{ verticalAlign: 'middle', border: "1px solid rgba(0,0,0,0.5)" }} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
+							&nbsp;&nbsp;e.g.
 							<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip></p>
@@ -632,8 +641,8 @@ export class LO5Demystify extends PureComponent{
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p><b>How to pronounce:</b><p>
-					</p>the third of the nasal vowels, <b>[an]</b> which is how the letters an, am, en and em are pronounced.
+					<p><b>How to pronounce:</b></p>
+					<p>the third of the nasal vowels, <b>[an]</b> which is how the letters an, am, en and em are pronounced.
 						Listen to the following examples:</p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/blanc.mp3`}>blanc</AudioClip>&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/chambre.mp3`}>chambre</AudioClip>&nbsp;
@@ -775,22 +784,22 @@ export class LO6Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p><b>How to pronounce double l in French:</b><p>
-					</p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.<p>
-					</p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <b>double l</b> is pronounced <b>l</b>. e.g.&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/une balle.mp3`}><b>une balle</b></AudioClip> (a ball),&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/Elle est belle.mp3`}><b>Elle est belle</b></AudioClip>. (She is beautiful.)&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
-							There are no exceptions here!<p>
-					</p>2i  after the vowel <b>I</b>, <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g.&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)<p>
-					</p>2ii if the vowel i is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
+					<p><b>How to pronounce double l in French:</b></p>
+					<p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.</p>
+					<p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <b>double l</b> is pronounced <b>l</b>. e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une balle.mp3`}><b>une balle</b></AudioClip> (a ball),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est belle.mp3`}><b>Elle est belle</b></AudioClip>. (She is beautiful.)&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
+							There are no exceptions here!</p>
+					<p>2i  after the vowel <b>I</b>, <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)</p>
+					<p>2ii if the vowel i is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
 						a letter 'y' in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).<p>
-					</p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <i><b>i</b></i>.
+					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
+					<p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <i><b>i</b></i>.
 						The most common are :  <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;
