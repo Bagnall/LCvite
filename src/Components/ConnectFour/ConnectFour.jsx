@@ -175,7 +175,7 @@ export class ConnectFour extends PureComponent {
 	};
 
 
-	render() {
+	render = () => {
 		const {
 			gameTree,
 			htmlContent,

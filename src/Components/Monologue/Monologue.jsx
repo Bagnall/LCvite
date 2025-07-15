@@ -49,7 +49,7 @@ export class Monologue extends React.PureComponent {
 		});
 	};
 
-	render() {
+	render = () => {
 		const {
 			compact,
 			content,

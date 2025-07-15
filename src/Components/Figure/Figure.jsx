@@ -6,7 +6,7 @@ import React from 'react';
 
 export class Figure extends React.PureComponent {
 
-	render() {
+	render = () => {
 		const {
 			className = '',
 			src,

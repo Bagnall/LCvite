@@ -123,7 +123,7 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 	}
 
-	render() {
+	render = () => {
 		const {
 			beenFlipped,
 			cards,

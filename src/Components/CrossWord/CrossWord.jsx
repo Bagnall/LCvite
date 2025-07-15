@@ -206,7 +206,7 @@ export class CrossWord extends PureComponent {
 		return this.wordPairs.map(([word, clue]) => ({ word, clue }));
 	}
 
-	render() {
+	render = () => {
 		const highlightCell = (r, c) => {
 			return this.state.selected && this.state.selected.some(p => p.row === r && p.col === c);
 		};

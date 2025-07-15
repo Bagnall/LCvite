@@ -11,7 +11,7 @@ export class Info extends React.PureComponent {
 
 	}
 
-	render() {
+	render = () => {
 
 		const {
 			id,

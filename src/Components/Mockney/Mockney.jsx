@@ -227,7 +227,7 @@ export class Mockney extends PureComponent {
 		return mockney;
 	};
 
-	render() {
+	render = () => {
 		const {
 			id,
 			mockney = '',

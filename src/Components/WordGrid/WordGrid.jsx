@@ -289,7 +289,7 @@ export class WordGrid extends PureComponent {
 		this.setState({showSolution: true});
 	};
 
-	render() {
+	render = () => {
 		const {
 			cheatText,
 			failCount,

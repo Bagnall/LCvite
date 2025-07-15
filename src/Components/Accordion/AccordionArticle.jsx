@@ -58,7 +58,7 @@ export class AccordionArticle extends React.PureComponent {
 		}
 	};
 
-	render() {
+	render = () => {
 		const {
 			children,
 			className,

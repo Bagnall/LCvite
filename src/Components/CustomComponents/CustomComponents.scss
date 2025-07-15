@@ -16,3 +16,74 @@
 		vertical-align: middle;
 	}
 }
+#LO9Grammar {
+	.svg-container {
+		overflow: hidden;
+		width: 100%;
+		max-width: 600px; // adjust as needed
+	}
+
+	.zoomable-svg {
+		.text {
+			// fill: red !important;
+			// transform-origin: center center;
+			// transition: transform 0.3s ease;
+			// &:hover {
+			// }
+		}
+		g {
+			transform-origin: center center;
+			transition: transform 0.3s ease;
+			z-index: 1;
+			cursor: pointer;
+			text {
+				transform-origin: 50% 50%;
+				transition: transform 0.3s ease;
+				transform: scale(1); // or more if you prefer
+
+				// font-style: normal;
+				// font-variant: normal;
+				font-weight: 700;
+				// font-stretch: normal;
+				font-size: 74.6667px;
+				// font-family: Arial;
+				fill: white;
+			}
+
+			&:hover {
+				transform: scale(1.1); // or more if you prefer
+				z-index: 2;
+
+				text {
+					// transform-origin: 0 0;
+					// transition: transform 3s ease;
+					transform: scale(1.1); // or more if you prefer
+				}
+			}
+		}
+		#g01 {
+			transform-origin: 50% 50%;
+			text {
+				font-size: 40px;
+			}
+		}
+		#g02 {
+			transform-origin: 100% 70%;
+		}
+		#g03 {
+			transform-origin: 20% 50%;
+			// text {
+			// 	transform-origin: 50% 40%;
+			// }
+		}
+		#g04 {
+			transform-origin: 0 0;
+			// text {
+			// 	transform-origin: 50% 40%;
+			// }
+		}
+		#g05 {
+			transform-origin: 100% 0;
+		}
+	}
+}

@@ -3,7 +3,7 @@ import React from 'react';
 
 export class Image extends React.PureComponent {
 
-	render() {
+	render = () => {
 		const {
 			className = '',
 			thumb,

@@ -66,7 +66,7 @@ export class TreasureGrid extends PureComponent {
 		return this.state.path.some(([r, c]) => r === row && c === col);
 	};
 
-	render() {
+	render = () => {
 		return (
 			<div className="treasure-grid">
 				<h2>Translation Treasure Grid</h2>

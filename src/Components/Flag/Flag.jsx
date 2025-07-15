@@ -152,7 +152,7 @@ export class Flag extends PureComponent {
 		this.flagLoaded = true;
 	};
 
-	render() {
+	render = () => {
 		const { shadow } = this.props;
 		return (
 			<div className={`flag-container ${shadow ? 'shadow' : ''}`} >

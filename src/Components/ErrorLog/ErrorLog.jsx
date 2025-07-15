@@ -83,7 +83,7 @@ export class ErrorLog extends React.Component {
 		});
 	};
 
-	render() {
+	render = () => {
 		const {
 			errors = [],
 			clearLog,

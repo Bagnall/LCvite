@@ -3,7 +3,7 @@ import React from 'react';
 
 export class Attribution extends React.PureComponent {
 
-	render() {
+	render = () => {
 		const {
 			children,
 			className = '',

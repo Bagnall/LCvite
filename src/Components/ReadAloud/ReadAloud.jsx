@@ -165,7 +165,7 @@ export class ReadAloud extends React.PureComponent {
 		});
 	};
 
-	render() {
+	render = () => {
 		const {
 			cannotRun = '',
 			comparison = '',
