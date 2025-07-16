@@ -1,8 +1,7 @@
 // Header.scss
 
 @use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.module.scss";
-
+@use "../../styles/_media-queries.scss" as *;
 header.main-header {
 	@include mixins.header-footer-background;
 	color: white;
@@ -25,7 +24,7 @@ header.main-header {
 	}
 	box-shadow: 0 8px 8px lightgray;
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	header.main-header {
 		h1 {
 			font-size: 2rem;

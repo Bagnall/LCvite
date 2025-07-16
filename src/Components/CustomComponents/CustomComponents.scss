@@ -1,7 +1,7 @@
 // CrossWord.scss
 
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
@@ -10,6 +10,13 @@
 }
 #LO1Demystify {
 	align-items: flex-start;
+	img {
+		width: 300px;
+		height: 300px;
+		float: right;
+		margin: 0 0 20px 20px;
+		border: 1px solid black;
+	}
 }
 #LO2Demystify {
 	img.lo2-demystify-shh {
@@ -85,5 +92,15 @@
 		#g05 {
 			transform-origin: 100% 0;
 		}
+	}
+}
+
+#L10Grammar {
+	img {
+		width: 300px;
+		height: 300px;
+		float: right;
+		margin: 0 0 20px 20px;
+		border: 1px solid black;
 	}
 }

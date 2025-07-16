@@ -1,7 +1,7 @@
 // Jigsaw.scss
 
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_variables.module.scss";
 
 .jigsaw-container {
@@ -85,7 +85,7 @@
 		font-size: 2rem;
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	.jigsaw-container {
 		max-height: 870px;
 		.jigsaw {
@@ -93,7 +93,7 @@
 		}
 	}
 }
-@include media-queries.respond-above(l) {
+@include respond-above(l) {
 	.jigsaw-container {
 		max-height: 990px;
 		.jigsaw {
@@ -101,14 +101,14 @@
 		}
 	}
 }
-@include media-queries.respond-above(xl) {
+@include respond-above(xl) {
 	.jigsaw-container {
 		.jigsaw {
 			transform: scale(0.5);
 		}
 	}
 }
-@include media-queries.respond-above(xxl) {
+@include respond-above(xxl) {
 	.jigsaw-container {
 		max-height: 1100px;
 

@@ -1,7 +1,6 @@
 /*
 _colours.module.scss
 */
-$text: #212529;
 
 $button-grey: #ececec;
 
@@ -46,15 +45,17 @@ $arabic-button: #ed7102;
 $arabic-article-base-background: rgb(240, 178, 64);
 $arabic-panel-back: rgb(255, 248, 216);
 
-$attention-green: #4fcb2e;
-$amber: #fc9725;
-$attention-red: #e72929;
+// $attention-green: #4fcb2e;
+// $amber: #fc9725;
+// $attention-red: #e72929;
 $highlight: rgb(136, 255, 0);
 $ivory: #eeeed2;
-// :export {
-// 	text: $text; /* stylelint-disable-line */
-// attentionGreen: $attention-green;
-// amber: $amber;
-// attentionRed: $attention-red;
-// 	highlight: $highlight;
-// }
+$text: #212529;
+
+:export {
+	// text: $text; /* stylelint-disable-line */
+	// attentionGreen: $attention-green;
+	// amber: $amber;
+	// attentionRed: $attention-red;
+	highlight: $highlight;
+}

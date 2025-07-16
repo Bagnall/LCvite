@@ -4,8 +4,7 @@ Image.scss
 // @use '../../styles/_variables.module.scss';
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.module.scss";
-
+@use "../../styles/_media-queries.scss" as *;
 .image-anchor {
 	width: 100%;
 	img {
@@ -13,7 +12,7 @@ Image.scss
 	}
 }
 
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	.image-anchor {
 		// &.frame{
 		// 	@include mixins.frame;
@@ -69,7 +68,7 @@ Image.scss
 		}
 	}
 }
-// @include media-queries.respond-below(xxl) {
+// @include respond-below(xxl) {
 // 	.right,
 // 	.left,
 // 	.centre{

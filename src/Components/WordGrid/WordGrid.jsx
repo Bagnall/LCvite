@@ -1,8 +1,8 @@
 import './WordGrid.scss';
 import React, { PureComponent } from 'react';
-import Colours from '../../styles/_colours.module.scss';
+import colours from '../../styles/_colours.module.scss';
 import {resolveAsset} from '../../utility';
-import Variables from '../../styles/_variables.module.scss';
+import '../../styles/_variables.module.scss';
 
 const directions = [
 	{ x: 1, y: 0 }, // right
@@ -312,13 +312,15 @@ export class WordGrid extends PureComponent {
 			// words
 		} = this.state;
 		// console.log("lines", lines, "line", line);
-		let cellDimension = 36;
-		const media = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content');
-		// console.log("media", media, media[1]);
-		if (media[1] === 'S' || media[1] === 'M') cellDimension = 24;
+
+		const root = getComputedStyle(document.documentElement);
+		const cellDimension = parseInt(root.getPropertyValue('--cell-dimension').trim());
+
 		const renderedFoundLines = new Array();
-		const { highlight } = Colours;
 		const strokeWidth = cellDimension / 1.2;
+
+		const {highlight} = colours;
+
 		foundLines.forEach((l, index) => renderedFoundLines.push(
 			<line
 				key={`line${index}`}
@@ -442,5 +444,5 @@ export class WordGrid extends PureComponent {
 				</div>
 			</div>
 		);
-	}
+	};
 }

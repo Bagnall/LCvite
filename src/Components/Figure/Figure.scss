@@ -4,8 +4,7 @@ Figure.scss
 @use "../../styles/_variables.module.scss";
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.module.scss";
-
+@use "../../styles/_media-queries.scss" as *;
 figure {
 	display: flex;
 	align-items: center;
@@ -40,7 +39,7 @@ figure {
 		font-style: italic;
 	}
 }
-@include media-queries.respond-above(s) {
+@include respond-above(s) {
 	figure {
 		display: flex;
 		align-items: center;

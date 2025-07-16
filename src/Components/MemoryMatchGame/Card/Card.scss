@@ -1,6 +1,6 @@
 // Card.scss
 
-@use "../../../styles/_media-queries.module.scss";
+@use "../../../styles/_media-queries.scss" as *;
 @use "../../../styles/_mixins.module.scss";
 @use "../../../styles/_variables.module.scss";
 $border-radius: 10px;
@@ -139,7 +139,7 @@ $card-back-border-width: 8px;
 		font-size: 0.6rem;
 	}
 }
-@include media-queries.respond-above(l) {
+@include respond-above(l) {
 	.cards {
 		.card {
 			font-size: 0.8rem;
@@ -152,7 +152,7 @@ $card-back-border-width: 8px;
 	}
 }
 
-@include media-queries.respond-above(xl) {
+@include respond-above(xl) {
 	.cards {
 		.card {
 			height: 100px * 0.8;
@@ -169,7 +169,7 @@ $card-back-border-width: 8px;
 	}
 }
 
-@include media-queries.respond-above(xxl) {
+@include respond-above(xxl) {
 	.cards {
 		.card {
 			height: 100px;

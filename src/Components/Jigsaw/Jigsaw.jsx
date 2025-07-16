@@ -11,7 +11,7 @@ import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
 import React from 'react';
-import Variables from '../../styles/_variables.module.scss';
+import variables from '../../styles/_variables.module.scss';
 
 export class Jigsaw extends React.PureComponent {
 
@@ -26,21 +26,12 @@ export class Jigsaw extends React.PureComponent {
 		super(props);
 
 		// Import some variables from scss (they are also used in other scss files and so should never get out of step unlike duplicated variables).
-		let {
-			piecesPerBoard,
-			boardWidth,
-			boardHeight,
-			jigsawBorderWidth,
-			tabSize,
-			tileSize,
-		} = Variables;
-		// They are all strings so let's fix that
-		piecesPerBoard = parseInt(piecesPerBoard);
-		boardWidth = parseInt(boardWidth);
-		boardHeight = parseInt(boardHeight);
-		tabSize = parseInt(tabSize);
-		tileSize = parseInt(tileSize);
-		jigsawBorderWidth = parseInt(jigsawBorderWidth);
+		const piecesPerBoard = parseInt(variables.piecesPerBoard);
+		const boardWidth = parseInt(variables.boardWidth);
+		const boardHeight = parseInt(variables.boardHeight);
+		const tabSize = parseInt(variables.tabSize);
+		const tileSize = parseInt(variables.tileSize);
+		const jigsawBorderWidth = parseInt(variables.jigsawBorderWidth);
 
 		// We will use Pieces to build up our JSX for the pieces
 		const Pieces = new Array;

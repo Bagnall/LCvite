@@ -671,7 +671,7 @@ export default class App extends React.Component {
 										</AccordionArticle>
 
 									</AccordionArticle> */}
-									<AccordionArticle
+									{/* <AccordionArticle
 										id={`scratchAccordion1`}
 										title={`Scratch 1`}
 									>
@@ -689,7 +689,7 @@ export default class App extends React.Component {
 
 											</div>
 										</div>
-									</AccordionArticle>
+									</AccordionArticle> */}
 									{articles}
 									{/* {dropdowns1 ? (
 										<AccordionArticle

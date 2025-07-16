@@ -1,14 +1,14 @@
 // Header.scss
 
 @use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_variables.module.scss";
 
 #congratulate {
 	background-color: white;
 	background: white;
 	border-radius: 20px;
-	border: variables.$border-width * 1px ridge darkblue;
+	// border: variables.$border-width * 1px ridge darkblue;
 	box-sizing: border-box;
 	color: darkblue;
 	display: flex;
@@ -65,7 +65,7 @@
 		}
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	#congratulate {
 		font-size: 80px;
 		line-height: 90px;
@@ -101,7 +101,7 @@
 		}
 	}
 }
-@include media-queries.respond-above(l) {
+@include respond-above(l) {
 	#congratulate {
 		padding: 4rem 0;
 	}

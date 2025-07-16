@@ -1,7 +1,7 @@
 // WordGrid.scss
 
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
@@ -48,8 +48,9 @@
 		td {
 			border: 1px solid #ccc;
 			box-sizing: border-box;
-			width: variables.$cell-dimension;
-			height: variables.$cell-dimension;
+			width: var(--cell-dimension);
+			height: var(--cell-dimension);
+
 			text-align: center;
 			text-transform: uppercase;
 			// background: white;

@@ -2,7 +2,7 @@
 ReadAloud.scss
 */
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
@@ -61,7 +61,7 @@ ReadAloud.scss
 
 	@include mixins.comparison();
 }
-@include media-queries.respond-above(s) {
+@include respond-above(s) {
 	.recording-container {
 		height: 240px;
 		width: 120px;

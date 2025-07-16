@@ -1,7 +1,7 @@
 // WordParts.scss
 
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
@@ -132,7 +132,7 @@ html.debug {
 		background-color: rgba(255, 0, 0, 0);
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	.word-parts-container {
 		span {
 			font-size: 1.2rem;
@@ -146,7 +146,7 @@ html.debug {
 		}
 	}
 }
-@include media-queries.respond-above(xxl) {
+@include respond-above(xxl) {
 	.word-parts-container {
 		span {
 			font-size: 1.4rem;

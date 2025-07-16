@@ -2,7 +2,7 @@
 Monologue.scss
 */
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 
@@ -20,7 +20,7 @@ Monologue.scss
 	// }
 	@include mixins.comparison();
 }
-// @include media-queries.respond-above(s) {
+// @include respond-above(s) {
 // 	.monologue-container {
 // 		textarea {
 // 			width: 60vw;

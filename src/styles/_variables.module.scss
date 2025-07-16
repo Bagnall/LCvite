@@ -1,4 +1,4 @@
-@use "_media-queries.module.scss";
+@use "_media-queries.scss" as *;
 $tab-size: 31;
 $tile-size: 181;
 $pieces-per-board: 20;
@@ -10,14 +10,28 @@ $jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
 $transition-time: 1s;
 $word-transition-time: $transition-time;
-$cell-dimension: 24px;
-@include media-queries.respond-above(m) {
-	$cell-dimension: 36px;
+
+// Use of :root is a runtime feature, so in JS you can use such as:
+// const root = getComputedStyle(document.documentElement);
+// const cellDimension = parseInt(root.getPropertyValue('--cell-dimension').trim());
+// Note you will need to refresh if you change dimensions using programmers tools.
+//
+// and in scss such as:
+// width: var(--cell-dimension);
+// height: var(--cell-dimension);
+
+:root {
+	--cell-dimension: 24px;
 }
-/* stylelint-disable */
+@include respond-above(m) {
+	:root {
+		--cell-dimension: 36px;
+	}
+}
+
+// :export on the other hand is a preprocessor function.
 :export {
 	borderWidth: $border-width;
-	// cellDimension: $cell-dimension;
 	jigsawBorderWidth: $border-width;
 	tabSize: $tab-size;
 	tileSize: $tile-size;
@@ -28,7 +42,6 @@ $cell-dimension: 24px;
 	memoryCardTransitionTime: $memory-card-transition-time;
 	wordTransitionTime: $word-transition-time;
 }
-/* stylelint-enable */
 
 $button-border-radius: 4px;
 $button-height: 36px;

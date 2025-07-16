@@ -1,7 +1,7 @@
 // MemoryMatchGame.scss
 
 @use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_variables.module.scss";
 @use "sass:math";
@@ -150,14 +150,14 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	.memory-map-container {
 		.matches {
 			min-width: 280px;
 		}
 	}
 }
-@include media-queries.respond-above(l) {
+@include respond-above(l) {
 	.memory-map-container {
 		// transform: scale(1);
 		// gap: 0.5rem;
@@ -178,7 +178,7 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
-@include media-queries.respond-above(xl) {
+@include respond-above(xl) {
 	.memory-map-container {
 		// transform: scale(1);
 		gap: 0.5rem;
@@ -193,7 +193,7 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
-@include media-queries.respond-above(xxl) {
+@include respond-above(xxl) {
 	.memory-map-container {
 		min-height: 600px;
 		&.num16cards {

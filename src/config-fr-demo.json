@@ -8,401 +8,6 @@
 		"targetLanguageCode": "fr-FR",
 		"title": "French Learning Object, Component Demo"
 	},
-	"explanation1": {
-		"component": "Explanation",
-		"content": [
-			"<p><b>.speak</b></p><p>If you add a pair of tags around part of a phrase, for example &lt;span class(Name)='speak'&gt;&lt;/span&gt; or &lt;b class='speak'&gt;&lt;b&gt;, the system will recognise the content and turn it into a virtual anchor tag, which when clicked, will be heard by the student. <span class='speak'>Par example ici</span>. The code will also add a title tag so that when the 'link' is hovered, contect help balloon displays 'Click to play sound'.</p><p>You can also have other braces of tags within, for example &lt;span class='speak'&gt;The &lt;b&gt;<b>click</b>&lt;b&gt; event will bubble up to the owner of the .speak class&lt;/span&gt; e.g. <span class='speak'>Text and <b>bold</b> text.</span></span>. Try clicking on <b>bold</b> and normal parts of the string. Note 'class' for html in a string, 'className' in JSX.</p><p>Unfortunately, apart from Chrome, you need to have the correct Windows language packs installed (via settings). Also, Opera doesn't handle voice recognition correctly.</p>"
-		],
-		"id": "explanation1",
-		"titleText": "The .speak class"
-	},
-	"audioClip1": {
-		"component": "AudioClipSamples",
-		"id": "AudioClip1",
-		"titleText": "AudioClip Types and Samples"
-	},
-	"readaloud1": {
-		"component": "ReadAloud",
-		"id": "ReadAloud1",
-		"htmlContent": "<p>This <b>ReadAloud</b> component presents a phrase for the student to read out loud.</p><p>The browser listens and then uses the  'Monologue' component to compare what it thinks it hears against the target phrase and displays the differences.</p>",
-		"instructionsText": "Press the Record button and read the phrase please.",
-		"phrase": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
-		"titleText": "ReadAloud"
-	},
-	"readaloud2": {
-		"component": "ReadAloud",
-		"id": "ReadAloud2",
-		"htmlContent": "<p>This <b>ReadAloud</b> component presents a phrase for the student to read out loud.</p><p>The browser listens and then uses the  'Monologue' component to compare what it thinks it hears against the target phrase and displays the differences.</p>",
-		"instructionsText": "Press the Record button and read the phrase please.",
-		"phrase": "Bonjour, je suis anglaise et je suis mariée.",
-		"titleText": "ReadAloud"
-	},
-	"monologue1": {
-		"component": "Monologue",
-		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
-		"soundFile": "sounds/fr/max-monologue.mp3",
-		"htmlContent": "<p>This <b>Monologue</b> component presents a phrase for the student to listen to.</p><p>The student types what he thinks he hears and presses the check button. The component then displays the differences.</p>",
-		"id": "Monologue1",
-		"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
-		"titleText": "Monologue"
-	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"htmlContent": "<p>This <b>PhraseTable</b> component presents a simple table of phrases, translations and audio in a columnar table.</p>",
-		"id": "PhraseTable1",
-		"instructionsText": "",
-		"phrases": [
-			[
-				"Salut, ça va ?",
-				"Hi, are you well?",
-				"sounds/fr/Salut, ça va.mp3"
-			],
-			[
-				"Salut ! Ça va ! Et toi ?",
-				"Hi, I'm fine and you?",
-				"sounds/fr/Salut ! Ça va ! Et toi.mp3"
-			],
-			[
-				"Très bien, merci !",
-				"Very well, thank you!",
-				"sounds/fr/Très bien, merci !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Bonjour, Madame Foucher ! Comment ça va ?",
-				"Hello, Mme Foucher! How are you?",
-				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
-			],
-			[
-				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
-				"Hello M Letort, I'm very well, thank you. And you?",
-				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
-			],
-			[
-				"Ça va, merci !",
-				"I'm fine, thank you!",
-				"sounds/fr/Ça va, merci !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Comment t'appelles-tu* ?",
-				"What's your name?",
-				"sounds/fr/Comment t'appelles-tu.mp3"
-			],
-			[
-				"Je m'appelle Max, et toi* ?",
-				"My name is Max. And you're….?",
-				"sounds/fr/Je m'appelle Max, et toi.mp3"
-			],
-			[
-				"Je m'appelle Camille.",
-				"My name's Camille.",
-				"sounds/fr/Je m'appelle Camille.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Comment vous* appelez-vous ?",
-				"What's your name?",
-				"sounds/fr/Comment vous appelez-vous.mp3"
-			],
-			[
-				"Je m'appelle Isabelle Martin.",
-				"My name is Isabelle Martin.",
-				"sounds/fr/Je m'appelle Isabelle Martin.mp3"
-			]
-		],
-		"titleText": "PhraseTable"
-	},
-	"explanation4": {
-		"component": "Explanation",
-		"content": [
-			"<p>1 Silent letters at the end of a word <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/></p><p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. Listen to the following examples.</p><p><span class='audio-link' sound-file='/sounds/fr/grand.mp3' alt='grand'>gran<b>d</b></span>, <span class='audio-link' sound-file='/sounds/fr/rond.mp3' alt='rond'>ron<b>d</b></span>,  <span class='audio-link' sound-file='/sounds/fr/long.mp3' alt='long'>lon<b>g</b></span>, <span class='audio-link' sound-file='/sounds/fr/trop.mp3' alt='trop'>tro<b>p</b></span>, <span class='audio-link' sound-file='/sounds/fr/depuis.mp3' alt='depuis'>depui<b>s</b></span>,  <span class='audio-link' sound-file='/sounds/fr/pas.mp3' alt='pas'>pa<b>s</b></span>, <span class='audio-link' sound-file='/sounds/fr/petit.mp3' alt='petit'>peti<b>t</b></span>, <span class='audio-link' sound-file='/sounds/fr/Salut.mp3' alt='salut'>salu<b>t</b></span>, <span class='audio-link' sound-file='/sounds/fr/gâteaux.mp3' alt='gâteaux'>gâteau<b>x</b></span>, <span class='audio-link' sound-file='/sounds/fr/appelez.mp3' alt='appelez'>appele<b>z</b></span></p><p>The letter <b>e</b> is not pronounced at the end of a word:</p><p><span class='audio-link' sound-file='/sounds/fr/Je m&#39appelle.mp3' alt='Je m''appelle'>Je m&#39appell<b>e</b></span>, <span class='audio-link' sound-file='/sounds/fr/bibliothécaire.mp3' alt='bibliothécaire'>bibliothécair<b>e</b></span>, <span class='audio-link' sound-file='/sounds/fr/célibataire.mp3' alt='célibataire'>célibatair<b>e</b></span></p><p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p><p><span class='speak'>ce</span>, <span class='speak'>de</span>, <span class='speak'>je</span>,  <span class='speak'>le</span>, <span class='speak'>me</span>, <span class='speak'>ne</span>, <span class='speak'>se</span>, <span class='speak'>te</span></p><hr/><p>2 <b>Th</b></p><p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g. <span class='audio-link' sound-file='/sounds/fr/Thomas.mp3' alt='Thomas'><b>Thomas</b></span>, <span class='audio-link' sound-file='/sounds/fr/thé.mp3' alt='thé'><b>thé</b></span>, <span class='audio-link' sound-file='/sounds/fr/théologie.mp3' alt='théologie'><b>théologie</b></span>, <span class='audio-link' sound-file='/sounds/fr/maths.mp3' alt='maths'><b>maths</b></span></p>"
-		],
-		"htmlContent": "<p>This <b>Explanation</b> component is for introducing passages of explanatory text. I'm not hugely happy with it as it involves putting HTML into strings which are then injected into divs.</p><p>If there is more than one string, more than one panel is presented. It would be good to have a more elegant solution which works well in this CMS type system.</p>",
-		"id": "explanation4",
-		"titleText": "Explanation"
-	},
-	"custom1": {
-		"component": "LO9Grammar",
-		"id": "LO9Grammar",
-		"titleText": "Grammar / Use of Language"
-	},
-	"group": {
-		"component": "Group",
-		"content": [
-			{
-				"wordparts1": {
-					"cheatText": "Cheat",
-					"component": "WordParts",
-					"congratulationsText": "Superb!",
-					"htmlContent": "<p>The <b>WordParts</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase matches the question set. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p><p>After two mistakes, a cheat option is revealled.</p>",
-					"id": "wordparts1",
-					"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
-					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"b[on]jou[r] m[on] ché[r]i",
-						"b[on]s[oi][r] m[on] amou[r]",
-						"au [r]ev[oi][r] ma ché[r]ie",
-						"quelle [h]o[rr]eur Valé[r]ie"
-					],
-					"audio": [
-						"sounds/fr/bonjour mon chéri.mp3",
-						"sounds/fr/bonsoir mon amour.mp3",
-						"sounds/fr/au revoir ma chérie.mp3",
-						"sounds/fr/quelle horreur valérie.mp3"
-					],
-					"titleText": "WordParts"
-				}
-			},
-			{
-				"dropdowns1": {
-					"component": "DropDowns",
-					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
-					"htmlContent": "<p>The <b>DropDowns</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase should be replaced by a 'dropdown' or 'select'. The verttical bar '|' separated phrases or words are used to populate the options of the select. The one preceded by the asterisk indicates the correct answer. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p>",
-					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Female : Je suis [marocain|*marocaine|africain|africaine].",
-						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
-						"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
-						"Female: Je suis [français|*française|anglais /anglaise].",
-						"Male: Je suis [*chinois|chinoise|gallois|galloise].",
-						"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
-					],
-					"audio": [
-						"sounds/fr/je suis marocaine.mp3",
-						"sounds/fr/je suis mexicaine.mp3",
-						"sounds/fr/je suis canadien.mp3",
-						"sounds/fr/je suis française.mp3",
-						"sounds/fr/je suis chinois.mp3",
-						"sounds/fr/je suis sénégalaise.mp3"
-					],
-					"titleText": "DropDowns"
-				}
-			},
-			{
-				"answerTable1": {
-					"component": "AnswerTable",
-					"congratulationsText": "Well done!",
-					"htmlContent": "<p>The <b>AnswerTable</b> component, uses phrases to populate the left column of a table. The second of each phrase is the correct answer to the question. The user must type  the correct answer into the input in the right hand column and press the 'Check'. Button. The text box is a compact <b>Monologue</b> component, see below.</p>",
-					"id": "AnswerTable1",
-					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
-					"header": [
-						"Masculine",
-						"feminine"
-					],
-					"phrases": [
-						[
-							"américain",
-							"américaine"
-						],
-						[
-							"asiatique",
-							"asiatique"
-						],
-						[
-							"brésilien",
-							"brésilienne"
-						],
-						[
-							"croate",
-							"croate"
-						],
-						[
-							"danois",
-							"danoise"
-						],
-						[
-							"italien",
-							"italienne"
-						],
-						[
-							"portugais",
-							"portugaise"
-						],
-						[
-							"russe",
-							"russe"
-						],
-						[
-							"ukrainien",
-							"ukrainien"
-						],
-						[
-							"célibataire",
-							"célibataire"
-						],
-						[
-							"fatigué",
-							"fatiguée"
-						],
-						[
-							"malade",
-							"malade"
-						],
-						[
-							"marié",
-							"mariée"
-						],
-						[
-							"dentiste",
-							"dentiste"
-						],
-						[
-							"doctorant",
-							"doctorante"
-						],
-						[
-							"étudiant",
-							"étudiante"
-						],
-						[
-							"informaticien",
-							"informaticienne"
-						],
-						[
-							"journaliste",
-							"journaliste"
-						],
-						[
-							"mécanicien",
-							"mécanicienne"
-						],
-						[
-							"médecin",
-							"médecin"
-						],
-						[
-							"pharmacien",
-							"pharmacienne"
-						]
-					],
-					"titleText": "AnswerTable"
-				}
-			}
-		],
-		"htmlContent": "<p>This <b>Group</b> component is for grouping a number of other components together. I have generally used it for grouping Exercises in the real learning objects.</p>",
-		"id": "group1",
-		"titleText": "Group"
-	},
-	"group4": {
-		"component": "Group",
-		"content": [
-			{
-				"wordsIntoSlots1": {
-					"component": "Blanks",
-					"htmlContent": "<p>The <b>'blanksType': 'table'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into a 2 column table.</p><p>After two mistakes, help and cheat options are revealled.</p>",
-					"id": "wordsIntoSlots1",
-					"congratulationsText": "Well done!",
-					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "table",
-					"words": [
-						"moi",
-						"roi",
-						"homme",
-						"hôtel",
-						"hôpital",
-						"bonjour",
-						"bonbon",
-						"au revoir",
-						"mon",
-						"trois",
-						"horrible",
-						"toi",
-						"quoi",
-						"froid",
-						"ton",
-						"non",
-						"bon",
-						"son",
-						"nom"
-					],
-					"soundFile": "sounds/fr/non-existant.mp3",
-					"titleText": "Blanks blanksType='table'"
-				}
-			},
-			{
-				"wordsIntoSlots2": {
-					"component": "Blanks",
-					"congratulationsText": "Well done!",
-					"htmlContent": "<p>The <b>'blanksType': 'questions-answers'</b> configuration of the <b>Blanks</b> component, uses the answers to make tiles which can be dropped into the second column of a 2 column table, where the questions are used to populate the left column.</p><p>When the puzzle is complete, sound files are revealed in a third column.</p><p>After two mistakes, help and cheat options are revealled.</p>",
-					"id": "wordsIntoSlots2",
-					"instructionsText": "Match the questions and answers",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "questions-answers",
-					"questions": [
-						"Salut les enfants ! Tout va bien ?",
-						"Tu es archiviste ?",
-						"Monsieur Tondereau est journaliste ?",
-						"Que faites-vous dans la vie ?"
-					],
-					"answers": [
-						"Moi, oui, ça va … mais Jo est malade depuis hier.",
-						"Ah non ! je suis étudiante en histoire.",
-						"Non, il est bibliothécaire.",
-						"Je suis professeur de géographie."
-					],
-					"soundFiles": [
-						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
-						"sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
-						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
-						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
-					],
-					"titleText": "Blanks blanksType='questions-answers'"
-				}
-			},
-			{
-				"phrases3": {
-					"blanksType": "phrases",
-					"cheatText": "Cheat",
-					"component": "Blanks",
-					"congratulationsText": "Very good!",
-					"htmlContent": "<p>The <b>'blanksType': 'phrases'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into the set of phrases. The set of phrases contains square brackets to show where the words must be dropped, the word is hidden in the phrase. On the right hand side there are audio samples to assist the student if needed. Note: the blank spaces are all the same width even for small words, so they don't give an extra clue!</p><p>After two mistakes, help and cheat options are revealled.</p>",
-					"id": "phrases3",
-					"instructionsText": "Drag the words to fill in the gaps.",
-					"showHintsText": "Show hints when moving",
-					"words NOT NEEDED": [
-						"enfants",
-						"revoir",
-						"appelle",
-						"appelez",
-						"moi"
-					],
-					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
-						"Bonjour Madame ! Je m' [appelle] Annie.",
-						"Et [moi], je m'appelle David.",
-						"D'accord. Très bien !",
-						"Merci Madame ! Bonne journée !",
-						"Au [revoir] les enfants !  Bonne journée !"
-					],
-					"audio": [
-						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
-						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
-						"sounds/fr/Et moi, je m'appelle David.mp3",
-						"sounds/fr/D'accord. Très bien !.mp3",
-						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
-						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
-					],
-					"titleText": "Blanks blanksType='phrases'"
-				}
-			}
-		],
-		"id": "group4",
-		"titleText": "Blanks"
-	},
 	"group1": {
 		"component": "Group",
 		"htmlContent": "<p>This <b>Jigsaw</b> component presents 2 sets of jigsaw pieces. The student needs to read / listen to the phrase that describes a picture. This should enable the student to choose the correct pieces to place into a simple jigsaw picture.</p><p>Two or more errors reveal some help options.</p>",
@@ -973,6 +578,401 @@
 		],
 		"id": "connectFour1",
 		"titleText": "Memory Cards"
+	},
+	"explanation1": {
+		"component": "Explanation",
+		"content": [
+			"<p><b>.speak</b></p><p>If you add a pair of tags around part of a phrase, for example &lt;span class(Name)='speak'&gt;&lt;/span&gt; or &lt;b class='speak'&gt;&lt;b&gt;, the system will recognise the content and turn it into a virtual anchor tag, which when clicked, will be heard by the student. <span class='speak'>Par example ici</span>. The code will also add a title tag so that when the 'link' is hovered, contect help balloon displays 'Click to play sound'.</p><p>You can also have other braces of tags within, for example &lt;span class='speak'&gt;The &lt;b&gt;<b>click</b>&lt;b&gt; event will bubble up to the owner of the .speak class&lt;/span&gt; e.g. <span class='speak'>Text and <b>bold</b> text.</span></span>. Try clicking on <b>bold</b> and normal parts of the string. Note 'class' for html in a string, 'className' in JSX.</p><p>Unfortunately, apart from Chrome, you need to have the correct Windows language packs installed (via settings). Also, Opera doesn't handle voice recognition correctly.</p>"
+		],
+		"id": "explanation1",
+		"titleText": "The .speak class"
+	},
+	"audioClip1": {
+		"component": "AudioClipSamples",
+		"id": "AudioClip1",
+		"titleText": "AudioClip Types and Samples"
+	},
+	"readaloud1": {
+		"component": "ReadAloud",
+		"id": "ReadAloud1",
+		"htmlContent": "<p>This <b>ReadAloud</b> component presents a phrase for the student to read out loud.</p><p>The browser listens and then uses the  'Monologue' component to compare what it thinks it hears against the target phrase and displays the differences.</p>",
+		"instructionsText": "Press the Record button and read the phrase please.",
+		"phrase": "Un jeune homme, portant un t-shirt rouge, passe à vélo devant un cheval dans un champ par une journée ensoleillée.",
+		"titleText": "ReadAloud"
+	},
+	"readaloud2": {
+		"component": "ReadAloud",
+		"id": "ReadAloud2",
+		"htmlContent": "<p>This <b>ReadAloud</b> component presents a phrase for the student to read out loud.</p><p>The browser listens and then uses the  'Monologue' component to compare what it thinks it hears against the target phrase and displays the differences.</p>",
+		"instructionsText": "Press the Record button and read the phrase please.",
+		"phrase": "Bonjour, je suis anglaise et je suis mariée.",
+		"titleText": "ReadAloud"
+	},
+	"monologue1": {
+		"component": "Monologue",
+		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
+		"soundFile": "sounds/fr/max-monologue.mp3",
+		"htmlContent": "<p>This <b>Monologue</b> component presents a phrase for the student to listen to.</p><p>The student types what he thinks he hears and presses the check button. The component then displays the differences.</p>",
+		"id": "Monologue1",
+		"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
+		"titleText": "Monologue"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"htmlContent": "<p>This <b>PhraseTable</b> component presents a simple table of phrases, translations and audio in a columnar table.</p>",
+		"id": "PhraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Salut, ça va ?",
+				"Hi, are you well?",
+				"sounds/fr/Salut, ça va.mp3"
+			],
+			[
+				"Salut ! Ça va ! Et toi ?",
+				"Hi, I'm fine and you?",
+				"sounds/fr/Salut ! Ça va ! Et toi.mp3"
+			],
+			[
+				"Très bien, merci !",
+				"Very well, thank you!",
+				"sounds/fr/Très bien, merci !.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Bonjour, Madame Foucher ! Comment ça va ?",
+				"Hello, Mme Foucher! How are you?",
+				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
+			],
+			[
+				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
+				"Hello M Letort, I'm very well, thank you. And you?",
+				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
+			],
+			[
+				"Ça va, merci !",
+				"I'm fine, thank you!",
+				"sounds/fr/Ça va, merci !.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Comment t'appelles-tu* ?",
+				"What's your name?",
+				"sounds/fr/Comment t'appelles-tu.mp3"
+			],
+			[
+				"Je m'appelle Max, et toi* ?",
+				"My name is Max. And you're….?",
+				"sounds/fr/Je m'appelle Max, et toi.mp3"
+			],
+			[
+				"Je m'appelle Camille.",
+				"My name's Camille.",
+				"sounds/fr/Je m'appelle Camille.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Comment vous* appelez-vous ?",
+				"What's your name?",
+				"sounds/fr/Comment vous appelez-vous.mp3"
+			],
+			[
+				"Je m'appelle Isabelle Martin.",
+				"My name is Isabelle Martin.",
+				"sounds/fr/Je m'appelle Isabelle Martin.mp3"
+			]
+		],
+		"titleText": "PhraseTable"
+	},
+	"explanation4": {
+		"component": "Explanation",
+		"content": [
+			"<p>1 Silent letters at the end of a word <img src='/images/shh.jpg' style='vertical-align: middle;' alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh'/></p><p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word. Listen to the following examples.</p><p><span class='audio-link' sound-file='/sounds/fr/grand.mp3' alt='grand'>gran<b>d</b></span>, <span class='audio-link' sound-file='/sounds/fr/rond.mp3' alt='rond'>ron<b>d</b></span>,  <span class='audio-link' sound-file='/sounds/fr/long.mp3' alt='long'>lon<b>g</b></span>, <span class='audio-link' sound-file='/sounds/fr/trop.mp3' alt='trop'>tro<b>p</b></span>, <span class='audio-link' sound-file='/sounds/fr/depuis.mp3' alt='depuis'>depui<b>s</b></span>,  <span class='audio-link' sound-file='/sounds/fr/pas.mp3' alt='pas'>pa<b>s</b></span>, <span class='audio-link' sound-file='/sounds/fr/petit.mp3' alt='petit'>peti<b>t</b></span>, <span class='audio-link' sound-file='/sounds/fr/Salut.mp3' alt='salut'>salu<b>t</b></span>, <span class='audio-link' sound-file='/sounds/fr/gâteaux.mp3' alt='gâteaux'>gâteau<b>x</b></span>, <span class='audio-link' sound-file='/sounds/fr/appelez.mp3' alt='appelez'>appele<b>z</b></span></p><p>The letter <b>e</b> is not pronounced at the end of a word:</p><p><span class='audio-link' sound-file='/sounds/fr/Je m&#39appelle.mp3' alt='Je m''appelle'>Je m&#39appell<b>e</b></span>, <span class='audio-link' sound-file='/sounds/fr/bibliothécaire.mp3' alt='bibliothécaire'>bibliothécair<b>e</b></span>, <span class='audio-link' sound-file='/sounds/fr/célibataire.mp3' alt='célibataire'>célibatair<b>e</b></span></p><p><b>NB</b> 2-letter words ending in <b>e</b> are exceptions:</p><p><span class='speak'>ce</span>, <span class='speak'>de</span>, <span class='speak'>je</span>,  <span class='speak'>le</span>, <span class='speak'>me</span>, <span class='speak'>ne</span>, <span class='speak'>se</span>, <span class='speak'>te</span></p><hr/><p>2 <b>Th</b></p><p>In French the letters <b>th</b> are pronounced <b>t</b>. e.g. <span class='audio-link' sound-file='/sounds/fr/Thomas.mp3' alt='Thomas'><b>Thomas</b></span>, <span class='audio-link' sound-file='/sounds/fr/thé.mp3' alt='thé'><b>thé</b></span>, <span class='audio-link' sound-file='/sounds/fr/théologie.mp3' alt='théologie'><b>théologie</b></span>, <span class='audio-link' sound-file='/sounds/fr/maths.mp3' alt='maths'><b>maths</b></span></p>"
+		],
+		"htmlContent": "<p>This <b>Explanation</b> component is for introducing passages of explanatory text. I'm not hugely happy with it as it involves putting HTML into strings which are then injected into divs.</p><p>If there is more than one string, more than one panel is presented. It would be good to have a more elegant solution which works well in this CMS type system.</p>",
+		"id": "explanation4",
+		"titleText": "Explanation"
+	},
+	"custom1": {
+		"component": "LO9Grammar",
+		"id": "LO9Grammar",
+		"titleText": "Grammar / Use of Language"
+	},
+	"group": {
+		"component": "Group",
+		"content": [
+			{
+				"wordparts1": {
+					"cheatText": "Cheat",
+					"component": "WordParts",
+					"congratulationsText": "Superb!",
+					"htmlContent": "<p>The <b>WordParts</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase matches the question set. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p><p>After two mistakes, a cheat option is revealled.</p>",
+					"id": "wordparts1",
+					"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
+					"showHintsText": "Show hints when moving",
+					"phrases": [
+						"b[on]jou[r] m[on] ché[r]i",
+						"b[on]s[oi][r] m[on] amou[r]",
+						"au [r]ev[oi][r] ma ché[r]ie",
+						"quelle [h]o[rr]eur Valé[r]ie"
+					],
+					"audio": [
+						"sounds/fr/bonjour mon chéri.mp3",
+						"sounds/fr/bonsoir mon amour.mp3",
+						"sounds/fr/au revoir ma chérie.mp3",
+						"sounds/fr/quelle horreur valérie.mp3"
+					],
+					"titleText": "WordParts"
+				}
+			},
+			{
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Well done!",
+					"htmlContent": "<p>The <b>DropDowns</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase should be replaced by a 'dropdown' or 'select'. The verttical bar '|' separated phrases or words are used to populate the options of the select. The one preceded by the asterisk indicates the correct answer. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p>",
+					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"Female : Je suis [marocain|*marocaine|africain|africaine].",
+						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
+						"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+						"Female: Je suis [français|*française|anglais /anglaise].",
+						"Male: Je suis [*chinois|chinoise|gallois|galloise].",
+						"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+					],
+					"audio": [
+						"sounds/fr/je suis marocaine.mp3",
+						"sounds/fr/je suis mexicaine.mp3",
+						"sounds/fr/je suis canadien.mp3",
+						"sounds/fr/je suis française.mp3",
+						"sounds/fr/je suis chinois.mp3",
+						"sounds/fr/je suis sénégalaise.mp3"
+					],
+					"titleText": "DropDowns"
+				}
+			},
+			{
+				"answerTable1": {
+					"component": "AnswerTable",
+					"congratulationsText": "Well done!",
+					"htmlContent": "<p>The <b>AnswerTable</b> component, uses phrases to populate the left column of a table. The second of each phrase is the correct answer to the question. The user must type  the correct answer into the input in the right hand column and press the 'Check'. Button. The text box is a compact <b>Monologue</b> component, see below.</p>",
+					"id": "AnswerTable1",
+					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
+					"header": [
+						"Masculine",
+						"feminine"
+					],
+					"phrases": [
+						[
+							"américain",
+							"américaine"
+						],
+						[
+							"asiatique",
+							"asiatique"
+						],
+						[
+							"brésilien",
+							"brésilienne"
+						],
+						[
+							"croate",
+							"croate"
+						],
+						[
+							"danois",
+							"danoise"
+						],
+						[
+							"italien",
+							"italienne"
+						],
+						[
+							"portugais",
+							"portugaise"
+						],
+						[
+							"russe",
+							"russe"
+						],
+						[
+							"ukrainien",
+							"ukrainien"
+						],
+						[
+							"célibataire",
+							"célibataire"
+						],
+						[
+							"fatigué",
+							"fatiguée"
+						],
+						[
+							"malade",
+							"malade"
+						],
+						[
+							"marié",
+							"mariée"
+						],
+						[
+							"dentiste",
+							"dentiste"
+						],
+						[
+							"doctorant",
+							"doctorante"
+						],
+						[
+							"étudiant",
+							"étudiante"
+						],
+						[
+							"informaticien",
+							"informaticienne"
+						],
+						[
+							"journaliste",
+							"journaliste"
+						],
+						[
+							"mécanicien",
+							"mécanicienne"
+						],
+						[
+							"médecin",
+							"médecin"
+						],
+						[
+							"pharmacien",
+							"pharmacienne"
+						]
+					],
+					"titleText": "AnswerTable"
+				}
+			}
+		],
+		"htmlContent": "<p>This <b>Group</b> component is for grouping a number of other components together. I have generally used it for grouping Exercises in the real learning objects.</p>",
+		"id": "group1",
+		"titleText": "Group"
+	},
+	"group4": {
+		"component": "Group",
+		"content": [
+			{
+				"wordsIntoSlots1": {
+					"component": "Blanks",
+					"htmlContent": "<p>The <b>'blanksType': 'table'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into a 2 column table.</p><p>After two mistakes, help and cheat options are revealled.</p>",
+					"id": "wordsIntoSlots1",
+					"congratulationsText": "Well done!",
+					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"moi",
+						"roi",
+						"homme",
+						"hôtel",
+						"hôpital",
+						"bonjour",
+						"bonbon",
+						"au revoir",
+						"mon",
+						"trois",
+						"horrible",
+						"toi",
+						"quoi",
+						"froid",
+						"ton",
+						"non",
+						"bon",
+						"son",
+						"nom"
+					],
+					"soundFile": "sounds/fr/non-existant.mp3",
+					"titleText": "Blanks blanksType='table'"
+				}
+			},
+			{
+				"wordsIntoSlots2": {
+					"component": "Blanks",
+					"congratulationsText": "Well done!",
+					"htmlContent": "<p>The <b>'blanksType': 'questions-answers'</b> configuration of the <b>Blanks</b> component, uses the answers to make tiles which can be dropped into the second column of a 2 column table, where the questions are used to populate the left column.</p><p>When the puzzle is complete, sound files are revealed in a third column.</p><p>After two mistakes, help and cheat options are revealled.</p>",
+					"id": "wordsIntoSlots2",
+					"instructionsText": "Match the questions and answers",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "questions-answers",
+					"questions": [
+						"Salut les enfants ! Tout va bien ?",
+						"Tu es archiviste ?",
+						"Monsieur Tondereau est journaliste ?",
+						"Que faites-vous dans la vie ?"
+					],
+					"answers": [
+						"Moi, oui, ça va … mais Jo est malade depuis hier.",
+						"Ah non ! je suis étudiante en histoire.",
+						"Non, il est bibliothécaire.",
+						"Je suis professeur de géographie."
+					],
+					"soundFiles": [
+						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
+						"sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
+						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
+						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+					],
+					"titleText": "Blanks blanksType='questions-answers'"
+				}
+			},
+			{
+				"phrases3": {
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"component": "Blanks",
+					"congratulationsText": "Very good!",
+					"htmlContent": "<p>The <b>'blanksType': 'phrases'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into the set of phrases. The set of phrases contains square brackets to show where the words must be dropped, the word is hidden in the phrase. On the right hand side there are audio samples to assist the student if needed. Note: the blank spaces are all the same width even for small words, so they don't give an extra clue!</p><p>After two mistakes, help and cheat options are revealled.</p>",
+					"id": "phrases3",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"words NOT NEEDED": [
+						"enfants",
+						"revoir",
+						"appelle",
+						"appelez",
+						"moi"
+					],
+					"phrases": [
+						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+						"Bonjour Madame ! Je m' [appelle] Annie.",
+						"Et [moi], je m'appelle David.",
+						"D'accord. Très bien !",
+						"Merci Madame ! Bonne journée !",
+						"Au [revoir] les enfants !  Bonne journée !"
+					],
+					"audio": [
+						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
+						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
+						"sounds/fr/Et moi, je m'appelle David.mp3",
+						"sounds/fr/D'accord. Très bien !.mp3",
+						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
+						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+					],
+					"titleText": "Blanks blanksType='phrases'"
+				}
+			}
+		],
+		"id": "group4",
+		"titleText": "Blanks"
 	},
 	"connectFour1": {
 		"cheatText": "Cheat",

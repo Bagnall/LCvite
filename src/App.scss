@@ -1,7 +1,7 @@
 // App.scss
 
 @use "./styles/_colours.module.scss";
-@use "./styles/_media-queries.module.scss";
+@use "./styles/_media-queries.scss" as *;
 @use "./styles/_mixins.module.scss";
 @use "./styles/_skin.module.scss";
 @use "./styles/_variables.module.scss";
@@ -63,7 +63,7 @@ html.can-speak {
 	background-color: white;
 	background: white;
 	border-radius: 20px;
-	border: variables.$border-width * 1px ridge darkblue;
+	// border: var(--border-width) * 1px ridge darkblue;
 	color: darkblue;
 	// display: flex;
 	font-size: 40px;
@@ -398,12 +398,12 @@ h2 {
 	}
 }
 
-@include media-queries.respond-above(s) {
+@include respond-above(s) {
 	.container {
 		padding: 2rem 3rem;
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	$header-height: 8rem;
 	#content {
 		padding: 1rem 0;
@@ -441,7 +441,7 @@ h2 {
 		line-height: 1.6em;
 	}
 }
-@include media-queries.respond-above(xl) {
+@include respond-above(xl) {
 	#content {
 		padding: 1rem 2rem;
 		width: calc(100vw - 4rem);

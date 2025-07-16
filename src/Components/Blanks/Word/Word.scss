@@ -1,7 +1,7 @@
 // Word.scss
 
 @use "../../../styles/_colours.module.scss";
-@use "../../../styles/_media-queries.module.scss";
+@use "../../../styles/_media-queries.scss" as *;
 @use "../../../styles/_mixins.module.scss";
 @use "../../../styles/_variables.module.scss";
 
@@ -33,7 +33,7 @@
 	min-height: 1.4rem;
 	display: inline-block;
 
-	@include media-queries.respond-above(s) {
+	@include respond-above(s) {
 		padding: 0.4rem 1rem;
 	}
 }
@@ -88,7 +88,7 @@
 		transition-duration: 1s; //$word-transition-time;
 	}
 }
-@include media-queries.respond-above(l) {
+@include respond-above(l) {
 	.word {
 		&.blank {
 			margin: 0.2rem 1rem;

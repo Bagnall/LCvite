@@ -1,5 +1,5 @@
 // AudioClip.scss
-@use "../../styles/_media-queries.module.scss";
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 
 :root {
@@ -105,7 +105,7 @@ div.audio-container {
 		height: 100%;
 	}
 }
-@include media-queries.respond-above(m) {
+@include respond-above(m) {
 	audio.super-compact {
 		width: 210px;
 	}

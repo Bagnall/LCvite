@@ -96,8 +96,11 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel1` : ''}`}
 					key={`${id}Panel1`}
 				>
-					<p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
-					<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)  In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.  The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose (pic?) you will be able to produce the sound without difficulty!</p>
+					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`}/><p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+					<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
+						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>&nbsp;
+						and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
+						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
 				</div>
 				<div
 					className={`panel`}
@@ -1209,19 +1212,19 @@ export class LO9Grammar extends PureComponent {
 								<tbody>
 									<tr>
 										<td>Île-de-France</td>
-										<td>01</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/01.mp3`}>01</AudioClip></td>
 									</tr>
 									<tr><td>Northwest France</td>
-										<td>02</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/02.mp3`}>02</AudioClip></td>
 									</tr>
 									<tr><td>Northeast France</td>
-										<td>03</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/03.mp3`}>03</AudioClip></td>
 									</tr>
 									<tr><td>Southeast France</td>
-										<td>04</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/04.mp3`}>04</AudioClip></td>
 									</tr>
 									<tr><td>Southwest France</td>
-										<td>05</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/05.mp3`}>05</AudioClip></td>
 									</tr>
 								</tbody>
 							</table>
@@ -1310,6 +1313,7 @@ export class L10Grammar extends PureComponent {
 				>
 					<ol>
 						<li>
+							<img src={resolveAsset(`images/vouloir.jpg`)} title="vouloir" alt="A young girl points to the cake she wants"/>
 							<p>Using the verb <AudioClip className={`audio-link`} soundFile={`sounds/fr/vouloir.mp3`} >vouloir</AudioClip> meaning 'to want'</p>
 							<table>
 								<tbody>

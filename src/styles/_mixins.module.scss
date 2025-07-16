@@ -2,7 +2,7 @@
 _mixins.module.scss
 */
 @use "./colours.module";
-@use "./media-queries.module";
+@use "./media-queries" as *;
 @use "./variables.module";
 
 @mixin header-footer-background {
@@ -94,7 +94,7 @@ _mixins.module.scss
 			}
 		}
 	}
-	@include media-queries.respond-above(s) {
+	@include respond-above(s) {
 		textarea,
 		.comparison-result {
 			width: 60vw;
@@ -131,7 +131,7 @@ _mixins.module.scss
 			padding: 0.25rem 0.25rem;
 		}
 	}
-	@include media-queries.respond-above(s) {
+	@include respond-above(s) {
 		table {
 			td {
 				font-size: 1rem;
