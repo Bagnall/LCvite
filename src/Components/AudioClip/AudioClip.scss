@@ -28,6 +28,14 @@ audio.super-compact {
 	}
 }
 
+@include respond-below(m) {
+	audio {
+		width: 200px;
+		height: var(--compact-dimension); // Half default height
+		vertical-align: middle;
+	}
+}
+
 .audio-link {
 	display: inline-block;
 	position: relative;
@@ -105,6 +113,7 @@ div.audio-container {
 		height: 100%;
 	}
 }
+
 @include respond-above(m) {
 	audio.super-compact {
 		width: 210px;

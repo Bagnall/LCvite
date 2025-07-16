@@ -367,6 +367,7 @@ export class Jigsaw extends React.PureComponent {
 				<p className='clue'>{descriptionText}&nbsp;</p>
 
 				<AudioClip
+					id={`AudioClipFor${id ? id : ''}`}
 					listenText={listenDescriptionText}
 					soundFile={resolveAsset(soundFile)}
 				/>

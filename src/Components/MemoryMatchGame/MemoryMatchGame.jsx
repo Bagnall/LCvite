@@ -64,8 +64,7 @@ export class MemoryMatchGame extends React.PureComponent {
 
 		const { showDialog } = this.props;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
-		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
-		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const newFlipped = [...flipped, card.id];
@@ -112,13 +111,12 @@ export class MemoryMatchGame extends React.PureComponent {
 						nPairs,
 						nTries,
 					});
-				} // else {
-				// 	setTimeout(() => errorAudio.play(), memoryCardTransitionTime);
-				// }
-				setTimeout(() => this.setState({
-					flipped: [],
-					nTries: nTries,
-				}), memoryCardTransitionTime);
+				}
+				setTimeout(() =>
+					this.setState({
+						flipped: [],
+						nTries: nTries,
+					}), memoryCardTransitionTime);
 			}
 		});
 	}
@@ -197,5 +195,5 @@ export class MemoryMatchGame extends React.PureComponent {
 				</div>
 			</div>
 		);
-	}
+	};
 }

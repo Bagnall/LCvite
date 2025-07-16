@@ -90,19 +90,20 @@ export class AudioClip extends React.PureComponent {
 			listenText = '',
 			soundFile,
 		} = this.props;
-		// const {
-		// 	progress = '0%',
-		// } = this.state;
 
 		if (className.includes('link')) {
 			return (
 				<LinkAudioProgress
+					id={id}
+					key={id}
 					soundFile={soundFile}
 				>{children}</LinkAudioProgress>
 			);
 		} else if (className.includes('super-compact')) {
 			return (
 				<CircularAudioProgress
+					id={id}
+					key={id}
 					soundFile={soundFile}
 				/>
 			);
@@ -111,6 +112,8 @@ export class AudioClip extends React.PureComponent {
 				<audio
 					className={`${className ? className : ''}`}
 					controls
+					id={id}
+					key={id}
 					onPlay={() => this.notePlaying(true)}
 					ref={this.audioRef}
 				><source src={soundFile} /></audio>
@@ -123,6 +126,7 @@ export class AudioClip extends React.PureComponent {
 							className={`${className ? className : ''}`}
 							controls
 							id={`${id}`}
+							key={id}
 							onPlay={() => this.notePlaying(true)}
 							ref={this.audioRef}
 						><source src={soundFile}
@@ -134,6 +138,8 @@ export class AudioClip extends React.PureComponent {
 					<audio
 						className={`${className ? className : ''}`}
 						controls
+						id={id}
+						key={id}
 						onPlay={() => this.notePlaying(true)}
 						ref={this.audioRef}
 					><source src={soundFile} /></audio>
