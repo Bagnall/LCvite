@@ -74,15 +74,18 @@ export default class App extends React.Component {
 
 		// console.log("componentDidMount");
 		const queryString = window.location.search;
-		// console.log(queryString);
+
 		const urlParams = new URLSearchParams(queryString);
-		// console.log(urlParams);
+
 		const configFile = urlParams.get('config');
+
+		let LO = parseInt(configFile.replace(/^\D+/g, ''));
+		if (isNaN(LO)) LO = 11;
 
 		let configPromise;
 		if (configFile) {
 			configPromise = this.loadConfig(`./src/${configFile}`);
-			this.loadIndex();
+			this.loadIndex(LO);
 			this.initialiseSpecialAnchors();
 
 			configPromise.then(this.initialiseSynth);
@@ -92,10 +95,7 @@ export default class App extends React.Component {
 	componentDidUpdate = () => {
 		// console.log("componentDidUpdate");
 
-		// const { targetLanguageCode } = this.state;
 		this.initialiseSpecialAnchors();
-		// this.initialiseSynth(targetLanguageCode);
-
 	};
 
 	expandAllAccordions = () => {
@@ -277,7 +277,7 @@ export default class App extends React.Component {
 		});
 	};
 
-	loadIndex = () => {
+	loadIndex = (LO) => {
 		// console.log("loadIndex");
 
 		// Read the index file
@@ -291,8 +291,11 @@ export default class App extends React.Component {
 		};
 
 		let currentLearningObject = 0;
-		if (sessionStorage.getItem("currentLearningObject")) currentLearningObject = parseInt(sessionStorage.getItem("currentLearningObject"));
-
+		if (LO !== undefined && !isNaN(LO)) {
+			currentLearningObject = LO - 1;
+		}else{
+			if (sessionStorage.getItem("currentLearningObject")) currentLearningObject = parseInt(sessionStorage.getItem("currentLearningObject"));
+		}
 		fetch(`./src/index.json`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
@@ -1132,7 +1135,7 @@ export default class App extends React.Component {
 	renderMenu = () => {
 		// console.log("renderMenu");
 		const {
-			currentLearningObject,
+			currentLearningObject = 0,
 			learningObjects
 		} = this.state;
 		const renderedMenu = new Array;

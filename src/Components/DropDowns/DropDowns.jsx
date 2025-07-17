@@ -275,7 +275,7 @@ export class DropDowns extends React.PureComponent {
 
 						cells.push(
 							<td key={`row${i}cell2`}>
-								<AudioClip className={`compact`} soundFile={soundFile} />
+								<AudioClip className={`compact`} id={`row${i}cell2AudioClip`} soundFile={soundFile} />
 							</td>
 						);
 					}
@@ -301,7 +301,7 @@ export class DropDowns extends React.PureComponent {
 			this.nToSolve = nSelects;
 			content = (
 				<div>
-					{audio ? <AudioClip className={`dropdown-audio`} soundFile={`${resolveAsset(audio)}`} /> : null}
+					{audio ? <AudioClip className={`dropdown-audio`} id={`${id ? id : ''}AudioClip`} soundFile={`${resolveAsset(audio)}`} /> : null}
 					<div className={`phrases-html`} dangerouslySetInnerHTML={{ __html: html }}></div>
 					{/* <div className={`phrases-html`}>{html}</div> */}
 				</div>
