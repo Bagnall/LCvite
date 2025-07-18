@@ -12,6 +12,7 @@ const getShuffledDeck = (cards, nCards) => {
 		content: obj.localLanguage,
 		id: `${idx}b`,
 		image: obj.image,
+		localLanguage: obj.localLanguage,
 		match: obj.foreignLanguage,
 		type: 'image',
 	}));
@@ -20,6 +21,7 @@ const getShuffledDeck = (cards, nCards) => {
 		content: obj.foreignLanguage,
 		id: `${idx}a`,
 		image: `img-${idx}`,
+		localLanguage: obj.localLanguage,
 		match: obj.localLanguage,
 		type: 'text',
 	}));
@@ -128,6 +130,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			descriptionText,
 			flipped,
 			htmlContent,
+			id,
 			instructionsText,
 			instructionsTextHTML,
 			matched,
@@ -148,7 +151,7 @@ export class MemoryMatchGame extends React.PureComponent {
 			return 0;
 		});
 		return (
-			<div className={`memory-match-game-container`}>
+			<div id={`${id}`} className={`memory-match-game-container`}>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
@@ -166,7 +169,7 @@ export class MemoryMatchGame extends React.PureComponent {
 							{cards.map(card => (
 								<Card
 									card={card}
-									className={`${beenFlipped.includes(card.id) || matched.includes(card.id) ? 'been-flipped' : ''} ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
+									className={`${card.localLanguage} ${beenFlipped.includes(card.id) || matched.includes(card.id) ? 'been-flipped' : ''} ${flipped.includes(card.id) || matched.includes(card.id) ? 'flipped' : ''} ${matched.includes(card.id) ? 'matched' : ''}`}
 									handleClick={this.handleClick}
 									key={`card${card.id}`}
 								/>

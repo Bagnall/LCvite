@@ -13,12 +13,8 @@ html.debug {
 		}
 	}
 }
-// $body: #190d23;
 $none: rgba(#fff, 0);
-// $card: #f5e3e3;
 $blue: #302e9b;
-// $red: #b32b28;
-// $yellow: #bdb725;
 $border-radius: 10px;
 $transition-time: variables.$memory-card-transition-time;
 .memory-match-game {
@@ -28,17 +24,13 @@ $transition-time: variables.$memory-card-transition-time;
 }
 
 .memory-map-container {
-	// transform: scale(0.9);
 	min-width: 670px;
 	display: grid;
 	grid-template-columns: 1fr 0.1fr;
-	// grid-auto-columns: minmax(100px, auto) minmax(100px, auto); // minmax(max-content, 2fr); // minmax(20%, 80vmax);
 	grid-template-rows: auto 1fr;
-	// gap: 0.5rem;
 	max-width: 100%;
 	min-height: 500px;
 	align-items: start;
-	// box-shadow: 16px 16px 32px rgba(0, 0, 255, 1);
 	> h2 {
 		text-align: center;
 		margin: 0;
@@ -47,11 +39,6 @@ $transition-time: variables.$memory-card-transition-time;
 	}
 	.cards {
 		padding: 0 0 2rem 1rem;
-		// display: grid;
-		// grid-template-columns: repeat(3, 1fr);
-		// grid-template-rows: repeat(auto-fill, minmax(min(7rem, 100%), 1fr));
-		// grid-column-gap: 0.5rem;
-		// grid-row-gap: 0.2rem;
 		max-width: 1000px;
 		margin: 0 auto; // 1rem;
 		perspective: 2000px;
@@ -61,25 +48,17 @@ $transition-time: variables.$memory-card-transition-time;
 		grid-template-rows: repeat(auto);
 		gap: 0.5rem; /* spacing between items */
 		width: fit-content;
-		// margin: auto;
 	}
+
 	.matches-container {
 		display: flex;
 		align-items: flex-end;
 	}
+
 	.matches {
-		// display: grid;
-		// gap: 0.5rem;
 		min-width: 300px;
-		// padding: 1.66rem; // To compensate for the 0.6 scale see below
-		// transform: scale(0.6);
-		// fit-content(0.8);
 		transform-origin: top;
-		// grid-template-columns: repeat(2, 1fr);
-		// grid-template-rows: repeat(auto-fill, minmax(min(7rem, 11%), 6rem));
 		grid-row-gap: 0.5rem;
-		// grid-row-gap: 0.5rem;
-		// align-self: start;
 
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -87,8 +66,6 @@ $transition-time: variables.$memory-card-transition-time;
 		margin: auto;
 		> div {
 			max-height: 60px;
-			// max-width: 100px; // Shirnks the card :-(
-			// overflow: visible;
 			display: flex;
 			align-items: flex-start;
 			justify-content: flex-end;
@@ -115,6 +92,7 @@ $transition-time: variables.$memory-card-transition-time;
 			}
 		}
 	}
+
 	@keyframes revealText {
 		0% {
 			transform: rotateX(0deg) rotateZ(-5deg);
@@ -123,6 +101,7 @@ $transition-time: variables.$memory-card-transition-time;
 			transform: rotateX(180deg) rotateZ(10deg);
 		}
 	}
+
 	@keyframes revealImage {
 		0% {
 			transform: rotateX(0deg) rotateZ(5deg);
@@ -131,6 +110,7 @@ $transition-time: variables.$memory-card-transition-time;
 			transform: rotateX(180deg) rotateZ(-10deg);
 		}
 	}
+
 	@keyframes shadow {
 		0% {
 			background-color: rgba(255, 0, 0, 0);
@@ -150,6 +130,7 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
+
 @include respond-above(m) {
 	.memory-map-container {
 		.matches {
@@ -157,10 +138,9 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
+
 @include respond-above(l) {
 	.memory-map-container {
-		// transform: scale(1);
-		// gap: 0.5rem;
 		&.num16cards {
 			min-height: 600px;
 		}
@@ -174,17 +154,15 @@ $transition-time: variables.$memory-card-transition-time;
 		.matches {
 			min-width: 250px;
 			padding: 0 0.6rem;
-			// gap: 0.5rem;
 		}
 	}
 }
+
 @include respond-above(xl) {
 	.memory-map-container {
-		// transform: scale(1);
 		gap: 0.5rem;
 		.cards {
 			grid-template-columns: repeat(4, 1fr);
-			// grid-column-gap: 0.5rem;
 			grid-row-gap: 0.5rem;
 		}
 		.matches {
@@ -193,6 +171,7 @@ $transition-time: variables.$memory-card-transition-time;
 		}
 	}
 }
+
 @include respond-above(xxl) {
 	.memory-map-container {
 		min-height: 600px;
@@ -206,10 +185,6 @@ $transition-time: variables.$memory-card-transition-time;
 			min-width: 280px;
 			> div {
 				max-height: 70px;
-				// max-width: 100px; // Shirnks the card :-(
-				// overflow: visible;
-				// display: flex;
-				// align-items: flex-end;
 			}
 		}
 	}

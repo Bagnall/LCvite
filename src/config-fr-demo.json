@@ -574,6 +574,177 @@
 					"showHintsText": "Show hints",
 					"titleText": "Animals"
 				}
+			},
+			{
+				"memorycards4": {
+					"cheatText": "Cheat",
+					"component": "MemoryMatchGame",
+					"congratulationsText": "Congratulations!",
+					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
+					"id": "MemoryMatchGame4",
+					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"nPairsToPlay": 26,
+					"cards": [
+						{
+							"audio": "sounds/fr/L'avion.mp3",
+							"foreignLanguage": "L'avion",
+							"localLanguage": "aeroplane",
+							"image": "images/memory-transport/aeroplane.png"
+						},
+						{
+							"audio": "sounds/fr/le gyrocoptère.mp3",
+							"foreignLanguage": "le gyrocoptère",
+							"localLanguage": "gyrocopter",
+							"image": "images/memory-transport/gyrocopter.png"
+						},
+						{
+							"audio": "sounds/fr/Le dirigeable.mp3",
+							"foreignLanguage": "Le dirigeable",
+							"localLanguage": "airship",
+							"image": "images/memory-transport/airship.png"
+						},
+						{
+							"audio": "sounds/fr/Le ballon.mp3",
+							"foreignLanguage": "Le ballon",
+							"localLanguage": "balloon",
+							"image": "images/memory-transport/balloon.png"
+						},
+						{
+							"audio": "sounds/fr/Le vélo.mp3",
+							"foreignLanguage": "Le vélo",
+							"localLanguage": "bicycle",
+							"image": "images/memory-transport/bicycle.png"
+						},
+						{
+							"audio": "sounds/fr/Le bateau.mp3",
+							"foreignLanguage": "Le bateau",
+							"localLanguage": "boat",
+							"image": "images/memory-transport/boat.png"
+						},
+						{
+							"audio": "sounds/fr/Le bus.mp3",
+							"foreignLanguage": "Le bus",
+							"localLanguage": "bus",
+							"image": "images/memory-transport/bus.png"
+						},
+						{
+							"audio": "sounds/fr/Le téléphérique.mp3",
+							"foreignLanguage": "Le téléphérique",
+							"localLanguage": "cablecar",
+							"image": "images/memory-transport/cablecar.png"
+						},
+						{
+							"audio": "sounds/fr/Le camping-car.mp3",
+							"foreignLanguage": "Le camping-car",
+							"localLanguage": "campervan",
+							"image": "images/memory-transport/campervan.png"
+						},
+						{
+							"audio": "sounds/fr/La voiture.mp3",
+							"foreignLanguage": "La voiture",
+							"localLanguage": "car",
+							"image": "images/memory-transport/car.png"
+						},
+						{
+							"audio": "sounds/fr/Le planeur.mp3",
+							"foreignLanguage": "Le planeur",
+							"localLanguage": "glider",
+							"image": "images/memory-transport/glider.png"
+						},
+						{
+							"audio": "sounds/fr/Le deltaplane.mp3",
+							"foreignLanguage": "Le deltaplane",
+							"localLanguage": "hang-glider",
+							"image": "images/memory-transport/hang-glider.png"
+						},
+						{
+							"audio": "sounds/fr/L'hélicoptère.mp3",
+							"foreignLanguage": "L'hélicoptère",
+							"localLanguage": "helicopter",
+							"image": "images/memory-transport/helicopter.png"
+						},
+						{
+							"audio": "sounds/fr/Le jet-ski.mp3",
+							"foreignLanguage": "Le jet-ski",
+							"localLanguage": "jetski",
+							"image": "images/memory-transport/jetski.png"
+						},
+						{
+							"audio": "sounds/fr/Le paquebot.mp3",
+							"foreignLanguage": "Le paquebot",
+							"localLanguage": "liner",
+							"image": "images/memory-transport/liner.png"
+						},
+						{
+							"audio": "sounds/fr/Le monorail.mp3",
+							"foreignLanguage": "Le monorail",
+							"localLanguage": "monorail",
+							"image": "images/memory-transport/monorail.png"
+						},
+						{
+							"audio": "sounds/fr/La moto.mp3",
+							"foreignLanguage": "La moto",
+							"localLanguage": "motorcycle",
+							"image": "images/memory-transport/motorcycle.png"
+						},
+						{
+							"audio": "sounds/fr/La péniche.mp3",
+							"foreignLanguage": "La péniche",
+							"localLanguage": "narrowboat",
+							"image": "images/memory-transport/narrowboat.png"
+						},
+						{
+							"audio": "sounds/fr/La fusée.mp3",
+							"foreignLanguage": "La fusée",
+							"localLanguage": "rocket",
+							"image": "images/memory-transport/rocket.png"
+						},
+						{
+							"audio": "sounds/fr/Le scooter.mp3",
+							"foreignLanguage": "Le scooter",
+							"localLanguage": "scooter",
+							"image": "images/memory-transport/scooter.png"
+						},
+						{
+							"audio": "sounds/fr/L'hydravion.mp3",
+							"foreignLanguage": "L'hydravion",
+							"localLanguage": "seaplane",
+							"image": "images/memory-transport/seaplane.png"
+						},
+						{
+							"audio": "sounds/fr/Le sous-marin.mp3",
+							"foreignLanguage": "Le sous-marin",
+							"localLanguage": "submarine",
+							"image": "images/memory-transport/submarine.png"
+						},
+						{
+							"audio": "sounds/fr/Le train.mp3",
+							"foreignLanguage": "Le train",
+							"localLanguage": "train",
+							"image": "images/memory-transport/train.png"
+						},
+						{
+							"audio": "sounds/fr/L'aéroglisseur.mp3",
+							"foreignLanguage": "L'aéroglisseur",
+							"localLanguage": "hovercraft",
+							"image": "images/memory-transport/hovercraft.png"
+						},
+						{
+							"audio": "sounds/fr/Le tramway.mp3",
+							"foreignLanguage": "Le tramway",
+							"localLanguage": "tram",
+							"image": "images/memory-transport/tram.png"
+						},
+						{
+							"audio": "sounds/fr/Le camion.mp3",
+							"foreignLanguage": "Le camion",
+							"localLanguage": "truck",
+							"image": "images/memory-transport/truck.png"
+						}
+					],
+					"showHintsText": "Show hints",
+					"titleText": "Transport"
+				}
 			}
 		],
 		"id": "connectFour1",

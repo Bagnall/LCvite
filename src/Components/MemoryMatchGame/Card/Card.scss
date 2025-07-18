@@ -9,6 +9,57 @@ $units: 4px;
 $none: rgba(#fff, 0);
 $blue: #302e9b;
 $card-back-border-width: 8px;
+#MemoryMatchGame4 {
+	.card {
+		.card-contents-container {
+			.card-image-container {
+				background-size: 80%;
+			}
+		}
+		&.aeroplane,
+		&.airship,
+		&.car,
+		&.hang-glider,
+		&.hovercraft,
+		&.monorail,
+		&.narrowboat {
+			.card-contents-container {
+				.card-image-container {
+					background-size: 100%;
+				}
+			}
+		}
+		&.bicycle {
+			.card-contents-container {
+				.card-image-container {
+					background-size: 86%;
+				}
+			}
+		}
+		&.tram,
+		&.balloon {
+			.card-contents-container {
+				.card-image-container {
+					background-size: 68%;
+				}
+			}
+		}
+		&.cablecar {
+			.card-contents-container {
+				.card-image-container {
+					background-size: 60%;
+				}
+			}
+		}
+		&.rocket {
+			.card-contents-container {
+				.card-image-container {
+					background-size: 40%;
+				}
+			}
+		}
+	}
+}
 
 .card {
 	background-color: white;
@@ -125,6 +176,7 @@ $card-back-border-width: 8px;
 		}
 	}
 }
+
 .cards {
 	.card {
 		height: 100px * 0.7;
@@ -132,6 +184,7 @@ $card-back-border-width: 8px;
 		font-size: 0.8rem;
 	}
 }
+
 .matches {
 	.card {
 		height: 100px * 0.6;
@@ -139,6 +192,7 @@ $card-back-border-width: 8px;
 		font-size: 0.6rem;
 	}
 }
+
 @include respond-above(l) {
 	.cards {
 		.card {
@@ -203,6 +257,7 @@ $card-back-border-width: 8px;
 		background-color: rgba(255, 0, 0, 0);
 	}
 }
+
 @keyframes shadeHalf {
 	0% {
 		background-color: rgba(0, 0, 0, 0.4); //blue; //rgba(255, 0, 0, 0.4);
