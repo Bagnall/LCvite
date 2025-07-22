@@ -21,7 +21,6 @@ $card-back-border-width: 8px;
 		&.car,
 		&.hang-glider,
 		&.hovercraft,
-		&.monorail,
 		&.narrowboat {
 			.card-contents-container {
 				.card-image-container {
@@ -29,6 +28,7 @@ $card-back-border-width: 8px;
 				}
 			}
 		}
+		&.monorail,
 		&.bicycle {
 			.card-contents-container {
 				.card-image-container {

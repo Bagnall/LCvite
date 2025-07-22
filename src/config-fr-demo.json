@@ -223,6 +223,11 @@
 							"sounds/fr/médecin.mp3"
 						],
 						[
+							"pilote",
+							"pilot",
+							"sounds/fr/médecin.mp3"
+						],
+						[
 							"archiviste",
 							"archivist",
 							"sounds/fr/archiviste.mp3"
@@ -245,6 +250,282 @@
 					],
 					"showHintsText": "Show hints",
 					"titleText": "Occupations"
+				}
+			},
+			{
+				"wordGrid4": {
+					"cheatText": "Cheat",
+					"component": "WordGrid",
+					"congratulationsText": "Well done, you found them all!",
+					"id": "WordGrid4",
+					"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+					"words": [
+						[
+							"pomme",
+							"apple",
+							"sounds/fr/une pomme.mp3"
+						],
+						[
+							"bacon",
+							"bacon",
+							"sounds/fr/du bacon.mp3"
+						],
+						[
+							"banane",
+							"banana",
+							"sounds/fr/une banane.mp3"
+						],
+						[
+							"bière",
+							"beer",
+							"sounds/fr/une bière.mp3"
+						],
+						[
+							"pain",
+							"bread",
+							"sounds/fr/du pain.mp3"
+						],
+						[
+							"beurre",
+							"butter",
+							"sounds/fr/du beurre.mp3"
+						],
+						[
+							"tomates",
+							"tomatoes",
+							"sounds/fr/tomates.mp3"
+						],
+						[
+							"carotte",
+							"carrot",
+							"sounds/fr/une carotte.mp3"
+						],
+						[
+							"fromage",
+							"cheese",
+							"sounds/fr/du fromage.mp3"
+						],
+						[
+							"cheesecake",
+							"cheesecake",
+							"sounds/fr/du cheesecake.mp3"
+						],
+						[
+							"poulet",
+							"chicken",
+							"sounds/fr/un poulet.mp3"
+						],
+						[
+							"chocolat",
+							"chocolate",
+							"sounds/fr/du chocolat.mp3"
+						],
+						[
+							"croissant",
+							"croissant",
+							"sounds/fr/un croissant.mp3"
+						],
+						[
+							"œuf",
+							"egg",
+							"sounds/fr/un œuf.mp3"
+						],
+						[
+							"poisson",
+							"fish",
+							"sounds/fr/un poisson.mp3"
+						],
+						[
+							"glace",
+							"ice cream",
+							"sounds/fr/une glace.mp3"
+						],
+						[
+							"lasagne",
+							"lasagne",
+							"sounds/fr/une lasagne.mp3"
+						],
+						[
+							"limonade",
+							"lemonade",
+							"sounds/fr/de la limonade.mp3"
+						],
+						[
+							"lait",
+							"milk",
+							"sounds/fr/du lait.mp3"
+						],
+						[
+							"oignon",
+							"onion",
+							"sounds/fr/des oignons.mp3"
+						],
+						[
+							"pâtes",
+							"pasta",
+							"sounds/fr/des pâtes.mp3"
+						],
+						[
+							"pizza",
+							"pizza",
+							"sounds/fr/une pizza.mp3"
+						],
+						[
+							"riz",
+							"rice",
+							"sounds/fr/du riz.mp3"
+						],
+						[
+							"salade",
+							"salad",
+							"sounds/fr/une salade.mp3"
+						],
+						[
+							"champagne",
+							"champagne",
+							"sounds/fr/champagne.mp3"
+						],
+						[
+							"fraise",
+							"strawberry",
+							"sounds/fr/des fraises.mp3"
+						],
+						[
+							"sucre",
+							"sugar",
+							"sounds/fr/du sucre.mp3"
+						],
+						[
+							"maïs",
+							"sweetcorn",
+							"sounds/fr/du maïs.mp3"
+						]
+					],
+					"showHintsText": "Show hints",
+					"titleText": "Food"
+				}
+			},
+			{
+				"wordGrid5": {
+					"cheatText": "Cheat",
+					"component": "WordGrid",
+					"congratulationsText": "Well done, you found them all!",
+					"id": "WordGrid5",
+					"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+					"words": [
+						[
+							"avion",
+							"aeroplane",
+							"sounds/fr/L'avion.mp3"
+						],
+						[
+							"gyrocoptère",
+							"gyrocopter",
+							"sounds/fr/le gyrocoptère.mp3"
+						],
+						[
+							"dirigeable",
+							"airship",
+							"sounds/fr/Le dirigeable.mp3"
+						],
+						[
+							"ballon",
+							"balloon",
+							"sounds/fr/Le ballon.mp3"
+						],
+						[
+							"vélo",
+							"bicycle",
+							"sounds/fr/Le vélo.mp3"
+						],
+						[
+							"bateau",
+							"boat",
+							"sounds/fr/Le bateau.mp3"
+						],
+						[
+							"bus",
+							"bus",
+							"sounds/fr/Le bus.mp3"
+						],
+						[
+							"téléphérique",
+							"cablecar",
+							"sounds/fr/Le téléphérique.mp3"
+						],
+						[
+							"voiture",
+							"car",
+							"sounds/fr/La voiture.mp3"
+						],
+						[
+							"planeur",
+							"glider",
+							"sounds/fr/Le planeur.mp3"
+						],
+						[
+							"deltaplane",
+							"hang-glider",
+							"sounds/fr/Le deltaplane.mp3"
+						],
+						[
+							"hélicoptère",
+							"helicopter",
+							"sounds/fr/L'hélicoptère.mp3"
+						],
+						[
+							"paquebot",
+							"liner",
+							"sounds/fr/Le paquebot.mp3"
+						],
+						[
+							"monorail",
+							"monorail",
+							"sounds/fr/Le monorail.mp3"
+						],
+						[
+							"moto",
+							"motorcycle",
+							"sounds/fr/La moto.mp3"
+						],
+						[
+							"péniche",
+							"narrowboat",
+							"sounds/fr/La péniche.mp3"
+						],
+						[
+							"fusée",
+							"rocket",
+							"sounds/fr/La fusée.mp3"
+						],
+						[
+							"scooter",
+							"scooter",
+							"sounds/fr/Le scooter.mp3"
+						],
+						[
+							"train",
+							"train",
+							"sounds/fr/Le train.mp3"
+						],
+						[
+							"aéroglisseur",
+							"hovercraft",
+							"sounds/fr/L'aéroglisseur.mp3"
+						],
+						[
+							"tramway",
+							"tram",
+							"sounds/fr/Le tramway.mp3"
+						],
+						[
+							"camion",
+							"truck",
+							"sounds/fr/Le camion.mp3"
+						]
+					],
+					"showHintsText": "Show hints",
+					"titleText": "Transport"
 				}
 			}
 		],
@@ -580,7 +861,7 @@
 					"cheatText": "Cheat",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
-					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
+					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 26 pairs from the stock pairs. It's a bit OTT, but challenging. Suggest reducing to 20 or less for acual incorporation.</p>",
 					"id": "MemoryMatchGame4",
 					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
 					"nPairsToPlay": 26,
@@ -745,20 +1026,255 @@
 					"showHintsText": "Show hints",
 					"titleText": "Transport"
 				}
+			},
+			{
+				"memorycards5": {
+					"cheatText": "Cheat",
+					"component": "MemoryMatchGame",
+					"congratulationsText": "Congratulations!",
+					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"nPairsToPlay": 12,
+					"cards": [
+						{
+							"foreignLanguage": "une pomme",
+							"localLanguage": "apple",
+							"image": "images/memory-food/apple.png",
+							"audio": "sounds/fr/une pomme.mp3"
+						},
+						{
+							"foreignLanguage": "raisins",
+							"localLanguage": "grapes",
+							"image": "images/memory-food/grapes.png",
+							"audio": "sounds/fr/raisins.mp3"
+						},
+						{
+							"foreignLanguage": "oranges",
+							"localLanguage": "oranges",
+							"image": "images/memory-food/oranges.png",
+							"audio": "sounds/fr/oranges.mp3"
+						},
+						{
+							"foreignLanguage": "tomates",
+							"localLanguage": "tomatoes",
+							"image": "images/memory-food/tomatoes.png",
+							"audio": "sounds/fr/tomates.mp3"
+						},
+						{
+							"foreignLanguage": "champagne",
+							"localLanguage": "champagne",
+							"image": "images/memory-food/champagne.png",
+							"audio": "sounds/fr/champagne.mp3"
+						},
+						{
+							"foreignLanguage": "du bacon",
+							"localLanguage": "bacon",
+							"image": "images/memory-food/bacon.png",
+							"audio": "sounds/fr/du bacon.mp3"
+						},
+						{
+							"foreignLanguage": "une banane",
+							"localLanguage": "banana",
+							"image": "images/memory-food/banana.png",
+							"audio": "sounds/fr/une banane.mp3"
+						},
+						{
+							"foreignLanguage": "du bœuf",
+							"localLanguage": "beef",
+							"image": "images/memory-food/beef.png",
+							"audio": "sounds/fr/du bœuf.mp3"
+						},
+						{
+							"foreignLanguage": "une bière",
+							"localLanguage": "beer",
+							"image": "images/memory-food/beer.png",
+							"audio": "sounds/fr/une bière.mp3"
+						},
+						{
+							"foreignLanguage": "du pain",
+							"localLanguage": "bread",
+							"image": "images/memory-food/bread.png",
+							"audio": "sounds/fr/du pain.mp3"
+						},
+						{
+							"foreignLanguage": "du beurre",
+							"localLanguage": "butter",
+							"image": "images/memory-food/butter.png",
+							"audio": "sounds/fr/du beurre.mp3"
+						},
+						{
+							"foreignLanguage": "une carotte",
+							"localLanguage": "carrot",
+							"image": "images/memory-food/carrot.png",
+							"audio": "sounds/fr/une carotte.mp3"
+						},
+						{
+							"foreignLanguage": "un chou-fleur",
+							"localLanguage": "cauliflower",
+							"image": "images/memory-food/cauliflower.png",
+							"audio": "sounds/fr/un chou-fleur.mp3"
+						},
+						{
+							"foreignLanguage": "du fromage",
+							"localLanguage": "cheese",
+							"image": "images/memory-food/cheese.png",
+							"audio": "sounds/fr/du fromage.mp3"
+						},
+						{
+							"foreignLanguage": "du cheesecake",
+							"localLanguage": "cheesecake",
+							"image": "images/memory-food/cheesecake.png",
+							"audio": "sounds/fr/du cheesecake.mp3"
+						},
+						{
+							"foreignLanguage": "un poulet",
+							"localLanguage": "chicken",
+							"image": "images/memory-food/chicken.png",
+							"audio": "sounds/fr/un poulet.mp3"
+						},
+						{
+							"foreignLanguage": "du chocolat",
+							"localLanguage": "chocolate",
+							"image": "images/memory-food/chocolate.png",
+							"audio": "sounds/fr/du chocolat.mp3"
+						},
+						{
+							"foreignLanguage": "un croissant",
+							"localLanguage": "croissant",
+							"image": "images/memory-food/croissant.png",
+							"audio": "sounds/fr/un croissant.mp3"
+						},
+						{
+							"foreignLanguage": "un œuf",
+							"localLanguage": "egg",
+							"image": "images/memory-food/egg.png",
+							"audio": "sounds/fr/un œuf.mp3"
+						},
+						{
+							"foreignLanguage": "un poisson",
+							"localLanguage": "fish",
+							"image": "images/memory-food/fish.png",
+							"audio": "sounds/fr/un poisson.mp3"
+						},
+						{
+							"foreignLanguage": "de l'ail",
+							"localLanguage": "garlic",
+							"image": "images/memory-food/garlic.png",
+							"audio": "sounds/fr/de l'ail.mp3"
+						},
+						{
+							"foreignLanguage": "une glace",
+							"localLanguage": "ice cream",
+							"image": "images/memory-food/ice-cream.png",
+							"audio": "sounds/fr/une glace.mp3"
+						},
+						{
+							"foreignLanguage": "une lasagne",
+							"localLanguage": "lasagne",
+							"image": "images/memory-food/lasagne.png",
+							"audio": "sounds/fr/une lasagne.mp3"
+						},
+						{
+							"foreignLanguage": "de la limonade",
+							"localLanguage": "lemonade",
+							"image": "images/memory-food/lemonade.png",
+							"audio": "sounds/fr/de la limonade.mp3"
+						},
+						{
+							"foreignLanguage": "du lait",
+							"localLanguage": "milk",
+							"image": "images/memory-food/milk.png",
+							"audio": "sounds/fr/du lait.mp3"
+						},
+						{
+							"foreignLanguage": "des oignons",
+							"localLanguage": "onions",
+							"image": "images/memory-food/onions.png",
+							"audio": "sounds/fr/des oignons.mp3"
+						},
+						{
+							"foreignLanguage": "des pâtes",
+							"localLanguage": "pasta",
+							"image": "images/memory-food/pasta.png",
+							"audio": "sounds/fr/des pâtes.mp3"
+						},
+						{
+							"foreignLanguage": "des petits pois",
+							"localLanguage": "peas",
+							"image": "images/memory-food/peas.png",
+							"audio": "sounds/fr/des petits pois.mp3"
+						},
+						{
+							"foreignLanguage": "des poivrons",
+							"localLanguage": "peppers",
+							"image": "images/memory-food/peppers.png",
+							"audio": "sounds/fr/des poivrons.mp3"
+						},
+						{
+							"foreignLanguage": "une pizza",
+							"localLanguage": "pizza",
+							"image": "images/memory-food/pizza.png",
+							"audio": "sounds/fr/une pizza.mp3"
+						},
+						{
+							"foreignLanguage": "une pomme de terre",
+							"localLanguage": "potato",
+							"image": "images/memory-food/potato.png",
+							"audio": "sounds/fr/une pomme de terre.mp3"
+						},
+						{
+							"foreignLanguage": "un vin rouge",
+							"localLanguage": "red wine",
+							"image": "images/memory-food/red-wine.png",
+							"audio": "sounds/fr/un vin rouge.mp3"
+						},
+						{
+							"foreignLanguage": "du riz",
+							"localLanguage": "rice",
+							"image": "images/memory-food/rice.png",
+							"audio": "sounds/fr/du riz.mp3"
+						},
+						{
+							"foreignLanguage": "une salade",
+							"localLanguage": "salad",
+							"image": "images/memory-food/salad.png",
+							"audio": "sounds/fr/une salade.mp3"
+						},
+						{
+							"foreignLanguage": "des fraises",
+							"localLanguage": "strawberries",
+							"image": "images/memory-food/strawberries.png",
+							"audio": "sounds/fr/des fraises.mp3"
+						},
+						{
+							"foreignLanguage": "du sucre",
+							"localLanguage": "sugar",
+							"image": "images/memory-food/sugar.png",
+							"audio": "sounds/fr/du sucre.mp3"
+						},
+						{
+							"foreignLanguage": "du maïs",
+							"localLanguage": "sweetcorn",
+							"image": "images/memory-food/sweetcorn.png",
+							"audio": "sounds/fr/du maïs.mp3"
+						}
+					],
+					"id": "MemoryMatchGame5",
+					"titleText": "Food"
+				}
 			}
 		],
-		"id": "connectFour1",
+		"id": "group3",
 		"titleText": "Memory Cards"
 	},
 	"explanation1": {
 		"component": "Explanation",
 		"content": [
-			"<p><b>.speak</b></p><p>If you add a pair of tags around part of a phrase, for example &lt;span class(Name)='speak'&gt;&lt;/span&gt; or &lt;b class='speak'&gt;&lt;b&gt;, the system will recognise the content and turn it into a virtual anchor tag, which when clicked, will be heard by the student. <span class='speak'>Par example ici</span>. The code will also add a title tag so that when the 'link' is hovered, contect help balloon displays 'Click to play sound'.</p><p>You can also have other braces of tags within, for example &lt;span class='speak'&gt;The &lt;b&gt;<b>click</b>&lt;b&gt; event will bubble up to the owner of the .speak class&lt;/span&gt; e.g. <span class='speak'>Text and <b>bold</b> text.</span></span>. Try clicking on <b>bold</b> and normal parts of the string. Note 'class' for html in a string, 'className' in JSX.</p><p>Unfortunately, apart from Chrome, you need to have the correct Windows language packs installed (via settings). Also, Opera doesn't handle voice recognition correctly.</p>"
+			"<b>.speak</b></p><p>If you add a pair of tags around part of a phrase, for example &lt;span class(Name)='speak'&gt;&lt;/span&gt; or &lt;b class='speak'&gt;&lt;b&gt;, the system will recognise the content and turn it into a virtual anchor tag, which when clicked, will be heard by the student. <span class='speak'>Par example ici</span>. The code will also add a title tag so that when the 'link' is hovered, contect help balloon displays 'Click to play sound'.</p><p>You can also have other braces of tags within, for example &lt;span class='speak'&gt;The &lt;b&gt;<b>click</b>&lt;b&gt; event will bubble up to the owner of the .speak class&lt;/span&gt; e.g. <span class='speak'>Text and <b>bold</b> text.</span></span>. Try clicking on <b>bold</b> and normal parts of the string. Note 'class' for html in a string, 'className' in JSX.</p><p>Unfortunately, apart from Chrome, you need to have the correct Windows language packs installed (via settings). Also, Opera doesn't handle voice recognition correctly.</p>"
 		],
 		"id": "explanation1",
 		"titleText": "The .speak class"
 	},
-	"audioClip1": {
+	"audioClip": {
 		"component": "AudioClipSamples",
 		"id": "AudioClip1",
 		"titleText": "AudioClip Types and Samples"
@@ -773,7 +1289,7 @@
 	},
 	"readaloud2": {
 		"component": "ReadAloud",
-		"id": "ReadAloud2",
+		"id": "readAloud2",
 		"htmlContent": "<p>This <b>ReadAloud</b> component presents a phrase for the student to read out loud.</p><p>The browser listens and then uses the  'Monologue' component to compare what it thinks it hears against the target phrase and displays the differences.</p>",
 		"instructionsText": "Press the Record button and read the phrase please.",
 		"phrase": "Bonjour, je suis anglaise et je suis mariée.",
@@ -782,11 +1298,7 @@
 	"monologue1": {
 		"component": "Monologue",
 		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
-		"soundFile": "sounds/fr/max-monologue.mp3",
-		"htmlContent": "<p>This <b>Monologue</b> component presents a phrase for the student to listen to.</p><p>The student types what he thinks he hears and presses the check button. The component then displays the differences.</p>",
-		"id": "Monologue1",
-		"instructionsText": "Listen to the phrase and type it into the box below. Listen as many times as you need. Once you have finished typing, click the check button to see how well you did!",
-		"titleText": "Monologue"
+		"soundFile": "sounds/fr/max-monologue.mp3"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
@@ -810,16 +1322,13 @@
 				"sounds/fr/Très bien, merci !.mp3"
 			],
 			[
-				""
-			],
-			[
 				"Bonjour, Madame Foucher ! Comment ça va ?",
-				"Hello, Mme Foucher! How are you?",
+				"lo, Mme Foucher! How are you?",
 				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
 			],
 			[
 				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
-				"Hello M Letort, I'm very well, thank you. And you?",
+				"lo M Letort, I'm very well, thank you. And you?",
 				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
 			],
 			[

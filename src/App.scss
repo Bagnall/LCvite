@@ -34,12 +34,14 @@ html.can-speak {
 		animation-name: none;
 	}
 }
+
 .flash {
 	animation-name: flash-animation;
 	animation-duration: 1000ms;
 	animation-timing-function: ease;
 	animation-iteration-count: 6;
 }
+
 @keyframes flash-animation {
 	0% {
 		background-color: rgba(166, 255, 0, 0);
@@ -51,6 +53,7 @@ html.can-speak {
 		background-color: rgba(166, 255, 0, 0);
 	}
 }
+
 .no-config {
 	opacity: 0;
 	animation-name: fadeIn;
@@ -59,6 +62,7 @@ html.can-speak {
 	animation-delay: 400ms;
 	animation-fill-mode: forwards;
 }
+
 #SpeechSynthesisError {
 	background-color: white;
 	background: white;
@@ -90,6 +94,7 @@ html.can-speak {
 	animation-delay: 400ms;
 	animation-fill-mode: forwards;
 }
+
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -102,6 +107,7 @@ html.can-speak {
 		opacity: 1;
 	}
 }
+
 .app {
 	box-sizing: border-box;
 	line-height: 1.4em;
@@ -236,7 +242,6 @@ h2 {
 		padding-left: 1.2rem;
 	}
 	li {
-		// margin: 1rem 0;
 		.video {
 			margin-left: -40px;
 		}
@@ -252,20 +257,22 @@ h2 {
 		max-height: 90vh;
 	}
 	.html-content {
-		width: 100%; // calc(100% - 42px);
+		width: 100%;
 		border-radius: 12px;
-		// overflow: hidden;
-		// padding: 0px; // variables.$common-left-margin / 2;
 		box-sizing: border-box;
-		// margin: 2%;
-		padding: 0 1vw;
 	}
 	> .html-content {
 		padding: variables.$common-left-margin;
 	}
+	.html-content,
+	.instructions {
+		padding: 0 1vw;
+	}
+
 	.footnote {
 		font-size: 0.8rem;
 	}
+
 	#hero {
 		align-items: center;
 		background-image: url(/projects/richard/images/paris.jpg);
@@ -308,9 +315,7 @@ h2 {
 				0px 0px 4px black;
 		}
 	}
-	// .container {
-	// padding: 10px;
-	// }
+
 	span.audio-link,
 	a {
 		color: blue;
@@ -402,6 +407,7 @@ h2 {
 		padding: 2rem 3rem;
 	}
 }
+
 @include respond-above(m) {
 	$header-height: 8rem;
 	#content {
@@ -418,6 +424,7 @@ h2 {
 			}
 		}
 	}
+
 	.content {
 		text-align: justify;
 		margin: 0 auto;
@@ -440,6 +447,7 @@ h2 {
 		line-height: 1.6em;
 	}
 }
+
 @include respond-above(xl) {
 	#content {
 		padding: 1rem 2rem;
