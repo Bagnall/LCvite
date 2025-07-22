@@ -30,23 +30,6 @@
 				}
 			},
 			{
-				"jigsaw3": {
-					"component": "Jigsaw",
-					"correctImage": "/images/car-windmill.jpg",
-					"id": "jigsaw3",
-					"incorrectImage": "/images/car-cliff-lift.jpg",
-					"congratulationsText": "Vroom! You solved the puzzle!",
-					"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
-					"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
-					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
-					"showHintsText": "Show hints when moving",
-					"soundFile": "sounds/fr/car-windmill.mp3",
-					"cheatText": "Cheat",
-					"listenDescriptionText": "Listen to the description",
-					"titleText": "Car Windmill"
-				}
-			},
-			{
 				"jigsaw2": {
 					"component": "Jigsaw",
 					"correctImage": "/images/parrot-jaguar.jpg",
@@ -64,6 +47,23 @@
 				}
 			},
 			{
+				"jigsaw3": {
+					"component": "Jigsaw",
+					"correctImage": "/images/car-windmill.jpg",
+					"id": "jigsaw3",
+					"incorrectImage": "/images/car-cliff-lift.jpg",
+					"congratulationsText": "Vroom! You solved the puzzle!",
+					"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+					"descriptionText": "Une voiture bleue garée devant un moulin à vent.",
+					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
+					"showHintsText": "Show hints when moving",
+					"soundFile": "sounds/fr/car-windmill.mp3",
+					"cheatText": "Cheat",
+					"listenDescriptionText": "Listen to the description",
+					"titleText": "Car Windmill"
+				}
+			},
+			{
 				"jigsaw4": {
 					"component": "Jigsaw",
 					"correctImage": "/images/car-cliff-lift.jpg",
@@ -78,6 +78,40 @@
 					"cheatText": "Cheat",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Car Station"
+				}
+			},
+			{
+				"jigsaw5": {
+					"component": "Jigsaw",
+					"correctImage": "/images/river-bank.jpg",
+					"id": "jigsaw5",
+					"incorrectImage": "/images/hay-wain.jpg",
+					"congratulationsText": "You solved the puzzle!",
+					"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+					"descriptionText": "La scène se déroule au bord d'une rivière où les gens sont au soleil ou à l'ombre. Certains ont des parasols. Il y a des enfants et des chiens. Sur la rivière, on trouve une barque, des voiliers et deux bateaux à vapeur.",
+					"descriptionTextEnglish": "The scene is a river bank where people are in sun or in shade. Some have parasols. There are children and dogs. On the reiver thereis a rowing boat, some sailboats and two steamboats.",
+					"showHintsText": "Show hints when moving",
+					"soundFile": "sounds/fr/river-bank.mp3",
+					"cheatText": "Cheat",
+					"listenDescriptionText": "Listen to the description",
+					"titleText": "River Bank"
+				}
+			},
+			{
+				"jigsaw6": {
+					"component": "Jigsaw",
+					"correctImage": "/images/hay-wain.jpg",
+					"id": "jigsaw6",
+					"incorrectImage": "/images/river-bank.jpg",
+					"congratulationsText": "You solved the puzzle!",
+					"instructionsText": "There are two sets of puzzle pieces below. Read the description of the picture and drag the correct pieces to the table below with your mouse.",
+					"descriptionText": "La scène se déroule au bord d'une rivière, dans les eaux peu profondes. Trois chevaux sont attelés à une charrette à foin, en train de se rafraîchir. À gauche, une maison où une femme lave du linge. Un chien court au bord de l'eau et, sur la rive opposée, un homme pêche à côté d'une barque.",
+					"descriptionTextEnglish": "The scene is a river bank, in the shallows, three horses are standing, cooling, harnessed to a hay wain. On the left is a cottage where a woman is washing clothes. A dog runs along by the water and on the opposite bank a man is fishing next to a rowing boat.",
+					"showHintsText": "Show hints when moving",
+					"soundFile": "sounds/fr/hay-wain.mp3",
+					"cheatText": "Cheat",
+					"listenDescriptionText": "Listen to the description",
+					"titleText": "Hay Wain"
 				}
 			}
 		],
