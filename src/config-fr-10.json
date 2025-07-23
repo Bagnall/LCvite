@@ -14,34 +14,34 @@
 		"instructionsText": "",
 		"phrases": [
 			[
-				"Tu veux aller au cinéma demain?",
+				"Tu veux aller au cinéma demain ?",
 				"Do you want to go to the cinema tomorrow?",
-				"sounds/fr/.mp3"
+				"sounds/fr/Tu veux aller au cinéma demain.mp3"
 			],
 			[
 				"Oui, je veux bien ! À quelle heure ?",
 				"Yes, I'd like to do that! At what time?",
-				"sounds/fr/.mp3"
+				"sounds/fr/Oui, je veux bien ! À quelle heure.mp3"
 			],
 			[
 				"À trois heures ? Ça va ?",
 				"At 3 o' clock? Is that alright?",
-				"sounds/fr/.mp3"
+				"sounds/fr/À trois heures Ça va.mp3"
 			],
 			[
 				"Ah oui, ça va très bien !",
 				"Oh yes, that's very good!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Ah oui, ça va très bien !.mp3"
 			],
 			[
 				"D'accord ! A demain !",
 				"OK then! See you tomorrow!",
-				"sounds/fr/.mp3"
+				"sounds/fr/D'accord ! A demain !.mp3"
 			],
 			[
 				"À demain !",
 				"See you tomorrow!",
-				"sounds/fr/.mp3"
+				"sounds/fr/À demain ! (male).mp3"
 			],
 			[
 				""
@@ -49,12 +49,12 @@
 			[
 				"Vous voulez aller au bord de la mer samedi ?",
 				"Do you want to go to the seaside on Saturday?",
-				"sounds/fr/.mp3"
+				"sounds/fr/Vous voulez aller au bord de la mer samedi.mp3"
 			],
 			[
 				"Au bord de la mer ? Ah oui, je veux bien !",
 				"To the seaside? Oh yes, I'd like to do that!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Au bord de la mer Ah oui, je veux bien !.mp3"
 			],
 			[
 				""
@@ -62,22 +62,22 @@
 			[
 				"Ah oui ! J'adore la mer !",
 				"Oh yes, I love the sea!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Ah oui ! J'adore la mer !.mp3"
 			],
 			[
 				"Moi aussi ! Je veux partir à 9 heures. Ça va ?",
 				"Me too. I want to leave at 9 o'clock. Is that alright? ",
-				"sounds/fr/.mp3"
+				"sounds/fr/Moi aussi ! Je veux partir à 9 heures. Ça va.mp3"
 			],
 			[
 				"Oui, pas de problème !",
 				"Yes, no problem!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Oui, pas de problème !.mp3"
 			],
 			[
 				"D'accord !",
 				"Alright!",
-				"sounds/fr/.mp3"
+				"sounds/fr/D'accord !.mp3"
 			],
 			[
 				""
@@ -85,27 +85,27 @@
 			[
 				"Marie, tu veux faire du shopping avec moi au centre commercial vendredi ?",
 				"Marie, do you want to do some shopping with me at the shopping centre on Friday?",
-				"sounds/fr/.mp3"
+				"sounds/fr/Marie, tu veux faire du shopping avec moi au centre commercial vendredi.mp3"
 			],
 			[
 				"Ah non, je ne veux pas aller au centre commercial ! Je n'ai pas d'argent !",
 				"Oh no, I don't want to go to the shopping centre. I haven't got any money!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Ah non, je ne veux pas aller au centre commercial ! Je n'ai pas d'argent !.mp3"
 			],
 			[
 				"C'est dommage !",
 				"That's a pity !",
-				"sounds/fr/.mp3"
+				"sounds/fr/C'est dommage !.mp3"
 			],
 			[
 				"Et je déteste le shopping ! C'est ennuyeux !",
 				"And I hate shopping! It's boring!",
-				"sounds/fr/.mp3"
+				"sounds/fr/Et je déteste le shopping ! C'est ennuyeux !.mp3"
 			],
 			[
 				"D'accord ! Je n'aime pas beaucoup le shopping, mais je veux acheter des chaussures de marche pour les vacances.",
 				"That's alright! I don't like shopping much, but I want to buy some walking shoes for the holidays.",
-				"sounds/fr/.mp3"
+				"sounds/fr/D'accord ! Je n'aime pas beaucoup le shopping, mais je veux acheter des chaussures de marche pour les vacances.mp3"
 			]
 		],
 		"titleText": "Dialogues"

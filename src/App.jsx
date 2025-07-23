@@ -1220,7 +1220,7 @@ export default class App extends React.Component {
 	};
 
 	selectLearningObject = (index) => {
-		console.log("selectLearningObject", index);
+		// console.log("selectLearningObject", index);
 		this.setState({
 			currentLearningObject: index,
 		});
