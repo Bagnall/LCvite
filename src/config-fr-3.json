@@ -11,7 +11,7 @@
 	"phraseTable3": {
 		"component": "PhraseTable",
 		"id": "phraseTable3",
-		"instructionsText": "",
+		"instructionsTextHTML": "<a title='No machine-readable author provided. AzaToth assumed (based on copyright claims)., CC BY-SA 3.0 &lt;http: //creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rotating_globe.gif'><div class='spinning-globe' ><img alt='This image right here shows a globe spinning around in a 360 degree rotation.' src='https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif?20090914225528'></div></a>",
 		"phrases": [
 			[
 				"Tu es française ?",

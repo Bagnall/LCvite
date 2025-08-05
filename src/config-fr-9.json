@@ -54,7 +54,7 @@
 			[
 				"Oh! Excusez-moi ! Au revoir Madame !",
 				"Oh, excuse me! Goodbye!",
-				"/sounds/fr/Oh! Excusez-moi ! Au revoir Madame !.mp3"
+				"/sounds/fr/Oh! Excusez-moi ! Au revoir Madame ! (male).mp3"
 			],
 			[
 				"Au revoir Monsieur !",
@@ -67,7 +67,7 @@
 			[
 				"Allo, oui ?",
 				"Hello?",
-				"/sounds/fr/Allo, oui.mp3"
+				"/sounds/fr/Allo, oui (male).mp3"
 			],
 			[
 				"Bonjour, c'est bien le 01 23 08 09 15 ?",
@@ -77,7 +77,7 @@
 			[
 				"Oui, c'est bien ça.",
 				"Yes, that's right.",
-				"/sounds/fr/Oui, c'est bien ça.mp3"
+				"/sounds/fr/Oui, c'est bien ça (male).mp3"
 			],
 			[
 				"André est là, s'iI vous plaît ?",
@@ -97,7 +97,7 @@
 			[
 				"Oui, je veux bien. A quelle heure ?",
 				"Yes, I'd like that. At what time?",
-				"/sounds/fr/Oui, je veux bien. A quelle heure.mp3"
+				"/sounds/fr/Oui, je veux bien. A quelle heure (male).mp3"
 			],
 			[
 				"À huit heures ?",
@@ -107,7 +107,7 @@
 			[
 				"D'accord ! À ce soir !",
 				"Alright! See you this evening!",
-				"/sounds/fr/D'accord ! À ce soir !.mp3"
+				"/sounds/fr/D'accord ! À ce soir ! (male).mp3"
 			],
 			[
 				"À plus tard !",

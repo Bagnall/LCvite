@@ -11,7 +11,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "PhraseTable1",
-		"instructionsTextHTMLXXX": "<a class='special-anchor' href='./?config=config-fr-1.json#nested'>SPECIAL ANCHOR</a>",
+		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;'/>",
 		"phrases": [
 			[
 				"Salut, ça va ?",

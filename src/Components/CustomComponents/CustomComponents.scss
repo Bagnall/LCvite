@@ -23,6 +23,7 @@
 		vertical-align: middle;
 	}
 }
+
 #LO9Grammar {
 	.svg-container {
 		overflow: hidden;
@@ -31,13 +32,6 @@
 	}
 
 	.zoomable-svg {
-		.text {
-			// fill: red !important;
-			// transform-origin: center center;
-			// transition: transform 0.3s ease;
-			// &:hover {
-			// }
-		}
 		g {
 			transform-origin: center center;
 			transition: transform 0.3s ease;
@@ -67,30 +61,42 @@
 					transform: scale(1.1); // or more if you prefer
 				}
 			}
+			.land {
+				stroke: rgba(255, 255, 255, 0.29);
+			}
 		}
 		#g01 {
 			transform-origin: 50% 50%;
 			text {
 				font-size: 40px;
 			}
+			.land {
+				fill: #fc0;
+			}
 		}
 		#g02 {
 			transform-origin: 100% 70%;
+			.land {
+				fill: #0cf;
+			}
 		}
 		#g03 {
 			transform-origin: 20% 50%;
-			// text {
-			// 	transform-origin: 50% 40%;
-			// }
+			.land {
+				fill: red;
+			}
 		}
 		#g04 {
 			transform-origin: 0 0;
-			// text {
-			// 	transform-origin: 50% 40%;
-			// }
+			.land {
+				fill: #55d400;
+			}
 		}
 		#g05 {
 			transform-origin: 100% 0;
+			.land {
+				fill: #f60;
+			}
 		}
 	}
 }
