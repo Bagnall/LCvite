@@ -18,9 +18,10 @@
 	line-height: 60px;
 	margin: auto;
 	min-height: 22vh;
-	min-width: 80vw;
+	// min-width: 80vw;
+	justify-self: center;
 	opacity: 0;
-	padding: 1rem 0;
+	padding: 1rem;
 	position: fixed;
 	text-align: center;
 	transform-origin: center center;
@@ -70,7 +71,7 @@
 		font-size: 80px;
 		line-height: 90px;
 		margin: auto 10%;
-		padding: 2rem 0;
+		padding: 2rem;
 		button {
 			top: 20px;
 			right: 20px;
@@ -103,6 +104,6 @@
 }
 @include respond-above(l) {
 	#congratulate {
-		padding: 4rem 0;
+		padding: 4rem;
 	}
 }

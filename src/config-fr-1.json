@@ -37,7 +37,7 @@
 				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
 			],
 			[
-				"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> ?",
+				"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous</a> ?",
 				"Hello M Letort, I'm very well, thank you. And you?",
 				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
 			],
@@ -50,12 +50,12 @@
 				""
 			],
 			[
-				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
+				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Je m'appelle Max, et <a class='special-anchor' href='./?config=config-fr-1.json#toi'>toi*</a> ?",
+				"Je m'appelle Max, et <a class='special-anchor' href='./?config=config-fr-1.json#toi'>toi</a> ?",
 				"My name is Max. And you're….?",
 				"sounds/fr/Je m'appelle Max, et toi.mp3"
 			],
@@ -68,7 +68,7 @@
 				""
 			],
 			[
-				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> appelez-vous ?",
+				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous</a> appelez-vous ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],
@@ -120,12 +120,12 @@
 				"sounds/fr/Monsieur.mp3"
 			],
 			[
-				"<a class='special-anchor' href='./?config=config-fr-1.json#madame'>Madame*</a>",
+				"<a class='special-anchor' href='./?config=config-fr-1.json#madame'>Madame</a>",
 				"madam, Mrs / Ms",
 				"sounds/fr/Madame.mp3"
 			],
 			[
-				"Mademoiselle",
+				"<a class='special-anchor' href='./?config=config-fr-1.json#mademoiselle'>Mademoiselle</a>",
 				"young lady, Miss",
 				"sounds/fr/Mademoiselle.mp3"
 			],
@@ -190,12 +190,12 @@
 				"sounds/fr/Pas mal.mp3"
 			],
 			[
-				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu*</a> ?",
+				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous*</a> appelez-vous ?",
+				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous</a> appelez-vous ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],
@@ -271,42 +271,6 @@
 		"component": "Group",
 		"content": [
 			{
-				"wordsIntoSlots1": {
-					"component": "Blanks",
-					"id": "wordsIntoSlots1",
-					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>on</b> / <b>om</b> or <b>oi</b> or <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "table",
-					"words": [
-						"moi",
-						"roi",
-						"homme",
-						"hôtel",
-						"loi",
-						"hôpital",
-						"bonjour",
-						"bonbon",
-						"au revoir",
-						"mon",
-						"trois",
-						"horrible",
-						"toi",
-						"quoi",
-						"froid",
-						"ton",
-						"non",
-						"bon",
-						"son",
-						"nom"
-					],
-					"soundFile": "sounds/fr/LO1 words-in-order.mp3",
-					"titleText": "1. Put the words in the order you hear them"
-				}
-			},
-			{
 				"wordparts1": {
 					"cheatText": "Cheat",
 					"component": "WordParts",
@@ -326,7 +290,7 @@
 						"sounds/fr/au revoir ma chérie.mp3",
 						"sounds/fr/quelle horreur valérie !.mp3"
 					],
-					"titleText": "2. Select the parts of the words with the described sounds"
+					"titleText": "1. Select the parts of the words with the described sounds"
 				}
 			},
 			{
@@ -338,13 +302,6 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"blanksType": "phrases",
-					"words NOT NEEDED": [
-						"mon",
-						"chérie",
-						"toi",
-						"va",
-						"très"
-					],
 					"phrases": [
 						"Coucou [mon] amour ! Ça [va] aujourd'hui ?",
 						"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
@@ -355,7 +312,7 @@
 						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
 						"sounds/fr/Ça va !.mp3"
 					],
-					"titleText": "3. Fill in the Blanks"
+					"titleText": "2. Meeting and greeting gap fillers"
 				}
 			},
 			{
@@ -367,11 +324,6 @@
 					"id": "phrases2",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"words NOT NEEDED": [
-						"comment",
-						"merci",
-						"vous"
-					],
 					"phrases": [
 						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
 						"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
@@ -382,7 +334,7 @@
 						"sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
 						"sounds/fr/Ah pas mal merci !.mp3"
 					],
-					"titleText": "4. Fill in the Blanks"
+					"titleText": "3. Meeting and greeting (formal) gap fillers"
 				}
 			},
 			{
@@ -395,13 +347,6 @@
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
 					"showHintsText": "Show hints when moving",
-					"words NOT NEEDED": [
-						"enfants",
-						"revoir",
-						"appelle",
-						"appelez",
-						"moi"
-					],
 					"phrases": [
 						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
 						"Bonjour Madame ! Je m' [appelle] Annie.",
@@ -418,7 +363,75 @@
 						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
 						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
 					],
-					"titleText": "5. Fill in the Blanks"
+					"titleText": "4. Meeting and greeting gap fillers"
+				}
+			},
+			{
+				"wordsIntoSlots1": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots1",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>on</b> or <b>om</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"bonbon",
+						"mon",
+						"ton",
+						"non",
+						"bon",
+						"son",
+						"nom",
+						"bonjour"
+					],
+					"soundFile": "sounds/fr/LO1 5 words-in-order.mp3",
+					"titleText": "5. Develop your listening skills"
+				}
+			},
+			{
+				"wordsIntoSlots2": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots2",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>oi</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"moi",
+						"roi",
+						"loi",
+						"au revoir",
+						"trois",
+						"toi",
+						"quoi",
+						"froid"
+					],
+					"soundFile": "sounds/fr/LO1 6 words-in-order.mp3",
+					"titleText": "6. Develop your listening skills"
+				}
+			},
+			{
+				"wordsIntoSlots3": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots3",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"homme",
+						"hôtel",
+						"hôpital",
+						"horrible"
+					],
+					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
+					"titleText": "7. Develop your listening skills"
 				}
 			}
 		],

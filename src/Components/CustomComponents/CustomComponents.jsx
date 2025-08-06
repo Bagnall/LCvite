@@ -36,7 +36,7 @@ export class LO1Grammar extends PureComponent {
 					<p><a className='special-anchor-target' name='madame' />1 In French there is no equivalent to the English Ms.
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip>&nbsp;
 						regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+					<a className='special-anchor-target' name='mademoiselle' /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</p>
 					<table>
 						<tbody>
@@ -61,15 +61,14 @@ export class LO1Grammar extends PureComponent {
 					key={`${id}CustomComponent2`}
 				>
 					<p><a className='special-anchor-target' name='tuvous'>2&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip>* and&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>*
-						both mean 'you'.</a></p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip> and&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</a></p>
 					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
 						a classmate or a child etc. <a className='special-anchor-target' name='toi' />When returning question i.e. when you ask 'and you?' you use the
 						form&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip> instead of&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu:</b></AudioClip>&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle Michel et toi.mp3`}><b>Je m'appelle Michel et toi ?</b></AudioClip></p>
+					<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle Michel et toi.mp3`}><b>Je m'appelle Michel, et toi ?</b></AudioClip></p>
 					<p>You use <AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip> when addressing an adult that you don't know e.g.
 						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
 						a health professional, a legal advisor, an acquaintance of your parents etc.</p>

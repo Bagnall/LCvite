@@ -561,6 +561,119 @@
 					"showHintsText": "Show hints",
 					"titleText": "Transport"
 				}
+			},
+			{
+				"wordGrid6": {
+					"cheatText": "Cheat",
+					"component": "WordGrid",
+					"congratulationsText": "Well done, you found them all!",
+					"id": "WordGrid6",
+					"instructionsText": "Click and drag your mouse on the grid to locate the following words:",
+					"words": [
+						[
+							"église",
+							"church",
+							"sounds/fr/l'église.mp3"
+						],
+						[
+							"école",
+							"school",
+							"sounds/fr/l'école.mp3"
+						],
+						[
+							"théâtre",
+							"theatre",
+							"sounds/fr/le théâtre.mp3"
+						],
+						[
+							"cinéma",
+							"cinema",
+							"sounds/fr/le cinéma.mp3"
+						],
+						[
+							"piscine",
+							"swimming pool",
+							"sounds/fr/la piscine.mp3"
+						],
+						[
+							"gare",
+							"station",
+							"sounds/fr/la gare.mp3"
+						],
+						[
+							"aéroport",
+							"airport",
+							"sounds/fr/l'aéroport.mp3"
+						],
+						[
+							"usine",
+							"factory",
+							"sounds/fr/l'usine.mp3"
+						],
+						[
+							"magasin",
+							"shop",
+							"sounds/fr/le magasin.mp3"
+						],
+						[
+							"stade",
+							"stadium",
+							"sounds/fr/le stade.mp3"
+						],
+						[
+							"bowling",
+							"bowling alley",
+							"sounds/fr/le bowling.mp3"
+						],
+						[
+							"bibliothèque",
+							"library",
+							"sounds/fr/la bibliothèque.mp3"
+						],
+						[
+							"mairie",
+							"town hall",
+							"sounds/fr/la mairie.mp3"
+						],
+						[
+							"hôpital",
+							"hospital",
+							"sounds/fr/l'hôpital.mp3"
+						],
+						[
+							"université",
+							"university",
+							"sounds/fr/l'université.mp3"
+						],
+						[
+							"hôtel",
+							"hotel",
+							"sounds/fr/l'hôtel.mp3"
+						],
+						[
+							"musée",
+							"museum",
+							"sounds/fr/le musée.mp3"
+						],
+						[
+							"palais",
+							"palace",
+							"sounds/fr/le palais.mp3"
+						],
+						[
+							"château",
+							"castle",
+							"sounds/fr/le château.mp3"
+						],
+						[
+							"phare",
+							"lighthouse",
+							"sounds/fr/le phare.mp3"
+						]
+					],
+					"showHintsText": "Show hints",
+					"titleText": "Buildings"
+				}
 			}
 		],
 		"id": "group2",
