@@ -263,7 +263,7 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "Select the correct of 'in' to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"titleText": "3. Prepositions",
@@ -292,7 +292,7 @@
 				"dropdowns4": {
 					"component": "DropDowns",
 					"id": "dropdowns4",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"instructionsText": "Listen and choose the correct option to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"titleText": "4. Where do you live?",

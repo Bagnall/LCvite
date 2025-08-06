@@ -252,7 +252,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"instructionsText": "Listen to the speakers and select what you hear.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -277,7 +277,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "All the words containing double ll are in bold. Do you know which are pronounced 'l' and which 'y'?   Select y or l in the box below. Once you've completed the task listen to the texts.",
 					"htmlContent": "<table><tbody><tr><td><span class='audio-link' sound-file='/sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='/sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='/sounds/fr/La fille de sa fille s'appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='/sounds/fr/Elle aime les tilleuls de Versailles.mp3'><b>Elle</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr><tr><td><span class='audio-link' sound-file='/sounds/fr/Annabelle a une belle-fille.mp3'><b>Annabelle</b> a une <b>belle-fille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Elle s&apos;appelle Isabelle.mp3'><b>Elle s'appelle Isabelle</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Isabelle n&apos;est pas <b>belle.mp3'><b>Isabelle</b> n'est pas <b>belle</b></span><br/><span class='audio-link' sound-file='/sounds/fr/Mais Isabelle est très gentille.mp3'>Mais <b>Isabelle</b> est très <b>gentille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Isabelle habite à Lille.mp3'><b>Isabelle</b> habite à <b>Lille</b></span><br/><span class='audio-link' sound-file='/sounds/fr/Elle y habite avec Gilles.mp3'><b>Elle</b> y habite avec <b>Gilles</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Ce n'est pas très tranquille.mp3'>Ce n'est pas très <b>tranquille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Mais quelle belle ville, la ville de Lille.mp3'>Mais <b>quelle belle ville</b>, la <b>ville</b> de <b>Lille</b> !</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p>",
 					"showHintsText": "Show hints when moving",
@@ -329,7 +329,7 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"instructionsTextHTML": "Fill in the gaps with the correct part of <b>avoir</b>.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -364,7 +364,7 @@
 				"dropdowns4": {
 					"component": "DropDowns",
 					"id": "dropdowns4",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"instructionsText": "Fill in the gaps with the correct possessive adjective.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -406,7 +406,7 @@
 			{
 				"wordsIntoSlots2": {
 					"component": "Blanks",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",

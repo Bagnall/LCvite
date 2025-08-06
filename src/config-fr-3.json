@@ -333,7 +333,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -361,7 +361,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsTextHTML": "Fill in the gaps with <b>de</b> / <b>du</b> / <b>d'</b> / <b>des</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -391,7 +391,7 @@
 			{
 				"answerTable1": {
 					"component": "AnswerTable",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"id": "AnswerTable1",
 					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
 					"header": [
@@ -512,7 +512,7 @@
 			{
 				"answerTable2": {
 					"component": "AnswerTable",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"id": "AnswerTable2",
 					"instructionsText": "Write what you hear.",
 					"phrases": [

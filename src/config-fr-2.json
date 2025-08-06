@@ -29,14 +29,14 @@
 				"sounds/fr/Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.mp3"
 			]
 		],
-		"titleText": "Monologues"
+		"titleText": "Monologues - A bit about me"
 	},
 	"vocabulary2": {
 		"component": "PhraseTable",
 		"id": "vocabulary2",
 		"phrases": [
 			[
-				"être*",
+				"être",
 				"to be",
 				"sounds/fr/être.mp3"
 			],
@@ -92,8 +92,8 @@
 			],
 			[
 				"professeur(m) / professeure(f) / prof (m and f)",
-				"teacher, professeur",
-				"sounds/fr/professeur, professeure.mp3"
+				"teacher, professor",
+				"sounds/fr/professeur, professeure, prof.mp3"
 			],
 			[
 				"médecin (m and f)",
@@ -126,12 +126,12 @@
 				"sounds/fr/avocat, avocate.mp3"
 			],
 			[
-				"Que faites-vous* (dans la vie) ?",
+				"Que faites-vous (dans la vie) ?",
 				"What do you do (for a living)?",
 				"sounds/fr/Que faites-vous (dans la vie).mp3"
 			],
 			[
-				"Que fais-tu* (dans la vie) ?",
+				"Que fais-tu (dans la vie) ?",
 				"What do you do (for a living)?",
 				"sounds/fr/Que fais-tu (dans la vie).mp3"
 			],
@@ -183,7 +183,7 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "Select the correct part of être to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -198,13 +198,13 @@
 						"Elles [suis|sommes|*sont] étudiantes en éducation.",
 						"Jérome et moi [suis|sont|*sommes] divorcés maintenant."
 					],
-					"titleText": "Select the correct part of être to fill in the gaps."
+					"titleTextHTML": "Practice the verb <b>être</b>."
 				}
 			},
 			{
 				"wordsIntoSlots2": {
 					"component": "Blanks",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
@@ -228,7 +228,7 @@
 						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
 						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
 					],
-					"titleText": "Match the Answers to the Questions"
+					"titleText": "Answering Questions"
 				}
 			}
 		],

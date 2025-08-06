@@ -63,13 +63,36 @@ export class AccordionArticle extends React.PureComponent {
 			children,
 			className,
 			info,
-			title,
+			title = '',
+			titleHTML = '',
 		} = this.props;
 
 		const {
 			expanded,
 			id,
 		} = this.state;
+
+		let h2 = (
+			<h2
+				onClick={this.toggleExpanded}
+				title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+			>
+				{title}
+				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+			</h2>
+		);
+
+		if (titleHTML !== '') {
+			h2 = (
+				<h2
+					onClick={this.toggleExpanded}
+					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				>
+					<span dangerouslySetInnerHTML={{ __html: titleHTML }}/>
+					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+				</h2>
+			);
+		}
 
 		return (
 			<article
@@ -83,18 +106,12 @@ export class AccordionArticle extends React.PureComponent {
 						onClick={this.toggleExpanded}
 						title={`${expanded ? 'Click to close' : 'Click to expand'}`}
 					/>
-					<h2
-						onClick={this.toggleExpanded}
-						title={`${expanded ? 'Click to close' : 'Click to expand'}`}
-					>
-						{title}
-						{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
-					</h2>
+					{h2}
 				</header>
 				<div className='content'>
 					{children}
 				</div>
 			</article >
 		);
-	}
+	};
 }

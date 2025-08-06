@@ -352,7 +352,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -387,7 +387,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"instructionsText": "Julien est très sportif:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

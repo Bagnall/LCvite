@@ -424,6 +424,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<Explanation
 					// 					config={value}
@@ -440,6 +441,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<Monologue
 					// 					config={value}
@@ -456,6 +458,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<DropDowns
 					// 					config={value}
@@ -488,6 +491,7 @@ export default class App extends React.Component {
 					// 				key={`$Group{id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				{/* {content} */}
 					// 			</AccordionArticle>
@@ -500,6 +504,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<WordParts
 					// 					config={value}
@@ -516,6 +521,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<AnswerTable
 					// 					config={value}
@@ -532,6 +538,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<PhraseTable
 					// 					config={value}
@@ -548,6 +555,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<Blanks
 					// 					config={value}
@@ -564,6 +572,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<Jigsaw
 					// 					config={value}
@@ -580,6 +589,7 @@ export default class App extends React.Component {
 					// 				key={`${id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
+					// 				titleHTML={titleTextHTML}
 					// 			>
 					// 				<MemoryMatchGame
 					// 					config={value}
@@ -885,7 +895,7 @@ export default class App extends React.Component {
 	renderComponent = (value, articles) => {
 		// console.log(`renderComponent`);
 		// console.log(value);
-		const { id, component, titleText } = value;
+		const { id, component, titleText = '', titleTextHTML = '' } = value;
 		// console.log(`component [${component}]`);
 		// console.log("renderComponent id=", id);
 		switch (component) {
@@ -896,6 +906,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<AnswerTable
 							config={value}
@@ -913,6 +924,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<Blanks
 							config={value}
@@ -930,6 +942,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<DropDowns
 							config={value}
@@ -947,6 +960,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<Explanation
 							config={value}
@@ -981,6 +995,7 @@ export default class App extends React.Component {
 						key={`Group${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{renderedGroupContent}
@@ -995,6 +1010,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<Jigsaw
 							config={value}
@@ -1012,6 +1028,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<MemoryMatchGame
 							config={value}
@@ -1029,6 +1046,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<Monologue
 							config={value}
@@ -1046,6 +1064,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<PhraseTable
 							config={value}
@@ -1063,6 +1082,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<ReadAloud
 							config={value}
@@ -1080,6 +1100,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<WordGrid
 							config={value}
@@ -1097,6 +1118,7 @@ export default class App extends React.Component {
 						key={`${id}Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
+						titleHTML={titleTextHTML}
 					>
 						<WordParts
 							config={value}
@@ -1118,6 +1140,7 @@ export default class App extends React.Component {
 							key={`${id}Accordion`}
 							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
 							title={titleText}
+							titleHTML={titleTextHTML}
 						>
 							<CustomComponent id={id} />
 						</AccordionArticle>

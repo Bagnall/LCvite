@@ -216,7 +216,7 @@
 			{
 				"answerTable1": {
 					"component": "AnswerTable",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"id": "AnswerTable1",
 					"instructionsTextXX": "Listen to the following phone numbers and type them into the space provided.",
 					"header": [
@@ -283,7 +283,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

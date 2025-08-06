@@ -163,7 +163,7 @@ export class LO2Grammar extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>1. Verbs in French</b></p>
-					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons* of the verb.</p>
+					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons of the verb.</p>
 					<p><b>Être</b> to be</p>
 					<table>
 						<tbody>
@@ -173,7 +173,7 @@ export class LO2Grammar extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/je suis.mp3`} /></td>
 							</tr>
 							<tr>
-								<td>tu* es</td>
+								<td>tu es</td>
 								<td>you are</td>
 								<td><AudioClip className='compact' soundFile={`sounds/fr/tu es.mp3`} /></td>
 							</tr>
@@ -193,7 +193,7 @@ export class LO2Grammar extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/nous sommes.mp3`} /></td>
 							</tr>
 							<tr>
-								<td>vous* êtes</td>
+								<td>vous êtes</td>
 								<td>you are</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></td>
 							</tr>

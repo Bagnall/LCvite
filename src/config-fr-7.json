@@ -417,7 +417,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -472,7 +472,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"instructionsText": "Listen to this poem by Mymi Doinet about the rainbow and fill in the colours as you hear them.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

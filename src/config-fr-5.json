@@ -293,7 +293,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Excellent!",
 					"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -332,7 +332,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Très bien!",
 					"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -360,7 +360,7 @@
 				"phrases1": {
 					"component": "Blanks",
 					"id": "phrases1",
-					"congratulationsText": "Well done!",
+					"congratulationsText": "Superbe!",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
