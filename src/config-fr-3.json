@@ -103,7 +103,7 @@
 				"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
 			]
 		],
-		"titleText": "Dialogues"
+		"titleText": "Dialogues: Nationalities and languages"
 	},
 	"phraseTable4": {
 		"component": "PhraseTable",
@@ -118,151 +118,151 @@
 		],
 		"phrases": [
 			[
-				"algérien",
+				"algérien / algérienne",
 				"Algérie (f)",
 				"Algerian",
 				"Algeria",
-				"sounds/fr/algérien Algérie.mp3"
+				"sounds/fr/algérien, algérienne, Algérie.mp3"
 			],
 			[
-				"allemand",
+				"allemand / allemande",
 				"Allemagne (f)",
 				"German",
 				"Germany",
-				"sounds/fr/allemand Allemagne.mp3"
+				"sounds/fr/allemand, allemande, Allemagne.mp3"
 			],
 			[
-				"américain",
+				"américain / américaine",
 				"Etats-Unis (mpl)",
 				"American",
 				"USA",
-				"sounds/fr/américain Etats-Unis.mp3"
+				"sounds/fr/américain, américaine, Etats-Unis.mp3"
 			],
 			[
-				"anglais",
+				"anglais / anglaise",
 				"Angleterre (f)",
-				"localLanguage",
+				"English",
 				"England",
-				"sounds/fr/anglais Angleterre.mp3"
+				"sounds/fr/anglais, anglaise, Angleterre.mp3"
 			],
 			[
-				"australien",
+				"australien / australienne",
 				"Australie (f)",
 				"Australian",
 				"Australia",
-				"sounds/fr/australien Australie.mp3"
+				"sounds/fr/australien, australienne, Australie.mp3"
 			],
 			[
 				"belge",
 				"Belgique (f)",
 				"Belgian",
 				"Belgium",
-				"sounds/fr/belge Belgique.mp3"
+				"sounds/fr/belge, Belgique.mp3"
 			],
 			[
 				"britannique",
 				"Grande Bretagne (f)",
 				"British",
 				"Great Britain",
-				"sounds/fr/britannique Grande Bretagne.mp3"
+				"sounds/fr/britannique, Grande Bretagne.mp3"
 			],
 			[
-				"canadien",
+				"canadien / canadienne",
 				"Canada (m)",
 				"Canadian",
 				"Canada",
-				"sounds/fr/canadien Canada.mp3"
+				"sounds/fr/canadien, canadienne, Canada.mp3"
 			],
 			[
-				"chinois",
+				"chinois / chinoise",
 				"Chine (f)",
 				"Chinese",
 				"China",
-				"sounds/fr/chinois Chine.mp3"
+				"sounds/fr/chinois, chinoise, Chine.mp3"
 			],
 			[
-				"écossais",
+				"écossais / écossaise",
 				"Ecosse (f)",
 				"Scottish",
 				"Scotland",
-				"sounds/fr/écossais Ecosse.mp3"
+				"sounds/fr/écossais, écossaise, Ecosse.mp3"
 			],
 			[
-				"espagnol",
+				"espagnol / espagnole",
 				"Espagne (f)",
 				"Spanish",
 				"Spain",
-				"sounds/fr/espagnol Espagne.mp3"
+				"sounds/fr/espagnol, espagnole, Espagne.mp3"
 			],
 			[
-				"français",
+				"français / française",
 				"France (f)",
-				"foreignLanguage",
+				"French",
 				"France",
-				"sounds/fr/français France.mp3"
+				"sounds/fr/français, française, France.mp3"
 			],
 			[
-				"gallois",
+				"gallois / galloise",
 				"Pays de Galles (m)",
 				"Welsh",
 				"Wales  ",
-				"sounds/fr/gallois Pays de Galles.mp3"
+				"sounds/fr/gallois, galloise, Pays de Galles.mp3"
 			],
 			[
-				"ghanéen",
+				"ghanéen / ghanéenne",
 				"Ghana (m)",
 				"Ghanean",
 				"Ghana",
-				"sounds/fr/ghanéen Ghana.mp3"
+				"sounds/fr/ghanéen, ghanéenne, Ghana.mp3"
 			],
 			[
-				"libanais",
+				"libanais / libanaise",
 				"Liban (m)",
 				"Lebanese",
 				"Lebanon",
-				"sounds/fr/libanais Liban.mp3"
+				"sounds/fr/libanais, libanaise, Liban.mp3"
 			],
 			[
-				"luxembourgeois",
+				"luxembourgeois / luxembourgeoise",
 				"Luxembourg (m)",
 				"Luxembourgish",
 				"Luxemburg",
-				"sounds/fr/luxembourgeois Luxembourg.mp3"
+				"sounds/fr/luxembourgeois, luxembourgeoise, Luxembourg.mp3"
 			],
 			[
-				"marocain",
+				"marocain / marocaine",
 				"Maroc (m)",
 				"Maroccan",
 				"Morocco",
-				"sounds/fr/marocain Maroc.mp3"
+				"sounds/fr/marocain, marocaine, Maroc.mp3"
 			],
 			[
-				"irlandais",
+				"nord/sud irlandais / nord/sud irlandaise",
 				"Irelande (f) du Sud / du Nord",
 				"Irish",
 				"Southern Ireland / Northern Ireland",
-				"sounds/fr/irlandais Irelande du Sud Irelande du Nord.mp3"
+				"sounds/fr/nord irlandais, sud irlandais, nord irlandaise, sud irlandaise, Irelande du Sud, Irelande du Nord.mp3"
 			],
 			[
-				"sénégalais",
+				"sénégalais / sénégalaise",
 				"Sénégal (m)",
 				"Senegalese",
 				"Senegal",
-				"sounds/fr/sénégalais Sénégal.mp3"
-			],
-			[
-				"tunisien",
-				"Tunisie (f)",
-				"Tunisian",
-				"Tunisia",
-				"sounds/fr/tunisien Tunisie.mp3"
+				"sounds/fr/sénégalais, sénégalaise, Sénégal.mp3"
 			],
 			[
 				"suisse",
 				"Suisse (f)",
 				"Swiss",
 				"Switzerland",
-				"sounds/fr/suisse Suisse.mp3"
+				"sounds/fr/suisse, Suisse.mp3"
+			],
+			[
+				"tunisien / tunisienne",
+				"Tunisie (f)",
+				"Tunisian",
+				"Tunisia",
+				"sounds/fr/tunisien, tunisienne, Tunisie.mp3"
 			]
 		],
 		"titleText": "Vocabulary"
@@ -385,7 +385,7 @@
 						"sounds/fr/Je viens du Gabon.mp3",
 						"sounds/fr/Je viens Des États-Unis.mp3"
 					],
-					"titleText": "2. Fill in the gaps with de / du / d' / des as appropriate."
+					"titleText": "2. Practice saying where you're from."
 				}
 			},
 			{
@@ -393,7 +393,7 @@
 					"component": "AnswerTable",
 					"congratulationsText": "Superbe!",
 					"id": "AnswerTable1",
-					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
+					"instructionsText": "Type the feminine form, then click the check button. Listen to the pronunciation of masculine and feminine forms.",
 					"header": [
 						"Masculine",
 						"feminine",
@@ -506,7 +506,7 @@
 							"sounds/fr/pharmacien pharmacienne.mp3"
 						]
 					],
-					"titleText": "3. Feminine Form"
+					"titleText": "3. Practise masculine and feminine forms of adjectives and professions"
 				}
 			},
 			{
@@ -557,7 +557,7 @@
 							"sounds/fr/Je suis professeur de maths et Lucie est avocate.mp3"
 						]
 					],
-					"titleText": "4. Write what you hear"
+					"titleText": "4. Practice your listening skills"
 				}
 			}
 		],

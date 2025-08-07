@@ -227,21 +227,32 @@ export class LO2Grammar extends PureComponent {
 					<p>a. The indefinite article:</p>
 					<p>There are two ways of saying 'a' in French:&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> for masculine nouns e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> homme (a man),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> métier (a profession/occupation) and&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`}>homme</AudioClip> (a man),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/métier.mp3`}>métier</AudioClip> (a profession/occupation) and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> for a feminine noun e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> femme (a woman),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> profession (a profession).</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/femme.mp3`}>femme</AudioClip> (a woman),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/profession.mp3`}>profession</AudioClip> (a profession).</p>
 					<p>b. The definite article:</p>
 					<p>For singular nouns, to say 'the' you use&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> for masculine nouns e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> professeur (the [male] teacher),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> jour (the day). For feminine nouns you say&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/professeur.mp3`}>professeur</AudioClip> (the [male] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/jour.mp3`}>jour</AudioClip> (the day). For feminine nouns you say&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> professeure (the [female] teacher),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> nuit (the night).
-						When the singular noun begins with a vowel or mute h, then you use <b>l'</b> regardless of gender e.g.&nbsp;
-						<b>l'</b>appartement (m) (the flat),  <b>l'</b>école (f) (the school), <b>l'</b>homme (the man).</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/professeure.mp3`}>professeure</AudioClip> (the [female] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip>&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/nuit.mp3`}>nuit</AudioClip> (the night).
+						When the singular noun begins with a vowel or mute h, then you use&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'.mp3`}><b>l'</b></AudioClip> regardless of gender e.g.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'appartement.mp3`}><b>l'</b>appartement</AudioClip> (m) (the flat),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'école.mp3`}><b>l'</b>école</AudioClip> (f) (the school),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'homme.mp3`}><b>l'</b>homme</AudioClip> (the man).</p>
 				</div>
 				<div
 					className={`panel`}
@@ -335,7 +346,13 @@ export class LO3Grammar extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>1. A bit about verbs in French:</b></p>
-					<p>There are three groups of regular verbs in French. The biggest of these is called the -er group, simply because the infinitive ends with the letters -er. Parler (to speak), habiter (to live), chanter (to sing), danser (to dance) are examples of - er verbs.</p>
+					<p>There are three groups of regular verbs in French. The biggest of these is called the&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip> group, simply because the infinitive ends with the letters&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip>.&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/parler.mp3`}>Parler</AudioClip> (to speak),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/habiter.mp3`}>habiter</AudioClip> (to live),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/chanter.mp3`}>chanter</AudioClip> (to sing),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/danser.mp3`}>danser</AudioClip> (to dance) are examples of <AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip> verbs.</p>
 					<p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking'
 						depending on the context.</p>
 					<table>
@@ -388,43 +405,58 @@ export class LO3Grammar extends PureComponent {
 								<td>they speak / are speaking</td>
 							</tr>
 						</tbody>
-					</table><p>venir is a common irregular verb.</p>
+					</table><p><b>venir</b> is a common irregular verb.</p>
 					<p>
 						<AudioClip className={`link`} soundFile={`sounds/fr/venir de.mp3`}>venir de</AudioClip> to come from</p>
 					<table>
 						<tbody>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/je viens.mp3`}>je viens</AudioClip> (de Marseille)</td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/je viens.mp3`}>je viens</AudioClip> (de Marseille)
+								</td>
 								<td>I come (from Marseille)...</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/tu viens.mp3`}>tu viens</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/tu viens.mp3`}>tu viens</AudioClip>
+								</td>
+								<td>you come</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/il vient.mp3`}>il vient</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/il vient.mp3`}>il vient</AudioClip>
+								</td>
+								<td>he/it comes</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/elle vient.mp3`}>elle vient</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elle vient.mp3`}>elle vient</AudioClip>
+								</td>
+								<td>she/it comes</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/nous venons.mp3`}>nous venons</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/nous venons.mp3`}>nous venons</AudioClip>
+								</td>
+								<td>we come</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/vous venez.mp3`}>vous venez</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/vous venez.mp3`}>vous venez</AudioClip>
+								</td>
+								<td>you come</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/ils viennent.mp3`}>ils viennent</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/ils viennent.mp3`}>ils viennent</AudioClip>
+								</td>
+								<td>they come</td>
 							</tr>
 							<tr>
 								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/elles viennent.mp3`}>elles viennent</AudioClip></td>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elles viennent.mp3`}>elles viennent</AudioClip>
+								</td>
+								<td>they come</td>
 							</tr>
 						</tbody>
 					</table>
@@ -435,11 +467,11 @@ export class LO3Grammar extends PureComponent {
 					key={`${id}Panel2`}
 				>
 					<p><b>2 De</b></p>
-					<p><b>NB</b> The word de occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p>
+					<p><b>NB</b> The word <b>de</b> occurs in French with a variety of meanings. Here it means from, and it's followed by a place name. Look at the following examples illustrating the forms:</p>
 					<p>Je viens <span style={{color: "red"}}><b>de</b></span> Paris (for towns, cities, villages)</p>
 					<p>Je viens <span style={{color: "green"}}><b>de</b></span> Belgique (for feminine countries and regions beginning with a consonant)</p>
 					<p>Je viens <span style={{color: "black"}}><b>d'</b></span>Angleterre (for all singular place names beginning with a vowel or mute h)</p>
-					<p>Je viens <span style={{color: "cyan"}}><b>du</b></span> Canada (for masculine countries and regions beginning with a consonant)</p>
+					<p>Je viens <span style={{color: "darkcyan"}}><b>du</b></span> Canada (for masculine countries and regions beginning with a consonant)</p>
 					<p>Je viens <span style={{color: "purple"}}><b>des</b></span> Seychelles (for plural countries)</p>
 				</div>
 				<div
@@ -518,7 +550,8 @@ export class LO3Demystify extends PureComponent {
 							<p>The sound : <b>'eh'</b></p>
 							<p>Listen to the following:
 								<AudioClip className={`link`} soundFile={`sounds/fr/vous parlez.mp3`}>vous parl<b>ez</b></AudioClip>,&nbsp;
-								<AudioClip className={`link`} soundFile={`sounds/fr/il est américain.mp3`}>il <b>est</b> am<b>é</b>ricain</AudioClip> <b>et</b>&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/il est américain.mp3`}>il <b>est</b> am<b>é</b>ricain</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/et.mp3`}><b>et</b></AudioClip>,&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/je suis ghanéenne.mp3`}>je suis ghan<b>é</b>enne</AudioClip>,&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/elle est mariée.mp3`}>elle <b>est</b> mari<b>ée</b></AudioClip>,&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/nous sommes fiancés.mp3`}>nous sommes fianc<b>és</b></AudioClip>,&nbsp;
