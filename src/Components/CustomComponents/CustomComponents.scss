@@ -13,11 +13,30 @@
 	img {
 		width: 300px;
 		height: 300px;
-		float: right;
+		// float: right;
 		margin: 0 0 20px 20px;
 		border: 1px solid black;
 	}
+	&Panel1,
+	&Panel4 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-template-areas: "text image";
+		p {
+			grid-area: text;
+		}
+		img {
+			justify-self: right;
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
 }
+
 #LO2Demystify {
 	img.lo2-demystify-shh {
 		vertical-align: middle;
@@ -132,11 +151,29 @@
 }
 
 #L10Grammar {
-	img {
-		width: 300px;
-		height: 300px;
-		float: right;
-		margin: 0 0 20px 20px;
-		border: 1px solid black;
+	div.two-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 0px 0px;
+		grid-template-areas: "poem image";
+		p {
+			grid-area: poem;
+		}
+		img {
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+		// img {
+		// 	width: 300px;
+		// 	height: 300px;
+		// 	float: right;
+		// 	margin: 0 0 20px 20px;
+		// 	border: 1px solid black;
+		// }
 	}
 }

@@ -95,11 +95,14 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel1` : ''}`}
 					key={`${id}Panel1`}
 				>
-					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`}/><p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
-					<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
+					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
+					<div className={`text`}>
+						<p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
 						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>&nbsp;
 						and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
+					</div>
 				</div>
 				<div
 					className={`panel`}
@@ -131,7 +134,7 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel4` : ''}`}
 					key={`${id}Panel4`}
 				>
-					<p>4 <b>The letter h</b> <img
+					<img
 						alt="lady with finger to lips.Shh"
 						src={resolveAsset('images/shh.jpg')}
 						style={{
@@ -139,11 +142,14 @@ export class LO1Demystify extends PureComponent {
 							verticalAlign: 'middle',
 						}}
 						title="lady with finger to lips.Shh" />
-					</p>
-					<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
-						<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
-						<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >
-						<b>h</b>orizon</AudioClip>.</p>
+					<div className={`text`}>
+						<p>4 <b>The letter h</b>
+						</p>
+						<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
+							<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
+							<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >
+							<b>h</b>orizon</AudioClip>.</p>
+					</div>
 				</div>
 			</div>
 		);
@@ -1406,42 +1412,46 @@ export class L10Grammar extends PureComponent {
 				>
 					<ol>
 						<li>
-							<img src={resolveAsset(`images/vouloir.jpg`)} title="vouloir" alt="A young girl points to the cake she wants"/>
-							<p>Using the verb <AudioClip className={`audio-link`} soundFile={`sounds/fr/vouloir.mp3`} >vouloir</AudioClip> meaning 'to want'</p>
-							<table>
-								<tbody>
-									<tr>
-										<td>Je veux</td>
-										<td>I want</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Je veux.mp3`} /></td>
-									</tr>
-									<tr>
-										<td>Tu veux</td>
-										<td>you want</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Tu veux.mp3`} /></td>
-									</tr>
-									<tr>
-										<td>Il / elle veut</td>
-										<td>he / she/ it wants</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} /></td>
-									</tr>
-									<tr>
-										<td>Nous voulons</td>
-										<td>we want</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Nous voulons.mp3`} /></td>
-									</tr>
-									<tr>
-										<td>Vous voulez</td>
-										<td>you want</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Vous voulez.mp3`} /></td>
-									</tr>
-									<tr>
-										<td>Ils / elles veulent</td>
-										<td>they want</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} /></td>
-									</tr>
-								</tbody>
-							</table>
+							<div class={`two-columns`}>
+								<img src={resolveAsset(`images/vouloir.jpg`)} title="vouloir" alt="A young girl points to the cake she wants"/>
+								<div class={`text`}>
+									<p>Using the verb <AudioClip className={`audio-link`} soundFile={`sounds/fr/vouloir.mp3`} >vouloir</AudioClip> meaning 'to want'</p>
+									<table>
+										<tbody>
+											<tr>
+												<td>Je veux</td>
+												<td>I want</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Je veux.mp3`} /></td>
+											</tr>
+											<tr>
+												<td>Tu veux</td>
+												<td>you want</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Tu veux.mp3`} /></td>
+											</tr>
+											<tr>
+												<td>Il / elle veut</td>
+												<td>he / she/ it wants</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} /></td>
+											</tr>
+											<tr>
+												<td>Nous voulons</td>
+												<td>we want</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Nous voulons.mp3`} /></td>
+											</tr>
+											<tr>
+												<td>Vous voulez</td>
+												<td>you want</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Vous voulez.mp3`} /></td>
+											</tr>
+											<tr>
+												<td>Ils / elles veulent</td>
+												<td>they want</td>
+												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} /></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 
 							<p>The verb vouloir is very frequently used together with another verb. This second verb is used in its infinitive form. e.g.</p>
 							<table><tbody>
