@@ -59,11 +59,15 @@ audio.super-compact {
 	}
 }
 
-div.audio-container {
+.audio-container {
 	background-color: #f1f3f4;
 	z-index: 1;
 	display: block;
 	position: relative;
+	&.inline {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 .circular-audio-progress {

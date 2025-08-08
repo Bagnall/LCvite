@@ -87,6 +87,7 @@ export class AudioClip extends React.PureComponent {
 			className = '',
 			children,
 			id,
+			inline = false,
 			listenText = '',
 			soundFile,
 		} = this.props;
@@ -103,6 +104,7 @@ export class AudioClip extends React.PureComponent {
 			return (
 				<CircularAudioProgress
 					id={id}
+					inline={inline}
 					key={id}
 					soundFile={soundFile}
 				/>
@@ -226,6 +228,8 @@ class CircularAudioProgress extends AudioClip {
 		const colour = '#000';
 		const bgColour = '#ddd';
 
+		const inline = this.props;
+
 		const root = getComputedStyle(document.documentElement);
 		let compactDimension = root.getPropertyValue('--compact-dimension').trim();
 		compactDimension = parseInt(compactDimension);
@@ -237,8 +241,8 @@ class CircularAudioProgress extends AudioClip {
 			return null;
 		} else {
 			return (
-				<div
-					className={`audio-container super-compact circular-audio-progress ${status}`}
+				<span
+					className={`audio-container ${inline ? 'inline' : ''} super-compact circular-audio-progress ${status}`}
 					onClick={this.handleClick}
 					onPlay={() => this.notePlaying(false)}
 					ref={this.audioRef}
@@ -273,7 +277,7 @@ class CircularAudioProgress extends AudioClip {
 							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
 						/>
 					</svg>
-				</div>
+				</span>
 			);
 		}
 	};

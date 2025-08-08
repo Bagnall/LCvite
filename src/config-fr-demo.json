@@ -1773,13 +1773,6 @@
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"words NOT NEEDED": [
-						"enfants",
-						"revoir",
-						"appelle",
-						"appelez",
-						"moi"
-					],
 					"phrases": [
 						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
 						"Bonjour Madame ! Je m' [appelle] Annie.",

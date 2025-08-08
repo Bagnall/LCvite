@@ -689,14 +689,14 @@ export class LO5Grammar extends PureComponent{
 								There are three bedrooms on the first floor.</p>
 							<p>Here are a few more examples of verbs which work in the same way:</p>
 							<p>From the verb <AudioClip className={`link`} soundFile={`sounds/fr/pleuvoir.mp3`}><b>pleuvoir</b></AudioClip>:
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut.mp3`}><b>Il pleut</b></AudioClip> - e.g.
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut.mp3`}><b>Il pleut</b></AudioClip> aujourd'hui   It's raining today. <br />
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut.mp3`}><b>Il pleut</b></AudioClip> - e.g.&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut aujourd'hui.mp3`}><b>Il pleut</b> aujourd'hui</AudioClip>   It's raining today. <br />
 								From the verb <AudioClip className={`link`} soundFile={`sounds/fr/neiger.mp3`}><b>neiger</b></AudioClip>:
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige.mp3`}><b>Il neige</b></AudioClip> - e.g.
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige.mp3`}><b>Il neige</b></AudioClip> en hiver It snows in the winter.<br />
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige.mp3`}><b>Il neige</b></AudioClip> - e.g.&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige en hiver.mp3`}><b>Il neige</b> en hiver</AudioClip> It snows in the winter.<br />
 								From the verb <AudioClip className={`link`} soundFile={`sounds/fr/falloir.mp3`}><b>falloir</b></AudioClip>:
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il faut.mp3`}><b>Il faut</b></AudioClip> - e.g.
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il faut.mp3`}><b>Il faut</b></AudioClip> écouter It's necessary / you need to listen. </p>
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il faut.mp3`}><b>Il faut</b></AudioClip> - e.g.&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il faut écouter.mp3`}><b>Il faut</b> écouter</AudioClip> It's necessary / you need to listen. </p>
 						</li><li>
 							<p><b>More about adjectival agreement</b>. Some adjectives end -eux e.g. <AudioClip className={`link`} soundFile={`sounds/fr/spacieux.mp3`}><b>spacieux</b></AudioClip>,&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/lumineux.mp3`}><b>lumineux</b></AudioClip>.</p>
@@ -729,7 +729,10 @@ export class LO5Demystify extends PureComponent{
 					key={`${id}CustomComponent`}
 				>
 					<p><b>How to pronounce:</b></p>
-					<p>the third of the nasal vowels, <b>[an]</b> which is how the letters an, am, en and em are pronounced.
+					<p>the third of the nasal vowels, <AudioClip
+						className={`super-compact`}
+						inline={true}
+						soundFile={`sounds/fr/ain.mp3`} /> which is how the letters an, am, en and em are pronounced.
 						Listen to the following examples:</p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/blanc.mp3`}>blanc</AudioClip>&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/chambre.mp3`}>chambre</AudioClip>&nbsp;
