@@ -132,10 +132,12 @@ export class LO1Demystify extends PureComponent {
 					key={`${id}Panel4`}
 				>
 					<p>4 <b>The letter h</b> <img
+						alt="lady with finger to lips.Shh"
 						src={resolveAsset('images/shh.jpg')}
 						style={{
-							verticalAlign: 'middle', border: '1px solid rgba(0,0,0,0.5)' }}
-						alt="lady with finger to lips.Shh"
+							border: '1px solid rgba(0,0,0,0.5)',
+							verticalAlign: 'middle',
+						}}
 						title="lady with finger to lips.Shh" />
 					</p>
 					<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
@@ -529,11 +531,17 @@ export class LO3Demystify extends PureComponent {
 				>
 					<p><b>To sound or not to sound?</b></p>
 					<ol>
-						<li><p>The third person verb ending <b>ent</b> is never pronounced.&nbsp;&nbsp;<img src={resolveAsset('/images/shh.jpg')} style={{ verticalAlign: 'middle', border: "1px solid rgba(0,0,0,0.5)" }} alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
+						<li><p>The third person verb ending <b>ent</b> is never pronounced.&nbsp;&nbsp;<img
+							src={resolveAsset('/images/shh.jpg')}
+							style={{
+								border: "1px solid rgba(0,0,0,0.5)",
+								verticalAlign: 'middle',
+							}}
+							alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
 							&nbsp;&nbsp;e.g.
-							<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
-							<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
-							<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip></p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip></p>
 						</li>
 						<li>
 							<p>Usually, the consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
@@ -611,6 +619,50 @@ export class LO4Demystify extends PureComponent {
 			</div>
 		);
 	};
+}
+
+export class LO4EX1 extends PureComponent{
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo4-ex1`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel1` : ''}`}
+					key={`${id}Panel1`}
+				>
+					<p>Listen to the following nonsense rhyme. You should be able to identify numerous examples of the sound&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/ain.mp3`}>ain</AudioClip>.
+						Read the nonsense rhyme out loud to practise the Pronunciation</p>
+					<div className={`two-columns`}>
+						<p><b>Tu aimes… ?</b>&nbsp;<AudioClip className={`compact`} soundFile={`sounds/fr/nonsense-rhyme.mp3`}/><br/>
+					Tu aimes Quent<b>in</b> ?<br/>
+					Je n'aime pas Quent<b>in</b>, <br/>
+					Il lit T<b>in</b> t<b>in</b> ! <br/>
+					Tu aimes Mart<b>in</b> ?<br/>
+					Je n'aime pas Mart<b>in</b> !<br/>
+					Il boit du v<b>in</b> ! <br/>
+					Tu aimes Corent <b>in</b> ?<br/>
+					J'aime bi <b>en</b> Corent<b>in</b> !<br/>
+					Il a un beau jard<b>in</b>.<br/>
+					Tu aimes Dami<b>en</b> ?<br/>
+					Je n'aime pas Dami<b>en</b>.<br/>
+					Il ne se lave pas les ma<b>in</b>s! <br/>
+					Tu aimes Sébasti<b>en</b> ?<br/>
+					Oh, j'adore Sébasti<b>en</b> !<br/>
+					C'est mon vois<b>in</b> !<br/>
+						</p>
+						<img src={`images/love.png`} alt={`love`} title={`love`}/>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
 }
 
 export class LO5Grammar extends PureComponent{
@@ -1105,7 +1157,13 @@ export class LO9Grammar extends PureComponent {
 					<ol>
 						<li>
 							<p>Within France telephone numbers have 10 digits. For landlines the first two are the area code. These are:</p>
-							<div style={{ "display": "flex", "width": "50%", "float": "right", "flexDirection": "column", "alignItems": "center" }}>
+							<div style={{
+								"alignItems": "center",
+								"display": "flex",
+								"flexDirection": "column",
+								"float": "right",
+								"width": "50%",
+							}}>
 								{/* <Figure
 									className={`centre max1000`}
 									src={resolveAsset(`/images/Carte_indicatifs_téléphoniques_français.svg`)}

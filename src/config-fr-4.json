@@ -111,7 +111,7 @@
 				"/sounds/fr/Où habitez-vous Vous habitez où.mp3"
 			],
 			[
-				"Où se trouve Lille ?  Lille se trouve en France.",
+				"Où se trouve Lille ? Lille se trouve en France.",
 				"Where is Lille? Lille is in France.",
 				"/sounds/fr/Où se trouve Lille Lille se trouve en France.mp3"
 			],
@@ -226,7 +226,7 @@
 	"explanation1": {
 		"component": "Explanation",
 		"content": [
-			"<p>In French there are several words that translate the word 'in'. If you are saying '<b>in</b>' <b>with a proper noun</b> i.e. a place name, you will see  à   en  au  aux   dans le . The chart below shows when each of these is used.</p><table><tbody><tr><td>à</td><td>Londres, Cambridge, Marseille</td><td>towns, cities, villages</td></tr><tr><td>à</td><td>Singapour, Hongkong, Taiwan</td><td>islands and archipelagos without gender</td></tr><tr><td>au</td><td>Maroc, Canada, Chili</td><td>masculine countries beginning with a consonant</td></tr><tr><td>en</td><td>France, Suisse, Chine</td><td>all feminine countries</td></tr><tr><td>en</td><td>Afghanistan, Iran, Andorre</td><td>masculine countries beginning with a vowel</td></tr><tr><td>en</td><td>Provence, Nouvelle Calédonie</td><td>feminine provinces and regions </td></tr><tr><td>en</td><td>Océanie, Afrique, Amérique du nord /du sud, Europe, Asie, Antarctique</td><td>the continents</td></tr><tr><td>aux</td><td>Pays Bas, Seychelles, États-Unis</td><td>plurals</td></tr><tr><td>dans le</td><td>Cambridgeshire, Derbyshire, Pas-de-Calais, Colorado</td><td>masculine provinces and regions including the British counties</td></tr></tbody></table>"
+			"<p>In French there are several words that translate the word '<b>in</b>'. If you are saying '<b>in</b>' <b>with a proper noun</b> i.e. a place name, you will see <b>à</b>, <b>en</b>, <b>au</b>, <b>aux</b>, dans le. The chart below shows when each of these is used.</p><table><tbody><tr><td>à</td><td>Londres, Cambridge, Marseille</td><td>towns, cities, villages</td></tr><tr><td>à</td><td>Singapour, Hongkong, Taiwan</td><td>islands and archipelagos without gender</td></tr><tr><td>au</td><td>Maroc, Canada, Chili</td><td>masculine countries beginning with a consonant</td></tr><tr><td>en</td><td>France, Suisse, Chine</td><td>all feminine countries</td></tr><tr><td>en</td><td>Afghanistan, Iran, Andorre</td><td>masculine countries beginning with a vowel</td></tr><tr><td>en</td><td>Provence, Nouvelle Calédonie</td><td>feminine provinces and regions </td></tr><tr><td>en</td><td>Océanie, Afrique, Amérique du nord / du sud, Europe, Asie, Antarctique</td><td>the continents</td></tr><tr><td>aux</td><td>Pays Bas, Seychelles, États-Unis</td><td>plurals</td></tr><tr><td>dans le</td><td>Cambridgeshire, Derbyshire, Pas-de-Calais, Colorado</td><td>masculine provinces and regions including the British counties</td></tr></tbody></table>"
 		],
 		"id": "explanation1",
 		"titleText": "Grammar / Use of Language"
@@ -240,18 +240,15 @@
 		"component": "Group",
 		"content": [
 			{
-				"explanation3": {
-					"component": "Explanation",
-					"content": [
-						"<p>Listen to the following nonsense rhyme. You should be able to identify numerous examples of the sound <span class='audio-link' sound-file='/sounds/fr/ain.mp3'>ain</span>. Read the nonsense rhyme out loud to practise the Pronunciation</p><p><b>Tu aimes… ?</b>&nbsp;<audio class='compact' controls=''><source src='/projects/richard//sounds/fr/nonsense-rhyme.mp3'></audio></br>Tu aimes Quent<b>in</b> ?</br>Je n'aime pas Quent<b>in</b>, </br>Il lit T<b>in</b>t<b>in</b> ! </br> Tu aimes Mart<b>in</b> ?</br>Je n'aime pas Mart<b>in</b> !</br>Il boit du v<b>in</b> ! </br>Tu aimes Corent<b>in</b> ?</br> J'aime bi<b>en</b> Corent<b>in</b> !</br>Il a un beau jard<b>in</b>.</br>Tu aimes Dami<b>en</b> ?</br>Je n'aime pas Dami<b>en</b>.</br>Il ne se lave pas les ma<b>in</b>s ! </br>Tu aimes Sébasti<b>en</b> ?</br>Oh, j'adore Sébasti<b>en</b> !</br>C'est mon vois<b>in</b> !</br></p>"
-					],
-					"id": "explanation3",
+				"LO4Exercise1": {
+					"component": "LO4EX1",
+					"id": "LO4Exercise1",
 					"titleText": "1. Nonsense Rhyme."
 				}
 			},
 			{
 				"explanation4": {
-					"component": "Explanation",
+					"component": "HIDE_Explanation",
 					"content": [
 						"<p>Try to make other nonsense rhymes yourself using the words below containing the sound <span class='audio-link' sound-file='/sounds/fr/ain.mp3'>ain</span> to fill in the gaps</p>"
 					],
@@ -264,11 +261,12 @@
 					"component": "DropDowns",
 					"id": "dropdowns3",
 					"congratulationsText": "Très bien!",
-					"instructionsText": "Select the correct of 'in' to fill in the gaps.",
+					"instructionsText": "Select the correct form of 'in' to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"titleText": "3. Prepositions",
+					"titleText": "2. Practice saying where people live",
 					"cheatText": "Cheat",
 					"phrases": [
+						"Ma famille habite:",
 						"[à|*au|en|aux|dans le] Canada.",
 						"[à|au|*en|aux|dans le] France.",
 						"[*à|au|en|aux|dans le] Taiwan.",
@@ -295,7 +293,7 @@
 					"congratulationsText": "Superbe!",
 					"instructionsText": "Listen and choose the correct option to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"titleText": "4. Where do you live?",
+					"titleText": "3. Where do you live?",
 					"cheatText": "Cheat",
 					"phrases": [
 						"Tu habites [*à la campagne | à la montagne | au bord de la mer] ?",

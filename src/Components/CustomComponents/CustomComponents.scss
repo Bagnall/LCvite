@@ -24,6 +24,36 @@
 	}
 }
 
+#LO4Exercise1 {
+	div.two-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 0px 0px;
+		grid-template-areas: "poem image";
+		p {
+			grid-area: poem;
+		}
+		img {
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
+	@include respond-below(m) {
+		div.two-columns {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas:
+				"image"
+				"poem";
+		}
+	}
+}
+
 #LO9Grammar {
 	.svg-container {
 		overflow: hidden;

@@ -1445,7 +1445,9 @@
 	"monologue1": {
 		"component": "Monologue",
 		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
-		"soundFile": "sounds/fr/max-monologue.mp3"
+		"instructionsText": "Listen to the sound sample and type what you hear, then press the \"Check\" button.",
+		"soundFile": "sounds/fr/max-monologue.mp3",
+		"titleText": "Monologue"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
@@ -1803,7 +1805,7 @@
 	},
 	"connectFour1": {
 		"cheatText": "Cheat",
-		"component": "ConnectFour",
+		"component": "HIDE_ConnectFour",
 		"congratulationsText": "Congratulations!",
 		"htmlContentXXX": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
 		"id": "ConnectFour1",
@@ -1813,7 +1815,7 @@
 	},
 	"mockney1": {
 		"cheatText": "Cheat",
-		"component": "Mockney",
+		"component": "HIDE_Mockney",
 		"congratulationsText": "Congratulations!",
 		"id": "Mockney1",
 		"instructionsText": "Type text to translate to mockney",
@@ -1822,7 +1824,7 @@
 	},
 	"crossword1": {
 		"cheatText": "Cheat",
-		"component": "CrossWord",
+		"component": "HIDE_CrossWord",
 		"congratulationsText": "Well done!",
 		"htmlContent": "<p>The <b>CrossWord</b> component is very experimental and incomplete.",
 		"id": "CrossWord1",

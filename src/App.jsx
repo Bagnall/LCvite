@@ -1145,6 +1145,10 @@ export default class App extends React.Component {
 							<CustomComponent id={id} />
 						</AccordionArticle>
 					);
+				} else if(component.slice(0, 4) === 'HIDE') {
+					// articles.push(
+					// 	<p>HIDE</p>
+					// );
 				} else {
 					articles.push(
 						<p key={`notImplemented${id}`}>Component {component} not implemented</p>
