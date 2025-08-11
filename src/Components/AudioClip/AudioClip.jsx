@@ -318,7 +318,7 @@ class LinkAudioProgress extends CircularAudioProgress {
 	render = () => {
 		const { children } = this.props;
 		const {
-			status
+			status = ''
 		} = this.state;
 
 		return (

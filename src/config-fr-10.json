@@ -334,7 +334,7 @@
 			{
 				"wordsIntoSlots1": {
 					"component": "Blanks",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"id": "wordsIntoSlots1",
 					"instructionsText": "Match the French with the English",
 					"showHintsText": "Show hints when moving",
@@ -383,7 +383,7 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Excellent!",
+					"congratulationsText": "Excellent !",
 					"instructionsTextHTML": "Select <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

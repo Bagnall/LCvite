@@ -313,7 +313,7 @@
 				"sounds/fr/Je viens de  Je ne viens pas de.mp3"
 			]
 		],
-		"titleText": "Vocabulary"
+		"titleText": "Vocabulary continued"
 	},
 	"customComponent1": {
 		"component": "LO3Grammar",
@@ -333,7 +333,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Excellent!",
+					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -361,7 +361,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Très bien!",
+					"congratulationsText": "Très bien !",
 					"instructionsTextHTML": "Fill in the gaps with <b>de</b> / <b>du</b> / <b>d'</b> / <b>des</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -385,13 +385,13 @@
 						"sounds/fr/Je viens du Gabon.mp3",
 						"sounds/fr/Je viens Des États-Unis.mp3"
 					],
-					"titleText": "2. Practice saying where you're from."
+					"titleText": "2. Practise saying where you're from."
 				}
 			},
 			{
 				"answerTable1": {
 					"component": "AnswerTable",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"id": "AnswerTable1",
 					"instructionsText": "Type the feminine form, then click the check button. Listen to the pronunciation of masculine and feminine forms.",
 					"header": [
@@ -512,7 +512,7 @@
 			{
 				"answerTable2": {
 					"component": "AnswerTable",
-					"congratulationsText": "Excellent!",
+					"congratulationsText": "Excellent !",
 					"id": "AnswerTable2",
 					"instructionsText": "Write what you hear.",
 					"phrases": [
@@ -557,7 +557,7 @@
 							"sounds/fr/Je suis professeur de maths et Lucie est avocate.mp3"
 						]
 					],
-					"titleText": "4. Practice your listening skills"
+					"titleText": "4. Practise your listening skills"
 				}
 			}
 		],

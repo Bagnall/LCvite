@@ -116,7 +116,7 @@
 				"sounds/fr/administrateur, administratrice.mp3"
 			],
 			[
-				"informaticien(m) informaticienne(f)",
+				"informaticien(m) / informaticienne(f)",
 				"IT specialist",
 				"sounds/fr/informaticien, informaticienne.mp3"
 			],
@@ -183,7 +183,7 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Très bien!",
+					"congratulationsText": "Très bien !",
 					"instructionsText": "Select the correct part of être to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -198,13 +198,13 @@
 						"Elles [suis|sommes|*sont] étudiantes en éducation.",
 						"Jérome et moi [suis|sont|*sommes] divorcés maintenant."
 					],
-					"titleTextHTML": "Practice the verb <b>être</b>."
+					"titleTextHTML": "Practise the verb <b>être</b>."
 				}
 			},
 			{
 				"wordsIntoSlots2": {
 					"component": "Blanks",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",

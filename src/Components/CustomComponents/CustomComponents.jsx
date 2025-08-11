@@ -235,27 +235,19 @@ export class LO2Grammar extends PureComponent {
 					<p>a. The indefinite article:</p>
 					<p>There are two ways of saying 'a' in French:&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip> for masculine nouns e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`}>homme</AudioClip> (a man),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/un.mp3`}><b>un</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/métier.mp3`}>métier</AudioClip> (a profession/occupation) and&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un homme.mp3`}><b>un</b> homme</AudioClip> (a man),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/un métier.mp3`}><b>un</b> métier</AudioClip> (a profession/occupation) and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip> for a feminine noun e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/femme.mp3`}>femme</AudioClip> (a woman),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/une.mp3`}><b>une</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/profession.mp3`}>profession</AudioClip> (a profession).</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/une femme.mp3`}><b>une</b> femme</AudioClip> (a woman),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/une profession.mp3`}><b>une</b> profession</AudioClip> (a profession).</p>
 					<p>b. The definite article:</p>
 					<p>For singular nouns, to say 'the' you use&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip> for masculine nouns e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/professeur.mp3`}>professeur</AudioClip> (the [male] teacher),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le.mp3`}><b>le</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/jour.mp3`}>jour</AudioClip> (the day). For feminine nouns you say&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le professeur.mp3`}><b>le</b> professeur</AudioClip> (the [male] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le jour.mp3`}><b>le</b> jour</AudioClip> (the day). For feminine nouns you say&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip> e.g.&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/professeure.mp3`}>professeure</AudioClip> (the [female] teacher),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/la.mp3`}><b>la</b></AudioClip>&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/nuit.mp3`}>nuit</AudioClip> (the night).
+						<AudioClip className={`link`} soundFile={`sounds/fr/la professeure.mp3`}><b>la</b> professeure</AudioClip> (the [female] teacher),&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la nuit.mp3`}><b>la</b> nuit</AudioClip> (the night).
 						When the singular noun begins with a vowel or mute h, then you use&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/l'.mp3`}><b>l'</b></AudioClip> regardless of gender e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/l'appartement.mp3`}><b>l'</b>appartement</AudioClip> (m) (the flat),&nbsp;
@@ -415,7 +407,7 @@ export class LO3Grammar extends PureComponent {
 						</tbody>
 					</table><p><b>venir</b> is a common irregular verb.</p>
 					<p>
-						<AudioClip className={`link`} soundFile={`sounds/fr/venir de.mp3`}>venir de</AudioClip> to come from</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/venir de.mp3`}><b>venir de</b></AudioClip> to come from</p>
 					<table>
 						<tbody>
 							<tr>
@@ -648,12 +640,12 @@ export class LO4EX1 extends PureComponent{
 						<p><b>Tu aimes… ?</b>&nbsp;<AudioClip className={`compact`} soundFile={`sounds/fr/nonsense-rhyme.mp3`}/><br/>
 					Tu aimes Quent<b>in</b> ?<br/>
 					Je n'aime pas Quent<b>in</b>, <br/>
-					Il lit T<b>in</b> t<b>in</b> ! <br/>
+					Il lit T<b>in</b>t<b>in</b> ! <br/>
 					Tu aimes Mart<b>in</b> ?<br/>
 					Je n'aime pas Mart<b>in</b> !<br/>
 					Il boit du v<b>in</b> ! <br/>
-					Tu aimes Corent <b>in</b> ?<br/>
-					J'aime bi <b>en</b> Corent<b>in</b> !<br/>
+					Tu aimes Corent<b>in</b> ?<br/>
+					J'aime bi<b>en</b> Corent<b>in</b> !<br/>
 					Il a un beau jard<b>in</b>.<br/>
 					Tu aimes Dami<b>en</b> ?<br/>
 					Je n'aime pas Dami<b>en</b>.<br/>
@@ -766,27 +758,47 @@ export class LO6Grammar extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p>In French, the gender of the noun has implications for the <b>possessive adjectives</b>. There are two ways of saying 'my' for singular nouns in French: <b>mon</b> for masculine nouns e.g. <b>mon</b> frère (my brother), <b>mon</b> jardin (my garden) and <b>ma</b> for feminine nouns e.g. <b>ma</b> femme (my wife), <b>ma</b> maison (my house). It is important to remember that the gender of the noun itself is what matters here, and not the gender of the 'owner'.  There is only one way of saying 'my' for plural nouns: e.g. <b>mes</b> oncles (my uncles), <b>mes</b> tantes (my aunts).<br />Here is a complete list of the possessive adjectives.</p><table><tbody><tr><td>mon, ma, mes</td>
-						<td>my</td>
-					</tr>
-					<tr><td>ton, ta, tes</td>
-						<td>your (sing)</td>
-					</tr>
-					<tr><td>son, sa, ses *</td>
-						<td>his  / her</td>
-					</tr>
-					<tr><td>notre (sing), nos (pl)</td>
-						<td>our</td>
-					</tr>
-					<tr><td>votre (sing), vos (pl)</td>
-						<td>your (formal, pl)</td>
-					</tr>
-					<tr><td>leur (sing), leurs (pl)</td>
-						<td>their</td>
-					</tr></tbody></table><p className='footnote'>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
+					<p>In French, the gender of the noun has implications for the <b>possessive adjectives</b>.
+						There are two ways of saying 'my' for singular nouns in French: <AudioClip className={`link`} soundFile={`sounds/fr/mon.mp3`} ><b>mon</b></AudioClip> for masculine nouns e.g.&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/mon frère.mp3`} ><b>mon</b> frère</AudioClip> (my brother),&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/mon jardin.mp3`} ><b>mon</b> jardin</AudioClip> (my garden) and <b>ma</b> for feminine nouns e.g.&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/ma femme.mp3`} ><b>ma</b> femme</AudioClip> (my wife),&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/ma maison.mp3`} ><b>ma</b> maison</AudioClip> (my house). It is important to remember that the gender of the noun itself is what matters here,
+						and not the gender of the 'owner'.  There is only one way of saying 'my' for plural nouns: e.g.&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/mes oncles.mp3`} ><b>mes</b> oncles</AudioClip> (my uncles),&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/mes tantes.mp3`} ><b>mes</b> tantes</AudioClip> (my aunts).<br />
+						Here is a complete list of the possessive adjectives.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td><AudioClip className={`link`} soundFile={`sounds/fr/mon.mp3`} >mon</AudioClip>,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/ma.mp3`} >ma</AudioClip>,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/mes.mp3`} >mes</AudioClip></td>
+								<td>my</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ton.mp3`} >ton</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/ta.mp3`} >ta</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/tes.mp3`} >tes</AudioClip></td>
+							<td>your (sing)</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/son.mp3`} >son</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/sa.mp3`} >sa</AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/ses.mp3`} >ses</AudioClip> *</td>
+							<td>his  / her</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/notre.mp3`} >notre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/nos.mp3`} >nos</AudioClip> (pl)</td>
+								<td>our</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/votre.mp3`} >votre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/vos.mp3`} >vos</AudioClip> (pl)</td>
+								<td>your (formal, pl)</td>
+							</tr>
+							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/leur.mp3`} >leur</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/leurs.mp3`} >leurs</AudioClip> (pl)</td>
+								<td>their</td>
+							</tr></tbody></table><p className='footnote'>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
 					<p><b>2 Verbs in French continued</b></p>
-					<p><b>Avoir</b> is one of the many irregular verbs in French. It means <b>to have</b>.
-						e.g. J'ai une soeur.</p>
+					<p><AudioClip className={`link`} soundFile={`sounds/fr/avoir.mp3`} ><b>Avoir</b></AudioClip> is one of the many irregular verbs in French.
+						It means <b>to have</b>.
+						e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai une soeur.mp3`} >J'ai une soeur</AudioClip> - I have a sister.</p>
 					<p>It occurs very frequently and so is worth memorising if possible.</p>
 					<table>
 						<thead>
@@ -888,14 +900,14 @@ export class LO6Demystify extends PureComponent {
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
 							There are no exceptions here!</p>
-					<p>2i  after the vowel <b>I</b>, <b>double ll</b> is pronounced as though it were a letter 'y' in English. e.g.&nbsp;
+					<p>2i  after the vowel <b>i</b>, <b>double ll</b> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)</p>
-					<p>2ii if the vowel i is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
-						a letter 'y' in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
+					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
+						a letter <b>"y"</b> in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
-					<p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <i><b>i</b></i>.
+					<p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <b>i</b>.
 						The most common are :  <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;

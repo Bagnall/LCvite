@@ -209,7 +209,7 @@
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You know your way around the house!",
 					"id": "MemoryMatchGame1",
-					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
 					"nPairsToPlay": 8,
 					"cards": [
 						{
@@ -293,7 +293,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Excellent!",
+					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -332,7 +332,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Très bien!",
+					"congratulationsText": "Très bien !",
 					"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -353,14 +353,14 @@
 						"sounds/fr/Le Champagne est délicieux.mp3",
 						"sounds/fr/Les étudiantes sont ambitieuses.mp3"
 					],
-					"titleText": "3. Practice descriptions"
+					"titleText": "3. Practise descriptions"
 				}
 			},
 			{
 				"phrases1": {
 					"component": "Blanks",
 					"id": "phrases1",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

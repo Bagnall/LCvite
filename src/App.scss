@@ -234,8 +234,9 @@ h2 {
 	margin: auto;
 	h1,
 	h2 {
-		display: flex;
-		justify-content: center;
+		// display: flex;
+		// justify-content: center;
+		text-align: center;
 	}
 	ul {
 		margin: 2rem 0;

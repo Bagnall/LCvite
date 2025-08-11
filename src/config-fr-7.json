@@ -315,7 +315,7 @@
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"id": "MemoryMatchGame1",
-					"instructionsText": "Turn over two cards that match. A french word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
 					"nPairsToPlay": 8,
 					"cards": [
 						{
@@ -417,7 +417,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -455,7 +455,7 @@
 					"blanksType": "phrases",
 					"cheatText": "Cheat",
 					"component": "Blanks",
-					"congratulationsText": "Very good!",
+					"congratulationsText": "Très bien !",
 					"id": "phrases1",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
@@ -472,7 +472,7 @@
 				"dropdowns2": {
 					"component": "DropDowns",
 					"id": "dropdowns2",
-					"congratulationsText": "Excellent!",
+					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to this poem by Mymi Doinet about the rainbow and fill in the colours as you hear them.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

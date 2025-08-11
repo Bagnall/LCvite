@@ -3,7 +3,7 @@
 		"class": "lo-4",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Origins",
+		"subtitle": "Current location",
 		"targetLanguage": "french",
 		"targetLanguageCode": "fr-FR",
 		"title": "French Learning Object 4"
@@ -83,7 +83,7 @@
 				"/sounds/fr/Non, j'habite dans un petit village à une heure d'ici.mp3"
 			]
 		],
-		"titleText": "Dialogues"
+		"titleText": "Dialogues: Where do you live?"
 	},
 	"phraseTable2": {
 		"component": "PhraseTable",
@@ -260,10 +260,10 @@
 				"dropdowns3": {
 					"component": "DropDowns",
 					"id": "dropdowns3",
-					"congratulationsText": "Très bien!",
+					"congratulationsText": "Très bien !",
 					"instructionsText": "Select the correct form of 'in' to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"titleText": "2. Practice saying where people live",
+					"titleText": "2. Practise saying where people live",
 					"cheatText": "Cheat",
 					"phrases": [
 						"Ma famille habite:",
@@ -290,7 +290,7 @@
 				"dropdowns4": {
 					"component": "DropDowns",
 					"id": "dropdowns4",
-					"congratulationsText": "Superbe!",
+					"congratulationsText": "Superbe !",
 					"instructionsText": "Listen and choose the correct option to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"titleText": "3. Where do you live?",
