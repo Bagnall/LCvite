@@ -951,7 +951,7 @@ export class LO7Grammar extends PureComponent {
 								i.e. in French, a definite article (le, la, l', les) is required.</p></li><li><p>To say what you like/ dislike doing you use&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/J*apos;aime.mp3`}>J'aime</AudioClip> plus an infinitive. e.g.&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/J&apos;aime danser.mp3`}>J'aime danser</AudioClip>: I like to dance / I like dancing.&nbsp;
-							<AudioClip className={`link`} soundFile={`sounds/fr/Je n'aime pas regarder la television.mp3`}>Je n'aime pas regarder la television</AudioClip>:
+							<AudioClip className={`link`} soundFile={`sounds/fr/Je n'aime pas regarder la télévision.mp3`}>Je n'aime pas regarder la télévision</AudioClip>:
 								I don't like to watch the television / I don't like watching the television.</p></li>
 						<li>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/Quel.mp3`}>Quel</AudioClip>,&nbsp;

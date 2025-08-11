@@ -410,7 +410,7 @@
 						}
 					],
 					"showHintsText": "Show hints",
-					"titleText": "1. Memory"
+					"titleText": "1. Learn some vocabulary"
 				}
 			},
 			{
@@ -418,7 +418,7 @@
 					"component": "DropDowns",
 					"id": "dropdowns1",
 					"congratulationsText": "Superbe !",
-					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
+					"instructionsText": "Listen to the speakers and select the correct definite article.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
@@ -447,7 +447,7 @@
 						"sounds/fr/J'adore la neige !.mp3",
 						"sounds/fr/Tu aimes les animaux.mp3"
 					],
-					"titleText": "2. Fill in the gaps"
+					"titleText": "2. Talking about likes and dislikes"
 				}
 			},
 			{
@@ -476,7 +476,7 @@
 					"instructionsText": "Listen to this poem by Mymi Doinet about the rainbow and fill in the colours as you hear them.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
-					"phrasesHTML": "<ul><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|Vert|*Rouge] comme un fruit du Mexique</p></li><li><p>[Bleu|Indigo|Jaune|*Orangé|Violet|Vert|Rouge] comme le sable d'Afrique</p></li><li><p>[Bleu|Indigo|*Jaune|Orangé|Violet|Vert|Rouge] comme les girafes chics</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|*Vert|Rouge] comme un sorbet de Jamaïque</p></li><li><p>[*Bleu|Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme les vagues du Pacifique</p></li><li><p>[Bleu|*Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme un papillon des tropiques</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|*Violet|Vert|Rouge] comme les volcans de Martinique</p></li><li><p>Qui donc est aussi fantastique ?</p></li><li><p>Est-ce un rêve ou est-ce véridique ?</p></li><li><p>C'est dans le ciel magnifique</p></li><li><p>L'arc aux sept couleurs magiques.</p></li><li><p><i>Mymi Doinet</i></p></li></ul>",
+					"phrasesHTML": "<ul><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|Vert|*Rouge] comme un fruit du Mexique</p></li><li><p>[Bleu|Indigo|Jaune|*Orangé|Violet|Vert|Rouge] comme le sable d'Afrique</p></li><li><p>[Bleu|Indigo|*Jaune|Orangé|Violet|Vert|Rouge] comme les girafes chics</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|*Vert|Rouge] comme un sorbet de Jamaïque</p></li><li><p>[*Bleu|Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme les vagues du Pacifique</p></li><li><p>[Bleu|*Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme un papillon des tropiques</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|*Violet|Vert|Rouge] comme les volcans de Martinique</p></li><li><p>Qui donc est aussi fantastique ?</p></li><li><p>Est-ce un rêve ou est-ce véridique ?</p></li><li><p>C'est dans le ciel magnifique</p></li><li><p>L'arc aux sept couleurs magiques.</p></li></ul><p><i>Mymi Doinet</i></p>",
 					"audio": [
 						"sounds/fr/rainbow-poem.mp3"
 					],
