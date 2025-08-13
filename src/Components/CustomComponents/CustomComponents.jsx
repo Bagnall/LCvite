@@ -651,7 +651,8 @@ export class LO4EX1 extends PureComponent{
 					Il ne se lave pas les ma<b>in</b>s! <br/>
 					Tu aimes Sébasti<b>en</b> ?<br/>
 					Oh, j'adore Sébasti<b>en</b> !<br/>
-					C'est mon vois<b>in</b> !<br/>
+							C'est mon vois<b>in</b> !<br /><br />
+							&copy; Jacqueline Rosen
 						</p>
 						<img src={`images/love.png`} alt={`love`} title={`love`}/>
 					</div>
@@ -1370,7 +1371,7 @@ export class LO9Grammar extends PureComponent {
 							<p>Telephone numbers are given in two-digit groups: e.g. <AudioClip className={`link`} soundFile={`sounds/fr/07 11 15 22 55.mp3`}>07 11 15 22 55</AudioClip></p>
 						</li>
 						<li>
-							<p>Bien is usually translated as 'well' or 'good'. However, here's an exception: It can sometimes be translated as 'isn't it', 'aren't you' etc or 'indeed' to verify something, as in the following examples:</p>
+							<p><AudioClip className={`link`} soundFile={`sounds/fr/bien.mp3`} ><b>Bien</b></AudioClip> is usually translated as 'well' or 'good'. However, here's an exception: It can sometimes be translated as 'isn't it', 'aren't you' etc or 'indeed' to verify something, as in the following examples:</p>
 							<table>
 								<tbody>
 									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></td>
@@ -1412,7 +1413,7 @@ export class LO9Demystify extends PureComponent {
 					key={`${id}CustomComponent`}
 				>
 					<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p>
-					<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed: cinq, six, sept, huit, neuf, dix.</p>
+					<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed: <AudioClip className={`link`} soundFile={`sounds/fr/cinq.mp3`} >cinq</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/six.mp3`} >six</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/sept.mp3`} >sept</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/huit.mp3`} >huit</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/neuf.mp3`} >neuf</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/dix.mp3`} >dix</AudioClip>.</p>
 					<p>However, <b>NB</b>, when&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/six.mp3`}><b>six</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/huit.mp3`}><b>huit</b></AudioClip> or&nbsp;
@@ -1450,9 +1451,9 @@ export class L10Grammar extends PureComponent {
 				>
 					<ol>
 						<li>
-							<div class={`two-columns`}>
+							<div className={`two-columns`}>
 								<img src={resolveAsset(`images/vouloir.jpg`)} title="vouloir" alt="A young girl points to the cake she wants"/>
-								<div class={`text`}>
+								<div className={`text`}>
 									<p>Using the verb <AudioClip className={`audio-link`} soundFile={`sounds/fr/vouloir.mp3`} >vouloir</AudioClip> meaning 'to want'</p>
 									<table>
 										<tbody>

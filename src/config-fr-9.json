@@ -95,9 +95,9 @@
 				"/sounds/fr/André, tu veux prendre un verre avec moi ce soir.mp3"
 			],
 			[
-				"Oui, je veux bien. A quelle heure ?",
+				"Oui, je veux bien. À quelle heure ?",
 				"Yes, I'd like that. At what time?",
-				"/sounds/fr/Oui, je veux bien. A quelle heure (male).mp3"
+				"/sounds/fr/Oui, je veux bien. À quelle heure (male).mp3"
 			],
 			[
 				"À huit heures ?",
@@ -175,7 +175,7 @@
 			[
 				"À plus tard !  /  À plus !",
 				"See you later!",
-				"/sounds/fr/À plus tard !.mp3"
+				"/sounds/fr/À plus tard ! À plus !.mp3"
 			],
 			[
 				"se tromper de",
@@ -218,7 +218,6 @@
 					"component": "AnswerTable",
 					"congratulationsText": "Excellent !",
 					"id": "AnswerTable1",
-					"instructionsTextXX": "Listen to the following phone numbers and type them into the space provided.",
 					"header": [
 						"Question",
 						"Answer",
@@ -276,7 +275,7 @@
 							"/sounds/fr/C'est le 01 88 11 13 90.mp3"
 						]
 					],
-					"titleText": "1 Listen to the following phone numbers and type them into the space provided. "
+					"titleText": "1 Giving your phone number. "
 				}
 			},
 			{
@@ -313,7 +312,7 @@
 						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame !.mp3",
 						"sounds/fr/Au revoir Madame !.mp3"
 					],
-					"titleText": "2. Select the correct word to fill in the gaps in the following conversations."
+					"titleText": "2. Talking on the phone."
 				}
 			},
 			{
@@ -332,7 +331,7 @@
 						"Dominique est là, s'iI vous plaît ?",
 						"[Oui, c'est Dominique à l'appareil.]",
 						"Dominique tu veux prendre un verre avec moi ce soir ?",
-						"[Oui, je veux bien. A quelle heure ?]",
+						"[Oui, je veux bien. À quelle heure ?]",
 						"À huit heures ?",
 						"[Oui, d'accord. Tu veux aller où ?]",
 						"Au nouveau café au centre-ville ?",
@@ -345,13 +344,13 @@
 						"sounds/fr/Dominique est là, s'iI vous plaît.mp3",
 						"sounds/fr/Oui, c'est Dominique à l'appareil.mp3",
 						"sounds/fr/Dominique tu veux prendre un verre avec moi ce soir.mp3",
-						"sounds/fr/Oui, je veux bien. A quelle heure (male).mp3",
+						"sounds/fr/Oui, je veux bien. À quelle heure (male).mp3",
 						"sounds/fr/À huit heures.mp3",
 						"sounds/fr/Oui, d'accord. Tu veux aller où.mp3",
 						"sounds/fr/Au nouveau café au centre-ville.mp3",
 						"sounds/fr/Oui, très bien ! J'aime beaucoup le nouveau café.mp3"
 					],
-					"titleText": "3. Select the appropriate responses in the box to answer the questions in the conversation below"
+					"titleText": "3. Answer the questions"
 				}
 			}
 		],

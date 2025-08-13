@@ -161,27 +161,27 @@
 				"sounds/fr/Pas de problème !.mp3"
 			],
 			[
-				"bibliothèque(f)",
+				"bibliothèque (f)",
 				"library",
 				"sounds/fr/bibliothèque.mp3"
 			],
 			[
-				"café(m)",
+				"café (m)",
 				"café",
 				"sounds/fr/café.mp3"
 			],
 			[
-				"centre commercial(m)",
+				"centre commercial (m)",
 				"shopping centre",
 				"sounds/fr/centre commercial.mp3"
 			],
 			[
-				"cinéma(m)",
+				"cinéma (m)",
 				"cinema",
 				"sounds/fr/cinéma.mp3"
 			],
 			[
-				"exposition(f)",
+				"exposition (f)",
 				"exhibition",
 				"sounds/fr/exposition.mp3"
 			],
@@ -191,17 +191,17 @@
 				"sounds/fr/magasin.mp3"
 			],
 			[
-				"piscine(f)",
+				"piscine (f)",
 				"swimming pool",
 				"sounds/fr/piscine.mp3"
 			],
 			[
-				"restaurant(m)",
+				"restaurant (m)",
 				"restaurant",
 				"sounds/fr/restaurant.mp3"
 			],
 			[
-				"théâtre(m)",
+				"théâtre (m)",
 				"theatre",
 				"sounds/fr/théâtre.mp3"
 			],
@@ -216,13 +216,13 @@
 				"sounds/fr/partir.mp3"
 			],
 			[
-				"chaussures de marche(fpl)",
+				"chaussures de marche (fpl)",
 				"walking shoes",
 				"sounds/fr/chaussures de marche.mp3"
 			],
 			[
 				"vacances (fpl)",
-				"(Always used in the plural in French) holiday(s)",
+				"holiday(s) (Always used in the plural in French) ",
 				"sounds/fr/vacances.mp3"
 			],
 			[
@@ -321,10 +321,10 @@
 					"component": "DropDowns",
 					"id": "dropdowns1",
 					"congratulationsText": "Je veux vous féliciter !",
-					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> '(Each to their own!') with the correct part of <b>vouloir</b>:",
+					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> ('Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
-					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p>",
+					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p><p>&copy; Jacqueline Rosen</p>",
 					"audio": [
 						"sounds/fr/Chacun à son goût !.mp3"
 					],
@@ -376,7 +376,7 @@
 						"sounds/fr/Angèle veut prendre un verre avec ses amis.mp3",
 						"sounds/fr/Je ne veux pas chanter dans la chorale.mp3"
 					],
-					"titleText": "2. Match the French with the English"
+					"titleText": "2. What does everyone want to do?"
 				}
 			},
 			{

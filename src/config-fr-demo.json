@@ -1531,7 +1531,7 @@
 	"custom1": {
 		"component": "LO9Grammar",
 		"id": "LO9Grammar",
-		"titleText": "Grammar / Use of Language"
+		"titleText": "Regional map example"
 	},
 	"group": {
 		"component": "Group",
