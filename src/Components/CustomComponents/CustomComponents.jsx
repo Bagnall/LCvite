@@ -34,8 +34,7 @@ export class LO1Grammar extends PureComponent {
 					key={`${id}CustomComponent1`}
 				>
 					<p><a className='special-anchor-target' name='madame' />1 In French there is no equivalent to the English Ms.
-						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip>&nbsp;
-						regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
+						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
 					<a className='special-anchor-target' name='mademoiselle' /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</p>
 					<table>
@@ -72,7 +71,7 @@ export class LO1Grammar extends PureComponent {
 					<p>You use <AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip> when addressing an adult that you don't know e.g.
 						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
 						a health professional, a legal advisor, an acquaintance of your parents etc.</p>
-					<p><b>Vous</b> is used when addressing more than one person
+					<p><b>Vous</b> is also used when addressing more than one person
 							whatever your relationship to them.</p>
 				</div>
 			</div>
@@ -99,8 +98,7 @@ export class LO1Demystify extends PureComponent {
 					<div className={`text`}>
 						<p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
 						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
-						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>&nbsp;
-						and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
+						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
 					</div>
 				</div>
@@ -114,18 +112,19 @@ export class LO1Demystify extends PureComponent {
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
 						It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement,
 						the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration.
-						You will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjou<b>r</b></AudioClip>,
-					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,
+						You will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjou<b>r</b></AudioClip>,&nbsp;
+					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
+					<p>It is worth noting that the pronunciation of the letter <b>r</b> may vary across the French speaking world.</p>
 				</div>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p>3 The diphthong (vowel combination) oi in French. <AudioClip soundFile={`sounds/fr/non-existant.mp3`}/> WE NEED A SOUND FILE FOR THIS</p>
-					<p>It is worth being aware of this sound as these vowels occur together in many French words e.g.   <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,
-						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,
+					<p>3 The digraph (vowel combination) oi in French. <AudioClip soundFile={`sounds/fr/non-existant.mp3`}/> WE NEED A SOUND FILE FOR THIS</p>
+					<p>It is worth being aware of this sound as the letter combination <b>oi</b> appears in many French words e.g. <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
 					</p>
 				</div>

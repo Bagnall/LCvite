@@ -86,27 +86,27 @@
 		"phrases": [
 			[
 				"Bonjour",
-				"hello, good morning, good afternoon",
+				"Hello, good morning, good afternoon",
 				"sounds/fr/Bonjour.mp3"
 			],
 			[
 				"Bonsoir",
-				"hello, good evening",
+				"Hello, good evening",
 				"sounds/fr/Bonsoir.mp3"
 			],
 			[
 				"Coucou",
-				"hi, cooee, peek-a-boo",
+				"Hi, cooee, peek-a-boo",
 				"sounds/fr/Coucou.mp3"
 			],
 			[
 				"Salut",
-				"hi, bye",
+				"Hi, bye",
 				"sounds/fr/Salut.mp3"
 			],
 			[
 				"Au revoir",
-				"goodbye",
+				"Goodbye",
 				"sounds/fr/Au revoir.mp3"
 			],
 			[
@@ -116,51 +116,51 @@
 			],
 			[
 				"Monsieur",
-				"sir, Mr",
+				"Sir, Mr",
 				"sounds/fr/Monsieur.mp3"
 			],
 			[
 				"<a class='special-anchor' href='./?config=config-fr-1.json#madame'>Madame</a>",
-				"madam, Mrs / Ms",
+				"Madam, Mrs / Ms",
 				"sounds/fr/Madame.mp3"
 			],
 			[
 				"<a class='special-anchor' href='./?config=config-fr-1.json#mademoiselle'>Mademoiselle</a>",
-				"young lady, Miss",
+				"Young lady, Miss",
 				"sounds/fr/Mademoiselle.mp3"
 			],
 			[
 				"Messieurs-dames",
-				"ladies and gentlemen",
+				"Ladies and gentlemen",
 				"sounds/fr/Messieurs-dames.mp3"
 			],
 			[
-				"jeune homme",
-				"young man",
+				"Jeune homme",
+				"Young man",
 				"sounds/fr/jeune homme.mp3"
 			],
 			[
-				"mon petit (m) / ma petite(f)",
-				"poppet  (literally: my little one)",
+				"Mon petit (m) / Ma petite(f)",
+				"Poppet  (literally: my little one)",
 				"sounds/fr/mon petit ma petite.mp3"
 			],
 			[
-				"mon amour",
-				"my love",
+				"Mon amour",
+				"My love",
 				"sounds/fr/mon amour.mp3"
 			],
 			[
-				"mon chéri (m) / ma chérie (f)",
-				"my darling",
+				"Mon chéri (m) / ma chérie (f)",
+				"My darling",
 				"sounds/fr/mon cheri ma cherie.mp3"
 			],
 			[
-				"les enfants",
-				"children",
+				"Les enfants",
+				"Children",
 				"sounds/fr/les enfants.mp3"
 			],
 			[
-				"tout le monde",
+				"Tout le monde",
 				"Everyone (literally : all the world)",
 				"sounds/fr/tout le monde.mp3"
 			],
@@ -230,27 +230,27 @@
 				"sounds/fr/Bonnes vacances !.mp3"
 			],
 			[
-				"oui, non",
+				"Oui, non",
 				"Yes, no",
 				"sounds/fr/oui, non.mp3"
 			],
 			[
-				"merci",
-				"thank you",
+				"Merci",
+				"Thank you",
 				"sounds/fr/merci.mp3"
 			],
 			[
-				"d'accord",
+				"D'accord",
 				"OK then, alright",
 				"sounds/fr/d'accord.mp3"
 			],
 			[
-				"aujourd'hui",
-				"today",
+				"Aujourd'hui",
+				"Today",
 				"sounds/fr/aujourd'hui.mp3"
 			],
 			[
-				"enchanté.e",
+				"Enchanté.e",
 				"Pleased to meet you (literally: delighted)",
 				"sounds/fr/enchanté.mp3"
 			]
