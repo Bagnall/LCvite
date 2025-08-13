@@ -47,9 +47,11 @@ export class MemoryMatchGame extends React.PureComponent {
 			nTries: 0,
 		});
 		this.handleClick = this.handleClick.bind(this);
+		this.handleReset = this.handleReset.bind(this);
+		this.handleShuffle = this.handleShuffle.bind(this);
 	}
 
-	handleClick(card) {
+	handleClick = (card) => {
 		const {
 			beenFlipped,
 			cards,
@@ -121,7 +123,32 @@ export class MemoryMatchGame extends React.PureComponent {
 					}), memoryCardTransitionTime);
 			}
 		});
-	}
+	};
+
+	handleReset = () => {
+		console.log("RESET!");
+		this.setState({
+			matched: [],
+		});
+	};
+
+	handleShuffle = () => {
+		console.log("Shuffle!");
+
+		const {
+			cards,
+			nPairsToPlay,
+		} = this.props.config;
+
+		this.setState({
+			flipped: [],
+			matched: [],
+		}, () => {
+			this.setState({
+				cards: getShuffledDeck(cards, nPairsToPlay)
+			});
+		});
+	};
 
 	render = () => {
 		const {
@@ -152,6 +179,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
+				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

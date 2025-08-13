@@ -949,8 +949,8 @@ export class LO7Grammar extends PureComponent {
 						<AudioClip className={`link`} soundFile={`sounds/fr/J'aime le football.mp3`}>J'aime <i>le</i> football</AudioClip>' or '
 						<AudioClip className={`link`} soundFile={`sounds/fr/Je n'aime pas la natation.mp3`}>Je n'aime pas <i>la</i> natation</AudioClip>'.
 								i.e. in French, a definite article (le, la, l', les) is required.</p></li><li><p>To say what you like/ dislike doing you use&nbsp;
-							<AudioClip className={`link`} soundFile={`sounds/fr/J*apos;aime.mp3`}>J'aime</AudioClip> plus an infinitive. e.g.&nbsp;
-							<AudioClip className={`link`} soundFile={`sounds/fr/J&apos;aime danser.mp3`}>J'aime danser</AudioClip>: I like to dance / I like dancing.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/J'aime.mp3`}>J'aime</AudioClip> plus an infinitive. e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/J'aime danser.mp3`}>J'aime danser</AudioClip>: I like to dance / I like dancing.&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/Je n'aime pas regarder la télévision.mp3`}>Je n'aime pas regarder la télévision</AudioClip>:
 								I don't like to watch the television / I don't like watching the television.</p></li>
 						<li>
@@ -997,7 +997,7 @@ export class LO7Demystify extends PureComponent {
 					<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p>
 					<p>
 						<AudioClip className={`link`} soundFile={`sounds/fr/le cricket.mp3`}>le cricket</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le tennis.mp3`}>le tennis</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/le tennis (f).mp3`}>le tennis</AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/le foot.mp3`}>le foot</AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/le shopping.mp3`}>le shopping</AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/le bowling.mp3`}>le bowling</AudioClip>,&nbsp;
@@ -1025,29 +1025,41 @@ export class LO8Grammar extends PureComponent {
 				>
 					<ol>
 						<li>
-							More about adjectives: There are some adjectives ending in <b>f</b>, e.g. sport<b>if</b>, act<b>if</b>.
+							More about adjectives: There are some adjectives ending in <b>f</b>, e.g. <AudioClip className={`link`} soundFile={`sounds/fr/sportif.mp3`}>sport<b>if</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/actif.mp3`}>act<b>if</b></AudioClip>.
 							The feminine form of such words ends in <b>-ve</b>.
-							e.g. Mon frère est sport<b>if</b>. Ma sœur est sporti<b>ve</b>.
+							e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Mon frère est sportif.mp3`}>Mon frère est sport<b>if</b></AudioClip>. <AudioClip className={`link`} soundFile={`sounds/fr/Ma sœur est sportive.mp3`}>Ma sœur est sporti<b>ve</b></AudioClip>.
 						</li>
 						<li><br/>
 							<ol type="i">
-								<li>The verb <b>faire</b>, meaning both 'to make' and 'to do', is a frequently occurring very  irregular verb. Here it is conjugated in the present tense:<br/>
-									je <b>fais</b><br/>
-									tu <b>fais</b><br/>
-									il / elle <b>fait</b><br/>
-									nous <b>faisons</b><br/>
-									vous <b>faites</b><br/>
-									ils / elles <b>font</b><br/>
+								<li>The verb <AudioClip className={`link`} soundFile={`sounds/fr/faire.mp3`}><b>faire</b></AudioClip>, meaning both 'to make' and 'to do',
+									is a frequently occurring very  irregular verb. Here it is conjugated in the present tense:<br />
+								<table>
+									<tbody>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais.mp3`}>je <b>fais</b></AudioClip></td><td>I do / make</td></tr>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/tu fais.mp3`}>tu <b>fais</b></AudioClip></td><td>You do / make</td></tr>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/il fait. elle fait.mp3`}>il / elle <b>fait</b></AudioClip></td><td>He / she / it does / makes</td></tr>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous faisons.mp3`}>nous <b>faisons</b></AudioClip></td><td>We do / make</td></tr>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous faites.mp3`}>vous <b>faites</b></AudioClip></td><td>You do /make</td></tr>
+										<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils font. elles font.mp3`}>ils / elles <b>font</b></AudioClip></td><td>They do /make</td></tr>
+									</tbody>
+								</table>
 								</li>
 								<li>
 									In English you can express what you do or make simply by adding the activity after the verb e.g. 'I do gymnastics' or
-									'I do gardening' or 'I make cakes'. In French, you also need something called the partitive article:
-									<b>du</b> for masculine nouns, <b>de la</b> for feminine nouns, <b>de l'</b> before a vowel or silent h and <b>des</b>
+									'I do gardening' or 'I make cakes'. In French, you also need something called the partitive article:&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/du.mp3`}><b>du</b></AudioClip> for masculine nouns,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/de la.mp3`}><b>de la</b></AudioClip> for feminine nouns,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/de l'.mp3`}><b>de l'</b></AudioClip> before a vowel or silent h and&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip>&nbsp;
 									for plurals.<br/>
 									The partitive is usually translated by "some" or "any," i.e an unspecified amount, or is often left out entirely as in the examples below. <br/>
-									<b>Je fais de la gymnastique</b> I do gymnastics    <br/>
-									<b>Je fais du jardinage</b> I do gardening<br/>
-									<b>Je fais des gâteaux</b> I make cakes<br/>
+									<table>
+										<tbody>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais de la gymnastique.mp3`}><b>Je fais de la gymnastique</b></AudioClip></td><td> I do gymnastics</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></td><td> I do gardening</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td><td> I make cakes</td></tr>
+										</tbody>
+									</table>
 								</li>
 							</ol>
 						</li>
@@ -1055,27 +1067,40 @@ export class LO8Grammar extends PureComponent {
 							<br/>
 							<ol type="i">
 								<li>
-									The regular <b>-er</b>  verb <b>jouer</b> meaning to play is useful when talking about pastimes.
-									You use the partitive article after the verb <b>jouer</b> when speaking about playing a musical instrument:<br />
-									<b>Je joue du piano</b>  I play the piano <br/>
-									<b>Je joue de la clarinette</b> I play the clarinet
+									The regular <b>-er</b>  verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> meaning to play is useful when talking about pastimes.
+									You use the partitive article after the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> when speaking about playing a musical instrument:<br />
+									<AudioClip className={`link`} soundFile={`sounds/fr/Je joue du piano.mp3`}><b>Je joue du piano</b></AudioClip> I play the piano <br/>
+									<AudioClip className={`link`} soundFile={`sounds/fr/Je joue de la clarinette.mp3`}><b>Je joue de la clarinette</b></AudioClip> I play the clarinet
 								</li>
 								<li>
-									When you use the verb <b>jouer</b> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
-									You use <b>jouer à</b>.  If the activity is masculine it's <b>jouer au</b>, if feminine, <b>jouer à la</b>,
-									if  starting with a vowel or silent h then <b>jouer à l'</b> and for plurals <b>jouer aux</b>.<br/>
-									<br/>
-									e.g. Je joue au football I play football<br/>
-									Je joue à la pétanque I play pétanque
+									When you use the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
+									You use <AudioClip className={`link`} soundFile={`sounds/fr/jouer à.mp3`}><b>jouer à</b></AudioClip>.
+									If the activity is masculine it's <AudioClip className={`link`} soundFile={`sounds/fr/jouer au.mp3`}><b>jouer au</b></AudioClip>, if feminine, <AudioClip className={`link`} soundFile={`sounds/fr/jouer à la.mp3`}><b>jouer à la</b></AudioClip>,
+									if  starting with a vowel or silent h then <AudioClip className={`link`} soundFile={`sounds/fr/jouer à l'.mp3`}><b>jouer à l'</b></AudioClip> and for plurals <AudioClip className={`link`} soundFile={`sounds/fr/jouer aux.mp3`}><b>jouer aux</b></AudioClip>. e.g.
+									<table>
+										<tbody>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue au football.mp3`}><b>Je joue au football</b></AudioClip></td><td> I play football</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue à la pétanque.mp3`}><b>Je joue à la pétanque</b></AudioClip></td><td> I play pétanque</td></tr>
+										</tbody>
+									</table>
 								</li>
 							</ol>
 						</li>
 						<li>
 							The ending of a noun often helps you to know its gender. For example, all nouns ending <b>-tion</b> or  <b>-ie</b> are feminine.<br />
-							e.g .l'action, la nation, la natation, la biologie,  la géographie, la sociologie  <br/>
+							e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/l'action (f).mp3`}>l'action</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/la nation (f).mp3`}>la nation</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/la natation (f).mp3`}>la natation</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/la biologie.mp3`}>la biologie</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/la géographie.mp3`}>la géographie</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/la sociologie.mp3`}>la sociologie</AudioClip><br/>
 							<br/>
 							All nouns ending <b>-isme</b> are masculine.<br/>
-							e.g. l'athlétisme, l'existentialisme, le socialisme
+							e.g.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/l'athlétisme.mp3`}>l'athlétisme</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/l'existentialisme.mp3`}>l'existentialisme</AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/le socialisme.mp3`}>le socialisme</AudioClip>
 						</li>
 					</ol>
 				</div>
@@ -1097,15 +1122,17 @@ export class LO8Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p>Words that are borrowed from another language tend to retain much of the pronunciation of their language of origin. Here are some examples:</p>
+					<p>How to pronounce: <b>–tion</b> in French. In this combination the letter t is pronounced as if it were an s.
+Here are some examples of words containing or ending <b>–tion</b>. </p>
 					<p>
-						<AudioClip className={`link`} soundFile={`sounds/fr/le cricket.mp3`}>le cricket</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le tennis.mp3`}>le tennis</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le foot.mp3`}>le foot</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le shopping.mp3`}>le shopping</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le bowling.mp3`}>le bowling</AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/le week-end.mp3`}>le week-end</AudioClip></p>
-					<p>(despite what you will have learnt previously, the final consonant is sounded here)</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'action.mp3`}>l'action</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'attention.mp3`}>l'attention</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'équitation.mp3`}>l'équitation</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/l'exposition.mp3`}>l'exposition</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la natation.mp3`}>la natation</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la nation.mp3`}>la nation</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la nationalité.mp3`}>la nationalité</AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/la situation.mp3`}>la situation</AudioClip></p>
 				</div>
 			</div>
 		);

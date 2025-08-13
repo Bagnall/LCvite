@@ -17,6 +17,11 @@ $none: rgba(#fff, 0);
 $blue: #302e9b;
 $border-radius: 10px;
 $transition-time: variables.$memory-card-transition-time;
+
+.memory-match-game-container {
+	position: relative;
+}
+
 .memory-match-game {
 	display: flex;
 	flex-direction: column;

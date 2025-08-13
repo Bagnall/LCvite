@@ -16,12 +16,12 @@
 			[
 				"Tu aimes l'escalade ?",
 				"Do you like climbing?",
-				"/sounds/fr/Tu aimes l'escalade.mp3"
+				"sounds/fr/Tu aimes l'escalade.mp3"
 			],
 			[
 				"Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !",
 				"I don't like climbing at all. It's too dangerous! I prefer horse riding. I love horses!",
-				"/sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux Je préfère l'équitation. J'adore les chevaux.mp3"
+				"sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !.mp3"
 			],
 			[
 				""
@@ -29,32 +29,27 @@
 			[
 				"Qu'est-ce que tu fais le weekend ?",
 				"What do you at the weekend?",
-				"/sounds/fr/Qu'est-ce que tu fais le weekend.mp3"
+				"sounds/fr/Qu'est-ce que tu fais le weekend.mp3"
 			],
 			[
 				"Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.",
-				"On Saturdays I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend.",
-				"/sounds/fr/Le samedi, je fais de l'aviron Je prends mon petit-déjeuner au café avec mes amis Je vais en ville pour faire du shopping Le soir, je sors avec ma copine.mp3"
+				"On Saturdays, I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend.",
+				"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.mp3"
 			],
 			[
 				"Et le dimanche ?",
 				"And on Sundays?",
-				"/sounds/fr/Et le dimanche.mp3"
+				"sounds/fr/Et le dimanche.mp3"
 			],
 			[
-				"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé.",
-				"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv.",
-				"/sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère S'il fait mauvais, je lis un peu ou je regarde la télé.mp3"
-			],
-			[
-				"Et toi ?",
-				"What about you?",
-				"/sounds/fr/t toi.mp3"
+				"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi ?",
+				"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?",
+				"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
 			],
 			[
 				"Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !",
 				"I don't do much. I have a lie-in. I see my friends. Sometimes I go to the cinema, or I go clubbing. It depends.",
-				"/sounds/fr/Je ne fais pas grand' chose Je fais la grasse matinée Je vois mes amis Quelquefois, je vais au cinéma ou je vais en boîte Ça dépend.mp3"
+				"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3"
 			],
 			[
 				""
@@ -62,17 +57,17 @@
 			[
 				"Vous jouez d'un instrument de musique ?",
 				"Do you play a musical instrument?",
-				"/sounds/fr/Vous jouez d'un instrument de musique.mp3"
+				"sounds/fr/Vous jouez d'un instrument de musique.mp3"
 			],
 			[
 				"Oui, je joue du piano et de la clarinette aussi. Et vous ?",
 				"Yes, I play the piano and the clarinet. What about you?",
-				"/sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3"
+				"sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3"
 			],
 			[
 				"Je joue de l'accordéon et joue du piano aussi.",
 				"I play the accordion, and I play the piano too.",
-				"/sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3"
+				"sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3"
 			],
 			[
 				""
@@ -80,12 +75,12 @@
 			[
 				"Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous ?",
 				"On Saturdays, I play basketball. Do you fancy playing basketball with us?",
-				"/sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3"
+				"sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3"
 			],
 			[
 				"Le samedi, je ne peux pas - je joue au volley. C'est dommage !",
 				"On Saturdays, I can't - I play volleyball. It's a pity!",
-				"/sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage.mp3"
+				"sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage !.mp3"
 			]
 		],
 		"titleText": "Dialogues"
@@ -345,7 +340,7 @@
 						}
 					],
 					"showHintsText": "Show hints",
-					"titleText": "1. Memory"
+					"titleText": "1. Practise your vocabulary"
 				}
 			},
 			{
@@ -374,13 +369,13 @@
 						"sounds/fr/Tu fais de l'aviron.mp3",
 						"sounds/fr/J'aime faire du lèche-vitrine.mp3",
 						"sounds/fr/Ma sœur aime faire de la peinture.mp3",
-						"sounds/fr/Je  fais de l'équitation pendant mon temps libre.mp3",
+						"sounds/fr/Je fais de l'équitation pendant mon temps libre.mp3",
 						"sounds/fr/Je joue de la batterie.mp3",
 						"sounds/fr/Tu joues de la guitare.mp3",
 						"sounds/fr/Mes parents jouent du piano.mp3",
 						"sounds/fr/Vous jouez du trombone.mp3"
 					],
-					"titleText": "2. In the following sentences and questions select du, de la, de l' or des as appropriate."
+					"titleText": "2. Talking about leisure activities."
 				}
 			},
 			{
@@ -388,7 +383,7 @@
 					"component": "DropDowns",
 					"id": "dropdowns2",
 					"congratulationsText": "Superbe !",
-					"instructionsText": "Julien est très sportif:",
+					"instructionsText": "In the following sentences and questions select au , à la, à l' or aux as appropriate:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
@@ -400,17 +395,47 @@
 						"Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis",
 						"Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [*au|à la|à l'|aux] échecs avec son frère."
 					],
-					"phrasesHTMLXX": "<p>Julien est très sportif:<br/>Le lundi, il joue [*au|à la|à l'|aux] foot.<br/>Le mardi, il joue [*au|à la|à l'|aux] tennis.<br/>Le mercredi, il joue [*au|à la|à l'|aux] volley.<br/>Le jeudi, il joue [au|*à la|à l'|aux] pétanque.<br/>Le vendredi, il joue [au|à la|à l'|*aux] boules<br/>Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis<br/>Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [*au|à la|à l'|aux] échecs avec son frère.</p>",
 					"audio": [
-						"sounds/fr/Je fais du shopping.mp3",
-						"sounds/fr/Vous faites du jogging le matin.mp3",
-						"sounds/fr/Tu fais de l'aviron.mp3",
-						"sounds/fr/J'aime faire du lèche-vitrine.mp3",
-						"sounds/fr/Ma sœur aime faire de la peinture.mp3",
-						"sounds/fr/Je  fais de l'équitation pendant mon temps libre.mp3",
-						"sounds/fr/Je joue de la batterie.mp3"
+						"sounds/fr/Le lundi, il joue au foot.mp3",
+						"sounds/fr/Le mardi, il joue au tennis.mp3",
+						"sounds/fr/Le mercredi, il joue au volley.mp3",
+						"sounds/fr/Le jeudi, il joue à pétanque.mp3",
+						"sounds/fr/Le vendredi, il joue aux boules.mp3",
+						"sounds/fr/Le samedi, il joue au baseball. Les soir, il joue au babyfoot avec ses amis.mp3",
+						"sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue au échecs avec son frère.mp3"
 					],
-					"titleText": "3. In the following sentences and questions select au , à la, à l' or aux as appropriate."
+					"titleText": "3. Julien est très sportif"
+				}
+			},
+			{
+				"dropdowns3": {
+					"component": "DropDowns",
+					"id": "dropdowns3",
+					"congratulationsText": "Excellent !",
+					"instructionsText": "Listen to the responses to this question and select answers accordingly:",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
+						"2 Je fais [de *l'équitation|de la course d'orientation|de la natation]",
+						"3 Je fais [du taekwondo|*du yoga|du jogging]",
+						"4 Je fais [*de la randonnée|de la course à pied|de l'équitation]",
+						"5 Je fais [de l'escalade|de la lecture|*du lèche-vitrine]",
+						"6 Je fais [de la lecture|*de l'escalade|de la course d'orientation]",
+						"7 Je fais [*des gâteaux|des crêpes des pizzas]",
+						"8 Je fais [de la lecture|*de la boxe|du jardinage]"
+					],
+					"audio": [
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3",
+						"sounds/fr/.mp3"
+					],
+					"titleText": "4. Qu’est-ce que tu fais le dimanche ?"
 				}
 			},
 			{
@@ -429,10 +454,10 @@
 					],
 					"audio": [
 						"sounds/fr/Je ne fais pas grand' chose Je fais la grasse matinée Je vois mes amis Quelquefois, je vais au cinéma ou je vais en boîte Ça dépend.mp3",
-						"sounds/fr/Le samedi, je fais de l'aviron Je prends mon déjeuner au café avec mon copain  Je vais en ville pour faire du shopping Le soir, je sors avec mes amies.mp3",
+						"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon déjeuner au café avec mon copain. Je vais en ville pour faire du shopping. Le soir, je sors avec mes amies.mp3",
 						"sounds/fr/Le dimanche, je fais de la natation L'après-midi, s'il fait beau, je fais de la randonnée avec ma sœur S'il fait mauvais, je fais de la peinture ou je regarde la télé.mp3"
 					],
-					"titleText": "3 Select what you hear to fill in the gaps."
+					"titleText": "5 Qu'est-ce que tu fais le weekend ?"
 				}
 			}
 		],
