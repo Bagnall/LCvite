@@ -15,6 +15,7 @@
 
 .word-grid-container {
 	padding: 1rem;
+	position: RELATIVE;
 	// background: colours.$panel-back;
 	.word-grid-table-outer-container {
 		display: flex;

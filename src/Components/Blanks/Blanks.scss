@@ -92,6 +92,7 @@ $max-tile-width: 360px;
 	}
 
 	&.type-table,
+	&.type-pictures-answers,
 	&.type-questions-answers {
 		.dragging,
 		.placed {
@@ -99,12 +100,14 @@ $max-tile-width: 360px;
 		}
 	}
 	&.type-table,
+	&.type-pictures-answers,
 	&.type-questions-answers,
 	&.type-phrases {
 		.dragging {
 			box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
 		}
 	}
+	&.type-pictures-answers,
 	&.type-questions-answers,
 	&.type-phrases,
 	&.type-table {
@@ -116,6 +119,14 @@ $max-tile-width: 360px;
 				visibility 0s 1s;
 		}
 	}
+	&.type-pictures-answers {
+		td {
+			img {
+				width: 100px;
+			}
+		}
+	}
+
 	&.type-phrases {
 		li {
 			min-height: 70px;
@@ -124,6 +135,7 @@ $max-tile-width: 360px;
 			margin-right: 1rem;
 		}
 	}
+	&.type-pictures-answers,
 	&.type-questions-answers {
 		> .blanks {
 			> .target {

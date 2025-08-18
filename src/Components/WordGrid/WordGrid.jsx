@@ -1,8 +1,8 @@
 import './WordGrid.scss';
+import '../../styles/_variables.module.scss';
 import React, { PureComponent } from 'react';
 import colours from '../../styles/_colours.module.scss';
 import {resolveAsset} from '../../utility';
-import '../../styles/_variables.module.scss';
 
 const directions = [
 	{ x: 1, y: 0 }, // right
@@ -138,6 +138,13 @@ export class WordGrid extends PureComponent {
 			soundFiles: soundFiles,
 			words: foreignWords,
 		});
+		this.autoSolve = this.autoSolve.bind(this);
+		this.handleMouseDown = this.handleMouseDown.bind(this);
+		this.handleMouseEnter = this.handleMouseEnter.bind(this);
+		this.handleMouseUp = this.handleMouseUp.bind(this);
+		this.handleHints = this.handleHints.bind(this);
+		this.handleReset = this.handleReset.bind(this);
+		this.getLinearSelection = this.getLinearSelection.bind(this);
 	}
 
 	handleMouseDown = (e, row, col) => {
@@ -269,6 +276,17 @@ export class WordGrid extends PureComponent {
 		this.setState({showHints: e.target.checked});
 	};
 
+	handleReset = () => {
+		console.log("handleReset");
+		const { words } = this.state;
+		this.setState({
+			foundLines: [],
+			foundWords: [],
+			nPlaced: 0,
+			nToSolve: words.length,
+		});
+	};
+
 	getLinearSelection = ([start, end]) => {
 		if (!start || !end) return [];
 		const dx = Math.sign(end.col - start.col);
@@ -364,6 +382,7 @@ export class WordGrid extends PureComponent {
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
+				<button className={`reset`} onClick={this.handleReset}>Reset</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

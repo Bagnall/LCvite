@@ -245,7 +245,7 @@
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"id": "MemoryMatchGame1",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 8,
 					"cards": [
 						{

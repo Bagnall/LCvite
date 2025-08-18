@@ -237,11 +237,18 @@
 				"sounds/fr/marocain, marocaine, Maroc.mp3"
 			],
 			[
-				"nord/sud irlandais / nord/sud irlandaise",
-				"Irelande (f) du Sud / du Nord",
+				"irlandais / irlandaise",
+				"Irelande (f)",
 				"Irish",
-				"Southern Ireland / Northern Ireland",
-				"sounds/fr/nord irlandais, sud irlandais, nord irlandaise, sud irlandaise, Irelande du Sud, Irelande du Nord.mp3"
+				"Ireland",
+				"sounds/fr/irlandais, irlandaise, irelande.mp3"
+			],
+			[
+				"nord irlandais / nord irlandaise",
+				"Irelande (f) du Nord",
+				"Northern Irish",
+				"Northern Ireland",
+				"sounds/fr/nord irlandais, nord irlandaise, Irelande du Nord.mp3"
 			],
 			[
 				"sénégalais / sénégalaise",
@@ -442,8 +449,8 @@
 						],
 						[
 							"ukrainien",
-							"ukrainien",
-							"sounds/fr/ukrainien(m) ukrainien(f).mp3"
+							"ukrainienne",
+							"sounds/fr/ukrainien, ukrainienne.mp3"
 						],
 						[
 							"célibataire",

@@ -232,11 +232,10 @@ h2 {
 	text-align: left;
 	padding: 1rem 0;
 	margin: auto;
-	h1,
-	h2 {
-		// display: flex;
-		// justify-content: center;
+	h1 {
 		text-align: center;
+	}
+	h2 {
 	}
 	ul {
 		margin: 2rem 0;
@@ -411,6 +410,37 @@ h2 {
 						inset -4px -4px 8px rgba(255, 255, 255, 0.6);
 				}
 			}
+		}
+	}
+}
+
+.lo-15 {
+	.blanks-container.type-questions-answers .word.blank {
+		width: 210px;
+	}
+}
+
+.lo-6 {
+	#dropdowns2,
+	#dropdowns3 {
+		table {
+			&.annabelle,
+			&.camille {
+				td {
+					text-align: initial;
+				}
+			}
+			td {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.lo-demo {
+	#picturesAndWords1 {
+		.word {
+			max-width: 160px;
 		}
 	}
 }

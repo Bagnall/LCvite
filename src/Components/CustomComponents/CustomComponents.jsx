@@ -33,9 +33,9 @@ export class LO1Grammar extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent1`}
 				>
-					<p><a className='special-anchor-target' name='madame' />1 In French there is no equivalent to the English Ms.
+					<p><a className={`special-anchor-target`} name={`madame`} />1 In French there is no equivalent to the English Ms.
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
-					<a className='special-anchor-target' name='mademoiselle' /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+					<a className={`special-anchor-target`} name={`mademoiselle`} /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</p>
 					<table>
 						<tbody>
@@ -59,11 +59,11 @@ export class LO1Grammar extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}CustomComponent2`}
 				>
-					<p><a className='special-anchor-target' name='tuvous'>2&nbsp;
+					<p><a className={`special-anchor-target`} name={`tuvous`}>2&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip> and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</a></p>
 					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
-						a classmate or a child etc. <a className='special-anchor-target' name='toi' />When returning question i.e. when you ask 'and you?' you use the
+						a classmate or a child etc. <a className={`special-anchor-target`} name={`toi`} />When returning question i.e. when you ask 'and you?' you use the
 						form&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip> instead of&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu:</b></AudioClip>&nbsp;
@@ -170,7 +170,9 @@ export class LO2Grammar extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>1. Verbs in French</b></p>
-					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason, but because it occurs so frequently, and it will also enable you to learn the persons of the verb.</p>
+					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been
+						described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason,
+						but because it occurs so frequently, and It will also enable you to master the subject pronouns.</p>
 					<p><b>Être</b> to be</p>
 					<table>
 						<tbody>
@@ -182,15 +184,15 @@ export class LO2Grammar extends PureComponent {
 							<tr>
 								<td>tu es</td>
 								<td>you are</td>
-								<td><AudioClip className='compact' soundFile={`sounds/fr/tu es.mp3`} /></td>
+								<td><AudioClip className={`compact`} soundFile={`sounds/fr/tu es.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href='./?config=config-fr-2.json#subject-pronouns'>il</a> est</td>
+								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>il</a> est</td>
 								<td>he is, it is </td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href='./?config=config-fr-2.json#subject-pronouns'>elle</a> est</td>
+								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>elle</a> est</td>
 								<td>she is, it is</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elle est.mp3`} /></td>
 							</tr>
@@ -205,12 +207,12 @@ export class LO2Grammar extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href='./?config=config-fr-2.json#subject-pronouns'>ils</a> sont</td>
+								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>ils</a> sont</td>
 								<td>they are</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/ils sont.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href='./?config=config-fr-2.json#subject-pronouns'>elles</a> sont</td>
+								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>elles</a> sont</td>
 								<td>they are</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elles sont.mp3`} /></td>
 							</tr>
@@ -223,13 +225,14 @@ export class LO2Grammar extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
-					<p><b>2. Linguistic genders</b> ( I think this lends itself to illustration/pic ?)</p>
+					<p><b>2. Grammatical genders</b> ( I think this lends itself to illustration/pic ?)</p>
 					<p>All French nouns have gender, not just people or animals but inanimate objects too.
 						There are just two genders in French called masculine and feminine.
 						This simply means that all nouns belong in one category or the other.
 						Males e.g. father, uncle etc are masculine nouns and females e.g. mother, aunt etc are feminine nouns.
 						Other nouns have intrinsic gender. This is not related to their owner, characteristics, manufacturer etc.
 						It is possible to identify the gender of some nouns by their endings. (A list of these endings to be added/ linked)</p>
+					<p>The pronoun <b>iel</b> is a gender-neutral singular pronoun, similar in concept to the English singular "they," used for someone who doesn't identify strictly as masculine or feminine. Keep in mind that verbs and adjectives still need to agree in French grammar, so usage can be more complex.</p>
 					<p>The gender of the noun has implications for some grammatical features. e.g.</p>
 					<p>a. The indefinite article:</p>
 					<p>There are two ways of saying 'a' in French:&nbsp;
@@ -258,12 +261,13 @@ export class LO2Grammar extends PureComponent {
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p><a name='subject-pronouns' /><b>3. Subject pronouns</b></p>
+					<p><a name={`subject-pronouns`} /><b>3. Subject pronouns</b></p>
 					<ul>
 						<li><b>Il</b> is used to replace a masculine noun.</li>
 						<li><b>Elle</b> is used to replace a feminine noun.</li>
 						<li><b>Ils</b> is used to replace more than one masculine noun or a mixture of masculine and feminine nouns.</li>
 						<li><b>Elles</b> is used to replace more than one feminine noun.</li>
+						<li><b>iel</b> is a gender-neutral singular pronoun.</li>
 					</ul>
 				</div>
 			</div>
@@ -289,8 +293,10 @@ export class LO2Demystify extends PureComponent {
 						<img
 							src={resolveAsset(`images/shh.jpg`)}
 							className={`lo2-demystify-shh`}
-							alt='lady with finger to lips. Shh'
-							style={{border: "1px solid rgba(0,0,0,0.5)"}} title='lady with finger to lips. Shh' /></p>
+							alt={`lady with finger to lips. Shh`}
+							style={{ border: "1px solid rgba(0,0,0,0.5)" }}
+							title={`lady with finger to lips. Shh`}
+						/></p>
 					<p>The consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
 						Listen to the following examples.</p>
 					<p>
@@ -345,13 +351,13 @@ export class LO3Grammar extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>1. A bit about verbs in French:</b></p>
-					<p>There are three groups of regular verbs in French. The biggest of these is called the&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip> group, simply because the infinitive ends with the letters&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip>.&nbsp;
+					<p>There are three groups of verbs in French. The biggest of these is called the&nbsp;
+						<b>-er</b> group, simply because the infinitive ends with the letters&nbsp;
+						<b>-er</b>.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/parler.mp3`}>Parler</AudioClip> (to speak),&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/habiter.mp3`}>habiter</AudioClip> (to live),&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/chanter.mp3`}>chanter</AudioClip> (to sing),&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/danser.mp3`}>danser</AudioClip> (to dance) are examples of <AudioClip className={`link`} soundFile={`sounds/fr/er.mp3`}><b>-er</b></AudioClip> verbs.</p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/danser.mp3`}>danser</AudioClip> (to dance) are examples of <b>-er</b> verbs.</p>
 					<p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking'
 						depending on the context.</p>
 					<table>
@@ -526,19 +532,21 @@ export class LO3Demystify extends PureComponent {
 					id={`${id ? `${id}Panel1` : ''}`}
 					key={`${id}Panel1`}
 				>
-					<p><b>To sound or not to sound?</b></p>
+					<p><b>To sound or not to sound?</b><img
+						src={resolveAsset('/images/shh.jpg')}
+						style={{
+							border: "1px solid rgba(0,0,0,0.5)",
+							verticalAlign: 'top',
+							float: 'right',
+							marginLeft: '20px'
+						}}
+						alt={`lady with finger to lips. Shh`}
+						title={`lady with finger to lips. Shh`} /></p>
 					<ol>
-						<li><p>The third person verb ending <b>ent</b> is never pronounced.&nbsp;&nbsp;<img
-							src={resolveAsset('/images/shh.jpg')}
-							style={{
-								border: "1px solid rgba(0,0,0,0.5)",
-								verticalAlign: 'middle',
-							}}
-							alt='lady with finger to lips. Shh' title='lady with finger to lips. Shh' />
-							&nbsp;&nbsp;e.g.
-						<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip></p>
+						<li><p>The third person verb ending <b>ent</b> is never pronounced. e.g.
+							<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>Ils parl<b>ent</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/elles chantent.mp3`}>elles chant<b>ent</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/ils dansent.mp3`}>ils dans<b>ent</b></AudioClip>. </p>
 						</li>
 						<li>
 							<p>Usually, the consonants <b>d</b>, <b>g</b>, <b>p</b>, <b>s</b>, <b>t</b>, <b>x</b>, <b>z</b> are silent when they are the last letter of the word.
@@ -794,7 +802,7 @@ export class LO6Grammar extends PureComponent {
 							</tr>
 							<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/leur.mp3`} >leur</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/leurs.mp3`} >leurs</AudioClip> (pl)</td>
 								<td>their</td>
-							</tr></tbody></table><p className='footnote'>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
+							</tr></tbody></table><p className={`footnote`}>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
 					<p><b>2 Verbs in French continued</b></p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/avoir.mp3`} ><b>Avoir</b></AudioClip> is one of the many irregular verbs in French.
 						It means <b>to have</b>.
@@ -907,7 +915,7 @@ export class LO6Demystify extends PureComponent {
 					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
 						a letter <b>"y"</b> in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
-					<p>3 <b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <b>i</b>.
+					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <b>i</b>.
 						The most common are :  <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;
@@ -1380,7 +1388,7 @@ export class LO9Grammar extends PureComponent {
 									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td>
 										<td>That's right / It is indeed.</td>
 									</tr>
-									<tr className='spacer'><td colSpan="2"></td>
+									<tr className={`spacer`}><td colSpan="2"></td>
 									</tr>
 									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></td>
 										<td>You are Mme Galipot aren't you?</td>
@@ -1458,34 +1466,28 @@ export class L10Grammar extends PureComponent {
 									<table>
 										<tbody>
 											<tr>
-												<td>Je veux</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je veux.mp3`} >je veux</AudioClip></td>
 												<td>I want</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Je veux.mp3`} /></td>
 											</tr>
 											<tr>
-												<td>Tu veux</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux.mp3`} >tu veux</AudioClip></td>
 												<td>you want</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Tu veux.mp3`} /></td>
 											</tr>
 											<tr>
-												<td>Il / elle veut</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} >il / elle veut</AudioClip></td>
 												<td>he / she/ it wants</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} /></td>
 											</tr>
 											<tr>
-												<td>Nous voulons</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Nous voulons.mp3`} >nous voulons</AudioClip></td>
 												<td>we want</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Nous voulons.mp3`} /></td>
 											</tr>
 											<tr>
-												<td>Vous voulez</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous voulez.mp3`} >vous voulez</AudioClip></td>
 												<td>you want</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Vous voulez.mp3`} /></td>
 											</tr>
 											<tr>
-												<td>Ils / elles veulent</td>
+												<td><AudioClip className={`link`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} >ils / elles veulent</AudioClip></td>
 												<td>they want</td>
-												<td><AudioClip className={`compact`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} /></td>
 											</tr>
 										</tbody>
 									</table>
@@ -1493,23 +1495,21 @@ export class L10Grammar extends PureComponent {
 							</div>
 
 							<p>The verb vouloir is very frequently used together with another verb. This second verb is used in its infinitive form. e.g.</p>
-							<table><tbody>
-								<tr>
-									<td>Je veux aller au Canada.</td>
-									<td>I want to go to Canada.</td>
-									<td><AudioClip className={`compact`} soundFile={`sounds/fr/Je veux aller au Canada.mp3`} /></td>
-								</tr>
-								<tr>
-									<td>Ma copine veut étudier en France.</td>
-									<td>My girlfriend wants to study in France.</td>
-									<td><AudioClip className={`compact`} soundFile={`sounds/fr/Ma copine veut étudier en France.mp3`} /></td>
-								</tr>
-								<tr>
-									<td>Mes amis veulent passer le week-end à Londres.</td>
-									<td>My friends want to spend the weekend in London.</td>
-									<td><AudioClip className={`compact`} soundFile={`sounds/fr/Mes amis veulent passer le week-end à Londres.mp3`} /></td>
-								</tr>
-							</tbody>
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je veux aller au Canada.mp3`} >Je veux aller au Canada.</AudioClip></td>
+										<td>I want to go to Canada.</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Ma copine veut étudier en France.mp3`} >Ma copine veut étudier en France.</AudioClip></td>
+										<td>My girlfriend wants to study in France.</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Mes amis veulent passer le week-end à Londres.mp3`} >Mes amis veulent passer le week-end à Londres.</AudioClip></td>
+										<td>My friends want to spend the weekend in London.</td>
+									</tr>
+								</tbody>
 							</table>
 						</li>
 						<li>
@@ -1520,24 +1520,20 @@ export class L10Grammar extends PureComponent {
 							<table>
 								<tbody>
 									<tr>
-										<td>Je travaille au laboratoire.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je travaille au laboratoire.mp3`} >Je travaille au laboratoire.</AudioClip></td>
 										<td>I work / I am working at the laboratory.</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Je travaille au laboratoire.mp3`} /></td>
 									</tr>
 									<tr>
-										<td>Tu veux aller à la piscine ?</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux aller à la piscine.mp3`} >Tu veux aller à la piscine ?</AudioClip></td>
 										<td>Do you want to go to the swimming pool?</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Tu veux aller à la piscine.mp3`} /></td>
 									</tr>
 									<tr>
-										<td>Elle veut aller à l'exposition.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Elle veut aller à l'exposition.mp3`} >Elle veut aller à l'exposition.</AudioClip></td>
 										<td>She wants to go to the exhibition.</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/Elle veut aller à l'exposition.mp3`} /></td>
 									</tr>
 									<tr>
-										<td>J'aime aller aux magasins.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/J'aime aller aux magasins.mp3`} >J'aime aller aux magasins.</AudioClip></td>
 										<td>I like going to the shops.</td>
-										<td><AudioClip className={`compact`} soundFile={`sounds/fr/J'aime aller aux magasins.mp3`} /></td>
 									</tr>
 								</tbody>
 							</table>
@@ -1564,14 +1560,54 @@ export class L10Demystify extends PureComponent {
 					key={`${id}CustomComponent`}
 				>
 					<p><b>How to pronounce</b>:  <b>ui</b></p>
-					<p><AudioClip className='link' soundFile='sounds/fr/aujourd&apos;hui.mp3'><b>aujourd'hui</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/bruit.mp3'><b>bruit</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/ensuite.mp3'><b>ensuite</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/gratuit.mp3'><b>gratuit</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/minuit.mp3'><b>minuit</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/nuit.mp3'><b>nuit</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/puis.mp3'><b>puis</b></AudioClip>,&nbsp;
-						<AudioClip className='link' soundFile='sounds/fr/suis.mp3'><b>suis</b></AudioClip></p>
+					<p><AudioClip className={`link`} soundFile={`sounds/fr/aujourd'hui.mp3`}><b>aujourd'hui</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/bruit.mp3`}><b>bruit</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/ensuite.mp3`}><b>ensuite</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/gratuit.mp3`}><b>gratuit</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/minuit.mp3`}><b>minuit</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/nuit.mp3`}><b>nuit</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/puis.mp3`}><b>puis</b></AudioClip>,&nbsp;
+						<AudioClip className={`link`} soundFile={`sounds/fr/suis.mp3`}><b>suis</b></AudioClip></p>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class L15Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo15-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<ol>
+						<li>
+							<p>There are some words and phrases that cannot be translated literally from English to French.
+							This happens when talking about the weather: in English we use the verb <b>to be</b> e.g: It's hot. It's windy etc.
+							</p>
+							<p>In French we do not use <b>to be</b>.  The verb <AudioClip className={`link`} soundFile={`sounds/fr/faire.mp3`}><b>faire</b></AudioClip> is
+								often used in this context e.g <AudioClip className={`link`} soundFile={`sounds/fr/Il fait chaud.mp3`}><b>Il fait chaud</b></AudioClip>. It's hot.
+								The phrase <AudioClip className={`link`} soundFile={`sounds/fr/Il y a.mp3`}><b>Il y a</b></AudioClip> is used in some cases
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Il y a du vent.mp3`}><b>Il y a du vent</b></AudioClip>. It's windy.</p>
+						</li>
+						<li>
+							<p>The verb <AudioClip className={`link`} soundFile={`sounds/fr/aller.mp3`}><b>aller</b></AudioClip> is a very useful verb. It has three uses.
+								Firstly, there is the literal meaning to go e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je vais en ville.mp3`}><b>Je vais en ville</b></AudioClip>.
+								I'm going into town.
+								Secondly, it's used when asking after someone e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Comment ca va.mp3`}><b>Comment ca va ?</b></AudioClip> How are you?
+								And thirdly, it is conjugated in the present tense and followed by another verb in its infinitive form to construct the near future.
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je vais passer mes vacances en France.mp3`}><b>Je vais passer mes vacances en France</b></AudioClip>. I am going to spend my holidays in France.
+							<AudioClip className={`link`} soundFile={`sounds/fr/Ma sœur va avoir 20 ans la semaine prochaine.mp3`}><b>Ma sœur va avoir 20 ans la semaine prochaine</b></AudioClip>. My sister is going to be 20 next week.</p>
+						</li>
+					</ol>
 				</div>
 			</div>
 		);

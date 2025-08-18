@@ -27,7 +27,7 @@ export class Blanks extends React.PureComponent {
 		this.placeholdersRef = React.createRef();
 		this.wordsContainerRef = React.createRef();
 		const { config, id } = props;
-		const { answers, audio, questions, blanksType, phrases 	} = config;
+		const { answers, audio, pictures, questions, blanksType, phrases 	} = config;
 		const {words = []} = config;
 		let wordTiles = new Array;
 		let nToPlace = 0;
@@ -80,6 +80,26 @@ export class Blanks extends React.PureComponent {
 				wordTiles = shuffleArray(wordTiles);
 				break;
 			}
+			case "pictures-answers":
+				let mixer = new Array;
+				nToPlace = pictures.length;
+
+				for (let i = 0; i < nToPlace; i++) {
+					mixer.push([i, answers[i]]);
+				}
+				// Now randomise
+				mixer = shuffleArray(mixer);
+				for (let i = 0; i < nToPlace; i++) {
+					wordTiles.push(
+						<Word
+							className={`blank draggable`}
+							index={mixer[i][0]}
+							key={`${id}word${i}`}>{mixer[i][1]}</Word>
+					);
+				}
+
+				break;
+
 			case "questions-answers": {
 				let mixer = new Array;
 				nToPlace = questions.length;
@@ -101,6 +121,14 @@ export class Blanks extends React.PureComponent {
 				break;
 			}
 		}
+
+		this.autoSolve = this.autoSolve.bind(this);
+		this.handleHints = this.handleHints.bind(this);
+		this.handleMouseDown = this.handleMouseDown.bind(this);
+		this.handleMouseMove = this.handleMouseMove.bind(this);
+		this.handleMouseUp = this.handleMouseUp.bind(this);
+		this.handleReset = this.handleReset.bind(this);
+		this.inLimits = this.inLimits.bind(this);
 
 		this.state = ({
 			...config,
@@ -338,6 +366,14 @@ export class Blanks extends React.PureComponent {
 		}
 	};
 
+	handleReset = () => {
+		console.log("RESET!");
+		this.setState({
+			matched: [],
+			nPlaced: 0,
+		});
+	};
+
 	inLimits = () => {
 
 		// Is the piece close to its target position? Enough to show hint highlight or snap it in?
@@ -389,6 +425,7 @@ export class Blanks extends React.PureComponent {
 			showHints = false,
 			showHintsText,
 			phrases = [],
+			pictures,
 			questions,
 			soundFile,
 			soundFiles,
@@ -497,6 +534,31 @@ export class Blanks extends React.PureComponent {
 				}
 				break;
 			}
+			case "pictures-answers": {
+				for (let i = 1; i <= pictures.length; i++) {
+					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
+					tableRows.push(
+						<tr key={`${id}row${i}`}>
+							<td>
+								<img src={`${pictures[i - 1]}`}/>
+							</td>
+							<td>
+								<Word
+									className={`blank target`}
+									index={i - 1}
+									key={`${id}word${i}`}>{answers[i - 1]}</Word>
+							</td>
+							<td>
+								<AudioClip
+									className={`compact`}
+									soundFile={soundFile}
+								/>
+							</td>
+						</tr>
+					);
+				}
+				break;
+			}
 			default: {
 				const action = "Not a valid type of Blanks";
 				logError(action, {
@@ -517,6 +579,7 @@ export class Blanks extends React.PureComponent {
 				onTouchEnd={this.handleMouseUp}
 				key={`${id}Blanks`}
 			>
+				{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

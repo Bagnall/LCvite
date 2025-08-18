@@ -217,13 +217,13 @@
 						"Que faites-vous dans la vie ?"
 					],
 					"answers": [
-						"Moi, oui, ça va … mais Jo est malade depuis hier.",
-						"Ah non ! je suis étudiante en histoire.",
+						"Moi, oui, ça va … mais Teri est malade depuis hier.",
+						"Ah non ! je suis étudiant en histoire.",
 						"Non, il est bibliothécaire.",
 						"Je suis professeur de géographie."
 					],
 					"soundFiles": [
-						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-jo-est-malade-depuis-hier.mp3",
+						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-teri-est-malade-depuis-hier.mp3",
 						"sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
 						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
 						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"

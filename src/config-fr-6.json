@@ -278,19 +278,18 @@
 					"component": "DropDowns",
 					"id": "dropdowns2",
 					"congratulationsText": "Très bien !",
-					"instructionsTextHTMLXXX": "All the words containing double <b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>?   Select y or l in the box below. Once you've completed each task listen to the text.",
-					"htmlContent": "<div><h2>All the words containing double&nbsp;<b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>?   Select y or l in the box below. Once you've completed each task listen to the text.</h2><table><tbody><tr><td><span class='audio-link' sound-file='/sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='/sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='/sounds/fr/La fille de sa fille s'appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='/sounds/fr/Elle aime les tilleuls de Versailles.mp3'><b>Camille</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p></div>",
+					"htmlContent": "<div><h2>All the words containing double&nbsp;<b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select y or l in the box below. Once you've completed each task listen to the text.</h2><table class='camille'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de sa fille s&apos;appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/Camille aime les tilleuls de Versailles.mp3'><b>Camille</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p></div>&copy; Jacqueline Rosen",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
-						"famille ([*y|l|l/y])",
-						"Camille ([*y|l|l/y])",
-						"fille ([*y|l|l/y])",
-						"gentille ([*y|l|l/y])",
-						"s'appelle ([y|*l|l/y])",
-						"Myrtille ([*y|l|l/y])",
-						"tilleuls ([*y|l|l/y])",
-						"Versailles ([*y|l|l/y])"
+						"famille ([*y|l])",
+						"Camille ([*y|l])",
+						"fille ([*y|l])",
+						"gentille ([*y|l])",
+						"s'appelle ([y|*l])",
+						"Myrtille ([*y|l])",
+						"tilleuls ([*y|l])",
+						"Versailles ([*y|l])"
 					],
 					"audio": [
 						"sounds/fr/famille.mp3",
@@ -302,7 +301,7 @@
 						"sounds/fr/tilleuls.mp3",
 						"sounds/fr/Versailles.mp3"
 					],
-					"titleText": "2. Camille."
+					"titleText": "2. Camille"
 				}
 			},
 			{
@@ -310,26 +309,25 @@
 					"component": "DropDowns",
 					"id": "dropdowns3",
 					"congratulationsText": "Très bien !",
-					"instructionsTextHTMLXXX": "All the words containing double <b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>?   Select y or l in the box below. Once you've completed each task listen to the text.",
-					"htmlContent": "<div><h2>All the words containing double <b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select y or l in the box below. Once you've completed each task listen to the text.</h2><table><tbody><tr><td><span class='audio-link' sound-file='/sounds/fr/Annabelle a une belle-fille.mp3'><b>Annabelle</b> a une <b>belle-fille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Elle s&apos;appelle Isabelle.mp3'><b>Elle s'appelle Isabelle</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Isabelle n&apos;est pas <b>belle.mp3'><b>Isabelle</b> n'est pas <b>belle</b></span><br/><span class='audio-link' sound-file='/sounds/fr/Mais Isabelle est très gentille.mp3'>Mais <b>Isabelle</b> est très <b>gentille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Isabelle habite à Lille.mp3'><b>Isabelle</b> habite à <b>Lille</b></span><br/><span class='audio-link' sound-file='/sounds/fr/Elle y habite avec Gilles.mp3'><b>Elle</b> y habite avec <b>Gilles</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Ce n'est pas très tranquille.mp3'>Ce n'est pas très <b>tranquille</b>.</span><br/><span class='audio-link' sound-file='/sounds/fr/Mais quelle belle ville, la ville de Lille.mp3'>Mais <b>quelle belle ville</b>, la <b>ville</b> de <b>Lille</b> !</span></td></tr></tbody></table></div>",
+					"htmlContent": "<div><h2>All the words containing double <b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select y or l in the box below. Once you've completed each task listen to the text.</h2><table class='annabelle'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/Annabelle a une petite-fille.mp3'><b>Annabelle</b> a une <b>petite-fille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Elle s&apos;appelle Isabelle.mp3'><b>Elle s'appelle Isabelle</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Isabelle nest pas belle.mp3'><b>Isabelle</b> n'est pas <b>belle</b></span><br/><span class='audio-link' sound-file='sounds/fr/Mais Isabelle est très gentille.mp3'>Mais <b>Isabelle</b> est très <b>gentille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Isabelle habite à Lille.mp3'><b>Isabelle</b> habite à <b>Lille</b></span><br/><span class='audio-link' sound-file='sounds/fr/Elle y habite avec Gilles.mp3'><b>Elle</b> y habite avec <b>Gilles</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Ce nest pas très tranquille.mp3'>Ce n'est pas très <b>tranquille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Mais quelle belle ville, la ville de Lille.mp3'>Mais <b>quelle belle ville</b>, la <b>ville</b> de <b>Lille</b> !</span></td></tr></tbody></table>&copy; Jacqueline Rosen</div>",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
-						"Annabelle ([y|*l|l/y])",
-						"elle ([y|*l|l/y])",
-						"belle-fille ([y|l|*l/y])",
-						"Isabelle ([y|*l|l/y])",
-						"Lille ([y|*l|l/y])",
-						"Gilles ([y|*l|l/y])",
-						"tranquille ([y|*l|l/y])",
-						"quelle ([y|*l|l/y])",
-						"belle ([y|*l|l/y])",
-						"ville ([y|*l|l/y])"
+						"Annabelle ([y|*l])",
+						"elle ([y|*l])",
+						"petite-fille ([*y|l])",
+						"Isabelle ([y|*l])",
+						"Lille ([y|*l])",
+						"Gilles ([y|*l])",
+						"tranquille ([y|*l])",
+						"quelle ([y|*l])",
+						"belle ([y|*l])",
+						"ville ([y|*l])"
 					],
 					"audio": [
 						"sounds/fr/Annabelle.mp3",
 						"sounds/fr/elle.mp3",
-						"sounds/fr/belle-fille.mp3",
+						"sounds/fr/petite-fille.mp3",
 						"sounds/fr/Isabelle.mp3",
 						"sounds/fr/Lille.mp3",
 						"sounds/fr/Gilles.mp3",
@@ -398,7 +396,7 @@
 						"Où sont [votre|*vos] enfants ?",
 						"Et [*votre|vos] mari ?",
 						"Ils sont chez [leur|*leurs] grands-parents.",
-						"Ou se trouve [*leur|leurs] appartement ?"
+						"Où se trouve [*leur|leurs] appartement ?"
 					],
 					"audio": [
 						"sounds/fr/Louis n'est pas mon frère C'est mon cousin.mp3",
@@ -414,7 +412,7 @@
 						"sounds/fr/Où sont vos enfants.mp3",
 						"sounds/fr/Et votre mari.mp3",
 						"sounds/fr/Ils sont chez leurs grands-parents.mp3",
-						"sounds/fr/Ou se trouve leur appartement.mp3"
+						"sounds/fr/Où se trouve leur appartement.mp3"
 					],
 					"titleText": "5. Jeanne's Family."
 				}
@@ -464,7 +462,7 @@
 						"sounds/fr/J'ai deux sœurs et deux frères.mp3",
 						"sounds/fr/Ils sont tous plus âgés que moi.mp3"
 					],
-					"titleText": "5. Match the beginnings and ends of sentences to read Jeanne's description of her family. "
+					"titleText": "6. Match the beginnings and ends of sentences to read Jeanne's description of her family. "
 				}
 			}
 		],

@@ -1133,6 +1133,7 @@ export default class App extends React.Component {
 				// console.log("Component name:", component);
 				// console.log("AllCustomComponents", AllCustomComponents);
 				const CustomComponent = AllCustomComponents[component];
+				console.log(component.slice(0, 4), component);
 				if (CustomComponent) {
 					articles.push(
 						<AccordionArticle
@@ -1153,6 +1154,7 @@ export default class App extends React.Component {
 					articles.push(
 						<p key={`notImplemented${id}`}>Component {component} not implemented</p>
 					);
+					console.log(`Component ${component} not implemented`);
 				}
 			}
 		}

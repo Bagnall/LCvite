@@ -689,7 +689,7 @@
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"htmlContent": "<p>This <b>MemoryMatchGame</b> component presents <i>nPairsToPlay</i> pairs of cards face dwon. The student can turn over two at a time. If either are word cards the student can play the audio of the word. If there is one word card and one picture card and they match, the audio is read out once more and the pair added to a collection of matches on the right.</p>",
 					"id": "MemoryMatchGame1",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 6,
 					"cards": [
 						{
@@ -788,7 +788,7 @@
 					"congratulationsText": "Congratulations! You know your way around the house!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
 					"id": "MemoryMatchGame2",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 12,
 					"cards": [
 						{
@@ -810,9 +810,9 @@
 							"image": "images/memory-rooms/cellar.jpg"
 						},
 						{
-							"audio": "sounds/fr/la salle de douche.mp3",
+							"audio": "sounds/fr/douche.mp3",
 							"localLanguage": "shower room",
-							"foreignLanguage": "salle de douche",
+							"foreignLanguage": "douche",
 							"image": "images/memory-rooms/shower-room.jpg"
 						},
 						{
@@ -875,7 +875,7 @@
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
 					"id": "MemoryMatchGame3",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 20,
 					"cards": [
 						{
@@ -1010,7 +1010,7 @@
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 26 pairs from the stock pairs. It's a bit OTT, but challenging. Suggest reducing to 20 or less for acual incorporation.</p>",
 					"id": "MemoryMatchGame4",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 26,
 					"cards": [
 						{
@@ -1179,7 +1179,7 @@
 					"cheatText": "Cheat",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 12,
 					"cards": [
 						{
@@ -1736,7 +1736,7 @@
 				"wordsIntoSlots2": {
 					"component": "Blanks",
 					"congratulationsText": "Well done!",
-					"htmlContent": "<p>The <b>'blanksType': 'questions-answers'</b> configuration of the <b>Blanks</b> component, uses the answers to make tiles which can be dropped into the second column of a 2 column table, where the questions are used to populate the left column.</p><p>When the puzzle is complete, sound files are revealed in a third column.</p><p>After two mistakes, help and cheat options are revealled.</p>",
+					"htmlContent": "<p>The <b>'blanksType': 'questions-answers'</b> configuration of the <b>Blanks</b> component, uses the answers to make tiles which can be dropped into the second column of a 2 column table, where the questions are used to populate the left column.</p><p>Sound files are in the third column.</p><p>After two mistakes, help and cheat options are revealled.</p>",
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
@@ -1761,6 +1761,60 @@
 						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
 					],
 					"titleText": "Blanks blanksType='questions-answers'"
+				}
+			},
+			{
+				"pictureTable1": {
+					"component": "Blanks",
+					"congratulationsText": "Très bien !",
+					"id": "picturesAndWords1",
+					"instructionsText": "Match the pictures and words",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "pictures-answers",
+					"pictures": [
+						"images/memory-rooms/bathroom.jpg",
+						"images/memory-rooms/bedroom.jpg",
+						"images/memory-rooms/cellar.jpg",
+						"images/memory-rooms/shower-room.jpg",
+						"images/memory-rooms/dining-room.jpg",
+						"images/memory-rooms/utility-room.jpg",
+						"images/memory-rooms/lounge.jpg",
+						"images/memory-rooms/toilet.jpg",
+						"images/memory-rooms/attic.jpg",
+						"images/memory-rooms/balcony.jpg",
+						"images/memory-rooms/kitchen.jpg",
+						"images/memory-rooms/study.jpg"
+					],
+					"answers": [
+						"salle de bains",
+						"chambre",
+						"cave",
+						"douche",
+						"salle à manger",
+						"buanderie",
+						"salon",
+						"toilettes",
+						"grenier",
+						"balcon",
+						"cuisine",
+						"bureau"
+					],
+					"soundFiles": [
+						"sounds/fr/la salle de bains.mp3",
+						"sounds/fr/la chambre.mp3",
+						"sounds/fr/la cave.mp3",
+						"sounds/fr/la douche.mp3",
+						"sounds/fr/la salle à manger.mp3",
+						"sounds/fr/la buanderie.mp3",
+						"sounds/fr/le salon.mp3",
+						"sounds/fr/les toilettes.mp3",
+						"sounds/fr/le grenier.mp3",
+						"sounds/fr/le balcon.mp3",
+						"sounds/fr/la cuisine.mp3",
+						"sounds/fr/le bureau.mp3"
+					],
+					"titleText": "Blanks blanksType='pictures-answers"
 				}
 			},
 			{

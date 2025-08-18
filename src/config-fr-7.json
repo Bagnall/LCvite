@@ -313,9 +313,9 @@
 				"memorycards1": {
 					"cheatText": "Cheat",
 					"component": "MemoryMatchGame",
-					"congratulationsText": "Congratulations! You have a good memory!",
+					"congratulationsText": "Félicitations !",
 					"id": "MemoryMatchGame1",
-					"instructionsText": "Turn over two cards that match. A French word card matching its corresponding picture card. Remember where they are for fewer tries!",
+					"instructionsText": "Match the picture to the French word.",
 					"nPairsToPlay": 8,
 					"cards": [
 						{
@@ -460,7 +460,7 @@
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
-						"Je suis très [sportive]. J'aime beaucoup [le foot]. J'aime aussi le tennis et [le cricket] mais je n'aime pas [du tout] le rugby. C'est [dangereux] ! Ma sœur est [active] mais elle n'est pas très sportive. Elle [préfère] le yoga. C'est [relaxant]. Mes parents [aiment] le ski ! Ils adorent [la neige] ! Moi, je n'aime pas [le froid] ! Je [déteste] le shopping ! Qu'est-ce que tu [aimes] faire pendant ton [temps] libre ?"
+						"Je suis très [sportif]. J'aime beaucoup [le foot]. J'aime aussi le tennis et [le cricket] mais je n'aime pas [du tout] le rugby. C'est [dangereux] ! Ma sœur est [active] mais elle n'est pas très sportive. Elle [préfère] le yoga. C'est [relaxant]. Mes parents [aiment] le ski ! Ils adorent [la neige] ! Moi, je n'aime pas [le froid] ! Je [déteste] le shopping ! Qu'est-ce que tu [aimes] faire pendant ton [temps] libre ?"
 					],
 					"audio": [
 						"sounds/fr/LO7 dialogue1.mp3"

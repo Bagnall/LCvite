@@ -91,6 +91,15 @@ export class Jigsaw extends React.PureComponent {
 			tabSize: tabSize,
 			tileSize: tileSize,
 		});
+
+		this.autoSolve = this.autoSolve.bind(this);
+		this.handleHints = this.handleHints.bind(this);
+		this.handleMouseDown = this.handleMouseDown.bind(this);
+		this.handleMouseMove = this.handleMouseMove.bind(this);
+		this.handleMouseUp = this.handleMouseUp.bind(this);
+		this.handleReset = this.handleReset.bind(this);
+		this.inLimits = this.inLimits.bind(this);
+
 	}
 
 	componentDidMount = () => {
@@ -308,6 +317,14 @@ export class Jigsaw extends React.PureComponent {
 		this.movingPiece = undefined;
 	};
 
+	handleReset = () => {
+		console.log("RESET!");
+		this.setState({
+			matched: [],
+			nPlaced: 0,
+		});
+	};
+
 	inLimits = () => {
 
 		// Is the piece close to its target position? Enough to show hint highlight or snap it in?
@@ -361,6 +378,7 @@ export class Jigsaw extends React.PureComponent {
 				onMouseMove={this.handleMouseMove}
 				onMouseUp={this.handleMouseUp}
 			>
+				{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
