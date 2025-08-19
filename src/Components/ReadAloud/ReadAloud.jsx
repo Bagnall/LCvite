@@ -14,6 +14,7 @@ export class ReadAloud extends React.PureComponent {
 		this.diagnose = this.diagnose.bind(this);
 		this.handleNoMatch = this.handleNoMatch.bind(this);
 		this.handleError = this.handleError.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 		this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
 
 		this.comparisonRef = React.createRef();
@@ -88,6 +89,14 @@ export class ReadAloud extends React.PureComponent {
 		this.setState({
 			firstTry: false,
 			recording: false,
+		});
+	};
+
+	handleReset = () => {
+		console.log("handleReset");
+		this.setState({
+			comparison: "",
+			firstTry: true,
 		});
 	};
 
@@ -187,6 +196,7 @@ export class ReadAloud extends React.PureComponent {
 		} else {
 			return (
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
+					<button className={`reset`} onClick={this.handleReset}>Reset</button>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
@@ -210,5 +220,5 @@ export class ReadAloud extends React.PureComponent {
 				</div>
 			);
 		}
-	}
+	};
 }

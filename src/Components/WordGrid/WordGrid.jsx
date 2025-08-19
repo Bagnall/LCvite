@@ -144,15 +144,21 @@ export class WordGrid extends PureComponent {
 		this.handleMouseUp = this.handleMouseUp.bind(this);
 		this.handleHints = this.handleHints.bind(this);
 		this.handleReset = this.handleReset.bind(this);
+		this.handleShuffle = this.handleShuffle.bind(this);
 		this.getLinearSelection = this.getLinearSelection.bind(this);
 	}
 
 	handleMouseDown = (e, row, col) => {
 		if (e.button && e.button !== 0) return;
+		let{
+			startTime,
+		} = this.state;
+		if (!startTime) startTime = new Date();
 		this.setState({
 			isTouching: true,
 			line: null,
 			selection: [{ row, col }], // eslint-disable-line
+			startTime: startTime,
 		});
 	};
 
@@ -201,6 +207,7 @@ export class WordGrid extends PureComponent {
 			nToSolve,
 			selection,
 			soundFiles,
+			startTime,
 			words,
 		} = this.state;
 		let {
@@ -228,6 +235,22 @@ export class WordGrid extends PureComponent {
 			nPlaced = Math.min(words.length, nPlaced);
 
 			if (nPlaced === nToSolve) {
+				let timeReport = '';
+
+				const endTime = new Date();
+				const diffMs = endTime - startTime; // milliseconds
+				const totalSeconds = Math.floor(diffMs / 1000);
+				const minutes = Math.floor(totalSeconds / 60);
+				const seconds = totalSeconds % 60;
+				if (minutes !== 0) {
+					timeReport = `Completed in ${minutes} minute${minutes > 1 ? 's' : ''} and ${seconds} second${seconds > 1 ? 's' : ''}.`;
+				} else {
+					timeReport = `Completed in ${seconds} second${seconds > 1 ? 's' : ''}.`;
+				}
+				this.setState({
+					timeReport: timeReport,
+				});
+
 				const { showDialog } = this.props;
 				soundFile.onended = () => {
 					tadaAudio.play();
@@ -279,12 +302,34 @@ export class WordGrid extends PureComponent {
 	handleReset = () => {
 		console.log("handleReset");
 		const { words } = this.state;
+
 		this.setState({
 			foundLines: [],
 			foundWords: [],
 			nPlaced: 0,
 			nToSolve: words.length,
+			startTime: undefined,
+			timeReport: '',
 		});
+	};
+
+	handleShuffle = () => {
+		console.log("handleShuffle");
+		const { config, logError } = this.props;
+		const { words } = config;
+		const foreignWords = words.map(w => w[0]);
+		const solutionLines = new Array;
+		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
+		this.setState({
+			foundLines: [],
+			foundWords: [],
+			grid: grid,
+			nPlaced: 0,
+			nToSolve: words.length,
+			startTime: undefined,
+			timeReport: '',
+		});
+
 	};
 
 	getLinearSelection = ([start, end]) => {
@@ -327,6 +372,7 @@ export class WordGrid extends PureComponent {
 			showHintsText,
 			solutionLines,
 			showSolution = false,
+			timeReport = '',
 			// words
 		} = this.state;
 		// console.log("lines", lines, "line", line);
@@ -383,6 +429,7 @@ export class WordGrid extends PureComponent {
 		return (
 			<div className="word-grid-container" id={id} key={id}>
 				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
@@ -460,6 +507,7 @@ export class WordGrid extends PureComponent {
 						</div>
 					</div>
 					<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
+					<p className='time-taken'>{timeReport}</p>
 				</div>
 			</div>
 		);

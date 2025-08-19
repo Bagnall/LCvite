@@ -1444,6 +1444,7 @@
 	},
 	"monologue1": {
 		"component": "Monologue",
+		"id": "monologue1",
 		"content": "Je suis marié avec Lucie. Je suis canadien et je viens de Montréal. Lucie est anglaise. Elle vient de Bristol. Elle parle anglais et un petit peu français. Je suis bilingue. Je parle anglais et français. Je suis professeur de maths et Lucie est avocate.",
 		"instructionsText": "Listen to the sound sample and type what you hear, then press the \"Check\" button.",
 		"soundFile": "sounds/fr/max-monologue.mp3",

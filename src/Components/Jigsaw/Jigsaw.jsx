@@ -322,6 +322,7 @@ export class Jigsaw extends React.PureComponent {
 		this.setState({
 			matched: [],
 			nPlaced: 0,
+			timeReport: '',
 		});
 	};
 
@@ -415,7 +416,8 @@ export class Jigsaw extends React.PureComponent {
 						onMouseUp={this.handleMouseUp}
 						ref={this.targetRef}
 					>
-					</div><p className='time-taken'>{timeReport}</p>
+					</div>
+					<p className='time-taken'>{timeReport}</p>
 				</div>
 			</div>
 		);

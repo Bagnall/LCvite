@@ -75,7 +75,11 @@ export class MemoryMatchGame extends React.PureComponent {
 		beenFlipped.push(card.id);
 		let { memoryCardTransitionTime } = Variables;
 		memoryCardTransitionTime = parseInt(memoryCardTransitionTime.replace('s', '')) * 1000;
-		this.setState({ beenFlipped: beenFlipped, flipped: newFlipped, startTime }, () => {
+		this.setState({
+			beenFlipped: beenFlipped,
+			flipped: newFlipped,
+			startTime: startTime,
+		}, () => {
 			if (newFlipped.length === 2) {
 				nTries++;
 				const [first, second] = newFlipped;
@@ -87,7 +91,11 @@ export class MemoryMatchGame extends React.PureComponent {
 					const sound = new Audio(resolveAsset(`${soundFile}`));
 					nPairs++;
 					let timeReport = '';
-					sound.onended = () => {
+					let finishedUp = false;
+					const finishUp = () => {
+						console.log("Finish up");
+						if (finishedUp) return;
+						finishedUp = true;
 						if (nPairs === cards.length / 2) {
 							const endTime = new Date();
 							const diffMs = endTime - startTime; // milliseconds
@@ -107,6 +115,9 @@ export class MemoryMatchGame extends React.PureComponent {
 							});
 						}
 					};
+					sound.onended = () => finishUp();
+					setTimeout(finishUp, 2000); // Fallback as Chrome doesn't fire onended event :-()
+
 					// console.log("soundFile", soundFile);
 					sound.play();
 					matched.push(firstCard.id, secondCard.id);
@@ -129,6 +140,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		console.log("RESET!");
 		this.setState({
 			matched: [],
+			startTime: undefined,
+			timeReport: '',
 		});
 	};
 
@@ -143,6 +156,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		this.setState({
 			flipped: [],
 			matched: [],
+			startTime: undefined,
+			timeReport: '',
 		}, () => {
 			this.setState({
 				cards: getShuffledDeck(cards, nPairsToPlay)

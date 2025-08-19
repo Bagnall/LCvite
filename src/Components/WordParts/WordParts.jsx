@@ -17,6 +17,11 @@ export class WordParts extends React.PureComponent {
 			failCount: 0,
 		});
 
+		this.autoSolve = this.autoSolve.bind(this);
+		this.handlePartWordClick = this.handlePartWordClick.bind(this);
+		this.handlePartWordError = this.handlePartWordError.bind(this);
+		this.handleReset = this.handleReset.bind(this);
+
 	}
 
 	autoSolve = () => {
@@ -81,6 +86,20 @@ export class WordParts extends React.PureComponent {
 		failCount++;
 		this.setState({
 			failCount: failCount
+		});
+	};
+
+	handleReset = () => {
+		console.log("handleReset");
+		const targets = document.querySelectorAll(".word-parts-container table span.target");
+		const spans = document.querySelectorAll(".word-parts-container table span");
+		spans.forEach((span) => {
+			span.classList.remove('animate');
+			span.classList.remove('error');
+		});
+		this.setState({
+			nPlaced: 0,
+
 		});
 	};
 
@@ -163,6 +182,7 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
+				<button className={`reset`} onClick={this.handleReset}>Reset</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

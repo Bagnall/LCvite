@@ -33,6 +33,7 @@ export class Monologue extends React.PureComponent {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleValidation = this.handleValidation.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 		// this.highlightTextDiff = this.highlightTextDiff.bind(this);
 
 	}
@@ -40,6 +41,14 @@ export class Monologue extends React.PureComponent {
 	handleChange = (e) => {
 		// console.log("handleChange");
 		this.setState({userInput: e.target.value});
+	};
+
+	handleReset = () => {
+		console.log("handleReset");
+		this.setState({
+			showResult: false,
+			userInput: "",
+		});
 	};
 
 	handleValidation = () => {
@@ -78,6 +87,7 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
+						<button className={`reset`} onClick={this.handleReset}>Reset</button>
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
@@ -107,6 +117,7 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
+						<button className={`reset`} onClick={this.handleReset}>Reset</button>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
@@ -129,5 +140,5 @@ export class Monologue extends React.PureComponent {
 			);
 
 		}
-	}
+	};
 }
