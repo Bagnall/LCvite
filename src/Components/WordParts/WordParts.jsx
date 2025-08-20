@@ -90,8 +90,7 @@ export class WordParts extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("handleReset");
-		const targets = document.querySelectorAll(".word-parts-container table span.target");
+		// console.log("handleReset");
 		const spans = document.querySelectorAll(".word-parts-container table span");
 		spans.forEach((span) => {
 			span.classList.remove('animate');

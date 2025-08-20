@@ -1065,7 +1065,7 @@ export class LO8Grammar extends PureComponent {
 										<tbody>
 											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais de la gymnastique.mp3`}><b>Je fais de la gymnastique</b></AudioClip></td><td> I do gymnastics</td></tr>
 											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></td><td> I do gardening</td></tr>
-											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td><td> I make cakes</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td><td> I make cakes</td></tr>
 										</tbody>
 									</table>
 								</li>

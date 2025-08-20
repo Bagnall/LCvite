@@ -39,12 +39,12 @@
 			[
 				"Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ?",
 				"No, I've got neither brothers nor sisters. I'm an only child. What about you?",
-				"sounds/fr/LO6 dialogue2.mp3"
+				"sounds/fr/Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous.mp3"
 			],
 			[
 				"J'ai un demi-frère et une demi-sœur.",
 				"I've got a half-brother and a half-sister.",
-				"sounds/fr/LO6 dialogue2.mp3"
+				"sounds/fr/J'ai un demi-frère et une demi-sœur.mp3"
 			],
 			[
 				""
@@ -166,6 +166,11 @@
 				"belle-sœur (f)",
 				"sister-in-law, stepsister",
 				"sounds/fr/belle-sœur.mp3"
+			],
+			[
+				"enfant unique",
+				"only child",
+				"sounds/fr/enfant unique.mp3"
 			],
 			[
 				"demi-frère (m) demi-sœur (f)",

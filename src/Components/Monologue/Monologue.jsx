@@ -44,7 +44,7 @@ export class Monologue extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("handleReset");
+		// console.log("handleReset");
 		this.setState({
 			showResult: false,
 			userInput: "",

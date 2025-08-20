@@ -93,7 +93,7 @@ export class ReadAloud extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("handleReset");
+		// console.log("handleReset");
 		this.setState({
 			comparison: "",
 			firstTry: true,
@@ -140,7 +140,7 @@ export class ReadAloud extends React.PureComponent {
 		try {
 			understood = e.results[0][0].transcript;
 		}
-		catch (error) {
+		catch {
 			understood = '';
 		}
 		// this.resultRef.current.textContent = `I heard: <italic>${ understood }</italic> .`;
@@ -149,7 +149,7 @@ export class ReadAloud extends React.PureComponent {
 		try {
 			({ confidence } = e.results[0][0]);
 		}
-		catch (error) {
+		catch {
 			confidence = '';
 		}
 		const comparison = highlightTextDiff(understood, phrase, countCorrect);

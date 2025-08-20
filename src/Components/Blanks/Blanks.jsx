@@ -32,6 +32,7 @@ export class Blanks extends React.PureComponent {
 		let wordTiles = new Array;
 		let nToPlace = 0;
 		const phraseList = new Array;
+		let mixer = new Array;
 		switch (blanksType) {
 			case 'phrases': {
 				let wordTileIndex = 0;
@@ -81,7 +82,6 @@ export class Blanks extends React.PureComponent {
 				break;
 			}
 			case "pictures-answers":
-				let mixer = new Array;
 				nToPlace = pictures.length;
 
 				for (let i = 0; i < nToPlace; i++) {
@@ -101,7 +101,6 @@ export class Blanks extends React.PureComponent {
 				break;
 
 			case "questions-answers": {
-				let mixer = new Array;
 				nToPlace = questions.length;
 
 				for (let i = 0; i < nToPlace; i++) {
@@ -127,7 +126,7 @@ export class Blanks extends React.PureComponent {
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 		this.inLimits = this.inLimits.bind(this);
 
 		this.state = ({
@@ -366,13 +365,13 @@ export class Blanks extends React.PureComponent {
 		}
 	};
 
-	handleReset = () => {
-		console.log("RESET!");
-		this.setState({
-			matched: [],
-			nPlaced: 0,
-		});
-	};
+	// handleReset = () => {
+	// 	// console.log("RESET!");
+	// 	// this.setState({
+	// 	// 	matched: [],
+	// 	// 	nPlaced: 0,
+	// 	// });
+	// };
 
 	inLimits = () => {
 

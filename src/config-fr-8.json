@@ -399,7 +399,7 @@
 						"sounds/fr/Le lundi, il joue au foot.mp3",
 						"sounds/fr/Le mardi, il joue au tennis.mp3",
 						"sounds/fr/Le mercredi, il joue au volley.mp3",
-						"sounds/fr/Le jeudi, il joue à pétanque.mp3",
+						"sounds/fr/Le jeudi, il joue à la pétanque.mp3",
 						"sounds/fr/Le vendredi, il joue aux boules.mp3",
 						"sounds/fr/Le samedi, il joue au baseball. Les soir, il joue au babyfoot avec ses amis.mp3",
 						"sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue au échecs avec son frère.mp3"
@@ -417,7 +417,7 @@
 					"cheatText": "Cheat",
 					"phrases": [
 						"1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
-						"2 Je fais [de *l'équitation|de la course d'orientation|de la natation]",
+						"2 Je fais [*de l'équitation|de la course d'orientation|de la natation]",
 						"3 Je fais [du taekwondo|*du yoga|du jogging]",
 						"4 Je fais [*de la randonnée|de la course à pied|de l'équitation]",
 						"5 Je fais [de l'escalade|de la lecture|*du lèche-vitrine]",
@@ -426,14 +426,14 @@
 						"8 Je fais [de la lecture|*de la boxe|du jardinage]"
 					],
 					"audio": [
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3",
-						"sounds/fr/.mp3"
+						"sounds/fr/Je fais de la natation.mp3",
+						"sounds/fr/Je fais de l'équitation.mp3",
+						"sounds/fr/Je fais du yoga.mp3",
+						"sounds/fr/Je fais de la randonnée.mp3",
+						"sounds/fr/Je fais du lèche-vitrine.mp3",
+						"sounds/fr/Je fais de l'escalade.mp3",
+						"sounds/fr/Je fais des gâteaux.mp3",
+						"sounds/fr/Je fais de la boxe.mp3"
 					],
 					"titleText": "4. Qu’est-ce que tu fais le dimanche ?"
 				}

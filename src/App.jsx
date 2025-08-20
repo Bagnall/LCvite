@@ -79,11 +79,10 @@ export default class App extends React.Component {
 
 		const configFile = urlParams.get('config');
 
-		let LO = parseInt(configFile.replace(/^\D+/g, ''));
-		if (isNaN(LO)) LO = 11;
-
 		let configPromise;
 		if (configFile) {
+			let LO = parseInt(configFile.replace(/^\D+/g, ''));
+			if (isNaN(LO)) LO = 15;
 			configPromise = this.loadConfig(`./src/${configFile}`);
 			this.loadIndex(LO);
 			this.initialiseSpecialAnchors();

@@ -300,7 +300,7 @@ export class WordGrid extends PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("handleReset");
+		// console.log("handleReset");
 		const { words } = this.state;
 
 		this.setState({
@@ -314,7 +314,7 @@ export class WordGrid extends PureComponent {
 	};
 
 	handleShuffle = () => {
-		console.log("handleShuffle");
+		// console.log("handleShuffle");
 		const { config, logError } = this.props;
 		const { words } = config;
 		const foreignWords = words.map(w => w[0]);

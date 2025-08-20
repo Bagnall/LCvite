@@ -93,7 +93,7 @@ export class MemoryMatchGame extends React.PureComponent {
 					let timeReport = '';
 					let finishedUp = false;
 					const finishUp = () => {
-						console.log("Finish up");
+						// console.log("Finish up");
 						if (finishedUp) return;
 						finishedUp = true;
 						if (nPairs === cards.length / 2) {
@@ -137,7 +137,7 @@ export class MemoryMatchGame extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("RESET!");
+		// console.log("RESET!");
 		this.setState({
 			matched: [],
 			startTime: undefined,
@@ -146,7 +146,7 @@ export class MemoryMatchGame extends React.PureComponent {
 	};
 
 	handleShuffle = () => {
-		console.log("Shuffle!");
+		// console.log("Shuffle!");
 
 		const {
 			cards,

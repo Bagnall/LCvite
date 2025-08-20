@@ -318,7 +318,7 @@ export class Jigsaw extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("RESET!");
+		// console.log("RESET!");
 		this.setState({
 			matched: [],
 			nPlaced: 0,
