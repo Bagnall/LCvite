@@ -52,9 +52,9 @@
 				"/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3"
 			],
 			[
-				"Oh! Excusez-moi ! Au revoir Madame !",
+				"Oh ! Excusez-moi ! Au revoir Madame !",
 				"Oh, excuse me! Goodbye!",
-				"/sounds/fr/Oh! Excusez-moi ! Au revoir Madame ! (male).mp3"
+				"/sounds/fr/Oh ! Excusez-moi ! Au revoir Madame !.mp3"
 			],
 			[
 				"Au revoir Monsieur !",
@@ -290,26 +290,26 @@
 						"Âllo, oui ?",
 						"Bonjour Madame, c'est [combien|*bien] le 02 25 09 10 44 ?",
 						"Ah non, Monsieur, je suis [désolé|*désolée]. Il y a [un|*une] erreur ! C'est [*le|la] 02 25 09 10 47.",
-						"Oh! Excusez-moi ! Au revoir Madame !",
+						"Oh ! Excusez-moi ! Au revoir Madame !",
 						"Au revoir Monsieur !",
 						"",
 						"Âllo, oui ?",
 						"Bonjour Madame, [*c'est|ces] bien le 03 25 09 13 45 ?",
 						"Ah non, Madame, je suis [*désolée|désolées] Il y a une [horreur|*erreur] ! C'est [*le|les] 03 26  09 13  47.",
-						"Oh! Excusez-moi ! Au revoir Madame !",
+						"Oh ! Excusez-moi ! Au revoir Madame !",
 						"Au revoir Madame !"
 					],
 					"audio": [
 						"sounds/fr/Âllo, oui.mp3",
 						"sounds/fr/Bonjour Madame, c'est bien le 02 25 09 10 44.mp3",
 						"sounds/fr/Ah non, Monsieur, je suis désolée. Il y a une erreur ! C'est le 02 25 09 10 47.mp3",
-						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame ! (male).mp3",
+						"sounds/fr/Oh ! Excusez-moi ! Au revoir Madame !.mp3",
 						"sounds/fr/Au revoir Monsieur !.mp3",
 						"",
 						"sounds/fr/Âllo, oui.mp3",
 						"sounds/fr/Bonjour Madame, c'est bien le 03 25 09 13 45.mp3",
 						"sounds/fr/Ah non, Madame, je suis désolée Il y a une erreur ! C'est le 03 26 09 13 47.mp3",
-						"sounds/fr/Oh! Excusez-moi ! Au revoir Madame !.mp3",
+						"sounds/fr/Oh ! Excusez-moi ! Au revoir Madame !.mp3",
 						"sounds/fr/Au revoir Madame !.mp3"
 					],
 					"titleText": "2. Talking on the phone."
@@ -328,9 +328,9 @@
 						"Âllo, oui ?",
 						"Bonjour, c'est bien le 05 24 07 19 55 ?",
 						"[Oui, c'est bien ça.]",
-						"Dominique est là, s'iI vous plaît ?",
+						"Dominique est là, s'il vous plaît ?",
 						"[Oui, c'est Dominique à l'appareil.]",
-						"Dominique tu veux prendre un verre avec moi ce soir ?",
+						"Dominique, tu veux prendre un verre avec moi ce soir ?",
 						"[Oui, je veux bien. À quelle heure ?]",
 						"À huit heures ?",
 						"[Oui, d'accord. Tu veux aller où ?]",
@@ -341,9 +341,9 @@
 						"sounds/fr/Âllo, oui (male).mp3",
 						"sounds/fr/Bonjour, c'est bien le 05 24 07 19 55.mp3",
 						"sounds/fr/Oui, c'est bien ça (male).mp3",
-						"sounds/fr/Dominique est là, s'iI vous plaît.mp3",
+						"sounds/fr/Dominique est là, s'il vous plaît.mp3",
 						"sounds/fr/Oui, c'est Dominique à l'appareil.mp3",
-						"sounds/fr/Dominique tu veux prendre un verre avec moi ce soir.mp3",
+						"sounds/fr/Dominique, tu veux prendre un verre avec moi ce soir.mp3",
 						"sounds/fr/Oui, je veux bien. À quelle heure (male).mp3",
 						"sounds/fr/À huit heures.mp3",
 						"sounds/fr/Oui, d'accord. Tu veux aller où.mp3",

@@ -44,7 +44,7 @@
 			[
 				"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi ?",
 				"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?",
-				"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
+				"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
 			],
 			[
 				"Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !",
@@ -393,7 +393,7 @@
 						"Le jeudi, il joue [au|*à la|à l'|aux] pétanque.",
 						"Le vendredi, il joue [au|à la|à l'|*aux] boules",
 						"Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis",
-						"Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [*au|à la|à l'|aux] échecs avec son frère."
+						"Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [au|à la|à l'|*aux] échecs avec son frère."
 					],
 					"audio": [
 						"sounds/fr/Le lundi, il joue au foot.mp3",
@@ -402,7 +402,7 @@
 						"sounds/fr/Le jeudi, il joue à la pétanque.mp3",
 						"sounds/fr/Le vendredi, il joue aux boules.mp3",
 						"sounds/fr/Le samedi, il joue au baseball. Les soir, il joue au babyfoot avec ses amis.mp3",
-						"sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue au échecs avec son frère.mp3"
+						"sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue aux échecs avec son frère.mp3"
 					],
 					"titleText": "3. Julien est très sportif"
 				}
@@ -448,13 +448,13 @@
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
-						"Je ne fais pas [grand' chose]. Je fais la [grasse matinée]. Je vois mes [amis]. Quelquefois, je vais au [cinéma] ou je vais en [boîte]. Ça dépend !",
+						"Je ne fais pas [grand-chose]. Je fais la [grasse matinée]. Je vois mes [amis]. Quelquefois, je vais au [cinéma] ou je vais en [boîte]. Ça dépend !",
 						"Le samedi, je fais de l' [aviron]. Je prends mon [déjeuner] au café avec mon copain. Je vais en ville pour faire du [shopping]. Le soir, je sors avec [mes] amies.",
 						"Le dimanche, [je fais] de la natation. L'après-midi, s'il fait [beau], je fais [de la] randonnée avec ma sœur . S'il fait mauvais, je fais de la [peinture] ou je regarde la [télé]."
 					],
 					"audio": [
-						"sounds/fr/Je ne fais pas grand' chose Je fais la grasse matinée Je vois mes amis Quelquefois, je vais au cinéma ou je vais en boîte Ça dépend.mp3",
-						"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon déjeuner au café avec mon copain. Je vais en ville pour faire du shopping. Le soir, je sors avec mes amies.mp3",
+						"sounds/fr/Je ne fais pas grand chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3",
+						"sounds/fr/Le samedi, je fais de l’aviron. Je prends mon déjeuner au café avec mon copain. Je vais en ville pour faire du shopping. Le soir, je sors avec mes amies.mp3",
 						"sounds/fr/Le dimanche, je fais de la natation L'après-midi, s'il fait beau, je fais de la randonnée avec ma sœur S'il fait mauvais, je fais de la peinture ou je regarde la télé.mp3"
 					],
 					"titleText": "5 Qu'est-ce que tu fais le weekend ?"

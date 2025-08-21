@@ -170,10 +170,10 @@ export class LO2Grammar extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>1. Verbs in French</b></p>
-					<p>There are many irregular verbs in French. The verb <b>être</b> meaning <b>to be</b> is one of these. In fact, it has been
+					<p>There are many irregular verbs in French. The verb <AudioClip className={`link`} soundFile={`sounds/fr/être.mp3`}><b>être</b></AudioClip> meaning <b>to be</b> is one of these. In fact, it has been
 						described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason,
 						but because it occurs so frequently, and It will also enable you to master the subject pronouns.</p>
-					<p><b>Être</b> to be</p>
+					<p><AudioClip className={`link`} soundFile={`sounds/fr/être.mp3`}><b>Être</b></AudioClip> to be</p>
 					<table>
 						<tbody>
 							<tr>
@@ -1064,8 +1064,8 @@ export class LO8Grammar extends PureComponent {
 									<table>
 										<tbody>
 											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais de la gymnastique.mp3`}><b>Je fais de la gymnastique</b></AudioClip></td><td> I do gymnastics</td></tr>
-											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></td><td> I do gardening</td></tr>
-											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td><td> I make cakes</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></td><td>I do gardening</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td><td>I make cakes</td></tr>
 										</tbody>
 									</table>
 								</li>
@@ -1077,8 +1077,13 @@ export class LO8Grammar extends PureComponent {
 								<li>
 									The regular <b>-er</b>  verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> meaning to play is useful when talking about pastimes.
 									You use the partitive article after the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> when speaking about playing a musical instrument:<br />
-									<AudioClip className={`link`} soundFile={`sounds/fr/Je joue du piano.mp3`}><b>Je joue du piano</b></AudioClip> I play the piano <br/>
-									<AudioClip className={`link`} soundFile={`sounds/fr/Je joue de la clarinette.mp3`}><b>Je joue de la clarinette</b></AudioClip> I play the clarinet
+									<table>
+										<tbody>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue du piano.mp3`}><b>Je joue du piano</b></AudioClip></td><td>I play the piano</td></tr>
+											<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue de la clarinette.mp3`}><b>Je joue de la clarinette</b></AudioClip></td><td>I play the clarinet</td></tr>
+										</tbody>
+									</table>
+
 								</li>
 								<li>
 									When you use the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
@@ -1574,6 +1579,105 @@ export class L10Demystify extends PureComponent {
 	};
 }
 
+export class L11Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo11-grammar-container explanation-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<ol>
+						<li>
+							<p>To express what you would like <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>Je voudrais</b></AudioClip> is
+								the verb of form that you use.  e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace.mp3`}><b>Je voudrais
+									une glace</b></AudioClip> I'd like an ice-cream.
+								This is the present conditional of the verb <AudioClip className={`link`} soundFile={`sounds/fr/vouloir.mp3`}><b>vouloir</b></AudioClip>.
+								To express what you would like to do, you add another verb in the infinitive form.
+   e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais aller au marché demain.mp3`}><b>Je voudrais aller au marché demain</b></AudioClip>. I'd like to go to the market tomorrow.<br/><br/>
+
+								You can see the forms for all the persons of the verb below:</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>je voudrais</b></AudioClip></td><td>I would like</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Tu voudrais.mp3`}><b>tu voudrais</b></AudioClip></td><td>you would like</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Il voudrais. Elle voudrais.mp3`}><b>il / elle voudrait</b></AudioClip></td><td>he / she would like</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous voudrions.mp3`}><b>nous voudrions</b></AudioClip></td><td>we would like</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous voudriez.mp3`}><b>vous voudriez</b></AudioClip></td><td>you would like</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils voudraient. elles voudraient.mp3`}><b>ils / elles voudraient</b></AudioClip></td><td>they would like</td></tr>
+								</tbody>
+							</table>
+						</li>
+						<li>
+							<p>The verb <AudioClip className={`link`} soundFile={`sounds/fr/prendre.mp3`}><b>prendre</b></AudioClip> is a frequently occurring irregular
+								verb. It means <b>to take</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je prends le bus pour aller au centre-ville.mp3`}><b>Je prends le bus pour aller au centre-ville</b></AudioClip>.
+								I take the bus to go to the town centre.
+							<AudioClip className={`link`} soundFile={`sounds/fr/Prenez la première rue à droite !.mp3`}><b>Prenez la première rue à droite !</b></AudioClip> Take the first
+								turning on the
+								right! <AudioClip className={`link`} soundFile={`sounds/fr/Il prend une douche.mp3`}><b>Il prend une douche</b></AudioClip>. He's taking a shower.</p>
+							<p>NB In English we say: <i><b>I'm having</b> a coffee</i> or <i><b>I have</b> breakfast at 8 o'clock</i>. In French, it is incorrect to use <b>avoir</b> in
+								this context, you use <AudioClip className={`link`} soundFile={`sounds/fr/prendre.mp3`}><b>prendre</b></AudioClip> instead
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je prends un café.mp3`}><b>Je prends un café</b></AudioClip> or <AudioClip className={`link`} soundFile={`sounds/fr/Je prends mon petit déjeuner à huit heures.mp3`}><b>Je prends mon petit déjeuner à huit heures</b></AudioClip>.
+ Prendre</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je prends.mp3`}><b>je prends</b></AudioClip></td><td> I take / have - I am taking / having</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/tu prends.mp3`}><b>tu prends</b></AudioClip></td><td> you take / have - you are taking / having</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/il prend. elle prend.mp3`}><b>il / elle prend</b></AudioClip></td><td>He / she takes / has – he/she is taking / having</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous prenons.mp3`}><b>nous prenons</b></AudioClip></td><td>we take / have - we are taking / having</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous prenez.mp3`}><b>vous prenez</b></AudioClip></td><td>you take / have - you are taking / having</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils prennent. elles prennent.mp3`}><b>ils / elles prennent</b></AudioClip></td><td>they take / have - they are taking / having</td></tr>
+								</tbody>
+							</table>
+						</li>
+						<li><p><b>Flavours, filling and toppings</b></p>
+							<p>To describe the flavours, filling and toppings of food stuffs, you use the preposition <b>à</b> with the definite article: <b>au</b>, <b>à la</b>, <b>à l'</b>, <b>aux</b> e.g.</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Pour moi un sandwich au fromage.mp3`}><b>Pour moi un sandwich au fromage</b></AudioClip></td><td>A cheese sandwich for me.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace à la vanille.mp3`}><b>Je voudrais une glace à la vanille</b></AudioClip></td><td>I'd like a vanilla ice-cream.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/J'aime la sauce à l'orange.mp3`}><b>J'aime la sauce à l'orange</b></AudioClip></td><td>I like the orange sauce.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Vous prenez une omelette aux champignons.mp3`}><b>Vous prenez une omelette aux champignons ?</b></AudioClip></td><td>Are you having a mushroom omelette?</td></tr>
+								</tbody>
+							</table>
+						</li>
+						<li>
+							<p>In French there are some pronouns called <b>disjunctive pronouns</b> (or <b>stressed pronouns</b>). They are listed below.
+								They are the pronouns which are used after prepositions such as <AudioClip className={`link`} soundFile={`sounds/fr/pour.mp3`}><b>pour</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/avec.mp3`}><b>avec</b></AudioClip>,&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/sans.mp3`}><b>sans</b></AudioClip> etc. e.g.</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/avec.mp3`}><b>Pour moi un café s'il vous plait</b></AudioClip></td><td>A coffee for me please.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/avec.mp3`}><b>Les enfants ne veulent pas jouer au football sans lui</b></AudioClip></td><td>The children don't want to play football without him.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/avec.mp3`}><b>Je travaille avec eux</b></AudioClip></td><td>I work with them.</td></tr>
+								</tbody>
+							</table>
+							<br/>
+							<table>
+								<thead>
+									<tr><th>Subject pronouns</th><th>Disjunctive pronouns</th></tr>
+								</thead>
+								<tbody>
+									<tr><td>je</td><td>moi</td></tr>
+									<tr><td>tu</td><td>toi</td></tr>
+									<tr><td>il</td><td>lui</td></tr>
+									<tr><td>elle</td><td>elle</td></tr>
+									<tr><td>nous</td><td>nous</td></tr>
+									<tr><td>vous</td><td>vous</td></tr>
+									<tr><td>ils</td><td>eux</td></tr>
+									<tr><td>elles</td><td>elles</td></tr>
+								</tbody></table></li></ol>
+				</div></div>
+		);
+	};
+}
 export class L15Grammar extends PureComponent {
 	render = () => {
 		const { id } = this.props;

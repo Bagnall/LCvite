@@ -198,7 +198,7 @@
 				"sounds/fr/personne.mp3"
 			],
 			[
-				"ami (m) amie(f)",
+				"ami (m) amie (f)",
 				"friend",
 				"sounds/fr/ami, amie.mp3"
 			],
@@ -213,7 +213,7 @@
 				"sounds/fr/compagnon, compagne.mp3"
 			],
 			[
-				"conjoint (m) conjointe(f)",
+				"conjoint (m) conjointe (f)",
 				"spouse",
 				"sounds/fr/conjoint, conjointe.mp3"
 			],

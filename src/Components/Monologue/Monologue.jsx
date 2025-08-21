@@ -87,7 +87,7 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						<button className={`reset`} onClick={this.handleReset}>Reset</button>
+						{!compact ? <button className={`reset`} onClick={this.handleReset}>Reset</button> : null}
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:

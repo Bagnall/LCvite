@@ -71,7 +71,7 @@
 				"sounds/fr/célibataire.mp3"
 			],
 			[
-				"étudiant(m) / étudiante(f)",
+				"étudiant (m) / étudiante (f)",
 				"University student",
 				"sounds/fr/étudiant, étudiante.mp3"
 			],
@@ -81,17 +81,17 @@
 				"sounds/fr/élève.mp3"
 			],
 			[
-				"chercheur(m) / chercheuse(f)",
+				"chercheur (m) / chercheuse (f)",
 				"researcher",
 				"sounds/fr/chercheur, chercheuse.mp3"
 			],
 			[
-				"doctorant(m) / doctorante(f)",
+				"doctorant (m) / doctorante (f)",
 				"PhD student",
 				"sounds/fr/doctorant, doctorante.mp3"
 			],
 			[
-				"professeur(m) / professeure(f) / prof (m and f)",
+				"professeur (m) / professeure (f) / prof (m and f)",
 				"teacher, professor",
 				"sounds/fr/professeur, professeure, prof.mp3"
 			],
@@ -111,17 +111,17 @@
 				"sounds/fr/bibliothécaire.mp3"
 			],
 			[
-				"administrateur (m) / administratrice(f)",
+				"administrateur (m) / administratrice (f)",
 				"administrator",
 				"sounds/fr/administrateur, administratrice.mp3"
 			],
 			[
-				"informaticien(m) / informaticienne(f)",
+				"informaticien (m) / informaticienne (f)",
 				"IT specialist",
 				"sounds/fr/informaticien, informaticienne.mp3"
 			],
 			[
-				"avocat(m) / avocate(f)",
+				"avocat (m) / avocate (f)",
 				"lawyer",
 				"sounds/fr/avocat, avocate.mp3"
 			],

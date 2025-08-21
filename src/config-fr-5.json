@@ -255,94 +255,95 @@
 						"sounds/fr/le bureau.mp3"
 					],
 					"titleText": "1. The Rooms of the House"
-				},
-				{
-					"dropdowns1": {
-						"component": "DropDowns",
-						"id": "dropdowns1",
-						"congratulationsText": "Excellent !",
-						"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
-						"showHintsText": "Show hints when moving",
-						"cheatText": "Cheat",
-						"phrases": [
-							"[le|*la|les] salle de bains",
-							"[le|*la|les] chambre",
-							"[le|*la|les] cave",
-							"[le|*la|les] douche",
-							"[le|*la|les] salle à manger",
-							"[le|*la|les] buanderie",
-							"[*le|la|les] salon",
-							"[le|la|*les] toilettes",
-							"[*le|la|les] grenier",
-							"[*le|la|les] balcon",
-							"[le|*la|les] cuisine",
-							"[*le|la|les] bureau"
-						],
-						"audio": [
-							"sounds/fr/la salle de bains.mp3",
-							"sounds/fr/la chambre.mp3",
-							"sounds/fr/la cave.mp3",
-							"sounds/fr/la douche.mp3",
-							"sounds/fr/la salle à manger.mp3",
-							"sounds/fr/la buanderie.mp3",
-							"sounds/fr/le salon.mp3",
-							"sounds/fr/les toilettes.mp3",
-							"sounds/fr/le grenier.mp3",
-							"sounds/fr/le balcon.mp3",
-							"sounds/fr/la cuisine.mp3",
-							"sounds/fr/le bureau.mp3"
-						],
-						"titleText": "2. Do you remember the gender?"
-					}
-				},
-				{
-					"dropdowns2": {
-						"component": "DropDowns",
-						"id": "dropdowns2",
-						"congratulationsText": "Très bien !",
-						"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
-						"showHintsText": "Show hints when moving",
-						"cheatText": "Cheat",
-						"phrases": [
-							"Le bureau est [*lumineux|lumineuse/ lumineuses].",
-							"La cave est [dangereux|*dangereuse|dangereuses].",
-							"Mme Leserre est très [curieux|*curieuse|curieuses].",
-							"Pauline, tu es très [courageux|*courageuse|courageuses]. ",
-							"Le Champagne est [*délicieux|délicieuse|délicieuses].",
-							"Les étudiantes sont [ambitieux|ambitieuse|*ambitieuses]."
-						],
-						"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
-						"audio": [
-							"sounds/fr/Le bureau est lumineux.mp3",
-							"sounds/fr/La cave est dangereuse.mp3",
-							"sounds/fr/Mme Leserre est très curieuse.mp3",
-							"sounds/fr/Pauline, tu es très courageuse.mp3",
-							"sounds/fr/Le Champagne est délicieux.mp3",
-							"sounds/fr/Les étudiantes sont ambitieuses.mp3"
-						],
-						"titleText": "3. Practise descriptions"
-					}
-				},
-				{
-					"phrases1": {
-						"component": "Blanks",
-						"id": "phrases1",
-						"congratulationsText": "Superbe !",
-						"instructionsText": "Drag the words to fill in the gaps.",
-						"showHintsText": "Show hints when moving",
-						"cheatText": "Cheat",
-						"blanksType": "phrases",
-						"phrases": [
-							"J'habite [seule]. Mon appartement n'est pas [très] grand, mais il est très [confortable].  Il y a [une] salle de séjour [lumineuse]. Elle [est] très jolie. J'ai un petit [balcon] – c'est super !  Il y a [deux] chambres, une pour [moi] et une autre [petite] chambre pour mes invités. J'ai une salle de bains et des [toilettes], bien sûr ! Il y a [un] jardin devant l'immeuble."
-						],
-						"audio": [
-							"sounds/fr/LO5 phrases1.mp3"
-						],
-						"titleText": "4. Complete the description"
-					}
 				}
-			],
-			"id": "group1",
-			"titleText": "Exercises"
-		}
+			},
+			{
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Excellent !",
+					"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"[le|*la|les] salle de bains",
+						"[le|*la|les] chambre",
+						"[le|*la|les] cave",
+						"[le|*la|les] douche",
+						"[le|*la|les] salle à manger",
+						"[le|*la|les] buanderie",
+						"[*le|la|les] salon",
+						"[le|la|*les] toilettes",
+						"[*le|la|les] grenier",
+						"[*le|la|les] balcon",
+						"[le|*la|les] cuisine",
+						"[*le|la|les] bureau"
+					],
+					"audio": [
+						"sounds/fr/la salle de bains.mp3",
+						"sounds/fr/la chambre.mp3",
+						"sounds/fr/la cave.mp3",
+						"sounds/fr/la douche.mp3",
+						"sounds/fr/la salle à manger.mp3",
+						"sounds/fr/la buanderie.mp3",
+						"sounds/fr/le salon.mp3",
+						"sounds/fr/les toilettes.mp3",
+						"sounds/fr/le grenier.mp3",
+						"sounds/fr/le balcon.mp3",
+						"sounds/fr/la cuisine.mp3",
+						"sounds/fr/le bureau.mp3"
+					],
+					"titleText": "2. Do you remember the gender?"
+				}
+			},
+			{
+				"dropdowns2": {
+					"component": "DropDowns",
+					"id": "dropdowns2",
+					"congratulationsText": "Très bien !",
+					"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"Le bureau est [*lumineux|lumineuse/ lumineuses].",
+						"La cave est [dangereux|*dangereuse|dangereuses].",
+						"Mme Leserre est très [curieux|*curieuse|curieuses].",
+						"Pauline, tu es très [courageux|*courageuse|courageuses]. ",
+						"Le Champagne est [*délicieux|délicieuse|délicieuses].",
+						"Les étudiantes sont [ambitieux|ambitieuse|*ambitieuses]."
+					],
+					"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
+					"audio": [
+						"sounds/fr/Le bureau est lumineux.mp3",
+						"sounds/fr/La cave est dangereuse.mp3",
+						"sounds/fr/Mme Leserre est très curieuse.mp3",
+						"sounds/fr/Pauline, tu es très courageuse.mp3",
+						"sounds/fr/Le Champagne est délicieux.mp3",
+						"sounds/fr/Les étudiantes sont ambitieuses.mp3"
+					],
+					"titleText": "3. Practise descriptions"
+				}
+			},
+			{
+				"phrases1": {
+					"component": "Blanks",
+					"id": "phrases1",
+					"congratulationsText": "Superbe !",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "phrases",
+					"phrases": [
+						"J'habite [seule]. Mon appartement n'est pas [très] grand, mais il est très [confortable].  Il y a [une] salle de séjour [lumineuse]. Elle [est] très jolie. J'ai un petit [balcon] – c'est super !  Il y a [deux] chambres, une pour [moi] et une autre [petite] chambre pour mes invités. J'ai une salle de bains et des [toilettes], bien sûr ! Il y a [un] jardin devant l'immeuble."
+					],
+					"audio": [
+						"sounds/fr/LO5 phrases1.mp3"
+					],
+					"titleText": "4. Complete the description"
+				}
+			}
+		],
+		"id": "group1",
+		"titleText": "Exercises"
 	}
+}
