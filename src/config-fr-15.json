@@ -6,7 +6,7 @@
 		"subtitle": "Making Arrangements",
 		"targetLanguage": "french",
 		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 10"
+		"title": "French Learning Object 15"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
@@ -235,7 +235,7 @@
 					"congratulationsText": "Congratulations!",
 					"id": "MemoryMatchGame4",
 					"instructionsText": "Match the picture to the French word.",
-					"nPairsToPlay": 12,
+					"nPairsToPlay": 8,
 					"cards": [
 						{
 							"audio": "sounds/fr/Le bus.mp3",
@@ -443,17 +443,17 @@
 					"blanksType": "phrases",
 					"phrases": [
 						"Cette année, je vais [passer] mes vacances au Canada ! Je vais [revoir] ma famille !",
-						"Mes parents vont [être] très contents de me revoir. Ils vont [venir] me chercher à l’aéroport.",
+						"Mes parents vont [être] très contents de me revoir. Ils vont [venir] me chercher à l'aéroport.",
 						"Pendant mes vacances, je vais [faire] du ski et du snow-rafting. J'adore la neige. Je vais [retrouver] mes amis et on va [sortir] ensemble. On va [dîner] au restaurant.",
 						"Je vais [aller] au Carnaval de Québec. Je vais bien [m'amuser] ! C'est sûr !"
 					],
 					"audio": [
 						"sounds/fr/Cette année, je vais passer mes vacances au Canada ! Je vais revoir ma famille !.mp3",
-						"sounds/fr/Mes parents vont être très contents de me revoir. Ils vont venir me chercher à l’aéroport.mp3",
+						"sounds/fr/Mes parents vont être très contents de me revoir. Ils vont venir me chercher à l'aéroport.mp3",
 						"sounds/fr/Pendant mes vacances, je vais faire du ski et du snow-rafting. J'adore la neige. Je vais retrouver mes amis et on va sortir ensemble. On va dîner au restaurant.mp3",
 						"sounds/fr/Je vais aller au Carnaval de Québec. Je vais bien m'amuser ! C'est sûr !.mp3"
 					],
-					"titleText": "5. Fill in the gaps in Jo’s plans for his forthcoming holiday."
+					"titleText": "5. Fill in the gaps in Jo's plans for his forthcoming holiday."
 				}
 			}
 		],

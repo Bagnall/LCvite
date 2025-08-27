@@ -317,7 +317,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Je veux vous féliciter !",
+					"congratulationsText": "Félicitations !",
 					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> ('Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

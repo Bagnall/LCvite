@@ -26,8 +26,18 @@ export class Blanks extends React.PureComponent {
 		// this.congratulationsRef = React.createRef();
 		this.placeholdersRef = React.createRef();
 		this.wordsContainerRef = React.createRef();
-		const { config, id } = props;
-		const { answers, audio, pictures, questions, blanksType, phrases 	} = config;
+		const {
+			config,
+		} = props;
+		const {
+			answers,
+			audio,
+			blanksType,
+			id,
+			phrases,
+			pictures,
+			questions,
+		} = config;
 		const {words = []} = config;
 		let wordTiles = new Array;
 		let nToPlace = 0;
@@ -68,7 +78,21 @@ export class Blanks extends React.PureComponent {
 				wordTiles = shuffleArray(wordTiles);
 				break;
 			}
-			case 'table': {
+			case 'group-table': {
+				nToPlace = words.length;
+				for (let i = 0; i < nToPlace; i++) {
+					wordTiles.push(
+						<Word
+							className={`blank draggable visiblekey-${id}word${i}`}
+							index={i}
+							key={`${id}word${i}`}>{words[i]}</Word>
+					);
+				}
+				wordTiles = shuffleArray(wordTiles);
+
+				break;
+			}
+			case 'table':{
 				nToPlace = words.length;
 				for (let i = 0; i < nToPlace; i++) {
 					wordTiles.push(
@@ -416,6 +440,7 @@ export class Blanks extends React.PureComponent {
 			complete = false,
 			cheatText,
 			failCount,
+			header = [],
 			htmlContent,
 			id = '',
 			instructionsText,
@@ -437,6 +462,7 @@ export class Blanks extends React.PureComponent {
 
 		const phraseList = new Array;
 		const tableRows = new Array;
+		const headerCells = new Array;
 
 		// phrases, table or questions/answers?
 		switch (blanksType) {
@@ -533,6 +559,34 @@ export class Blanks extends React.PureComponent {
 				}
 				break;
 			}
+			case "group-table": {
+				if (header) {
+					for(let i = 0; i < header.length; i++) {
+						headerCells.push(<th key={`${id}header${i}`}>{header[i]}</th>);
+					}
+				}
+				let index = 0;
+				for (let i = 1; i <= answers.length; i++) {
+					tableRows.push(
+						<tr key={`${id}row${i}`}>
+							<td>
+								<Word
+									className={`blank target`}
+									index={words.indexOf(answers[i - 1][0])}
+									key={`${id}word${i}`}>{answers[i - 1][0]}</Word>
+							</td>
+							<td>
+								<Word
+									className={`blank target`}
+									index={words.indexOf(answers[i - 1][1])}
+									key={`${id}word${i}`}>{answers[i - 1][1]}</Word>
+							</td>
+						</tr>
+					);
+					index += 2;
+				}
+				break;
+			}
 			case "pictures-answers": {
 				for (let i = 1; i <= pictures.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
@@ -623,6 +677,8 @@ export class Blanks extends React.PureComponent {
 								{phraseList}
 							</ul> :
 							<table>
+								{header.length > 0 ?
+									<thead><tr>{headerCells}</tr></thead> : null}
 								<tbody>
 									{tableRows}
 								</tbody>

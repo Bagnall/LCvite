@@ -1846,6 +1846,89 @@
 					],
 					"titleText": "Blanks blanksType='phrases'"
 				}
+			},
+			{
+				"groupTable1": {
+					"component": "Blanks",
+					"id": "groupTable1",
+					"congratulationsText": "Well done!",
+					"htmlContent": "<p>The <b>'blanksType': 'group-table'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into a 2 column table.</p><p>The tile should be dropped in the left column or the right column based on the question and in the order heard from the sound file.</p><p>After two mistakes, help and cheat options are revealled.</p>",
+					"instructionsTextHTML": "You will hear a series of words containing either the sound <b>u</b> or the sound <b>ou</b>. Drag the words below into the correct box as you hear them.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "group-table",
+					"header": [
+						"u",
+						"ou"
+					],
+					"answers": [
+						[
+							"du",
+							"doux"
+						],
+						[
+							"pur",
+							"chou"
+						],
+						[
+							"légume",
+							"tout"
+						],
+						[
+							"tu",
+							"pour"
+						],
+						[
+							"rue",
+							"nous"
+						],
+						[
+							"nu",
+							"vous"
+						],
+						[
+							"bu",
+							"poule"
+						],
+						[
+							"vue",
+							"bout"
+						],
+						[
+							"pull",
+							"couteau"
+						],
+						[
+							"jus",
+							"roue"
+						]
+					],
+					"words": [
+						"du",
+						"doux",
+						"pur",
+						"chou",
+						"légume",
+						"tu",
+						"tout",
+						"pour",
+						"rue",
+						"nous",
+						"vous",
+						"poule",
+						"nu",
+						"bu",
+						"vue",
+						"pull",
+						"bout",
+						"couteau",
+						"roue",
+						"jus"
+					],
+					"soundFile": "sounds/fr/LO12EX4.mp3",
+					"titleTextHTML": "Blanks blanksType='group-table"
+				}
 			}
 		],
 		"id": "group4",

@@ -59,3 +59,24 @@ J'habite dans un appartement au premier étage d'un grand immeuble.
 J'ai une petite cuisine et une salle de séjour et un petit balcon aussi. 
 Ma chambre n'est pas grande, mais elle est confortable. 
 Derrière l'immeuble, il y a un jardin communautaire.
+
+
+ LO12
+
+ Demystify
+
+ Sound files for 'u' and 'ou'
+
+LO15
+FLO 11 Dialogue 1 . Not wrong, but this sounds very artificial and stilted 
+ 
+Bonjour ! Vous désirez ?	Hello! What can I get you?	 
+Je voudrais un thé, s'il vous plaît.	I'd like a tea please.	 
+ 
+ 
+Ditto :Non, non, il y a une erreur ! specially Non, non - it doesn't sound at all natural
+ 
+Dialogue 2 : Une bière, s'il vous plaît. also a bit stilted
+ 
+Dialogue 3  occurs 3 times S'il vous plait is correctly pronounced but it doesn't sound quite right somehow  -  - a bit stilted  - I think it 's the intonation that's wrong
+ 
