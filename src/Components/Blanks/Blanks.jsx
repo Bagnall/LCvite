@@ -67,13 +67,15 @@ export class Blanks extends React.PureComponent {
 						}
 					}
 
-					const soundFile = resolveAsset(`${audio[i]}`);
-					phraseList.push(
-						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-							className={`compact inset`}
-							soundFile={soundFile}
-						/></li>
-					);
+					if (audio) {
+						const soundFile = resolveAsset(`${audio[i]}`);
+						phraseList.push(
+							<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+								className={`compact inset`}
+								soundFile={soundFile}
+							/></li>
+						);
+					}
 				}
 				wordTiles = shuffleArray(wordTiles);
 				break;
@@ -491,13 +493,13 @@ export class Blanks extends React.PureComponent {
 							phrase.push(<span className='word' key={`phraseSpan${i}-${j}`}>{phraseSplit[j]} </span>);
 						}
 					}
-
-					const soundFile = resolveAsset(`${audio[i]}`);
+					let soundFile;
+					if (audio) soundFile = resolveAsset(`${audio[i]}`);
 					phraseList.push(
-						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> {audio ? <AudioClip
 							className={`compact inset`}
 							soundFile={soundFile}
-						/></li>
+						/> : null}</li>
 					);
 				}
 				wordTiles = shuffleArray(wordTiles);
@@ -565,7 +567,6 @@ export class Blanks extends React.PureComponent {
 						headerCells.push(<th key={`${id}header${i}`}>{header[i]}</th>);
 					}
 				}
-				let index = 0;
 				for (let i = 1; i <= answers.length; i++) {
 					tableRows.push(
 						<tr key={`${id}row${i}`}>
@@ -583,7 +584,6 @@ export class Blanks extends React.PureComponent {
 							</td>
 						</tr>
 					);
-					index += 2;
 				}
 				break;
 			}

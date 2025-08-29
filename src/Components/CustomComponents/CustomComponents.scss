@@ -168,12 +168,54 @@
 			height: 300px;
 			border: 1px solid black;
 		}
-		// img {
-		// 	width: 300px;
-		// 	height: 300px;
-		// 	float: right;
-		// 	margin: 0 0 20px 20px;
-		// 	border: 1px solid black;
-		// }
+	}
+}
+
+#L13ASummersDayPanel {
+	#L13ASummersDaypassage {
+		margin: 1rem 4rem;
+		font-style: italic;
+		max-height: 0;
+		transition: max-height 6s;
+		overflow: hidden;
+		&.show {
+			max-height: 600px;
+			transition: max-height 6s;
+		}
+	}
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 2fr 3fr;
+	align-items: flex-start;
+	justify-items: center;
+	gap: 20px;
+	grid-template-areas:
+		"instructions image"
+		"audio image"
+		"passage image"
+		"questions questions";
+	p.instruction {
+		grid-area: instructions;
+	}
+	p.passage {
+		grid-area: passage;
+	}
+	audio {
+		grid-area: audio;
+	}
+	table {
+		grid-area: questions;
+		width: 100%;
+		max-width: 1100px;
+		td {
+			width: 50%;
+		}
+	}
+	img {
+		justify-self: right;
+		grid-area: image;
+		width: 300px;
+		// height: 300px;
+		border: 1px solid black;
 	}
 }

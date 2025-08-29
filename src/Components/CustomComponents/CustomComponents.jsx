@@ -4,7 +4,7 @@ import {
 	AudioClip,
 	Figure,
 } from '../../Components';
-import { PureComponent } from 'react';
+import { Component, PureComponent } from 'react';
 import {
 	resolveAsset,
 } from '../../utility';
@@ -107,10 +107,10 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
-					<p>2 The letter <b>r</b>  <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+					<p>2 The letter <b>r</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
 					<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
-						It is formed in the throat.  If you clear your throat first thing in the morning or when you are about to make an announcement,
+						It is formed in the throat. If you clear your throat first thing in the morning or when you are about to make an announcement,
 						the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration.
 						You will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjou<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,&nbsp;
@@ -188,7 +188,7 @@ export class LO2Grammar extends PureComponent {
 							</tr>
 							<tr>
 								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>il</a> est</td>
-								<td>he is, it is </td>
+								<td>he is, it is</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></td>
 							</tr>
 							<tr>
@@ -536,9 +536,9 @@ export class LO3Demystify extends PureComponent {
 						src={resolveAsset('/images/shh.jpg')}
 						style={{
 							border: "1px solid rgba(0,0,0,0.5)",
-							verticalAlign: 'top',
 							float: 'right',
-							marginLeft: '20px'
+							marginLeft: '20px',
+							verticalAlign: 'top'
 						}}
 						alt={`lady with finger to lips. Shh`}
 						title={`lady with finger to lips. Shh`} /></p>
@@ -572,8 +572,8 @@ export class LO3Demystify extends PureComponent {
 								<AudioClip className={`link`} soundFile={`sounds/fr/écouter.mp3`}><b>é</b>cout<b>er</b></AudioClip>,&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/regarder.mp3`}>regard<b>er</b></AudioClip></p>
 							<p>You will notice that&nbsp;
-								<b>-et</b>, <b>-ez</b>, <b>é</b>, <b>-ée</b>, <b>-és</b>, <b>-ées</b> and  also <b>-er</b> as an infinitive ending are
-							all pronounced the same, as are  the words <b>est</b> and <b>es</b>.
+								<b>-et</b>, <b>-ez</b>, <b>é</b>, <b>-ée</b>, <b>-és</b>, <b>-ées</b> and also <b>-er</b> as an infinitive ending are
+							all pronounced the same, as are the words <b>est</b> and <b>es</b>.
 							</p>
 						</li>
 					</ol>
@@ -696,7 +696,7 @@ export class LO5Grammar extends PureComponent{
 							<p>Here are a few more examples of verbs which work in the same way:</p>
 							<p>From the verb <AudioClip className={`link`} soundFile={`sounds/fr/pleuvoir.mp3`}><b>pleuvoir</b></AudioClip>:
 								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut.mp3`}><b>Il pleut</b></AudioClip> - e.g.&nbsp;
-								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut aujourd'hui.mp3`}><b>Il pleut</b> aujourd'hui</AudioClip>   It's raining today. <br />
+								<AudioClip className={`link`} soundFile={`sounds/fr/Il pleut aujourd'hui.mp3`}><b>Il pleut</b> aujourd'hui</AudioClip> It's raining today. <br />
 								From the verb <AudioClip className={`link`} soundFile={`sounds/fr/neiger.mp3`}><b>neiger</b></AudioClip>:
 								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige.mp3`}><b>Il neige</b></AudioClip> - e.g.&nbsp;
 								<AudioClip className={`link`} soundFile={`sounds/fr/Il neige en hiver.mp3`}><b>Il neige</b> en hiver</AudioClip> It snows in the winter.<br />
@@ -772,7 +772,7 @@ export class LO6Grammar extends PureComponent {
 					<AudioClip className={`link`} soundFile={`sounds/fr/mon jardin.mp3`} ><b>mon</b> jardin</AudioClip> (my garden) and <b>ma</b> for feminine nouns e.g.&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/ma femme.mp3`} ><b>ma</b> femme</AudioClip> (my wife),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/ma maison.mp3`} ><b>ma</b> maison</AudioClip> (my house). It is important to remember that the gender of the noun itself is what matters here,
-						and not the gender of the 'owner'.  There is only one way of saying 'my' for plural nouns: e.g.&nbsp;
+						and not the gender of the 'owner'. There is only one way of saying 'my' for plural nouns: e.g.&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/mes oncles.mp3`} ><b>mes</b> oncles</AudioClip> (my uncles),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/mes tantes.mp3`} ><b>mes</b> tantes</AudioClip> (my aunts).<br />
 						Here is a complete list of the possessive adjectives.</p>
@@ -794,7 +794,7 @@ export class LO6Grammar extends PureComponent {
 								<td><AudioClip className={`link`} soundFile={`sounds/fr/son.mp3`} >son</AudioClip>,&nbsp;
 									<AudioClip className={`link`} soundFile={`sounds/fr/sa.mp3`} >sa</AudioClip>,&nbsp;
 									<AudioClip className={`link`} soundFile={`sounds/fr/ses.mp3`} >ses</AudioClip> *</td>
-								<td>his  / her</td>
+								<td>his / her</td>
 							</tr>
 							<tr>
 								<td><AudioClip className={`link`} soundFile={`sounds/fr/notre.mp3`} >notre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/nos.mp3`} >nos</AudioClip> (pl)</td>
@@ -925,7 +925,7 @@ export class LO6Demystify extends PureComponent {
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
 							There are no exceptions here!</p>
-					<p>2i  after the vowel <b>i</b>, <b>double ll</b> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
+					<p>2i after the vowel <b>i</b>, <b>double ll</b> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)</p>
@@ -933,7 +933,7 @@ export class LO6Demystify extends PureComponent {
 						a letter <b>"y"</b> in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
 					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <b>i</b>.
-						The most common are :  <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
+						The most common are : <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/mille.mp3`}><b>mille</b></AudioClip> (a thousand),&nbsp;
@@ -970,7 +970,7 @@ export class LO7Grammar extends PureComponent {
 							<AudioClip className={`link`} soundFile={`sounds/fr/le shopping.mp3`}><b>le shopping</b></AudioClip>.
 							Almost all ball sports are borrowed words, and these are all masculine.</p></li>
 						<li><p>Word for word translation often works very well, but sometimes being aware of some seemingly small differences is essential. e.g.
-								In English, we say, 'I like football' or 'I don't like swimming'.  In French, we say '
+								In English, we say, 'I like football' or 'I don't like swimming'. In French, we say '
 						<AudioClip className={`link`} soundFile={`sounds/fr/J'aime le football.mp3`}>J'aime <i>le</i> football</AudioClip>' or '
 						<AudioClip className={`link`} soundFile={`sounds/fr/Je n'aime pas la natation.mp3`}>Je n'aime pas <i>la</i> natation</AudioClip>'.
 								i.e. in French, a definite article (le, la, l', les) is required.</p></li><li><p>To say what you like/ dislike doing you use&nbsp;
@@ -994,7 +994,7 @@ export class LO7Grammar extends PureComponent {
 								<AudioClip className={`link`} soundFile={`sounds/fr/Quels sont tes passe-temps préférés.mp3`}>Quels sont tes passe-temps préférés ?</AudioClip>
 									Which are your favourite pastimes?</li><li><AudioClip className={`link`} soundFile={`sounds/fr/quelles.mp3`}>Quelles</AudioClip> is used for
 									feminine plural nouns e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Quelles langues parlez-vous.mp3`}>Quelles langues
-									parlez-vous ?</AudioClip>   Which languages do you speak?
+									parlez-vous ?</AudioClip> Which languages do you speak?
 								</li>
 							</ul>
 						</li>
@@ -1057,7 +1057,7 @@ export class LO8Grammar extends PureComponent {
 						<li><br/>
 							<ol type="i">
 								<li>The verb <AudioClip className={`link`} soundFile={`sounds/fr/faire.mp3`}><b>faire</b></AudioClip>, meaning both 'to make' and 'to do',
-									is a frequently occurring very  irregular verb. Here it is conjugated in the present tense:<br />
+									is a frequently occurring very irregular verb. Here it is conjugated in the present tense:<br />
 								<table>
 									<tbody>
 										<tr>
@@ -1119,7 +1119,7 @@ export class LO8Grammar extends PureComponent {
 							<br/>
 							<ol type="i">
 								<li>
-									The regular <b>-er</b>  verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> meaning to play is useful when talking about pastimes.
+									The regular <b>-er</b> verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> meaning to play is useful when talking about pastimes.
 									You use the partitive article after the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> when speaking about playing a musical instrument:<br />
 									<table>
 										<tbody>
@@ -1139,7 +1139,7 @@ export class LO8Grammar extends PureComponent {
 									When you use the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> in the context of a ball game or tabletop game you can't use the partitive article nor can you use the definite article.<br />
 									You use <AudioClip className={`link`} soundFile={`sounds/fr/jouer à.mp3`}><b>jouer à</b></AudioClip>.
 									If the activity is masculine it's <AudioClip className={`link`} soundFile={`sounds/fr/jouer au.mp3`}><b>jouer au</b></AudioClip>, if feminine, <AudioClip className={`link`} soundFile={`sounds/fr/jouer à la.mp3`}><b>jouer à la</b></AudioClip>,
-									if  starting with a vowel or silent h then <AudioClip className={`link`} soundFile={`sounds/fr/jouer à l'.mp3`}><b>jouer à l'</b></AudioClip> and for plurals <AudioClip className={`link`} soundFile={`sounds/fr/jouer aux.mp3`}><b>jouer aux</b></AudioClip>. e.g.
+									if starting with a vowel or silent h then <AudioClip className={`link`} soundFile={`sounds/fr/jouer à l'.mp3`}><b>jouer à l'</b></AudioClip> and for plurals <AudioClip className={`link`} soundFile={`sounds/fr/jouer aux.mp3`}><b>jouer aux</b></AudioClip>. e.g.
 									<table>
 										<tbody>
 											<tr>
@@ -1156,7 +1156,7 @@ export class LO8Grammar extends PureComponent {
 							</ol>
 						</li>
 						<li>
-							The ending of a noun often helps you to know its gender. For example, all nouns ending <b>-tion</b> or  <b>-ie</b> are feminine.<br />
+							The ending of a noun often helps you to know its gender. For example, all nouns ending <b>-tion</b> or <b>-ie</b> are feminine.<br />
 							e.g.&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/l'action (f).mp3`}>l'action</AudioClip>,&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/la nation (f).mp3`}>la nation</AudioClip>,&nbsp;
@@ -1489,7 +1489,7 @@ export class LO9Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p><b>How to pronounce:  5, 6, 7, 8, 9, 10</b></p>
+					<p><b>How to pronounce: 5, 6, 7, 8, 9, 10</b></p>
 					<p>You would not expect to pronounce the final consonant of these words, but they are exceptions and are pronounced as followed: <AudioClip className={`link`} soundFile={`sounds/fr/cinq.mp3`} >cinq</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/six.mp3`} >six</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/sept.mp3`} >sept</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/huit.mp3`} >huit</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/neuf.mp3`} >neuf</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/dix.mp3`} >dix</AudioClip>.</p>
 					<p>However, <b>NB</b>, when&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/six.mp3`}><b>six</b></AudioClip>,&nbsp;
@@ -1628,7 +1628,7 @@ export class L10Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p><b>How to pronounce</b>:  <b>ui</b></p>
+					<p><b>How to pronounce</b>: <b>ui</b></p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/aujourd'hui.mp3`}><b>aujourd'hui</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/bruit.mp3`}><b>bruit</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/ensuite.mp3`}><b>ensuite</b></AudioClip>,&nbsp;
@@ -1660,7 +1660,7 @@ export class L11Grammar extends PureComponent {
 					<ol>
 						<li>
 							<p>To express what you would like <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>Je voudrais</b></AudioClip> is
-								the verb of form that you use.  e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace.mp3`}><b>Je voudrais
+								the verb of form that you use. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace.mp3`}><b>Je voudrais
 									une glace</b></AudioClip> I'd like an ice-cream.
 								This is the present conditional of the verb <AudioClip className={`link`} soundFile={`sounds/fr/vouloir.mp3`}><b>vouloir</b></AudioClip>.
 								To express what you would like to do, you add another verb in the infinitive form.
@@ -1954,7 +1954,7 @@ export class L12Grammar extends PureComponent {
 								</li>
 								<li>
 									<p>To express non-specific quantities you use the following: <b>de</b>, <b>d'</b>, <b>du</b>, <b>de la</b>, <b>de l'</b> and <b>des</b> all of which mean 'some'.
-										<br/>For masculine nouns you use <b>du</b>  e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
+										<br/>For masculine nouns you use <b>du</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
 										<br/>For feminine nouns you use <b>de la</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de la bière.mp3`}><b>de la</b> bière</AudioClip> - some beer
 										<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de</b> l'eau</AudioClip> - some water
 										<br/>For plurals you use <b>des</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/des cerises.mp3`}><b>des</b> cerises</AudioClip> - some cherries</p>
@@ -1990,10 +1990,10 @@ export class L12Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p>How to pronounce:   <b>u</b> and <b>ou</b></p>
+					<p>How to pronounce: <b>u</b> and <b>ou</b></p>
 					<p>To the untrained ear these sounds may not sound very different, but it is worthwhile practising them as on occasions the
 						wrong pronunciation could lead to confusion.</p>
-					<p>Here are some examples. Listen to each pair.   You should hear that they sound different</p>
+					<p>Here are some examples. Listen to each pair. You should hear that they sound different</p>
 					<p>
 						<AudioClip className={`link`} soundFile={`sounds/fr/tout.mp3`}><b>tout</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu</b></AudioClip>,&nbsp;
@@ -2010,6 +2010,403 @@ export class L12Demystify extends PureComponent {
 	};
 }
 
+export class L13Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo13-grammar-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<ol>
+						<li>
+							<p>The French subject pronoun <AudioClip className={`link`} soundFile={`sounds/fr/on.mp3`}><b>on</b></AudioClip> literally
+								means <b>'one'</b> but is generally translated as <b>they</b>, <b>you</b>, <b>people</b> and is very often used instead
+								of <AudioClip className={`link`} soundFile={`sounds/fr/nous.mp3`}><b>nous</b></AudioClip> to mean <b>we</b> in spoken French.</p>
+							<p>It is always used with the third
+								person singular of the verb.
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/On parle français ici.mp3`}><b>On parle français ici</b></AudioClip>. <b>French is spoken here</b>.&nbsp;
+							<AudioClip className={`link`} soundFile={`sounds/fr/On va au cinéma.mp3`}><b>On va au cinéma ?</b></AudioClip> Are we going / Shall we go to the cinema?</p>
+						</li>
+						<li>
+							<p>In French there are some verbs called <b>reflexive verbs</b>. These are verbs where the subject and object are the same.
+								You can recognise a reflexive verb in the infinitive form by the word se in front of the
+								verb e,g. <AudioClip className={`link`} soundFile={`sounds/fr/se laver.mp3`}><b>se laver</b></AudioClip> - to
+									wash (oneself), <AudioClip className={`link`} soundFile={`sounds/fr/se reposer.mp3`}><b>se reposer</b></AudioClip> -
+										to rest (oneself). Some reflexive verbs are regular verbs and some are irregular.</p>
+							<p>Reflexive verbs always have a reflexive pronoun (<AudioClip className={`link`} soundFile={`sounds/fr/me.mp3`}><b>me</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/te.mp3`}><b>te</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/se.mp3`}><b>se</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/nous.mp3`}><b>nous</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>,&nbsp;
+								<AudioClip className={`link`} soundFile={`sounds/fr/se.mp3`}><b>se</b></AudioClip>) between the subject and the verb.
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je me lave.mp3`}><b>Je me lave</b></AudioClip> - I wash myself / I have a
+									wash. <AudioClip className={`link`} soundFile={`sounds/fr/Elle se repose.mp3`}><b>Elle se repose</b></AudioClip> – she's resting herself / she's having a rest.</p>
+
+							<p>Here is an example of a reflexive verb in the present tense:</p>
+
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/se reposer.mp3`}><b>se reposer</b></AudioClip></td><td>to rest (oneself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/je me repose.mp3`}><b>je me repose</b></AudioClip></td><td>I rest / I am resting (myself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu te reposes.mp3`}><b>tu te reposes</b></AudioClip></td><td>you rest / you are resting (yourself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/il se repose.mp3`}><b>il se repose</b></AudioClip></td><td>he rests / he is resting (himself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Elle se repose.mp3`}><b>elle se repose</b></AudioClip></td><td>she rests / she is resting (herself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/on se repose.mp3`}><b>on se repose</b></AudioClip></td><td>people /we rest / we are resting (themselves / ourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous nous reposons.mp3`}><b>nous nous reposons</b></AudioClip></td><td>we rest / we are resting (ourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous vous reposez.mp3`}><b>vous vous reposez</b></AudioClip></td><td>you rest / you are resting (yourself / yourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils se reposent, elles se reposent.mp3`}><b>ils / elles se reposent</b></AudioClip></td><td>they rest / theyare resting (themselves)</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>If the verb begins with a vowel, then the reflexive pronouns are <b>s'</b>, <b>t'</b>, <b>s'</b>, <b>nous</b>, <b>vous</b>, <b>s'</b>. Below is
+								the verb <AudioClip className={`link`} soundFile={`sounds/fr/s'appeler.mp3`}><b>s'appeler</b></AudioClip> - to be called which illustrates this.</p>
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle.mp3`}><b>je m'appelle</b></AudioClip></td><td>I am called (I call myself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu t'appelles.mp3`}><b>tu t'appelles</b></AudioClip></td><td>you are called (you call yourself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/il s'appelle.mp3`}><b>il s'appelle</b></AudioClip></td><td>he is called (he calls himself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/elle s'appelle.mp3`}><b>elle s'appelle</b></AudioClip></td><td>she is called (she calls herself)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/on s'appelle.mp3`}><b>on s'appelle</b></AudioClip></td><td>they / we are called (they call themselves / we call ourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous nous appelons.mp3`}><b>nous nous appelons</b></AudioClip></td><td>we are called (we call ourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous vous appelez.mp3`}><b>vous vous appelez</b></AudioClip></td><td>you are called (you call yourself / yourselves)</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils s'appellent, elles s'appellent.mp3`}><b>ils / elles s'appellent</b></AudioClip></td><td>they / are called (they call themselves)</td>
+									</tr >
+								</tbody >
+							</table>
+						</li>
+					</ol>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class L13TrueFalse extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = ({
+			showExplanation: false,
+		});
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange = (e) => {
+		const {
+			answer,
+			onAnswer,
+			id,
+		} = this.props;
+		const [rowNum] = e.target.id.match(/\d+/);
+
+		e.stopPropagation();
+		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+
+		// console.log("handleChange", e.target);
+		// console.log("rowNum", rowNum);
+		let userChose = false;
+		if (e.target.id === `${id}true`) {
+			// console.log("TRUE");
+			userChose = true;
+			onAnswer(rowNum, true);
+		}else{
+			// console.log("FALSE");
+			onAnswer(rowNum, false);
+		}
+		// console.log(10, "userChose", userChose, answer, userChose === answer);
+
+		if (userChose === answer) {
+			tadaAudio.play();
+		} else {
+			errorAudio.play();
+			this.setState({
+				showExplanation: true,
+			});
+		}
+	};
+
+	render = () => {
+		const {
+			explanation,
+			id,
+			value,
+		} = this.props;
+		const {
+			showExplanation = false,
+		} = this.state;
+		// console.log("showExplanation", showExplanation);
+		// console.log("value", value);
+
+		return (
+			<span>
+				<label>vrai<input
+					checked={value === true}
+					id={`${id}true`}
+					name={`${id}trueFalse`}
+					type={`radio`}
+					onChange={this.handleChange}
+				/></label>&nbsp;/&nbsp;
+				<label>faux<input
+					checked={value === false}
+					id={`${id}false`}
+					name={`${id}trueFalse`}
+					type={`radio`}
+					onChange={this.handleChange}
+				/></label>&nbsp;&nbsp;{showExplanation ? explanation : null}
+			</span>
+		);
+	};
+}
+
+
+export class L13ASummersDay extends Component {
+
+	constructor(props) {
+		super(props);
+		const rowsAnswered = new Array(12).fill(false);
+		const userChose = new Array(12);
+		this.state = ({
+			allAnswered: false,
+			rowsAnswered: rowsAnswered,
+			// test: false,
+			userChose: userChose,
+		});
+		this.answerRow = this.answerRow.bind(this);
+	}
+
+	isTrue = (entry) => {
+		// console.log("isTrue", entry, index);
+		return entry === true;
+	};
+
+	answerRow = (rowNum, answer) => {
+		const {
+			rowsAnswered,
+			userChose
+		} = this.state;
+		// console.log("answerRow", rowNum, answer);
+		rowsAnswered[rowNum] = true;
+		userChose[rowNum] = answer;
+		// console.log("rowsAnswered", rowsAnswered);
+		// console.log("userChose", userChose);
+		this.setState({
+			allAnswered: rowsAnswered.every(this.isTrue),
+			rowsAnswered: rowsAnswered,
+			userChose: userChose
+		});
+		// console.log("allTrue", rowsAnswered.every(this.isTrue));
+	};
+
+	handleChange = (e) => {
+		if (e.target.id === 'testTrue') {
+			this.setState({
+				test: true,
+			});
+		} else {
+			this.setState({
+				test: false,
+			});
+		}
+	};
+
+	render = () => {
+		const { id } = this.props;
+		const {
+			allAnswered,
+			userChose,
+		} = this.state;
+		return (
+			<div
+				className={`lo13-a-summers-day container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<img src={resolveAsset(`images/girl_breakfast.png`)} title={`Girl having breakfast in the garden`} />
+					<p className={`instruction`}>Listen to Véronique describing a typical summer's day. Then decide whether the following statements are true (vrai) of false (faux).</p>
+					<AudioClip className={``} soundFile={`sounds/fr/LO13EX4.mp3`} />
+
+					<div id={`${id}passage`} className={`passage ${allAnswered ? 'show' : 'hide'}`}>
+						<p>En été, je me lève vers six heures le week-end, je m'habille et je me promène dans le village. J'aime être dehors quand il fait beau.
+							Puis, après, je prends une douche rapide et je prépare mon petit déjeuner. Je prends un bol de céréales et je bois deux tasses
+							de café-crème.
+							J'ai un grand jardin avec beaucoup de fleurs et trois arbres et j'aime faire du jardinage. Souvent, je passe la matinée entière
+							dans le jardin.
+							Je passe l'après-midi avec des amis. Parfois, nous allons en ville, parfois nous restons simplement à la maison. S'il fait chaud,
+							je dîne dans le jardin ou sur le balcon. Le soir, je me détends.
+						</p>
+					</div>
+
+					<table>
+						<tbody>
+							<tr>
+								<td>Véronique se lève vers 7 heures le week-end.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line0`}
+									explanation={`Véronique se lève vers 6 heures le week-end.`}
+									value={userChose[0]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Elle se promène en ville.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line1`}
+									explanation={`Elle se promène dans le village.`}
+									value={userChose[1]}
+								/>
+								</td>
+							</tr>
+							<tr>
+								<td>Elle aime être dehors quand il fait beau.</td>
+								<td><L13TrueFalse
+									answer={true}
+									onAnswer={this.answerRow}
+									id={`line2`}
+									value={userChose[2]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Après sa promenade, Véronique prend un bain.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line3`}
+									explanation={`Elle prend une douche rapide.`}
+									value={userChose[3]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Elle prend un bol de yaourt.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line4`}
+									explanation={`Elle prend un bol de céréales.`}
+									value={userChose[4]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Elle boit du café-crème.</td>
+								<td><L13TrueFalse
+									answer={true}
+									onAnswer={this.answerRow}
+									id={`line5`}
+									value={userChose[5]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Dans le jardin il y a deux arbres.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line6`}
+									explanation={`Dans le jardin il y a trois arbres.`}
+									value={userChose[6]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Véronique passe une heure dans le jardin.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line7`}
+									explanation={`Véronique passe la matinée entière dans le jardin.`}
+									value={userChose[7]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Elle passe l'après-midi avec ses parents.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line8`}
+									explanation={`Elle passe l'après-midi avec ses amis.`}
+									value={userChose[8]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Parfois, ils vont en ville.</td>
+								<td><L13TrueFalse
+									answer={true}
+									onAnswer={this.answerRow}
+									id={`line9`}
+									value={userChose[9]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Elle dîne dans la salle à manger.</td>
+								<td><L13TrueFalse
+									answer={false}
+									onAnswer={this.answerRow}
+									id={`line10`}
+									explanation={`Elle dîne dans le jardin ou sur le balcon.`}
+									value={userChose[10]}
+								/></td>
+							</tr>
+							<tr>
+								<td>Le soir, elle se détend.</td>
+								<td><L13TrueFalse
+									answer={true}
+									onAnswer={this.answerRow}
+									id={`line11`}
+									value={userChose[11]}
+								/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		);
+	};
+}
 
 export class L15Grammar extends PureComponent {
 	render = () => {
@@ -2078,7 +2475,7 @@ export class AudioClipSamples extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
 							</tr>
 							<tr>
-								<td>super-compact: </td>
+								<td>super-compact:</td>
 								<td><AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
 							</tr>
 							<tr>

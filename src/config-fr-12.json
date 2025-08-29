@@ -39,14 +39,14 @@
 				"sounds/fr/C'est bien !.mp3"
 			],
 			[
-				"Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a très bon fleuriste aussi.",
+				"Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a un très bon fleuriste aussi.",
 				"Yes, it's practical. And on Thursdays I go to the big market in the town centre. I often buy cheese and ham there. There's lots of choice. And there's a very good florist too.",
-				"sounds/fr/Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a très bon fleuriste aussi.mp3"
+				"sounds/fr/Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a un très bon fleuriste aussi.mp3"
 			],
 			[
-				"Tu as de la chance ! Si nous voulons du pain Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.",
+				"Tu as de la chance ! Si nous voulons du pain, Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.",
 				"You're lucky. If we want bread, Marc goes to the baker's at the end of the road, but there isn't a market near us. On Saturday mornings Marc and I go to the supermarket.",
-				"sounds/fr/Tu as de la chance ! Si nous voulons du pain Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.mp3"
+				"sounds/fr/Tu as de la chance ! Si nous voulons du pain, Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.mp3"
 			],
 			[
 				""
@@ -92,8 +92,8 @@
 				"sounds/fr/Je vais prendre un melon, et puis c'est tout !.mp3"
 			],
 			[
-				"Bien ! Ça fait 10 euros 50 s'il vous plaît Madame !",
-				"Good! That comes to 10E50 please madam.",
+				"Bien ! Ça fait 10 &euro; 50 s'il vous plaît Madame !",
+				"Good! That comes to 10 &euro; 50 please madam.",
 				"sounds/fr/Bien ! Ça fait 10 euros 50 s'il vous plaît Madame !.mp3"
 			]
 		],

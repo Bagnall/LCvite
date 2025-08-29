@@ -1,0 +1,367 @@
+{
+	"settings": {
+		"class": "lo-13",
+		"flag": "fr-flag.png",
+		"showCongratulations": true,
+		"subtitle": "Daily routine",
+		"targetLanguage": "french",
+		"targetLanguageCode": "fr-FR",
+		"title": "French Learning Object 13"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "phraseTable1",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"Tu te lèves à quelle heure ?",
+				"What time do you get up?",
+				"sounds/fr/Tu te lèves à quelle heure.mp3"
+			],
+			[
+				"Ça dépend ! En semaine, je me lève à sept heures, mais le week-end, je me lève vers neuf heures et demie. Et toi ?",
+				"It depends. During the week I get up at seven o'clock, but at the weekend I get up at about half past nine. What about you?",
+				"sounds/fr/Ça dépend ! En semaine, je me lève à sept heures, mais le week-end, je me lève vers neuf heures et demie. Et toi.mp3"
+			],
+			[
+				"Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.",
+				"I get up at 6 o'clock. At the weekend I wake up at about quarter past seven and I get up straight away. I'm a morning person.",
+				"sounds/fr/Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.mp3"
+			],
+			[
+				"Moi, je suis plutôt nocturne. Je me couche vers minuit et demi.",
+				"Well, I'm more of a night owl. I go to bed at about half past midnight.",
+				"sounds/fr/Moi, je suis plutôt nocturne. Je me couche vers minuit et demi.mp3"
+			],
+			[
+				"Vers minuit et demi ? Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.",
+				"At about half past midnight? Oh goodness! I go to bed at half past nine. In the evening I'm always very tired.",
+				"sounds/fr/Vers minuit et demi Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Ça va les amis ?",
+				"Are you alright guys?",
+				"sounds/fr/Ça va les amis.mp3"
+			],
+			[
+				"Ça va mais nous sommes un peu fatigués. Notre fille a neuf semaines et elle se réveille trois fois la nuit. Nous ne dormons pas bien !",
+				"Yes, we're alright, but we're a bit tired. Our daughter is nine weeks old, and she wakes up three times a night. We aren't sleeping well.",
+				"sounds/fr/Ça va mais nous sommes un peu fatigués. Notre fille a neuf semaines et elle se réveille trois fois la nuit. Nous ne dormons pas bien !.mp3"
+			],
+			[
+				"Quelle horreur ! Mais vous vous reposez pendant la journée, j'imagine.",
+				"How awful! But you do rest during the day, I imagine.",
+				"sounds/fr/Quelle horreur ! Mais vous vous reposez pendant la journée, j'imagine.mp3"
+			],
+			[
+				"Un peu, mais ce n'est pas toujours possible.",
+				"A bit, but it isn't always possible.",
+				"sounds/fr/Un peu, mais ce n'est pas toujours possible.mp3"
+			],
+			[
+				""
+			],
+			[
+				"Tu déjeunes à la cantine aujourd'hui ?",
+				"Are you having lunch at the canteen today?",
+				"sounds/fr/Tu déjeunes à la cantine aujourd'hui.mp3"
+			],
+			[
+				"À la cantine ? Ah non, on ne mange pas bien à la cantine ! Je déjeune au café en face de la bibliothèque. Tu veux déjeuner avec moi ?",
+				"At the canteen? Oh no, the food isn't good at the canteen. (Literally: One doesn't eat well at the canteen.) I have lunch at the cafe opposite the library. Do you want to have lunch with me?",
+				"sounds/fr/À la cantine Ah non, on ne mange pas bien à la cantine ! Je déjeune au café en face de la bibliothèque. Tu veux déjeuner avec moi.mp3"
+			],
+			[
+				"À quelle heure ?",
+				"At what time?",
+				"sounds/fr/À quelle heure.mp3"
+			],
+			[
+				"À une heure ?",
+				"At one o'clock?",
+				"sounds/fr/À une heure.mp3"
+			],
+			[
+				"Oui, ça va très bien ! À tout à l'heure !",
+				"Yes, that's fine. See you later!",
+				"sounds/fr/Oui, ça va très bien ! À tout à l'heure !.mp3"
+			]
+		],
+		"titleText": "Dialogues"
+	},
+	"phraseTable2": {
+		"component": "PhraseTable",
+		"id": "phraseTable2",
+		"instructionsText": "",
+		"phrases": [
+			[
+				"routine (f) matinale",
+				"morning routine",
+				"sounds/fr/routine matinale.mp3"
+			],
+			[
+				"routine (f) quotidienne",
+				"daily routine",
+				"sounds/fr/routine quotidienne.mp3"
+			],
+			[
+				"petit déjeuner (m)",
+				"breakfast",
+				"sounds/fr/petit déjeuner.mp3"
+			],
+			[
+				"déjeuner (m)",
+				"lunch",
+				"sounds/fr/déjeuner.mp3"
+			],
+			[
+				"dîner (m)",
+				"dinner",
+				"sounds/fr/dîner.mp3"
+			],
+			[
+				"aller",
+				"to go",
+				"sounds/fr/aller.mp3"
+			],
+			[
+				"dîner",
+				"to have dinner*",
+				"sounds/fr/dîner.mp3"
+			],
+			[
+				"dormir",
+				"to sleep",
+				"sounds/fr/dormir.mp3"
+			],
+			[
+				"prendre",
+				"to take, to have (something to eat or drink) ",
+				"sounds/fr/prendre.mp3"
+			],
+			[
+				"se brosser les dents",
+				"to brush one's teeth",
+				"sounds/fr/se brosser les dents.mp3"
+			],
+			[
+				"se coiffer",
+				"to do one's hair",
+				"sounds/fr/se coiffer.mp3"
+			],
+			[
+				"se coucher",
+				"to go to bed",
+				"sounds/fr/se coucher.mp3"
+			],
+			[
+				"s'endormir",
+				"to fall asleep",
+				"sounds/fr/s'endormir.mp3"
+			],
+			[
+				"s'habiller, se déshabiller",
+				"to get dressed, to get undressed",
+				"sounds/fr/s'habiller, se déshabiller.mp3"
+			],
+			[
+				"se lever",
+				"to get up, to stand up",
+				"sounds/fr/se lever.mp3"
+			],
+			[
+				"se maquiller",
+				"to put on one's make-up",
+				"sounds/fr/se maquiller.mp3"
+			],
+			[
+				"se raser",
+				"to shave",
+				"sounds/fr/se raser.mp3"
+			],
+			[
+				"se reposer",
+				"to have a rest",
+				"sounds/fr/se reposer.mp3"
+			],
+			[
+				"se réveiller",
+				"to wake up",
+				"sounds/fr/se réveiller.mp3"
+			],
+			[
+				"Quelle heure est-il ? Il est quelle heure ?",
+				"What's the time?",
+				"sounds/fr/Quelle heure est-il Il est quelle heure.mp3"
+			],
+			[
+				"À quelle heure ?",
+				"At what time?",
+				"sounds/fr/À quelle heure.mp3"
+			],
+			[
+				"À une heure et demie, à deux heures et demie",
+				"At half past one, at half past two",
+				"sounds/fr/À une heure et demie, à deux heures et demie.mp3"
+			],
+			[
+				"À cinq heures et quart",
+				"At quarter past five",
+				"sounds/fr/À cinq heures et quart.mp3"
+			],
+			[
+				"À six heures moins le quart",
+				"At quarter to six",
+				"sounds/fr/À six heures moins le quart.mp3"
+			],
+			[
+				"À deux heures cinq",
+				"At five past two",
+				"sounds/fr/À deux heures cinq.mp3"
+			],
+			[
+				"À trois heures moins dix",
+				"At ten to three",
+				"sounds/fr/À trois heures moins dix.mp3"
+			],
+			[
+				"À midi",
+				"At noon ",
+				"sounds/fr/à midi.mp3"
+			],
+			[
+				"À minuit",
+				"At midnight",
+				"sounds/fr/à minuit.mp3"
+			],
+			[
+				"Vers trois heures et demie",
+				"At about half past three",
+				"sounds/fr/Vers trois heures et demie.mp3"
+			],
+			[
+				"Je suis matinal.e ",
+				"I'm a morning person",
+				"sounds/fr/Je suis matinal, Je suis matinale.mp3"
+			],
+			[
+				"Je suis nocturne",
+				"I'm a night owl",
+				"sounds/fr/Je suis nocturne.mp3"
+			]
+		],
+		"footnote": "*In France le dîner is the evening meal. In some French speaking countries such as Canada, Belgium and Switzerland le dîner is the lunchtime meal and the evening meal is referred to as le souper.",
+		"titleText": "Vocabulary"
+	},
+	"L13Grammar": {
+		"component": "L13Grammar",
+		"id": "L13Grammar",
+		"titleText": "Grammar / Use of Language"
+	},
+	"group1": {
+		"component": "Group",
+		"content": [
+			{
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Incroyable !",
+					"instructionsText": " Fill in the gaps with the correct part of the verb supplied.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"Je [m'|*me|t'|te|s'|se|nous|vous] réveille à huit heures. (se réveiller)",
+						"Je [*m'|me|t'|te|s'|se|nous|vous] habille avant de prendre mon petit déjeuner. (s'habiller)",
+						"Adèle [m'|me|t'|te|s'|*se|nous|vous] lève vers dix heures. (se lever)",
+						"Vous [m'|me|t'|te|s'|se|nous|*vous] levez à quelle heure ? (se lever)",
+						"Nous [m'|me|t'|te|s'|se|*nous|vous] reposons pendant le week-end. (se reposer)",
+						"Je [m'|*me|t'|te|s'|se|nous|vous] détends pendant les vacances. (se détendre) ",
+						"Les enfants [m'|me|t'|te|s'|*se|nous|vous] couchent… vers neuf heures. (se coucher)",
+						"Patrick [m'|me|t'|te|s'|*se|nous|vous] couche à minuit. (se coucher)",
+						"Tu [m'|me|t'|*te|s'|se|nous|vous] maquilles aujourd'hui ? (se maquiller) ",
+						"Tu [m'|me|*t'|te|s'|se|nous|vous] appelles comment ? (s'appeler) ",
+						"Et ta sœur, elle [m'|me|t'|te|*s'|se|nous|vous] appelle comment ? (s'appeler)",
+						"La Tour Eiffel [m'|me|t'|te|s'|*se|nous|vous] trouve à Paris (se trouver)."
+					],
+					"titleText": "1 Practise the reflexive verbs"
+				}
+			},
+			{
+				"phrases1": {
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"component": "Blanks",
+					"congratulationsText": "Tres bien !",
+					"id": "phrases1",
+					"instructionsText": "Drag the words in the box to fill the gaps in Martin's description of a typical day from when he wakes up until he goes to bed.",
+					"showHintsText": "Show hints when moving",
+					"phrases": [
+						"Je me réveille tous les matins à six heures et demie et je [me lève] tout de suite.",
+						"Je [prends] une douche et je [m'habille], puis je [descends] à la cuisine pour prendre mon petit déjeuner.",
+						"Vers sept heures et demie, je [quitte] la maison. [J'arrive] au travail à huit heures.",
+						"À midi, je [fais ]une pause-déjeuner. Je [reprends] le travail à une heure et quart, et je [travaille] jusqu'à cinq heures.",
+						"Je [n'habite] pas très loin de mon travail, donc une demi-heure plus tard, je [suis] chez moi.",
+						"Je [me détends] un peu avant de préparer le dîner. Je [dîne] avec mon colocataire vers sept heures.",
+						"Et ensuite, je [regarde] la télé. Je [me couche] vers onze heures."
+					],
+					"titleText": "2 A typical day"
+				}
+			},
+			{
+				"dropdowns3": {
+					"component": "DropDowns",
+					"id": "dropdowns3",
+					"congratulationsText": "Excellent !",
+					"instructionsText": "Select the time that you hear.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"[*6:00|7:00|8:00]",
+						"[2:00|6:00|*10:00]",
+						"[*2:30|6:30|10:30]",
+						"[1:30|0:30|*11:30]",
+						"[4:15|4:30|*5:15]",
+						"[*6:45|7:15|7:30]",
+						"[2:15|*2:45|3:15]",
+						"[*1:15|1:30|1:45]",
+						"[*midday|midnight]",
+						"[midday|*midnight]",
+						"[*1:10|10:10|11:10]",
+						"[4:10|*4:20|4:40]",
+						"[5:08|*7:55|8:05]",
+						"[*8:35|8:45|9:25]"
+					],
+					"audio": [
+						"sounds/fr/Il est six heures.mp3",
+						"sounds/fr/Il est dix heures.mp3",
+						"sounds/fr/Il est deux heures et demie.mp3",
+						"sounds/fr/Il est onze heures et demie.mp3",
+						"sounds/fr/Il est cinq heures et quart.mp3",
+						"sounds/fr/Il est sept heures moins le quart.mp3",
+						"sounds/fr/Il est trois heures moins le quart.mp3",
+						"sounds/fr/Il est une heure et quart.mp3",
+						"sounds/fr/Il est midi.mp3",
+						"sounds/fr/Il est minuit.mp3",
+						"sounds/fr/Il est une heure dix.mp3",
+						"sounds/fr/Il est quatre heures vingt.mp3",
+						"sounds/fr/Il est huit heures moins cinq.mp3",
+						"sounds/fr/Il est neuf heures moins vingt-cinq.mp3"
+					],
+					"titleText": "3 What's the time? Practising the 12 hour clock"
+				}
+			},
+			{
+				"custom1": {
+					"component": "L13ASummersDay",
+					"id": "L13ASummersDay",
+					"titleText": "4. A summer's day"
+				}
+			}
+		],
+		"id": "group1",
+		"titleText": "Exercises"
+	}
+}

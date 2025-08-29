@@ -229,9 +229,11 @@ export class DropDowns extends React.PureComponent {
 			id = [],
 			instructionsText,
 			instructionsTextHTML,
+			listenDescriptionText,
 			// nPlaced = 0,
 			phrases = [],
 			phrasesHTML = '',
+			soundFile,
 		} = this.state;
 		// let {
 		// 	nToSolve = 0,
@@ -319,6 +321,16 @@ export class DropDowns extends React.PureComponent {
 
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+
+				{listenDescriptionText && soundFile ?
+					<AudioClip
+						id={`bollox`}
+						listenText={listenDescriptionText}
+						soundFile={soundFile}
+					/>
+					:
+					null
+				}
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
