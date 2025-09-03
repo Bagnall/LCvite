@@ -58,6 +58,14 @@ export class Monologue extends React.PureComponent {
 		});
 	};
 
+	handleKeyPress = (e) => {
+		console.log("handleKeyPress");
+		if (e.keyCode === 13) {
+			e.preventDefault();
+			this.handleValidation;
+		}
+	};
+
 	render = () => {
 		const {
 			compact,
@@ -92,7 +100,7 @@ export class Monologue extends React.PureComponent {
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
 							(
-								<>
+								<form onKeypress={this.handleKeyPress}>
 									{compact ?
 										<input
 											id={`monologue${id}text`}
@@ -105,9 +113,11 @@ export class Monologue extends React.PureComponent {
 									}
 									<button
 										className={``}
+										htmlFor={`monologue${id}text`}
+										type={`submit`}
 										onClick={this.handleValidation}
 									>Check</button>
-								</>
+								</form>
 							)
 						}
 					</div>
@@ -131,6 +141,7 @@ export class Monologue extends React.PureComponent {
 									<button
 										className={``}
 										onClick={this.handleValidation}
+										type={`submit`}
 									>Check</button>
 								</>
 							)

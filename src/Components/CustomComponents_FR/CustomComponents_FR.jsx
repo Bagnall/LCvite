@@ -1,9 +1,9 @@
-import './CustomComponents.scss';
+import './CustomComponents_FR.scss';
 import {
 	Attribution,
 	AudioClip,
 	Figure,
-} from '../../Components';
+} from '..';
 import { Component, PureComponent } from 'react';
 import {
 	resolveAsset,
@@ -334,7 +334,7 @@ export class LO2Demystify extends PureComponent {
 			</div>
 		);
 	};
-};
+}
 
 export class LO3Grammar extends PureComponent {
 	render = () => {
@@ -720,6 +720,7 @@ export class LO5Grammar extends PureComponent{
 		);
 	};
 }
+
 export class LO5Demystify extends PureComponent{
 	render = () => {
 		const { id } = this.props;
@@ -1177,6 +1178,7 @@ export class LO8Grammar extends PureComponent {
 		);
 	};
 }
+
 export class LO8Demystify extends PureComponent {
 	render = () => {
 		const { id } = this.props;
@@ -2198,7 +2200,6 @@ export class L13TrueFalse extends Component {
 	};
 }
 
-
 export class L13ASummersDay extends Component {
 
 	constructor(props) {
@@ -2402,6 +2403,153 @@ export class L13ASummersDay extends Component {
 							</tr>
 						</tbody>
 					</table>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class L14Grammar extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo14-grammar-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+					<ol>
+						<li>
+							<p>Sometimes literal translation works very well, but there are times when the rendering might not sound idiomatic.
+								An example of this is when asking what people like, prefer, do etc. Using a construction
+								with <AudioClip className={`link`} soundFile={`sounds/fr/comme.mp3`}><b>comme</b></AudioClip> is an idiomatic way of
+								asking the question:</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que vous faites comme sports.mp3`}>Qu'est-ce que vous faites <b>comme</b> sports ?</AudioClip></td><td>What sports do you do?</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que tu aimes comme musique.mp3`}>Qu'est-ce que tu aimes <b>comme</b> musique ?</AudioClip></td><td>What sort of music do you like?</td></tr>
+								</tbody>
+							</table>
+						</li>
+
+						<li>
+							<p>The irregular verb <AudioClip className={`link`} soundFile={`sounds/fr/devoir.mp3`}><b>devoir</b></AudioClip> means "to have to." It is used together with another verb in its infinitive form.</p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je dois partir à trois heures.mp3`}><b>Je dois partir</b> à trois heures.</AudioClip></td><td>I have to leave at 3 o'clock.</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Ils doivent travailler très dur.mp3`}><b>Ils doivent travailler</b> très dur.</AudioClip></td><td>They have to work hard.</td></tr>
+								</tbody>
+							</table>
+							<p><AudioClip className={`link`} soundFile={`sounds/fr/devoir.mp3`}><b>devoir</b></AudioClip></p>
+							<table>
+								<tbody>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je dois.mp3`}>je dois</AudioClip></td><td>I have to / I must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/tu dois.mp3`}>tu dois</AudioClip></td><td>you have to / you must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/il doit, elle doit.mp3`}>il / elle doit</AudioClip></td><td>he / she has to — he / she must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/on doit.mp3`}>on doit</AudioClip></td><td>people / we have to — people / we must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous devons.mp3`}>nous devons</AudioClip></td><td>we have to — we must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous devez.mp3`}>vous devez</AudioClip></td><td>you have to / you must</td></tr>
+									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils doivent, elles doivent.mp3`}>ils / elles doivent</AudioClip></td><td>they have to / they must</td></tr>
+								</tbody>
+							</table>
+						</li>
+
+						<li>
+							<p>The irregular verb <AudioClip className={`link`} soundFile={`sounds/fr/pouvoir.mp3`}><b>pouvoir</b></AudioClip> means
+								"to be able to." It is used together with another verb in its infinitive form.</p>
+							<p>Je peux répondre à votre question tout de suite. — I can answer your question right away.
+        Vous pouvez ouvrir la fenêtre, s'il vous plaît ? — Can you open the window, please?</p>
+							<p><AudioClip className={`link`} soundFile={`sounds/fr/pouvoir.mp3`}><b>pouvoir</b></AudioClip></p>
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/je peux.mp3`}>je peux</AudioClip></td>
+										<td>I am able to / I can / I may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu peux.mp3`}>tu peux</AudioClip></td>
+										<td>you are able to / you can / you may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/il peut.mp3`}>il peut</AudioClip></td>
+										<td>he is able to / he can / he may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/elle peut.mp3`}>elle peut</AudioClip></td>
+										<td>she is able to / she can / she may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/on peut.mp3`}>on peut</AudioClip></td>
+										<td>people / we are able to / can / may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous pouvons.mp3`}>nous pouvons</AudioClip></td>
+										<td>we are able to / we can / we may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous pouvez.mp3`}>vous pouvez</AudioClip></td>
+										<td>you are able to / you can / you may</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils peuvent, elles peuvent.mp3`}>ils / elles peuvent</AudioClip></td>
+										<td>they are able to / they can / they may</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+
+						<li>
+							<p>In French there are present and past participles:</p>
+
+							<p><strong>i. Present Participles</strong></p>
+
+							<p>In English the present participle ends in <em>-ing</em> (e.g. interesting, encouraging).
+      In French the present participle is the verb form that ends in <em>-ant</em>. Present participles can often be used as adjectives:</p>
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est fatigant.mp3`}>C'est fatigant</AudioClip></td>
+										<td>It's tiring</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est motivant.mp3`}>C'est motivant</AudioClip></td>
+										<td>It's motivating</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est intéressant.mp3`}>C'est intéressant</AudioClip></td>
+										<td>It's interesting</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p><strong>ii. Past Participles</strong><br/>
+      Examples of past participles in English are: tired, motivated, fascinated.
+      In French many past participles end in <b>-é</b>. These are the past participles of <b>-er</b> verbs. Past participles can often be used as adjectives:</p>
+							<table>
+								<tbody>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je suis fatigué.mp3`}>Je suis fatigué.e</AudioClip></td>
+										<td>I am tired</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Les étudiants sont très motivés.mp3`}>Les étudiants sont très motivés</AudioClip></td>
+										<td>The students are very motivated</td>
+									</tr>
+									<tr>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Il est fasciné.mp3`}>Il est fasciné</AudioClip></td>
+										<td>He is fascinated</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p><strong>NB:</strong> Present and past participles used as adjectives must agree in gender and number with the noun they are describing.</p>
+						</li>
+					</ol>
 				</div>
 			</div>
 		);

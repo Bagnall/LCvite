@@ -418,47 +418,47 @@
 					"phrases": [
 						[
 							"",
-							"Patrick, tu veux jouer au tennis aujourd'hui ?",
+							"[Patrick, tu veux jouer au tennis aujourd'hui ?]",
 							"sounds/fr/Patrick, tu veux jouer au tennis aujourd'hui.mp3"
 						],
 						[
 							"",
-							"Je ne sais pas. À quelle heure ?",
+							"[Je ne sais pas. À quelle heure ?]",
 							"sounds/fr/Je ne sais pas. À quelle heure.mp3"
 						],
 						[
 							"",
-							"À 2 heures. Ça va ?",
+							"[À 2 heures. Ça va ?]",
 							"sounds/fr/À 2 heures. Ça va.mp3"
 						],
 						[
 							"",
-							"Ah non, à 2 heures ça ne va pas ! Ce n'est pas possible !",
+							"[Ah non, à 2 heures ça ne va pas ! Ce n'est pas possible !]",
 							"sounds/fr/Ah non, à 2 heures ça ne va pas ! Ce n'est pas possible !.mp3"
 						],
 						[
 							"",
-							"Oh c'est dommage ! Pourquoi ? Tu as cours aujourd'hui ?",
+							"[Oh c'est dommage ! Pourquoi ? Tu as cours aujourd'hui ?]",
 							"sounds/fr/Oh c'est dommage ! Pourquoi Tu as cours aujourd'hui.mp3"
 						],
 						[
 							"",
-							"Non, je n'ai pas de cours aujourd'hui, mais j'ai un rendez-vous avec mon prof à 2 heures.",
+							"[Non, je n'ai pas de cours aujourd'hui, mais j'ai un rendez-vous avec mon prof à 2 heures.]",
 							"sounds/fr/Non, je n'ai pas de cours aujourd'hui, mais j'ai un rendez-vous avec mon prof à 2 heures.mp3"
 						],
 						[
 							"",
-							"À 4 heures donc ?",
+							"[À 4 heures donc ?]",
 							"sounds/fr/À 4 heures donc.mp3"
 						],
 						[
 							"",
-							"Ah oui, je veux bien. Je suis libre à partir de 4 heures !",
+							"[Ah oui, je veux bien. Je suis libre à partir de 4 heures !]",
 							"sounds/fr/Ah oui, je veux bien. Je suis libre à partir de 4 heures !.mp3"
 						],
 						[
 							"",
-							"D'accord ! À plus !",
+							"[D'accord ! À plus !]",
 							"sounds/fr/D'accord ! À plus !.mp3"
 						]
 					],

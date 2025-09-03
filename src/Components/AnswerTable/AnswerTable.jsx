@@ -93,22 +93,51 @@ export class AnswerTable extends React.PureComponent {
 					const openIndex = phrase[1].indexOf('[');
 					const closeIndex = phrase[1].indexOf(']');
 
-					if (openIndex !== -1 && closeIndex !== -1 || closeIndex < openIndex) {
-						const before = phrase[1].slice(0, openIndex);
-						const between = phrase[1].slice(openIndex + 1, closeIndex);
-						const after = phrase[1].slice(closeIndex + 1);
-						cells.push(
-							<td key={`row${i}cell1`}>
-								<span className='inline-monologue'>{before ? before : null}<Monologue compact={true} id={`Monologue${i}`} content={between} countCorrect={this.countCorrect} />{after ? after : null}</span>
-							</td>
+					// if (openIndex !== -1 && closeIndex !== -1 || closeIndex < openIndex) {
+					// 	const before = phrase[1].slice(0, openIndex);
+					// 	const between = phrase[1].slice(openIndex + 1, closeIndex);
+					// 	const after = phrase[1].slice(closeIndex + 1);
+					// 	cells.push(
+					// 		<td key={`row${i}cell1`}>
+					// 			<span className='inline-monologue'>{before ? before : null}<Monologue compact={true} id={`Monologue${i}`} content={between} countCorrect={this.countCorrect} />{after ? after : null}</span>
+					// 		</td>
+					// 	);
+					// } else {
+					// 	cells.push(
+					// 		<td key={`row${i}cell1`}>
+					// 			<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
+					// 		</td>
+					// 	);
+					// }
+					const parts = [];
+					const regex = /\[([^\]]+)\]/g;
+					let lastIndex = 0;
+					let match;
+					let monologueIndex = 0;
+					while ((match = regex.exec(phrase[1])) !== null) {
+						if (match.index > lastIndex) {
+							parts.push(phrase[1].slice(lastIndex, match.index));
+						}
+						parts.push(
+							<Monologue
+								key={`Monologue${i}-${monologueIndex}`}
+								compact={true}
+								id={`Monologue${i}-${monologueIndex}`}
+								content={match[1]}
+								countCorrect={this.countCorrect}
+							/>
 						);
-					} else {
-						cells.push(
-							<td key={`row${i}cell1`}>
-								<Monologue compact={true} id={`Monologue${i}`} content={phrase[1]} countCorrect={this.countCorrect} />
-							</td>
-						);
+						monologueIndex++;
+						lastIndex = regex.lastIndex;
 					}
+					if (lastIndex < phrase[1].length) {
+						parts.push(phrase[1].slice(lastIndex));
+					}
+					cells.push(
+						<td key={`row${i}cell1`}>
+							<span className='inline-monologue'>{parts}</span>
+						</td>
+					);
 				}
 				if (longestRow > 2) {
 					const soundCellIndex = 2;

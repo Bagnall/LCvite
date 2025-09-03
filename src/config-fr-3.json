@@ -409,107 +409,107 @@
 					"phrases": [
 						[
 							"américain",
-							"américaine",
+							"[américaine]",
 							"sounds/fr/américain américaine.mp3"
 						],
 						[
 							"asiatique",
-							"asiatique",
-							"sounds/fr/asiatique (m) asiatique (f).mp3"
+							"[asiatique]",
+							"sounds/fr/asiatique(m) asiatique(f).mp3"
 						],
 						[
 							"brésilien",
-							"brésilienne",
+							"[brésilienne]",
 							"sounds/fr/brésilien brésilienne.mp3"
 						],
 						[
 							"croate",
-							"croate",
-							"sounds/fr/croate (m) croate (f).mp3"
+							"[croate]",
+							"sounds/fr/croate(m) croate(f).mp3"
 						],
 						[
 							"danois",
-							"danoise",
+							"[danoise]",
 							"sounds/fr/danois danoise.mp3"
 						],
 						[
 							"italien",
-							"italienne",
+							"[italienne]",
 							"sounds/fr/italien italienne.mp3"
 						],
 						[
 							"portugais",
-							"portugaise",
+							"[portugaise]",
 							"sounds/fr/portugais portugaise.mp3"
 						],
 						[
 							"russe",
-							"russe",
-							"sounds/fr/russe (m) russe (f).mp3"
+							"[russe]",
+							"sounds/fr/russe(m) russe(f).mp3"
 						],
 						[
 							"ukrainien",
-							"ukrainienne",
+							"[ukrainienne]",
 							"sounds/fr/ukrainien, ukrainienne.mp3"
 						],
 						[
 							"célibataire",
-							"célibataire",
-							"sounds/fr/célibataire (m) célibataire (f).mp3"
+							"[célibataire]",
+							"sounds/fr/célibataire(m) célibataire(f).mp3"
 						],
 						[
 							"fatigué",
-							"fatiguée",
+							"[fatiguée]",
 							"sounds/fr/fatigué fatiguée.mp3"
 						],
 						[
 							"malade",
-							"malade",
-							"sounds/fr/malade (m) malade (f).mp3"
+							"[malade]",
+							"sounds/fr/malade(m) malade(f).mp3"
 						],
 						[
 							"marié",
-							"mariée",
+							"[mariée]",
 							"sounds/fr/marié mariée.mp3"
 						],
 						[
 							"dentiste",
-							"dentiste",
-							"sounds/fr/dentiste (m) dentiste (f).mp3"
+							"[dentiste]",
+							"sounds/fr/dentiste(m) dentiste(f).mp3"
 						],
 						[
 							"doctorant",
-							"doctorante",
+							"[doctorante]",
 							"sounds/fr/doctorant doctorante.mp3"
 						],
 						[
 							"étudiant",
-							"étudiante",
+							"[étudiante]",
 							"sounds/fr/étudiant étudiante.mp3"
 						],
 						[
 							"informaticien",
-							"informaticienne",
+							"[informaticienne]",
 							"sounds/fr/informaticien informaticienne.mp3"
 						],
 						[
 							"journaliste",
-							"journaliste",
-							"sounds/fr/journaliste (m) journaliste (f).mp3"
+							"[journaliste]",
+							"sounds/fr/journaliste(m) journaliste(f).mp3"
 						],
 						[
 							"mécanicien",
-							"mécanicienne",
+							"[mécanicienne]",
 							"sounds/fr/mécanicien mécanicienne.mp3"
 						],
 						[
 							"médecin",
-							"médecin",
-							"sounds/fr/médecin (m) médecin (f).mp3"
+							"[médecin]",
+							"sounds/fr/médecin(m) médecin(f).mp3"
 						],
 						[
 							"pharmacien",
-							"pharmacienne",
+							"[pharmacienne]",
 							"sounds/fr/pharmacien pharmacienne.mp3"
 						]
 					],
@@ -525,42 +525,42 @@
 					"phrases": [
 						[
 							"",
-							"Je suis marié avec Lucie.",
+							"[Je suis marié avec Lucie.]",
 							"sounds/fr/Je suis marié avec Lucie.mp3"
 						],
 						[
 							"",
-							"Je suis canadien et je viens de Montréal.",
+							"[Je suis canadien et je viens de Montréal.]",
 							"sounds/fr/Je suis canadien et je viens de Montréal.mp3"
 						],
 						[
 							"",
-							"Lucie est anglaise.",
+							"[Lucie est anglaise.]",
 							"sounds/fr/Lucie est anglaise.mp3"
 						],
 						[
 							"",
-							"Elle vient de Bristol.",
+							"[Elle vient de Bristol.]",
 							"sounds/fr/Elle vient de Bristol.mp3"
 						],
 						[
 							"",
-							"Elle parle anglais et un petit peu français.",
+							"[Elle parle anglais et un petit peu français.]",
 							"sounds/fr/Elle parle anglais et un petit peu français.mp3"
 						],
 						[
 							"",
-							"Je suis bilingue.",
+							"[Je suis bilingue.]",
 							"sounds/fr/Je suis bilingue.mp3"
 						],
 						[
 							"",
-							"Je parle anglais et français.",
+							"[Je parle anglais et français.]",
 							"sounds/fr/Je parle anglais et français.mp3"
 						],
 						[
 							"",
-							"Je suis professeur de maths et Lucie est avocate.",
+							"[Je suis professeur de maths et Lucie est avocate.]",
 							"sounds/fr/Je suis professeur de maths et Lucie est avocate.mp3"
 						]
 					],

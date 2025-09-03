@@ -7,7 +7,7 @@ export * from './Blanks/Word';
 export * from './Congratulate';
 export * from './ConnectFour';
 export * from './CrossWord';
-export * from './CustomComponents';
+export * from './CustomComponents_FR';
 export * from './DropDowns';
 export * from './ErrorLog';
 export * from './Explanation';

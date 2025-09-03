@@ -29,7 +29,7 @@ import {
 	resolveAsset,
 	speak,
 } from './utility';
-import { AllCustomComponents } from './Components/CustomComponents/index.js';
+import { AllCustomComponents } from './Components/CustomComponents_FR/index.js';
 
 import React from 'react';
 
