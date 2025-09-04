@@ -1142,7 +1142,10 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
-							<CustomComponent id={id} />
+							<CustomComponent
+								id={id}
+								showDialog={this.showDialog}
+							/>
 						</AccordionArticle>
 					);
 				} else if(component.slice(0, 4) === 'HIDE') {
@@ -1168,79 +1171,92 @@ export default class App extends React.Component {
 		} = this.state;
 		const renderedMenu = new Array;
 		if (learningObjects !== undefined) {
-			const nLearningObjects = learningObjects.length;
+			// const nLearningObjects = learningObjects.length;
 			const { href } = window.location;
 			const [baseURL] = href.split('?');
-			if (nLearningObjects > 6) {
-				learningObjects.forEach((learningObject, index) => {
-					// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
-					switch (index) {
-						case 0: {
-							// First
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							if (currentLearningObject >= 2) renderedMenu.push(
-								<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
-							);
-							break;
-						}
-						case nLearningObjects - 1: {
-							// Last
-							if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
-								<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
-							);
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							break;
-						}
-						case currentLearningObject - 1:
-						case currentLearningObject:
-						case currentLearningObject + 1: {
-							renderedMenu.push(
-								<li
-									className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-									key={`menu-item-${index}`}>
-									<a
-										href={`${baseURL}?config=${learningObject.file}`}
-										onClick={() => this.selectLearningObject(index)}
-									>{learningObject.title}</a>
-								</li>
-							);
-							break;
-						}
-					}
-				});
-			}else {
-				learningObjects.forEach((learningObject, index) => {
-					renderedMenu.push(
-						<li
-							className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-							key={`menu-item-${index}`}
+			learningObjects.forEach((learningObject, index) => {
+				renderedMenu.push(
+					<li
+						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+						key={`menu-item-${index}`}>
+						<a
+							href={`${baseURL}?config=${learningObject.file}`}
 							onClick={() => this.selectLearningObject(index)}
-						>
-							<a
-								href={`${baseURL}?config=${learningObject.file}`}
-							>{learningObject.title}</a>
-						</li>
-					);
-				});
+						>{index <= 14 ? index + 1 : 'Demo'}</a>
+					</li>
+				);
 			}
+			);
+			// if (nLearningObjects > 6 ) {
+			// 	learningObjects.forEach((learningObject, index) => {
+			// 		// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
+			// 		switch (index) {
+			// 			case 0: {
+			// 				// First
+			// 				renderedMenu.push(
+			// 					<li
+			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+			// 						key={`menu-item-${index}`}>
+			// 						<a
+			// 							href={`${baseURL}?config=${learningObject.file}`}
+			// 							onClick={() => this.selectLearningObject(index)}
+			// 						>{learningObject.title}</a>
+			// 					</li>
+			// 				);
+			// 				if (currentLearningObject >= 2) renderedMenu.push(
+			// 					<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
+			// 				);
+			// 				break;
+			// 			}
+			// 			case nLearningObjects - 1: {
+			// 				// Last
+			// 				if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
+			// 					<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
+			// 				);
+			// 				renderedMenu.push(
+			// 					<li
+			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+			// 						key={`menu-item-${index}`}>
+			// 						<a
+			// 							href={`${baseURL}?config=${learningObject.file}`}
+			// 							onClick={() => this.selectLearningObject(index)}
+			// 						>{learningObject.title}</a>
+			// 					</li>
+			// 				);
+			// 				break;
+			// 			}
+			// 			case currentLearningObject - 1:
+			// 			case currentLearningObject:
+			// 			case currentLearningObject + 1: {
+			// 				renderedMenu.push(
+			// 					<li
+			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+			// 						key={`menu-item-${index}`}>
+			// 						<a
+			// 							href={`${baseURL}?config=${learningObject.file}`}
+			// 							onClick={() => this.selectLearningObject(index)}
+			// 						>{learningObject.title}</a>
+			// 					</li>
+			// 				);
+			// 				break;
+			// 			}
+			// 		}
+			// 	});
+			// }else {
+			// 	learningObjects.forEach((learningObject, index) => {
+			// 		renderedMenu.push(
+			// 			<li
+			// 				className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+			// 				key={`menu-item-${index}`}
+			// 				onClick={() => this.selectLearningObject(index)}
+			// 			>
+			// 				<a
+			// 					href={`${baseURL}?config=${learningObject.file}`}
+			// 				>{learningObject.title}</a>
+			// 			</li>
+			// 		);
+			// 	});
+			// }
 		}
 		return (
 			<ul className={`main-menu`}>{renderedMenu}</ul>

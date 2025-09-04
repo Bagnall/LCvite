@@ -59,7 +59,7 @@ export class Monologue extends React.PureComponent {
 	};
 
 	handleKeyPress = (e) => {
-		console.log("handleKeyPress");
+		// console.log("handleKeyPress");
 		if (e.keyCode === 13) {
 			e.preventDefault();
 			this.handleValidation;
@@ -100,7 +100,7 @@ export class Monologue extends React.PureComponent {
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
 							(
-								<form onKeypress={this.handleKeyPress}>
+								<form onKeyPress={this.handleKeyPress}>
 									{compact ?
 										<input
 											id={`monologue${id}text`}

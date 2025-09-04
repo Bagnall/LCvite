@@ -55,7 +55,7 @@
 			],
 			[
 				"Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !",
-				"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy He's spending hours at the library!",
+				"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy. He's spending hours at the library!",
 				"sounds/fr/Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !.mp3"
 			],
 			[
@@ -115,14 +115,14 @@
 				"sounds/fr/chercheur. chercheuse.mp3"
 			],
 			[
-				"Doctorant / doctorante",
+				"doctorant / doctorante",
 				"PhD student",
-				"sounds/fr/Doctorant. doctorante.mp3"
+				"sounds/fr/doctorant. doctorante.mp3"
 			],
 			[
 				"professeur.e",
 				"professor",
-				"sounds/fr/professeur, professeure.mp3"
+				"sounds/fr/professeur.mp3"
 			],
 			[
 				"scientifique",
@@ -327,7 +327,7 @@
 			[
 				"Je suis stressé.e",
 				"I'm stressed",
-				"sounds/fr/Je suis stressé, Je suis stressée.mp3"
+				"sounds/fr/Je suis stressé.mp3"
 			],
 			[
 				"C'est fatigant",
@@ -337,7 +337,7 @@
 			[
 				"Je suis fatigué.e",
 				"I'm tired",
-				"sounds/fr/Je suis fatigué. Je suis fatiguée.mp3"
+				"sounds/fr/Je suis fatigué.mp3"
 			],
 			[
 				"J'ai un emploi du temps chargé",
@@ -404,42 +404,42 @@
 						[
 							"What (sort of) cheese do you like?",
 							"Qu'est-ce que tu [aimes] comme [fromage] ?",
-							"sounds/fr/américain américaine.mp3"
+							"sounds/fr/Qu'est-ce que tu aimes comme fromage.mp3"
 						],
 						[
 							"What (sort of) films do you like?",
 							"Qu'est-ce que tu [aimes] comme [films] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce que tu aimes comme films.mp3"
 						],
 						[
 							"What (sort of) music do you like?",
 							"Qu'est-ce que vous [aimez] comme [musique] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce que vous aimez comme musique.mp3"
 						],
 						[
 							"What wine do you prefer?",
 							"Qu'est-ce que vous [préférez] comme [vin] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce que vous préférez comme vin.mp3"
 						],
 						[
 							"What sports do you do?",
 							"Qu'est-ce que tu [fais] comme [sports] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce que tu fais comme sports.mp3"
 						],
 						[
 							"What activities do the children do?",
 							"Qu'est-ce que les enfants [font] comme [activités] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce que les enfants font comme activités.mp3"
 						],
 						[
 							"What is he studying?",
 							"Qu'est-ce qu'il [fait] comme [études] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Qu'est-ce qu'il fait comme études.mp3"
 						],
 						[
 							"What about you? What are you studying?",
 							"Et toi ? Qu'est-ce que tu [fais] comme [études] ?",
-							"sounds/fr/.mp3"
+							"sounds/fr/Et toi Qu'est-ce que tu fais comme études.mp3"
 						]
 					],
 					"titleText": "2 Ask it the French way"
@@ -465,7 +465,7 @@
 						"Les étudiantes [dois|doit|devons|devez|*doivent] être fatiguées."
 					],
 					"audio": [
-						"sounds/fr/Je dois écrire une dissertation ce week-end.mp3",
+						"sounds/fr/Je dois écrire une dissertation ce weekend.mp3",
 						"sounds/fr/Annie doit faire une présentation aujourd'hui.mp3",
 						"sounds/fr/Nous devons passer un examen demain.mp3",
 						"sounds/fr/Tu dois faire tes devoirs avant de sortir.mp3",
@@ -547,10 +547,10 @@
 							}
 						},
 						{
-							"answerTable2": {
+							"answerTable3": {
 								"component": "AnswerTable",
 								"congratulationsText": "Superbe !",
-								"id": "AnswerTable2",
+								"id": "AnswerTable3",
 								"instructionsText": " Fill in the gaps with the past participle of the verb supplied. Remember that the past participle is being used as an adjective so will need to agree with the noun it is describing.",
 								"phrases": [
 									[

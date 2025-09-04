@@ -300,7 +300,7 @@
 				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
-					"congratulationsText": "Je veux vous féliciter !",
+					"congratulationsText": "Félicitations !",
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",

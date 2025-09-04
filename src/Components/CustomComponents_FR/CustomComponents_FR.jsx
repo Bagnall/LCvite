@@ -1787,7 +1787,7 @@ export class L11Grammar extends PureComponent {
 							<br/>
 							<table>
 								<thead>
-									<tr><th>Subject pronouns</th><th>Disjunctive pronouns</th></tr>
+									<tr><th>Subject pronouns&nbsp;&nbsp;&nbsp;</th><th>Disjunctive pronouns</th></tr>
 								</thead>
 								<tbody>
 									<tr>
@@ -1885,11 +1885,11 @@ export class L12Grammar extends PureComponent {
 							<table>
 								<tbody>
 									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Comment ça va.mp3`}>Comment ça va ?</AudioClip>.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Comment ça va.mp3`}>Comment ça va ?</AudioClip></td>
 										<td>How are you? / How's it going?</td>
 									</tr>
 									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous allez bien.mp3`}>Vous allez bien ?</AudioClip>.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous allez bien.mp3`}>Vous allez bien ?</AudioClip></td>
 										<td>Are you well?</td>
 									</tr>
 								</tbody>
@@ -1955,7 +1955,7 @@ export class L12Grammar extends PureComponent {
 								</table>
 								</li>
 								<li>
-									<p>To express non-specific quantities you use the following: <b>de</b>, <b>d'</b>, <b>du</b>, <b>de la</b>, <b>de l'</b> and <b>des</b> all of which mean 'some'.
+									<p>To express <b>non-specific quantities</b> you use the following: <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/du.mp3`}><b>du</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de la.mp3`}><b>de la</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de l'.mp3`}><b>de l'</b></AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip> all of which mean 'some'.
 										<br/>For masculine nouns you use <b>du</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
 										<br/>For feminine nouns you use <b>de la</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de la bière.mp3`}><b>de la</b> bière</AudioClip> - some beer
 										<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de</b> l'eau</AudioClip> - some water
@@ -1992,7 +1992,7 @@ export class L12Demystify extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent`}
 				>
-					<p>How to pronounce: <b>u</b> and <b>ou</b></p>
+					<p>How to pronounce: <AudioClip className={`link`} soundFile={`sounds/fr/u.mp3`}><b>u</b></AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/ou.mp3`}><b>ou</b></AudioClip></p>
 					<p>To the untrained ear these sounds may not sound very different, but it is worthwhile practising them as on occasions the
 						wrong pronunciation could lead to confusion.</p>
 					<p>Here are some examples. Listen to each pair. You should hear that they sound different</p>
@@ -2150,10 +2150,10 @@ export class L13TrueFalse extends Component {
 		if (e.target.id === `${id}true`) {
 			// console.log("TRUE");
 			userChose = true;
-			onAnswer(rowNum, true);
+			onAnswer(rowNum, true, userChose === answer);
 		}else{
 			// console.log("FALSE");
-			onAnswer(rowNum, false);
+			onAnswer(rowNum, false, userChose === answer);
 		}
 		// console.log(10, "userChose", userChose, answer, userChose === answer);
 
@@ -2169,6 +2169,7 @@ export class L13TrueFalse extends Component {
 
 	render = () => {
 		const {
+			disabled,
 			explanation,
 			id,
 			value,
@@ -2183,6 +2184,7 @@ export class L13TrueFalse extends Component {
 			<span>
 				<label>vrai<input
 					checked={value === true}
+					disabled={disabled}
 					id={`${id}true`}
 					name={`${id}trueFalse`}
 					type={`radio`}
@@ -2190,6 +2192,7 @@ export class L13TrueFalse extends Component {
 				/></label>&nbsp;/&nbsp;
 				<label>faux<input
 					checked={value === false}
+					disabled={disabled}
 					id={`${id}false`}
 					name={`${id}trueFalse`}
 					type={`radio`}
@@ -2208,6 +2211,7 @@ export class L13ASummersDay extends Component {
 		const userChose = new Array(12);
 		this.state = ({
 			allAnswered: false,
+			nCorrect: 0,
 			rowsAnswered: rowsAnswered,
 			// test: false,
 			userChose: userChose,
@@ -2220,21 +2224,33 @@ export class L13ASummersDay extends Component {
 		return entry === true;
 	};
 
-	answerRow = (rowNum, answer) => {
+	answerRow = (rowNum, answer, correct) => {
 		const {
 			rowsAnswered,
 			userChose
 		} = this.state;
+		let {
+			allAnswered,
+			nCorrect,
+		} = this.state;
+		const { showDialog } = this.props;
 		// console.log("answerRow", rowNum, answer);
+
 		rowsAnswered[rowNum] = true;
 		userChose[rowNum] = answer;
+		if (correct) nCorrect++;
 		// console.log("rowsAnswered", rowsAnswered);
 		// console.log("userChose", userChose);
+		allAnswered = rowsAnswered.every(this.isTrue);
 		this.setState({
-			allAnswered: rowsAnswered.every(this.isTrue),
+			allAnswered: allAnswered,
+			nCorrect: nCorrect,
 			rowsAnswered: rowsAnswered,
 			userChose: userChose
 		});
+
+		if (allAnswered && nCorrect === 12)showDialog("Félicitations !");
+
 		// console.log("allTrue", rowsAnswered.every(this.isTrue));
 	};
 
@@ -2254,6 +2270,8 @@ export class L13ASummersDay extends Component {
 		const { id } = this.props;
 		const {
 			allAnswered,
+			nCorrect,
+			rowsAnswered,
 			userChose,
 		} = this.state;
 		return (
@@ -2288,6 +2306,7 @@ export class L13ASummersDay extends Component {
 								<td>Véronique se lève vers 7 heures le week-end.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[0]}
 									onAnswer={this.answerRow}
 									id={`line0`}
 									explanation={`Véronique se lève vers 6 heures le week-end.`}
@@ -2298,6 +2317,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle se promène en ville.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[1]}
 									onAnswer={this.answerRow}
 									id={`line1`}
 									explanation={`Elle se promène dans le village.`}
@@ -2309,6 +2329,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle aime être dehors quand il fait beau.</td>
 								<td><L13TrueFalse
 									answer={true}
+									disabled={rowsAnswered[2]}
 									onAnswer={this.answerRow}
 									id={`line2`}
 									value={userChose[2]}
@@ -2318,6 +2339,7 @@ export class L13ASummersDay extends Component {
 								<td>Après sa promenade, Véronique prend un bain.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[3]}
 									onAnswer={this.answerRow}
 									id={`line3`}
 									explanation={`Elle prend une douche rapide.`}
@@ -2328,6 +2350,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle prend un bol de yaourt.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[4]}
 									onAnswer={this.answerRow}
 									id={`line4`}
 									explanation={`Elle prend un bol de céréales.`}
@@ -2338,6 +2361,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle boit du café-crème.</td>
 								<td><L13TrueFalse
 									answer={true}
+									disabled={rowsAnswered[5]}
 									onAnswer={this.answerRow}
 									id={`line5`}
 									value={userChose[5]}
@@ -2347,6 +2371,7 @@ export class L13ASummersDay extends Component {
 								<td>Dans le jardin il y a deux arbres.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[6]}
 									onAnswer={this.answerRow}
 									id={`line6`}
 									explanation={`Dans le jardin il y a trois arbres.`}
@@ -2357,6 +2382,7 @@ export class L13ASummersDay extends Component {
 								<td>Véronique passe une heure dans le jardin.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[7]}
 									onAnswer={this.answerRow}
 									id={`line7`}
 									explanation={`Véronique passe la matinée entière dans le jardin.`}
@@ -2367,6 +2393,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle passe l'après-midi avec ses parents.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[8]}
 									onAnswer={this.answerRow}
 									id={`line8`}
 									explanation={`Elle passe l'après-midi avec ses amis.`}
@@ -2377,6 +2404,7 @@ export class L13ASummersDay extends Component {
 								<td>Parfois, ils vont en ville.</td>
 								<td><L13TrueFalse
 									answer={true}
+									disabled={rowsAnswered[9]}
 									onAnswer={this.answerRow}
 									id={`line9`}
 									value={userChose[9]}
@@ -2386,6 +2414,7 @@ export class L13ASummersDay extends Component {
 								<td>Elle dîne dans la salle à manger.</td>
 								<td><L13TrueFalse
 									answer={false}
+									disabled={rowsAnswered[10]}
 									onAnswer={this.answerRow}
 									id={`line10`}
 									explanation={`Elle dîne dans le jardin ou sur le balcon.`}
@@ -2396,6 +2425,7 @@ export class L13ASummersDay extends Component {
 								<td>Le soir, elle se détend.</td>
 								<td><L13TrueFalse
 									answer={true}
+									disabled={rowsAnswered[11]}
 									onAnswer={this.answerRow}
 									id={`line11`}
 									value={userChose[11]}
@@ -2403,6 +2433,7 @@ export class L13ASummersDay extends Component {
 							</tr>
 						</tbody>
 					</table>
+					<p>{nCorrect} correct out of 12</p>
 				</div>
 			</div>
 		);
