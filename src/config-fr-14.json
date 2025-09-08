@@ -524,23 +524,23 @@
 								"phrases": [
 									[
 										"",
-										"Le film est très [amusant]."
+										"Le film est très [amusant]. (amuser)"
 									],
 									[
 										"",
-										"Mon travail est [fatigant]."
+										"Mon travail est [fatigant]. (fatiguer)"
 									],
 									[
 										"",
-										"L'histoire est [fascinante].  "
+										"L'histoire est [fascinante]. (fasciner)"
 									],
 									[
 										"",
-										"Mes études sont très [intéressantes]."
+										"Mes études sont très [intéressantes]. (intéresser)"
 									],
 									[
 										"",
-										"Les cours magistraux sont très [motivants]."
+										"Les cours magistraux sont très [motivants]. (motiver)"
 									]
 								],
 								"titleText": "i. Present participle"
@@ -555,23 +555,23 @@
 								"phrases": [
 									[
 										"",
-										"Les étudiants sont très [occupés]."
+										"Les étudiants sont très [occupés]. (occuper)"
 									],
 									[
 										"",
-										"J'ai une semaine très [chargée]."
+										"J'ai une semaine très [chargée]. (charger)"
 									],
 									[
 										"",
-										"Daniel est très [motivé]."
+										"Daniel est très [motivé]. (motiver)"
 									],
 									[
 										"",
-										"Les étudiantes sont [fatiguées]."
+										"Les étudiantes sont [fatiguées]. (fatiguer)"
 									],
 									[
 										"",
-										"Elle est [fascinée]."
+										"Elle est [fascinée]. (fasciner)"
 									]
 								],
 								"titleText": "ii. Past participle"
