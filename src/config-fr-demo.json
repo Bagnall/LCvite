@@ -1603,83 +1603,83 @@
 					"phrases": [
 						[
 							"américain",
-							"américaine"
+							"[américaine]"
 						],
 						[
 							"asiatique",
-							"asiatique"
+							"[asiatique]"
 						],
 						[
 							"brésilien",
-							"brésilienne"
+							"[brésilienne]"
 						],
 						[
 							"croate",
-							"croate"
+							"[croate]"
 						],
 						[
 							"danois",
-							"danoise"
+							"[danoise]"
 						],
 						[
 							"italien",
-							"italienne"
+							"[italienne]"
 						],
 						[
 							"portugais",
-							"portugaise"
+							"[portugaise]"
 						],
 						[
 							"russe",
-							"russe"
+							"[russe]"
 						],
 						[
 							"ukrainien",
-							"ukrainien"
+							"[ukrainien]"
 						],
 						[
 							"célibataire",
-							"célibataire"
+							"[célibataire]"
 						],
 						[
 							"fatigué",
-							"fatiguée"
+							"[fatiguée]"
 						],
 						[
 							"malade",
-							"malade"
+							"[malade]"
 						],
 						[
 							"marié",
-							"mariée"
+							"[mariée]"
 						],
 						[
 							"dentiste",
-							"dentiste"
+							"[dentiste]"
 						],
 						[
 							"doctorant",
-							"doctorante"
+							"[doctorante]"
 						],
 						[
 							"étudiant",
-							"étudiante"
+							"[étudiante]"
 						],
 						[
 							"informaticien",
-							"informaticienne"
+							"[informaticienne]"
 						],
 						[
 							"journaliste",
-							"journaliste"
+							"[journaliste]"
 						],
 						[
 							"mécanicien",
-							"mécanicienne"
+							"[mécanicienne]"
 						],
 						[
 							"médecin",
-							"médecin"
+							"[médecin]"
 						],
 						[
 							"pharmacien",
@@ -1865,7 +1865,7 @@
 					"answers": [
 						[
 							"du",
-							"doux"
+							"[doux]"
 						],
 						[
 							"pur",
@@ -1933,6 +1933,11 @@
 		],
 		"id": "group4",
 		"titleText": "Blanks"
+	},
+	"custom2": {
+		"component": "L13ASummersDay",
+		"id": "L13ASummersDay",
+		"titleText": "A summer's day"
 	},
 	"connectFour1": {
 		"cheatText": "Cheat",

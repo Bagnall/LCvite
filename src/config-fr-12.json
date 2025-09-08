@@ -436,7 +436,7 @@
 						[
 							"",
 							"[Voilà !]",
-							"sounds/fr/Voilà !.mp3"
+							"sounds/fr/Voilà ! (male).mp3"
 						],
 						[
 							"",
@@ -546,7 +546,7 @@
 						"jus"
 					],
 					"soundFile": "sounds/fr/LO12EX4.mp3",
-					"titleTextHTML": "4. Distinguishing the sounds <b>u</b> and <b>ou</b>"
+					"titleTextHTML": "5. Distinguishing the sounds <b>u</b> and <b>ou</b>"
 				}
 			}
 		],

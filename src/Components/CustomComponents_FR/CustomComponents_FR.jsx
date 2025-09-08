@@ -1875,7 +1875,7 @@ export class L12Grammar extends PureComponent {
 										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je vais en ville.mp3`}>Je vais en ville</AudioClip>.</td><td>I'm going into town.</td>
 									</tr>
 									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Mélanie va au marché le mardi.mp3`}>Mélanie va au marché le mardi</AudioClip>.</td><td>I'm going into town.</td>
+										<td><AudioClip className={`link`} soundFile={`sounds/fr/Mélanie va au marché le mardi.mp3`}>Mélanie va au marché le mardi</AudioClip>.</td><td>Mélanie goes to the market on Tuesdays.</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1958,7 +1958,7 @@ export class L12Grammar extends PureComponent {
 									<p>To express <b>non-specific quantities</b> you use the following: <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/du.mp3`}><b>du</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de la.mp3`}><b>de la</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de l'.mp3`}><b>de l'</b></AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip> all of which mean 'some'.
 										<br/>For masculine nouns you use <b>du</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
 										<br/>For feminine nouns you use <b>de la</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de la bière.mp3`}><b>de la</b> bière</AudioClip> - some beer
-										<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de</b> l'eau</AudioClip> - some water
+										<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de l'</b>eau</AudioClip> - some water
 										<br/>For plurals you use <b>des</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/des cerises.mp3`}><b>des</b> cerises</AudioClip> - some cherries</p>
 								</li>
 							</ol>
@@ -2058,6 +2058,7 @@ export class L13Grammar extends PureComponent {
 									<tr>
 										<td><AudioClip className={`link`} soundFile={`sounds/fr/se reposer.mp3`}><b>se reposer</b></AudioClip></td><td>to rest (oneself)</td>
 									</tr>
+									<tr><td>&nbsp;</td></tr>
 									<tr>
 										<td><AudioClip className={`link`} soundFile={`sounds/fr/je me repose.mp3`}><b>je me repose</b></AudioClip></td><td>I rest / I am resting (myself)</td>
 									</tr>
