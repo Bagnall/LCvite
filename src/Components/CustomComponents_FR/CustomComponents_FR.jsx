@@ -96,7 +96,7 @@ export class LO1Demystify extends PureComponent {
 				>
 					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
 					<div className={`text`}>
-						<p>1 <b>-on</b> / <b>om</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
+						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
 						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
 						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
@@ -107,11 +107,11 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
-					<p>2 The letter <b>r</b> <AudioClip soundFile={`sounds/fr/non-existant.mp3`} /> WE NEED A SOUND FILE FOR THIS</p>
-					<p>The letter <b>r</b> in French can prove tricky to begin with, so it's worth practising it right way.
+					<p>2 The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip></p>
+					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
 						It is formed in the throat. If you clear your throat first thing in the morning or when you are about to make an announcement,
-						the French <b>r</b> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration.
+						the French <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> is made in that very place. If you place your fingers on your neck, you should feel a very slight vibration.
 						You will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjou<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
@@ -598,7 +598,7 @@ export class LO4Demystify extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>How to pronounce:</b></p>
-					<p>another nasal vowel. This is the sound <AudioClip className={`link`} soundFile={`sounds/fr/non-existant.mp3`}>WE NEED A SOUND FILE FOR THIS</AudioClip>&nbsp;
+					<p>another nasal vowel. This is the sound <AudioClip className={`link`} soundFile={`sounds/fr/ain.mp3`}><b>ain</b></AudioClip>&nbsp;
 						which is how the letters <b>-in-</b> are pronounced <b>when they end a word or occur before a consonant</b> as in these examples:&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Singapour.mp3`}>S<b>in</b>gapour</AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Inde.mp3`}><b>In</b>de</AudioClip>,&nbsp;
@@ -1662,7 +1662,7 @@ export class L11Grammar extends PureComponent {
 					<ol>
 						<li>
 							<p>To express what you would like <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>Je voudrais</b></AudioClip> is
-								the verb of form that you use. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace.mp3`}><b>Je voudrais
+								the form of verb that you use. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace.mp3`}><b>Je voudrais
 									une glace</b></AudioClip> I'd like an ice-cream.
 								This is the present conditional of the verb <AudioClip className={`link`} soundFile={`sounds/fr/vouloir.mp3`}><b>vouloir</b></AudioClip>.
 								To express what you would like to do, you add another verb in the infinitive form.
@@ -1822,8 +1822,12 @@ export class L11Grammar extends PureComponent {
 										<td>elles</td>
 										<td><AudioClip className={`link`} soundFile={`sounds/fr/elles.mp3`}><b>elles</b></AudioClip></td>
 									</tr>
-								</tbody></table></li></ol>
-				</div></div>
+								</tbody>
+							</table>
+						</li>
+					</ol>
+				</div>
+			</div>
 		);
 	};
 }
@@ -1899,12 +1903,20 @@ export class L12Grammar extends PureComponent {
 							<p>The little words <b>de</b>, <b>d'</b>, <b>du</b>, <b>de la</b>, <b>de l'</b> and <b>des</b> occur often in French and can sometimes
 								cause confusion.
 								You may find it useful to study the following explanations to gain some clarity.</p>
-							<p>You will probably already have encountered examples of some of these meaning 'from'
+							<ul>
+								<li>You will probably already have encountered examples of some of these meaning 'from'
 								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je viens de France.mp3`}><b>Je
 									viens <b>de</b> France</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/elle vient du Canada.mp3`}><b>elle
-										vient <b>du</b> Canada</b></AudioClip> etc.</p>
-							<p>These words have other meanings too, so it is important to bear the context in mind. e.g.</p>
-							<ol type='i'>
+										vient <b>du</b> Canada</b></AudioClip> etc.</li>
+								<li>These words have other meanings too, so it is important to bear the context in mind. e.g.</li>
+							</ul>
+							<p>To express <b>non-specific quantities</b> you use partitive articles: <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/du.mp3`}><b>du</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de la.mp3`}><b>de la</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de l'.mp3`}><b>de l'</b></AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip> (often translated as 'some').
+								<br/><br/>For masculine nouns you use <b>du</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
+								<br/>For feminine nouns you use <b>de la</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de la bière.mp3`}><b>de la</b> bière</AudioClip> - some beer
+								<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de l'</b>eau</AudioClip> - some water
+								<br/>For plurals you use <b>des</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/des cerises.mp3`}><b>des</b> cerises</AudioClip> - some cherries</p>
+
+							<ul>
 								<li> When describing <b>specific quantities</b> of
 							something <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip> is used meaning <b>'of'</b>.
 							Before a vowel <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> is used. e.g.
@@ -1952,16 +1964,22 @@ export class L12Grammar extends PureComponent {
 											</td>
 										</tr>
 									</tbody>
-								</table>
+								</table><br/>
 								</li>
-								<li>
+								<li>The forms <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> or <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> are also used after a <b>negation</b>:<br/><br/>
+									e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai du pain.mp3`}><b>J'ai du pain</b></AudioClip>. I have (some) bread
+									BUT after the negation <AudioClip className={`link`} soundFile={`sounds/fr/Je n'ai pas de pain.mp3`}><b>Je n'ai pas de pain</b></AudioClip>. I don't have
+									any bread. <AudioClip className={`link`} soundFile={`sounds/fr/Il veut de l'eau.mp3`}><b>Il veut de l'eau</b></AudioClip>. He
+									wants (some) mineral water. BUT after the negation <AudioClip className={`link`} soundFile={`sounds/fr/Il ne veut pas d'eau minérale.mp3`}><b>Il ne veut pas d'eau minérale</b></AudioClip>. He doesn't want any water.</li>
+
+								{/* <li>
 									<p>To express <b>non-specific quantities</b> you use the following: <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/du.mp3`}><b>du</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de la.mp3`}><b>de la</b></AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/de l'.mp3`}><b>de l'</b></AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip> all of which mean 'some'.
 										<br/>For masculine nouns you use <b>du</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/du fromage.mp3`}><b>du</b> fromage</AudioClip> - some cheese
 										<br/>For feminine nouns you use <b>de la</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de la bière.mp3`}><b>de la</b> bière</AudioClip> - some beer
 										<br/>For nouns beginning with a vowel you use <b>de l'</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/de l'eau.mp3`}><b>de l'</b>eau</AudioClip> - some water
 										<br/>For plurals you use <b>des</b> e.g. <AudioClip className={`link`} soundFile={`sounds/fr/des cerises.mp3`}><b>des</b> cerises</AudioClip> - some cherries</p>
-								</li>
-							</ol>
+								</li> */}
+							</ul>
 						</li>
 						<li>
 							<p>The plural of French nouns is generally formed by adding an <b>s</b>. There are some exceptions to this rule, and these include
@@ -2495,7 +2513,7 @@ export class L14Grammar extends PureComponent {
 							<p>The irregular verb <AudioClip className={`link`} soundFile={`sounds/fr/pouvoir.mp3`}><b>pouvoir</b></AudioClip> means
 								"to be able to." It is used together with another verb in its infinitive form.</p>
 							<p>Je peux répondre à votre question tout de suite. — I can answer your question right away.
-        Vous pouvez ouvrir la fenêtre, s'il vous plaît ? — Can you open the window, please?</p>
+								Vous pouvez ouvrir la fenêtre, s'il vous plaît ? — Can you open the window, please?</p>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/pouvoir.mp3`}><b>pouvoir</b></AudioClip></p>
 							<table>
 								<tbody>
@@ -2541,7 +2559,7 @@ export class L14Grammar extends PureComponent {
 							<p><strong>i. Present Participles</strong></p>
 
 							<p>In English the present participle ends in <em>-ing</em> (e.g. interesting, encouraging).
-      In French the present participle is the verb form that ends in <em>-ant</em>. Present participles can often be used as adjectives:</p>
+								In French the present participle is the verb form that ends in <em>-ant</em>. Present participles can often be used as adjectives:</p>
 							<table>
 								<tbody>
 									<tr>
@@ -2560,8 +2578,8 @@ export class L14Grammar extends PureComponent {
 							</table>
 
 							<p><strong>ii. Past Participles</strong><br/>
-      Examples of past participles in English are: tired, motivated, fascinated.
-      In French many past participles end in <b>-é</b>. These are the past participles of <b>-er</b> verbs. Past participles can often be used as adjectives:</p>
+								Examples of past participles in English are: tired, motivated, fascinated.
+								In French many past participles end in <b>-é</b>. These are the past participles of <b>-er</b> verbs. Past participles can often be used as adjectives:</p>
 							<table>
 								<tbody>
 									<tr>

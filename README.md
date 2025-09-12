@@ -29,24 +29,24 @@ better still use the windows installer:
 
 ## Clone this repository
 
-1. **git clone https://github.com/Bagnall/LCvite**\
-1. **cd LCvite**\
-2. **npm install**\
-3. **npm run dev**
+1. **git clone https://github.com/Bagnall/LCvite**
+1. **cd LCvite**
+2. **yarn install**
+3. **yarn run dev**
 
 ## Run app
 
-**yarn dev**
+**yarn run dev**
 
 ## Build app
 
-**yarn build**
+**yarn run build**
 
 ## Configuring the learning object
 
-There is an **index.json** file which lists the various learning object configuration files. It is used to construct a navigation menu.
+There is an **index-fr.json** file which lists the various learning object configuration files. It is used to construct a navigation menu.
 
-There are **config\*.json** files which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user. See https://docs.google.com/document/d/1shg4Bptm3AtaO2e2_8pEZOcXBdwoS7zD3sK5Au3L-Fo/edit?usp=sharing
+There are **learningObjectConfigurations/fr/\*.json** files which contains the definitions of all of the components of the learning object and phrases in the languages of your choice, but the instruction texts should be in the language of the target user. See https://docs.google.com/document/d/1shg4Bptm3AtaO2e2_8pEZOcXBdwoS7zD3sK5Au3L-Fo/edit?usp=sharing
 
 ## Badges
 

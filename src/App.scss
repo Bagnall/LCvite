@@ -194,6 +194,14 @@ h2 {
 			background-position: center bottom;
 			background-size: cover;
 		}
+		#radio2 {
+			span:nth-of-type(1) {
+				min-width: 30px;
+			}
+			li {
+				min-width: 0;
+			}
+		}
 	}
 }
 .de-DE {

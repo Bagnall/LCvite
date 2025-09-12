@@ -8,6 +8,76 @@
 		"targetLanguageCode": "fr-FR",
 		"title": "French Learning Object, Component Demo"
 	},
+	"radio1": {
+		"component": "Radio",
+		"id": "radio1",
+		"congratulationsText": "Well done!",
+		"instructionsText": "Fill in the table below by dragging greetings and goodbye expressions into the appropriate column.",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "sort-table",
+		"options": [
+			"Greeting",
+			"Goodbye"
+		],
+		"phrases": [
+			[
+				"Buen día",
+				0,
+				"'Buen día' is a greeting in Spanish. It is used to wish someone a good day...",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Buenas tardes",
+				0,
+				"'Buenas tardes' can be used both as a greeting and as a goodbye in Spanish...",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Hola",
+				0,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Adiós",
+				1,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Nos vemos mañana",
+				1,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Buenas noches",
+				0,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Hasta el jueves",
+				1,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Hasta luego",
+				1,
+				"",
+				"sounds/sp/.mp3"
+			],
+			[
+				"Hasta pronto",
+				1,
+				"",
+				"sounds/sp/.mp3"
+			]
+		],
+		"titleText": "Radio"
+	},
 	"group1": {
 		"component": "Group",
 		"htmlContent": "<p>This <b>Jigsaw</b> component presents 2 sets of jigsaw pieces. The student needs to read / listen to the phrase that describes a picture. This should enable the student to choose the correct pieces to place into a simple jigsaw picture.</p><p>Two or more errors reveal some help options.</p>",
@@ -1865,7 +1935,7 @@
 					"answers": [
 						[
 							"du",
-							"[doux]"
+							"doux"
 						],
 						[
 							"pur",

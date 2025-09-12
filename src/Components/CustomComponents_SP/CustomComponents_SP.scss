@@ -1,0 +1,246 @@
+// CrossWord.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/mixins.module.scss";
+@use "../../styles/_variables.module.scss";
+
+.custom-content {
+	@include mixins.standard-table();
+}
+
+#LO1Intro {
+	.intro-contents {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-template-areas: "text image";
+	}
+	.intro-img {
+		justify-self: right;
+		grid-area: image;
+		img {
+			justify-self: right;
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
+	.intro-text-div {
+		grid-area: text;
+	}
+}
+
+#LO1Demystify {
+	align-items: flex-start;
+	img {
+		width: 300px;
+		height: 300px;
+		// float: right;
+		margin: 0 0 20px 20px;
+		border: 1px solid black;
+	}
+	&Panel1,
+	&Panel4 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-template-areas: "text image";
+		p {
+			grid-area: text;
+		}
+		img {
+			justify-self: right;
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
+}
+
+#LO2Demystify {
+	img.lo2-demystify-shh {
+		vertical-align: middle;
+	}
+}
+
+#LO4Exercise1 {
+	div.two-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 0px 0px;
+		grid-template-areas: "poem image";
+		p {
+			grid-area: poem;
+		}
+		img {
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
+	@include respond-below(m) {
+		div.two-columns {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas:
+				"image"
+				"poem";
+		}
+	}
+}
+
+#LO9Grammar {
+	.svg-container {
+		overflow: hidden;
+		width: 100%;
+		max-width: 600px; // adjust as needed
+	}
+
+	.zoomable-svg {
+		g {
+			transform-origin: center center;
+			transition: transform 0.3s ease;
+			z-index: 1;
+			cursor: pointer;
+			text {
+				transform-origin: 50% 50%;
+				transition: transform 0.3s ease;
+				transform: scale(1); // or more if you prefer
+
+				// font-style: normal;
+				// font-variant: normal;
+				font-weight: 700;
+				// font-stretch: normal;
+				font-size: 74.6667px;
+				// font-family: Arial;
+				fill: white;
+			}
+			will-change: transform;
+			&:hover {
+				transform: scale(1.1); // or more if you prefer
+				z-index: 2;
+
+				text {
+					// transform-origin: 0 0;
+					// transition: transform 3s ease;
+					transform: scale(1.1); // or more if you prefer
+				}
+			}
+			.land {
+				stroke: rgba(255, 255, 255, 0.29);
+			}
+		}
+		#g01 {
+			transform-origin: 50% 50%;
+			text {
+				font-size: 40px;
+			}
+			.land {
+				fill: #fc0;
+			}
+		}
+		#g02 {
+			transform-origin: 100% 70%;
+			.land {
+				fill: #0cf;
+			}
+		}
+		#g03 {
+			transform-origin: 20% 50%;
+			.land {
+				fill: red;
+			}
+		}
+		#g04 {
+			transform-origin: 0 0;
+			.land {
+				fill: #55d400;
+			}
+		}
+		#g05 {
+			transform-origin: 100% 0;
+			.land {
+				fill: #f60;
+			}
+		}
+	}
+}
+
+#L10Grammar {
+	div.two-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 0px 0px;
+		grid-template-areas: "poem image";
+		p {
+			grid-area: poem;
+		}
+		img {
+			grid-area: image;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+	}
+}
+
+#L13ASummersDayPanel {
+	#L13ASummersDaypassage {
+		margin: 1rem 4rem;
+		font-style: italic;
+		max-height: 0;
+		transition: max-height 6s;
+		overflow: hidden;
+		&.show {
+			max-height: 600px;
+			transition: max-height 6s;
+		}
+	}
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 2fr 3fr;
+	align-items: flex-start;
+	justify-items: center;
+	gap: 20px;
+	grid-template-areas:
+		"instructions image"
+		"audio image"
+		"passage image"
+		"questions questions";
+	p.instruction {
+		grid-area: instructions;
+	}
+	p.passage {
+		grid-area: passage;
+	}
+	audio {
+		grid-area: audio;
+	}
+	table {
+		grid-area: questions;
+		width: 100%;
+		max-width: 1100px;
+		td {
+			width: 50%;
+		}
+	}
+	img {
+		justify-self: right;
+		grid-area: image;
+		width: 300px;
+		// height: 300px;
+		border: 1px solid black;
+	}
+}

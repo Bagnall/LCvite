@@ -29,9 +29,9 @@
 				"sounds/fr/Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.mp3"
 			],
 			[
-				"Moi, je suis plutôt nocturne. Je me couche vers minuit et demi.",
+				"Je suis plutôt une couche-tard. Je me couche vers minuit et demi.",
 				"Well, I'm more of a night owl. I go to bed at about half past midnight.",
-				"sounds/fr/Moi, je suis plutôt nocturne. Je me couche vers minuit et demi.mp3"
+				"sounds/fr/Je suis plutôt une couche-tard. Je me couche vers minuit et demi.mp3"
 			],
 			[
 				"Vers minuit et demi ? Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.",
@@ -248,9 +248,9 @@
 				"sounds/fr/Je suis matinal, Je suis matinale.mp3"
 			],
 			[
-				"Je suis nocturne",
+				"Je suis un couche-tard. / Je suis une couche-tard",
 				"I'm a night owl",
-				"sounds/fr/Je suis nocturne.mp3"
+				"sounds/fr/Je suis un couche-tard. Je suis une couche-tard.mp3"
 			]
 		],
 		"footnote": "*In France le dîner is the evening meal. In some French speaking countries such as Canada, Belgium and Switzerland le dîner is the lunchtime meal and the evening meal is referred to as le souper.",
@@ -319,20 +319,20 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
-						"[*6:00|7:00|8:00]",
-						"[2:00|6:00|*10:00]",
-						"[*2:30|6:30|10:30]",
-						"[1:30|0:30|*11:30]",
-						"[4:15|4:30|*5:15]",
-						"[*6:45|7:15|7:30]",
-						"[2:15|*2:45|3:15]",
-						"[*1:15|1:30|1:45]",
+						"[*6h00|7h00|8h00]",
+						"[2h00|6h00|*10h00]",
+						"[*2h30|6h30|10h30]",
+						"[1h30|0h30|*11h30]",
+						"[4h15|4h30|*5h15]",
+						"[*6h45|7h15|7h30]",
+						"[2h15|*2h45|3h15]",
+						"[*1h15|1h30|1h45]",
 						"[*midday|midnight]",
 						"[midday|*midnight]",
-						"[*1:10|10:10|11:10]",
-						"[4:10|*4:20|4:40]",
-						"[5:08|*7:55|8:05]",
-						"[*8:35|8:45|9:25]"
+						"[*1h10|10h10|11h10]",
+						"[4h10|*4h20|4h40]",
+						"[5h08|*7h55|8h05]",
+						"[*8h35|8h45|9h25]"
 					],
 					"audio": [
 						"sounds/fr/Il est six heures.mp3",

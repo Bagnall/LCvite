@@ -27,9 +27,7 @@
 	transform-origin: center center;
 	transform: scale(0.01);
 	transition-duration: 1s;
-	transition-property:
-		transform,
-		opacity box-shadow;
+	transition-property: transform, opacity, box-shadow;
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 	width: fit-content;
 	z-index: 1000;
@@ -49,7 +47,7 @@
 		position: absolute;
 		font-weight: bold;
 		color: transparent;
-		border: rgb(0, 0, 139) 4px outset; //blue outset 4px;
+		border: rgb(0, 0, 139) 4px outset;
 		text-indent: -9999px;
 		border-radius: 8px;
 		&::after {
@@ -57,7 +55,7 @@
 			mask-image: url("/images/cross.svg");
 			mask-position: center center;
 			mask-repeat: no-repeat;
-			background-color: rgb(0, 0, 139); //blue;
+			background-color: rgb(0, 0, 139);
 		}
 		z-index: 1001;
 		cursor: pointer;
@@ -79,30 +77,6 @@
 		button {
 			top: 20px;
 			right: 20px;
-			// width: 30px;
-			// height: 30px;
-			// position: absolute;
-			// font-weight: bold;
-			// color: transparent;
-			// border: rgb(0, 0, 139) 4px outset; //blue outset 4px;
-			// text-indent: -9999px;
-			// border-radius: 8px;
-			// &::after {
-			// 	@include mixins.standard-pseudo();
-			// 	mask-image: url("../../../public/images/cross.svg");
-			// 	mask-position: center center;
-			// 	mask-repeat: no-repeat;
-			// 	background-color: rgb(0, 0, 139); //blue;
-			// }
-			// z-index: 1001;
-			// cursor: pointer;
-			// &:active {
-			// 	&::after {
-			// 		margin-top: 1px;
-			// 		margin-left: 1px;
-			// 	}
-			// 	border-style: inset;
-			// }
 		}
 	}
 }

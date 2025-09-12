@@ -49,25 +49,26 @@ export class PhraseTable extends React.PureComponent {
 				// blank row
 				rows.push(
 					<tr className={`spacer`} key={`row${i}`}>
-						<td colSpan={3}></td>
+						<td colSpan={longestRow}></td>
 					</tr>
 				);
 			} else {
-				for (let j = 0; j < phrases[i].length - 1; j++) {
-					cells.push(
-						<td key={`row${i}cell${j}`} dangerouslySetInnerHTML={{ __html: phrase[j] }}>
-							{/* {phrase[j]} */}
-						</td>
-					);
-				}
-				const lastCellIndex = phrases[i].length - 1;
-				if (phrase[lastCellIndex]) {
-					const soundFile = resolveAsset(`${phrase[lastCellIndex]}`);
-					cells.push(
-						<td key={`row${i}cell${lastCellIndex}`}>
-							<AudioClip className={`compact`} label={""} soundFile={soundFile} />
-						</td>
-					);
+				for (let j = 0; j < phrases[i].length; j++) {
+					// console.log("phrase[j].slice(-4)", phrase[j], phrase[j].slice(-4));
+					if (phrase[j].slice(-4) === '.mp3') {
+						// Spound file!
+						const soundFile = resolveAsset(`${phrase[j]}`);
+						cells.push(
+							<td key={`row${i}cell${j}`}>
+								<AudioClip className={`compact`} label={""} soundFile={soundFile} />
+							</td>
+						);
+					} else {
+						cells.push(
+							<td key={`row${i}cell${j}`} dangerouslySetInnerHTML={{ __html: phrase[j] }}>
+							</td>
+						);
+					}
 				}
 
 				rows.push(

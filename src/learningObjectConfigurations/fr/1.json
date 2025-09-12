@@ -326,12 +326,12 @@
 					"showHintsText": "Show hints when moving",
 					"phrases": [
 						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
-						"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
+						"Bonsoir Madame Bernard, ça va très bien, merci. Et [vous] ?",
 						"Ah pas mal [merci] !"
 					],
 					"audio": [
 						"sounds/fr/Bonsoir Monsieur Galipot ! Comment ça va.mp3",
-						"sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
+						"sounds/fr/Bonsoir Madame Bernard, ça va très bien, merci. Et vous.mp3",
 						"sounds/fr/Ah pas mal merci !.mp3"
 					],
 					"titleText": "3. Meeting and greeting (formal) gap fillers"

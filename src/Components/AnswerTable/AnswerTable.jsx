@@ -78,7 +78,7 @@ export class AnswerTable extends React.PureComponent {
 				// blank row
 				rows.push(
 					<tr className={`spacer`} key={`row${i}`}>
-						<td colSpan={3}></td>
+						<td colSpan={longestRow}></td>
 					</tr>
 				);
 			} else {

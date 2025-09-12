@@ -1,0 +1,28 @@
+{
+	"learningObjects": [
+		{
+			"title": "Learning Object 1",
+			"file": "1"
+		},
+		{
+			"title": "Learning Object 2",
+			"file": "2"
+		},
+		{
+			"title": "Learning Object 3",
+			"file": "3"
+		},
+		{
+			"title": "Learning Object 4",
+			"file": "4"
+		},
+		{
+			"title": "Learning Object 5",
+			"file": "5"
+		},
+		{
+			"title": "Learning Object 6",
+			"file": "6"
+		}
+	]
+}

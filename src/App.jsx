@@ -17,6 +17,7 @@ import {
 	MemoryMatchGame,
 	Monologue,
 	PhraseTable,
+	Radio,
 	ReadAloud,
 	WordGrid,
 	WordParts,
@@ -29,7 +30,8 @@ import {
 	resolveAsset,
 	speak,
 } from './utility';
-import { AllCustomComponents } from './Components/CustomComponents_FR/index.js';
+import { AllCustomComponentsFR } from './Components/CustomComponents_FR/index.js';
+import { AllCustomComponentsSP } from './Components/CustomComponents_SP/index.js';
 
 import React from 'react';
 
@@ -38,9 +40,17 @@ export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 
+		const queryString = window.location.search;
+
+		const urlParams = new URLSearchParams(queryString);
+
+		const languageCode = urlParams.get('lang');
+		// console.log("constructor languageCode", languageCode);
+
 		this.state = ({
 			dialogContent: '',
 			errors: [],
+			languageCode: languageCode,
 			showDialog: false,
 		});
 
@@ -77,14 +87,18 @@ export default class App extends React.Component {
 
 		const urlParams = new URLSearchParams(queryString);
 
-		const configFile = urlParams.get('config');
+		// const languageCode = urlParams.get('lang');
+		const { languageCode } = this.state;
+		// console.log("componentDidMount languageCode", languageCode);
+
+		const learningObjectConfigFile = urlParams.get('lo');
 
 		let configPromise;
-		if (configFile) {
-			let LO = parseInt(configFile.replace(/^\D+/g, ''));
-			if (isNaN(LO)) LO = 15;
-			configPromise = this.loadConfig(`./src/${configFile}`);
-			this.loadIndex(LO);
+		if (learningObjectConfigFile && languageCode) {
+			// let LO = parseInt(learningObjectConfigFile.replace(/^\D+/g, ''));
+			// if (isNaN(LO)) LO = 1;
+			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`);
+			this.loadIndex(learningObjectConfigFile, languageCode);
 			this.initialiseSpecialAnchors();
 
 			configPromise.then(this.initialiseSynth);
@@ -232,7 +246,7 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile) => {
-		// console.log("loadConfig");
+		// console.log("loadConfig", configFile);
 
 		// Read the config
 		const headers = new Headers();
@@ -276,8 +290,8 @@ export default class App extends React.Component {
 		});
 	};
 
-	loadIndex = (LO) => {
-		// console.log("loadIndex");
+	loadIndex = (LO, languageCode) => {
+		// console.log("loadIndex", LO, languageCode);
 
 		// Read the index file
 		const headers = new Headers();
@@ -295,7 +309,7 @@ export default class App extends React.Component {
 		}else{
 			if (sessionStorage.getItem("currentLearningObject")) currentLearningObject = parseInt(sessionStorage.getItem("currentLearningObject"));
 		}
-		fetch(`./src/index.json`, requestOptions)
+		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
 				// console.log("res", res);
@@ -881,7 +895,8 @@ export default class App extends React.Component {
 						:
 						<div className={`no-config`}>
 							<h1>No configuration parameter given of the form</h1>
-							<h2>{`${window.location.href}/?config=config.json`}</h2>
+							<h2>{`${window.location.host}${window.location.pathname}?lang=fr&lo=3`}</h2>
+							<p>Where '3' in this example is the learning object number or index</p>
 						</div>
 					}
 					<Footer />
@@ -897,6 +912,10 @@ export default class App extends React.Component {
 		const { id, component, titleText = '', titleTextHTML = '' } = value;
 		// console.log(`component [${component}]`);
 		// console.log("renderComponent id=", id);
+
+		const { languageCode } = this.state;
+		// console.log("renderComponent languageCode", languageCode);
+
 		switch (component) {
 			case 'AnswerTable': {
 				articles.push(
@@ -985,6 +1004,8 @@ export default class App extends React.Component {
 				const {
 					htmlContent,
 					id,
+					instructionsText,
+					instructionsTextHTML,
 				} = value;
 				// console.log(`Group${id}Accordion`);
 				articles.push(
@@ -997,6 +1018,8 @@ export default class App extends React.Component {
 						titleHTML={titleTextHTML}
 					>
 						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 						{renderedGroupContent}
 					</AccordionArticle>
 				);
@@ -1074,7 +1097,24 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'ReadAloud': {
+			case 'Radio': {
+				articles.push(
+					<AccordionArticle
+						id={`${id}Accordion`}
+						key={`${id}Accordion`}
+						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						title={titleText}
+						titleHTML={titleTextHTML}
+					>
+						<Radio
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}			case 'ReadAloud': {
 				articles.push(
 					<AccordionArticle
 						id={`${id}Accordion`}
@@ -1130,8 +1170,22 @@ export default class App extends React.Component {
 			}
 			default: {
 				// console.log("Component name:", component);
-				// console.log("AllCustomComponents", AllCustomComponents);
-				const CustomComponent = AllCustomComponents[component];
+				// console.log("AllCustomComponentsFR", AllCustomComponentsFR);
+				let CustomComponent;
+				switch (languageCode) {
+					case 'fr': {
+						CustomComponent = AllCustomComponentsFR[component];
+						break;
+					}
+					case 'sp': {
+						CustomComponent = AllCustomComponentsSP[component];
+						break;
+					}
+					default: {
+						CustomComponent = AllCustomComponentsFR[component];
+						break;
+					}
+				}
 				// console.log(component.slice(0, 4), component);
 				if (CustomComponent) {
 					articles.push(
@@ -1167,6 +1221,7 @@ export default class App extends React.Component {
 		// console.log("renderMenu");
 		const {
 			currentLearningObject = 0,
+			languageCode,
 			learningObjects
 		} = this.state;
 		const renderedMenu = new Array;
@@ -1180,7 +1235,7 @@ export default class App extends React.Component {
 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
 						key={`menu-item-${index}`}>
 						<a
-							href={`${baseURL}?config=${learningObject.file}`}
+							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
 							onClick={() => this.selectLearningObject(index)}
 						>{index <= 14 ? index + 1 : 'Demo'}</a>
 					</li>

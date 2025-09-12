@@ -1,0 +1,728 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "sp-flag.png",
+		"title": "Spanish Learning Object 1",
+		"targetLanguage": "spanish",
+		"targetLanguageCode": "es-US",
+		"subtitle": "First Contact"
+	},
+	"customComponent1": {
+		"component": "LO1Intro",
+		"id": "LO1Intro",
+		"titleText": "Introduction"
+	},
+	"group1": {
+		"component": "Group",
+		"instructionsTextHTML": "<p>The tables below show the Spanish ways to say hello and goodbye.</p><img src='images/handshake.png' style='width: 200px; border: 1px solid black;'/>",
+		"content": [
+			{
+				"group2": {
+					"component": "Group",
+					"content": [
+						{
+							"phraseTable1": {
+								"component": "PhraseTable",
+								"id": "PhraseTable1",
+								"instructionsText": "To say hello",
+								"phrases": [
+									[
+										"¡Hola!",
+										"Hello (formal and informal)",
+										"sounds/sp/¡Hola!.mp3"
+									],
+									[
+										"Buenos dias",
+										"Good morning",
+										"sounds/sp/Buenos dias.mp3"
+									],
+									[
+										"Buenas tardes",
+										"Good afternoon",
+										"sounds/sp/Buenas tardes.mp3"
+									],
+									[
+										"Buenas noches",
+										"Good evening/Good night",
+										"sounds/sp/Buenas noches.mp3"
+									],
+									[
+										"¡Qué tal!",
+										"What's new",
+										"sounds/sp/¡Qué tal!.mp3"
+									]
+								],
+								"titleText": "Hello"
+							}
+						},
+						{
+							"phraseTable2": {
+								"component": "PhraseTable",
+								"id": "PhraseTable2",
+								"instructionsText": "To say goodbye",
+								"phrases": [
+									[
+										"Chao",
+										"Bye bye (informal)",
+										"sounds/sp/Chao.mp3"
+									],
+									[
+										"Adiós",
+										"Good bye",
+										"sounds/sp/Adiós.mp3"
+									],
+									[
+										"Adiós, buenas noches",
+										"Bye, (have a) good evening",
+										"sounds/sp/Adiós, buenas noches.mp3"
+									],
+									[
+										"Nos vemos",
+										"See you soon (formal)",
+										"sounds/sp/Nos vemos.mp3"
+									],
+									[
+										"Hasta pronto",
+										"See you soon",
+										"sounds/sp/Hasta pronto.mp3"
+									],
+									[
+										"Hasta luego",
+										"See you later",
+										"sounds/sp/Hasta luego.mp3"
+									],
+									[
+										"Hasta la vista",
+										"See you later",
+										"sounds/sp/Hasta la vista.mp3"
+									],
+									[
+										"Hasta mañana",
+										"See you tomorrow",
+										"sounds/sp/Hasta mañana.mp3"
+									],
+									[
+										"Hasta el lunes",
+										"(+ other days of the week) See you on Monday",
+										"sounds/sp/Hasta el lunes.mp3"
+									]
+								],
+								"titleText": "Goodbye"
+							}
+						}
+					],
+					"id": "group2",
+					"titleText": "(part i)"
+				}
+			},
+			{
+				"customComponent2": {
+					"component": "LO1KnowHow1",
+					"id": "LO1KnowHow1",
+					"titleText": "Know-how:"
+				}
+			},
+			{
+				"group3": {
+					"component": "Group",
+					"content": [
+						{
+							"phraseTable3": {
+								"component": "PhraseTable",
+								"header": [
+									"Formal request",
+									"Formal response",
+									""
+								],
+								"id": "PhraseTable3",
+								"phrases": [
+									[
+										"Hola, Señora Martínez, ¿cómo está?",
+										"Hello Mrs. Martínez, how are you?",
+										"sounds/sp/Hola, Señora Martínez, ¿cómo está.mp3"
+									],
+									[
+										"Muy bien, gracias. ¿Y usted?",
+										"Very well, thanks. And you?",
+										"sounds/sp/Muy bien, gracias. ¿Y usted.mp3"
+									],
+									[
+										"Buenos días, señor González, ¿Cómo está?",
+										"Hello Mr. González, how are you?",
+										"sounds/sp/Buenos días, señor González, ¿Cómo está.mp3"
+									],
+									[
+										"Bien, Gracias. Y usted, ¿cómo está?",
+										"Fine, thank you. How about you?",
+										"sounds/sp/Bien, Gracias. Y usted, ¿cómo está.mp3"
+									]
+								],
+								"titleText": "Hello"
+							}
+						},
+						{
+							"phraseTable4": {
+								"component": "PhraseTable",
+								"header": [
+									"Informal request",
+									"Informal response",
+									""
+								],
+								"id": "PhraseTable4",
+								"phrases": [
+									[
+										"Hola. ¿Como estás?",
+										"Hello, how are you?",
+										"sounds/sp/Hola. ¿Como estás.mp3"
+									],
+									[
+										"Bien, gracias. ¿Y tú?",
+										"Fine thank you. And you?",
+										"sounds/sp/Bien, gracias. ¿Y tú.mp3"
+									],
+									[
+										"Así, Así… ¿Y tú?",
+										"So - so. And you?",
+										"sounds/sp/Así, Así… ¿Y tú.mp3"
+									],
+									[
+										"Regular, ¿y tú?",
+										"Not too bad. And you?",
+										"sounds/sp/Regular, ¿y tú.mp3"
+									],
+									[
+										"Fatal",
+										"awful",
+										"sounds/sp/Fatal.mp3"
+									],
+									[
+										"Fenomenal. ¿Y tú qué tal?",
+										"Great. And you?",
+										"sounds/sp/Fenomenal. ¿Y tú qué tal.mp3"
+									],
+									[
+										"Desafortunadamente, no muy bien. ¿ Y Tú?",
+										"Not so good, unfortunately. How about you?",
+										"sounds/sp/Desafortunadamente, no muy bien. ¿ Y Tú.mp3"
+									],
+									[
+										"Hola, ¿Qué tal?",
+										"Hi, how is it going?",
+										"sounds/sp/Hola, ¿Qué tal.mp3"
+									],
+									[
+										"Todo bien. ¿Y Tú?",
+										"All Fine. And you?",
+										"sounds/sp/Todo bien. ¿Y Tú.mp3"
+									],
+									[
+										"Todo bien, gracias. ¿Y tú?",
+										"Everything OK, thank you. And you?",
+										"sounds/sp/Todo bien, gracias. ¿Y tú.mp3"
+									]
+								],
+								"titleText": "Goodbye"
+							}
+						}
+					],
+					"id": "group3",
+					"instructionsText": "Listen to people saying hello and goodbye by clicking on the clicking on the audio icons. The key language is summarised in the table.",
+					"titleText": "(part ii)"
+				}
+			}
+		],
+		"id": "group1",
+		"titleText": "Greetings: saying hello and goodbye"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"header": [
+			"Tú/vosotros - Informal",
+			"usted/ustedes - Formal",
+			""
+		],
+		"id": "PhraseTable5",
+		"instructionsText": "Listen to formal and informal ways to address people by clicking on the audio icons. The key language is summarised in the table.",
+		"phrases": [
+			[
+				"¿Cómo estás (tú)?",
+				"How are you? (talking to one person)",
+				"sounds/sp/¿Cómo estás (tú).mp3"
+			],
+			[
+				"¿Cómo está (usted)?",
+				"How are you? (talking to one person)",
+				"sounds/sp/¿Cómo está (usted).mp3"
+			],
+			[
+				"¿Cómo están (ustedes)?",
+				"How are you? (talking to more than one person)",
+				"sounds/sp/¿Cómo están (ustedes).mp3"
+			],
+			[
+				"¿Cómo estáis?",
+				"How are you? (talking to more than one person - in Spain)",
+				"sounds/sp/¿Cómo estáis.mp3"
+			]
+		],
+		"titleText": "Addressing people: formality and informality"
+	},
+	"customComponent3": {
+		"component": "LO1KnowHow2",
+		"id": "LO1KnowHow1",
+		"titleText": "Know-how:"
+	},
+	"phraseTable6": {
+		"component": "PhraseTable",
+		"header": [
+			"Introduction",
+			"",
+			"Response",
+			""
+		],
+		"id": "PhraseTable6",
+		"instructionsText": "Listen to people introducing each other by clicking on the audio icons. The key language is summarised in the table.",
+		"phrases": [
+			[
+				"Te presento a mi amiga Laura.",
+				"sounds/sp/Te presento a mi amiga Laura.mp3",
+				"Hola, Laura. ¡Un placer conocerte!",
+				"sounds/sp/Hola, Laura. ¡Un placer conocerte!.mp3"
+			],
+			[
+				"This is my friend Laura.",
+				"",
+				"Hello, Laura. It is a pleasure to meet you!",
+				""
+			],
+			[
+				""
+			],
+			[
+				"Hola, Rosario. Este es mi amigo Federico.",
+				"sounds/sp/Hola, Rosario. Este es mi amigo Federico.mp3",
+				"¡Hola! Mucho gusto.",
+				"sounds/sp/¡Hola! Mucho gusto.mp3"
+			],
+			[
+				"Hello, Rosario. This is my friend Federico.",
+				"",
+				"Hello! Nice to meet you.",
+				""
+			],
+			[
+				""
+			],
+			[
+				"Hola Lucas. Esta es mi amiga Claudia.",
+				"sounds/sp/Hola Lucas. Esta es mi amiga Claudia.mp3",
+				"Hola, es un placer conocerte. Soy Lucas.",
+				"sounds/sp/Hola, es un placer conocerte. Soy Lucas.mp3"
+			],
+			[
+				"Hello, Lucas. She's my friend Claudia.",
+				"",
+				"Hello! I am Luca. Nice to meet you.",
+				""
+			],
+			[
+				""
+			],
+			[
+				"Te presento al señor y la señora Rivera.",
+				"sounds/sp/Te presento al señor y la señora Rivera.mp3",
+				"¡Mucho gusto!",
+				"sounds/sp/¡Mucho gusto!.mp3"
+			],
+			[
+				"These are Mr and Mrs Rossi.",
+				"",
+				"Nice to meet you!",
+				""
+			],
+			[
+				""
+			],
+			[
+				"Le presento a la señora Fernández.",
+				"sounds/sp/Le presento a la señora Fernández.mp3",
+				"¡Un placer conocerla!",
+				"sounds/sp/¡Un placer conocerla!.mp3"
+			],
+			[
+				"May I introduce Mrs Fernández.",
+				"",
+				"Pleased to meet you!",
+				""
+			],
+			[
+				""
+			],
+			[
+				"Mamá, papá, les presento a los senores Fernandez.",
+				"sounds/sp/Mamá, papá, les presento a los senores Fernandez.mp3",
+				"¡Gusto en conocerlos!",
+				"sounds/sp/¡Gusto en conocerlos!.mp3"
+			],
+			[
+				"Mum, dad, may I introduce Mr and Mrs Ferri.",
+				"",
+				"Pleased to meet you both!",
+				""
+			]
+		],
+		"titleText": "Introducing someone: and this is..."
+	},
+	"customComponent4": {
+		"component": "LO1KnowHow3",
+		"id": "LO1KnowHow3",
+		"titleText": "Know-how:"
+	},
+	"customComponent5": {
+		"component": "LO1UngenderedSpanish",
+		"id": "LO1UngenderedSpanish",
+		"titleText": "Ungendered Spanish (the future in our hands):"
+	},
+	"group2": {
+		"component": "Group",
+		"content": [
+			{
+				"radio1": {
+					"component": "Radio",
+					"id": "radio1",
+					"congratulationsText": "Well done!",
+					"instructionsText": "For each phrase, click Greeting or Goodbye.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "sort-table",
+					"options": [
+						"Greeting",
+						"Goodbye"
+					],
+					"phrases": [
+						[
+							"Buen día",
+							0,
+							"'Buen día' is a greeting in Spanish. It is used to wish someone a good day...",
+							"sounds/sp/Buen día.mp3"
+						],
+						[
+							"Buenas tardes",
+							0,
+							"'Buenas tardes' can be used both as a greeting and as a goodbye in Spanish...",
+							"sounds/sp/Buenas tardes.mp3"
+						],
+						[
+							"Hola",
+							0,
+							"",
+							"sounds/sp/Hola.mp3"
+						],
+						[
+							"Adiós",
+							1,
+							"",
+							"sounds/sp/Adiós.mp3"
+						],
+						[
+							"Nos vemos mañana",
+							1,
+							"",
+							"sounds/sp/Nos vemos mañana.mp3"
+						],
+						[
+							"Buenas noches",
+							0,
+							"",
+							"sounds/sp/Buenas noches.mp3"
+						],
+						[
+							"Hasta el jueves",
+							1,
+							"",
+							"sounds/sp/Hasta el jueves.mp3"
+						],
+						[
+							"Hasta luego",
+							1,
+							"",
+							"sounds/sp/Hasta luego.mp3"
+						],
+						[
+							"Hasta pronto",
+							1,
+							"",
+							"sounds/sp/Hasta pronto.mp3"
+						]
+					],
+					"titleText": "1. Greeting or Goodbye?"
+				}
+			},
+			{
+				"radio2": {
+					"component": "Radio",
+					"id": "radio2",
+					"congratulationsText": "Well done!",
+					"instructionsText": "For each phrase, click Greeting or Goodbye.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "sort-table",
+					"options": [
+						"Formal",
+						"Informal"
+					],
+					"phrases": [
+						[
+							"Bien, gracias. ¿Y usted?",
+							0,
+							"",
+							"sounds/sp/Bien, gracias. ¿Y usted.mp3"
+						],
+						[
+							"¿Hola, cómo estás?",
+							1,
+							"",
+							"sounds/sp/¿Hola, cómo estás.mp3"
+						],
+						[
+							"Hola Marta, ¿cómo estás?",
+							1,
+							"",
+							"sounds/sp/Hola Marta, ¿cómo estás.mp3"
+						],
+						[
+							"Buenas noches, Sr. Gómez, ¿cómo está?",
+							0,
+							"",
+							"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3"
+						],
+						[
+							"Señora, ¿cómo está?",
+							0,
+							"",
+							"sounds/sp/Señora, ¿cómo está.mp3"
+						],
+						[
+							"Todo bien, gracias ¿y usted?",
+							0,
+							"",
+							"sounds/sp/Todo bien, gracias ¿y usted.mp3"
+						],
+						[
+							"Así Así. Y tú ¿cómo estás?",
+							1,
+							"",
+							"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
+						]
+					],
+					"titleText": "2. Formal or Informal?"
+				}
+			},
+			{
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Well done!",
+					"instructionsText": "Consider the greetings and replies below. Select whether they are formal or informal.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"Bien, gracias. ¿Y usted? [*Formal|Informal]",
+						"¿Hola, cómo estás? [Formal|*Informal]",
+						"Hola Marta, ¿cómo estás? [Formal|*Informal]",
+						"Buenas noches, Sr. Gómez, ¿cómo está? [*Formal|Informal]",
+						"Señora, ¿cómo está? [*Formal|Informal]",
+						"Todo bien, gracias ¿y usted? [*Formal|Informal]",
+						"Así Así. Y tú ¿cómo estás? [Formal|*Informal]"
+					],
+					"audio": [
+						"sounds/sp/Bien, gracias. ¿Y usted.mp3",
+						"sounds/sp/¿Hola, cómo estás.mp3",
+						"sounds/sp/Hola Marta, ¿cómo estás.mp3",
+						"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3",
+						"sounds/sp/Señora, ¿cómo está.mp3",
+						"sounds/sp/Todo bien, gracias ¿y usted.mp3",
+						"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
+					],
+					"titleText": "2. Formal or Informal? ALTERNATIVE"
+				}
+			},
+			{
+				"wordsIntoSlots1": {
+					"component": "Blanks",
+					"congratulationsText": "Well done!",
+					"id": "wordsIntoSlots1",
+					"instructionsText": "Complete each dialogue by dragging the appropriate reply. If your choice is correct you will be able to listen to the dialogue using the audio icon . You can check your answers and reset the exercise any time.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "questions-answers",
+					"questions": [
+						"Hola, Marcos. Esta es Charo.",
+						"Esta es mi hermana Sara.",
+						"Conozca a los señores Serrano.",
+						"Sr. Romero, ésta es mi madre.",
+						"Encantado de conocerles."
+					],
+					"answers": [
+						"Hola Charo, muy contenta en conocerte.",
+						"¡Por fin te conozco! Soy Valentina.",
+						"Un placer conocerle.",
+						"Es un placer conocerte.",
+						"¡Hola, también es un placer para nosotros!"
+					],
+					"soundFiles": [
+						"sounds/sp/Hola, Marcos. Esta es Charo.Hola Charo, muy contenta en conocerte.mp3",
+						"sounds/sp/Esta es mi hermana Sara.¡Por fin te conozco! Soy Valentina.mp3",
+						"sounds/sp/Conozca a los señores Serrano.Un placer conocerle.mp3",
+						"sounds/sp/Sr. Romero, ésta es mi madre.Es un placer conocerte.mp3",
+						"sounds/sp/Encantado de conocerles.¡Hola, también es un placer para nosotros!.mp3"
+					],
+					"titleText": "3. Match the halves (introducing someone)'"
+				}
+			},
+			{
+				"phrases1": {
+					"component": "Blanks",
+					"id": "phrases1",
+					"congratulationsText": "Excellent !",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "phrases",
+					"phrases": [
+						"Coucou [mon] amour ! Ça [va] aujourd'hui ?",
+						"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
+						"Ça va !"
+					],
+					"audio": [
+						"sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3",
+						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
+						"sounds/fr/Ça va !.mp3"
+					],
+					"titleText": "2. Meeting and greeting gap fillers"
+				}
+			},
+			{
+				"phrases2": {
+					"component": "Blanks",
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"congratulationsText": "Superbe !",
+					"id": "phrases2",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"showHintsText": "Show hints when moving",
+					"phrases": [
+						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
+						"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
+						"Ah pas mal [merci] !"
+					],
+					"audio": [
+						"sounds/fr/Bonsoir Monsieur Galipot ! Comment ça va.mp3",
+						"sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
+						"sounds/fr/Ah pas mal merci !.mp3"
+					],
+					"titleText": "3. Meeting and greeting (formal) gap fillers"
+				}
+			},
+			{
+				"phrases3": {
+					"blanksType": "phrases",
+					"cheatText": "Cheat",
+					"component": "Blanks",
+					"congratulationsText": "Très bien !",
+					"id": "phrases3",
+					"instructionsText": "Drag the words to fill in the gaps.",
+					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
+					"showHintsText": "Show hints when moving",
+					"phrases": [
+						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+						"Bonjour Madame ! Je m' [appelle] Annie.",
+						"Et [moi], je m'appelle David.",
+						"D'accord. Très bien !",
+						"Merci Madame ! Bonne journée !",
+						"Au [revoir] les enfants !  Bonne journée !"
+					],
+					"audio": [
+						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
+						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
+						"sounds/fr/Et moi, je m'appelle David.mp3",
+						"sounds/fr/D'accord. Très bien !.mp3",
+						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
+						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+					],
+					"titleText": "4. Meeting and greeting gap fillers"
+				}
+			},
+			{
+				"wordsIntoSlots2": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots2",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>on</b> or <b>om</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"bonbon",
+						"mon",
+						"ton",
+						"non",
+						"bon",
+						"son",
+						"prénom",
+						"bonjour"
+					],
+					"soundFile": "sounds/fr/LO1 5 words-in-order.mp3",
+					"titleText": "5. Develop your listening skills"
+				}
+			},
+			{
+				"wordsIntoSlots4": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots4",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>oi</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"moi",
+						"roi",
+						"loi",
+						"au revoir",
+						"trois",
+						"toi",
+						"quoi",
+						"froid"
+					],
+					"soundFile": "sounds/fr/LO1 6 words-in-order.mp3",
+					"titleText": "6. Develop your listening skills"
+				}
+			},
+			{
+				"wordsIntoSlots3": {
+					"component": "Blanks",
+					"id": "wordsIntoSlots3",
+					"congratulationsText": "Très bien !",
+					"instructionsTextHTML": "You will hear words containing <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"listenDescriptionText": "Speech",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "table",
+					"words": [
+						"homme",
+						"hôtel",
+						"hôpital",
+						"horrible"
+					],
+					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
+					"titleText": "7. Develop your listening skills"
+				}
+			}
+		],
+		"id": "group2",
+		"titleText": "Exercises"
+	}
+}

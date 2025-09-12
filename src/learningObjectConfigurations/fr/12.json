@@ -469,11 +469,11 @@
 			},
 			{
 				"groupTable1": {
-					"component": "Blanks",
+					"component": "HIDEBlanks",
 					"id": "groupTable1",
 					"congratulationsText": "Well done!",
 					"instructionsText": "You will hear a series of words containing either the sound u or the sound ou. Drag the words below into the correct box as you hear them.",
-					"listenDescriptionText": "Speech",
+					"listenDescriptionText": "Sample",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"blanksType": "group-table",
@@ -547,6 +547,144 @@
 					],
 					"soundFile": "sounds/fr/LO12EX4.mp3",
 					"titleTextHTML": "5. Distinguishing the sounds <b>u</b> and <b>ou</b>"
+				}
+			},
+			{
+				"radio2": {
+					"component": "Radio",
+					"id": "radio2",
+					"congratulationsText": "Well done!",
+					"instructionsTextHTML": "Play each phrase, click <b>u</b> or <b>ou</b>.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"blanksType": "sort-table",
+					"options": [
+						"u",
+						"ou"
+					],
+					"phrases": [
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/du.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/doux.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/pur.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/chou.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/légume.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/tu.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/tout.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/pour.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/rue.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/nous.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/vous.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/poule.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/nu.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/bu.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/vue.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/pull.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/bout.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/couteau.mp3"
+						],
+						[
+							"",
+							1,
+							"",
+							"sounds/fr/roue.mp3"
+						],
+						[
+							"",
+							0,
+							"",
+							"sounds/fr/jus.mp3"
+						]
+					],
+					"titleText": "5. Distinguishing the sounds u and ou."
 				}
 			}
 		],

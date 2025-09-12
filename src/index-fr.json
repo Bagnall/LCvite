@@ -2,67 +2,67 @@
 	"learningObjects": [
 		{
 			"title": "Learning Object 1",
-			"file": "config-fr-1.json"
+			"file": "1"
 		},
 		{
 			"title": "Learning Object 2",
-			"file": "config-fr-2.json"
+			"file": "2"
 		},
 		{
 			"title": "Learning Object 3",
-			"file": "config-fr-3.json"
+			"file": "3"
 		},
 		{
 			"title": "Learning Object 4",
-			"file": "config-fr-4.json"
+			"file": "4"
 		},
 		{
 			"title": "Learning Object 5",
-			"file": "config-fr-5.json"
+			"file": "5"
 		},
 		{
 			"title": "Learning Object 6",
-			"file": "config-fr-6.json"
+			"file": "6"
 		},
 		{
 			"title": "Learning Object 7",
-			"file": "config-fr-7.json"
+			"file": "7"
 		},
 		{
 			"title": "Learning Object 8",
-			"file": "config-fr-8.json"
+			"file": "8"
 		},
 		{
 			"title": "Learning Object 9",
-			"file": "config-fr-9.json"
+			"file": "9"
 		},
 		{
 			"title": "Learning Object 10",
-			"file": "config-fr-10.json"
+			"file": "10"
 		},
 		{
 			"title": "Learning Object 11",
-			"file": "config-fr-11.json"
+			"file": "11"
 		},
 		{
 			"title": "Learning Object 12",
-			"file": "config-fr-12.json"
+			"file": "12"
 		},
 		{
 			"title": "Learning Object 13",
-			"file": "config-fr-13.json"
+			"file": "13"
 		},
 		{
 			"title": "Learning Object 14",
-			"file": "config-fr-14.json"
+			"file": "14"
 		},
 		{
 			"title": "Learning Object 15",
-			"file": "config-fr-15.json"
+			"file": "15"
 		},
 		{
 			"title": "DEMO",
-			"file": "config-fr-demo.json"
+			"file": "demo"
 		}
 	]
 }
