@@ -581,144 +581,42 @@
 				}
 			},
 			{
-				"phrases1": {
-					"component": "Blanks",
-					"id": "phrases1",
-					"congratulationsText": "Excellent !",
-					"instructionsText": "Drag the words to fill in the gaps.",
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Incroyable !",
+					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
-					"blanksType": "phrases",
 					"phrases": [
-						"Coucou [mon] amour ! Ça [va] aujourd'hui ?",
-						"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
-						"Ça va !"
+						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
+						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
+						"Tu [vais|*vas|va|allons|allez|vont] à la boulangerie ?",
+						"Ma mère et moi [vais|vas|va|*allons|allez|vont] au marché.",
+						"Mon frère et son fils [vais|vas|va|allons|allez|*vont] à la bibliothèque.",
+						"Je [*vais|vas|va|allons|allez|vont] au centre sportif.",
+						"Thomas et Louise, vous [vais|vas|va|allons|*allez|vont] au centre-ville ?",
+						"[Je|Tu|Elle|Nous|Vous|*Elles] vont à l'épicerie. ",
+						"[*Je|Tu|Elle|Nous|Vous|Elles] vais à la boucherie.",
+						"[Je|Tu|*Elle|Nous|Vous|Elles] va chez le marchand de fruits et légumes.",
+						"[Je|Tu|Il|Nous|vous|*Ils] vont à la poissonnerie.",
+						"[Je|Tu|*Il|Nous|Vous|Ils] va chez la fleuriste."
 					],
 					"audio": [
-						"sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3",
-						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
-						"sounds/fr/Ça va !.mp3"
+						"sounds/fr/Amel va à la piscine.mp3",
+						"sounds/fr/Mes voisins vont au supermarché.mp3",
+						"sounds/fr/Tu vas à la boulangerie.mp3",
+						"sounds/fr/Ma mère et moi allons au marché.mp3",
+						"sounds/fr/Mon frère et son fils vont à la bibliothèque.mp3",
+						"sounds/fr/Je vais au centre sportif.mp3",
+						"sounds/fr/Thomas et Louise, vous allez au centre-ville.mp3",
+						"sounds/fr/Elles vont à l'épicerie.mp3",
+						"sounds/fr/Je vais à la boucherie.mp3",
+						"sounds/fr/Elle va chez le marchand de fruits et légumes.mp3",
+						"sounds/fr/Ils vont à la poissonnerie.mp3",
+						"sounds/fr/Il va chez la fleuriste.mp3"
 					],
-					"titleText": "2. Meeting and greeting gap fillers"
-				}
-			},
-			{
-				"phrases2": {
-					"component": "Blanks",
-					"blanksType": "phrases",
-					"cheatText": "Cheat",
-					"congratulationsText": "Superbe !",
-					"id": "phrases2",
-					"instructionsText": "Drag the words to fill in the gaps.",
-					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
-						"Bonsoir Monsieur Bernard, ça va très bien, merci. Et [vous] ?",
-						"Ah pas mal [merci] !"
-					],
-					"audio": [
-						"sounds/fr/Bonsoir Monsieur Galipot ! Comment ça va.mp3",
-						"sounds/fr/Bonsoir Monsieur Bernard, ça va très bien, merci. Et vous.mp3",
-						"sounds/fr/Ah pas mal merci !.mp3"
-					],
-					"titleText": "3. Meeting and greeting (formal) gap fillers"
-				}
-			},
-			{
-				"phrases3": {
-					"blanksType": "phrases",
-					"cheatText": "Cheat",
-					"component": "Blanks",
-					"congratulationsText": "Très bien !",
-					"id": "phrases3",
-					"instructionsText": "Drag the words to fill in the gaps.",
-					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
-					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
-						"Bonjour Madame ! Je m' [appelle] Annie.",
-						"Et [moi], je m'appelle David.",
-						"D'accord. Très bien !",
-						"Merci Madame ! Bonne journée !",
-						"Au [revoir] les enfants !  Bonne journée !"
-					],
-					"audio": [
-						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
-						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
-						"sounds/fr/Et moi, je m'appelle David.mp3",
-						"sounds/fr/D'accord. Très bien !.mp3",
-						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
-						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
-					],
-					"titleText": "4. Meeting and greeting gap fillers"
-				}
-			},
-			{
-				"wordsIntoSlots2": {
-					"component": "Blanks",
-					"id": "wordsIntoSlots2",
-					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>on</b> or <b>om</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "table",
-					"words": [
-						"bonbon",
-						"mon",
-						"ton",
-						"non",
-						"bon",
-						"son",
-						"prénom",
-						"bonjour"
-					],
-					"soundFile": "sounds/fr/LO1 5 words-in-order.mp3",
-					"titleText": "5. Develop your listening skills"
-				}
-			},
-			{
-				"wordsIntoSlots4": {
-					"component": "Blanks",
-					"id": "wordsIntoSlots4",
-					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>oi</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "table",
-					"words": [
-						"moi",
-						"roi",
-						"loi",
-						"au revoir",
-						"trois",
-						"toi",
-						"quoi",
-						"froid"
-					],
-					"soundFile": "sounds/fr/LO1 6 words-in-order.mp3",
-					"titleText": "6. Develop your listening skills"
-				}
-			},
-			{
-				"wordsIntoSlots3": {
-					"component": "Blanks",
-					"id": "wordsIntoSlots3",
-					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"blanksType": "table",
-					"words": [
-						"homme",
-						"hôtel",
-						"hôpital",
-						"horrible"
-					],
-					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
-					"titleText": "7. Develop your listening skills"
+					"titleText": "1. Where is everyone going?"
 				}
 			}
 		],

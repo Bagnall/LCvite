@@ -283,7 +283,7 @@
 					"component": "DropDowns",
 					"id": "dropdowns2",
 					"congratulationsText": "Très bien !",
-					"htmlContent": "<div><h2>All the words containing double&nbsp;<b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select y or l in the box below. Once you've completed each task listen to the text.</h2><table class='camille'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de sa fille s&apos;appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/Camille aime les tilleuls de Versailles.mp3'><b>Camille</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p></div>&copy; Jacqueline Rosen",
+					"htmlContent": "<div><h2>All the words containing double&nbsp;<b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select <b>y</b> or <b>l</b> in the box below. Once you've completed each task listen to the text.</h2><table class='camille'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de sa fille s&apos;appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/Camille aime les tilleuls de Versailles.mp3'><b>Camille</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p></div>&copy; Jacqueline Rosen",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
@@ -384,7 +384,7 @@
 					"component": "DropDowns",
 					"id": "dropdowns5",
 					"congratulationsText": "Excellent !",
-					"instructionsText": "Match the beginnings and ends of sentences to read Jeanne's description of her family.",
+					"instructionsText": "Select the correct word to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"phrases": [
@@ -419,7 +419,7 @@
 						"sounds/fr/Ils sont chez leurs grands-parents.mp3",
 						"sounds/fr/Où se trouve leur appartement.mp3"
 					],
-					"titleText": "5. Jeanne's Family."
+					"titleText": "5. Practise the possessives."
 				}
 			},
 			{
@@ -467,7 +467,7 @@
 						"sounds/fr/J'ai deux sœurs et deux frères.mp3",
 						"sounds/fr/Ils sont tous plus âgés que moi.mp3"
 					],
-					"titleText": "6. Match the beginnings and ends of sentences to read Jeanne's description of her family. "
+					"titleText": "6. Jeanne's Family. "
 				}
 			}
 		],

@@ -122,7 +122,7 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p>3 The digraph (vowel combination) oi in French. <AudioClip soundFile={`sounds/fr/non-existant.mp3`}/> WE NEED A SOUND FILE FOR THIS</p>
+					<p>3 The digraph (vowel combination) <AudioClip className={`link`} soundFile={`sounds/fr/oi.mp3`} ><b>oi</b></AudioClip> in French.</p>
 					<p>It is worth being aware of this sound as the letter combination <b>oi</b> appears in many French words e.g. <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
@@ -598,7 +598,7 @@ export class LO4Demystify extends PureComponent {
 					key={`${id}Panel1`}
 				>
 					<p><b>How to pronounce:</b></p>
-					<p>another nasal vowel. This is the sound <AudioClip className={`link`} soundFile={`sounds/fr/ain.mp3`}><b>ain</b></AudioClip>&nbsp;
+					<p>another nasal vowel. This is the sound <AudioClip className={`super-compact`} soundFile={`sounds/fr/ain.mp3`}/>&nbsp;
 						which is how the letters <b>-in-</b> are pronounced <b>when they end a word or occur before a consonant</b> as in these examples:&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Singapour.mp3`}>S<b>in</b>gapour</AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Inde.mp3`}><b>In</b>de</AudioClip>,&nbsp;
@@ -641,7 +641,7 @@ export class LO4EX1 extends PureComponent{
 					key={`${id}Panel1`}
 				>
 					<p>Listen to the following nonsense rhyme. You should be able to identify numerous examples of the sound&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/ain.mp3`}>ain</AudioClip>.
+						<AudioClip className={`super-compact`} soundFile={`sounds/fr/ain.mp3`}/>.
 						Read the nonsense rhyme out loud to practise the Pronunciation</p>
 					<div className={`two-columns`}>
 						<p><b>Tu aimes… ?</b>&nbsp;<AudioClip className={`compact`} soundFile={`sounds/fr/nonsense-rhyme.mp3`}/><br/>
@@ -2051,7 +2051,7 @@ export class L13Grammar extends PureComponent {
 								of <AudioClip className={`link`} soundFile={`sounds/fr/nous.mp3`}><b>nous</b></AudioClip> to mean <b>we</b> in spoken French.</p>
 							<p>It is always used with the third
 								person singular of the verb.
-								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/On parle français ici.mp3`}><b>On parle français ici</b></AudioClip>. <b>French is spoken here</b>.&nbsp;
+								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/On parle français ici.mp3`}><b>On parle français ici</b></AudioClip>. French is spoken here.&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/On va au cinéma.mp3`}><b>On va au cinéma ?</b></AudioClip> Are we going / Shall we go to the cinema?</p>
 						</li>
 						<li>

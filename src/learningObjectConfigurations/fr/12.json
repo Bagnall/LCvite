@@ -553,7 +553,6 @@
 				"radio2": {
 					"component": "Radio",
 					"id": "radio2",
-					"congratulationsText": "Well done!",
 					"instructionsTextHTML": "Play each phrase, click <b>u</b> or <b>ou</b>.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -684,7 +683,7 @@
 							"sounds/fr/jus.mp3"
 						]
 					],
-					"titleText": "5. Distinguishing the sounds u and ou."
+					"titleTextHTML": "5. Distinguishing the sounds u and ou."
 				}
 			}
 		],
