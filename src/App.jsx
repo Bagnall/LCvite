@@ -659,10 +659,18 @@ export default class App extends React.Component {
 					{config ?
 						<>
 							<div id="content" key="content">
-								<div id='hero' key='hero'>
+								{/* <div id='hero' key='hero'>
 									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
 									<h1>{title}</h1>
 									<h2>{subtitle}</h2>
+								</div> */}
+								<div className="hero bg-base-200  w-full">
+									<div className="hero-content text-center">
+										<div className="w-full">
+											<h1 className="text-5xl font-bold">{title}</h1>
+											<h1 className="text-5xl font-bold">{subtitle}</h1>
+										</div>
+									</div>
 								</div>
 								{this.renderMenu()}
 								<Accordion id={`accordion1`} key={`accordion1`}>
