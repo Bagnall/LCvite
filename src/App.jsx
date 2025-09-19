@@ -433,8 +433,8 @@ export default class App extends React.Component {
 					// 	case 'Explanation':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -450,8 +450,8 @@ export default class App extends React.Component {
 					// 	case 'Monologue':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -467,8 +467,8 @@ export default class App extends React.Component {
 					// 	case 'DropDowns':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -484,8 +484,8 @@ export default class App extends React.Component {
 					// 	case 'WordGrid':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={`Word Grid`}
 					// 			>
@@ -500,7 +500,7 @@ export default class App extends React.Component {
 					// 	case 'Group':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`Group${id}Accordion`}
+					// 				id={`Group${compoundID}-Accordion`}
 					// 				key={`$Group{id}Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
@@ -513,8 +513,8 @@ export default class App extends React.Component {
 					// 	case 'WordParts':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -530,8 +530,8 @@ export default class App extends React.Component {
 					// 	case 'AnswerTable':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -547,8 +547,8 @@ export default class App extends React.Component {
 					// 	case 'PhraseTable':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -564,8 +564,8 @@ export default class App extends React.Component {
 					// 	case 'Blanks':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -581,8 +581,8 @@ export default class App extends React.Component {
 					// 	case 'Jigsaw':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -598,8 +598,8 @@ export default class App extends React.Component {
 					// 	case 'MemoryMatchGame':
 					// 		articles.push(
 					// 			<AccordionArticle
-					// 				id={`${id}Accordion`}
-					// 				key={`${id}Accordion`}
+					// 				id={`${compoundID}-Accordion`}
+					// 				key={`${compoundID}-Accordion`}
 					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 					// 				title={titleText}
 					// 				titleHTML={titleTextHTML}
@@ -913,15 +913,18 @@ export default class App extends React.Component {
 		// console.log(`component [${component}]`);
 		// console.log("renderComponent id=", id);
 
-		const { languageCode } = this.state;
+		const {
+			currentLearningObject,
+			languageCode
+		} = this.state;
 		// console.log("renderComponent languageCode", languageCode);
-
+		const compoundID = `LO${currentLearningObject + 1}-${id}`;
 		switch (component) {
 			case 'AnswerTable': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -938,8 +941,8 @@ export default class App extends React.Component {
 			case 'Blanks': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -956,8 +959,8 @@ export default class App extends React.Component {
 			case 'DropDowns': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -974,8 +977,8 @@ export default class App extends React.Component {
 			case 'Explanation': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1007,12 +1010,12 @@ export default class App extends React.Component {
 					instructionsText,
 					instructionsTextHTML,
 				} = value;
-				// console.log(`Group${id}Accordion`);
+				// console.log(`Group${compoundID}-Accordion`);
 				articles.push(
 					<AccordionArticle
 						className={`group`}
-						id={`Group${id}Accordion`}
-						key={`Group${id}Accordion`}
+						id={`Group${compoundID}-Accordion`}
+						key={`Group${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1028,8 +1031,8 @@ export default class App extends React.Component {
 			case 'Jigsaw': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1046,8 +1049,8 @@ export default class App extends React.Component {
 			case 'MemoryMatchGame': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1064,8 +1067,8 @@ export default class App extends React.Component {
 			case 'Monologue': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1082,8 +1085,8 @@ export default class App extends React.Component {
 			case 'PhraseTable': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1100,8 +1103,8 @@ export default class App extends React.Component {
 			case 'Radio': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1117,8 +1120,8 @@ export default class App extends React.Component {
 			}			case 'ReadAloud': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1135,8 +1138,8 @@ export default class App extends React.Component {
 			case 'WordGrid': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1153,8 +1156,8 @@ export default class App extends React.Component {
 			case 'WordParts': {
 				articles.push(
 					<AccordionArticle
-						id={`${id}Accordion`}
-						key={`${id}Accordion`}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1190,8 +1193,8 @@ export default class App extends React.Component {
 				if (CustomComponent) {
 					articles.push(
 						<AccordionArticle
-							id={`${id}Accordion`}
-							key={`${id}Accordion`}
+							id={`${compoundID}-Accordion`}
+							key={`${compoundID}-Accordion`}
 							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
 							title={titleText}
 							titleHTML={titleTextHTML}
