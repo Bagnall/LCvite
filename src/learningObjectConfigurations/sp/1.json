@@ -269,7 +269,7 @@
 	},
 	"customComponent3": {
 		"component": "LO1KnowHow2",
-		"id": "LO1KnowHow1",
+		"id": "LO1KnowHow2",
 		"titleText": "Know-how:"
 	},
 	"phraseTable6": {
@@ -578,45 +578,6 @@
 						"sounds/sp/Encantado de conocerles.¡Hola, también es un placer para nosotros!.mp3"
 					],
 					"titleText": "3. Match the halves (introducing someone)'"
-				}
-			},
-			{
-				"dropdowns1": {
-					"component": "DropDowns",
-					"id": "dropdowns1",
-					"congratulationsText": "Incroyable !",
-					"instructionsText": "Select the correct word to fill in the gaps",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
-						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
-						"Tu [vais|*vas|va|allons|allez|vont] à la boulangerie ?",
-						"Ma mère et moi [vais|vas|va|*allons|allez|vont] au marché.",
-						"Mon frère et son fils [vais|vas|va|allons|allez|*vont] à la bibliothèque.",
-						"Je [*vais|vas|va|allons|allez|vont] au centre sportif.",
-						"Thomas et Louise, vous [vais|vas|va|allons|*allez|vont] au centre-ville ?",
-						"[Je|Tu|Elle|Nous|Vous|*Elles] vont à l'épicerie. ",
-						"[*Je|Tu|Elle|Nous|Vous|Elles] vais à la boucherie.",
-						"[Je|Tu|*Elle|Nous|Vous|Elles] va chez le marchand de fruits et légumes.",
-						"[Je|Tu|Il|Nous|vous|*Ils] vont à la poissonnerie.",
-						"[Je|Tu|*Il|Nous|Vous|Ils] va chez la fleuriste."
-					],
-					"audio": [
-						"sounds/fr/Amel va à la piscine.mp3",
-						"sounds/fr/Mes voisins vont au supermarché.mp3",
-						"sounds/fr/Tu vas à la boulangerie.mp3",
-						"sounds/fr/Ma mère et moi allons au marché.mp3",
-						"sounds/fr/Mon frère et son fils vont à la bibliothèque.mp3",
-						"sounds/fr/Je vais au centre sportif.mp3",
-						"sounds/fr/Thomas et Louise, vous allez au centre-ville.mp3",
-						"sounds/fr/Elles vont à l'épicerie.mp3",
-						"sounds/fr/Je vais à la boucherie.mp3",
-						"sounds/fr/Elle va chez le marchand de fruits et légumes.mp3",
-						"sounds/fr/Ils vont à la poissonnerie.mp3",
-						"sounds/fr/Il va chez la fleuriste.mp3"
-					],
-					"titleText": "1. Where is everyone going?"
 				}
 			}
 		],

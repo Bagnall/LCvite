@@ -5,7 +5,10 @@ import {
 } from '../../utility';
 import {AudioClip} from '../';
 import React from 'react';
-
+// import { Button } from '../button';
+// import { Input } from '../input';
+// import { Textarea } from '../textarea';
+import { Button, Input, Textarea } from '..';
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -102,21 +105,22 @@ export class Monologue extends React.PureComponent {
 							(
 								<form onKeyPress={this.handleKeyPress}>
 									{compact ?
-										<input
+										<Input
 											id={`monologue${id}text`}
+											name={`monologue${id}text`}
 											onChange={this.handleChange}
 											type='text'
 											value={userInput}
 										/>
 										:
-										<textarea value={userInput} onChange={this.handleChange} ></textarea>
+										<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
 									}
-									<button
+									<Button
 										className={``}
 										htmlFor={`monologue${id}text`}
 										type={`submit`}
 										onClick={this.handleValidation}
-									>Check</button>
+									>Check</Button>
 								</form>
 							)
 						}

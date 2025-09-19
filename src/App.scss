@@ -6,6 +6,7 @@
 @use "./styles/_skin.module.scss";
 @use "./styles/_variables.module.scss";
 @use "sass:color";
+@use "tailwindcss";
 
 html.debug {
 	.blanks-container .target .word.blank {
@@ -366,7 +367,7 @@ h2 {
 				// text-align: center;
 				border-radius: 8px;
 			}
-			color: white;
+			// color: white;
 			text-decoration: none;
 			font-weight: bold;
 			&.ellipses {
@@ -395,27 +396,24 @@ h2 {
 				border-radius: calc($ellipses-diameter / 2);
 			}
 			a {
-				// border: 1px solid rgb(0, 0, 0);
 				text-align: center;
 				border-radius: 8px;
 				padding: 0.5rem 1rem;
-				// font-size: 0.5rem;
 				color: white;
 				text-decoration: none;
 				font-weight: bold;
 				width: 100%;
 				height: 100%;
-				// background: red;
 				box-sizing: border-box;
-				box-shadow:
-					inset -4px -4px 8px rgba(0, 0, 0, 0.6),
-					inset 4px 4px 8px rgba(255, 255, 255, 0.6);
+				// box-shadow:
+				// 	inset -4px -4px 8px rgba(0, 0, 0, 0.6),
+				// 	inset 4px 4px 8px rgba(255, 255, 255, 0.6);
 			}
 			&.highlight {
 				a {
-					box-shadow:
-						inset 4px 4px 8px rgba(0, 0, 0, 0.6),
-						inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+					// box-shadow:
+					// 	inset 4px 4px 8px rgba(0, 0, 0, 0.6),
+					// 	inset -4px -4px 8px rgba(255, 255, 255, 0.6);
 				}
 			}
 		}

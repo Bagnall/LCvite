@@ -1,4 +1,4 @@
-import './Radio.scss';
+import './RadioQuiz.scss';
 import {
 	AudioClip,
 	Monologue,
@@ -8,7 +8,7 @@ import {
 	resolveAsset,
 } from '../../utility';
 
-export class Radio extends React.Component {
+export class RadioQuiz extends React.Component {
 
 	// Table of phrases with translatiopns column and sound files column.
 	// config is passed from the parent so that multiple exercises are possible.
@@ -182,7 +182,7 @@ export class Radio extends React.Component {
 
 		return (
 			<div
-				className={`radio-container container`}
+				className={`radio-quiz-container container`}
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>

@@ -11,9 +11,12 @@ export class Accordion extends React.PureComponent {
 		} = this.props;
 
 		return (
-			<div id={id} className={`w-full space-y-3 ${className}`}>
+			<div
+				className={`accordion ${className}`}
+				id={`${id}`}
+			>
 				{children}
 			</div>
 		);
-	};
+	}
 }

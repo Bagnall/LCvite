@@ -1,10 +1,10 @@
-// Radio.scss
+// RadioQuiz.scss
 
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_variables.module.scss";
 
-.radio-container {
+.radio-quiz-container {
 	li {
 		max-height: 26px;
 		min-width: 800px;
@@ -80,7 +80,7 @@
 	}
 }
 @include respond-above(m) {
-	.radio-container {
+	.radio-quiz-container {
 		table {
 			td {
 				font-size: 1rem;

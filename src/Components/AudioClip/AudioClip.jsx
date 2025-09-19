@@ -13,7 +13,10 @@ export class AudioClip extends React.PureComponent {
 		this.audioRef = React.createRef();
 	}
 
-	notePlaying = (useRef) => {
+	notePlaying = (e, useRef) =>
+	{
+		e.preventDefault();
+		e.stopPropagation();
 		// useRef is true when the player is an audio control
 		if (useRef) {
 			this.initialiseProgress(this.audioRef.current);
@@ -23,8 +26,10 @@ export class AudioClip extends React.PureComponent {
 		});
 	};
 
-	handleClick = () => {
+	handleClick = (e) => {
 		// console.log("handleClick (only for super-compact and link)");
+		e.preventDefault();
+		e.stopPropagation();
 		const {
 			soundFileAudio,
 			status = 'stopped',
@@ -57,9 +62,11 @@ export class AudioClip extends React.PureComponent {
 		}
 	};
 
-	playSound = () => {
+	playSound = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		const { soundFile } = this.props;
-		this.notePlaying();
+		this.notePlaying(e, false);
 		const soundFileAudio = new Audio(soundFile);
 		this.initialiseProgress(soundFileAudio);
 		soundFileAudio.onended = () => {
@@ -74,7 +81,9 @@ export class AudioClip extends React.PureComponent {
 		});
 	};
 
-	pause = () => {
+	pause = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		const { soundFileAudio } = this.state;
 		this.setState({
 			status: 'paused'
@@ -116,7 +125,7 @@ export class AudioClip extends React.PureComponent {
 					controls
 					id={id}
 					key={id}
-					onPlay={() => this.notePlaying(true)}
+					onPlay={(e) => this.notePlaying(e, true)}
 					ref={this.audioRef}
 				><source src={soundFile} /></audio>
 			);
@@ -129,7 +138,7 @@ export class AudioClip extends React.PureComponent {
 							controls
 							id={`${id}`}
 							key={id}
-							onPlay={() => this.notePlaying(true)}
+							onPlay={(e) => this.notePlaying(e, true)}
 							ref={this.audioRef}
 						><source src={soundFile}
 							/></audio>
@@ -142,7 +151,7 @@ export class AudioClip extends React.PureComponent {
 						controls
 						id={id}
 						key={id}
-						onPlay={() => this.notePlaying(true)}
+						onPlay={(e) => this.notePlaying(e, true)}
 						ref={this.audioRef}
 					><source src={soundFile} /></audio>
 				);
@@ -244,7 +253,7 @@ class CircularAudioProgress extends AudioClip {
 				<span
 					className={`audio-container ${inline ? 'inline' : ''} super-compact circular-audio-progress ${status}`}
 					onClick={this.handleClick}
-					onPlay={() => this.notePlaying(false)}
+					onPlay={(e) => this.notePlaying(e, false)}
 					ref={this.audioRef}
 					title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
 					style={{
@@ -325,7 +334,7 @@ class LinkAudioProgress extends CircularAudioProgress {
 			<span
 				className={`audio-link ${status}`}
 				onClick={this.handleClick}
-				onPlay={() => this.notePlaying(false)}
+				onPlay={(e) => this.notePlaying(e, false)}
 				ref={this.linkRef}
 				title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
 			>{children}</span>

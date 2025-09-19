@@ -17,7 +17,7 @@ import {
 	MemoryMatchGame,
 	Monologue,
 	PhraseTable,
-	Radio,
+	RadioQuiz,
 	ReadAloud,
 	WordGrid,
 	WordParts,
@@ -659,11 +659,18 @@ export default class App extends React.Component {
 					{config ?
 						<>
 							<div id="content" key="content">
-								<div id='hero' key='hero'>
+								<div className="bg-white px-6 py-24 sm:py-32 lg:px-8 dark:bg-gray-900">
+									<div className="mx-auto max-w-2xl text-center">
+										<h2 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-white">{title}</h2>
+										<h2 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-white">{subtitle}</h2>
+										{/* <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.</p> */}
+									</div>
+								</div>
+								{/* <div id='hero' key='hero'>
 									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
 									<h1>{title}</h1>
 									<h2>{subtitle}</h2>
-								</div>
+								</div> */}
 								{this.renderMenu()}
 								<Accordion id={`accordion1`} key={`accordion1`}>
 									{/* <AccordionArticle
@@ -1106,7 +1113,7 @@ export default class App extends React.Component {
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
-						<Radio
+						<RadioQuiz
 							config={value}
 							logError={this.logError}
 							showDialog={this.showDialog}
@@ -1235,6 +1242,7 @@ export default class App extends React.Component {
 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
 						key={`menu-item-${index}`}>
 						<a
+							className={`btn`}
 							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
 							onClick={() => this.selectLearningObject(index)}
 						>{index <= 14 ? index + 1 : 'Demo'}</a>

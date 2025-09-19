@@ -174,7 +174,7 @@ export const handleSpecialLinkClick = (e) => {
 	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
 	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
 
-	// console.log("handleSpecialLinkClick", e);
+	console.log("handleSpecialLinkClick", e);
 	e.preventDefault();
 	const href = e.target.getAttribute('href');
 
@@ -188,11 +188,14 @@ export const handleSpecialLinkClick = (e) => {
 
 		while (accordionArticle) {
 			// Expand it!
+			console.log("while", accordionArticle);
+			console.log("window.refs", window.refs);
 			try {
 				const ref = window.refs.find((r) => {
+					console.log("searching", r, r && r.props.id, accordionArticle.id);
 					return r !== null && r.props.id === accordionArticle.id;
 				});
-
+				console.log("ref", ref);
 				ref.setState({ expanded: true },
 					() => setTimeout(() => {
 						// Flash a highlight colour to help the user to spot it.
