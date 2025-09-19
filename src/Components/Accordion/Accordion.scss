@@ -6,7 +6,7 @@ Accordion.scss
 	> button {
 		cursor: pointer;
 	}
-	svg {
+	svg.arrow-icon {
 		transition: transform 1s;
 		transform: rotate(0deg);
 	}
@@ -17,7 +17,7 @@ Accordion.scss
 		padding: 0;
 	}
 	&.expanded {
-		svg {
+		svg.arrow-icon {
 			// background: green;
 			transform: rotate(180deg);
 			transition: transform 1s;

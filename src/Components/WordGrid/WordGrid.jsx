@@ -129,7 +129,7 @@ export class WordGrid extends PureComponent {
 			grid: grid,
 			isTouching: false,
 			line: null,
-			lines: [],
+			// lines: [],
 			localWords:localWords,
 			nPlaced: 0,
 			nToSolve: words.length,
@@ -164,7 +164,7 @@ export class WordGrid extends PureComponent {
 
 	handleMouseEnter = (e, row, col) => {
 		const {
-			lines,
+			// lines,
 			nPlaced,
 			nToSolve,
 			selection
@@ -187,7 +187,7 @@ export class WordGrid extends PureComponent {
 				(absDx === absDy);
 
 			if (!isStraight) return;
-
+			const lines = [];
 			lines.push({ end: { row, col }, start }); // eslint-disable-line
 			this.setState({
 				line: { end: { row, col }, start }, // eslint-disable-line
@@ -379,6 +379,7 @@ export class WordGrid extends PureComponent {
 
 		const root = getComputedStyle(document.documentElement);
 		const cellDimension = parseInt(root.getPropertyValue('--cell-dimension').trim());
+		// console.log("cellDimension", cellDimension);
 
 		const renderedFoundLines = new Array();
 		const strokeWidth = cellDimension / 1.2;
@@ -425,6 +426,7 @@ export class WordGrid extends PureComponent {
 				localWordsRendered.push(<span key={`lw${i}`}>{localWords[i]}{i === localWords.length - 1 ? '' : ', '}</span>);
 			}
 		}
+		console.log("grid.length", grid.length);
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
