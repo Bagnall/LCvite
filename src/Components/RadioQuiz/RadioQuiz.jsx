@@ -1,6 +1,7 @@
 import './RadioQuiz.scss';
 import {
 	AudioClip,
+	Button,
 	Label,
 	Monologue,
 	Radio,
@@ -170,7 +171,7 @@ export class RadioQuiz extends React.Component {
 							id={`${id}-${i}-${j}`}
 							key={`input-${id}-${i}-${j}`}
 							visible-key={`input-${id}-${i}-${j}`}
-							name={`${id}-${i}-${j}`}
+							name={`${id}-${i}`}
 							type={`radio`}
 							onChange={(e) => this.handleChange(e, i, j)}
 						/>
@@ -200,24 +201,10 @@ export class RadioQuiz extends React.Component {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
-				<RadioGroup
-					className={`flex gap-6`}
-					value={value}
-					onChange={this.handleChange}
-				>
-					<RadioField>
-						<Label className="inline-flex items-center gap-2 cursor-pointer">Greeting:&nbsp;<Radio value="greeting" />
-						</Label>
-					</RadioField>
-					<RadioField>
-						<Label className="inline-flex items-center gap-2 cursor-pointer">Goodbye:&nbsp;<Radio value="goodbye" />
-						</Label>
-					</RadioField>
-				</RadioGroup>
 				<table>
 					<tbody>
 						{rows}

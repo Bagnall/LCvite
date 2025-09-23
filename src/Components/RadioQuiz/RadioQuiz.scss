@@ -30,7 +30,7 @@
 	}
 	$radio-diameter: 17px;
 	$radio-spot-diameter: 8px;
-	$offscreen: -90px; //-99999px;
+	$offscreen: -99999px;
 	label {
 		// &:nth-of-type(1) {
 		margin-right: 24px;
@@ -75,23 +75,9 @@
 					left: -$offscreen + 3.5px;
 					// border-width: 1px;
 					// border-style: solid;
-					background-color: blue; //#e7e7e8;
-					box-sizing: border-box;
-					z-index: 2;
-				}
-				&::after {
-					content: "";
-					width: $radio-diameter;
-					height: $radio-diameter;
-					border-radius: calc($radio-diameter / 2);
-					position: absolute;
-					top: 0;
-					left: -$offscreen;
-					border-width: 1px;
-					border-style: solid;
 					background-color: #e7e7e8;
 					box-sizing: border-box;
-					z-index: 1;
+					z-index: 2;
 				}
 			}
 			&:disabled {
@@ -108,11 +94,12 @@
 					// border-width: 5px;
 					box-sizing: border-box;
 					z-index: 2;
-					background-color: purple; //#f8f8f9;
+					background-color: #dadada;
 				}
 			}
 			&:checked {
 				&::after {
+					// Not disabled so incorrect, but user can have another go
 					content: "";
 					width: $radio-diameter;
 					height: $radio-diameter;
@@ -121,7 +108,7 @@
 					top: 0; //4.7px;
 					left: -$offscreen; // + 3.5px;
 					border-style: solid;
-					border-color: green; //#18181b;
+					border-color: black; //#18181b;
 					border-width: 5px;
 					box-sizing: border-box;
 					z-index: 2;
@@ -136,7 +123,7 @@
 						top: 0; //4.7px;
 						left: -$offscreen; // + 3.5px;
 						border-style: solid;
-						border-color: red; //#18181b;
+						border-color: black; //red; //#18181b;
 						border-width: 5px;
 						box-sizing: border-box;
 						z-index: 2;
