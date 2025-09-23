@@ -1,11 +1,7 @@
 import './RadioQuiz.scss';
 import {
 	AudioClip,
-	Label,
 	Monologue,
-	Radio,
-	RadioField,
-	RadioGroup,
 } from '..';
 import React from 'react';
 import {
@@ -55,7 +51,7 @@ export class RadioQuiz extends React.Component {
 		});
 	};
 
-	handleChange = (e, rowNum, colNum) => {
+	handleChange = (e) => {
 		const {
 			// id,
 			showDialog,
@@ -70,19 +66,18 @@ export class RadioQuiz extends React.Component {
 			showExplanation
 		} = this.state;
 
-		console.log("handleChange", rowNum, colNum); // e.target.id);
-		// const regex = /^([^-]+)-(\d+)-(\d+)$/;
-		// const match = e.target.id.match(regex);
-		// let rowNum, colNum;
-
-		// if (match) {
-		// 	// const prefix = match[1]; // "radio1"
-		// 	rowNum = parseInt(match[2], 10); // 2
-		// 	colNum = parseInt(match[3], 10); // 3
-		// 	// console.log(prefix, rowNum, colNum);
-		// } else {
-		// 	return;
-		// }
+		// console.log("handleChange", e.target.id);
+		const regex = /^([^-]+)-(\d+)-(\d+)$/;
+		const match = e.target.id.match(regex);
+		let rowNum, colNum;
+		if (match) {
+			// const prefix = match[1]; // "radio1"
+			rowNum = parseInt(match[2], 10); // 2
+			colNum = parseInt(match[3], 10); // 3
+			// console.log(prefix, rowNum, colNum);
+		} else {
+			return;
+		}
 		// const [rowNum, colNum] = e.target.id.match(/radio(\d+)-(\d+)-(\d+)/);
 		// console.log(rowNum, colNum);
 
@@ -161,20 +156,16 @@ export class RadioQuiz extends React.Component {
 			const radios = [];
 			for (let j = 0; j < options.length; j++) {
 				radios.push(
-					<label
-						key={`label-${id}-${i}-${j}`}
-						onClick={(e) => this.handleChange(e, i, j)}
-						forhtml={`${id}-${i}-${j}`}>{options[j]}:&nbsp;
+					<label key={`label-${id}-${i}-${j}`} forhtml={`${id}-${i}-${j}`}>{options[j]}:
 						<input
 							disabled={disabled[i] === true}
 							id={`${id}-${i}-${j}`}
 							key={`input-${id}-${i}-${j}`}
 							visible-key={`input-${id}-${i}-${j}`}
-							name={`${id}-${i}-${j}`}
+							name={`${id}-${i}`}
 							type={`radio`}
-							onChange={(e) => this.handleChange(e, i, j)}
-						/>
-					</label>
+							onChange={this.handleChange}
+						/></label>
 				);
 			};
 			const sound = [];
@@ -185,15 +176,10 @@ export class RadioQuiz extends React.Component {
 				);
 			}
 			rows.push(
-				<tr key={`radio-${id}-${i}`}>
-					<td key={`radio-${id}-${i}-1`}><span className={`phrase`}>{phrase}</span>&nbsp;</td>
-					<td key={`radio-${id}-${i}-2`}>{radios}</td>
-					<td key={`radio-${id}-${i}-3`}>{sound}&nbsp;</td>
-					<td key={`radio-${id}-${i}-4`}><span className={`explanation ${showExplanation[i] ? 'show' : ''}`}>{explanation}</span></td>
-				</tr>
+				<li key={`radio-${id}-${i}`}><span className={`phrase`}>{phrase}</span>&nbsp;{radios}{sound}&nbsp;<span className={`explanation ${showExplanation[i] ? 'show' : ''}`}>{explanation}</span></li>
 			);
 		}
-		const value = 1;
+
 		return (
 			<div
 				className={`radio-quiz-container container`}
@@ -204,25 +190,10 @@ export class RadioQuiz extends React.Component {
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
-				<RadioGroup
-					className={`flex gap-6`}
-					value={value}
-					onChange={this.handleChange}
-				>
-					<RadioField>
-						<Label className="inline-flex items-center gap-2 cursor-pointer">Greeting:&nbsp;<Radio value="greeting" />
-						</Label>
-					</RadioField>
-					<RadioField>
-						<Label className="inline-flex items-center gap-2 cursor-pointer">Goodbye:&nbsp;<Radio value="goodbye" />
-						</Label>
-					</RadioField>
-				</RadioGroup>
-				<table>
-					<tbody>
-						{rows}
-					</tbody>
-				</table>
+
+				<ul>
+					{rows}
+				</ul>
 
 				<p>{nCorrect} correct out of {nPhrases}.</p>
 			</div>

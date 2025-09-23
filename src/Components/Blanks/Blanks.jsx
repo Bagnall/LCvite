@@ -12,6 +12,7 @@ import {
 } from '../../mouseUtility';
 import React from 'react';
 import Variables from '../../styles/_variables.module.scss';
+import { Button } from '..';
 
 export class Blanks extends React.PureComponent {
 
@@ -632,7 +633,7 @@ export class Blanks extends React.PureComponent {
 				onTouchEnd={this.handleMouseUp}
 				key={`${id}Blanks`}
 			>
-				{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
+				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

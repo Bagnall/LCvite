@@ -3,6 +3,7 @@ import {
 	highlightTextDiff,
 } from '../../utility';
 import React from 'react';
+import { Button } from '..';
 
 export class ReadAloud extends React.PureComponent {
 	constructor(props) {
@@ -196,7 +197,7 @@ export class ReadAloud extends React.PureComponent {
 		} else {
 			return (
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
-					<button className={`reset`} onClick={this.handleReset}>Reset</button>
+					<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}

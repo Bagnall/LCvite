@@ -1,0 +1,16 @@
+// RadioTest.scss
+
+@use "../../styles/_colours.module.scss";
+@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/_variables.module.scss";
+
+.radio-test-container {
+	label,
+	input[type="radio"] {
+		cursor: pointer;
+	}
+}
+@include respond-above(m) {
+	.radio-quiz-container {
+	}
+}

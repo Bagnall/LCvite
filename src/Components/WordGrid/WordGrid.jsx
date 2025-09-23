@@ -3,6 +3,7 @@ import '../../styles/_variables.module.scss';
 import React, { PureComponent } from 'react';
 import colours from '../../styles/_colours.module.scss';
 import {resolveAsset} from '../../utility';
+import { Button } from '..';
 
 const directions = [
 	{ x: 1, y: 0 }, // right
@@ -426,11 +427,11 @@ export class WordGrid extends PureComponent {
 				localWordsRendered.push(<span key={`lw${i}`}>{localWords[i]}{i === localWords.length - 1 ? '' : ', '}</span>);
 			}
 		}
-		console.log("grid.length", grid.length);
+		// console.log("grid.length", grid.length);
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}

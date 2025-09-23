@@ -36,7 +36,7 @@ export class AudioClip extends React.PureComponent {
 		} = this.state;
 		switch (status) {
 			case 'stopped':
-				this.playSound();
+				this.playSound(e);
 				break;
 			case 'paused':
 				this.setState({
@@ -46,7 +46,7 @@ export class AudioClip extends React.PureComponent {
 				soundFileAudio.play();
 				break;
 			case 'playing':
-				this.pause();
+				this.pause(e);
 				break;
 		}
 	};

@@ -55,6 +55,7 @@ export class AnswerTable extends React.PureComponent {
 
 	render = () => {
 		const {
+			compoundID,
 			header,
 			htmlContent,
 			id = [],
@@ -74,7 +75,7 @@ export class AnswerTable extends React.PureComponent {
 
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<TableHeader>{header[i]}</TableHeader>);
+				headerCells.push(<TableHeader key={`header-cell-${i}`}>{header[i]}</TableHeader>);
 			}
 		}
 		const rows = new Array();
@@ -141,7 +142,7 @@ export class AnswerTable extends React.PureComponent {
 				}
 
 				rows.push(
-					<TableRow key={`row${i}`}>
+					<TableRow key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
 						{cells}
 					</TableRow>
 				);

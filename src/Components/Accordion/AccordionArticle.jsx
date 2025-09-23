@@ -56,7 +56,7 @@ export class AccordionArticle extends React.PureComponent {
 	// };
 
 	doNowt = (e) => {
-		console.log("doNowt", e);
+		// console.log("doNowt", e);
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -89,7 +89,7 @@ export class AccordionArticle extends React.PureComponent {
 	// };
 
 	toggleExpanded = (e) => {
-		console.log("toggleExpanded");
+		// console.log("toggleExpanded");
 		e.preventDefault();
 		e.stopPropagation();
 		let {

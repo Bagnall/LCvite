@@ -28,6 +28,9 @@
 			}
 		}
 	}
+	$radio-diameter: 17px;
+	$radio-spot-diameter: 8px;
+	$offscreen: -90px; //-99999px;
 	label {
 		// &:nth-of-type(1) {
 		margin-right: 24px;
@@ -38,8 +41,109 @@
 		min-height: 26px;
 		display: inline-block;
 		cursor: pointer;
-		input {
+		input[type="radio"] {
 			cursor: pointer;
+			// width: 15px;
+			// height: 15px;
+			width: $radio-diameter - 4px;
+			height: $radio-diameter - 4px;
+			display: inline-block;
+			border-width: 4px;
+			position: relative;
+			left: $offscreen;
+			&::after {
+				content: "";
+				width: $radio-diameter;
+				height: $radio-diameter;
+				border-radius: calc($radio-diameter / 2);
+				position: absolute;
+				top: 0px;
+				left: -$offscreen;
+				border-width: 1px;
+				border-style: solid;
+				border-color: #c9c9c9;
+				box-sizing: border-box;
+			}
+			&:hover {
+				&::before {
+					content: "";
+					width: $radio-spot-diameter;
+					height: $radio-spot-diameter;
+					border-radius: calc($radio-spot-diameter / 2);
+					position: absolute;
+					top: 4.7px;
+					left: -$offscreen + 3.5px;
+					// border-width: 1px;
+					// border-style: solid;
+					background-color: blue; //#e7e7e8;
+					box-sizing: border-box;
+					z-index: 2;
+				}
+				&::after {
+					content: "";
+					width: $radio-diameter;
+					height: $radio-diameter;
+					border-radius: calc($radio-diameter / 2);
+					position: absolute;
+					top: 0;
+					left: -$offscreen;
+					border-width: 1px;
+					border-style: solid;
+					background-color: #e7e7e8;
+					box-sizing: border-box;
+					z-index: 1;
+				}
+			}
+			&:disabled {
+				&::after {
+					content: "";
+					width: $radio-diameter;
+					height: $radio-diameter;
+					border-radius: calc($radio-diameter / 2);
+					position: absolute;
+					top: 0; //4.7px;
+					left: -$offscreen; // + 3.5px;
+					border-style: solid;
+					// border-color: green; //#18181b;
+					// border-width: 5px;
+					box-sizing: border-box;
+					z-index: 2;
+					background-color: purple; //#f8f8f9;
+				}
+			}
+			&:checked {
+				&::after {
+					content: "";
+					width: $radio-diameter;
+					height: $radio-diameter;
+					border-radius: calc($radio-diameter / 2);
+					position: absolute;
+					top: 0; //4.7px;
+					left: -$offscreen; // + 3.5px;
+					border-style: solid;
+					border-color: green; //#18181b;
+					border-width: 5px;
+					box-sizing: border-box;
+					z-index: 2;
+				}
+				&:disabled {
+					&::after {
+						content: "";
+						width: $radio-diameter;
+						height: $radio-diameter;
+						border-radius: calc($radio-diameter / 2);
+						position: absolute;
+						top: 0; //4.7px;
+						left: -$offscreen; // + 3.5px;
+						border-style: solid;
+						border-color: red; //#18181b;
+						border-width: 5px;
+						box-sizing: border-box;
+						z-index: 2;
+						background-color: #f8f8f9;
+					}
+				}
+			}
 		}
 	}
 	table {

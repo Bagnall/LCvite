@@ -5,9 +5,6 @@ import {
 } from '../../utility';
 import {AudioClip} from '../';
 import React from 'react';
-// import { Button } from '../button';
-// import { Input } from '../input';
-// import { Textarea } from '../textarea';
 import { Button, Input, Textarea } from '..';
 export class Monologue extends React.PureComponent {
 	constructor(props) {
@@ -98,7 +95,7 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						{!compact ? <button className={`reset`} onClick={this.handleReset}>Reset</button> : null}
+						{!compact ? <Button className={`reset`} onClick={this.handleReset}>Reset</Button> : null}
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
@@ -131,7 +128,7 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
-						<button className={`reset`} onClick={this.handleReset}>Reset</button>
+						<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
@@ -141,12 +138,12 @@ export class Monologue extends React.PureComponent {
 							:
 							(
 								<>
-									<textarea value={userInput} onChange={this.handleChange} ></textarea>
-									<button
+									<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
+									<Button
 										className={``}
 										onClick={this.handleValidation}
 										type={`submit`}
-									>Check</button>
+									>Check</Button>
 								</>
 							)
 						}

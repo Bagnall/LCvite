@@ -8,8 +8,13 @@
 		"targetLanguageCode": "fr-FR",
 		"title": "French Learning Object, Component Demo"
 	},
+	"radiotest1": {
+		"component": "RadioTest",
+		"id": "radioTest1",
+		"titleText": "Radio Test"
+	},
 	"radio1": {
-		"component": "Radio",
+		"component": "RadioQuiz",
 		"id": "radio1",
 		"congratulationsText": "Well done!",
 		"instructionsText": "Fill in the table below by dragging greetings and goodbye expressions into the appropriate column.",
@@ -22,61 +27,49 @@
 		],
 		"phrases": [
 			[
-				"Buen día",
-				0,
-				"'Buen día' is a greeting in Spanish. It is used to wish someone a good day...",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Buenas tardes",
-				0,
-				"'Buenas tardes' can be used both as a greeting and as a goodbye in Spanish...",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Hola",
+				"Bien, gracias. ¿Y usted?",
 				0,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Bien, gracias. ¿Y usted.mp3"
 			],
 			[
-				"Adiós",
+				"¿Hola, cómo estás?",
 				1,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/¿Hola, cómo estás.mp3"
 			],
 			[
-				"Nos vemos mañana",
+				"Hola Marta, ¿cómo estás?",
 				1,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Hola Marta, ¿cómo estás.mp3"
 			],
 			[
-				"Buenas noches",
+				"Buenas noches, Sr. Gómez, ¿cómo está?",
 				0,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3"
 			],
 			[
-				"Hasta el jueves",
-				1,
+				"Señora, ¿cómo está?",
+				0,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Señora, ¿cómo está.mp3"
 			],
 			[
-				"Hasta luego",
-				1,
+				"Todo bien, gracias ¿y usted?",
+				0,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Todo bien, gracias ¿y usted.mp3"
 			],
 			[
-				"Hasta pronto",
+				"Así Así. Y tú ¿cómo estás?",
 				1,
 				"",
-				"sounds/sp/.mp3"
+				"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
 			]
 		],
-		"titleText": "Radio"
+		"titleText": "RadioQuiz"
 	},
 	"group1": {
 		"component": "Group",

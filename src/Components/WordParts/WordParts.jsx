@@ -4,6 +4,7 @@ import {
 } from '..';
 import React from 'react';
 import {resolveAsset} from '../../utility';
+import { Button } from '..';
 
 export class WordParts extends React.PureComponent {
 
@@ -181,7 +182,7 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

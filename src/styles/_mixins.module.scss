@@ -24,11 +24,11 @@ _mixins.module.scss
 @mixin comparison() {
 	textarea,
 	.comparison-result {
-		margin: 1rem 0;
+		// margin: 1rem 0;
 		// min-width: 80vw;
-		width: calc(100% - 6px);
+		// width: calc(100% - 6px);
 		min-height: 30vh;
-		border: 1px solid black;
+		// border: 1px solid black;
 		white-space: break-spaces; // normal; /* allow wrapping at word boundaries */
 		overflow-wrap: anywhere; /* if a word is very long, break if needed */
 		word-break: keep-word; /* experimental: fallback is overflow-wrap */
@@ -94,13 +94,13 @@ _mixins.module.scss
 			}
 		}
 	}
-	@include respond-above(s) {
-		textarea,
-		.comparison-result {
-			width: 60vw;
-			min-width: 60vw;
-		}
-	}
+	// @include respond-above(s) {
+	// 	textarea,
+	// 	.comparison-result {
+	// 		width: 60vw;
+	// 		min-width: 60vw;
+	// 	}
+	// }
 }
 
 @mixin standard-table() {

@@ -73,7 +73,7 @@ export class LO1KnowHow1 extends PureComponent {
 
 						<p className="px-5">
 							<strong>'Hello' or 'goodbye'</strong> depend on the time of day. In
-							Spanish the day is divided into four parts: <AudioClip className={`link`} soundFile={`sounds/sp/la manana.mp3`} ><b>la manana</b></AudioClip> (morning),&nbsp;
+							Spanish the day is divided into four parts: <AudioClip className={`link`} soundFile={`sounds/sp/la mañana.mp3`} ><b>la mañana</b></AudioClip> (morning),&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/sp/la tarde.mp3`} ><b>la
 								tarde</b></AudioClip> (afternoon),&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/sp/la noche.mp3`} ><b>la noche</b></AudioClip> (evening -night).

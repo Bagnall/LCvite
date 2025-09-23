@@ -379,7 +379,7 @@ export class Jigsaw extends React.PureComponent {
 				onMouseMove={this.handleMouseMove}
 				onMouseUp={this.handleMouseUp}
 			>
-				{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
+				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

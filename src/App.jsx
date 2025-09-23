@@ -18,6 +18,7 @@ import {
 	Monologue,
 	PhraseTable,
 	RadioQuiz,
+	RadioTest,
 	ReadAloud,
 	WordGrid,
 	WordParts,
@@ -97,7 +98,7 @@ export default class App extends React.Component {
 		if (learningObjectConfigFile && languageCode) {
 			// let LO = parseInt(learningObjectConfigFile.replace(/^\D+/g, ''));
 			// if (isNaN(LO)) LO = 1;
-			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`);
+			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`, learningObjectConfigFile);
 			this.loadIndex(learningObjectConfigFile, languageCode);
 			this.initialiseSpecialAnchors();
 
@@ -245,7 +246,7 @@ export default class App extends React.Component {
 		};
 	};
 
-	loadConfig = (configFile) => {
+	loadConfig = (configFile, learningObjectConfigFile) => {
 		// console.log("loadConfig", configFile);
 
 		// Read the config
@@ -263,6 +264,7 @@ export default class App extends React.Component {
 				.then(handleResponse)
 				.then(res => {
 					const { settings } = res;
+
 					delete res["settings"];
 					const {
 						class: configClass,
@@ -272,10 +274,11 @@ export default class App extends React.Component {
 					document.title = title;
 					if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
 
-					// 🔁 Return a Promise that resolves only when setState is done
+					const currentLearningObject = learningObjectConfigFile;
 
+					// 🔁 Return a Promise that resolves only when setState is done
 					this.setState({
-						config: { ...res },
+						config: { ...res, currentLearningObject },
 						settings: { ...settings },
 						targetLanguageCode,
 					},
@@ -938,9 +941,10 @@ export default class App extends React.Component {
 						titleHTML={titleTextHTML}
 					>
 						<AnswerTable
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
+							config = {value}
+							compoundID = {compoundID}
+							logError = {this.logError}
+							showDialog = {this.showDialog}
 						/>
 					</AccordionArticle>
 				);
@@ -1108,7 +1112,7 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'Radio': {
+			case 'RadioQuiz': {
 				articles.push(
 					<AccordionArticle
 						id={`${compoundID}-Accordion`}
@@ -1125,7 +1129,26 @@ export default class App extends React.Component {
 					</AccordionArticle>
 				);
 				break;
-			}			case 'ReadAloud': {
+			}
+			case 'RadioTest': {
+				articles.push(
+					<AccordionArticle
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
+						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						title={titleText}
+						titleHTML={titleTextHTML}
+					>
+						<RadioTest
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
+				);
+				break;
+			}
+			case 'ReadAloud': {
 				articles.push(
 					<AccordionArticle
 						id={`${compoundID}-Accordion`}
