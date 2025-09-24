@@ -5,10 +5,10 @@
 @use "../../styles/_variables.module.scss";
 
 .radio-quiz-container {
-	li {
-		max-height: 26px;
-		min-width: 800px;
-	}
+	// li {
+	// 	max-height: 26px;
+	// 	min-width: 800px;
+	// }
 	span {
 		max-height: 26px;
 		display: inline-flex;
@@ -41,10 +41,12 @@
 		min-height: 26px;
 		display: inline-block;
 		cursor: pointer;
+		&.disabled {
+			cursor: not-allowed;
+		}
+		input[type="checkbox"],
 		input[type="radio"] {
 			cursor: pointer;
-			// width: 15px;
-			// height: 15px;
 			width: $radio-diameter - 4px;
 			height: $radio-diameter - 4px;
 			display: inline-block;
@@ -81,8 +83,10 @@
 				}
 			}
 			&:disabled {
+				cursor: not-allowed;
 				&::after {
 					content: "";
+					cursor: not-allowed;
 					width: $radio-diameter;
 					height: $radio-diameter;
 					border-radius: calc($radio-diameter / 2);
@@ -108,7 +112,7 @@
 					top: 0; //4.7px;
 					left: -$offscreen; // + 3.5px;
 					border-style: solid;
-					border-color: black; //#18181b;
+					border-color: black;
 					border-width: 5px;
 					box-sizing: border-box;
 					z-index: 2;
@@ -136,14 +140,17 @@
 	table {
 		text-align: left;
 		border-collapse: collapse;
-		background: #ebebeb;
-		background: linear-gradient(45deg, rgb(245, 245, 245) 0%, rgba(255, 255, 255, 1) 50%, rgb(250, 250, 250) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
+		// background: #ebebeb;
+		// background: linear-gradient(45deg, rgb(245, 245, 245) 0%, rgba(255, 255, 255, 1) 50%, rgb(250, 250, 250) 73%, rgba(255, 255, 255, 1) 77%, rgba(237, 237, 237, 1) 100%);
 
 		td,
 		th {
-			border: 1px solid #000000;
+			height: 3rem;
+			color: black;
+			font-weight: normal;
+			border: none; //1px solid #000000;
 			padding: 5px 4px;
-			font-weight: bold;
+			// font-weight: bold;
 			span.inline-monologue {
 				white-space: nowrap;
 				.monologue-container {

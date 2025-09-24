@@ -942,7 +942,6 @@ export default class App extends React.Component {
 					>
 						<AnswerTable
 							config = {value}
-							compoundID = {compoundID}
 							logError = {this.logError}
 							showDialog = {this.showDialog}
 						/>
@@ -1026,8 +1025,8 @@ export default class App extends React.Component {
 				articles.push(
 					<AccordionArticle
 						className={`group`}
-						id={`Group${compoundID}-Accordion`}
-						key={`Group${compoundID}-Accordion`}
+						id={`${compoundID}-Group-Accordion`}
+						key={`${compoundID}-Group-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
 						title={titleText}
 						titleHTML={titleTextHTML}

@@ -20,41 +20,19 @@ export class RadioQuiz extends React.Component {
 
 	constructor(props) {
 		super(props);
+		// const answers = new Array();
+		const { phrases } = props.config;
+		const answers = Array.from({ length: phrases.length }, () => Array(2).fill(false));
 		this.state = ({
 			...props.config,
+			answers: answers,
 			disabled: [],
 			nCorrect: 0,
 			showExplanation: [],
 		});
-		this.countCorrect = this.countCorrect.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleReset = this.handleReset.bind(this);
 	}
-
-	// nCorrect = 0;
-
-	countCorrect = () => {
-		// console.log("countCorrect");
-		const {
-			congratulationsText,
-			phrases,
-		} = this.state;
-		let {
-			nCorrect,
-		} = this.state;
-		// let newNCorrect = nCorrect;
-		const { showDialog } = this.props;
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
-
-		nCorrect++;
-		if (nCorrect === phrases.length) {
-			tadaAudio.play();
-			showDialog(congratulationsText);
-		}
-		this.setState({
-			nCorrect: nCorrect,
-		});
-	};
 
 	handleChange = (e, rowNum, colNum) => {
 		const {
@@ -62,6 +40,7 @@ export class RadioQuiz extends React.Component {
 			showDialog,
 		} = this.props;
 		const {
+			answers,
 			congratulationsText,
 			disabled,
 			phrases,
@@ -72,28 +51,17 @@ export class RadioQuiz extends React.Component {
 		} = this.state;
 
 		console.log("handleChange", rowNum, colNum); // e.target.id);
-		// const regex = /^([^-]+)-(\d+)-(\d+)$/;
-		// const match = e.target.id.match(regex);
-		// let rowNum, colNum;
-
-		// if (match) {
-		// 	// const prefix = match[1]; // "radio1"
-		// 	rowNum = parseInt(match[2], 10); // 2
-		// 	colNum = parseInt(match[3], 10); // 3
-		// 	// console.log(prefix, rowNum, colNum);
-		// } else {
-		// 	return;
-		// }
-		// const [rowNum, colNum] = e.target.id.match(/radio(\d+)-(\d+)-(\d+)/);
-		// console.log(rowNum, colNum);
 
 		e.stopPropagation();
+		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 
 		// console.log(colNum === phrases[rowNum][2], colNum);
 		if (colNum === phrases[rowNum][1]) {
-			tadaAudio.play();
+			clickAudio.play();
+			if (!answers[rowNum]) answers[rowNum] = [];
+			answers[rowNum][colNum] = true;
 			nCorrect++;
 			if (nCorrect === phrases.length) {
 				tadaAudio.play();
@@ -103,8 +71,11 @@ export class RadioQuiz extends React.Component {
 		} else {
 			errorAudio.play();
 		}
+		// console.log("showExplanation", showExplanation, rowNum);
 		showExplanation[rowNum] = true;
+		// console.log("showExplanation", showExplanation);
 		this.setState({
+			answers: answers,
 			disabled: disabled,
 			nCorrect: nCorrect,
 			showExplanation: showExplanation,
@@ -113,12 +84,16 @@ export class RadioQuiz extends React.Component {
 
 	handleReset = () => {
 		// console.log("RESET!");
+		const {
+			id = [],
+		} = this.state;
 
-		const radios = document.querySelectorAll('[id^="radio"]');
+		const radios = document.querySelectorAll(`[id^="${id}"]`);
 		for(let i = 0;i < radios.length;i++)
 			radios[i].checked = false;
 
 		this.setState({
+			answers: [],
 			disabled: [],
 			nCorrect: 0,
 			showExplanation: [],
@@ -130,6 +105,7 @@ export class RadioQuiz extends React.Component {
 
 	render = () => {
 		const {
+			answers,
 			disabled,
 			header,
 			htmlContent,
@@ -163,16 +139,18 @@ export class RadioQuiz extends React.Component {
 			for (let j = 0; j < options.length; j++) {
 				radios.push(
 					<label
+						className={disabled[i] ? 'disabled' : ''}
 						key={`label-${id}-${i}-${j}`}
 						onClick={(e) => this.handleChange(e, i, j)}
 						forhtml={`${id}-${i}-${j}`}>{options[j]}:&nbsp;
 						<input
+							checked={answers && answers[i] && answers[i][j] ? true : ''}
 							disabled={disabled[i] === true}
 							id={`${id}-${i}-${j}`}
 							key={`input-${id}-${i}-${j}`}
 							visible-key={`input-${id}-${i}-${j}`}
 							name={`${id}-${i}`}
-							type={`radio`}
+							type={`checkbox`}
 							onChange={(e) => this.handleChange(e, i, j)}
 						/>
 					</label>
