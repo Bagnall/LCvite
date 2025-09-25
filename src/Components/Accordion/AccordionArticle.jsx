@@ -133,17 +133,7 @@ export class AccordionArticle extends React.PureComponent {
 			>
 				<button
 					onClick={this.toggleExpanded}
-					className={`w-full flex justify-between items-center py-5 text-slate-800`}>
-					{titleHTML ? (
-						<span
-							onClick={this.toggleExpanded}
-							dangerouslySetInnerHTML={{ __html: titleHTML }}
-						/>
-					) : (
-						<span onClick={this.toggleExpanded}
-						>{title}</span>
-					)}
-					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+					className={`w-full flex items-center py-5 text-slate-800`}>
 					<span
 						id={`icon-${id}`}
 						className={`text-slate-800 transition-transform duration-300`}
@@ -156,6 +146,16 @@ export class AccordionArticle extends React.PureComponent {
 							<path fillRule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clipRule="evenodd" />
 						</svg>
 					</span>
+					{titleHTML ? (
+						<span
+							onClick={this.toggleExpanded}
+							dangerouslySetInnerHTML={{ __html: titleHTML }}
+						/>
+					) : (
+						<span onClick={this.toggleExpanded}
+						>{title}</span>
+					)}
+					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
 				</button>
 				<div
 					id={`content-${id}`}

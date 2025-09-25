@@ -32,6 +32,9 @@ html.debug {
 				display: inline-block;
 				outline: none;
 				box-sizing: border-box;
+				border-color: lightgray;
+				border-radius: 8px;
+				border-width: 1px;
 				&.correct {
 					border-color: colours.$correct-border;
 					background: colours.$correct-background;
@@ -67,34 +70,34 @@ html.debug {
 		margin-bottom: 1rem;
 	}
 
-	table {
-		text-align: left;
-		border-collapse: collapse;
-		background: white;
-		td,
-		th {
-			border: 1px solid #000000;
-			padding: 5px 4px;
-			// font-weight: bold;
-		}
-		tbody {
-			border: none;
-			tr {
-				&.spacer {
-					border-left: none;
-					border-right: none;
-					td {
-						border-left: none;
-						border-right: none;
-					}
-				}
-			}
-		}
-		td {
-			font-size: 0.8rem;
-			padding: 0.1rem;
-		}
-	}
+	// table {
+	// 	text-align: left;
+	// 	border-collapse: collapse;
+	// 	background: white;
+	// 	td,
+	// 	th {
+	// 		border: 1px solid #000000;
+	// 		padding: 5px 4px;
+	// 		// font-weight: bold;
+	// 	}
+	// 	tbody {
+	// 		border: none;
+	// 		tr {
+	// 			&.spacer {
+	// 				border-left: none;
+	// 				border-right: none;
+	// 				td {
+	// 					border-left: none;
+	// 					border-right: none;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	td {
+	// 		font-size: 0.8rem;
+	// 		padding: 0.1rem;
+	// 	}
+	// }
 }
 
 @include respond-above(m) {

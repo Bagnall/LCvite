@@ -73,7 +73,8 @@ export class PhraseTable extends React.PureComponent {
 						);
 					} else {
 						cells.push(
-							<TableCell key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></TableCell>
+							<TableCell key={`row${i}cell${j}`} dangerouslySetInnerHTML={{ __html: phrase[j] }}>
+							</TableCell>
 						);
 					}
 				}
@@ -98,9 +99,9 @@ export class PhraseTable extends React.PureComponent {
 				<Table>
 					{header ?
 						<TableHead>
-							<TableRow>
+							<tr>
 								{headerCells}
-							</TableRow>
+							</tr>
 						</TableHead> : null}
 					<TableBody>
 						{rows}

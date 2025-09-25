@@ -76,30 +76,30 @@ html.debug {
 		}
 	}
 
-	table {
-		text-align: left;
-		border-collapse: collapse;
-		background: white;
-		td {
-			border: 1px solid #000000;
-			font-weight: bold;
-			font-size: 0.8rem;
-			padding: 0.1rem;
-		}
-		tbody {
-			border: none;
-			tr {
-				&.spacer {
-					border-left: none;
-					border-right: none;
-					td {
-						border-left: none;
-						border-right: none;
-					}
-				}
-			}
-		}
-	}
+	// table {
+	// 	text-align: left;
+	// 	border-collapse: collapse;
+	// 	background: white;
+	// 	td {
+	// 		border: 1px solid #000000;
+	// 		font-weight: bold;
+	// 		font-size: 0.8rem;
+	// 		padding: 0.1rem;
+	// 	}
+	// 	tbody {
+	// 		border: none;
+	// 		tr {
+	// 			&.spacer {
+	// 				border-left: none;
+	// 				border-right: none;
+	// 				td {
+	// 					border-left: none;
+	// 					border-right: none;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 @keyframes vertical-rotate {
 	0% {

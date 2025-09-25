@@ -9,7 +9,7 @@
 		"title": "French Learning Object, Component Demo"
 	},
 	"radiotest1": {
-		"component": "RadioTest",
+		"component": "HIDERadioTest",
 		"id": "radioTest1",
 		"titleText": "Radio Test"
 	},
@@ -29,7 +29,7 @@
 			[
 				"Bien, gracias. ¿Y usted?",
 				0,
-				"Well hello there!",
+				"Well hello there! An explanation revealed!",
 				"sounds/sp/Bien, gracias. ¿Y usted.mp3"
 			],
 			[

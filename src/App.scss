@@ -275,7 +275,7 @@ h2 {
 	}
 	.html-content,
 	.instructions {
-		padding: 0 1vw;
+		padding: 0 100px 0 1vw; // 100px to clear the reset and shuffle buttons (for now).
 	}
 
 	.footnote {
@@ -344,7 +344,7 @@ h2 {
 
 	button.shuffle {
 		position: absolute;
-		top: 40px;
+		top: 60px;
 		right: 10px;
 	}
 

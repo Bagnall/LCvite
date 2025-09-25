@@ -29,8 +29,7 @@
 									[
 										"¡Hola!",
 										"Hello (formal and informal)",
-										"sounds/sp/¡Hola!.mp3",
-										"well hello there!"
+										"sounds/sp/¡Hola!.mp3"
 									],
 									[
 										"Buenos dias",
@@ -389,7 +388,7 @@
 		"content": [
 			{
 				"radio1": {
-					"component": "Radio",
+					"component": "RadioQuiz",
 					"id": "radio1",
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",

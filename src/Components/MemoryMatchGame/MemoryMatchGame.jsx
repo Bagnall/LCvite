@@ -196,7 +196,7 @@ export class MemoryMatchGame extends React.PureComponent {
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
 				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
-				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
+				<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

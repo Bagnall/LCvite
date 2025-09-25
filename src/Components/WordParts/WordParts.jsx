@@ -2,6 +2,14 @@ import './WordParts.scss';
 import {
 	AudioClip,
 } from '..';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow
+} from '..';
 import React from 'react';
 import {resolveAsset} from '../../utility';
 import { Button } from '..';
@@ -150,28 +158,28 @@ export class WordParts extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<tr className={`spacer`} key={`row${i}`}>
+					<TableRow className={`spacer`} key={`row${i}`}>
 						<td colSpan={3}></td>
-					</tr>
+					</TableRow>
 				);
 			} else {
 				cells.push(
-					<td key={`row${i}cell1`}>
+					<TableCell key={`row${i}cell1`}>
 						{phraseList[i]}
-					</td>
+					</TableCell>
 				);
 				const soundFile = resolveAsset(`${audio[i]}`);
 
 				cells.push(
-					<td key={`row${i}cell2`}>
+					<TableCell key={`row${i}cell2`}>
 						<AudioClip className={`compact`} soundFile={soundFile} />
-					</td>
+					</TableCell>
 				);
 
 				rows.push(
-					<tr key={`row${i}`}>
+					<TableRow key={`row${i}`}>
 						{cells}
-					</tr>
+					</TableRow>
 				);
 			}
 		}
@@ -193,11 +201,11 @@ export class WordParts extends React.PureComponent {
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
 
-				<table>
-					<tbody>
+				<Table>
+					<TableBody>
 						{rows}
-					</tbody>
-				</table>
+					</TableBody>
+				</Table>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 			</div>

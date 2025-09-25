@@ -5,10 +5,12 @@ Accordion.scss
 .accordion-article {
 	> button {
 		cursor: pointer;
-	}
-	svg.arrow-icon {
-		transition: transform 1s;
-		transform: rotate(0deg);
+		// background: red;
+		> span > svg.arrow-icon {
+			transition: transform 1s;
+			transform: rotate(0deg);
+			// for debug box-shadow: 0 0 12px red;
+		}
 	}
 	> div {
 		max-height: 0;
@@ -17,13 +19,16 @@ Accordion.scss
 		padding: 0;
 	}
 	&.expanded {
-		svg.arrow-icon {
+		> button {
 			// background: green;
-			transform: rotate(180deg);
-			transition: transform 1s;
+			> span > svg.arrow-icon {
+				// for debug box-shadow: 0 0 12px green;
+				transform: rotate(180deg);
+				transition: transform 1s;
+			}
 		}
 		> div {
-			max-height: 2600px;
+			max-height: 4000px;
 			transition: max-height 1s;
 		}
 	}

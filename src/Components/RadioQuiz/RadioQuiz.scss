@@ -12,9 +12,9 @@
 	span {
 		max-height: 26px;
 		display: inline-flex;
-		&.phrase {
-			min-width: 350px;
-		}
+		// &.phrase {
+		// 	min-width: 350px;
+		// }
 		&.explanation {
 			// display: inline-block;
 			max-width: 0px;
@@ -44,8 +44,8 @@
 		&.disabled {
 			cursor: not-allowed;
 		}
-		input[type="checkbox"],
-		input[type="radio"] {
+		input[type="checkbox"] {
+			// input[type="radio"] {
 			cursor: pointer;
 			width: $radio-diameter - 4px;
 			height: $radio-diameter - 4px;
@@ -73,8 +73,8 @@
 					height: $radio-spot-diameter;
 					border-radius: calc($radio-spot-diameter / 2);
 					position: absolute;
-					top: 4.7px;
-					left: -$offscreen + 3.5px;
+					top: 4.3px;
+					left: -$offscreen + 4.7px;
 					// border-width: 1px;
 					// border-style: solid;
 					background-color: #e7e7e8;
