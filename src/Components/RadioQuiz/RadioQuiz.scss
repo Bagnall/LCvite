@@ -67,19 +67,9 @@
 				box-sizing: border-box;
 			}
 			&:hover {
-				&::before {
-					content: "";
-					width: $radio-spot-diameter;
-					height: $radio-spot-diameter;
-					border-radius: calc($radio-spot-diameter / 2);
-					position: absolute;
-					top: 4.3px;
-					left: -$offscreen + 4.7px;
-					// border-width: 1px;
-					// border-style: solid;
-					background-color: #e7e7e8;
-					box-sizing: border-box;
-					z-index: 2;
+				&::after {
+					background: #e7e7e8;
+					background: radial-gradient(circle, rgba(231, 231, 232, 1) 0%, rgba(231, 231, 232, 1) 37%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 100%);
 				}
 			}
 			&:disabled {

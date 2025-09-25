@@ -171,9 +171,9 @@
 								"id": "PhraseTable4",
 								"phrases": [
 									[
-										"Hola. ¿Como estás?",
+										"Hola. ¿Cómo estás?",
 										"Hello, how are you?",
-										"sounds/sp/Hola. ¿Como estás.mp3"
+										"sounds/sp/Hola. ¿Cómo estás.mp3"
 									],
 									[
 										"Bien, gracias. ¿Y tú?",
@@ -359,13 +359,13 @@
 				""
 			],
 			[
-				"Mamá, papá, les presento a los senores Fernandez.",
-				"sounds/sp/Mamá, papá, les presento a los senores Fernandez.mp3",
+				"Mamá, papá, les presento a los señores Fernandez.",
+				"sounds/sp/Mamá, papá, les presento a los señores Fernandez.mp3",
 				"¡Gusto en conocerlos!",
 				"sounds/sp/¡Gusto en conocerlos!.mp3"
 			],
 			[
-				"Mum, dad, may I introduce Mr and Mrs Ferri.",
+				"Mum, dad, may I introduce Mr. and Mrs. Fernandez.",
 				"",
 				"Pleased to meet you both!",
 				""
