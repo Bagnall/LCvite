@@ -3,7 +3,15 @@
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_variables.module.scss";
-
+@-moz-document url-prefix() {
+	.radio-quiz-container {
+		label {
+			input[type="checkbox"] {
+				vertical-align: top; // Hack for Firefox :-(
+			}
+		}
+	}
+}
 .radio-quiz-container {
 	// li {
 	// 	max-height: 26px;
@@ -46,6 +54,7 @@
 		}
 		input[type="checkbox"] {
 			// input[type="radio"] {
+			-moz-appearance: initial; // Hack for Firefox :-(
 			cursor: pointer;
 			width: $radio-diameter - 4px;
 			height: $radio-diameter - 4px;
@@ -69,7 +78,7 @@
 			&:hover {
 				&::after {
 					background: #e7e7e8;
-					background: radial-gradient(circle, rgba(231, 231, 232, 1) 0%, rgba(231, 231, 232, 1) 37%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 100%);
+					background: radial-gradient(circle, rgba(231, 231, 232, 1) 0%, rgba(231, 231, 232, 1) 30%, rgba(255, 255, 255, 1) 31%, rgba(255, 255, 255, 1) 100%);
 				}
 			}
 			&:disabled {
