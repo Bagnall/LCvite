@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => ({
 	base: command === 'build' ? `./` : `/projects/richard/`,
 	build: {
 		assetsDir: "src",
-		emptyOutDir: false,
+		emptyOutDir: true,
 		rollupOptions: {
 			output: {
 				assetFileNames: `src/[name].[ext]`,

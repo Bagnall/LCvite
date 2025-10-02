@@ -112,7 +112,7 @@ $card-back-border-width: 8px;
 	.card-back {
 		&:after {
 			@include mixins.standard-pseudo();
-			background-image: url("/projects/richard/images/memory/yorkshire-rose.png");
+			background-image: url("/images/memory/yorkshire-rose.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: 60px;
@@ -135,8 +135,8 @@ $card-back-border-width: 8px;
 		border: $card-back-border-width solid white;
 		box-sizing: border-box;
 
-		background-image: repeating-linear-gradient(45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units)),
-			repeating-linear-gradient(-45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units));
+		background-image:
+			repeating-linear-gradient(45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units)), repeating-linear-gradient(-45deg, $none, $none Calc(1 * $units), $blue Calc(1 * $units), $blue Calc(2 * $units));
 		span {
 			display: none;
 		}

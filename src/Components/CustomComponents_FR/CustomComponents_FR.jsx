@@ -1,8 +1,10 @@
 import './CustomComponents_FR.scss';
+import '../RadioQuiz/RadioQuiz.scss';
 import {
 	Attribution,
 	AudioClip,
 	Figure,
+	RadioQuiz
 } from '..';
 import { Component, PureComponent } from 'react';
 import {
@@ -1283,14 +1285,7 @@ export class LO9Grammar extends PureComponent {
 								"float": "right",
 								"width": "50%",
 							}}>
-								{/* <Figure
-									className={`centre max1000`}
-									src={resolveAsset(`/images/Carte_indicatifs_téléphoniques_français.svg`)}
-									thumb={resolveAsset(`/images/Carte_indicatifs_téléphoniques_français.svg`)}
-									title={`Telephone Regions of France`}
-								/> */}
 								<figure className="figure centre max1000">
-									{/* <a className="image-anchor frame centre max1000" href="/projects/richard//images/Carte_indicatifs_téléphoniques_français.svg" target="_blank" rel="noreferrer"> */}
 									<div className="svg-container" title="Click to hear">
 										<svg
 											height="542.438"
@@ -1835,6 +1830,7 @@ export class L11Grammar extends PureComponent {
 export class L12Grammar extends PureComponent {
 	render = () => {
 		const { id } = this.props;
+
 		return (
 			<div
 				className={`lo12-grammar-container container`}
@@ -2141,86 +2137,86 @@ export class L13Grammar extends PureComponent {
 	};
 }
 
-export class L13TrueFalse extends Component {
+// export class L13TrueFalse extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = ({
-			showExplanation: false,
-		});
-		this.handleChange = this.handleChange.bind(this);
-	}
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = ({
+// 			showExplanation: false,
+// 		});
+// 		this.handleChange = this.handleChange.bind(this);
+// 	}
 
-	handleChange = (e) => {
-		const {
-			answer,
-			onAnswer,
-			id,
-		} = this.props;
-		const [rowNum] = e.target.id.match(/\d+/);
+// 	handleChange = (e) => {
+// 		const {
+// 			answer,
+// 			onAnswer,
+// 			id,
+// 		} = this.props;
+// 		const [rowNum] = e.target.id.match(/\d+/);
 
-		e.stopPropagation();
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+// 		e.stopPropagation();
+// 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+// 		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 
-		// console.log("handleChange", e.target);
-		// console.log("rowNum", rowNum);
-		let userChose = false;
-		if (e.target.id === `${id}true`) {
-			// console.log("TRUE");
-			userChose = true;
-			onAnswer(rowNum, true, userChose === answer);
-		}else{
-			// console.log("FALSE");
-			onAnswer(rowNum, false, userChose === answer);
-		}
-		// console.log(10, "userChose", userChose, answer, userChose === answer);
+// 		// console.log("handleChange", e.target);
+// 		// console.log("rowNum", rowNum);
+// 		let userChose = false;
+// 		if (e.target.id === `${id}true`) {
+// 			// console.log("TRUE");
+// 			userChose = true;
+// 			onAnswer(rowNum, true, userChose === answer);
+// 		}else{
+// 			// console.log("FALSE");
+// 			onAnswer(rowNum, false, userChose === answer);
+// 		}
+// 		// console.log(10, "userChose", userChose, answer, userChose === answer);
 
-		if (userChose === answer) {
-			tadaAudio.play();
-		} else {
-			errorAudio.play();
-			this.setState({
-				showExplanation: true,
-			});
-		}
-	};
+// 		if (userChose === answer) {
+// 			tadaAudio.play();
+// 		} else {
+// 			errorAudio.play();
+// 			this.setState({
+// 				showExplanation: true,
+// 			});
+// 		}
+// 	};
 
-	render = () => {
-		const {
-			disabled,
-			explanation,
-			id,
-			value,
-		} = this.props;
-		const {
-			showExplanation = false,
-		} = this.state;
-		// console.log("showExplanation", showExplanation);
-		// console.log("value", value);
+// 	render = () => {
+// 		const {
+// 			disabled,
+// 			explanation,
+// 			id,
+// 			value,
+// 		} = this.props;
+// 		const {
+// 			showExplanation = false,
+// 		} = this.state;
+// 		// console.log("showExplanation", showExplanation);
+// 		// console.log("value", value);
 
-		return (
-			<span>
-				<label>vrai<input
-					checked={value === true}
-					disabled={disabled}
-					id={`${id}true`}
-					name={`${id}trueFalse`}
-					type={`radio`}
-					onChange={this.handleChange}
-				/></label>&nbsp;/&nbsp;
-				<label>faux<input
-					checked={value === false}
-					disabled={disabled}
-					id={`${id}false`}
-					name={`${id}trueFalse`}
-					type={`radio`}
-					onChange={this.handleChange}
-				/></label>&nbsp;&nbsp;{showExplanation ? explanation : null}
-			</span>
-		);
-	};
-}
+// 		return (
+// 			<span>
+// 				<label>vrai<input
+// 					checked={value === true}
+// 					disabled={disabled}
+// 					id={`${id}true`}
+// 					name={`${id}trueFalse`}
+// 					type={`checkbox`}
+// 					onChange={this.handleChange}
+// 				/></label>&nbsp;/&nbsp;
+// 				<label>faux<input
+// 					checked={value === false}
+// 					disabled={disabled}
+// 					id={`${id}false`}
+// 					name={`${id}trueFalse`}
+// 					type={`checkbox`}
+// 					onChange={this.handleChange}
+// 				/></label>&nbsp;&nbsp;{showExplanation ? explanation : null}
+// 			</span>
+// 		);
+// 	};
+// }
 
 export class L13ASummersDay extends Component {
 
@@ -2286,13 +2282,99 @@ export class L13ASummersDay extends Component {
 	};
 
 	render = () => {
-		const { id } = this.props;
+		const {
+			id,
+			logError,
+			showDialog,
+		} = this.props;
 		const {
 			allAnswered,
-			nCorrect,
-			rowsAnswered,
-			userChose,
 		} = this.state;
+
+		const RQConfig = {
+			"component": "RadioQuiz",
+			"congratulationsText": "Well done!",
+			"id": "L13SummersDayRadioQuiz",
+			"options": [
+				"Vrai",
+				"Faux"
+			],
+			"phrases": [
+				[
+					"Véronique se lève vers 7 heures le week-end.",
+					1,
+					"Véronique se lève vers 6 heures le week-end.",
+					""
+				],
+				[
+					"Elle se promène en ville.",
+					1,
+					"Elle se promène dans le village.",
+					""
+				],
+				[
+					"Elle aime être dehors quand il fait beau.",
+					0,
+					"",
+					""
+				],
+				[
+					"Après sa promenade, Véronique prend un bain.",
+					1,
+					"Elle prend une douche rapide.",
+					""
+				],
+				[
+					"Elle prend un bol de yaourt.",
+					1,
+					"Elle prend un bol de céréales.",
+					""
+				],
+				[
+					"Elle boit du café-crème.",
+					0,
+					"",
+					""
+				],
+				[
+					"Dans le jardin il y a deux arbres.",
+					1,
+					"Dans le jardin il y a trois arbres.",
+					""
+				],
+				[
+					"Véronique passe une heure dans le jardin.",
+					1,
+					"Véronique passe la matinée entière dans le jardin.",
+					""
+				],
+				[
+					"Elle passe l'après-midi avec ses parents.",
+					1,
+					"Elle passe l'après-midi avec ses amis.",
+					""
+				],
+				[
+					"Parfois, ils vont en ville.",
+					0,
+					"",
+					""
+				],
+				[
+					"Elle dîne dans la salle à manger.",
+					1,
+					"Elle dîne dans le jardin ou sur le balcon.",
+					""
+				],
+				[
+					"Le soir, elle se détend.",
+					0,
+					"",
+					""
+				]
+			],
+		};
+
 		return (
 			<div
 				className={`lo13-a-summers-day container`}
@@ -2305,154 +2387,161 @@ export class L13ASummersDay extends Component {
 					key={`${id}CustomComponent`}
 				>
 					<img src={resolveAsset(`images/girl_breakfast.png`)} title={`Girl having breakfast in the garden`} />
-					<p className={`instruction`}>Listen to Véronique describing a typical summer's day. Then decide whether the following statements are true (vrai) of false (faux).</p>
-					<AudioClip className={``} soundFile={`sounds/fr/LO13EX4.mp3`} />
+					<div className={`instructions`}>
+						<p className={`instruction`}>Listen to Véronique describing a typical summer's day. Then decide whether the following statements are true (vrai) of false (faux).</p>
+						<AudioClip className={``} soundFile={`sounds/fr/LO13EX4.mp3`} />
 
-					<div id={`${id}passage`} className={`passage ${allAnswered ? 'show' : 'hide'}`}>
-						<p>En été, je me lève vers six heures le week-end, je m'habille et je me promène dans le village. J'aime être dehors quand il fait beau.
+						<div id={`${id}passage`} className={`passage ${allAnswered ? 'show' : 'hide'}`}>
+							<p>En été, je me lève vers six heures le week-end, je m'habille et je me promène dans le village. J'aime être dehors quand il fait beau.
 							Puis, après, je prends une douche rapide et je prépare mon petit déjeuner. Je prends un bol de céréales et je bois deux tasses
 							de café-crème.
 							J'ai un grand jardin avec beaucoup de fleurs et trois arbres et j'aime faire du jardinage. Souvent, je passe la matinée entière
 							dans le jardin.
 							Je passe l'après-midi avec des amis. Parfois, nous allons en ville, parfois nous restons simplement à la maison. S'il fait chaud,
 							je dîne dans le jardin ou sur le balcon. Le soir, je me détends.
-						</p>
+							</p>
+						</div>
 					</div>
-
-					<table>
-						<tbody>
-							<tr>
-								<td>Véronique se lève vers 7 heures le week-end.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[0]}
-									onAnswer={this.answerRow}
-									id={`line0`}
-									explanation={`Véronique se lève vers 6 heures le week-end.`}
-									value={userChose[0]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Elle se promène en ville.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[1]}
-									onAnswer={this.answerRow}
-									id={`line1`}
-									explanation={`Elle se promène dans le village.`}
-									value={userChose[1]}
-								/>
-								</td>
-							</tr>
-							<tr>
-								<td>Elle aime être dehors quand il fait beau.</td>
-								<td><L13TrueFalse
-									answer={true}
-									disabled={rowsAnswered[2]}
-									onAnswer={this.answerRow}
-									id={`line2`}
-									value={userChose[2]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Après sa promenade, Véronique prend un bain.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[3]}
-									onAnswer={this.answerRow}
-									id={`line3`}
-									explanation={`Elle prend une douche rapide.`}
-									value={userChose[3]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Elle prend un bol de yaourt.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[4]}
-									onAnswer={this.answerRow}
-									id={`line4`}
-									explanation={`Elle prend un bol de céréales.`}
-									value={userChose[4]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Elle boit du café-crème.</td>
-								<td><L13TrueFalse
-									answer={true}
-									disabled={rowsAnswered[5]}
-									onAnswer={this.answerRow}
-									id={`line5`}
-									value={userChose[5]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Dans le jardin il y a deux arbres.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[6]}
-									onAnswer={this.answerRow}
-									id={`line6`}
-									explanation={`Dans le jardin il y a trois arbres.`}
-									value={userChose[6]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Véronique passe une heure dans le jardin.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[7]}
-									onAnswer={this.answerRow}
-									id={`line7`}
-									explanation={`Véronique passe la matinée entière dans le jardin.`}
-									value={userChose[7]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Elle passe l'après-midi avec ses parents.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[8]}
-									onAnswer={this.answerRow}
-									id={`line8`}
-									explanation={`Elle passe l'après-midi avec ses amis.`}
-									value={userChose[8]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Parfois, ils vont en ville.</td>
-								<td><L13TrueFalse
-									answer={true}
-									disabled={rowsAnswered[9]}
-									onAnswer={this.answerRow}
-									id={`line9`}
-									value={userChose[9]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Elle dîne dans la salle à manger.</td>
-								<td><L13TrueFalse
-									answer={false}
-									disabled={rowsAnswered[10]}
-									onAnswer={this.answerRow}
-									id={`line10`}
-									explanation={`Elle dîne dans le jardin ou sur le balcon.`}
-									value={userChose[10]}
-								/></td>
-							</tr>
-							<tr>
-								<td>Le soir, elle se détend.</td>
-								<td><L13TrueFalse
-									answer={true}
-									disabled={rowsAnswered[11]}
-									onAnswer={this.answerRow}
-									id={`line11`}
-									value={userChose[11]}
-								/></td>
-							</tr>
-						</tbody>
-					</table>
-					<p>{nCorrect} correct out of 12</p>
+					<RadioQuiz
+						config={RQConfig}
+						logError={logError}
+						showDialog={showDialog}
+						onComplete={() => this.setState({allAnswered: true})}
+					/>
+					{/* <table>
+							<tbody>
+								<tr>
+									<td>Véronique se lève vers 7 heures le week-end.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[0]}
+										onAnswer={this.answerRow}
+										id={`line0`}
+										explanation={`Véronique se lève vers 6 heures le week-end.`}
+										value={userChose[0]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Elle se promène en ville.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[1]}
+										onAnswer={this.answerRow}
+										id={`line1`}
+										explanation={`Elle se promène dans le village.`}
+										value={userChose[1]}
+									/>
+									</td>
+								</tr>
+								<tr>
+									<td>Elle aime être dehors quand il fait beau.</td>
+									<td><L13TrueFalse
+										answer={true}
+										disabled={rowsAnswered[2]}
+										onAnswer={this.answerRow}
+										id={`line2`}
+										value={userChose[2]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Après sa promenade, Véronique prend un bain.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[3]}
+										onAnswer={this.answerRow}
+										id={`line3`}
+										explanation={`Elle prend une douche rapide.`}
+										value={userChose[3]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Elle prend un bol de yaourt.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[4]}
+										onAnswer={this.answerRow}
+										id={`line4`}
+										explanation={`Elle prend un bol de céréales.`}
+										value={userChose[4]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Elle boit du café-crème.</td>
+									<td><L13TrueFalse
+										answer={true}
+										disabled={rowsAnswered[5]}
+										onAnswer={this.answerRow}
+										id={`line5`}
+										value={userChose[5]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Dans le jardin il y a deux arbres.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[6]}
+										onAnswer={this.answerRow}
+										id={`line6`}
+										explanation={`Dans le jardin il y a trois arbres.`}
+										value={userChose[6]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Véronique passe une heure dans le jardin.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[7]}
+										onAnswer={this.answerRow}
+										id={`line7`}
+										explanation={`Véronique passe la matinée entière dans le jardin.`}
+										value={userChose[7]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Elle passe l'après-midi avec ses parents.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[8]}
+										onAnswer={this.answerRow}
+										id={`line8`}
+										explanation={`Elle passe l'après-midi avec ses amis.`}
+										value={userChose[8]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Parfois, ils vont en ville.</td>
+									<td><L13TrueFalse
+										answer={true}
+										disabled={rowsAnswered[9]}
+										onAnswer={this.answerRow}
+										id={`line9`}
+										value={userChose[9]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Elle dîne dans la salle à manger.</td>
+									<td><L13TrueFalse
+										answer={false}
+										disabled={rowsAnswered[10]}
+										onAnswer={this.answerRow}
+										id={`line10`}
+										explanation={`Elle dîne dans le jardin ou sur le balcon.`}
+										value={userChose[10]}
+									/></td>
+								</tr>
+								<tr>
+									<td>Le soir, elle se détend.</td>
+									<td><L13TrueFalse
+										answer={true}
+										disabled={rowsAnswered[11]}
+										onAnswer={this.answerRow}
+										id={`line11`}
+										value={userChose[11]}
+									/></td>
+								</tr>
+							</tbody>
+						</table> */}
+					{/* <p>{nCorrect} correct out of 12</p> */}
 				</div>
 			</div>
 		);
@@ -2687,5 +2776,3 @@ export class AudioClipSamples extends PureComponent {
 		);
 	};
 }
-
-

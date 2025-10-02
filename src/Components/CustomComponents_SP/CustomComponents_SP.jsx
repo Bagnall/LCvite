@@ -3,6 +3,12 @@ import {
 	Attribution,
 	AudioClip,
 	Figure,
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
 } from '..';
 import { Component, PureComponent } from 'react';
 import {
@@ -218,10 +224,10 @@ export class LO1UngenderedSpanish extends PureComponent {
 						</p>
 						<table>
 							<tbody>
-								<tr><td><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>una amiga ruidosa</b></AudioClip></td><td>a loud (female) friend</td></tr>
-								<tr><td><AudioClip className={`link`} soundFile={`sounds/sp/un amigo ruidoso.mp3`}><b>un amigo ruidoso</b></AudioClip></td><td>a loud (male) friend</td></tr>
-								<tr><td><AudioClip className={`link`} soundFile={`sounds/sp/unas amigas ruidosas.mp3`}><b>unas amigas ruidosas</b></AudioClip></td><td>some loud (female) friends</td></tr>
-								<tr><td><AudioClip className={`link`} soundFile={`sounds/sp/unos amigos ruidosos.mp3`}><b>unos amigos ruidosos</b></AudioClip></td><td>some loud (not-all-female) friends</td></tr>
+								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>una amiga ruidosa</b></AudioClip></TableCell><TableCell>a loud (female) friend</TableCell></TableRow>
+								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/un amigo ruidoso.mp3`}><b>un amigo ruidoso</b></AudioClip></TableCell><TableCell>a loud (male) friend</TableCell></TableRow>
+								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/unas amigas ruidosas.mp3`}><b>unas amigas ruidosas</b></AudioClip></TableCell><TableCell>some loud (female) friends</TableCell></TableRow>
+								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/unos amigos ruidosos.mp3`}><b>unos amigos ruidosos</b></AudioClip></TableCell><TableCell>some loud (not-all-female) friends</TableCell></TableRow>
 							</tbody>
 						</table>
 						<br/>
@@ -230,9 +236,438 @@ export class LO1UngenderedSpanish extends PureComponent {
 						</p>
 						<table>
 							<tbody>
-								<tr><td><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>unes amigues ruidoses</b></AudioClip></td><td>some loud friends</td></tr>
+								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>unes amigues ruidoses</b></AudioClip></TableCell><TableCell>some loud friends</TableCell></TableRow>
 							</tbody>
 						</table>
+					</section>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO3Intro extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo3-intro-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}LO3Intro`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}LO3Intro`}
+				>
+					<div className="intro-contents">
+						<div className="intro-text-div">
+
+							<h1 className="intro-h1">Numbers</h1>
+
+							<p>Here you can see at a glance the Spanish key language related to Numbers: 0-1,000,000, millions and more,
+								including the ordinals and some basic maths expressions.</p>
+						</div>
+						<div className="intro-img">
+							<img
+								src={resolveAsset(`images/Numbers.png`)}
+								alt={`image of 3d digits`}
+								title={`image of 3d digits`}
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	};
+}
+
+export class LO3KnowHow1 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo3-know-how-1 container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent`}
+				>
+
+					<p>KNOW – HOW: Additional Information</p>
+					<p>Additional Information (adapted into English)</p>
+					<p>Numbers with more than one element are joined together with a dot (point). For example: 4.560 (cuatro mil
+		quinientos sesenta).</p>
+					<p>As a curiosity, we point out that the European numbering system (including Spanish) is different from the
+		Anglo-Saxon one. In the Spanish speaking world, un billón means one million million, while in the Anglo-Saxon
+		system a billion means one thousand million:</p>
+					<p>Spain: Un billón = 1.000.000.000.000</p>
+					<p>Anglo-Saxon countries: Un billón = 1.000.000.000</p>
+					<p>The way of separating thousands and decimals is also different. In Spanish-speaking countries we use the dot (.)
+		to separate thousands and the comma (,) to separate decimals:</p>
+					<p>3.537,52 = tres mil quinientos treinta y siete con cincuenta y dos.</p>
+					<p></p>
+					<p>Know-how (adapted into English)</p>
+					<p>Spanish numbers are very easy to learn! Look carefully and try to spot the patterns.</p>
+					<Table className={`
+						w-full
+    [&_td]:align-top
+    [&_th]:align-top
+							[&_th]:whitespace-normal
+						[&_td]:whitespace-normal
+						[&_td]:break-words
+						[&_ul]:list-disc
+        [&_ul]:ml-6 
+						`}
+					>
+						<TableBody>
+							<TableRow>
+								<TableCell>Español: (instrucción) Escucha a la gente hablar de millones y más, haciendo clic en los iconos de audio.
+								</TableCell>
+								<TableCell>Listen to people talking about millions and more by clicking on the audio icons.</TableCell>
+							</TableRow>
+							<TableRow><TableCell>1.000.000 – un millón de personas visitaron Cambridge el año pasado.</TableCell>
+								<TableCell>1,000,000 – one million people visited Cambridge last year.</TableCell>
+							</TableRow>
+							<TableRow><TableCell>16.789.223 – El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil
+			doscientos veintitrés dólares.</TableCell>
+							<TableCell>16,789,223 – The gross domestic product of Colombia is sixteen million seven hundred eighty-nine
+				thousand two hundred twenty-three dollars.</TableCell>
+							</TableRow>
+							<TableRow><TableCell>2.000.000 – dos millones</TableCell>
+								<TableCell>2,000,000 – two million</TableCell>
+							</TableRow>
+							<TableRow><TableCell>12.000.000 € – el premio de la lotería es de doce millones de euros</TableCell>
+								<TableCell>12,000,000 € – the lottery prize is twelve million euros</TableCell>
+							</TableRow>
+
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números 1-15</li>
+									</ol>
+									<p>Spanish:<br />Para los números del 0 al 10 no hay un patrón real; hay que memorizarlos porque
+					reaparecen constantemente: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez.</p>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>1. Numbers 1–15</p>
+									<p>English:<br />For numbers 0–10, there is no real pattern; they must be memorised because they
+					reappear throughout counting: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez.
+									</p>
+									<ol>
+										<li>Numbers 11-15</li>
+									</ol>
+									<p>The next group (11–15) has a common ending -ce: once, doce, trece, catorce, quince.</p>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números del 11-15</li>
+									</ol>
+									<p>El siguiente grupo (11–15) tiene la terminación común -ce: once, doce, trece, catorce, quince.</p>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Númeors 16-19</li>
+									</ol>
+									<p>Spanish:<br />Estos números significan literalmente “diez y seis”, “diez y siete”, etc. Se pueden
+					escribir de dos formas:</p>
+									<ul>
+										<li>Estilo antiguo: diez y seis, diez y siete, diez y ocho, diez y nueve.</li>
+									</ul>
+									<p>Nota: puede encontrarse en las publicacione antiguas.</p>
+									<ul>
+										<li>Estilo moderno (preferido): dieciséis, diecisiete, dieciocho, diecinueve.</li>
+									</ul>
+									<p>Nota: En la forma moderna, la “z” de diez cambia a “c” y la “y” se convierte en “i”. Ambas formas se
+					pronuncian igual.</p>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>3. Numbers 16–19</p>
+									<p>English:<br />These numbers literally mean “ten and six,” “ten and seven,” etc. They can be written
+					in two ways:</p>
+									<ul>
+										<li>Old style: diez y seis, diez y siete, diez y ocho, diez y nueve.</li>
+									</ul>
+									<p></p>
+									<ul>
+										<li>Modern style (preferred): dieciséis, diecisiete, dieciocho, diecinueve.</li>
+									</ul>
+									<p>In the modern form, the “z” in diez becomes a “c,” and the “y” becomes “i.” Both are pronounced the
+					same.</p>
+									<p>Nowadays, the shorter, combined form is preferred, although both are correct.</p>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números 20-29</li>
+									</ol>
+									<p>Spanish:<br />Los números del 21 al 29 se condensan en una sola palabra.</p>
+									<p>La –‘e’ final de veinte desaparece y la y se convierte en i.</p>
+									<p>Algunos números (22, 23, 26) llevan tilde:</p>
+									<p>Ejemplos:</p>
+									<ul>
+										<li>20 = veinte</li>
+										<li>21 = veintiuno</li>
+										<li>22 = veintidós</li>
+										<li>23 = veintitrés</li>
+										<li>24 = veinticuatro</li>
+										<li>25 = veinticinco</li>
+										<li>26 = veintiséis</li>
+										<li>27 = veintisiete</li>
+										<li>28 = veintiocho</li>
+										<li>29 = veintinueve</li>
+									</ul>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>4. Numbers 20–29</p>
+									<p>English:<br />Numbers from 21–29 are condensed into a single word.</p>
+									<p>The final “-e” in veinte is dropped and the “y” becomes “i.”</p>
+									<p>Some numbers (22, 23, 26) require an accent:</p>
+									<p>Ejemplos:</p>
+									<ul>
+										<li>20 = veinte</li>
+										<li>21 = veintiuno</li>
+										<li>22 = veintidós</li>
+										<li>23 = veintitrés</li>
+										<li>24 = veinticuatro</li>
+										<li>25 = veinticinco</li>
+										<li>26 = veintiséis</li>
+										<li>27 = veintisiete</li>
+										<li>28 = veintiocho</li>
+										<li>29 = veintinueve</li>
+									</ul>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números 30-100</li>
+									</ol>
+									<p>Español:<br />A partir del 31, los números siguen el patrón: decena + y + unidad.<br />Por ejemplo:
+					31 = treinta y uno.</p>
+									<p>Consejos:</p>
+									<ul>
+										<li>Excepto veinte, todas las decenas terminan en -enta (treinta, cuarenta, cincuenta, sesenta,
+						setenta, ochenta, noventa).</li>
+										<li>Cada decena está relacionada con el número pequeño correspondiente (cuatro → cuarenta, ocho →
+						ochenta).</li>
+										<li>El número 100 es cien (relacionado con palabras en inglés como century o percent).</li>
+									</ul>
+									<p>Aprende todas las unidades de 10 (decenas) y adiciona el digito con un claro sonido the ‘y’.</p>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>4. Numbers 30–100</p>
+									<p>English:<br />From 31 onwards, numbers follow the pattern: tens + y + units.<br />For example: 31 =
+					treinta y uno (thirty-one).</p>
+									<p>Tips:</p>
+									<ul>
+										<li>Except for veinte, all the tens end in -enta (treinta, cuarenta, cincuenta, sesenta, setenta,
+						ochenta, noventa).</li>
+										<li>Each tens word is linked to its smaller number (cuatro → cuarenta, ocho → ochenta).</li>
+										<li>The number 100 is cien (related to English words like century and percent).</li>
+									</ul>
+									<p>Learn all the tens and add the digit with a clear y sound (= and).</p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números 101-1000</li>
+									</ol>
+									<p>Español:</p>
+									<ul>
+										<li>Para los números del 101 al 199 se usa ciento:<br />ciento uno, ciento veintinueve, ciento
+						noventa y cinco.</li>
+										<li>Recuerda: 100 se usa cien.</li>
+										<li>El plural de cien es cientos, no cienes.</li>
+										<li>Algunas formas son irregulares: quinientos (500), setecientos (700), novecientos (900).</li>
+										<li>Ejemplos:</li>
+										<li>101 = ciento uno</li>
+										<li>120 = ciento veinte</li>
+										<li>135 = ciento treinta y cinco</li>
+										<li>200 = doscientos</li>
+										<li>450 = cuatrocientos cincuenta</li>
+										<li>900 = novecientos</li>
+									</ul>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>5. Numbers 101–1000</p>
+									<p>English:</p>
+									<ul>
+										<li>For numbers from 101 to 199, use ciento:<br />ciento uno, ciento veintinueve, ciento noventa y
+						cinco.</li>
+										<li>For exactly 100, use cien.</li>
+										<li>The plural of cien is cientos, not cienes.</li>
+										<li>Some forms are irregular: quinientos (500), setecientos (700), novecientos (900).</li>
+										<li>Examples:</li>
+										<li>101 = ciento uno (one hundred and one)</li>
+										<li>120 = ciento veinte (one hundred and twenty)</li>
+										<li>135 = ciento treinta y cinco (one hundred and thirty-five)</li>
+										<li>200 = doscientos (two hundred)</li>
+										<li>450 = cuatrocientos cincuenta (four hundred and fifty)</li>
+										<li>900 = novecientos (nine hundred)</li>
+									</ul>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Números 1.000–1.000.000</li>
+									</ol>
+									<p>Español:</p>
+									<ul>
+										<li>“Mil” significa one thousand. No se usa un mil; se dice simplemente mil.</li>
+										<li>Para separar las cifras, en español se utiliza el punto (.) para los millares y la coma (,) para
+						los decimales.</li>
+									</ul>
+									<p>Ejemplos:</p>
+									<ul>
+										<li>1.000 = mil</li>
+										<li>1.500 = mil quinientos</li>
+										<li>2.000 = dos mil</li>
+										<li>3.000 = tres mil</li>
+										<li>10.000 = diez mil</li>
+										<li>1.000.000 = un millón</li>
+									</ul>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>Numbers 1,000–1,000,000</p>
+									<p>English:</p>
+									<ul>
+										<li>Mil means one thousand. You do not say un mil; simply use mil.</li>
+										<li>To separate numbers, Spanish uses the dot (.) for thousands and the comma (,) for decimals.</li>
+									</ul>
+									<p>Examples:</p>
+									<ul>
+										<li>1.000 = mil (one thousand)</li>
+										<li>1.500 = mil quinientos (one thousand five hundred)</li>
+										<li>2.000 = dos mil (two thousand)</li>
+										<li>3.000 = tres mil (three thousand)</li>
+										<li>10.000 = diez mil (ten thousand)</li>
+										<li>1.000.000 = un millón (one million)</li>
+									</ul>
+									<p></p>
+								</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<ol>
+										<li>Cómo hablar de los años y las fechas</li>
+									</ol>
+									<p>Español:<br />Hablar de los años en español es muy sencillo, ya que se leen como números cardinales.
+									</p>
+									<p>Ejemplos:</p>
+									<ul>
+										<li>En el año 1492 (mil cuatrocientos noventa y dos), Cristóbal Colón descubrió América.</li>
+										<li>¿En qué año naciste? – Yo nací en 1974 (mil novecientos setenta y cuatro).</li>
+										<li>¿Cuándo empezó el proceso de independencia en Colombia? – En 1819 (mil ochocientos diecinueve).
+										</li>
+									</ul>
+									<p></p>
+								</TableCell>
+								<TableCell>
+									<p>6. How to Talk about Years and dates</p>
+									<p>English:<br />Talking about years in Spanish is very straightforward, because they are said just like
+					regular cardinal numbers.</p>
+									<p>Examples:</p>
+									<ul>
+										<li>In the year 1492 (mil cuatrocientos noventa y dos), Christopher Columbus discovered America.
+										</li>
+										<li>What year were you born? – I was born in 1974 (mil novecientos setenta y cuatro).</li>
+										<li>When did the Colombian independence process begin? – In 1819 (mil ochocientos diecinueve).</li>
+									</ul>
+									<p></p>
+								</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
+				</div>
+			</div>
+		);
+	};
+}
+
+
+
+export class LO4Intro extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo4-intro-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}LO4Intro`}
+				>
+					<div className="intro-contents">
+						<div className="intro-text-div">
+							<h1 className="intro-h1">About Me</h1>
+							<p className="intro-text">Here you can see at a glance the Spanish key language related to you:
+							name, nationality, residence, professions, marital status and family.</p>
+						</div>
+						<div className="intro-img">
+							<img
+								src={resolveAsset(`images/All_about_me.png`)}
+								alt={`image of a friendly man with his hand on his chest`}
+								title={`image of a friendly man with his hand on his chest`}
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	};
+}
+export class LO4KnowHow1 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-know-how-1 container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
+				<div
+					className={`panel`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}CustomComponent1`}
+				>
+					<section className="know-how">
+						<h2 className="mx-auto font-bold text-2xl">Know-how:</h2>
+
+
+
+						<p>"¿Cómo te llamas?" literally means "how do you call yourself?". "Me llamo ..." literally means "I call myself ...".</p>
+						<p>In formal situation Spanish uses the third form of the verb (él) of 'you'.</p>
+						<p>In Spanish there are two ways of saying "you": There's the informal form, tú and the more formal usted (often abbreviated as Ud.) when using pronoun usted, the verb must be conjugated in the 3rd person singular, e.g. es, está, tiene, puede, etc.</p>
+
+
 					</section>
 				</div>
 			</div>

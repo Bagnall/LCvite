@@ -7,4 +7,15 @@
 
 .phrases-table-container {
 	// @include mixins.standard-table();
+	table {
+		tbody {
+			tr {
+				td {
+					span {
+						white-space: initial; // To override tailwind :-(
+					}
+				}
+			}
+		}
+	}
 }

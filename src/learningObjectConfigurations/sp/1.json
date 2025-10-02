@@ -460,7 +460,7 @@
 			},
 			{
 				"radio2": {
-					"component": "Radio",
+					"component": "HIDERadioQuizHIDE",
 					"id": "radio2",
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",
@@ -544,7 +544,7 @@
 						"sounds/sp/Todo bien, gracias ¿y usted.mp3",
 						"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
 					],
-					"titleText": "2. Formal or Informal? ALTERNATIVE"
+					"titleText": "2. Formal or Informal?"
 				}
 			},
 			{
@@ -564,20 +564,49 @@
 						"Encantado de conocerles."
 					],
 					"answers": [
-						"Hola Charo, muy contenta en conocerte.",
+						"Hola Charo, muy contento en conocerte.",
 						"¡Por fin te conozco! Soy Valentina.",
 						"Un placer conocerle.",
 						"Es un placer conocerte.",
 						"¡Hola, también es un placer para nosotros!"
 					],
 					"soundFiles": [
-						"sounds/sp/Hola, Marcos. Esta es Charo.Hola Charo, muy contenta en conocerte.mp3",
+						"sounds/sp/Hola, Marcos. Esta es Charo. Hola Charo, muy contenta en conocerte.mp3",
 						"sounds/sp/Esta es mi hermana Sara.¡Por fin te conozco! Soy Valentina.mp3",
 						"sounds/sp/Conozca a los señores Serrano.Un placer conocerle.mp3",
 						"sounds/sp/Sr. Romero, ésta es mi madre.Es un placer conocerte.mp3",
 						"sounds/sp/Encantado de conocerles.¡Hola, también es un placer para nosotros!.mp3"
 					],
 					"titleText": "3. Match the halves (introducing someone)'"
+				}
+			},
+			{
+				"dropdowns2": {
+					"component": "DropDowns",
+					"id": "dropdowns2",
+					"congratulationsText": "Well done!",
+					"instructionsText": "In the Dialogues below, select the correct form. If you get it wrong use the hint to help you.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Cheat",
+					"phrases": [
+						"estoy|estás|está|estamos|estáis|están",
+						"Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien? Hint: ESTAR 2nd sing. informal",
+						"? (estaás  bien)",
+						"Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú? Hint: thank you",
+						"",
+						"Señora María. Buenos dias ¿Todo bien?          (buenos dias cómo está su familia?)      ",
+						"See Hint: Good morning and family"
+					],
+					"audio": [
+						"sounds/sp/Bien, gracias. ¿Y usted.mp3",
+						"sounds/sp/¿Hola, cómo estás.mp3",
+						"sounds/sp/Hola Marta, ¿cómo estás.mp3",
+						"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3",
+						"sounds/sp/Señora, ¿cómo está.mp3",
+						"sounds/sp/Todo bien, gracias ¿y usted.mp3",
+						"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
+					],
+					"titleText": "2. Formal or Informal? ALTERNATIVE"
 				}
 			}
 		],

@@ -37,6 +37,7 @@ export class RadioQuiz extends React.Component {
 	handleChange = (e, rowNum, colNum) => {
 		const {
 			// id,
+			onComplete = () => { },
 			showDialog,
 		} = this.props;
 		const {
@@ -45,13 +46,13 @@ export class RadioQuiz extends React.Component {
 			disabled,
 			phrases,
 		} = this.state;
+		if (disabled[rowNum]) return;
 		let {
 			nCorrect,
 			showExplanation
 		} = this.state;
 
-		console.log("handleChange", rowNum, colNum); // e.target.id);
-
+		// console.log("handleChange", rowNum, colNum); // e.target.id);
 		e.stopPropagation();
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
@@ -66,6 +67,7 @@ export class RadioQuiz extends React.Component {
 			if (nCorrect === phrases.length) {
 				tadaAudio.play();
 				showDialog(congratulationsText);
+				onComplete();
 			}
 			disabled[rowNum] = true;
 		} else {
@@ -133,7 +135,7 @@ export class RadioQuiz extends React.Component {
 		const rows = new Array();
 		for (let i = 0; i < phrases.length; i++){
 			const phrase = phrases[i][0];
-			const answerIndex = phrases[i][1];
+			// const answerIndex = phrases[i][1];
 			const explanation = phrases[i][2];
 			const radios = [];
 			for (let j = 0; j < options.length; j++) {
@@ -172,7 +174,7 @@ export class RadioQuiz extends React.Component {
 				</tr>
 			);
 		}
-		const value = 1;
+		// const value = 1;
 		return (
 			<div
 				className={`radio-quiz-container container`}

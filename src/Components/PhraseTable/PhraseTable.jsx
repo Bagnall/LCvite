@@ -30,6 +30,7 @@ export class PhraseTable extends React.PureComponent {
 	render = () => {
 		const {
 			footnote = '',
+			footnoteHTML,
 			header,
 			htmlContent,
 			id = [],
@@ -106,7 +107,8 @@ export class PhraseTable extends React.PureComponent {
 						{rows}
 					</TableBody>
 				</Table>
-				{footnote ? <p className='footnote'>{footnote}</p> : null}
+				{footnote ? <p className={`ootnote`}>{footnote}</p> : null}
+				{footnoteHTML ? <p className={`footNote`} dangerouslySetInnerHTML={{ __html: footnoteHTML }} /> : null}
 			</div>
 		);
 	};

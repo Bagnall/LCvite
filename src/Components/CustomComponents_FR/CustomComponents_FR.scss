@@ -178,6 +178,8 @@
 		max-height: 0;
 		transition: max-height 6s;
 		overflow: hidden;
+		text-align: left;
+		grid-area: instructions;
 		&.show {
 			max-height: 600px;
 			transition: max-height 6s;
@@ -185,37 +187,46 @@
 	}
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 1fr 1fr 2fr 3fr;
+	// grid-template-rows: 1fr 1.5fr;
+	grid-auto-rows: auto;
 	align-items: flex-start;
 	justify-items: center;
 	gap: 20px;
 	grid-template-areas:
 		"instructions image"
-		"audio image"
-		"passage image"
 		"questions questions";
-	p.instruction {
+	.instructions {
 		grid-area: instructions;
 	}
-	p.passage {
-		grid-area: passage;
+	.instructions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		height: 100%;
+	}
+	p.instruction {
+		grid-area: instructions;
+		text-align: left;
 	}
 	audio {
-		grid-area: audio;
+		grid-area: instructions;
+	}
+	.radio-quiz-container {
+		grid-area: questions;
+		width: 100%;
+		max-width: 1100px;
 	}
 	table {
 		grid-area: questions;
 		width: 100%;
 		max-width: 1100px;
-		td {
-			width: 50%;
-		}
 	}
 	img {
 		justify-self: right;
 		grid-area: image;
 		width: 300px;
-		// height: 300px;
 		border: 1px solid black;
 	}
 }
