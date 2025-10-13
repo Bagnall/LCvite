@@ -186,30 +186,39 @@ export const handleSpecialLinkClick = (e) => {
 		// And it should be within an accordion (or even nested accordions)
 		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
 
-		while (accordionArticle) {
-			// Expand it!
-			console.log("while", accordionArticle);
-			console.log("window.refs", window.refs);
-			try {
-				const ref = window.refs.find((r) => {
-					console.log("searching", r, r && r.props.id, accordionArticle.id);
-					return r !== null && r.props.id === accordionArticle.id;
-				});
-				console.log("ref", ref);
-				ref.setState({ expanded: true },
-					() => setTimeout(() => {
-						// Flash a highlight colour to help the user to spot it.
-						specialAnchorTarget.classList.add('flash');
-						// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-						const targetRect = specialAnchorTarget.getBoundingClientRect();
-						scrollTo({ behavior: 'smooth', left: targetRect.left, top: 3000/* targetRect.top*/ });
-						setTimeout(() => {specialAnchorTarget.classList.remove('flash');}, 5000); // Remove the flashing highlight afte a suitable delay
-					}, 500)
-				);
-			}catch (err) {
-				console.log(err); // eslint-disable-line
+		if (accordionArticle) {
+			while (accordionArticle) {
+				// Expand it!
+				console.log("while", accordionArticle);
+				console.log("window.refs", window.refs);
+				try {
+					const ref = window.refs.find((r) => {
+						console.log("searching", r, r && r.props.id, accordionArticle.id);
+						return r !== null && r.props.id === accordionArticle.id;
+					});
+					console.log("ref", ref);
+					ref.setState({ expanded: true },
+						() => setTimeout(() => {
+							// Flash a highlight colour to help the user to spot it.
+							specialAnchorTarget.classList.add('flash');
+							// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
+							const targetRect = specialAnchorTarget.getBoundingClientRect();
+							scrollTo({ behavior: 'smooth', left: targetRect.left, top: 3000/* targetRect.top*/ });
+							setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
+						}, 500)
+					);
+				} catch (err) {
+					console.log(err); // eslint-disable-line
+				}
+				accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
 			}
-			accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
+		} else {
+			// Flash a highlight colour to help the user to spot it.
+			specialAnchorTarget.classList.add('flash');
+			// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
+			const targetRect = specialAnchorTarget.getBoundingClientRect();
+			scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top });
+			setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
 		}
 
 	}

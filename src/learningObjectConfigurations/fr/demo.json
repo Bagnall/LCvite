@@ -3,10 +3,8 @@
 		"class": "lo-demo",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Sample components to pick from",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object, Component Demo"
+		"targetLanguageCode": "fr-FR"
 	},
 	"radiotest1": {
 		"component": "HIDERadioTest",

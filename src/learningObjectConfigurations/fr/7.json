@@ -3,10 +3,8 @@
 		"class": "lo-7",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Opinions matter: Likes and dislikes",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 7"
+		"targetLanguageCode": "fr-FR"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

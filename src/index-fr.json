@@ -1,67 +1,83 @@
 {
 	"learningObjects": [
 		{
-			"title": "Learning Object 1",
+			"title": "French Learning Object 1",
+			"subTitle": "First Things First: greetings, farewells and social niceties",
 			"file": "1"
 		},
 		{
-			"title": "Learning Object 2",
+			"title": "French Learning Object 2",
+			"subTitle": "About me: marital status, occupation",
 			"file": "2"
 		},
 		{
-			"title": "Learning Object 3",
+			"title": "French Learning Object 3",
+			"subTitle": "Origins and Languages",
 			"file": "3"
 		},
 		{
-			"title": "Learning Object 4",
+			"title": "French Learning Object 4",
+			"subTitle": "Current location",
 			"file": "4"
 		},
 		{
-			"title": "Learning Object 5",
+			"title": "French Learning Object 5",
+			"subTitle": "House and Home",
 			"file": "5"
 		},
 		{
-			"title": "Learning Object 6",
+			"title": "French Learning Object 6",
+			"subTitle": "Family, friends and neighbours",
 			"file": "6"
 		},
 		{
-			"title": "Learning Object 7",
+			"title": "French Learning Object 7",
+			"subTitle": "Opinions matter: Likes and dislikes",
 			"file": "7"
 		},
 		{
-			"title": "Learning Object 8",
+			"title": "French Learning Object 8",
+			"subTitle": "Free Time",
 			"file": "8"
 		},
 		{
-			"title": "Learning Object 9",
+			"title": "French Learning Object 9",
+			"subTitle": "Phoning in France",
 			"file": "9"
 		},
 		{
-			"title": "Learning Object 10",
+			"title": "French Learning Object 10",
+			"subTitle": "Making Arrangements",
 			"file": "10"
 		},
 		{
-			"title": "Learning Object 11",
+			"title": "French Learning Object 11",
+			"subTitle": "Out and about : going to a café",
 			"file": "11"
 		},
 		{
-			"title": "Learning Object 12",
+			"title": "French Learning Object 12",
+			"subTitle": "Out and about: Shopping in the market",
 			"file": "12"
 		},
 		{
-			"title": "Learning Object 13",
+			"title": "French Learning Object 13",
+			"subTitle": "Daily routine",
 			"file": "13"
 		},
 		{
-			"title": "Learning Object 14",
+			"title": "French Learning Object 14",
+			"subTitle": "Studying at university",
 			"file": "14"
 		},
 		{
-			"title": "Learning Object 15",
+			"title": "French Learning Object 15",
+			"subTitle": "Making Arrangements",
 			"file": "15"
 		},
 		{
 			"title": "DEMO",
+			"subTitle": "Sample components to pick from",
 			"file": "demo"
 		}
 	]

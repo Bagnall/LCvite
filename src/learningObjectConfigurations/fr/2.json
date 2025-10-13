@@ -3,10 +3,8 @@
 		"class": "lo-2",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "About me: marital status, occupation",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 2"
+		"targetLanguageCode": "fr-FR"
 	},
 	"monologues1": {
 		"component": "PhraseTable",

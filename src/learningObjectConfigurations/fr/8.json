@@ -3,10 +3,8 @@
 		"class": "lo-8",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Free Time",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 8"
+		"targetLanguageCode": "fr-FR"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

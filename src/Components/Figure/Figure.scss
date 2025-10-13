@@ -36,7 +36,7 @@ figure {
 		clear: left;
 		margin-top: 1rem;
 		text-align: center;
-		font-style: italic;
+		// font-style: italic;
 	}
 }
 @include respond-above(s) {
@@ -94,7 +94,7 @@ figure {
 			clear: left;
 			margin-top: 1rem;
 			text-align: center;
-			font-style: italic;
+			// font-style: italic;
 		}
 	}
 }

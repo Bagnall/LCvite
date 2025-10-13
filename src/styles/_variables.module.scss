@@ -10,6 +10,7 @@ $jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
 $transition-time: 1s;
 $word-transition-time: $transition-time;
+$card-size: 300px;
 
 // Use of :root is a runtime feature, so in JS you can use such as:
 // const root = getComputedStyle(document.documentElement);

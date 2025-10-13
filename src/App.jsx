@@ -14,6 +14,9 @@ import {
 	Footer,
 	Header,
 	Jigsaw,
+	LandingPage,
+	LearningObjectMenu,
+	MainMenu,
 	MemoryMatchGame,
 	Monologue,
 	PhraseTable,
@@ -28,7 +31,7 @@ import {
 	handleSpecialLinkClick,
 	isTouchChrome,
 	playAudioLink,
-	resolveAsset,
+	// resolveAsset,
 	speak,
 } from './utility';
 import { AllCustomComponentsFR } from './Components/CustomComponents_FR/index.js';
@@ -95,11 +98,11 @@ export default class App extends React.Component {
 		const learningObjectConfigFile = urlParams.get('lo');
 
 		let configPromise;
-		if (learningObjectConfigFile && languageCode) {
-			// let LO = parseInt(learningObjectConfigFile.replace(/^\D+/g, ''));
-			// if (isNaN(LO)) LO = 1;
-			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`, learningObjectConfigFile);
+		if (languageCode) {
 			this.loadIndex(learningObjectConfigFile, languageCode);
+		}
+		if (learningObjectConfigFile && languageCode) {
+			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`, learningObjectConfigFile);
 			this.initialiseSpecialAnchors();
 
 			configPromise.then(this.initialiseSynth);
@@ -211,7 +214,7 @@ export default class App extends React.Component {
 		const isFirefox = /firefox/i.test(navigator.userAgent);
 
 		const sortVoices = (voices) =>
-			voices.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+			voices.sort((a, b) => a.lang.localeCompare(b.lang, undefined, { sensitivity: 'base' }));
 
 		const filterVoicesByLang = (voices, lang) =>
 			voices.filter((voice) => voice.lang === lang);
@@ -271,7 +274,7 @@ export default class App extends React.Component {
 						targetLanguageCode,
 						title,
 					} = settings;
-					document.title = title;
+					// document.title = title;
 					if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
 
 					const currentLearningObject = learningObjectConfigFile;
@@ -306,7 +309,7 @@ export default class App extends React.Component {
 			redirect: 'follow',
 		};
 
-		let currentLearningObject = 0;
+		let currentLearningObject;// = 0;
 		if (LO !== undefined && !isNaN(LO)) {
 			currentLearningObject = LO - 1;
 		}else{
@@ -315,12 +318,20 @@ export default class App extends React.Component {
 		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
-				// console.log("res", res);
+				console.log("res", res);
 				const { learningObjects } = res;
+				let title, subTitle;
+				if (learningObjects[currentLearningObject]) {
+					console.log("BINGO!");
+					({ subTitle, title } = learningObjects[currentLearningObject]);
+					document.title = title;
+				}
 
 				this.setState({
 					currentLearningObject: currentLearningObject,
 					learningObjects: learningObjects,
+					subTitle: subTitle,
+					title: title,
 				});
 			})
 			.catch(error => {
@@ -385,6 +396,7 @@ export default class App extends React.Component {
 	render = () => {
 		const {
 			config,
+			currentLearningObject,
 			dialogContent,
 			// dropdowns1,
 			errors,
@@ -397,6 +409,8 @@ export default class App extends React.Component {
 			// phrases2,
 			// phrases3,
 			// phraseTable1,
+			languageCode,
+			learningObjects = [],
 			refreshErrorLog,
 			showDialog = false,
 			// vocabulary1,
@@ -416,227 +430,39 @@ export default class App extends React.Component {
 		// 2. The alternative is to uncomment the commented lines in the setting from state block above and
 		// uncomment the hard-coded components in the returned render below. This allows for more ad-hoc html inclusions,
 		// but does mean that the whole thing has to be hard-coded.
-
+		// console.log("render currentLearningObject", currentLearningObject, "languageCode", languageCode, "learningObjects", learningObjects);
 		if (config) {
 			for (const [/* key */, value] of Object.entries(config)) {
 				// console.log(key, value);
-				// const { id, component, content: groupContent = [], titleText } = value;
 				const { component } = value;
-				// const renderedGroupContent = new Array;
-				// if (groupContent.length > 0) {
-				// 	groupContent.forEach((child) => {
-				// 		this.renderComponent(child, renderedGroupContent);
-				// 	});
-				// }
-
 				if (component) {
-					// articles =
 					this.renderComponent(value, articles);
-					// switch (component) {
-					// 	case 'Explanation':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<Explanation
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'Monologue':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<Monologue
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'DropDowns':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<DropDowns
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'WordGrid':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={`Word Grid`}
-					// 			>
-					// 				<WordGrid
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'Group':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`Group${compoundID}-Accordion`}
-					// 				key={`$Group{id}Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				{/* {content} */}
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'WordParts':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<WordParts
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'AnswerTable':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<AnswerTable
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'PhraseTable':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<PhraseTable
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'Blanks':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<Blanks
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'Jigsaw':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<Jigsaw
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	case 'MemoryMatchGame':
-					// 		articles.push(
-					// 			<AccordionArticle
-					// 				id={`${compoundID}-Accordion`}
-					// 				key={`${compoundID}-Accordion`}
-					// 				ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-					// 				title={titleText}
-					// 				titleHTML={titleTextHTML}
-					// 			>
-					// 				<MemoryMatchGame
-					// 					config={value}
-					// 					logError={this.logError}
-					// 					showDialog={this.showDialog}
-					// 				/>
-					// 			</AccordionArticle>
-					// 		);
-					// 		break;
-					// 	default:
-					// 		articles.push(
-					// 			<p>Component not implemented</p>
-					// 		);
-					// }
 				}
 			}
 		}
 
 		let flag = '';
-		let title = '';
-		let subtitle = '';
+		let subTitle;
+		let title;
+		if (learningObjects[currentLearningObject]) {
+			console.log("BINGO!");
+			({ subTitle, title } = learningObjects[currentLearningObject]);
+		}
+		// console.log("title", title, "subTitle", subTitle);
+
+		// let subTitle = '';
 		let targetLanguageCode = '';
 		if (settings) {
 			if (settings.flag) flag = `/images/${settings.flag}`;
-			({ targetLanguageCode, title, subtitle } = settings);
+			({ targetLanguageCode/* , title, subTitle*/ } = settings);
 			this.targetLanguageCode = targetLanguageCode;
 		}
 
+		// console.log("render languageCode", languageCode, "learningObjects", learningObjects, learningObjects.length, "currentLearningObject", currentLearningObject);
 		return (
 			<>
 				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`} key={`languageDiv`}>
+					<a className={`special-anchor-target`} name={`special-anchor-top`}/>
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}
@@ -645,6 +471,14 @@ export default class App extends React.Component {
 						refreshErrorLog={refreshErrorLog}
 					/>
 					<Header />
+					{/* <div className={`top-menu`}>
+						<a className={`special-anchor`} href={`#top`}>{subTitle}</a>
+						<ul id='topMenu'>{topMenu}</ul>
+					</div> */}
+					<MainMenu
+						config={config}
+						subTitle={subTitle}
+					/>
 					<Congratulate
 						className={`${showDialog ? 'show' : ''}`}
 						enabled={settings ? settings.showCongratulations : null}
@@ -659,255 +493,68 @@ export default class App extends React.Component {
 						content={`This browser cannot perform speech synthesis. Please use a larger device and a browser such as Chrome`}
 					/>
 					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
-					{config ?
+					{languageCode !== undefined ?
 						<>
+							{/* <div id='fontSamples'>
+								<h1>Heading 1 Feijoa</h1>
+								<h2>Heading 2 Feijoa</h2>
+								<h3>Heading 3 Feijoa</h3>
+								<h4>Heading 4 Feijoa</h4>
+								<h5>Heading 5 OpenSans</h5>
+								<h6>Heading 6 OpenSans</h6>
+								<p>Bodycopy, Hyperlinks Opensans</p>
+								<figure>
+									<img
+										src={`images/bsc_logo_flat.svg`}
+										title={`BSC logo`}
+										style={{ width: '60px'}}
+									/>
+									<figcaption>Captions</figcaption>
+								</figure>
+							</div> */}
 							<div id="content" key="content">
 								{/* <div id='hero' key='hero'>
-									<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
-									<h1>{title}</h1>
-									<h2>{subtitle}</h2>
-								</div> */}
+										<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
+										<h1>{title}</h1>
+										<h2>{subTitle}</h2>
+									</div> */}
 								<div className="hero bg-base-200  w-full">
 									<div className="hero-content text-center">
 										<div className="w-full">
 											<h1 className="text-5xl font-bold">{title}</h1>
-											<h1 className="text-5xl font-bold">{subtitle}</h1>
+											<h1 className="text-5xl font-bold">{subTitle}</h1>
 										</div>
 									</div>
 								</div>
-								{this.renderMenu()}
-								<Accordion id={`accordion1`} key={`accordion1`}>
-									{/* <AccordionArticle
-										id={`wordgrid1Accordion`}
-										title={`Memory Match Game`}
-									>
-										<MemoryMatchGame />
-									</AccordionArticle> */}
-									{/* <AccordionArticle
-										id={`wordgrid1Accordion`}
-										title={`Word Grid`}
-									>
-										<WordGrid words={words} />
-									</AccordionArticle> */}
-									{/* <AccordionArticle
-										id={`parentAccordion`}
-										title={`Parent`}
-									>
-										<p>Parent accordion</p>
-										<AccordionArticle
-											id={`childAccordion`}
-											title={`Child`}
-										>
-											<p>Child accordion</p>
-											<AccordionArticle
-												id={`grandchildAccordion`}
-												title={`Grand Child`}
-											>
-												<p>Grand Child accordion</p>
-											</AccordionArticle>
-										</AccordionArticle>
+								{/* {this.renderMenu()} */}
+								<LearningObjectMenu
+									currentLearningObject={currentLearningObject}
+									languageCode={languageCode}
+									learningObjects={learningObjects}
+								/>
+								{currentLearningObject !== -1 ?
+									<Accordion id={`accordion1`} key={`accordion1`}>
+										{articles}
+									</Accordion>
+									:
+									null
+								}
+								{(learningObjects.length > 0) && (currentLearningObject === -1) ?
+									<LandingPage
+										languageCode={languageCode}
+										learningObjects={learningObjects}
+									/>
+									:
+									null
+								}
 
-									</AccordionArticle> */}
-									{/* <AccordionArticle
-										id={`scratchAccordion1`}
-										title={`Scratch 1`}
-									>
-										<div
-											className={`container`}
-										>
-											<div
-												className={`panel`}
-											>
-
-												<div>link: <AudioClip className={`link`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
-												<div>compact: <AudioClip className={`compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
-												<div>super-compact: <AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
-												<div>default: <AudioClip className={``} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></div>
-
-											</div>
-										</div>
-									</AccordionArticle> */}
-									{articles}
-									{/* {dropdowns1 ? (
-										<AccordionArticle
-											id={`DropDowns1Accordion`}
-											title={`Select the Correct Adjective of Nationality`}
-										>
-											<DropDowns
-												config={dropdowns1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{wordparts1 ? (
-										<AccordionArticle
-											id={`AccordionWordParts1Accordion`}
-											title={`Select the parts of the words with the described sounds`}
-										>
-											<WordParts
-												config={wordparts1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{wordsIntoSlots2 ? (
-										<AccordionArticle
-											id={`AccordionWordsIntoSlots2Accordion`}
-											title={`Match the Answers to the Questions`}
-										>
-											<Blanks
-												config={wordsIntoSlots2}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-
-									) : null}
-									{wordsIntoSlots1 ? (
-										<AccordionArticle
-											id={`AccordionWordsIntoSlots1Accordion`}
-											title={`Put the words in the Order You Hear Them`}
-										>
-											<Blanks
-												config={wordsIntoSlots1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-
-									) : null}
-									{phraseTable1 ? (
-										<>
-											<AccordionArticle
-												id={`accordionPhraseTable1Accordion`}
-												title={`Dialogues`}
-											>
-												<PhraseTable
-													config={phraseTable1}
-													logError={this.logError}
-													showDialog={this.showDialog}
-												/>
-											</AccordionArticle>
-										</>
-									) : null}
-									{vocabulary1 ? (
-										<AccordionArticle
-											id={`Vocabulary1Accordion`}
-											title={`Vocabulary`}
-										>
-											<PhraseTable
-												config={vocabulary1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{monologues ? (
-										<AccordionArticle
-											id={`MonologuesAccordion`}
-											title={`Monologues`}
-										>
-											<PhraseTable
-												config={monologues}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{vocabulary2 ? (
-										<AccordionArticle
-											id={`Vocabulary2Accordion`}
-											title={`Vocabulary`}
-										>
-											<PhraseTable
-												config={vocabulary2}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{phrases1 ? (
-										<AccordionArticle
-											id={`Phrases1Accordion`}
-											title={`Fill in the Blanks`}
-										>
-											<Blanks
-												config={phrases1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{phrases2 ? (
-										<AccordionArticle
-											id={`Phrases2Accordion`}
-											title={`Fill in the Blanks`}
-										>
-											<Blanks
-												config={phrases2}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{jigsaw1 ? (
-										<AccordionArticle
-											id={`Jigsaw1Accordion`}
-											title={`Complete the Jigsaw`}
-										>
-											<Jigsaw
-												config={jigsaw1}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{jigsaw2 ? (
-										<AccordionArticle
-											id={`Jigsaw2Accordion`}
-											title={`Complete the Jigsaw`}
-										>
-											<Jigsaw
-												config={jigsaw2}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{jigsaw3 ? (
-										<AccordionArticle
-											id={`Jigsaw3Accordion`}
-											title={`Complete the Jigsaw`}
-										>
-											<Jigsaw
-												config={jigsaw3}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null}
-									{phrases3 ? (
-										<AccordionArticle
-											id={`phrases3Accordion`}
-											title={`Fill in the blanks`}
-										>
-											<Blanks
-												config={phrases3}
-												logError={this.logError}
-												showDialog={this.showDialog}
-											/>
-										</AccordionArticle>
-									) : null} */}
-								</Accordion>
 							</div>
 						</>
 						:
 						<div className={`no-config`}>
 							<h1>No configuration parameter given of the form</h1>
 							<h2>{`${window.location.host}${window.location.pathname}?lang=fr&lo=3`}</h2>
-							<p>Where '3' in this example is the learning object number or index</p>
+							<p>Where '3' in this example is the learning object number or index. If absent, but language is the landing page is shown</p>
 						</div>
 					}
 					<Footer />
@@ -936,7 +583,8 @@ export default class App extends React.Component {
 					<AccordionArticle
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -955,6 +603,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -973,6 +622,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -991,6 +641,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1028,6 +679,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Group-Accordion`}
 						key={`${compoundID}-Group-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1045,6 +697,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1063,6 +716,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1081,6 +735,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1099,6 +754,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1117,6 +773,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1135,6 +792,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1153,6 +811,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1171,6 +830,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1189,6 +849,7 @@ export default class App extends React.Component {
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
@@ -1226,6 +887,7 @@ export default class App extends React.Component {
 							id={`${compoundID}-Accordion`}
 							key={`${compoundID}-Accordion`}
 							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
@@ -1250,106 +912,36 @@ export default class App extends React.Component {
 		// return articles;
 	};
 
-	renderMenu = () => {
-		// console.log("renderMenu");
-		const {
-			currentLearningObject = 0,
-			languageCode,
-			learningObjects
-		} = this.state;
-		const renderedMenu = new Array;
-		if (learningObjects !== undefined) {
-			// const nLearningObjects = learningObjects.length;
-			const { href } = window.location;
-			const [baseURL] = href.split('?');
-			learningObjects.forEach((learningObject, index) => {
-				renderedMenu.push(
-					<li
-						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-						key={`menu-item-${index}`}>
-						<a
-							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
-							onClick={() => this.selectLearningObject(index)}
-						>{index <= 14 ? index + 1 : 'Demo'}</a>
-					</li>
-				);
-			}
-			);
-			// if (nLearningObjects > 6 ) {
-			// 	learningObjects.forEach((learningObject, index) => {
-			// 		// console.log("currentLearningObject", currentLearningObject, "nLearningObjects", nLearningObjects, "learningObject", learningObject.title, learningObject.file, window.location.href.split('?')[0]);
-			// 		switch (index) {
-			// 			case 0: {
-			// 				// First
-			// 				renderedMenu.push(
-			// 					<li
-			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-			// 						key={`menu-item-${index}`}>
-			// 						<a
-			// 							href={`${baseURL}?config=${learningObject.file}`}
-			// 							onClick={() => this.selectLearningObject(index)}
-			// 						>{learningObject.title}</a>
-			// 					</li>
-			// 				);
-			// 				if (currentLearningObject >= 2) renderedMenu.push(
-			// 					<li className={`ellipses`} key={`ellipses-at-start`}>...</li>
-			// 				);
-			// 				break;
-			// 			}
-			// 			case nLearningObjects - 1: {
-			// 				// Last
-			// 				if (currentLearningObject <= nLearningObjects - 3) renderedMenu.push(
-			// 					<li className={`ellipses`} key={`ellipses-at-end`}>...</li>
-			// 				);
-			// 				renderedMenu.push(
-			// 					<li
-			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-			// 						key={`menu-item-${index}`}>
-			// 						<a
-			// 							href={`${baseURL}?config=${learningObject.file}`}
-			// 							onClick={() => this.selectLearningObject(index)}
-			// 						>{learningObject.title}</a>
-			// 					</li>
-			// 				);
-			// 				break;
-			// 			}
-			// 			case currentLearningObject - 1:
-			// 			case currentLearningObject:
-			// 			case currentLearningObject + 1: {
-			// 				renderedMenu.push(
-			// 					<li
-			// 						className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-			// 						key={`menu-item-${index}`}>
-			// 						<a
-			// 							href={`${baseURL}?config=${learningObject.file}`}
-			// 							onClick={() => this.selectLearningObject(index)}
-			// 						>{learningObject.title}</a>
-			// 					</li>
-			// 				);
-			// 				break;
-			// 			}
-			// 		}
-			// 	});
-			// }else {
-			// 	learningObjects.forEach((learningObject, index) => {
-			// 		renderedMenu.push(
-			// 			<li
-			// 				className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-			// 				key={`menu-item-${index}`}
-			// 				onClick={() => this.selectLearningObject(index)}
-			// 			>
-			// 				<a
-			// 					href={`${baseURL}?config=${learningObject.file}`}
-			// 				>{learningObject.title}</a>
-			// 			</li>
-			// 		);
-			// 	});
-			// }
-		}
-		return (
-			<ul className={`main-menu`}>{renderedMenu}</ul>
-		);
-	};
+	// renderMenu = () => {
+	// 	// console.log("renderMenu");
+	// 	const {
+	// 		currentLearningObject = 0,
+	// 		languageCode,
+	// 		learningObjects
+	// 	} = this.state;
+	// 	const renderedMenu = new Array;
+	// 	if (learningObjects !== undefined) {
+	// 		// const nLearningObjects = learningObjects.length;
+	// 		const { href } = window.location;
+	// 		const [baseURL] = href.split('?');
+	// 		learningObjects.forEach((learningObject, index) => {
+	// 			renderedMenu.push(
+	// 				<li
+	// 					className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
+	// 					key={`menu-item-${index}`}>
+	// 					<a
+	// 						href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
+	// 						onClick={() => this.selectLearningObject(index)}
+	// 					>{index <= 14 ? index + 1 : 'Demo'}</a>
+	// 				</li>
+	// 			);
+	// 		}
+	// 		);
+	// 	}
+	// 	return (
+	// 		<ul className={`lo-menu`}>{renderedMenu}</ul>
+	// 	);
+	// };
 
 	selectLearningObject = (index) => {
 		// console.log("selectLearningObject", index);

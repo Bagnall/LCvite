@@ -1,23 +1,26 @@
 from gtts import gTTS
-import os
+import os #ffmpeg, os, subprocess
 
 phrases = [
-    "La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes.",
-    "Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra.",
-    "Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad.",
-    "Se necesitan trece millones doscientos noventa euros para restaurar 8 monumentos importantes en Cancún.",
-    "En 2013, la población de la Tierra superó los siete mil millones de personas."
+						"Hola Marcos estás bien?",
+						"Todo bien, estoy bien gracias. ¿Y tú?",
+						"Buenos dias ¿cómo está su familia?",
+						"Sí, muy bien gracias. Y usted ¿cómo está?",
+						"Buenas noches señores, ¿cómo están?",
+						"Gracias Carmela. Y usted, ¿cómo está?"
 ]
 
 # Generate MP3s
 for phrase in phrases:
-    tts = gTTS(text=phrase, lang="es", slow=True, tld="es")  # female Spanish voice
+    tts = gTTS(text=phrase, lang="es", tld="es")  # female Spanish voice
     
     # Remove question marks from filenames
     filename = phrase.replace("?", "") + ".mp3"
-    filename = filename.replace("..mp3", "") + ".mp3"
-    
+    filename = filename.replace("..mp3", ".mp3")
+
     print(f"Saving {filename} …")
     tts.save(filename)
+    # ffmpeg_command = ["ffmpeg", "-y", "-i", filename, "-filter:a", "atempo=1.3", filename]
+    # subprocess.run(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 print("✅ All MP3s generated.")

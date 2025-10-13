@@ -14,20 +14,20 @@ header.main-header {
 	width: 100%;
 	h1 {
 		margin: 0;
-		font-size: 1.3em;
+		// 	font-size: 1.3em;
 	}
-	h2 {
-		margin: 0;
-		&:before {
-			display: none;
-		}
-	}
+	// h2 {
+	// 	margin: 0;
+	// 	&:before {
+	// 		display: none;
+	// 	}
+	// }
 	box-shadow: 0 8px 8px lightgray;
 }
 @include respond-above(m) {
-	header.main-header {
-		h1 {
-			font-size: 2rem;
-		}
-	}
+	// header.main-header {
+	// 	h1 {
+	// 		font-size: 2rem;
+	// 	}
+	// }
 }

@@ -1,0 +1,26 @@
+// MainMenu.scss
+
+@use "../../styles/_mixins.module.scss";
+@use "../../styles/_media-queries.scss" as *;
+.main-menu {
+	display: flex;
+	background: red;
+	justify-content: space-between;
+	padding: 4px;
+	color: white;
+	ul {
+		display: flex;
+		color: white;
+		li {
+			margin: 0 4px;
+		}
+	}
+}
+@include respond-above(m) {
+	.main-menu {
+		ul {
+			// 	h1 {
+			// 		font-size: 2rem;
+		}
+	}
+}

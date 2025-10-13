@@ -3,10 +3,8 @@
 		"class": "lo-4",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Current location",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 4"
+		"targetLanguageCode": "fr-FR"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

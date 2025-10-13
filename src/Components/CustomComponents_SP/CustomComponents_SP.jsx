@@ -91,7 +91,7 @@ export class LO1KnowHow1 extends PureComponent {
 						<p className="px-5">
         Use <AudioClip className={`link`} soundFile={`sounds/sp/Buenas tardes.mp3`} ><b>Buenas tardes</b></AudioClip> until 17.00/18.00 and&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/sp/Buenas noches.mp3`} ><b>Buenas noches</b></AudioClip> from dinner time (normally between
-        19.00 and 21.30) until you go to bed. Use
+        19.00 and 21.30) until you go to bed. Use&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/sp/buenas noches, hasta mañana.mp3`} ><b>buenas noches, hasta mañana</b></AudioClip> only to say goodbye to
         someone before going home after dinner or to wish someone a good night
         before they go to bed.
@@ -236,7 +236,7 @@ export class LO1UngenderedSpanish extends PureComponent {
 						</p>
 						<table>
 							<tbody>
-								<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>unes amigues ruidoses</b></AudioClip></TableCell><TableCell>some loud friends</TableCell></TableRow>
+								<TableRow><TableCell><b>unes amigues ruidoses</b></TableCell><TableCell>some loud friends</TableCell></TableRow>
 							</tbody>
 						</table>
 					</section>

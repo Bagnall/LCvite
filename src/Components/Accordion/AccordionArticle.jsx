@@ -116,6 +116,7 @@ export class AccordionArticle extends React.PureComponent {
 			expandedByDefault = false,
 			className = '',
 			children,
+			target,
 		} = this.props;
 
 		const {
@@ -123,14 +124,18 @@ export class AccordionArticle extends React.PureComponent {
 			id,
 		} = this.state;
 
+		console.log("target", target);
+
 		return (
 			<article
-				className={`accordion-article border-b border-slate-200 
+				className={`accordion-article border-b border-slate-200 special-anchor-target 
 				${expanded ? 'expanded' : ''} ${className ? className : ''}`}
 				onClick={this.toggleExpanded}
 				id={`${id}`}
+				name={`${id}`}
 				key={`article${id}`}
 			>
+				<a className={`special-anchor-target`} name={`special-anchor-${target}`} />
 				<button
 					onClick={this.toggleExpanded}
 					className={`w-full flex items-center py-5 text-slate-800`}>

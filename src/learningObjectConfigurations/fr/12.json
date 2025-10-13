@@ -3,10 +3,8 @@
 		"class": "lo-12",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Out and about: Shopping in the market",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 12"
+		"targetLanguageCode": "fr-FR"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

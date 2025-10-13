@@ -3,10 +3,8 @@
 		"class": "lo-5",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "House and Home",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 5"
+		"targetLanguageCode": "fr-FR"
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
