@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="nodebug">
+<html lang="en" class="debug">
 
 <head>
 	<meta charset="UTF-8" />
@@ -12,6 +12,28 @@
 <body>
 	<div id="root"></div>
 	<script type="module" src="./src/main.jsx"></script>
+	<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+	<script>
+		var config = {
+			apiKey: '9c3bd2a68162ba67b19f07e540747675bd136e66',
+			product: 'community',
+			optionalCookies: [
+				{
+					name: 'analytics',
+					label: 'Analytics',
+					description: 'Analytical cookies help us to improve our website by collecting and reporting information on its usage.',
+					cookies: [],
+					onAccept: function () { },
+					onRevoke: function () { }
+				}
+			],
+
+			position: 'RIGHT',
+			theme: 'LIGHT'
+		};
+
+		CookieControl.load(config);
+	</script>
 </body>
 
 </html>

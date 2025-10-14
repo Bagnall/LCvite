@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "phraseTable1",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"J'habite dans un appartement au premier étage d'un grand immeuble.  J'ai une petite cuisine et une salle de séjour et un petit balcon aussi. Ma chambre n'est pas grande, mais elle est confortable. Derrière l'immeuble il y a un jardin communautaire.",
@@ -32,7 +32,7 @@
 	"phraseTable2": {
 		"component": "PhraseTable",
 		"id": "phraseTable2",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"footnote": "* In France the plural form is used even if there is just one facility. In other francophone countries, the singular 'la toilette' occurs.",
 		"phrases": [
 			[

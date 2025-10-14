@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "phraseTable1",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"Tu te lèves à quelle heure ?",
@@ -93,7 +93,7 @@
 	"phraseTable2": {
 		"component": "PhraseTable",
 		"id": "phraseTable2",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"routine (f) matinale",

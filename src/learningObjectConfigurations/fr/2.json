@@ -9,7 +9,7 @@
 	"monologues1": {
 		"component": "PhraseTable",
 		"id": "monologues1",
-		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;'/>",
+		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;'/><p>Read the phrases and play the audio clips.</p>",
 		"phrases": [
 			[
 				"Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
@@ -32,6 +32,7 @@
 	"vocabulary2": {
 		"component": "PhraseTable",
 		"id": "vocabulary2",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"être",

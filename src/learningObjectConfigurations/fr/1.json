@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "PhraseTable1",
-		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/>",
+		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/><p>Read the phrases and play the audio clips.</p>",
 		"phrases": [
 			[
 				"Salut, ça va ?",
@@ -81,6 +81,7 @@
 	"vocabulary1": {
 		"component": "PhraseTable",
 		"id": "vocabulary1",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"Bonjour",

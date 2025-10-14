@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "phraseTable1",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"Qu'est-ce que tu fais comme études ?",
@@ -100,7 +100,7 @@
 	"phraseTable2": {
 		"component": "PhraseTable",
 		"id": "phraseTable2",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"étudiant / étudiante",

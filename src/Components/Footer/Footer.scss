@@ -1,30 +1,220 @@
 // Footer.scss
 
+@use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 
-// Footer {
-// 	clear: both;
-// 	@include mixins.header-footer-background;
-// 	z-index: 5;
-// 	width: 100%;
-// 	height: 40px;
-// 	line-height: 3rem;
-// 	display: flex;
-// 	color: white;
-// 	padding: 8px;
-// 	a:link,
-// 	a:visited {
-// 		color: white;
-// 		text-decoration: none;
-// 	}
-// 	a:hover {
-// 		color: white;
-// 	}
-// 	.copyright {
-// 		margin: 0;
-// 	}
-// 	.logo {
-// 		height: 1em;
-// 		vertical-align: -2px;
+footer {
+	background-color: black;
+	.footer-container {
+		max-width: 320px;
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 3fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		grid-template-areas:
+			"copyright"
+			"lclogo"
+			"cclogo";
+		// padding: 2.5rem 1.5rem;
+		padding: 2.5rem 0; //1rem;
+		// justify-content: space-between;
+		margin: auto;
+		width: 100%;
+		.copyright,
+		.lclogo,
+		.cclogo {
+			margin: 0;
+			justify-self: center;
+		}
+		.copyright {
+			// background: red;
+			grid-area: copyright;
+			max-width: 300px;
+			margin: 0;
+		}
+		img {
+			&.logo {
+				&.black {
+					display: none;
+				}
+				&.white {
+					&.horizontal {
+						display: none;
+					}
+					&.vertical {
+						display: block;
+					}
+				}
+			}
+		}
+		.lclogo {
+			grid-area: lclogo;
+			// background: blue;
+			max-width: 300px;
+			padding-top: 9px; // To align top of text with top of CC text
+			// height: 80px;
+		}
+		.cclogo {
+			grid-area: cclogo;
+			// background: yellow;
+			max-width: 300px;
+			// height: 80px;
+		}
+	}
+}
+
+html.dark-mode {
+	footer {
+		background-color: white;
+		.footer-container {
+			color: black;
+			img {
+				&.logo {
+					&.black {
+						display: block;
+						&.horizontal {
+							display: none;
+						}
+						&.vertical {
+							display: block;
+						}
+					}
+					&.white {
+						display: none;
+						&.horizontal {
+							display: none;
+						}
+						&.vertical {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-above(s) {
+	footer {
+		.footer-container {
+			max-width: 320px;
+		}
+	}
+}
+@include respond-above(m) {
+	footer {
+		.footer-container {
+			max-width: 640px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 2fr;
+			grid-template-areas:
+				"copyright copyright"
+				"lclogo cclogo";
+			// .copyright,
+			// .lclogo,
+			// .cclogo {
+			// 	// justify-self: center;
+			// }
+			.copyright {
+				// background: red;
+				// grid-area: copyright;
+				max-width: 1000px;
+			}
+			.lclogo {
+				// grid-area: lclogo;
+				// background: blue;
+				max-width: 300px;
+				// height: 80px;
+				justify-self: start;
+			}
+			.cclogo {
+				// grid-area: cclogo;
+				// background: yellow;
+				max-width: 300px;
+				// height: 80px;
+				justify-self: end;
+			}
+		}
+	}
+}
+@include respond-above(l) {
+	footer {
+		.footer-container {
+			max-width: 768px;
+			grid-template-columns: 2fr repeat(2, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+			grid-template-areas: "copyright lclogo cclogo";
+
+			img {
+				&.logo {
+					&.black {
+						display: none;
+					}
+					&.white {
+						&.horizontal {
+							display: block;
+						}
+						&.vertical {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	html.dark-mode {
+		footer {
+			background-color: white;
+			.footer-container {
+				color: black;
+				img {
+					&.logo {
+						&.black {
+							display: block;
+							&.horizontal {
+								display: block;
+							}
+							&.vertical {
+								display: none;
+							}
+						}
+						&.white {
+							display: none;
+							&.horizontal {
+								display: none;
+							}
+							&.vertical {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include respond-above(xl) {
+	footer {
+		.footer-container {
+			max-width: 980px;
+		}
+	}
+}
+@include respond-above(xxl) {
+	footer {
+		.footer-container {
+			max-width: 1024px;
+		}
+	}
+}
+// @media (min-width: 1280px) {
+// 	footer {
+// 		.footer-container {
+// 			max-width: 1280px;
+// 		}
 // 	}
 // }

@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "phraseTable1",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"Où vas-tu passer tes vacances ?",
@@ -75,7 +75,7 @@
 	"phraseTable2": {
 		"component": "PhraseTable",
 		"id": "phraseTable2",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"vacances (fpl)",

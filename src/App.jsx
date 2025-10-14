@@ -23,6 +23,7 @@ import {
 	RadioQuiz,
 	RadioTest,
 	ReadAloud,
+	Social,
 	WordGrid,
 	WordParts,
 } from './Components';
@@ -557,6 +558,7 @@ export default class App extends React.Component {
 							<p>Where '3' in this example is the learning object number or index. If absent, but language is the landing page is shown</p>
 						</div>
 					}
+					<Social />
 					<Footer />
 				</div>
 
@@ -911,37 +913,6 @@ export default class App extends React.Component {
 		}
 		// return articles;
 	};
-
-	// renderMenu = () => {
-	// 	// console.log("renderMenu");
-	// 	const {
-	// 		currentLearningObject = 0,
-	// 		languageCode,
-	// 		learningObjects
-	// 	} = this.state;
-	// 	const renderedMenu = new Array;
-	// 	if (learningObjects !== undefined) {
-	// 		// const nLearningObjects = learningObjects.length;
-	// 		const { href } = window.location;
-	// 		const [baseURL] = href.split('?');
-	// 		learningObjects.forEach((learningObject, index) => {
-	// 			renderedMenu.push(
-	// 				<li
-	// 					className={`menu-item ${currentLearningObject === index ? 'highlight' : ''}`}
-	// 					key={`menu-item-${index}`}>
-	// 					<a
-	// 						href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
-	// 						onClick={() => this.selectLearningObject(index)}
-	// 					>{index <= 14 ? index + 1 : 'Demo'}</a>
-	// 				</li>
-	// 			);
-	// 		}
-	// 		);
-	// 	}
-	// 	return (
-	// 		<ul className={`lo-menu`}>{renderedMenu}</ul>
-	// 	);
-	// };
 
 	selectLearningObject = (index) => {
 		// console.log("selectLearningObject", index);

@@ -9,7 +9,7 @@
 	"phraseTable1": {
 		"component": "PhraseTable",
 		"id": "phraseTable1",
-		"instructionsTextHTML": "<a href='https://commons.wikimedia.org/wiki/File:Waldburg_Ahnentafel.jpg'><img width='256' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Waldburg_Ahnentafel.jpg' style='border: 1px solid black;'></a>",
+		"instructionsTextHTML": "<a href='https://commons.wikimedia.org/wiki/File:Waldburg_Ahnentafel.jpg'><img width='256' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Waldburg_Ahnentafel.jpg' style='border: 1px solid black;'></a><p>Read the phrases and play the audio clips.</p>",
 		"phrases": [
 			[
 				"Tu as des frères et des sœurs ?",
@@ -78,7 +78,7 @@
 	"phraseTable2": {
 		"component": "PhraseTable",
 		"id": "phraseTable2",
-		"instructionsText": "",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
 				"famille (f)",
