@@ -215,8 +215,8 @@ export class CrossWord extends PureComponent {
 			filled,
 			htmlContent,
 			placements,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 		} = this.state;
 		const cellSize = 32;
 		const clues = this.getClues();
@@ -230,8 +230,8 @@ export class CrossWord extends PureComponent {
 				<div className={`crossword-container`}>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+						{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 					</div>
 					<table className={`board`} style={{ borderCollapse: 'collapse' }}>
 						<tbody>
@@ -316,5 +316,5 @@ export class CrossWord extends PureComponent {
 				</div>
 			</div>
 		);
-	}
+	};
 }

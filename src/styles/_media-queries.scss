@@ -167,3 +167,11 @@ html.debug body::before {
 		}
 	}
 }
+@include respond-above(xxxl) {
+	html body::before {
+		content: "XXXL (P)";
+		@media screen and (orientation: landscape) {
+			content: "XXXL (L)";
+		}
+	}
+}

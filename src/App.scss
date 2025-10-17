@@ -44,7 +44,7 @@
 	display: flex;
 }
 body {
-	font-family: "OpenSans", sans-serif;
+	font-family: "OpenSans Regular", sans-serif;
 	font-size: 16px;
 	color: black;
 	margin: 0;
@@ -346,6 +346,11 @@ hr {
 	li {
 		.video {
 			margin-left: -40px;
+		}
+	}
+	.intro {
+		ul {
+			list-style: disc;
 		}
 	}
 	.video {

@@ -10,9 +10,9 @@ export class Social extends React.PureComponent{
 		const ucLogoAlt = "University of Cambridge Language Centre logo";
 		const ccLogoAlt = "Creative Commons";
 		return (
-			<div className={`social`}>
+			<div id={`social`}>
 				<h2>Follow us</h2>
-				<section class="social-icons-section">
+				<section className="social-icons-section">
 					<ul>
 						<li>
 							<a href="https://www.facebook.com/uclangcen">

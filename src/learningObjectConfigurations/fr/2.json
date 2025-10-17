@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"intro": "This lesson teaches how to correctly use and understand French pronouns, genders, and pronunciation through contextual listening and speaking practice."
 	},
 	"monologues1": {
 		"component": "PhraseTable",

@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"intro": "This lesson teaches learners how to greet and introduce themselves politely in French, use appropriate forms of address (tu/vous, Monsieur, Madame, Mademoiselle), and master common expressions for greetings, farewells, and social niceties. It also introduces key pronunciation points — nasal vowels (on/om), the French r, the oi sound, and the silent h — helping learners sound natural and confident in everyday French interactions."
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",

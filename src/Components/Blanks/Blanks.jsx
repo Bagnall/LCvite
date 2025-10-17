@@ -446,8 +446,8 @@ export class Blanks extends React.PureComponent {
 			header = [],
 			htmlContent,
 			id = '',
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			listenDescriptionText,
 			showHints = false,
 			showHintsText,
@@ -635,8 +635,8 @@ export class Blanks extends React.PureComponent {
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip

@@ -8,7 +8,7 @@ export class MainMenu extends React.Component {
 			config,
 			subTitle,
 		} = this.props;
-		console.log("MainMenu render", config, subTitle);
+		// console.log("MainMenu render", config, subTitle);
 		const topMenu = []; // new Array;
 
 		if (config) {

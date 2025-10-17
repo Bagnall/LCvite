@@ -183,8 +183,8 @@ export class ReadAloud extends React.PureComponent {
 			firstTry = true,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			phrase,
 			recording,
 			understood = '',
@@ -200,8 +200,8 @@ export class ReadAloud extends React.PureComponent {
 					<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+						{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>

@@ -3,7 +3,8 @@
 @use "../../styles/_media-queries.scss" as *;
 @use "../../styles/_mixins.module.scss";
 
-.social {
+#social {
+	display: none;
 	width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
@@ -19,9 +20,9 @@
 		display: flex;
 		li {
 			margin: 4px;
+			img {
+				width: 32px;
+			}
 		}
-	}
-	img {
-		width: 32px;
 	}
 }

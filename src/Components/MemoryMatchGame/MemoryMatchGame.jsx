@@ -174,8 +174,8 @@ export class MemoryMatchGame extends React.PureComponent {
 			flipped,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			matched,
 			nPairs,
 			nTries,
@@ -198,8 +198,8 @@ export class MemoryMatchGame extends React.PureComponent {
 				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 				<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 				<div className={`memory-match-game`}>
 					<p className='clue'>{descriptionText}&nbsp;</p>
 

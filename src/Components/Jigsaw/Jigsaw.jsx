@@ -357,8 +357,8 @@ export class Jigsaw extends React.PureComponent {
 			failCount,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			listenDescriptionText,
 			Pieces,
 			showHints = false,
@@ -381,8 +381,8 @@ export class Jigsaw extends React.PureComponent {
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 				<p className='clue'>{descriptionText}&nbsp;</p>
 
 				<AudioClip

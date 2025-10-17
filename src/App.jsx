@@ -122,7 +122,7 @@ export default class App extends React.Component {
 		// Not good as it does not affect state of accordion, in particular 'expanded' true/false.
 		const closedArticles = document.querySelectorAll('article.accordion-article:not(.expanded)');
 		const closedArrows = document.querySelectorAll('div.arrow:not(.expanded)');
-		console.log("closedArticles", closedArticles); // eslint-disable-line
+		// console.log("closedArticles", closedArticles); // eslint-disable-line
 		closedArticles.forEach((closedArticle) => {
 			closedArticle.classList.add('expanded');
 		});
@@ -319,11 +319,11 @@ export default class App extends React.Component {
 		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
 			.then(res => {
-				console.log("res", res);
+				// console.log("res", res);
 				const { learningObjects } = res;
 				let title, subTitle;
 				if (learningObjects[currentLearningObject]) {
-					console.log("BINGO!");
+					// console.log("BINGO!");
 					({ subTitle, title } = learningObjects[currentLearningObject]);
 					document.title = title;
 				}
@@ -423,6 +423,11 @@ export default class App extends React.Component {
 			showSpeechError = false,
 		} = this.state;
 		const articles = new Array;
+		let intro, introHTML;
+		if (settings) {
+			({ intro, introHTML } = settings);
+		}
+
 
 		// We have 2 ways to approach this:
 		// 1. What you can see here is a solution which relies totally on content from config.json.
@@ -446,7 +451,7 @@ export default class App extends React.Component {
 		let subTitle;
 		let title;
 		if (learningObjects[currentLearningObject]) {
-			console.log("BINGO!");
+			// console.log("BINGO!");
 			({ subTitle, title } = learningObjects[currentLearningObject]);
 		}
 		// console.log("title", title, "subTitle", subTitle);
@@ -497,20 +502,20 @@ export default class App extends React.Component {
 					{languageCode !== undefined ?
 						<>
 							{/* <div id='fontSamples'>
-								<h1>Heading 1 Feijoa</h1>
-								<h2>Heading 2 Feijoa</h2>
-								<h3>Heading 3 Feijoa</h3>
-								<h4>Heading 4 Feijoa</h4>
-								<h5>Heading 5 OpenSans</h5>
-								<h6>Heading 6 OpenSans</h6>
-								<p>Bodycopy, Hyperlinks Opensans</p>
+								<h1>Heading 1 Feijoa Bold</h1>
+								<h2>Heading 2 Feijoa Medium</h2>
+								<h3>Heading 3 Feijoa Medium</h3>
+								<h4>Heading 4 Feijoa Medium</h4>
+								<h5>Heading 5 OpenSans SemiBold</h5>
+								<h6>Heading 6 OpenSans SemiBold</h6>
+								<p>Bodycopy, Hyperlinks Opensans Regular</p>
 								<figure>
 									<img
 										src={`images/bsc_logo_flat.svg`}
 										title={`BSC logo`}
 										style={{ width: '60px'}}
 									/>
-									<figcaption>Captions</figcaption>
+									<figcaption>Captions Opensans Regular</figcaption>
 								</figure>
 							</div> */}
 							<div id="content" key="content">
@@ -533,6 +538,10 @@ export default class App extends React.Component {
 									languageCode={languageCode}
 									learningObjects={learningObjects}
 								/>
+								<div className={`intro`}>
+									{intro ? <p className={`intro`}>{intro}</p> : null}
+									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
+								</div>
 								{currentLearningObject !== -1 ?
 									<Accordion id={`accordion1`} key={`accordion1`}>
 										{articles}
@@ -569,7 +578,14 @@ export default class App extends React.Component {
 	renderComponent = (value, articles) => {
 		// console.log(`renderComponent`);
 		// console.log(value);
-		const { id, component, titleText = '', titleTextHTML = '' } = value;
+		const {
+			id,
+			component,
+			// instructionsText,
+			// instructionsTextHTML,
+			titleText = '',
+			titleTextHTML = ''
+		} = value;
 		// console.log(`component [${component}]`);
 		// console.log("renderComponent id=", id);
 
@@ -583,6 +599,7 @@ export default class App extends React.Component {
 			case 'AnswerTable': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
@@ -602,6 +619,7 @@ export default class App extends React.Component {
 			case 'Blanks': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -621,6 +639,7 @@ export default class App extends React.Component {
 			case 'DropDowns': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -640,6 +659,7 @@ export default class App extends React.Component {
 			case 'Explanation': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -677,6 +697,7 @@ export default class App extends React.Component {
 				// console.log(`Group${compoundID}-Accordion`);
 				articles.push(
 					<AccordionArticle
+						config={value}
 						className={`group`}
 						id={`${compoundID}-Group-Accordion`}
 						key={`${compoundID}-Group-Accordion`}
@@ -696,6 +717,7 @@ export default class App extends React.Component {
 			case 'Jigsaw': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -715,6 +737,7 @@ export default class App extends React.Component {
 			case 'MemoryMatchGame': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -734,6 +757,7 @@ export default class App extends React.Component {
 			case 'Monologue': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -753,6 +777,7 @@ export default class App extends React.Component {
 			case 'PhraseTable': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -772,6 +797,7 @@ export default class App extends React.Component {
 			case 'RadioQuiz': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -791,6 +817,7 @@ export default class App extends React.Component {
 			case 'RadioTest': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -810,6 +837,7 @@ export default class App extends React.Component {
 			case 'ReadAloud': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -829,6 +857,7 @@ export default class App extends React.Component {
 			case 'WordGrid': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -848,6 +877,7 @@ export default class App extends React.Component {
 			case 'WordParts': {
 				articles.push(
 					<AccordionArticle
+						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
 						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
@@ -886,6 +916,7 @@ export default class App extends React.Component {
 				if (CustomComponent) {
 					articles.push(
 						<AccordionArticle
+							config={value}
 							id={`${compoundID}-Accordion`}
 							key={`${compoundID}-Accordion`}
 							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}

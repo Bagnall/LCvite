@@ -110,6 +110,7 @@ export class AccordionArticle extends React.PureComponent {
 
 	render = () => {
 		const {
+			config,
 			title = '',
 			titleHTML = '',
 			info,
@@ -120,38 +121,57 @@ export class AccordionArticle extends React.PureComponent {
 		} = this.props;
 
 		const {
+			instructionsText,
+			instructionsTextHTML,
+		} = config;
+
+		const {
 			expanded,
 			id,
 		} = this.state;
 
-		console.log("target", target);
+		// console.log("target", target);
 
 		return (
-			<article
-				className={`accordion-article border-b border-slate-200 special-anchor-target 
-				${expanded ? 'expanded' : ''} ${className ? className : ''}`}
-				onClick={this.toggleExpanded}
-				id={`${id}`}
-				name={`${id}`}
-				key={`article${id}`}
-			>
-				<a className={`special-anchor-target`} name={`special-anchor-${target}`} />
-				<button
-					onClick={this.toggleExpanded}
-					className={`w-full flex items-center py-5 text-slate-800`}>
+			<>
+				<h2>{titleHTML ? (
 					<span
-						id={`icon-${id}`}
-						className={`text-slate-800 transition-transform duration-300`}
 						onClick={this.toggleExpanded}
-					>
-						<svg
-							className={`arrow-icon w-4 h-4`}
+						dangerouslySetInnerHTML={{ __html: titleHTML }}
+					/>
+				) : (
+					<span onClick={this.toggleExpanded}
+					>{title}</span>
+				)}</h2>
+				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+
+				<article
+					className={`accordion-article border-b border-slate-200 special-anchor-target 
+				${expanded ? 'expanded' : ''} ${className ? className : ''}`}
+					onClick={this.toggleExpanded}
+					id={`${id}`}
+					name={`${id}`}
+					key={`article${id}`}
+				>
+					<a className={`special-anchor-target`} name={`special-anchor-${target}`} />
+					<button
+						onClick={this.toggleExpanded}
+						className={`w-full flex items-center py-5 text-slate-800`}>
+						<span
+							id={`icon-${id}`}
+							className={`text-slate-800 transition-transform duration-300`}
 							onClick={this.toggleExpanded}
-							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-							<path fillRule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clipRule="evenodd" />
-						</svg>
-					</span>
-					{titleHTML ? (
+						>
+							<svg
+								className={`arrow-icon w-4 h-4`}
+								onClick={this.toggleExpanded}
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+								<path fillRule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clipRule="evenodd" />
+							</svg>
+						</span>
+						{/* {titleHTML ? (
 						<span
 							onClick={this.toggleExpanded}
 							dangerouslySetInnerHTML={{ __html: titleHTML }}
@@ -160,20 +180,21 @@ export class AccordionArticle extends React.PureComponent {
 						<span onClick={this.toggleExpanded}
 						>{title}</span>
 					)}
-					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
-				</button>
-				<div
-					id={`content-${id}`}
-					onClick={this.doNowt}
-					className={`overflow-hidden transition-all duration-300 ease-in-out`}>
+					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null} */}
+					</button>
 					<div
+						id={`content-${id}`}
+						onClick={this.doNowt}
+						className={`overflow-hidden transition-all duration-300 ease-in-out`}>
+						<div
 						// onClick={auto}
-						className={`pb-5 text-sm text-slate-500`}
-					>
-						{children}
+							className={`pb-5 text-sm text-slate-500`}
+						>
+							{children}
+						</div>
 					</div>
-				</div>
-			</article>
+				</article>
+			</>
 		);
 	};
 }

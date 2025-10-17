@@ -16,7 +16,9 @@ export default defineConfig(({ command }) => ({
 	assetsInclude: [
 		'**/*.mp3',
 		'**/*.jpg',
-		'**/*.svg'
+		'**/*.otf',
+		'**/*.svg',
+		'**/*.ttf'
 	],
 	base: command === 'build' ? `./` : `/projects/richard/`,
 	build: {
@@ -55,6 +57,10 @@ export default defineConfig(({ command }) => ({
 				{
 					dest: '/images',
 					src: './public/images'
+				},
+				{
+					dest: '/fonts',
+					src: './public/fonts'
 				}
 			]
 		})

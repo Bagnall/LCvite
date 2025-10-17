@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"intro": "This lesson teaches how to correctly use and understand French vocabulary, verb groups, and pronunciation, while developing listening and speaking skills through contextual exercises that reinforce grammatical accuracy and gender agreement."
 	},
 	"phraseTable3": {
 		"component": "PhraseTable",

@@ -4,7 +4,8 @@
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR"
+		"targetLanguageCode": "fr-FR",
+		"intro": "This lesson teaches learners how to talk about where they live and where places are located in French. It introduces key questions and answers using “habiter”, prepositions for “in” (à, en, au, aux, dans le), and vocabulary for describing types of places and surroundings. It also develops pronunciation with the nasal vowel sound “in” (as in Singapour, jardin, indien), helping learners speak more naturally when discussing locations and geography."
 	},
 	"phraseTable1": {
 		"component": "PhraseTable",
