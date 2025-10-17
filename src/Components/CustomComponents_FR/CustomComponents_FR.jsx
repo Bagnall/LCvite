@@ -741,7 +741,7 @@ export class LO5Demystify extends PureComponent{
 					<p>the third of the nasal vowels, <AudioClip
 						className={`super-compact`}
 						inline={true}
-						soundFile={`sounds/fr/ain.mp3`} /> which is how the letters an, am, en and em are pronounced.
+						soundFile={`sounds/fr/an_rerecorded.mp3`} /> which is how the letters an, am, en and em are pronounced.
 						Listen to the following examples:</p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/blanc.mp3`}>blanc</AudioClip>&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/chambre.mp3`}>chambre</AudioClip>&nbsp;
@@ -922,20 +922,20 @@ export class LO6Demystify extends PureComponent {
 				>
 					<p><b>How to pronounce double l in French:</b></p>
 					<p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.</p>
-					<p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <b>double l</b> is pronounced <b>l</b>. e.g.&nbsp;
+					<p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <AudioClip className={`link`} soundFile={`sounds/fr/double l a.mp3`}><b>double l</b></AudioClip> is pronounced <b>l</b>. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une balle.mp3`}><b>une balle</b></AudioClip> (a ball),&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est belle.mp3`}><b>Elle est belle</b></AudioClip>. (She is beautiful.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
 							There are no exceptions here!</p>
-					<p>2i after the vowel <b>i</b>, <b>double ll</b> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
+					<p>2i after the vowel <b>i</b>,&nbsp;<AudioClip className={`link`} soundFile={`sounds/fr/double l b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)</p>
-					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <b>double ll</b> is pronounced as though it were
+					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <AudioClip className={`link`} soundFile={`sounds/fr/double l b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were
 						a letter <b>"y"</b> in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
-					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <b>double ll</b> follows <b>i</b>.
+					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <AudioClip className={`link`} soundFile={`sounds/fr/double l a.mp3`}><b>double l</b></AudioClip> follows <b>i</b>.
 						The most common are : <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;
