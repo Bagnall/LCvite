@@ -14,7 +14,7 @@
 	// ul.learning-object-menu {
 	width: 100%;
 	margin: 0 0 0.5rem 0;
-	display: flex;
+	display: none; //flex;
 	list-style-type: none;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -63,6 +63,9 @@
 			color: white;
 		}
 	}
+}
+html.debug #learningObjectMenu {
+	display: flex;
 }
 @include respond-above(m) {
 	// .main-menu {

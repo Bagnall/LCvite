@@ -7,81 +7,114 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches learners how to greet and introduce themselves politely in French, use appropriate forms of address (tu/vous, Monsieur, Madame, Mademoiselle), and master common expressions for greetings, farewells, and social niceties. It also introduces key pronunciation points — nasal vowels (on/om), the French r, the oi sound, and the silent h — helping learners sound natural and confident in everyday French interactions."
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "PhraseTable1",
-		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/><p>Read the phrases and play the audio clips.</p>",
-		"phrases": [
-			[
-				"Salut, ça va ?",
-				"Hi, are you well?",
-				"sounds/fr/Salut, ça va.mp3"
-			],
-			[
-				"Salut ! Ça va ! Et toi ?",
-				"Hi, I'm fine and you?",
-				"sounds/fr/Salut ! Ça va ! Et toi.mp3"
-			],
-			[
-				"Très bien, merci !",
-				"Very well, thank you!",
-				"sounds/fr/Très bien, merci !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Bonjour, Madame Foucher ! Comment ça va ?",
-				"Hello, Mme Foucher! How are you?",
-				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
-			],
-			[
-				"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='.#tuvous'>vous</a> ?",
-				"Hello M Letort, I'm very well, thank you. And you?",
-				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
-			],
-			[
-				"Ça va, merci !",
-				"I'm fine, thank you!",
-				"sounds/fr/Ça va, merci !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Comment t'appelles-<a class='special-anchor' href='.#tuvous'>tu</a> ?",
-				"What's your name?",
-				"sounds/fr/Comment t'appelles-tu.mp3"
-			],
-			[
-				"Je m'appelle Max, et <a class='special-anchor' href='.#toi'>toi</a> ?",
-				"My name is Max. And you're….?",
-				"sounds/fr/Je m'appelle Max, et toi.mp3"
-			],
-			[
-				"Je m'appelle Camille.",
-				"My name's Camille.",
-				"sounds/fr/Je m'appelle Camille.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Comment <a class='special-anchor' href='.#tuvous'>vous</a> appelez-vous ?",
-				"What's your name?",
-				"sounds/fr/Comment vous appelez-vous.mp3"
-			],
-			[
-				"Je m'appelle Isabelle Martin.",
-				"My name is Isabelle Martin.",
-				"sounds/fr/Je m'appelle Isabelle Martin.mp3"
-			]
+	"dialogs": {
+		"component": "Section",
+		"expandable": false,
+		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/>",
+		"content": [
+			{
+				"phraseTable1": {
+					"component": "PhraseTable",
+					"id": "PhraseTable1",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Salut, ça va ?",
+							"Hi, are you well?",
+							"sounds/fr/Salut, ça va.mp3"
+						],
+						[
+							"Salut ! Ça va ! Et toi ?",
+							"Hi, I'm fine and you?",
+							"sounds/fr/Salut ! Ça va ! Et toi.mp3"
+						],
+						[
+							"Très bien, merci !",
+							"Very well, thank you!",
+							"sounds/fr/Très bien, merci !.mp3"
+						]
+					],
+					"titleText": "Meeting and greeting 1"
+				}
+			},
+			{
+				"phraseTable2": {
+					"component": "PhraseTable",
+					"id": "PhraseTable2",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Bonjour, Madame Foucher ! Comment ça va ?",
+							"Hello, Mme Foucher! How are you?",
+							"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
+						],
+						[
+							"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='.#tuvous'>vous</a> ?",
+							"Hello M Letort, I'm very well, thank you. And you?",
+							"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
+						],
+						[
+							"Ça va, merci !",
+							"I'm fine, thank you!",
+							"sounds/fr/Ça va, merci !.mp3"
+						]
+					],
+					"titleText": "Meeting and greeting 2"
+				}
+			},
+			{
+				"phraseTable3": {
+					"component": "PhraseTable",
+					"id": "PhraseTable3",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Comment t'appelles-<a class='special-anchor' href='.#tuvous'>tu</a> ?",
+							"What's your name?",
+							"sounds/fr/Comment t'appelles-tu.mp3"
+						],
+						[
+							"Je m'appelle Max, et <a class='special-anchor' href='.#toi'>toi</a> ?",
+							"My name is Max. And you're….?",
+							"sounds/fr/Je m'appelle Max, et toi.mp3"
+						],
+						[
+							"Je m'appelle Camille.",
+							"My name's Camille.",
+							"sounds/fr/Je m'appelle Camille.mp3"
+						]
+					],
+					"titleText": " Meeting and greeting 3"
+				}
+			},
+			{
+				"phraseTable4": {
+					"component": "PhraseTable",
+					"id": "PhraseTable4",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Comment <a class='special-anchor' href='.#tuvous'>vous</a> appelez-vous ?",
+							"What's your name?",
+							"sounds/fr/Comment vous appelez-vous.mp3"
+						],
+						[
+							"Je m'appelle Isabelle Martin.",
+							"My name is Isabelle Martin.",
+							"sounds/fr/Je m'appelle Isabelle Martin.mp3"
+						]
+					],
+					"titleText": "Meeting and greeting 4"
+				}
+			}
 		],
-		"titleText": "Dialogues: Meeting and greeting"
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"vocabulary1": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "vocabulary1",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
@@ -257,17 +290,23 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"customComponent1": {
+	"grammar": {
 		"component": "LO1Grammar",
-		"id": "LO1Grammar",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
+		"comment": "menuText wins over titleText",
 		"titleText": "Grammar / Use of Language"
 	},
-	"customComponent2": {
+	"pronunciation": {
 		"component": "LO1Demystify",
-		"id": "LO1Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
+		"comment": "menuText wins over titleText",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group1": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -435,7 +474,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

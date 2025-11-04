@@ -8,7 +8,7 @@
 .custom-content {
 	@include mixins.standard-table();
 }
-#LO1Demystify {
+#LO1-pronunciation-Section {
 	align-items: flex-start;
 	img {
 		width: 300px;
@@ -37,13 +37,13 @@
 	}
 }
 
-#LO2Demystify {
+#LO2-pronunciation-Section {
 	img.lo2-demystify-shh {
 		vertical-align: middle;
 	}
 }
 
-#LO4Exercise1 {
+#LO4-LO4Exercise1-Accordion {
 	div.two-columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -73,7 +73,7 @@
 	}
 }
 
-#LO9Grammar {
+#LO9-grammar-Section {
 	.svg-container {
 		overflow: hidden;
 		width: 100%;
@@ -150,7 +150,7 @@
 	}
 }
 
-#L10Grammar {
+#LO10-grammar-Section {
 	div.two-columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

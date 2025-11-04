@@ -7,78 +7,104 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches learners how to talk about family, friends, and relationships in French — describing relatives and using possessive adjectives correctly (e.g. mon frère, ma sœur, mes parents). It introduces the irregular verb avoir (“to have”) and common expressions that use it (j’ai faim, j’ai 25 ans). Learners also practise pronunciation of double l (as in famille, fille, bouteille), developing accurate and natural speech when discussing family and personal relationships."
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "phraseTable1",
-		"instructionsTextHTML": "<a href='https://commons.wikimedia.org/wiki/File:Waldburg_Ahnentafel.jpg'><img width='256' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Waldburg_Ahnentafel.jpg' style='border: 1px solid black;'></a><p>Read the phrases and play the audio clips.</p>",
-		"phrases": [
-			[
-				"Tu as des frères et des sœurs ?",
-				"Have you got brothers and sisters?",
-				"sounds/fr/Tu as des frères et des sœurs.mp3"
-			],
-			[
-				"Oui, j'ai un grand frère et deux petites sœurs. Et toi ?",
-				"Yes, I have a big (older) brother and two little (younger) sisters. What about you?",
-				"sounds/fr/Oui, j'ai un grand frère et deux petites sœurs. Et toi.mp3"
-			],
-			[
-				"Je n'ai pas de frères, mais j'ai une sœur-jumelle.",
-				"I haven't got any brothers, but I've got a twin sister.",
-				"sounds/fr/Je n'ai pas de frères, mais j'ai une sœur-jumelle.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Vous avez des frères et des sœurs ?",
-				"Have you got brothers and sisters?",
-				"sounds/fr/Vous avez des frères et des sœurs.mp3"
-			],
-			[
-				"Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ?",
-				"No, I've got neither brothers nor sisters. I'm an only child. What about you?",
-				"sounds/fr/Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous.mp3"
-			],
-			[
-				"J'ai un demi-frère et une demi-sœur.",
-				"I've got a half-brother and a half-sister.",
-				"sounds/fr/J'ai un demi-frère et une demi-sœur.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Caroline, vous avez des enfants ?",
-				"Caroline, do you have any children?",
-				"sounds/fr/Caroline, vous avez des enfants.mp3"
-			],
-			[
-				"Ah non, nous n'avons pas d'enfants, pas encore ! Et vous ?",
-				"Oh no, we haven't got any children, not yet. What about you?",
-				"sounds/fr/Ah non, nous n'avons pas d'enfants, pas encore ! Et vous.mp3"
-			],
-			[
-				"Oui, j'ai un fils.",
-				"Yes, I've got a son.",
-				"sounds/fr/Oui, j'ai un fils.mp3"
-			],
-			[
-				"Il a quel âge ?",
-				"How old is he?",
-				"sounds/fr/Il a quel âge.mp3"
-			],
-			[
-				"C'est un bébé. Il a cinq mois.",
-				"He's a baby. He's five months old.",
-				"sounds/fr/C'est un bébé. Il a cinq mois.mp3"
-			]
+	"dialogs": {
+		"component": "Section",
+		"expandable": false,
+		"instructionsTextHTML": "<a href='https://commons.wikimedia.org/wiki/File:Waldburg_Ahnentafel.jpg'><img width='256' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Waldburg_Ahnentafel.jpg' style='border: 1px solid black;'></a>",
+		"content": [
+			{
+				"dialogues1": {
+					"component": "PhraseTable",
+					"id": "dialogues1",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Tu as des frères et des sœurs ?",
+							"Have you got brothers and sisters?",
+							"sounds/fr/Tu as des frères et des sœurs.mp3"
+						],
+						[
+							"Oui, j'ai un grand frère et deux petites sœurs. Et toi ?",
+							"Yes, I have a big (older) brother and two little (younger) sisters. What about you?",
+							"sounds/fr/Oui, j'ai un grand frère et deux petites sœurs. Et toi.mp3"
+						],
+						[
+							"Je n'ai pas de frères, mais j'ai une sœur-jumelle.",
+							"I haven't got any brothers, but I've got a twin sister.",
+							"sounds/fr/Je n'ai pas de frères, mais j'ai une sœur-jumelle.mp3"
+						]
+					],
+					"titleText": "Dialogues 1"
+				}
+			},
+			{
+				"dialogues2": {
+					"component": "PhraseTable",
+					"id": "dialogues2",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Vous avez des frères et des sœurs ?",
+							"Have you got brothers and sisters?",
+							"sounds/fr/Vous avez des frères et des sœurs.mp3"
+						],
+						[
+							"Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ?",
+							"No, I've got neither brothers nor sisters. I'm an only child. What about you?",
+							"sounds/fr/Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous.mp3"
+						],
+						[
+							"J'ai un demi-frère et une demi-sœur.",
+							"I've got a half-brother and a half-sister.",
+							"sounds/fr/J'ai un demi-frère et une demi-sœur.mp3"
+						]
+					],
+					"titleText": "Dialogues 2"
+				}
+			},
+			{
+				"dialogues3": {
+					"component": "PhraseTable",
+					"id": "dialogues3",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Caroline, vous avez des enfants ?",
+							"Caroline, do you have any children?",
+							"sounds/fr/Caroline, vous avez des enfants.mp3"
+						],
+						[
+							"Ah non, nous n'avons pas d'enfants, pas encore ! Et vous ?",
+							"Oh no, we haven't got any children, not yet. What about you?",
+							"sounds/fr/Ah non, nous n'avons pas d'enfants, pas encore ! Et vous.mp3"
+						],
+						[
+							"Oui, j'ai un fils.",
+							"Yes, I've got a son.",
+							"sounds/fr/Oui, j'ai un fils.mp3"
+						],
+						[
+							"Il a quel âge ?",
+							"How old is he?",
+							"sounds/fr/Il a quel âge.mp3"
+						],
+						[
+							"C'est un bébé. Il a cinq mois.",
+							"He's a baby. He's five months old.",
+							"sounds/fr/C'est un bébé. Il a cinq mois.mp3"
+						]
+					],
+					"titleText": "Dialogues 3"
+				}
+			}
 		],
-		"titleText": "Dialogues"
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"phraseTable2": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable2",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
@@ -239,17 +265,21 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"customComponent1": {
+	"grammar": {
 		"component": "LO6Grammar",
-		"id": "LO6Grammar",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"customComponent2": {
+	"pronunciation": {
 		"component": "LO6Demystify",
-		"id": "LO6Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group1": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -470,7 +500,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

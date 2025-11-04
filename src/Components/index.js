@@ -32,7 +32,9 @@ export * from './PhraseTable';
 export * from './RadioQuiz';
 export * from './RadioTest';
 export * from './ReadAloud';
+export * from './Section';
 export * from './Social';
+export * from './TopButton';
 export * from './WordGrid';
 export * from './WordParts';
 

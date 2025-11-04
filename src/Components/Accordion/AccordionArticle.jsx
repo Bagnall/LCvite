@@ -24,69 +24,12 @@ export class AccordionArticle extends React.PureComponent {
 		this.toggleExpanded = this.toggleExpanded.bind(this);
 	}
 
-	// componentDidUpdate = (prevProps) => {
-	// 	const {
-	// 		expanded = false,
-	// 		id,
-	// 	} = this.state;
-	// 	// console.log("componentDidUpdate", expanded);
-	// 	if (this.props.expandNow !== prevProps.expandNow) {
-	// 		// this.expand();
-	// 		this.setState({
-	// 			expanded: true
-	// 		});
-
-	// 	}
-	// 	// const content = document.getElementById(`content-${id}`);
-	// 	// if (expanded)
-	// 	// 	content.style.maxHeight = `${content.scrollHeight}px`;
-	// 	// else
-	// 	// 	content.style.maxHeight = `0`;
-	// };
-
-	// expand = () => {
-	// 	const {
-	// 		id,
-	// 	} = this.state;
-
-	// 	sessionStorage.setItem(`${id}-expanded`, JSON.stringify(true));
-	// 	this.setState({
-	// 		expanded: true
-	// 	});
-	// };
 
 	doNowt = (e) => {
 		// console.log("doNowt", e);
 		e.preventDefault();
 		e.stopPropagation();
-
 	};
-
-	// toggleAccordion = (e) => {
-	// 	const {
-	// 		expanded,
-	// 		id,
-	// 	} = this.state;
-	// 	e.preventDefault();
-	// 	e.stopPropagation();
-
-	// 	if (expanded) {
-	// 		this.setState({
-	// 			expanded: false
-	// 		});
-	// 		sessionStorage.setItem(`${id}-expanded`, JSON.stringify(false));
-
-	// 	} else {
-	// 		this.setState({
-	// 			expanded: true
-	// 		});
-	// 		sessionStorage.setItem(`${id}-expanded`, JSON.stringify(true));
-	// 	}
-	// 	if ("vibrate" in navigator) {
-	// 		window.navigator.vibrate(100);
-	// 	}
-
-	// };
 
 	toggleExpanded = (e) => {
 		// console.log("toggleExpanded");
@@ -114,7 +57,6 @@ export class AccordionArticle extends React.PureComponent {
 			title = '',
 			titleHTML = '',
 			info,
-			expandedByDefault = false,
 			className = '',
 			children,
 			target,
@@ -134,18 +76,6 @@ export class AccordionArticle extends React.PureComponent {
 
 		return (
 			<>
-				<h2>{titleHTML ? (
-					<span
-						onClick={this.toggleExpanded}
-						dangerouslySetInnerHTML={{ __html: titleHTML }}
-					/>
-				) : (
-					<span onClick={this.toggleExpanded}
-					>{title}</span>
-				)}</h2>
-				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 
 				<article
 					className={`accordion-article border-b border-slate-200 special-anchor-target 
@@ -171,16 +101,15 @@ export class AccordionArticle extends React.PureComponent {
 								<path fillRule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clipRule="evenodd" />
 							</svg>
 						</span>
-						{/* {titleHTML ? (
-						<span
-							onClick={this.toggleExpanded}
-							dangerouslySetInnerHTML={{ __html: titleHTML }}
-						/>
-					) : (
-						<span onClick={this.toggleExpanded}
-						>{title}</span>
-					)}
-					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null} */}
+						{titleHTML ? (
+							<span
+								onClick={this.toggleExpanded}
+								dangerouslySetInnerHTML={{ __html: titleHTML }}
+							/>
+						) : (
+							<span onClick={this.toggleExpanded}
+							>{title}</span>
+						)}
 					</button>
 					<div
 						id={`content-${id}`}
@@ -190,8 +119,12 @@ export class AccordionArticle extends React.PureComponent {
 						// onClick={auto}
 							className={`pb-5 text-sm text-slate-500`}
 						>
+							{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+							{/* {instructionsText ? <p className={`instructions text accordionarticle`}>{instructionsText}</p> : null}
+							{instructionsTextHTML ? <p className={`instructions html accordionarticle`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 							{children}
 						</div>
+						{/* <button className={`top`} onClick={() => { scrollTo({ behavior: 'smooth', left: 0, top: 0 });}}>Top</button> */}
 					</div>
 				</article>
 			</>

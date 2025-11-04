@@ -6,86 +6,118 @@
 		"targetLanguage": "french",
 		"intro": "This lesson teaches learners how to describe free-time activities in French, using verbs like faire and jouer with correct partitive articles (du, de la, des). It introduces vocabulary for sports, hobbies, and weekend routines, and shows how to distinguish between jouer à (for games and sports) and jouer de (for musical instruments). Learners also review adjective agreement (sportif/sportive) and practise pronunciation of –tion words, improving fluency when talking about leisure and pastimes."
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "phraseTable1",
-		"instructionsText": "Read the phrases and play the audio clips.",
-		"phrases": [
-			[
-				"Tu aimes l'escalade ?",
-				"Do you like climbing?",
-				"sounds/fr/Tu aimes l'escalade.mp3"
-			],
-			[
-				"Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !",
-				"I don't like climbing at all. It's too dangerous! I prefer horse riding. I love horses!",
-				"sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Qu'est-ce que tu fais le weekend ?",
-				"What do you at the weekend?",
-				"sounds/fr/Qu'est-ce que tu fais le weekend.mp3"
-			],
-			[
-				"Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.",
-				"On Saturdays, I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend.",
-				"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.mp3"
-			],
-			[
-				"Et le dimanche ?",
-				"And on Sundays?",
-				"sounds/fr/Et le dimanche.mp3"
-			],
-			[
-				"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi ?",
-				"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?",
-				"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
-			],
-			[
-				"Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !",
-				"I don't do much. I have a lie-in. I see my friends. Sometimes I go to the cinema, or I go clubbing. It depends.",
-				"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Vous jouez d'un instrument de musique ?",
-				"Do you play a musical instrument?",
-				"sounds/fr/Vous jouez d'un instrument de musique.mp3"
-			],
-			[
-				"Oui, je joue du piano et de la clarinette aussi. Et vous ?",
-				"Yes, I play the piano and the clarinet. What about you?",
-				"sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3"
-			],
-			[
-				"Je joue de l'accordéon et joue du piano aussi.",
-				"I play the accordion, and I play the piano too.",
-				"sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous ?",
-				"On Saturdays, I play basketball. Do you fancy playing basketball with us?",
-				"sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3"
-			],
-			[
-				"Le samedi, je ne peux pas - je joue au volley. C'est dommage !",
-				"On Saturdays, I can't - I play volleyball. It's a pity!",
-				"sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage !.mp3"
-			]
+	"dialogs": {
+		"component": "Section",
+		"expandable": false,
+		"content": [
+			{
+				"dialogues1": {
+					"component": "PhraseTable",
+					"id": "dialogues1",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Tu aimes l'escalade ?",
+							"Do you like climbing?",
+							"sounds/fr/Tu aimes l'escalade.mp3"
+						],
+						[
+							"Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !",
+							"I don't like climbing at all. It's too dangerous! I prefer horse riding. I love horses!",
+							"sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !.mp3"
+						]
+					],
+					"titleText": "Dialogues 1"
+				}
+			},
+			{
+				"dialogues2": {
+					"component": "PhraseTable",
+					"id": "dialogues2",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Qu'est-ce que tu fais le weekend ?",
+							"What do you at the weekend?",
+							"sounds/fr/Qu'est-ce que tu fais le weekend.mp3"
+						],
+						[
+							"Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.",
+							"On Saturdays, I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend.",
+							"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.mp3"
+						],
+						[
+							"Et le dimanche ?",
+							"And on Sundays?",
+							"sounds/fr/Et le dimanche.mp3"
+						],
+						[
+							"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi ?",
+							"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?",
+							"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
+						],
+						[
+							"Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !",
+							"I don't do much. I have a lie-in. I see my friends. Sometimes I go to the cinema, or I go clubbing. It depends.",
+							"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3"
+						]
+					],
+					"titleText": "Dialogues 2"
+				}
+			},
+			{
+				"dialogues3": {
+					"component": "PhraseTable",
+					"id": "dialogues3",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Vous jouez d'un instrument de musique ?",
+							"Do you play a musical instrument?",
+							"sounds/fr/Vous jouez d'un instrument de musique.mp3"
+						],
+						[
+							"Oui, je joue du piano et de la clarinette aussi. Et vous ?",
+							"Yes, I play the piano and the clarinet. What about you?",
+							"sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3"
+						],
+						[
+							"Je joue de l'accordéon et joue du piano aussi.",
+							"I play the accordion, and I play the piano too.",
+							"sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3"
+						]
+					],
+					"titleText": "Dialogues 3"
+				}
+			},
+			{
+				"dialogues4": {
+					"component": "PhraseTable",
+					"id": "dialogues4",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous ?",
+							"On Saturdays, I play basketball. Do you fancy playing basketball with us?",
+							"sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3"
+						],
+						[
+							"Le samedi, je ne peux pas - je joue au volley. C'est dommage !",
+							"On Saturdays, I can't - I play volleyball. It's a pity!",
+							"sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage !.mp3"
+						]
+					],
+					"titleText": "Dialogues 4"
+				}
+			}
 		],
-		"titleText": "Dialogues"
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"phraseTable2": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable2",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
@@ -224,17 +256,21 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"customComponent1": {
+	"grammar": {
 		"component": "LO8Grammar",
-		"id": "LO8Grammar",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"customeComponent2": {
+	"pronunciation": {
 		"component": "LO8Demystify",
-		"id": "LO8Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group1": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -459,7 +495,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

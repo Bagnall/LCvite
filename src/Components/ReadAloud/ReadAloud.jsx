@@ -200,22 +200,18 @@ export class ReadAloud extends React.PureComponent {
 					<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
-						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
+
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>
-					{/* <div className='recording-container'>
-						<img src={resolveAsset('/images/microphone-on.png')} alt='microphone on air' style={{ "display": "none" }} /> */}
+
 					<button
 						className={`recording-container`}
 						onClick={this.recordAndScore}
 					>{firstTry ? 'Record' : 'Try again?'}</button>
-					{/* </div> */}
-					{/* <p>Recording: {recording ? 'true' : 'false'}</p> */}
+
 					<div className={`form`}>
 						<p ref={this.resultRef}>{`${understood !== '' ? 'I heard: ' : ''}`}<span className='understood'>{`${ understood !== '' ? understood : ''}`}</span></p>
-						{/* <label>Confidence: {confidence ? parseInt(parseFloat(confidence) * 100) : 0}%</label> */}
+
 						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: `${comparison}` }} />
 					</div>
 				</div>

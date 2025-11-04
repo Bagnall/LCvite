@@ -90,7 +90,7 @@ export class LO1Demystify extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
-				<h1 style={{ textAlign: 'left' }}>How to pronounce:</h1>
+				<h3 style={{ textAlign: 'left' }}>How to pronounce:</h3>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel1` : ''}`}
@@ -2376,39 +2376,39 @@ export class L13ASummersDay extends Component {
 		};
 
 		return (
+			// <div
+			// 	className={`lo13-a-summers-day container`}
+			// 	id={`${id ? id : ''}`}
+			// 	key={`${id}CustomComponent`}
+			// >
 			<div
-				className={`lo13-a-summers-day container`}
-				id={`${id ? id : ''}`}
+				className={`panel`}
+				id={`${id ? `${id}Panel` : ''}`}
 				key={`${id}CustomComponent`}
 			>
-				<div
-					className={`panel`}
-					id={`${id ? `${id}Panel` : ''}`}
-					key={`${id}CustomComponent`}
-				>
-					<img src={resolveAsset(`images/girl_breakfast.png`)} title={`Girl having breakfast in the garden`} />
-					<div className={`instructions`}>
-						<p className={`instruction`}>Listen to Véronique describing a typical summer's day. Then decide whether the following statements are true (vrai) of false (faux).</p>
-						<AudioClip className={``} soundFile={`sounds/fr/LO13EX4.mp3`} />
+				<img src={resolveAsset(`images/girl_breakfast.png`)} title={`Girl having breakfast in the garden`} />
+				<div className={`instructions`}>
+					<p className={`instruction`}>Listen to Véronique describing a typical summer's day. Then decide whether the following statements are true (vrai) of false (faux).</p>
+					<AudioClip className={``} soundFile={`sounds/fr/LO13EX4.mp3`} />
 
-						<div id={`${id}passage`} className={`passage ${allAnswered ? 'show' : 'hide'}`}>
-							<p>En été, je me lève vers six heures le week-end, je m'habille et je me promène dans le village. J'aime être dehors quand il fait beau.
+					<div id={`${id}passage`} className={`passage ${allAnswered ? 'show' : 'hide'}`}>
+						<p>En été, je me lève vers six heures le week-end, je m'habille et je me promène dans le village. J'aime être dehors quand il fait beau.
 							Puis, après, je prends une douche rapide et je prépare mon petit déjeuner. Je prends un bol de céréales et je bois deux tasses
 							de café-crème.
 							J'ai un grand jardin avec beaucoup de fleurs et trois arbres et j'aime faire du jardinage. Souvent, je passe la matinée entière
 							dans le jardin.
 							Je passe l'après-midi avec des amis. Parfois, nous allons en ville, parfois nous restons simplement à la maison. S'il fait chaud,
 							je dîne dans le jardin ou sur le balcon. Le soir, je me détends.
-							</p>
-						</div>
+						</p>
 					</div>
-					<RadioQuiz
-						config={RQConfig}
-						logError={logError}
-						showDialog={showDialog}
-						onComplete={() => this.setState({allAnswered: true})}
-					/>
-					{/* <table>
+				</div>
+				<RadioQuiz
+					config={RQConfig}
+					logError={logError}
+					showDialog={showDialog}
+					onComplete={() => this.setState({allAnswered: true})}
+				/>
+				{/* <table>
 							<tbody>
 								<tr>
 									<td>Véronique se lève vers 7 heures le week-end.</td>
@@ -2541,9 +2541,9 @@ export class L13ASummersDay extends Component {
 								</tr>
 							</tbody>
 						</table> */}
-					{/* <p>{nCorrect} correct out of 12</p> */}
-				</div>
+				{/* <p>{nCorrect} correct out of 12</p> */}
 			</div>
+			// </div>
 		);
 	};
 }

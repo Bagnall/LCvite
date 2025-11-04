@@ -183,7 +183,18 @@ html.can-speak {
 		background-color: rgba(166, 255, 0, 0);
 	}
 }
-
+#hero {
+	// background: green;
+	// background-image: url(../img/swahili.png), url(../img/basic.png), url(../img/banner.png);
+	background-size:
+		// 510px 199px,
+		// 448px 184px,
+		cover;
+	background-repeat: no-repeat, no-repeat;
+	color: white;
+	// min-height: 900px;
+	// background-position: 50% 40%, 5% 8%, left top;
+}
 .no-config {
 	opacity: 0;
 	animation-name: fadeIn;

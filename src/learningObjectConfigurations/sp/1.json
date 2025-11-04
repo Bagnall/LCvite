@@ -7,10 +7,11 @@
 		"targetLanguageCode": "es-US",
 		"subtitle": "First Contact"
 	},
-	"customComponent1": {
+	"introduction": {
 		"component": "LO1Intro",
-		"id": "LO1Intro",
-		"titleText": "Introduction"
+		"expandable": false,
+		"id": "introduction",
+		"comment": "Introduction"
 	},
 	"group1": {
 		"component": "Group",
@@ -383,11 +384,11 @@
 		"id": "LO1UngenderedSpanish",
 		"titleText": "Ungendered Spanish (the future in our hands):"
 	},
-	"group2": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
-				"dropdown1": {
+				"dropdowns1": {
 					"component": "DropDowns",
 					"id": "dropdowns1",
 					"congratulationsText": "Muy bien !",
@@ -629,7 +630,8 @@
 				}
 			}
 		],
-		"id": "group2",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

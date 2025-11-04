@@ -1,8 +1,7 @@
 import './WordParts.scss';
 import {
 	AudioClip,
-} from '..';
-import {
+	Button,
 	Table,
 	TableBody,
 	TableCell,
@@ -12,7 +11,6 @@ import {
 } from '..';
 import React from 'react';
 import {resolveAsset} from '../../utility';
-import { Button } from '..';
 
 export class WordParts extends React.PureComponent {
 

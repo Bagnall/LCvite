@@ -29,7 +29,9 @@ export class LearningObjectMenu extends React.Component {
 			);
 		}
 		return (
-			<ul id={`learningObjectMenu`} className={`lo-menu`}>{renderedMenu}</ul>
+			<ul id={`learningObjectMenu`} className={`lo-menu`}>
+				{renderedMenu}
+			</ul>
 		);
 	};
 }

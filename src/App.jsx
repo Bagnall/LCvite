@@ -23,6 +23,7 @@ import {
 	RadioQuiz,
 	RadioTest,
 	ReadAloud,
+	Section,
 	Social,
 	WordGrid,
 	WordParts,
@@ -273,7 +274,7 @@ export default class App extends React.Component {
 					const {
 						class: configClass,
 						targetLanguageCode,
-						title,
+						// title,
 					} = settings;
 					// document.title = title;
 					if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
@@ -524,11 +525,13 @@ export default class App extends React.Component {
 										<h1>{title}</h1>
 										<h2>{subTitle}</h2>
 									</div> */}
-								<div className="hero bg-base-200  w-full">
-									<div className="hero-content text-center">
-										<div className="w-full">
-											<h1 className="text-5xl font-bold">{title}</h1>
-											<h1 className="text-5xl font-bold">{subTitle}</h1>
+								<div id="hero">
+									<div className="hero bg-base-200  w-full">
+										<div className="hero-content text-center">
+											<div className="w-full">
+												<h1 className="text-5xl font-bold">{title}</h1>
+												<h1 className="text-5xl font-bold">{subTitle}</h1>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -538,7 +541,8 @@ export default class App extends React.Component {
 									languageCode={languageCode}
 									learningObjects={learningObjects}
 								/>
-								<div className={`intro`}>
+								<div className={`intro`} name={`intro`}>
+									<h2>Introduction</h2>
 									{intro ? <p className={`intro`}>{intro}</p> : null}
 									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
 								</div>
@@ -588,6 +592,7 @@ export default class App extends React.Component {
 		} = value;
 		// console.log(`component [${component}]`);
 		// console.log("renderComponent id=", id);
+		const { expandable = true } = value;
 
 		const {
 			currentLearningObject,
@@ -657,23 +662,42 @@ export default class App extends React.Component {
 				break;
 			}
 			case 'Explanation': {
-				articles.push(
-					<AccordionArticle
-						config={value}
-						id={`${compoundID}-Accordion`}
-						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-						target={id}
-						title={titleText}
-						titleHTML={titleTextHTML}
-					>
-						<Explanation
+				if (expandable) {
+					articles.push(
+						<AccordionArticle
 							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
+							id={`${compoundID}-Accordion`}
+							key={`${compoundID}-Accordion`}
+							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							<Explanation
+								config={value}
+								logError={this.logError}
+								showDialog={this.showDialog}
+							/>
+						</AccordionArticle>
+					);
+				} else {
+					articles.push(
+						<Section
+							config={value}
+							id={`${compoundID}-Section`}
+							key={`${compoundID}-Section`}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							<Explanation
+								config={value}
+								logError={this.logError}
+								showDialog={this.showDialog}
+							/>
+						</Section>
+					);
+				}
 				break;
 			}
 			case 'Group': {
@@ -695,23 +719,44 @@ export default class App extends React.Component {
 					instructionsTextHTML,
 				} = value;
 				// console.log(`Group${compoundID}-Accordion`);
-				articles.push(
-					<AccordionArticle
-						config={value}
-						className={`group`}
-						id={`${compoundID}-Group-Accordion`}
-						key={`${compoundID}-Group-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-						target={id}
-						title={titleText}
-						titleHTML={titleTextHTML}
-					>
-						{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
-						{renderedGroupContent}
-					</AccordionArticle>
-				);
+				if (expandable) {
+					articles.push(
+						<AccordionArticle
+							config={value}
+							className={`group`}
+							id={`${compoundID}-Group-Accordion`}
+							key={`${compoundID}-Group-Accordion`}
+							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+							{instructionsText ? <p className={`instructions text accordion`}>{instructionsText}</p> : null}
+							{instructionsTextHTML ? <p className={`instructions html accordion`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+							{renderedGroupContent}
+						</AccordionArticle>
+					);
+				} else {
+					articles.push(
+						<Section
+							config={value}
+							className={`group`}
+							id={`${compoundID}-Group-Section`}
+							key={`${compoundID}-Group-Section`}
+							// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+							{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
+							{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+							{renderedGroupContent}
+						</Section>
+					);
+
+				}
 				break;
 			}
 			case 'Jigsaw': {
@@ -775,23 +820,43 @@ export default class App extends React.Component {
 				break;
 			}
 			case 'PhraseTable': {
-				articles.push(
-					<AccordionArticle
-						config={value}
-						id={`${compoundID}-Accordion`}
-						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
-						target={id}
-						title={titleText}
-						titleHTML={titleTextHTML}
-					>
-						<PhraseTable
+				if (expandable) {
+					articles.push(
+						<AccordionArticle
 							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
+							id={`${compoundID}-Accordion`}
+							key={`${compoundID}-Accordion`}
+							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							<PhraseTable
+								config={value}
+								logError={this.logError}
+								showDialog={this.showDialog}
+							/>
+						</AccordionArticle>
+					);
+				} else {
+					articles.push(
+						<Section
+							config={value}
+							id={`${compoundID}-Section`}
+							key={`${compoundID}-Section`}
+							// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							target={id}
+							title={titleText}
+							titleHTML={titleTextHTML}
+						>
+							<PhraseTable
+								config={value}
+								logError={this.logError}
+								showDialog={this.showDialog}
+							/>
+						</Section>
+					);
+				}
 				break;
 			}
 			case 'RadioQuiz': {
@@ -851,6 +916,43 @@ export default class App extends React.Component {
 							showDialog={this.showDialog}
 						/>
 					</AccordionArticle>
+				);
+				break;
+			}
+			case 'Section': {
+				const renderedSectionContent = new Array;
+				const { content: sectionContent = [] } = value;
+				// console.log("sectionContent", sectionContent);
+
+				sectionContent.forEach((child) => {
+					for (const [/* key */, v] of Object.entries(child)) {
+						// console.log("v", v.id);
+						this.renderComponent(v, renderedSectionContent);
+					}
+				});
+
+				const {
+					htmlContent,
+					id,
+					instructionsText,
+					instructionsTextHTML,
+				} = value;
+
+				articles.push(
+					<Section
+						config={value}
+						className={`section`}
+						id={`${compoundID}-Section-Section`}
+						key={`${compoundID}-Section-Section`}
+						target={id}
+						title={titleText}
+						titleHTML={titleTextHTML}
+					>
+						{/* // 	{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+					// 	{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+					// 	{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
+						{renderedSectionContent}
+					</Section>
 				);
 				break;
 			}
@@ -914,22 +1016,42 @@ export default class App extends React.Component {
 				}
 				// console.log(component.slice(0, 4), component);
 				if (CustomComponent) {
-					articles.push(
-						<AccordionArticle
-							config={value}
-							id={`${compoundID}-Accordion`}
-							key={`${compoundID}-Accordion`}
-							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
-							target={id}
-							title={titleText}
-							titleHTML={titleTextHTML}
-						>
-							<CustomComponent
-								id={id}
-								showDialog={this.showDialog}
-							/>
-						</AccordionArticle>
-					);
+					if (expandable) {
+						articles.push(
+							<AccordionArticle
+								config={value}
+								id={`${compoundID}-Accordion`}
+								key={`${compoundID}-Accordion`}
+								ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+								target={id}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<CustomComponent
+									id={id}
+									showDialog={this.showDialog}
+								/>
+							</AccordionArticle>
+						);
+					} else {
+						articles.push(
+							<Section
+								config={value}
+								id={`${compoundID}-Section`}
+								key={`${compoundID}-Section`}
+								// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+								target={id}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<CustomComponent
+									id={id}
+									showDialog={this.showDialog}
+								/>
+							</Section>
+
+						);
+					}
 				} else if(component.slice(0, 4) === 'HIDE') {
 					// articles.push(
 					// 	<p>HIDE</p>

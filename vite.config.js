@@ -2,6 +2,8 @@ import { createLogger, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import tailwindcss from '@tailwindcss/vite';
+import fs from 'fs';
+import path from 'path';
 
 const logger = createLogger();
 const loggerWarn = logger.warn;
@@ -34,6 +36,26 @@ export default defineConfig(({ command }) => ({
 	},
 	customLogger: logger,
 	plugins: [
+		{
+			name: 'preserve-dist-index',
+			buildStart() {
+				const src = path.resolve('dist/index.html');
+				const backup = path.resolve('.vite-index-backup.html');
+				if (fs.existsSync(src)) {
+					fs.copyFileSync(src, backup);
+					console.log('✅ Backed up dist/index.html');
+				}
+			},
+			closeBundle() {
+				const dest = path.resolve('dist/index.html');
+				const backup = path.resolve('.vite-index-backup.html');
+				if (fs.existsSync(backup)) {
+					fs.copyFileSync(backup, dest);
+					fs.unlinkSync(backup);
+					console.log('✅ Restored custom dist/index.html');
+				}
+			}
+		},
 		react(),
 		tailwindcss(),
 		viteStaticCopy({

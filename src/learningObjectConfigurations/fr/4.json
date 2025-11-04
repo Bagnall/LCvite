@@ -7,86 +7,97 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches learners how to talk about where they live and where places are located in French. It introduces key questions and answers using “habiter”, prepositions for “in” (à, en, au, aux, dans le), and vocabulary for describing types of places and surroundings. It also develops pronunciation with the nasal vowel sound “in” (as in Singapour, jardin, indien), helping learners speak more naturally when discussing locations and geography."
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "phraseTable1",
-		"instructionsText": "Read the phrases and play the audio clips.",
-		"phrases": [
-			[
-				"Où habites-tu ?",
-				"Where do you live?",
-				"/sounds/fr/Où habites-tu.mp3"
-			],
-			[
-				"J'habite en Belgique.",
-				"I live in Belgium.",
-				"/sounds/fr/J'habite en Belgique.mp3"
-			],
-			[
-				"Où exactement ?",
-				"Where exactly?",
-				"/sounds/fr/Où exactement.mp3"
-			],
-			[
-				"A Bruxelles. Et toi ?",
-				"In Brussels. What about you?",
-				"/sounds/fr/A Bruxelles Et toi.mp3"
-			],
-			[
-				"J'habite à Cardiff au Pays de Galles.",
-				"I live in Cardiff in Wales",
-				"/sounds/fr/J'habite à Cardiff au Pays de Galles.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Où habitez-vous ?",
-				"Where do you live ?",
-				"/sounds/fr/Où habitez-vous.mp3"
-			],
-			[
-				"J'habite aux Etats Unis.",
-				"I live in the USA",
-				"/sounds/fr/J'habite aux Etats Unis.mp3"
-			],
-			[
-				"Et moi, j'habite au Maroc.",
-				"And I live in Morocco.",
-				"/sounds/fr/Et moi, j'habite au Maroc.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Où se trouve la cathédrale de Notre Dame ?",
-				"Where is Notre Dame Cathedral?",
-				"/sounds/fr/Où se trouve la cathédrale de Notre Dame.mp3"
-			],
-			[
-				"La cathédrale de Notre Dame se trouve à Paris !",
-				"Notre Dame Cathedral is in Paris!",
-				"/sounds/fr/La cathédrale de Notre Dame se trouve à Paris.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Tu habites au centre-ville ?",
-				"Do you live in the city centre? ",
-				"/sounds/fr/Tu habites au centre-ville.mp3"
-			],
-			[
-				"Non, j'habite dans un petit village à une heure d'ici.",
-				"No, I live in a small village an hour away from here.",
-				"/sounds/fr/Non, j'habite dans un petit village à une heure d'ici.mp3"
-			]
+	"dialogues": {
+		"component": "Section",
+		"expandable": false,
+		"content": [
+			{
+				"phraseTable1": {
+					"component": "PhraseTable",
+					"id": "phraseTable1",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Où habites-tu ?",
+							"Where do you live?",
+							"/sounds/fr/Où habites-tu.mp3"
+						],
+						[
+							"J'habite en Belgique.",
+							"I live in Belgium.",
+							"/sounds/fr/J'habite en Belgique.mp3"
+						],
+						[
+							"Où exactement ?",
+							"Where exactly?",
+							"/sounds/fr/Où exactement.mp3"
+						],
+						[
+							"A Bruxelles. Et toi ?",
+							"In Brussels. What about you?",
+							"/sounds/fr/A Bruxelles Et toi.mp3"
+						],
+						[
+							"J'habite à Cardiff au Pays de Galles.",
+							"I live in Cardiff in Wales",
+							"/sounds/fr/J'habite à Cardiff au Pays de Galles.mp3"
+						],
+						[
+							""
+						],
+						[
+							"Où habitez-vous ?",
+							"Where do you live ?",
+							"/sounds/fr/Où habitez-vous.mp3"
+						],
+						[
+							"J'habite aux Etats Unis.",
+							"I live in the USA",
+							"/sounds/fr/J'habite aux Etats Unis.mp3"
+						],
+						[
+							"Et moi, j'habite au Maroc.",
+							"And I live in Morocco.",
+							"/sounds/fr/Et moi, j'habite au Maroc.mp3"
+						],
+						[
+							""
+						],
+						[
+							"Où se trouve la cathédrale de Notre Dame ?",
+							"Where is Notre Dame Cathedral?",
+							"/sounds/fr/Où se trouve la cathédrale de Notre Dame.mp3"
+						],
+						[
+							"La cathédrale de Notre Dame se trouve à Paris !",
+							"Notre Dame Cathedral is in Paris!",
+							"/sounds/fr/La cathédrale de Notre Dame se trouve à Paris.mp3"
+						],
+						[
+							""
+						],
+						[
+							"Tu habites au centre-ville ?",
+							"Do you live in the city centre? ",
+							"/sounds/fr/Tu habites au centre-ville.mp3"
+						],
+						[
+							"Non, j'habite dans un petit village à une heure d'ici.",
+							"No, I live in a small village an hour away from here.",
+							"/sounds/fr/Non, j'habite dans un petit village à une heure d'ici.mp3"
+						]
+					],
+					"titleText": "Where do you live?"
+				}
+			}
 		],
-		"titleText": "Dialogues: Where do you live?"
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"phraseTable2": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable2",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
@@ -222,20 +233,24 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"explanation1": {
+	"grammar": {
 		"component": "Explanation",
 		"content": [
 			"<p>In French there are several words that translate the word '<b>in</b>'. If you are saying '<b>in</b>' <b>with a proper noun</b> i.e. a place name, you will see <b>à</b>, <b>en</b>, <b>au</b>, <b>aux</b>, <b>dans le</b>. The chart below shows when each of these is used.</p><table><tbody><tr><td>à</td><td>Londres, Cambridge, Marseille</td><td>towns, cities, villages</td></tr><tr><td>à</td><td>Singapour, Hongkong, Taiwan</td><td>islands and archipelagos without gender</td></tr><tr><td>au</td><td>Maroc, Canada, Chili</td><td>masculine countries beginning with a consonant</td></tr><tr><td>en</td><td>France, Suisse, Chine</td><td>all feminine countries</td></tr><tr><td>en</td><td>Afghanistan, Iran, Andorre</td><td>masculine countries beginning with a vowel</td></tr><tr><td>en</td><td>Provence, Nouvelle Calédonie</td><td>feminine provinces and regions </td></tr><tr><td>en</td><td>Océanie, Afrique, Amérique du nord / du sud, Europe, Asie, Antarctique</td><td>the continents</td></tr><tr><td>aux</td><td>Pays Bas, Seychelles, États-Unis</td><td>plurals</td></tr><tr><td>dans le</td><td>Cambridgeshire, Derbyshire, Pas-de-Calais, Colorado</td><td>masculine provinces and regions including the British counties</td></tr></tbody></table>"
 		],
-		"id": "explanation1",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"customComponent1": {
+	"pronunciation": {
 		"component": "LO4Demystify",
-		"id": "LO4Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -311,7 +326,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

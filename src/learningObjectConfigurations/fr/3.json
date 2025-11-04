@@ -7,106 +7,118 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches how to correctly use and understand French vocabulary, verb groups, and pronunciation, while developing listening and speaking skills through contextual exercises that reinforce grammatical accuracy and gender agreement."
 	},
-	"phraseTable3": {
-		"component": "PhraseTable",
-		"id": "phraseTable3",
-		"instructionsTextHTML": "<a title='No machine-readable author provided. AzaToth assumed (based on copyright claims)., CC BY-SA 3.0 &lt;http: //creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rotating_globe.gif'><div class='spinning-globe' ><img alt='This image right here shows a globe spinning around in a 360 degree rotation.' src='https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif?20090914225528'></div></a><p>Read the phrases and play the audio clips.</p>",
-		"phrases": [
-			[
-				"Tu es française ?",
-				"Are you French ?",
-				"sounds/fr/Tu es française.mp3"
-			],
-			[
-				"Ah non, je ne suis pas française !",
-				"Oh no, I'm not French!",
-				"sounds/fr/Ah non, je ne suis pas française !.mp3"
-			],
-			[
-				"Tu es de quelle nationalité ?",
-				"What nationality are you?",
-				"sounds/fr/Tu es de quelle nationalité.mp3"
-			],
-			[
-				"Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
-				"I'm Belgian. I come from Brussels. Where do you come from?",
-				"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
-			],
-			[
-				"Je viens d'Espagne.",
-				"I come from Spain.",
-				"sounds/fr/Je viens d'Espagne.mp3"
-			],
-			[
-				""
-			],
-			[
-				"D'où venez-vous, Monsieur ?",
-				"Where do you come from, sir? ",
-				"sounds/fr/D'où venez-vous, Monsieur.mp3"
-			],
-			[
-				"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse ?",
-				"I come from the USA. I'm American. My wife's Canadian. She comes from Quebec. And are you Swiss?",
-				"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse.mp3"
-			],
-			[
-				"Ah non, je suis luxembourgeoise.",
-				"Oh no, I'm Luxemburgish.",
-				"sounds/fr/Ah non, je suis luxembourgeoise.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Tu parles allemand ?",
-				"Do you speak German?",
-				"sounds/fr/Tu parles allemand.mp3"
-			],
-			[
-				"Non, je ne parle pas allemand.",
-				"No, I don't speak German.",
-				"sounds/fr/Non, je ne parle pas allemand.mp3"
-			],
-			[
-				"Quelles langues parles-tu ?",
-				"Which languages do you speak?",
-				"sounds/fr/Quelles langues parles-tu.mp3"
-			],
-			[
-				"Je parle français. C'est tout.",
-				"I speak French. That's all.",
-				"sounds/fr/Je parle français. C'est tout.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Quelles langues parlez-vous ?",
-				"Which languages do you speak?",
-				"sounds/fr/Quelles langues parlez-vous.mp3"
-			],
-			[
-				"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
-				"I'm trilingual. I speak French, Arabic and a little bit of English.",
-				"sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3"
-			],
-			[
-				"Et les enfants ?",
-				"And the children?",
-				"sounds/fr/Et les enfants.mp3"
-			],
-			[
-				"Ils sont bilingues. Ils parlent français et arabe.",
-				"They're bilingual. They speak French and Arabic.",
-				"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
-			]
+	"dialogs": {
+		"component": "Section",
+		"expandable": false,
+		"instructionsTextHTML": "<a title='No machine-readable author provided. AzaToth assumed (based on copyright claims)., CC BY-SA 3.0 &lt;http: //creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rotating_globe.gif'><div class='spinning-globe' ><img alt='This image right here shows a globe spinning around in a 360 degree rotation.' src='https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif?20090914225528'></div></a>",
+		"content": [
+			{
+				"phraseTable3": {
+					"component": "PhraseTable",
+					"id": "phraseTable3",
+					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"phrases": [
+						[
+							"Tu es française ?",
+							"Are you French ?",
+							"sounds/fr/Tu es française.mp3"
+						],
+						[
+							"Ah non, je ne suis pas française !",
+							"Oh no, I'm not French!",
+							"sounds/fr/Ah non, je ne suis pas française !.mp3"
+						],
+						[
+							"Tu es de quelle nationalité ?",
+							"What nationality are you?",
+							"sounds/fr/Tu es de quelle nationalité.mp3"
+						],
+						[
+							"Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
+							"I'm Belgian. I come from Brussels. Where do you come from?",
+							"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
+						],
+						[
+							"Je viens d'Espagne.",
+							"I come from Spain.",
+							"sounds/fr/Je viens d'Espagne.mp3"
+						],
+						[
+							""
+						],
+						[
+							"D'où venez-vous, Monsieur ?",
+							"Where do you come from, sir? ",
+							"sounds/fr/D'où venez-vous, Monsieur.mp3"
+						],
+						[
+							"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse ?",
+							"I come from the USA. I'm American. My wife's Canadian. She comes from Quebec. And are you Swiss?",
+							"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse.mp3"
+						],
+						[
+							"Ah non, je suis luxembourgeoise.",
+							"Oh no, I'm Luxemburgish.",
+							"sounds/fr/Ah non, je suis luxembourgeoise.mp3"
+						],
+						[
+							""
+						],
+						[
+							"Tu parles allemand ?",
+							"Do you speak German?",
+							"sounds/fr/Tu parles allemand.mp3"
+						],
+						[
+							"Non, je ne parle pas allemand.",
+							"No, I don't speak German.",
+							"sounds/fr/Non, je ne parle pas allemand.mp3"
+						],
+						[
+							"Quelles langues parles-tu ?",
+							"Which languages do you speak?",
+							"sounds/fr/Quelles langues parles-tu.mp3"
+						],
+						[
+							"Je parle français. C'est tout.",
+							"I speak French. That's all.",
+							"sounds/fr/Je parle français. C'est tout.mp3"
+						],
+						[
+							""
+						],
+						[
+							"Quelles langues parlez-vous ?",
+							"Which languages do you speak?",
+							"sounds/fr/Quelles langues parlez-vous.mp3"
+						],
+						[
+							"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
+							"I'm trilingual. I speak French, Arabic and a little bit of English.",
+							"sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3"
+						],
+						[
+							"Et les enfants ?",
+							"And the children?",
+							"sounds/fr/Et les enfants.mp3"
+						],
+						[
+							"Ils sont bilingues. Ils parlent français et arabe.",
+							"They're bilingual. They speak French and Arabic.",
+							"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
+						]
+					],
+					"titleText": "Nationalities and languages"
+				}
+			}
 		],
-		"titleText": "Dialogues: Nationalities and languages"
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"phraseTable4": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable4",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"header": [
 			"Nationalité",
@@ -275,6 +287,7 @@
 	},
 	"phraseTable5": {
 		"component": "PhraseTable",
+		"expandable": false,
 		"id": "phraseTable5",
 		"instructionsText": "",
 		"phrases": [
@@ -319,20 +332,26 @@
 				"sounds/fr/Je viens de  Je ne viens pas de.mp3"
 			]
 		],
-		"titleText": "Vocabulary continued"
+		"titleText": "",
+		"comment": "Vocabulary continued"
 	},
-	"customComponent1": {
+	"grammar": {
 		"component": "LO3Grammar",
-		"id": "LO3Grammar",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"customComponent2": {
+	"pronunciation": {
 		"component": "LO3Demystify",
-		"id": "LO3Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group1": {
-		"id": "group1",
+	"exercises": {
+		"expandable": false,
+		"id": "exercises",
 		"component": "Group",
 		"content": [
 			{

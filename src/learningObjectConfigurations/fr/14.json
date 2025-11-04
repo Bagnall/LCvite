@@ -7,100 +7,118 @@
 		"targetLanguageCode": "fr-FR",
 		"introHTML": "<p>This lesson focuses on talking about university life, studies, and academic routines. Through realistic dialogues, learners practise describing their courses (Je suis étudiant en mathématiques), level of study (Je fais une licence / un master / un doctorat), and workload (J’ai un emploi du temps chargé). The conversations also include common student experiences like attending lectures (cours magistraux), writing essays (dissertations), and feeling tired or stressed from academic demands.</p><p>The vocabulary covers university subjects, degrees, and academic terms — for example, la biologie, le droit, la thèse, le séminaire, la fac d’architecture — along with adjectives to express opinions and feelings (intéressant, fatigant, stressant, fascinant).</p><p>Grammar explains:</p><ul><li>The idiomatic structure with comme to ask “what kind” (Qu’est-ce que tu fais comme études ?).</li><li>The irregular verbs devoir (“to have to”) and pouvoir (“to be able to”) used with infinitives (Je dois partir, Je peux répondre).</li><li>The difference between present participles (-ant, e.g. intéressant, motivant) and past participles (-é, e.g. fatigué, fasciné), both of which can function as adjectives and must agree in gender and number.</li></ul><p>Overall, the topic helps learners describe their university studies, academic workload, and related emotions, while mastering essential verbs and idiomatic expressions for student life in French.</p>"
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "phraseTable1",
-		"instructionsText": "Read the phrases and play the audio clips.",
-		"phrases": [
-			[
-				"Qu'est-ce que tu fais comme études ?",
-				"What are you studying ?",
-				"sounds/fr/Qu'est-ce que tu fais comme études (m).mp3"
-			],
-			[
-				"Je suis étudiant en mathématiques.",
-				"I'm a maths student.",
-				"sounds/fr/Je suis étudiant en mathématiques.mp3"
-			],
-			[
-				"Tu fais un master ?",
-				"Are you doing a masters?",
-				"sounds/fr/Tu fais un master.mp3"
-			],
-			[
-				"Non, je fais une licence.",
-				"No, I'm doing a bachelor's degree / I'm an undergrad.",
-				"sounds/fr/Non, je fais une licence.mp3"
-			],
-			[
-				"Tu es en première année ?",
-				"Are you in the first year?",
-				"sounds/fr/Tu es en première année.mp3"
-			],
-			[
-				"Non, je suis en deuxième année.",
-				"No, I'm in the second year",
-				"sounds/fr/Non, je suis en deuxième année.mp3"
-			],
-			[
-				"Moi, je fais une fac d'architecture. Je suis en première année de master.",
-				"I'm studying architecture. I'm in the first year of a masters.",
-				"sounds/fr/Moi, je fais une fac d'architecture. Je suis en première année de master.mp3"
-			],
-			[
-				"Et ton copain ? Il étudie l'architecture aussi ?",
-				"What about your boyfriend? Is he studying architecture too?",
-				"sounds/fr/Et ton copain Il étudie l'architecture aussi.mp3"
-			],
-			[
-				"Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !",
-				"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy. He's spending hours at the library!",
-				"sounds/fr/Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Alice, ça va ? Tu as l'air très fatigué aujourd'hui !",
-				"Alice, are you alright? You look very tired today!",
-				"sounds/fr/Alice, ça va Tu as l'air très fatigué aujourd'hui !.mp3"
-			],
-			[
-				"Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.",
-				"No, I'm not alright today. I'm very tired.",
-				"sounds/fr/Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.mp3"
-			],
-			[
-				"Pourquoi ?",
-				"Why ?",
-				"sounds/fr/pourquoi.mp3"
-			],
-			[
-				"Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !",
-				"This week I've got five lectures, two seminars and two tutorials. And lots of reading!",
-				"sounds/fr/Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !.mp3"
-			],
-			[
-				"C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !",
-				"That really is a lot! You've got a very heavy timetable, Alice!",
-				"sounds/fr/C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !.mp3"
-			],
-			[
-				"Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !",
-				"Yes, and I have to write two essays as well. It's too much! I'm very stressed!",
-				"sounds/fr/Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !.mp3"
-			],
-			[
-				"Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !",
-				"But it 'll be alright, Alice! It'll soon be the holidays, and you can have a rest!",
-				"sounds/fr/Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !.mp3"
-			]
+	"dialogs": {
+		"component": "Section",
+		"content": [
+			{
+				"phraseTable1": {
+					"component": "PhraseTable",
+					"id": "phraseTable1",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Qu'est-ce que tu fais comme études ?",
+							"What are you studying ?",
+							"sounds/fr/Qu'est-ce que tu fais comme études (m).mp3"
+						],
+						[
+							"Je suis étudiant en mathématiques.",
+							"I'm a maths student.",
+							"sounds/fr/Je suis étudiant en mathématiques.mp3"
+						],
+						[
+							"Tu fais un master ?",
+							"Are you doing a masters?",
+							"sounds/fr/Tu fais un master.mp3"
+						],
+						[
+							"Non, je fais une licence.",
+							"No, I'm doing a bachelor's degree / I'm an undergrad.",
+							"sounds/fr/Non, je fais une licence.mp3"
+						],
+						[
+							"Tu es en première année ?",
+							"Are you in the first year?",
+							"sounds/fr/Tu es en première année.mp3"
+						],
+						[
+							"Non, je suis en deuxième année.",
+							"No, I'm in the second year",
+							"sounds/fr/Non, je suis en deuxième année.mp3"
+						],
+						[
+							"Moi, je fais une fac d'architecture. Je suis en première année de master.",
+							"I'm studying architecture. I'm in the first year of a masters.",
+							"sounds/fr/Moi, je fais une fac d'architecture. Je suis en première année de master.mp3"
+						],
+						[
+							"Et ton copain ? Il étudie l'architecture aussi ?",
+							"What about your boyfriend? Is he studying architecture too?",
+							"sounds/fr/Et ton copain Il étudie l'architecture aussi.mp3"
+						],
+						[
+							"Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !",
+							"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy. He's spending hours at the library!",
+							"sounds/fr/Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !.mp3"
+						]
+					],
+					"titleText": "Dialogues 1"
+				}
+			},
+			{
+				"phraseTable2": {
+					"component": "PhraseTable",
+					"id": "phraseTable2",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"Alice, ça va ? Tu as l'air très fatigué aujourd'hui !",
+							"Alice, are you alright? You look very tired today!",
+							"sounds/fr/Alice, ça va Tu as l'air très fatigué aujourd'hui !.mp3"
+						],
+						[
+							"Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.",
+							"No, I'm not alright today. I'm very tired.",
+							"sounds/fr/Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.mp3"
+						],
+						[
+							"Pourquoi ?",
+							"Why ?",
+							"sounds/fr/pourquoi.mp3"
+						],
+						[
+							"Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !",
+							"This week I've got five lectures, two seminars and two tutorials. And lots of reading!",
+							"sounds/fr/Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !.mp3"
+						],
+						[
+							"C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !",
+							"That really is a lot! You've got a very heavy timetable, Alice!",
+							"sounds/fr/C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !.mp3"
+						],
+						[
+							"Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !",
+							"Yes, and I have to write two essays as well. It's too much! I'm very stressed!",
+							"sounds/fr/Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !.mp3"
+						],
+						[
+							"Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !",
+							"But it 'll be alright, Alice! It'll soon be the holidays, and you can have a rest!",
+							"sounds/fr/Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !.mp3"
+						]
+					],
+					"titleText": "Dialogues 2"
+				}
+			}
 		],
-		"titleText": "Dialogues"
+		"expandable": false,
+		"id": "dialogs",
+		"titleText": "Dialogs"
 	},
-	"phraseTable2": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable2",
+		"expandable": false,
+		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
@@ -351,12 +369,14 @@
 		],
 		"titleText": "Vocabulary"
 	},
-	"L14Grammar": {
+	"grammar": {
 		"component": "L14Grammar",
-		"id": "L14Grammar",
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
 		"titleText": "Grammar / Use of Language"
 	},
-	"group1": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -582,7 +602,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

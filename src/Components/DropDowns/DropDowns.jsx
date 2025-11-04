@@ -1,9 +1,6 @@
 import './DropDowns.scss';
-import { replaceSelectWithSpan, resolveAsset } from '../../utility';
 import {
 	AudioClip,
-} from '..';
-import {
 	Table,
 	TableBody,
 	TableCell,
@@ -11,6 +8,7 @@ import {
 	TableHeader,
 	TableRow
 } from '..';
+import { replaceSelectWithSpan, resolveAsset } from '../../utility';
 import React from 'react';
 
 export class DropDowns extends React.PureComponent {
@@ -233,6 +231,8 @@ export class DropDowns extends React.PureComponent {
 			audio,
 			cheatText,
 			failCount = 0,
+			footnote,
+			footnoteHTML,
 			htmlContent = '',
 			id = [],
 			// instructionsText,
@@ -327,9 +327,6 @@ export class DropDowns extends React.PureComponent {
 
 				{htmlContent && htmlContent !== '' ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
-				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
-
 				{listenDescriptionText && soundFile ?
 					<AudioClip
 						id={`bollox`}
@@ -349,6 +346,8 @@ export class DropDowns extends React.PureComponent {
 
 				{/* // Doing this results in a re-render, thus losing selected settings on dropdowns. So don't, other wise we need to store everyting in state (all selects, their value etc.) and render from that. */}
 				<p><span className='n-placed'>0</span> correct out of {`${this.nToSolve}`}</p>
+				{footnote ? <p className={`ootnote`}>{footnote}</p> : null}
+				{footnoteHTML ? <p className={`footNote`} dangerouslySetInnerHTML={{ __html: footnoteHTML }} /> : null}
 			</div>
 		);
 	};

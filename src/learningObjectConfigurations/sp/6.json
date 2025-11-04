@@ -1,0 +1,298 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "sp-flag.png",
+		"title": "Spanish Learning Object 6",
+		"targetLanguage": "spanish",
+		"targetLanguageCode": "es-US",
+		"subtitle": "The Weather and the Seasons "
+	},
+	"introduction": {
+		"component": "LO6Intro",
+		"expandable": false,
+		"id": "introduction",
+		"comment": "Introduction"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "PhraseTable1",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"Introducción",
+				"Introduction",
+				"sounds/sp/Introducción.mp3"
+			],
+			[
+				"En español usamos diferentes estructuras para hablar del tiempo.",
+				"In Spanish we use different structures to talk about the weather.",
+				"sounds/sp/En español usamos diferentes estructuras para hablar del tiempo.mp3"
+			],
+			[
+				"Hace + sustantivo → Hace sol, Hace viento, Hace calor.",
+				"Hace + noun → It is sunny, It is windy, It is hot.",
+				"sounds/sp/Hace plus sustantivo gives Hace sol, Hace viento, Hace calor.mp3"
+			],
+			[
+				"Hay + sustantivo → Hay niebla, Hay tormenta.",
+				"Hay + noun → There is fog, There is a storm.",
+				"sounds/sp/Hay plus sustantivo gives Hay niebla, Hay tormenta.mp3"
+			],
+			[
+				"Está + adjetivo → Está nublado, Está despejado.",
+				"Está + adjective → It is cloudy, It is clear.",
+				"sounds/sp/Está plus adjetivo gives Está nublado, Está despejado.mp3"
+			],
+			[
+				"Estas expresiones se usan para describir el clima y el estado del cielo.",
+				"These expressions are used to describe the climate and the state of the sky.",
+				"sounds/sp/Estas expresiones se usan para describir el clima y el estado del cielo.mp3"
+			]
+		],
+		"titleText": "El tiempo y las estaciones / The Weather and the Seasons"
+	},
+	"phraseTable2": {
+		"component": "PhraseTable",
+		"id": "PhraseTable2",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"España tiene muchos climas diferentes: en el norte llueve mucho, en el sur hace calor y sol.",
+				"Spain has many different climates: in the north it rains a lot, in the south it is hot and sunny.",
+				"sounds/sp/España tiene muchos climas diferentes en el norte llueve mucho, en el sur hace calor y sol.mp3"
+			],
+			[
+				"En algunos países latinoamericanos, las estaciones son opuestas a las de Europa.",
+				"In some Latin American countries, the seasons are opposite to those in Europe.",
+				"sounds/sp/En algunos países latinoamericanos, las estaciones son opuestas a las de Europa.mp3"
+			],
+			[
+				"Por ejemplo, en Argentina la Navidad es en verano.",
+				"For example, in Argentina Christmas is in summer.",
+				"sounds/sp/Por ejemplo, en Argentina la Navidad es en verano.mp3"
+			]
+		],
+		"titleText": "Sabías que… / Did you know…"
+	},
+	"phraseTable3": {
+		"component": "PhraseTable",
+		"id": "PhraseTable3",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"la primavera 🌸",
+				"spring",
+				"sounds/sp/la primavera.mp3"
+			],
+			[
+				"el verano ☀️",
+				"summer",
+				"sounds/sp/el verano.mp3"
+			],
+			[
+				"el otoño 🍂",
+				"autumn / fall",
+				"sounds/sp/el otoño.mp3"
+			],
+			[
+				"el invierno ❄️",
+				"winter",
+				"sounds/sp/el invierno.mp3"
+			]
+		],
+		"titleText": "Las estaciones / The seasons"
+	},
+	"phraseTable4": {
+		"component": "PhraseTable",
+		"id": "PhraseTable4",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"Hace sol ☀️",
+				"It is sunny",
+				"sounds/sp/Hace sol.mp3"
+			],
+			[
+				"Hace viento 💨",
+				"It is windy",
+				"sounds/sp/Hace viento.mp3"
+			],
+			[
+				"Hace calor 🌡️",
+				"It is hot",
+				"sounds/sp/Hace calor.mp3"
+			],
+			[
+				"Hace frío ❄️",
+				"It is cold",
+				"sounds/sp/Hace frío.mp3"
+			],
+			[
+				"Está nublado ☁️",
+				"It is cloudy",
+				"sounds/sp/Está nublado.mp3"
+			],
+			[
+				"Está despejado 🌞",
+				"It is clear",
+				"sounds/sp/Está despejado.mp3"
+			],
+			[
+				"Está lloviendo 🌧️",
+				"It is raining",
+				"sounds/sp/Está lloviendo.mp3"
+			],
+			[
+				"Nieva ❄️",
+				"It is snowing",
+				"sounds/sp/Nieva.mp3"
+			],
+			[
+				"Hay tormenta ⛈️",
+				"There is a storm",
+				"sounds/sp/Hay tormenta.mp3"
+			],
+			[
+				"Hay niebla 🌫️",
+				"There is fog",
+				"sounds/sp/Hay niebla.mp3"
+			],
+			[
+				"Hay arcoíris 🌈",
+				"There is a rainbow",
+				"sounds/sp/Hay arcoíris.mp3"
+			]
+		],
+		"titleText": "El tiempo / The weather"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "PhraseTable5",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"Hace mucho calor",
+				"It is very hot",
+				"sounds/sp/Hace mucho calor.mp3"
+			],
+			[
+				"Hace un poco de frío",
+				"It is a bit cold",
+				"sounds/sp/Hace un poco de frío.mp3"
+			],
+			[
+				"Está a veinte grados",
+				"It is twenty degrees.",
+				"sounds/sp/Está a veinte grados.mp3"
+			],
+			[
+				"Está bajo cero",
+				"It is below zero.",
+				"sounds/sp/Está bajo cero.mp3"
+			],
+			[
+				"El tiempo es templado",
+				"The weather is mild.",
+				"sounds/sp/El tiempo es templado.mp3"
+			]
+		],
+		"titleText": "Temperaturas e intensidad / Temperatures and intensity"
+	},
+	"phraseTable6": {
+		"component": "PhraseTable",
+		"id": "PhraseTable6",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"— ¿Qué tiempo hace hoy? — Hace sol y calor.",
+				"— What's the weather like today? — It's sunny and hot.",
+				"sounds/sp/Qué tiempo hace hoy Hace sol y calor.mp3"
+			],
+			[
+				"— ¿Llueve en tu ciudad? — Sí, mucho.",
+				"— Does it rain in your city? — Yes, a lot.",
+				"sounds/sp/Llueve en tu ciudad Sí, mucho.mp3"
+			],
+			[
+				"— ¿Qué estación prefieres? — Prefiero el otoño porque no hace tanto calor.",
+				"— Which season do you prefer? — I prefer autumn because it's not so hot.",
+				"sounds/sp/Qué estación prefieres Prefiero el otoño porque no hace tanto calor.mp3"
+			]
+		],
+		"titleText": "Mini diálogos / Mini dialogues"
+	},
+	"memorycards1": {
+		"cheatText": "Cheat",
+		"component": "MemoryMatchGame",
+		"congratulationsText": "Congratulations! You have a good memory!",
+		"id": "memorycards1",
+		"instructionsText": "Match the picture to the Spanish phrase.",
+		"nPairsToPlay": 3,
+		"cards": [
+			{
+				"audio": "sounds/sp/Hace sol y hace calor.mp3",
+				"localLanguage": "It is sunny and hot",
+				"foreignLanguage": "Hace sol y hace calor",
+				"image": "images/memory-weather/its-sunny-and-hot.png"
+			},
+			{
+				"audio": "sounds/sp/Está lloviendo y hace frío.mp3",
+				"localLanguage": "It is raining and cold",
+				"foreignLanguage": "Está lloviendo y hace frío",
+				"image": "images/memory-weather/its-raining-and-cold.png"
+			},
+			{
+				"audio": "sounds/sp/Hay viento y nubes.mp3",
+				"localLanguage": "There is wind and clouds",
+				"foreignLanguage": "Hay viento y nubes",
+				"image": "images/memory-weather/its-windy-and-cloudy.png"
+			}
+		],
+		"showHintsText": "Show hints",
+		"titleText": "Actividad 1 - Escucha y elige / Listen and choose"
+	},
+	"wordsIntoSlots1": {
+		"component": "Blanks",
+		"congratulationsText": "Well done!",
+		"htmlContent": "<p>En Madrid hace sol y veinte grados. En Londres llueve y hace frío. En París está nublado pero no llueve.</p>",
+		"id": "wordsIntoSlots1",
+		"instructionsText": "Match the questions and answers",
+		"showHintsText": "Show hints when moving",
+		"cheatText": "Cheat",
+		"blanksType": "questions-answers",
+		"questions": [
+			"¿Qué tiempo hace en Madrid?",
+			"¿Llueve en Londres?",
+			"¿Está nublado en París?"
+		],
+		"answers": [
+			"Hace sol.",
+			"Sí, llueve.",
+			"Sí, está nublado."
+		],
+		"soundFiles": [
+			"sounds/sp/Qué tiempo hace en Madrid Hace sol.mp3",
+			"sounds/sp/Llueve en Londres Sí, llueve.mp3",
+			"sounds/sp/Está nublado en París Sí, está nublado.mp3"
+		],
+		"titleText": "Actividad 2 - ¿Qué tiempo hace hoy? / What's the weather like today?"
+	}
+}
