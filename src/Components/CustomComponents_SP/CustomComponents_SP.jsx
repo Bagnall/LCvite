@@ -22,7 +22,7 @@ import {
 // "explanation1": {
 // 	"component": "LO9Grammar", // There must be a CustomComponet with this name present. "LO9" is the learning object, "Grammar" aludes to the section within the page.
 // 	"id": "LO9Grammar", // Good practise to have the ID match the component name
-// 	"titleText": "Grammar / Use of Language"
+// 	"titleText": "Grammar and Usage"
 // },
 
 export class LO1Intro extends PureComponent {

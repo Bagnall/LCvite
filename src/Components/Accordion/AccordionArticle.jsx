@@ -116,12 +116,11 @@ export class AccordionArticle extends React.PureComponent {
 						onClick={this.doNowt}
 						className={`overflow-hidden transition-all duration-300 ease-in-out`}>
 						<div
-						// onClick={auto}
 							className={`pb-5 text-sm text-slate-500`}
 						>
 							{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
-							{/* {instructionsText ? <p className={`instructions text accordionarticle`}>{instructionsText}</p> : null}
-							{instructionsTextHTML ? <p className={`instructions html accordionarticle`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
+							{instructionsText ? <p className={`instructions text accordionarticle`}>{instructionsText}</p> : null}
+							{instructionsTextHTML ? <p className={`instructions html accordionarticle`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 							{children}
 						</div>
 						{/* <button className={`top`} onClick={() => { scrollTo({ behavior: 'smooth', left: 0, top: 0 });}}>Top</button> */}

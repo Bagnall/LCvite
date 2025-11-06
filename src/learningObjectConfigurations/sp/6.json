@@ -294,5 +294,141 @@
 			"sounds/sp/Está nublado en París Sí, está nublado.mp3"
 		],
 		"titleText": "Actividad 2 - ¿Qué tiempo hace hoy? / What's the weather like today?"
+	},
+	"phraseTable7": {
+		"component": "PhraseTable",
+		"id": "PhraseTable7",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"Hay chubascos 🌧️",
+				"There are showers",
+				"sounds/sp/Hay chubascos.mp3"
+			],
+			[
+				"Hay relámpagos ⚡",
+				"There is lightning",
+				"sounds/sp/Hay relámpagos.mp3"
+			],
+			[
+				"Hay truenos 🌩️",
+				"There is thunder",
+				"sounds/sp/Hay truenos.mp3"
+			],
+			[
+				"Hay tormentas eléctricas ⛈️",
+				"There are electrical storms",
+				"sounds/sp/Hay tormentas eléctricas.mp3"
+			],
+			[
+				"Está tronando ⚡",
+				"It is thundering",
+				"sounds/sp/Está tronando.mp3"
+			],
+			[
+				"Cae granizo / Hay granizo ❄️",
+				"Hail is falling / There is hail",
+				"sounds/sp/Cae granizo Hay granizo.mp3"
+			],
+			[
+				"Está helando ❄️",
+				"It is freezing",
+				"sounds/sp/Está helando.mp3"
+			],
+			[
+				"Hay escarcha ❄️",
+				"There is frost",
+				"sounds/sp/Hay escarcha.mp3"
+			],
+			[
+				"Está lloviznando 🌦️",
+				"It is drizzling",
+				"sounds/sp/Está lloviznando.mp3"
+			],
+			[
+				"Hay lloviznas dispersas 🌦️",
+				"There are scattered showers",
+				"sounds/sp/Hay lloviznas dispersas.mp3"
+			],
+			[
+				"Hace bochorno 🌡️",
+				"It is humid / muggy",
+				"sounds/sp/Hace bochorno.mp3"
+			],
+			[
+				"Hay humedad 💧",
+				"There is humidity",
+				"sounds/sp/Hay humedad.mp3"
+			],
+			[
+				"El cielo está cubierto ☁️",
+				"The sky is overcast",
+				"sounds/sp/El cielo está cubierto.mp3"
+			],
+			[
+				"El cielo está despejado 🌞",
+				"The sky is clear",
+				"sounds/sp/El cielo está despejado.mp3"
+			],
+			[
+				"Se esperan precipitaciones 🌧️",
+				"Precipitation is expected",
+				"sounds/sp/Se esperan precipitaciones.mp3"
+			],
+			[
+				"Suben las temperaturas 🔼🌡️",
+				"Temperatures are rising",
+				"sounds/sp/Suben las temperaturas.mp3"
+			],
+			[
+				"Bajan las temperaturas 🔽🌡️",
+				"Temperatures are dropping",
+				"sounds/sp/Bajan las temperaturas.mp3"
+			],
+			[
+				"Hace un calor insoportable 🔥",
+				"It is unbearably hot",
+				"sounds/sp/Hace un calor insoportable.mp3"
+			],
+			[
+				"Hace un frío que pela 🥶",
+				"It is freezing cold (colloquial)",
+				"sounds/sp/Hace un frío que pela.mp3"
+			],
+			[
+				"Hace un día horrible 🌧️",
+				"It is a horrible day",
+				"sounds/sp/Hace un día horrible.mp3"
+			],
+			[
+				"Hace un día estupendo ☀️",
+				"It is a wonderful day",
+				"sounds/sp/Hace un día estupendo.mp3"
+			],
+			[
+				"Se espera una ola de calor / frío 🔥❄️",
+				"A heatwave / cold spell is expected",
+				"sounds/sp/Se espera una ola de calor frío.mp3"
+			],
+			[
+				"El pronóstico del tiempo 🌍",
+				"The weather forecast",
+				"sounds/sp/El pronóstico del tiempo.mp3"
+			],
+			[
+				"La alerta meteorológica 🚨",
+				"Weather alert",
+				"sounds/sp/La alerta meteorológica.mp3"
+			],
+			[
+				"Hay viento fuerte 💨",
+				"There is strong wind",
+				"sounds/sp/Hay viento fuerte.mp3"
+			]
+		],
+		"titleText": "Extensión – Vocabulario meteorológico avanzado / Advanced Weather Vocabulary"
 	}
 }

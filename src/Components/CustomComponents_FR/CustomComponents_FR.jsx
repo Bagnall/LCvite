@@ -18,7 +18,7 @@ import {
 // "explanation1": {
 // 	"component": "LO9Grammar", // There must be a CustomComponet with this name present. "LO9" is the learning object, "Grammar" aludes to the section within the page.
 // 	"id": "LO9Grammar", // Good practise to have the ID match the component name
-// 	"titleText": "Grammar / Use of Language"
+// 	"titleText": "Grammar and Usage"
 // },
 
 export class LO1Grammar extends PureComponent {
@@ -35,7 +35,11 @@ export class LO1Grammar extends PureComponent {
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}CustomComponent1`}
 				>
-					<p><a className={`special-anchor-target`} name={`madame`} />1 In French there is no equivalent to the English Ms.
+					<h3>1. Forms of address and politeness</h3>
+					<p>You will learn:</p>
+					<ul><li>When to use Monsieur, Madame, and Mademoiselle.</li><li>Abbreviations: M., Mme., Mlle.</li></ul>
+
+					<p><a className={`special-anchor-target`} name={`madame`} />In French there is no equivalent to the English Ms.
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
 					<a className={`special-anchor-target`} name={`mademoiselle`} /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</p>
@@ -61,6 +65,13 @@ export class LO1Grammar extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}CustomComponent2`}
 				>
+					<h3>2. The “tu” vs “vous” distinction</h3>
+					<p>You will learn:</p>
+					<ul>
+						<li>How to use <i>tu</i> with friends, family, and children.</li>
+						<li>How to use <i>vous</i> formally or when speaking to several people.</li>
+						<li>How <i>toi</i> replaces <i>tu</i> in responses (<i>Et toi ?</i>).</li>
+					</ul>
 					<p><a className={`special-anchor-target`} name={`tuvous`}>2&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip> and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</a></p>
@@ -90,12 +101,17 @@ export class LO1Demystify extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
-				<h3 style={{ textAlign: 'left' }}>How to pronounce:</h3>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel1` : ''}`}
 					key={`${id}Panel1`}
 				>
+					<h3>1. Nasal vowels: "on / om"</h3>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
+						<li>How airflow through nose and mouth creates the French nasal sound.</li>
+					</ul>
 					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
@@ -109,7 +125,13 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
-					<p>2 The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip></p>
+					<h3>2. The French "<AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip>"</h3>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
+						<li>How to feel the vibration when producing the sound.</li>
+						<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+					</ul>
 					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
 						It is formed in the throat. If you clear your throat first thing in the morning or when you are about to make an announcement,
@@ -124,7 +146,12 @@ export class LO1Demystify extends PureComponent {
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p>3 The digraph (vowel combination) <AudioClip className={`link`} soundFile={`sounds/fr/oi.mp3`} ><b>oi</b></AudioClip> in French.</p>
+					<h3>3. The sound "<AudioClip className={`link`} soundFile={`sounds/fr/oi.mp3`} >oi</AudioClip>"</h3>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+						<li>To recognise this sound pattern in many French words.</li>
+					</ul>
 					<p>It is worth being aware of this sound as the letter combination <b>oi</b> appears in many French words e.g. <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
@@ -144,8 +171,11 @@ export class LO1Demystify extends PureComponent {
 						}}
 						title="lady with finger to lips.Shh" />
 					<div className={`text`}>
-						<p>4 <b>The letter h</b>
-						</p>
+						<h3>4. The silent "h"</h3>
+						<h4>You will learn:</h4>
+						<ul>
+							<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
+						</ul>
 						<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
 							<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
 							<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >

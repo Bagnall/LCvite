@@ -48,7 +48,6 @@ export class Section extends React.PureComponent {
 		} = config;
 
 		const {
-			expanded,
 			id,
 		} = this.state;
 
@@ -56,7 +55,7 @@ export class Section extends React.PureComponent {
 
 		return (
 			<div
-				className={`section`}
+				className={`section ${className ? className : ''}`}
 				id={`${id}`}
 			>
 				<a className={`special-anchor-target`} name={`special-anchor-${target}`} />
@@ -69,8 +68,8 @@ export class Section extends React.PureComponent {
 					>{title}</span>
 				)}</h2>
 				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
-				{/* {instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
+				{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 
 				<div
 					id={`${id}`}

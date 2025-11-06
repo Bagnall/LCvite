@@ -206,7 +206,7 @@
 		"expandable": false,
 		"id": "grammar",
 		"menuText": "Grammar",
-		"titleText": "Grammar / Use of Language"
+		"titleText": "Grammar and Usage"
 	},
 	"pronunciation": {
 		"component": "LO5Demystify",

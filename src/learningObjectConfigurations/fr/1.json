@@ -5,7 +5,7 @@
 		"showCongratulations": true,
 		"targetLanguage": "french",
 		"targetLanguageCode": "fr-FR",
-		"intro": "This lesson teaches learners how to greet and introduce themselves politely in French, use appropriate forms of address (tu/vous, Monsieur, Madame, Mademoiselle), and master common expressions for greetings, farewells, and social niceties. It also introduces key pronunciation points — nasal vowels (on/om), the French r, the oi sound, and the silent h — helping learners sound natural and confident in everyday French interactions."
+		"introHTML": "<p>This unit introduces you to the essentials of greeting and introducing yourself politely in French. You will learn how to choose appropriate forms of address depending on the level of formality and use common expressions for everyday social interactions. The unit also helps you build confidence in pronunciation through focused practice on key French sounds.</p><h3>In this unit you will learn to:</h3><ul><li>Greet others and introduce yourself in French.</li><li>Use appropriate forms of address such as <i>tu/vous, Monsieur, Madame, </i>and <i>Mademoiselle</i>.</li><li>Express greetings, farewells, and polite social phrases.</li><li>Recognize and produce French sounds such as nasal vowels (<i>on/om</i>), the French <i>r</i>, and the <i>oi</i> sound.</li></ul>"
 	},
 	"dialogs": {
 		"component": "Section",
@@ -34,7 +34,7 @@
 							"sounds/fr/Très bien, merci !.mp3"
 						]
 					],
-					"titleText": "Meeting and greeting 1"
+					"titleText": "Informal greetings: \"Salut, ça va ?\""
 				}
 			},
 			{
@@ -59,7 +59,7 @@
 							"sounds/fr/Ça va, merci !.mp3"
 						]
 					],
-					"titleText": "Meeting and greeting 2"
+					"titleText": "Formal greetings: \"Bonjour Madame / Monsieur\""
 				}
 			},
 			{
@@ -84,7 +84,7 @@
 							"sounds/fr/Je m'appelle Camille.mp3"
 						]
 					],
-					"titleText": " Meeting and greeting 3"
+					"titleText": "Informal introductions: \"Je m'appelle…\""
 				}
 			},
 			{
@@ -104,7 +104,7 @@
 							"sounds/fr/Je m'appelle Isabelle Martin.mp3"
 						]
 					],
-					"titleText": "Meeting and greeting 4"
+					"titleText": "Formal introductions: \"Comment vous appelez-vous?\""
 				}
 			}
 		],
@@ -115,7 +115,7 @@
 		"component": "PhraseTable",
 		"expandable": false,
 		"id": "vocabulary",
-		"instructionsText": "Read the phrases and play the audio clips.",
+		"instructionsTextHTML": "<h3>You will learn:</h3><ul><li>Key greeting and farewell expressions (<i>Bonjour, Salut, Au revoir, À bientôt</i>).</li><li>Terms of address (<i>Monsieur, Madame, Mademoiselle, Jeune homme, Les enfants</i>).</li><li>Friendly and affectionate expressions (<i>Mon chéri, Ma chérie, Mon amour</i>).</li></ul>",
 		"phrases": [
 			[
 				"Bonjour",
@@ -296,7 +296,7 @@
 		"id": "grammar",
 		"menuText": "Grammar",
 		"comment": "menuText wins over titleText",
-		"titleText": "Grammar / Use of Language"
+		"titleText": "Grammar and Usage"
 	},
 	"pronunciation": {
 		"component": "LO1Demystify",
@@ -304,7 +304,7 @@
 		"id": "pronunciation",
 		"menuText": "Pronunciation",
 		"comment": "menuText wins over titleText",
-		"titleText": "Demystifying French Pronunciation"
+		"titleText": "Pronunciation Focus"
 	},
 	"exercises": {
 		"component": "Group",
@@ -315,7 +315,7 @@
 					"component": "WordParts",
 					"congratulationsText": "Superbe !",
 					"id": "wordparts1",
-					"instructionsTextHTML": "Listen to the following phrases. Each phrase contains at least 2 of the following:  <b>on</b>, <b>oi</b>, <b>r</b>, <b>h</b>. Can you identify them? Click on them to reveal them.",
+					"instructionsTextHTML": "Select the part of each word that contains the nasal, <i>r</i>, or <i>oi</i> sound.",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
 						"b[on]jou[r] m[on] ché[r]i",
@@ -329,15 +329,15 @@
 						"sounds/fr/au revoir ma chérie.mp3",
 						"sounds/fr/quelle horreur valérie !.mp3"
 					],
-					"titleText": "1. Select the parts of the words with the described sounds"
+					"titleText": "1. Identify pronunciation features"
 				}
 			},
 			{
-				"phrases1": {
+				"phrases2": {
 					"component": "Blanks",
-					"id": "phrases1",
+					"id": "phrases2",
 					"congratulationsText": "Excellent !",
-					"instructionsText": "Drag the words to fill in the gaps.",
+					"instructionsText": "Practise reconstructing short informal and formal conversations using the right words and register.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
 					"blanksType": "phrases",
@@ -355,13 +355,13 @@
 				}
 			},
 			{
-				"phrases2": {
+				"phrases3": {
 					"component": "Blanks",
 					"blanksType": "phrases",
 					"cheatText": "Cheat",
 					"congratulationsText": "Superbe !",
-					"id": "phrases2",
-					"instructionsText": "Drag the words to fill in the gaps.",
+					"id": "phrases3",
+					"instructionsText": "Practise reconstructing short informal and formal conversations using the right words and register.",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
 						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
@@ -373,17 +373,17 @@
 						"sounds/fr/Bonsoir Madame Bernard, ça va très bien, merci. Et vous.mp3",
 						"sounds/fr/Ah pas mal merci !.mp3"
 					],
-					"titleText": "3. Meeting and greeting (formal) gap fillers"
+					"titleText": "3. Fill in the gaps: greetings and introductions"
 				}
 			},
 			{
-				"phrases3": {
+				"phrases4": {
 					"blanksType": "phrases",
 					"cheatText": "Cheat",
 					"component": "Blanks",
 					"congratulationsText": "Très bien !",
-					"id": "phrases3",
-					"instructionsText": "Drag the words to fill in the gaps.",
+					"id": "phrases4",
+					"instructionsText": "Practise reconstructing short informal and formal conversations using the right words and register.",
 					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
 					"showHintsText": "Show hints when moving",
 					"phrases": [
@@ -402,15 +402,15 @@
 						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
 						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
 					],
-					"titleText": "4. Meeting and greeting gap fillers"
+					"titleText": "4. Fill in the gaps: greetings and introductions"
 				}
 			},
 			{
-				"wordsIntoSlots1": {
+				"wordsIntoSlots5": {
 					"component": "Blanks",
-					"id": "wordsIntoSlots1",
+					"id": "wordsIntoSlots5",
 					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>on</b> or <b>om</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"instructionsTextHTML": "Listen and drag or match the correct words to complete short spoken exercises — focusing on <i>on</i> / <i>om</i> and <i>oi</i> sounds.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -426,15 +426,15 @@
 						"bonjour"
 					],
 					"soundFile": "sounds/fr/LO1 5 words-in-order.mp3",
-					"titleText": "5. Develop your listening skills"
+					"titleText": "5. Listening comprehension"
 				}
 			},
 			{
-				"wordsIntoSlots2": {
+				"wordsIntoSlots6": {
 					"component": "Blanks",
-					"id": "wordsIntoSlots2",
+					"id": "wordsIntoSlots6",
 					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>oi</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"instructionsTextHTML": "Listen and drag or match the correct words to complete short spoken exercises — focusing on <i>on</i> / <i>om</i> and <i>oi</i> sounds.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -450,15 +450,15 @@
 						"froid"
 					],
 					"soundFile": "sounds/fr/LO1 6 words-in-order.mp3",
-					"titleText": "6. Develop your listening skills"
+					"titleText": "6. Listening comprehension"
 				}
 			},
 			{
-				"wordsIntoSlots3": {
+				"wordsIntoSlots7": {
 					"component": "Blanks",
-					"id": "wordsIntoSlots3",
+					"id": "wordsIntoSlots7",
 					"congratulationsText": "Très bien !",
-					"instructionsTextHTML": "You will hear words containing <b>h</b> as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
+					"instructionsTextHTML": "Listen and drag or match the correct words to complete short spoken exercises — focusing on <i>on</i> / <i>om</i> and <i>oi</i> sounds.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Cheat",
@@ -470,7 +470,7 @@
 						"horrible"
 					],
 					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
-					"titleText": "7. Develop your listening skills"
+					"titleText": "7. Listening comprehension"
 				}
 			}
 		],

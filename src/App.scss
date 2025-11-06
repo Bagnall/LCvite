@@ -266,7 +266,7 @@ hr {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	// align-items: center;
 	flex-direction: column;
 	z-index: 1;
 	margin: 1rem auto;
@@ -353,12 +353,14 @@ hr {
 	ul {
 		margin: 2rem 0;
 		padding-left: 1.2rem;
+		list-style: disc; // Apologies, this is necessary because tailwind (which I hate) removes the most basic of defaults so that you have to add bloat to bring it back to expected behaviour.
 	}
 	li {
 		.video {
 			margin-left: -40px;
 		}
 	}
+	.instructions,
 	.intro {
 		ul {
 			list-style: disc;
@@ -639,5 +641,11 @@ hr {
 	#content {
 		padding: 1rem 2rem;
 		width: calc(100vw - 4rem);
+	}
+}
+
+@media print {
+	.noprint {
+		display: none;
 	}
 }

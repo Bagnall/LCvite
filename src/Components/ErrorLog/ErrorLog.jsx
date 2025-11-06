@@ -121,7 +121,7 @@ export class ErrorLog extends React.Component {
 		});
 
 		return (
-			<div id='errorLog' className={`${errors.length > 0 ? 'show' : ''} ${collapse ? 'collapse' : ''}`}>
+			<div id='errorLog' className={`${errors.length > 0 ? 'show' : ''} ${collapse ? 'collapse' : ''} noprint`}>
 				<header>
 					Error Log
 					<div className='header-buttons-left'>
