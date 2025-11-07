@@ -1,18 +1,39 @@
 // MainMenu.scss
 
+@use "../../styles/_variables.module.scss";
 @use "../../styles/_mixins.module.scss";
 @use "../../styles/_media-queries.scss" as *;
 .main-menu {
 	display: flex;
-	background: red;
+	background: white;
+	position: fixed;
+	height: variables.$main-menu-height;
+	width: 100vw;
 	justify-content: space-between;
 	padding: 4px;
-	color: white;
+	// color: white;
+	z-index: 999;
 	ul {
 		display: flex;
 		color: white;
 		li {
-			margin: 0 4px;
+			// margin: 0 4px;
+			display: flex;
+			height: var(--t-spacing-12, 48px);
+			padding: var(--t-spacing-0, 0) var(--t-spacing-4, 16px);
+			justify-content: center;
+			align-items: center;
+			gap: var(--t-spacing-2, 8px);
+
+			color: var(--d-color-base-content, #1f2937);
+			text-align: center;
+
+			/* 🌼 DaisyUI/sans/text-sm/semibold */
+			font-family: Inter;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 14px; /* 100% */
 		}
 	}
 }

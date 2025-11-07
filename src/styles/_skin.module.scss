@@ -5,30 +5,30 @@ _skin.module.scss
 @use "sass:color";
 
 @mixin affected_by_skin($home, $button, $background, $article-base-background, $panel-back, $body-back, $menu, $congratulate) {
-	background-color: $background;
+	// background-color: $background;
 	.tabs-component-container {
-		background-color: $background;
+		// background-color: $background;
 	}
-	body {
-		background-color: $body-back;
-	}
+	// body {
+	// 	background-color: $body-back;
+	// }
 
-	.main-menu {
-		li {
-			a {
-				background-color: $menu;
-				// color: white;
-				display: inline-block;
-			}
-			&.ellipses {
-				background-color: $menu;
-				&::before,
-				&::after {
-					background-color: $menu;
-				}
-			}
-		}
-	}
+	// .main-menu {
+	// li {
+	// 	a {
+	// 		background-color: $menu;
+	// 		// color: white;
+	// 		display: inline-block;
+	// 	}
+	// 	&.ellipses {
+	// 		background-color: $menu;
+	// 		&::before,
+	// 		&::after {
+	// 			background-color: $menu;
+	// 		}
+	// 	}
+	// }
+	// }
 
 	.home {
 		.radio-device {
@@ -339,7 +339,7 @@ _skin.module.scss
 
 .fr-FR {
 	$french-home: green;
-	$background: white;
+	$background: colours.$body-back;
 	$button: colours.$french-button;
 	// $article-base-background: colours.$french-article-base-background;
 	$french-panel-back: colours.$french-panel-back;

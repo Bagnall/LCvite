@@ -33,7 +33,8 @@ export class MainMenu extends React.Component {
 						className={`menu-item`}
 						key={`menu-item-intro`}>
 						<a
-							href={`#intro`}
+							className={`special-anchor`}
+							href={`#special-anchor-intro`}
 						>Introduction</a>
 					</li>
 					{topMenu}</ul>

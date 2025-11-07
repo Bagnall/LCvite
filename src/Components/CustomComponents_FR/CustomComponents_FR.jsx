@@ -4,6 +4,7 @@ import {
 	Attribution,
 	AudioClip,
 	Figure,
+	Info,
 	RadioQuiz
 } from '..';
 import { Component, PureComponent } from 'react';
@@ -21,7 +22,7 @@ import {
 // 	"titleText": "Grammar and Usage"
 // },
 
-export class LO1Grammar extends PureComponent {
+export class LO1Grammar1 extends PureComponent {
 	render = () => {
 		const { id } = this.props;
 		return (
@@ -60,6 +61,20 @@ export class LO1Grammar extends PureComponent {
 						</tbody>
 					</table>
 				</div>
+			</div>
+		);
+	};
+}
+
+export class LO1Grammar2 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo2-grammar-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel2` : ''}`}
@@ -92,26 +107,28 @@ export class LO1Grammar extends PureComponent {
 	};
 }
 
-export class LO1Demystify extends PureComponent {
+export class LO1Demystify1 extends PureComponent {
 	render = () => {
 		const { id } = this.props;
 		return (
 			<div
-				className={`lo1-demystify-container container`}
+				className={`lo1-demystify1-container container`}
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
 				<div
 					className={`panel`}
-					id={`${id ? `${id}Panel1` : ''}`}
-					key={`${id}Panel1`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}Panel`}
 				>
 					<h3>1. Nasal vowels: "on / om"</h3>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
-						<li>How airflow through nose and mouth creates the French nasal sound.</li>
-					</ul>
+					<Info>
+						<h4>You will learn:</h4>
+						<ul>
+							<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
+							<li>How airflow through nose and mouth creates the French nasal sound.</li>
+						</ul>
+					</Info>
 					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
@@ -120,18 +137,33 @@ export class LO1Demystify extends PureComponent {
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
 					</div>
 				</div>
+			</div>
+		);
+	};
+}
+export class LO1Demystify2 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-demystify2-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
 					<h3>2. The French "<AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip>"</h3>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
-						<li>How to feel the vibration when producing the sound.</li>
-						<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-					</ul>
+					<Info>
+						<h4>You will learn:</h4>
+						<ul>
+							<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
+							<li>How to feel the vibration when producing the sound.</li>
+							<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+						</ul>
+					</Info>
 					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
 						It is formed in the throat. If you clear your throat first thing in the morning or when you are about to make an announcement,
@@ -141,26 +173,56 @@ export class LO1Demystify extends PureComponent {
 					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
 					<p>It is worth noting that the pronunciation of the letter <b>r</b> may vary across the French speaking world.</p>
 				</div>
+			</div>
+		);
+	};
+}
+
+export class LO1Demystify3 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-demystify3-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
 				<div
 					className={`panel`}
-					id={`${id ? `${id}Panel3` : ''}`}
-					key={`${id}Panel3`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}Panel`}
 				>
 					<h3>3. The sound "<AudioClip className={`link`} soundFile={`sounds/fr/oi.mp3`} >oi</AudioClip>"</h3>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-						<li>To recognise this sound pattern in many French words.</li>
-					</ul>
+					<Info>
+						<h4>You will learn:</h4>
+						<ul>
+							<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+							<li>To recognise this sound pattern in many French words.</li>
+						</ul>
+					</Info>
 					<p>It is worth being aware of this sound as the letter combination <b>oi</b> appears in many French words e.g. <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
 					</p>
 				</div>
+			</div>
+		);
+	};
+}
+
+export class LO1Demystify4 extends PureComponent {
+	render = () => {
+		const { id } = this.props;
+		return (
+			<div
+				className={`lo1-demystify4-container container`}
+				id={`${id ? id : ''}`}
+				key={`${id}CustomComponent`}
+			>
 				<div
 					className={`panel`}
-					id={`${id ? `${id}Panel4` : ''}`}
-					key={`${id}Panel4`}
+					id={`${id ? `${id}Panel` : ''}`}
+					key={`${id}Panel`}
 				>
 					<img
 						alt="lady with finger to lips.Shh"
@@ -172,10 +234,12 @@ export class LO1Demystify extends PureComponent {
 						title="lady with finger to lips.Shh" />
 					<div className={`text`}>
 						<h3>4. The silent "h"</h3>
-						<h4>You will learn:</h4>
-						<ul>
-							<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
-						</ul>
+						<Info>
+							<h4>You will learn:</h4>
+							<ul>
+								<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
+							</ul>
+						</Info>
 						<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
 							<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
 							<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >
@@ -186,7 +250,6 @@ export class LO1Demystify extends PureComponent {
 		);
 	};
 }
-
 export class LO2Grammar extends PureComponent {
 	render = () => {
 		const { id } = this.props;

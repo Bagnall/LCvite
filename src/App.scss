@@ -48,7 +48,8 @@ body {
 	font-size: 16px;
 	color: black;
 	margin: 0;
-	// background-color: colours.$body-back; In skin
+	background: colours.$body-back;
+	// background: green;
 }
 h1 {
 	font-family: "Feijoa Bold", times-roman;
@@ -106,6 +107,7 @@ h6 {
 	border: 1px solid red;
 	margin: 3rem;
 	padding: 3rem;
+	display: none;
 }
 figure {
 	figcaption {
@@ -140,6 +142,9 @@ figure {
 html.debug {
 	.blanks-container .target .word.blank {
 		opacity: 0.2;
+	}
+	#fontSamples {
+		// display: block;
 	}
 }
 
@@ -339,12 +344,20 @@ hr {
 		}
 	}
 }
+#info-icon {
+	// Reference SVG picked up by 'use' elsewhere
+	left: -9999px;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
 #content {
 	width: 100vw;
 	max-width: 1400px;
 	text-align: left;
 	padding: 1rem 0;
 	margin: auto;
+	margin-top: variables.$main-menu-height;
 	// h1 {
 	// 	text-align: center;
 	// }
@@ -444,6 +457,8 @@ hr {
 		&.special-anchor-target {
 			color: initial;
 			text-decoration: initial;
+			display: block;
+			pointer-events: none; // Doesn't work :-(
 		}
 	}
 

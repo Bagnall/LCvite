@@ -3,8 +3,17 @@ Accordion.scss
 */
 
 .accordion-article {
-	> button {
+	> a > button {
 		cursor: pointer;
+
+		display: flex;
+		padding: 1px;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: stretch;
+
+		border-radius: var(--d-borderRadius-box, 16px);
+		background: var(--d-color-base-200, #f2f2f2);
 		// background: red;
 		> span > svg.arrow-icon {
 			transition: transform 1s;
@@ -19,7 +28,7 @@ Accordion.scss
 		padding: 0;
 	}
 	&.expanded {
-		> button {
+		> a > button {
 			// background: green;
 			> span > svg.arrow-icon {
 				// for debug box-shadow: 0 0 12px green;

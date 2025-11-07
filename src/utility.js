@@ -169,41 +169,69 @@ export const handleResponseText = (response) => {
 		});
 };
 
+function scrollToElement(element, menuOffset) {
+	if (!element) return;
+
+	// Get bounding rectangle relative to viewport
+	const rect = element.getBoundingClientRect();
+
+	// Adjust by the current scroll position
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+	// Calculate coordinates relative to the page
+	const top = rect.top + scrollTop - menuOffset;
+	const left = rect.left + scrollLeft;
+
+	// Scroll to that position
+	window.scrollTo({
+		top: top,
+		left: left,
+		behavior: 'smooth'
+	});
+}
+
 export const handleSpecialLinkClick = (e) => {
 	// Wow, we need this (unfortunately) so that we can hyperlink between parts of the document, most importantly,
 	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
 	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
 
-	console.log("handleSpecialLinkClick", e);
+	// console.log("handleSpecialLinkClick", e);
 	e.preventDefault();
 	const href = e.target.getAttribute('href');
-
+	// console.log("href", href);
 	const [, name] = href.split('#');
-
+	// console.log("name", name);
 	const specialAnchorTargets = document.querySelectorAll(`a.special-anchor-target[name='${name}']`);
+	// console.log("specialAnchorTargets.length", specialAnchorTargets.length);
 	if (specialAnchorTargets.length === 1) { // Should only ever be one!
 		const [specialAnchorTarget] = specialAnchorTargets;
+		// console.log("SPECIAL ANCHOR TARGET", specialAnchorTarget);
 		// And it should be within an accordion (or even nested accordions)
 		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
+		// console.log("accordionArticle", accordionArticle);
 
-		if (accordionArticle) {
+		if (accordionArticle !== null) {
 			while (accordionArticle) {
 				// Expand it!
-				console.log("while", accordionArticle);
-				console.log("window.refs", window.refs);
+				// console.log("while", accordionArticle);
+				// console.log("window.refs", window.refs);
 				try {
 					const ref = window.refs.find((r) => {
-						console.log("searching", r, r && r.props.id, accordionArticle.id);
+						// console.log("searching", r, r && r.props.id, accordionArticle.id);
 						return r !== null && r.props.id === accordionArticle.id;
 					});
-					console.log("ref", ref);
+					// console.log("ref", ref);
 					ref.setState({ expanded: true },
 						() => setTimeout(() => {
 							// Flash a highlight colour to help the user to spot it.
 							specialAnchorTarget.classList.add('flash');
 							// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
 							const targetRect = specialAnchorTarget.getBoundingClientRect();
-							scrollTo({ behavior: 'smooth', left: targetRect.left, top: 3000/* targetRect.top*/ });
+							// console.log("10 targetRect", targetRect);
+							// console.log("10 SCROLLTO", targetRect.top, -80);
+							// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
+							scrollToElement(specialAnchorTarget, 80);
 							setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
 						}, 500)
 					);
@@ -213,11 +241,15 @@ export const handleSpecialLinkClick = (e) => {
 				accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
 			}
 		} else {
+			// console.log("Not an accordion");
 			// Flash a highlight colour to help the user to spot it.
 			specialAnchorTarget.classList.add('flash');
 			// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
 			const targetRect = specialAnchorTarget.getBoundingClientRect();
-			scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top });
+			// console.log("20 targetRect", targetRect);
+			// console.log("20 SCROLLTO", targetRect.top, -80);
+			// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
+			scrollToElement(specialAnchorTarget, 80);
 			setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
 		}
 

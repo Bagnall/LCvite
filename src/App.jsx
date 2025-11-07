@@ -13,6 +13,7 @@ import {
 	Flag,
 	Footer,
 	Header,
+	Info,
 	Jigsaw,
 	LandingPage,
 	LearningObjectMenu,
@@ -151,6 +152,7 @@ export default class App extends React.Component {
 	initialiseSpecialAnchors = () => {
 		// console.log("initialiseSpecialAnchors");
 		const anchors = document.querySelectorAll('.special-anchor');
+		// console.log("anchors.length", anchors.length);
 		anchors.forEach((anchor) => {
 			// console.log("anchor", anchor);
 			if (anchor.setup) {
@@ -160,6 +162,18 @@ export default class App extends React.Component {
 			}
 			anchor.setup = true;
 		});
+		const targets = document.querySelectorAll('.special-anchor-target');
+		targets.forEach((target) => {
+			// console.log("anchor", anchor);
+			if (target.setup) {
+				// Do nowt!
+			} else {
+				target.addEventListener('click', (e) => e.preventDefault);
+			}
+			target.setup = true;
+		});
+
+
 	};
 
 	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
@@ -468,6 +482,10 @@ export default class App extends React.Component {
 		// console.log("render languageCode", languageCode, "learningObjects", learningObjects, learningObjects.length, "currentLearningObject", currentLearningObject);
 		return (
 			<>
+				<svg xmlns="http://www.w3.org/2000/svg" id="info-icon" viewBox="0 0 24 24">
+					<path
+						d="M12 0C5.373 0 0 5.375 0 12c0 6.629 5.373 12 12 12s12-5.371 12-12c0-6.625-5.373-12-12-12m0 5.323a2.032 2.032 0 1 1 0 4.064 2.032 2.032 0 0 1 0-4.064m2.71 12.29c0 .32-.26.58-.581.58H9.871a.58.58 0 0 1-.58-.58v-1.161c0-.321.26-.581.58-.581h.58v-3.097h-.58a.58.58 0 0 1-.58-.58v-1.162c0-.32.26-.58.58-.58h3.097c.32 0 .58.26.58.58v4.839h.581c.32 0 .58.26.58.58z" />
+				</svg>
 				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`} key={`languageDiv`}>
 					<a className={`special-anchor-target`} name={`special-anchor-top`}/>
 					<ErrorLog
@@ -477,7 +495,7 @@ export default class App extends React.Component {
 						clearError={this.clearError}
 						refreshErrorLog={refreshErrorLog}
 					/>
-					<Header />
+					{/* <Header /> */}
 					{/* <div className={`top-menu`}>
 						<a className={`special-anchor`} href={`#top`}>{subTitle}</a>
 						<ul id='topMenu'>{topMenu}</ul>
@@ -502,24 +520,29 @@ export default class App extends React.Component {
 					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
 					{languageCode !== undefined ?
 						<>
-							{/* <div id='fontSamples'>
-								<h1>Heading 1 Feijoa Bold</h1>
-								<h2>Heading 2 Feijoa Medium</h2>
-								<h3>Heading 3 Feijoa Medium</h3>
-								<h4>Heading 4 Feijoa Medium</h4>
-								<h5>Heading 5 OpenSans SemiBold</h5>
-								<h6>Heading 6 OpenSans SemiBold</h6>
-								<p>Bodycopy, Hyperlinks Opensans Regular</p>
-								<figure>
-									<img
-										src={`images/bsc_logo_flat.svg`}
-										title={`BSC logo`}
-										style={{ width: '60px'}}
-									/>
-									<figcaption>Captions Opensans Regular</figcaption>
-								</figure>
-							</div> */}
 							<div id="content" key="content">
+								<div id='fontSamples'>
+									<h1>Heading 1 Feijoa Bold</h1>
+									<h2>Heading 2 Feijoa Medium</h2>
+									<h3>Heading 3 Feijoa Medium</h3>
+									<h4>Heading 4 Feijoa Medium</h4>
+									<h5>Heading 5 OpenSans SemiBold</h5>
+									<h6>Heading 6 OpenSans SemiBold</h6>
+									<p>Bodycopy, Hyperlinks Opensans Regular</p>
+									<figure>
+										<img
+											src={`images/bsc_logo_flat.svg`}
+											title={`BSC logo`}
+											style={{ width: '60px'}}
+										/>
+										<figcaption>Captions Opensans Regular</figcaption>
+									</figure>
+									<Info>
+										<p>Children</p>
+									</Info>
+									<Info informationText={'Information Text'}/>
+									<Info informationTextHTML={'<p>Information Text <b>HTML</b></p>'}/>
+								</div>
 								{/* <div id='hero' key='hero'>
 										<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
 										<h1>{title}</h1>
@@ -542,7 +565,9 @@ export default class App extends React.Component {
 									learningObjects={learningObjects}
 								/>
 								<div className={`intro`} name={`intro`}>
-									<h2>Introduction</h2>
+									<a className={`special-anchor-target`} name={`special-anchor-intro`} >
+										<h2>Introduction</h2>
+									</a>
 									{intro ? <p className={`intro`}>{intro}</p> : null}
 									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
 								</div>
@@ -715,6 +740,8 @@ export default class App extends React.Component {
 				const {
 					htmlContent,
 					id,
+					informationText,
+					informationTextHTML,
 					instructionsText,
 					instructionsTextHTML,
 				} = value;
@@ -731,9 +758,11 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
+							{/* {informationText ? <div className={`information text accordion`}>{informationText}</div> : null}
+							{informationTextHTML ? <div className={`information html accordion`} dangerouslySetInnerHTML={{ __html: informationTextHTML }} /> : null}
 							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 							{instructionsText ? <p className={`instructions text accordion`}>{instructionsText}</p> : null}
-							{instructionsTextHTML ? <p className={`instructions html accordion`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+							{instructionsTextHTML ? <p className={`instructions html accordion`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 							{renderedGroupContent}
 						</AccordionArticle>
 					);
@@ -749,9 +778,11 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
+							{/* {informationText ? <div className={`information text accordion`}>{informationText}</div> : null}
+							{informationTextHTML ? <div className={`information html accordion`} dangerouslySetInnerHTML={{ __html: informationTextHTML }} /> : null}
 							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 							{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-							{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+							{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 							{renderedGroupContent}
 						</Section>
 					);

@@ -43,6 +43,8 @@ export class Section extends React.PureComponent {
 		} = this.props;
 
 		const {
+			informationText,
+			informationTextHTML,
 			instructionsText,
 			instructionsTextHTML,
 		} = config;
@@ -58,16 +60,17 @@ export class Section extends React.PureComponent {
 				className={`section ${className ? className : ''}`}
 				id={`${id}`}
 			>
-				<a className={`special-anchor-target`} name={`special-anchor-${target}`} />
-				<h2>{titleHTML ? (
-					<span
-						dangerouslySetInnerHTML={{ __html: titleHTML }}
-					/>
-				) : (
-					<span
-					>{title}</span>
-				)}</h2>
-				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+				<a className={`special-anchor-target`} name={`special-anchor-${target}`} >
+					<h2>{titleHTML ? (
+						<span
+							dangerouslySetInnerHTML={{ __html: titleHTML }}
+						/>
+					) : (
+						<span
+						>{title}</span>
+					)}</h2>
+				</a>
+				<Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 
