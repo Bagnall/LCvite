@@ -17,7 +17,7 @@
 		"content": [
 			{
 				"jigsaw1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Jigsaw",
 					"congratulationsText": "Well done! You solved the puzzle!",
 					"correctImage": "/images/cyclist-horse.jpg",
@@ -44,7 +44,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/parrot-jaguar.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Parrot Jaguar"
 				}
@@ -61,7 +61,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/car-windmill.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Car Windmill"
 				}
@@ -78,7 +78,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/car-cliff-lift.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Car Station"
 				}
@@ -95,7 +95,7 @@
 					"descriptionTextEnglish": "The scene is a river bank where people are in sun or in shade. Some have parasols. There are children and dogs. On the reiver thereis a rowing boat, some sailboats and two steamboats.",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/river-bank.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "River Bank"
 				}
@@ -112,7 +112,7 @@
 					"descriptionTextEnglish": "The scene is a river bank, in the shallows, three horses are standing, cooling, harnessed to a hay wain. On the left is a cottage where a woman is washing clothes. A dog runs along by the water and on the opposite bank a man is fishing next to a rowing boat.",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/hay-wain.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Hay Wain"
 				}
@@ -126,7 +126,7 @@
 		"content": [
 			{
 				"wordGrid1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid1",
@@ -189,7 +189,7 @@
 			},
 			{
 				"wordGrid2": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "That was a roaring success!",
 					"htmlContent": "<p>This <b>WordGrid</b> component takes a number of words, their translations and sound files and arranges them into a word grid puzzle.</p><p>The student must know the target language version of the word and drag the mouse from the first letter to the last to highlight the word. The word is then sounded.</p>",
@@ -233,7 +233,7 @@
 			},
 			{
 				"wordGrid3": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid3",
@@ -291,7 +291,7 @@
 			},
 			{
 				"wordGrid4": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid4",
@@ -444,7 +444,7 @@
 			},
 			{
 				"wordGrid5": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid5",
@@ -567,7 +567,7 @@
 			},
 			{
 				"wordGrid6": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid6",
@@ -687,7 +687,7 @@
 		"content": [
 			{
 				"memorycards1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"htmlContent": "<p>This <b>MemoryMatchGame</b> component presents <i>nPairsToPlay</i> pairs of cards face dwon. The student can turn over two at a time. If either are word cards the student can play the audio of the word. If there is one word card and one picture card and they match, the audio is read out once more and the pair added to a collection of matches on the right.</p>",
@@ -786,7 +786,7 @@
 			},
 			{
 				"memorycards2": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You know your way around the house!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
@@ -873,7 +873,7 @@
 			},
 			{
 				"memorycards3": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
@@ -1008,7 +1008,7 @@
 			},
 			{
 				"memorycards4": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 26 pairs from the stock pairs. It's a bit OTT, but challenging. Suggest reducing to 20 or less for acual incorporation.</p>",
@@ -1179,7 +1179,7 @@
 			},
 			{
 				"memorycards5": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"instructionsText": "Match the picture to the French word.",
@@ -1542,7 +1542,7 @@
 		"content": [
 			{
 				"wordparts1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordParts",
 					"congratulationsText": "Superb!",
 					"htmlContent": "<p>The <b>WordParts</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase matches the question set. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p><p>After two mistakes, a cheat option is revealled.</p>",
@@ -1572,7 +1572,7 @@
 					"htmlContent": "<p>The <b>DropDowns</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase should be replaced by a 'dropdown' or 'select'. The verttical bar '|' separated phrases or words are used to populate the options of the select. The one preceded by the asterisk indicates the correct answer. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p>",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Female : Je suis [marocain|*marocaine|africain|africaine].",
 						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
@@ -1709,7 +1709,7 @@
 					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "table",
 					"words": [
 						"moi",
@@ -1744,7 +1744,7 @@
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Salut les enfants ! Tout va bien ?",
@@ -1774,7 +1774,7 @@
 					"id": "picturesAndWords1",
 					"instructionsText": "Match the pictures and words",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "pictures-answers",
 					"pictures": [
 						"images/memory-rooms/bathroom.jpg",
@@ -1824,7 +1824,7 @@
 			{
 				"phrases3": {
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Blanks",
 					"congratulationsText": "Very good!",
 					"htmlContent": "<p>The <b>'blanksType': 'phrases'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into the set of phrases. The set of phrases contains square brackets to show where the words must be dropped, the word is hidden in the phrase. On the right hand side there are audio samples to assist the student if needed. Note: the blank spaces are all the same width even for small words, so they don't give an extra clue!</p><p>After two mistakes, help and cheat options are revealled.</p>",
@@ -1859,7 +1859,7 @@
 					"instructionsTextHTML": "You will hear a series of words containing either the sound <b>u</b> or the sound <b>ou</b>. Drag the words below into the correct box as you hear them.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "group-table",
 					"header": [
 						"u",
@@ -2027,7 +2027,7 @@
 		"titleText": "RadioQuiz TEST!"
 	},
 	"connectFour1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_ConnectFour",
 		"congratulationsText": "Congratulations!",
 		"htmlContentXXX": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
@@ -2037,7 +2037,7 @@
 		"titleText": "ConnectFour"
 	},
 	"mockney1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_Mockney",
 		"congratulationsText": "Congratulations!",
 		"id": "Mockney1",
@@ -2046,7 +2046,7 @@
 		"titleText": "Mockney"
 	},
 	"crossword1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_CrossWord",
 		"congratulationsText": "Well done!",
 		"htmlContent": "<p>The <b>CrossWord</b> component is very experimental and incomplete.",

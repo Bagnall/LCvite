@@ -7,7 +7,7 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches learners how to talk about family, friends, and relationships in French — describing relatives and using possessive adjectives correctly (e.g. mon frère, ma sœur, mes parents). It introduces the irregular verb avoir (“to have”) and common expressions that use it (j’ai faim, j’ai 25 ans). Learners also practise pronunciation of double l (as in famille, fille, bouteille), developing accurate and natural speech when discussing family and personal relationships."
 	},
-	"dialogs": {
+	"dialogues": {
 		"component": "Section",
 		"expandable": false,
 		"instructionsTextHTML": "<a href='https://commons.wikimedia.org/wiki/File:Waldburg_Ahnentafel.jpg'><img width='256' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Waldburg_Ahnentafel.jpg' style='border: 1px solid black;'></a>",
@@ -98,8 +98,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -289,7 +289,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the speakers and select what you hear.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"[J'ai des sœurs.|*J'ai deux sœurs.|Je n'ai pas de sœurs.]",
 						"[Il a un frère.|*Elle a un frère.|Elles ont un frère.]",
@@ -314,7 +314,7 @@
 					"congratulationsText": "Très bien !",
 					"htmlContent": "<div><h2>All the words containing double&nbsp;<b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select <b>y</b> or <b>l</b> in the box below. Once you've completed each task listen to the text.</h2><table class='camille'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/La famille de Camille habite à Paris.mp3'>La <b>famille</b> de <b>Camille</b> habite à Paris.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de Camille est très gentille.mp3'>La <b>fille</b> de <b>Camille</b> est très <b>gentille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/La fille de sa fille s&apos;appelle Myrtille.mp3'>La <b>fille</b> de sa <b>fille</b> <b>s'appelle Myrtille</b>.</span></br><span class='audio-link' sound-file='sounds/fr/Camille aime les tilleuls de Versailles.mp3'><b>Camille</b> aime les <b>tilleuls</b> de <b>Versailles</b>.</span></td></tr></tbody></table><p class='footnote'>les tilleuls - lime trees</p></div>&copy; Jacqueline Rosen",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"famille ([*y|l])",
 						"Camille ([*y|l])",
@@ -345,7 +345,7 @@
 					"congratulationsText": "Très bien !",
 					"htmlContent": "<div><h2>All the words containing double <b>ll</b> are in bold. Do you know which are pronounced <b>l</b> and which <b>y</b>? Select y or l in the box below. Once you've completed each task listen to the text.</h2><table class='annabelle'><tbody><tr><td><span class='audio-link' sound-file='sounds/fr/Annabelle a une petite-fille.mp3'><b>Annabelle</b> a une <b>petite-fille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Elle s&apos;appelle Isabelle.mp3'><b>Elle s'appelle Isabelle</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Isabelle nest pas belle.mp3'><b>Isabelle</b> n'est pas <b>belle</b></span><br/><span class='audio-link' sound-file='sounds/fr/Mais Isabelle est très gentille.mp3'>Mais <b>Isabelle</b> est très <b>gentille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Isabelle habite à Lille.mp3'><b>Isabelle</b> habite à <b>Lille</b></span><br/><span class='audio-link' sound-file='sounds/fr/Elle y habite avec Gilles.mp3'><b>Elle</b> y habite avec <b>Gilles</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Ce nest pas très tranquille.mp3'>Ce n'est pas très <b>tranquille</b>.</span><br/><span class='audio-link' sound-file='sounds/fr/Mais quelle belle ville, la ville de Lille.mp3'>Mais <b>quelle belle ville</b>, la <b>ville</b> de <b>Lille</b> !</span></td></tr></tbody></table>&copy; Jacqueline Rosen</div>",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Annabelle ([y|*l])",
 						"elle ([y|*l])",
@@ -380,7 +380,7 @@
 					"congratulationsText": "Superbe !",
 					"instructionsTextHTML": "Fill in the gaps with the correct part of <b>avoir</b>.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"J' [*ai|as|a|avons|avez|ont] 30 ans.",
 						"Nous [ai|as|a|*avons|avez|ont] trois enfants.",
@@ -415,7 +415,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the correct word to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Louis n'est pas [*mon|ma|mes] frère. C'est [*mon|ma|mes] cousin.  ",
 						"Je vous présente [mon|*ma|mes] tante, Géraldine et [*mon|ma|mes] oncle, Simon. ",
@@ -458,7 +458,7 @@
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Ma famille est",

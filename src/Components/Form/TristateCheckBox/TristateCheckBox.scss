@@ -1,0 +1,44 @@
+/*
+TriStateCheckbox.scss
+*/
+@import "../../../styles/_colours.module.scss";
+
+$checkbox-dimensions: 16px;
+.tristate-checkbox {
+	border: 2px solid;
+	width: $checkbox-dimensions;
+	height: $checkbox-dimensions;
+	border-radius: 3px;
+	background-color: white;
+	cursor: pointer;
+	position: relative;
+	&.checked {
+		background-color: black;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background: white;
+		}
+		&::before {
+			width: $checkbox-dimensions * 2 / 3;
+			height: $checkbox-dimensions / 6;
+			transform: rotateZ(-45deg);
+			top: 4px;
+			left: 2px;
+		}
+		&::after {
+			width: $checkbox-dimensions / 3;
+			height: $checkbox-dimensions / 6;
+			transform: rotateZ(45deg);
+			top: 5px;
+			left: 0px;
+		}
+		&.readonly {
+			cursor: not-allowed;
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+}

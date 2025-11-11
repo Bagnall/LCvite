@@ -225,7 +225,7 @@
 					"id": "picturesAndWords1",
 					"instructionsText": "Match the pictures and words",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "pictures-answers",
 					"pictures": [
 						"images/memory-rooms/bathroom.jpg",
@@ -279,7 +279,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"[le|*la|les] salle de bains",
 						"[le|*la|les] chambre",
@@ -318,7 +318,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Le bureau est [*lumineux|lumineuse/ lumineuses].",
 						"La cave est [dangereux|*dangereuse|dangereuses].",
@@ -346,7 +346,7 @@
 					"congratulationsText": "Superbe !",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "phrases",
 					"phrases": [
 						"J'habite [seule]. Mon appartement n'est pas [très] grand, mais il est très [confortable].  Il y a [une] salle de séjour [lumineuse]. Elle [est] très jolie. J'ai un petit [balcon] – c'est super !  Il y a [deux] chambres, une pour [moi] et une autre [petite] chambre pour mes invités. J'ai une salle de bains et des [toilettes], bien sûr ! Il y a [un] jardin devant l'immeuble."

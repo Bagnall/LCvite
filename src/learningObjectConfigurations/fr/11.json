@@ -122,8 +122,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -291,7 +291,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Use the words below to complete the conversation in the café.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "phrases",
 					"phrases": [
 						"Bonjour ! Vous [désirez] ? ",
@@ -329,7 +329,7 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Je [*voudrais|voudrait|voudriez|voudrions|voudraient] un chocolat chaud.",
 						"Ma mère [voudrais|*voudrait|voudriez|voudrions|voudraient] un thé vert.",
@@ -356,7 +356,7 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Qu'est-ce que tu [*prends|prend|prenez|prenons|prennent] ?",
 						"Vous [prends|prend|*prenez|prenons|prennent] un café ?",
@@ -385,7 +385,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsTextHTML": "Fill in the gaps with <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Je voudrais un thé [*au|à la|à l'|aux] citron.",
 						"Alex voudrait un sandwich [*au|à la|à l'|aux] poulet. ",

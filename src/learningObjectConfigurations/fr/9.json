@@ -138,7 +138,7 @@
 			}
 		],
 		"id": "dialogues",
-		"titleText": "Dialogs"
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -313,7 +313,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Âllo, oui ?",
 						"Bonjour Madame, c'est [combien|*bien] le 02 25 09 10 44 ?",
@@ -350,7 +350,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "phrases",
 					"phrases": [
 						"Âllo, oui ?",

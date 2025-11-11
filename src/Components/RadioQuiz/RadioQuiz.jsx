@@ -55,8 +55,8 @@ export class RadioQuiz extends React.Component {
 		// console.log("handleChange", rowNum, colNum); // e.target.id);
 		e.stopPropagation();
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 
 		// console.log(colNum === phrases[rowNum][2], colNum);
 		if (colNum === phrases[rowNum][1]) {
@@ -65,13 +65,13 @@ export class RadioQuiz extends React.Component {
 			answers[rowNum][colNum] = true;
 			nCorrect++;
 			if (nCorrect === phrases.length) {
-				tadaAudio.play();
+				// tadaAudio.play();
 				showDialog(congratulationsText);
 				onComplete();
 			}
 			disabled[rowNum] = true;
-		} else {
-			errorAudio.play();
+		// } else {
+		// 	errorAudio.play();
 		}
 		// console.log("showExplanation", showExplanation, rowNum);
 		showExplanation[rowNum] = true;

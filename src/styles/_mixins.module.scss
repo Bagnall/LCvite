@@ -103,6 +103,18 @@ _mixins.module.scss
 	// }
 }
 
+@mixin form-field-common() {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 0.2fr;
+	grid-auto-rows: min-content;
+}
+
+@mixin form-field-common-font-padding() {
+	font-size: 16px;
+	padding: 8px 4px;
+}
+
 @mixin standard-table() {
 	table {
 		text-align: left;

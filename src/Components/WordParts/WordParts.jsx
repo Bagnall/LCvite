@@ -40,9 +40,9 @@ export class WordParts extends React.PureComponent {
 
 		if (nPlaced < this.nToSolve) {
 			const targets = document.querySelectorAll(`#${id} span.target`);
-			const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+			// const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 
-			wofAudio.play();
+			// wofAudio.play();
 
 			for (let i = 0; i < targets.length; i++) {
 				targets[i].classList.add('animate');
@@ -55,17 +55,18 @@ export class WordParts extends React.PureComponent {
 	};
 
 	handlePartWordClick = (e) => {
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
-		const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+		// const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 		// console.log("handlePartWordClick");
-		wofAudio.play();
+		// wofAudio.play();
 		const {
 			congratulationsText,
 		} = this.state;
 		let {
 			nPlaced = 0,
 		} = this.state;
+		if (e.target.classList.contains("animate") || e.target.classList.contains("error")) return;
 		e.target.classList.add("animate");
 		nPlaced++;
 		if (nPlaced === this.nToSolve){
@@ -73,7 +74,7 @@ export class WordParts extends React.PureComponent {
 			// Last piece of the jigsaw placed
 			const { showDialog } = this.props;
 			showDialog(congratulationsText);
-			tadaAudio.play();
+			// tadaAudio.play();
 			this.setState({
 				complete: true,
 			});
@@ -85,9 +86,9 @@ export class WordParts extends React.PureComponent {
 
 	handlePartWordError = (e) => {
 		// console.log("handlePartWordError");
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
 		let { failCount } = this.state;
-		errorAudio.play();
+		// errorAudio.play();
 		e.target.classList.add("error");
 
 		failCount++;
@@ -198,7 +199,6 @@ export class WordParts extends React.PureComponent {
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
-
 				<Table>
 					<TableBody>
 						{rows}

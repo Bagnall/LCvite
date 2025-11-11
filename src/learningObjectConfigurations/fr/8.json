@@ -6,7 +6,7 @@
 		"targetLanguage": "french",
 		"intro": "This lesson teaches learners how to describe free-time activities in French, using verbs like faire and jouer with correct partitive articles (du, de la, des). It introduces vocabulary for sports, hobbies, and weekend routines, and shows how to distinguish between jouer à (for games and sports) and jouer de (for musical instruments). Learners also review adjective agreement (sportif/sportive) and practise pronunciation of –tion words, improving fluency when talking about leisure and pastimes."
 	},
-	"dialogs": {
+	"dialogues": {
 		"component": "Section",
 		"expandable": false,
 		"content": [
@@ -111,8 +111,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -275,7 +275,7 @@
 		"content": [
 			{
 				"memorycards1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"id": "MemoryMatchGame1",
@@ -384,7 +384,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Je fais [*du|de la|de l'|des] shopping.",
 						"Vous faites [*du|de la|*de l'|des] jogging le matin ?",
@@ -419,7 +419,7 @@
 					"congratulationsText": "Superbe !",
 					"instructionsText": "In the following sentences and questions select au , à la, à l' or aux as appropriate:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Le lundi, il joue [*au|à la|à l'|aux] foot.",
 						"Le mardi, il joue [*au|à la|à l'|aux] tennis.",
@@ -448,7 +448,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the responses to this question and select answers accordingly:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
 						"2 Je fais [*de l'équitation|de la course d'orientation|de la natation]",
@@ -475,7 +475,7 @@
 			{
 				"phrases1": {
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Blanks",
 					"congratulationsText": "Très bien !",
 					"id": "phrases1",

@@ -10,7 +10,7 @@
 		"subtitleZ": "عنّي: الحالة الاجتماعية، المهنة"
 	},
 	"memorycards1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "MemoryMatchGame",
 		"congratulationsText": "Congratulations! You have a good memory!",
 		"id": "MemoryMatchGame1",
@@ -375,7 +375,7 @@
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
 		"soundFile": "sounds/arabic-cyclist.mp3",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
 	},
@@ -399,7 +399,7 @@
 		"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
 		"listenDescriptionText": "Speech",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"blanksType": "table",
 		"words": [
 			"moi",
@@ -426,7 +426,7 @@
 		"titleText": "Put the Words in the Order You Hear Them"
 	},
 	"wordparts1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "WordParts",
 		"congratulationsText": "Superb!",
 		"id": "wordparts1",
@@ -452,7 +452,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Drag the words to fill in the gaps.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"blanksType": "phrases",
 		"words": [
 			"mon",
@@ -476,7 +476,7 @@
 	"phrases2": {
 		"component": "Blanks",
 		"blanksType": "phrases",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"congratulationsText": "Superb!",
 		"id": "phrases2",
 		"instructionsText": "Drag the words to fill in the gaps.",
@@ -500,7 +500,7 @@
 	},
 	"phrases3": {
 		"blanksType": "phrases",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "Blanks",
 		"congratulationsText": "Very good!",
 		"id": "phrases3",
@@ -706,7 +706,7 @@
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
 		"soundFile": "sounds/parrot-jaguar.mp3",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
 	},
@@ -724,7 +724,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Select the correct part of être to fill in the gaps.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"phrases": [
 			"Tu [*es|est|êtes] fiancé ? ",
 			"Je [sommes|*suis|sont] mariée avec Steffi. ",
@@ -744,7 +744,7 @@
 		"id": "wordsIntoSlots2",
 		"instructionsText": "Match the questions and answers",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"blanksType": "questions-answers",
 		"questions": [
 			"Salut les enfants ! Tout va bien ?",
@@ -1075,7 +1075,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Select the correct adjective of nationality.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"phrases": [
 			"Female : Je suis [marocain|*marocaine|africain|africaine].",
 			"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
@@ -1101,7 +1101,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Fill in the gaps with de / du / d' / des as appropriate.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"phrases": [
 			"Je viens [*de|d'|du|des] France.",
 			"Je viens [*de|d'|du|des] Suisse.",
@@ -1125,7 +1125,7 @@
 		"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 		"showHintsText": "Show hints when moving",
 		"soundFile": "sounds/car-windmill.mp3",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"listenDescriptionText": "Listen to the description",
 		"titleText": "Complete the Jigsaw"
 	},

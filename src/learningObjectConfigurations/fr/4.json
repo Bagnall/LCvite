@@ -91,8 +91,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -278,7 +278,7 @@
 					"instructionsText": "Select the correct form of 'in' to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"titleText": "2. Practise saying where people live",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Ma famille habite:",
 						"[à|*au|en|aux|dans le] Canada.",
@@ -308,7 +308,7 @@
 					"instructionsText": "Listen and choose the correct option to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"titleText": "3. Where do you live?",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Tu habites [*à la campagne | à la montagne | au bord de la mer] ?",
 						"Non, j'habite [au centre-ville |*dans une grande ville | pas loin de la ville]",

@@ -66,7 +66,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Elige la opción correcta.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"phrases": [
 			"Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
 			"Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",
@@ -91,7 +91,7 @@
 		"congratulationsText": "Well done!",
 		"instructionsText": "Ordena las palabras para formar frases correctas.",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"phrases": [
 			"Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
 			"Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",

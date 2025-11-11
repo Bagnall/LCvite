@@ -1,6 +1,7 @@
 import './Blanks.scss';
 import {
 	AudioClip,
+	CheckBox,
 	Word,
 } from '../../Components';
 import {
@@ -12,9 +13,8 @@ import {
 } from '../../mouseUtility';
 import React from 'react';
 import Variables from '../../styles/_variables.module.scss';
-import { Button } from '..';
 
-export class Blanks extends React.PureComponent {
+export class Blanks extends React.Component {
 
 	// Set of phrases with blanks and words to fill those blanks.
 	// config is passed from the parent so that multiple exercises are possible.
@@ -150,6 +150,7 @@ export class Blanks extends React.PureComponent {
 
 		this.autoSolve = this.autoSolve.bind(this);
 		this.handleHints = this.handleHints.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
@@ -160,6 +161,7 @@ export class Blanks extends React.PureComponent {
 			...config,
 			margin: 20,
 			nToPlace: nToPlace,
+			showHints: false,
 			wordTiles: wordTiles,
 			words: words,
 		});
@@ -211,9 +213,18 @@ export class Blanks extends React.PureComponent {
 	};
 
 	handleHints = (e) => {
-		// console.log("handleHints", e);
+		console.log("handleHints", e, e.target.checked);
+		// e.preventDefault();
+		e.stopPropagation();
+		// const { showHints } = this.state;
 		this.setState({ showHints: e.target.checked });
 	};
+
+	// handleChange = (id, value) => {
+	// 	this.setState({
+	// 		[id]: value,
+	// 	});
+	// };
 
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
@@ -319,9 +330,9 @@ export class Blanks extends React.PureComponent {
 	handleMouseUp = (e) => {
 		// console.log("handleMouseUp", this.movingPiece !== undefined);
 		e.stopPropagation();
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
 		} = this.state;
@@ -367,7 +378,7 @@ export class Blanks extends React.PureComponent {
 					// Last piece of the jigsaw placed
 					const { showDialog } = this.props;
 					showDialog(congratulationsText);
-					tadaAudio.play();
+					// tadaAudio.play();
 					this.setState({
 						complete: true,
 					});
@@ -386,7 +397,7 @@ export class Blanks extends React.PureComponent {
 				this.setState({
 					failCount: failCount
 				});
-				errorAudio.play();
+				// errorAudio.play();
 				this.movingPiece = undefined;
 			}
 		}
@@ -440,20 +451,18 @@ export class Blanks extends React.PureComponent {
 			answers,
 			audio,
 			blanksType = 'phrases',
-			complete = false,
 			cheatText,
+			complete = false,
 			failCount,
 			header = [],
 			htmlContent,
 			id = '',
-			// instructionsText,
-			// instructionsTextHTML,
 			listenDescriptionText,
-			showHints = false,
-			showHintsText,
 			phrases = [],
 			pictures,
 			questions,
+			showHints,
+			showHintsText,
 			soundFile,
 			soundFiles,
 			words = [],
@@ -620,6 +629,7 @@ export class Blanks extends React.PureComponent {
 				});
 			}
 		}
+		console.log("showHints", showHints, showHints.constructor, typeof showHints);
 
 		return (
 			<div
@@ -646,8 +656,22 @@ export class Blanks extends React.PureComponent {
 					null
 				}
 
+				<p>showHints: |{showHints ? 'true' : 'false'}|{showHints}|</p>
+				<label>Checked = true: <input type='checkbox' checked={true}/></label>
+				<label>Checked = false: <input type='checkbox' checked={false}/></label>
+				<label>Value = true: <input type='checkbox' value={true}/></label>
+				<label>Value = false: <input type='checkbox' value={false}/></label>
+				<label>{showHintsText}:&nbsp;
+					<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
 				<div className='help'>
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input id={`showHintsId-${id ? id : ''}`} type='checkbox' onChange={this.handleHints} /></label>
+					{/* <CheckBox
+						id={`showHintsId-${id ? id : ''}`}
+						name={`showHintsId-${id ? id : ''}`}
+						handleChange={this.handleChange}
+						label={showHintsText}
+						checked={showHints}
+						value={`showHintsId-${id ? id : ''}`} /> */}
+					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: </label>
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
 				<div

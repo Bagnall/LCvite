@@ -7,7 +7,7 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches how to correctly use and understand French vocabulary, verb groups, and pronunciation, while developing listening and speaking skills through contextual exercises that reinforce grammatical accuracy and gender agreement."
 	},
-	"dialogs": {
+	"dialogues": {
 		"component": "Section",
 		"expandable": false,
 		"instructionsTextHTML": "<a title='No machine-readable author provided. AzaToth assumed (based on copyright claims)., CC BY-SA 3.0 &lt;http: //creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons' href='https://commons.wikimedia.org/wiki/File:Rotating_globe.gif'><div class='spinning-globe' ><img alt='This image right here shows a globe spinning around in a 360 degree rotation.' src='https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif?20090914225528'></div></a>",
@@ -112,8 +112,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -361,7 +361,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Je suis [marocain|*marocaine|africain|africaine].",
 						"Je suis [américain|américaine|mexicain|*mexicaine].",
@@ -389,7 +389,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsTextHTML": "Fill in the gaps with <b>de</b> / <b>du</b> / <b>d'</b> / <b>des</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Je viens [*de|d'|du|des] France.",
 						"Je viens [*de|d'|du|des] Suisse.",

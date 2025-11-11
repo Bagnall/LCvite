@@ -240,7 +240,7 @@
 		"titleText": "Mini diálogos / Mini dialogues"
 	},
 	"memorycards1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "MemoryMatchGame",
 		"congratulationsText": "Congratulations! You have a good memory!",
 		"id": "memorycards1",
@@ -276,7 +276,7 @@
 		"id": "wordsIntoSlots1",
 		"instructionsText": "Match the questions and answers",
 		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"blanksType": "questions-answers",
 		"questions": [
 			"¿Qué tiempo hace en Madrid?",

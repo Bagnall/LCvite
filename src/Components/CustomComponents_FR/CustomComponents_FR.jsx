@@ -116,19 +116,19 @@ export class LO1Demystify1 extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
+				<Info>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
+						<li>How airflow through nose and mouth creates the French nasal sound.</li>
+					</ul>
+				</Info>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}Panel`}
 				>
 					<h3>1. Nasal vowels: "on / om"</h3>
-					<Info>
-						<h4>You will learn:</h4>
-						<ul>
-							<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
-							<li>How airflow through nose and mouth creates the French nasal sound.</li>
-						</ul>
-					</Info>
 					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
@@ -150,20 +150,20 @@ export class LO1Demystify2 extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
+				<Info>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
+						<li>How to feel the vibration when producing the sound.</li>
+						<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+					</ul>
+				</Info>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
 					<h3>2. The French "<AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip>"</h3>
-					<Info>
-						<h4>You will learn:</h4>
-						<ul>
-							<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
-							<li>How to feel the vibration when producing the sound.</li>
-							<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-						</ul>
-					</Info>
 					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
 						It is formed in the throat. If you clear your throat first thing in the morning or when you are about to make an announcement,
@@ -187,19 +187,19 @@ export class LO1Demystify3 extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
+				<Info>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
+						<li>To recognise this sound pattern in many French words.</li>
+					</ul>
+				</Info>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel` : ''}`}
 					key={`${id}Panel`}
 				>
 					<h3>3. The sound "<AudioClip className={`link`} soundFile={`sounds/fr/oi.mp3`} >oi</AudioClip>"</h3>
-					<Info>
-						<h4>You will learn:</h4>
-						<ul>
-							<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-							<li>To recognise this sound pattern in many French words.</li>
-						</ul>
-					</Info>
 					<p>It is worth being aware of this sound as the letter combination <b>oi</b> appears in many French words e.g. <AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >m<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >t<b>oi</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au rev<b>oi</b>r</AudioClip>
@@ -219,6 +219,12 @@ export class LO1Demystify4 extends PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}CustomComponent`}
 			>
+				<Info>
+					<h4>You will learn:</h4>
+					<ul>
+						<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
+					</ul>
+				</Info>
 				<div
 					className={`panel`}
 					id={`${id ? `${id}Panel` : ''}`}
@@ -234,12 +240,6 @@ export class LO1Demystify4 extends PureComponent {
 						title="lady with finger to lips.Shh" />
 					<div className={`text`}>
 						<h3>4. The silent "h"</h3>
-						<Info>
-							<h4>You will learn:</h4>
-							<ul>
-								<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
-							</ul>
-						</Info>
 						<p>The letter <b>h</b> occurs in French words, but is never aspirated e.g. <AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >
 							<b>h</b>omme</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >
 							<b>h</b>orrible</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >
@@ -1015,20 +1015,20 @@ export class LO6Demystify extends PureComponent {
 				>
 					<p><b>How to pronounce double l in French:</b></p>
 					<p><b>Double l</b> is sometimes mispronounced by learners of French, but the following rules should help to avoid this problem.</p>
-					<p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <AudioClip className={`link`} soundFile={`sounds/fr/double l a.mp3`}><b>double l</b></AudioClip> is pronounced <b>l</b>. e.g.&nbsp;
+					<p>1 after the vowels <b>a, e, o</b> and <b>u</b>, <AudioClip className={`link`} soundFile={`sounds/fr/ll-a.mp3`}><b>double l</b></AudioClip> is pronounced <b>l</b>. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une balle.mp3`}><b>une balle</b></AudioClip> (a ball),&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est belle.mp3`}><b>Elle est belle</b></AudioClip>. (She is beautiful.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/Elle est folle.mp3`}><b>Elle est folle</b></AudioClip>. (She is crazy.)&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une bulle.mp3`}><b>une bulle</b></AudioClip> (a bubble).&nbsp;
 							There are no exceptions here!</p>
-					<p>2i after the vowel <b>i</b>,&nbsp;<AudioClip className={`link`} soundFile={`sounds/fr/double l b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
+					<p>2i after the vowel <b>i</b>,&nbsp;<AudioClip className={`link`} soundFile={`sounds/fr/ll-b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were a letter <b>"y"</b> in English. e.g.&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une fille.mp3`}><b>une fille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/une famille.mp3`}><b>une famille</b></AudioClip>,&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/un billet.mp3`}><b>un billet</b></AudioClip> (a ticket)</p>
-					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <AudioClip className={`link`} soundFile={`sounds/fr/double l b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were
+					<p>2ii if the vowel <b>i</b> is preceded by another vowel, the same rule applies and <AudioClip className={`link`} soundFile={`sounds/fr/ll-b.mp3`}><b>double l</b></AudioClip> is pronounced as though it were
 						a letter <b>"y"</b> in English. e.g. <AudioClip className={`link`} soundFile={`sounds/fr/une bouteille.mp3`}><b>une bouteille</b></AudioClip> (a bottle),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/une feuille.mp3`}><b>une feuille</b></AudioClip> (a leaf).</p>
-					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <AudioClip className={`link`} soundFile={`sounds/fr/double l a.mp3`}><b>double l</b></AudioClip> follows <b>i</b>.
+					<p><b style={{ 'color': 'red' }}>NB</b> There are a few exceptions when <AudioClip className={`link`} soundFile={`sounds/fr/ll-a.mp3`}><b>double l</b></AudioClip> follows <b>i</b>.
 						The most common are : <AudioClip className={`link`} soundFile={`sounds/fr/la ville.mp3`}><b>la ville</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/le village.mp3`}><b>le village</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/la villa.mp3`}><b>la villa</b></AudioClip>,&nbsp;

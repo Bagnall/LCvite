@@ -82,20 +82,20 @@ export class RadioQuiz extends React.Component {
 		// console.log(rowNum, colNum);
 
 		e.stopPropagation();
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 
 		// console.log(colNum === phrases[rowNum][2], colNum);
 		if (colNum === phrases[rowNum][1]) {
-			tadaAudio.play();
+			// tadaAudio.play();
 			nCorrect++;
 			if (nCorrect === phrases.length) {
-				tadaAudio.play();
+				// tadaAudio.play();
 				showDialog(congratulationsText);
 			}
-			disabled[rowNum] = true;
-		} else {
-			errorAudio.play();
+		// 	disabled[rowNum] = true;
+		// } else {
+		// 	errorAudio.play();
 		}
 		showExplanation[rowNum] = true;
 		this.setState({

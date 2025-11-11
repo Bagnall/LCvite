@@ -266,7 +266,7 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile, learningObjectConfigFile) => {
-		// console.log("loadConfig", configFile);
+		console.log("loadConfig", configFile);
 
 		// Read the config
 		const headers = new Headers();
@@ -283,7 +283,7 @@ export default class App extends React.Component {
 				.then(handleResponse)
 				.then(res => {
 					const { settings } = res;
-
+					console.log("config loaded...");
 					delete res["settings"];
 					const {
 						class: configClass,
@@ -297,7 +297,8 @@ export default class App extends React.Component {
 
 					// 🔁 Return a Promise that resolves only when setState is done
 					this.setState({
-						config: { ...res, currentLearningObject },
+						config: { ...res },
+						currentLearningObject: currentLearningObject,
 						settings: { ...settings },
 						targetLanguageCode,
 					},
@@ -438,9 +439,9 @@ export default class App extends React.Component {
 			showSpeechError = false,
 		} = this.state;
 		const articles = new Array;
-		let intro, introHTML;
+		let intro, introHTML, informationHTML;
 		if (settings) {
-			({ intro, introHTML } = settings);
+			({ intro, introHTML, informationHTML } = settings);
 		}
 
 
@@ -570,7 +571,9 @@ export default class App extends React.Component {
 									</a>
 									{intro ? <p className={`intro`}>{intro}</p> : null}
 									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
+									{informationHTML ? <Info informationTextHTML={informationHTML} /> : null}
 								</div>
+								{/* <label>Test: <input type='checkbox'/></label> */}
 								{currentLearningObject !== -1 ?
 									<Accordion id={`accordion1`} key={`accordion1`}>
 										{articles}
@@ -623,6 +626,7 @@ export default class App extends React.Component {
 			currentLearningObject,
 			languageCode
 		} = this.state;
+		console.log("currentLearningObject", currentLearningObject);
 		// console.log("renderComponent languageCode", languageCode);
 		const compoundID = `LO${currentLearningObject + 1}-${id}`;
 		switch (component) {

@@ -7,7 +7,7 @@
 		"targetLanguageCode": "fr-FR",
 		"introHTML": "<p>This lesson teaches how to shop at a French market and use polite exchanges with vendors. Learners practise asking for quantities (Donnez-moi deux kilos de pommes de terre, s’il vous plaît), checking prices (C’est combien ?), and responding to questions like Avec ça ? or C’est tout ? It introduces key vocabulary for shops, food items, quantities, and packaging, such as le marché, la boulangerie, du fromage, une barquette de framboises, un kilo de pommes.</p><p>Grammar focuses on the verb aller (“to go”) and the use of partitive and quantity articles (du, de la, de l’, des, de, d’) to express amounts and negation (Je n’ai pas de pain). It also explains plural noun formation, including irregular endings like -eau → -eaux and -au → -aux.</p><p>Pronunciation practice contrasts the vowel sounds u and ou, helping learners distinguish between similar words like tu / tout and pur / pour. Overall, the topic builds confidence in conducting everyday shopping interactions naturally in French.</p>"
 	},
-	"dialogs": {
+	"dialogues": {
 		"component": "Section",
 		"expandable": false,
 		"content": [
@@ -112,8 +112,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -328,7 +328,7 @@
 					"congratulationsText": "Incroyable !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
 						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
@@ -367,7 +367,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"trois bouteilles [*de|d'|du|de la|de l'|des] vin rouge",
 						"cinq bouteilles [de|*d'|du|de la|de l'|des] eau minérale",
@@ -394,7 +394,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"[de|d'|du|*de la|de l'|des] salade",
 						"[de|d'|du|de la|de l'|*des] oignons",
@@ -496,7 +496,7 @@
 					"instructionsText": "You will hear a series of words containing either the sound u or the sound ou. Drag the words below into the correct box as you hear them.",
 					"listenDescriptionText": "Sample",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "group-table",
 					"header": [
 						"u",
@@ -576,7 +576,7 @@
 					"id": "radio2",
 					"instructionsTextHTML": "Play each phrase, click <b>u</b> or <b>ou</b>.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "sort-table",
 					"options": [
 						"u",

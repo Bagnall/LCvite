@@ -70,7 +70,7 @@ export class MemoryMatchGame extends React.PureComponent {
 		const { showDialog } = this.props;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
 
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const newFlipped = [...flipped, card.id];
 		beenFlipped.push(card.id);
@@ -111,7 +111,7 @@ export class MemoryMatchGame extends React.PureComponent {
 							this.setState({
 								timeReport: timeReport,
 							}, () => {
-								tadaAudio.play();
+								// tadaAudio.play();
 								showDialog(congratulationsText);
 							});
 						}

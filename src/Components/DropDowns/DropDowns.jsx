@@ -53,8 +53,8 @@ export class DropDowns extends React.PureComponent {
 		// 	wrong = [],
 		// } = this.state;
 		const { showDialog } = this.props;
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
-		const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
 		const { value } = event.target;
 		const cl = event.target.classList;
 		if (parseInt(value) === winner) {
@@ -63,12 +63,12 @@ export class DropDowns extends React.PureComponent {
 			this.nPlaced++;
 			replaceSelectWithSpan(event.target);
 			if (this.nPlaced === this.nToSolve) {
-				const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+				// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 				showDialog(congratulationsText);
-				tadaAudio.play();
-			} else {
-				correctAudio.play();
+				// tadaAudio.play();
+			// } else {
+			// 	correctAudio.play();
 			}
 			// solved.push(event.target.id);
 
@@ -84,7 +84,7 @@ export class DropDowns extends React.PureComponent {
 		} else {
 			cl.add("incorrect");
 			cl.remove("correct");
-			errorAudio.play();
+			// errorAudio.play();
 			// wrong.push(event.target.id);
 			// this.setState({
 			// 	wrong: wrong,

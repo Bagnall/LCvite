@@ -23,7 +23,7 @@ html.debug {
 		}
 	}
 	span {
-		$tumble-iterations: 8;
+		$tumble-iterations: 1; //8;
 		$tumble-time: 0.5s; // Same as sound clip!
 		border: 1px solid transparent;
 		cursor: pointer;

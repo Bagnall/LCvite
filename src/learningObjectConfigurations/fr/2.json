@@ -202,7 +202,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsText": "Select the correct part of être to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Tu [*es|est|êtes] fiancé ? ",
 						"Je [sommes|*suis|sont] mariée avec Steffi. ",
@@ -224,7 +224,7 @@
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Salut les enfants ! Tout va bien ?",

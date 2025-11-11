@@ -394,7 +394,7 @@
 					"congratulationsText": "Muy bien !",
 					"instructionsText": "Select the correct option from the dropdown.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"una [*amiga|amigo|amigas|amigos] ruidosa",
 						"un amigo ruidoso",
@@ -411,7 +411,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "sort-table",
 					"options": [
 						"Greeting",
@@ -483,7 +483,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "sort-table",
 					"options": [
 						"Formal",
@@ -543,7 +543,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsText": "Consider the greetings and replies below. Select whether they are formal or informal.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Bien, gracias. ¿Y usted? [*Formal|Informal]",
 						"¿Hola, cómo estás? [Formal|*Informal]",
@@ -572,7 +572,7 @@
 					"id": "wordsIntoSlots1",
 					"instructionsText": "Complete each dialogue by dragging the appropriate reply. If your choice is correct you will be able to listen to the dialogue using the audio icon . You can check your answers and reset the exercise any time.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Hola, Marcos. Esta es Charo.",
@@ -605,7 +605,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsTextHTML": "In the Dialogues below, select the correct conjugation of the verb <b>ESTAR</b>.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien?",
 						"Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú?",

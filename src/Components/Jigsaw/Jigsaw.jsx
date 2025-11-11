@@ -177,6 +177,7 @@ export class Jigsaw extends React.PureComponent {
 
 	handleHints = (e) => {
 		// console.log("handleHints", e);
+		e.stopPropagation();
 		this.setState({showHints: e.target.checked});
 	};
 
@@ -231,9 +232,9 @@ export class Jigsaw extends React.PureComponent {
 		// console.log("handleMouseUp", e)
 		e.target.classList.remove("dragging");
 		const targetTray = this.targetRef.current;
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
 		} = this.state;
@@ -241,7 +242,7 @@ export class Jigsaw extends React.PureComponent {
 		// Check valid spot and valid set of tiles
 		if (this.movingPiece !== undefined && !this.movingPiece.classList.contains('correct-set')) {
 			// Not from the correct set of pieces
-			errorAudio.play();
+			// errorAudio.play();
 			this.movingPiece.style.left = `${this.startX}px`;
 			this.movingPiece.style.top = `${this.startY}px`;
 			failCount++;
@@ -294,7 +295,7 @@ export class Jigsaw extends React.PureComponent {
 					}, () => {
 						const { showDialog } = this.props;
 						showDialog(congratulationsText);
-						tadaAudio.play();
+						// tadaAudio.play();
 					});
 				}
 				this.setState({ nPlaced: nPlaced });
@@ -307,7 +308,7 @@ export class Jigsaw extends React.PureComponent {
 				this.setState({
 					failCount: failCount
 				});
-				errorAudio.play();
+				// errorAudio.play();
 			}
 		}
 		if (this.movingPiece) {
@@ -390,7 +391,7 @@ export class Jigsaw extends React.PureComponent {
 				/>
 
 				<div className='help'>
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
+					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
 				<div

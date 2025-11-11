@@ -19,9 +19,9 @@ export class Info extends React.PureComponent {
 			informationText,
 			informationTextHTML,
 		} = this.props;
-		console.log("informationText", informationText);
-		console.log("informationTextHTML", informationTextHTML);
-		console.log("children", children);
+		// console.log("informationText", informationText);
+		// console.log("informationTextHTML", informationTextHTML);
+		// console.log("children", children);
 
 		// return (
 		// 	<>

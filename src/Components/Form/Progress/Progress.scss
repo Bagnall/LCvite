@@ -1,0 +1,54 @@
+/*
+Progress.scss
+*/
+@import '../../../styles/_colours.module.scss';
+@import '../../../styles/_variables.module.scss';
+.progress-indicator {
+	position: fixed;
+	background: rgb(243, 243, 243);
+	z-index: 1000;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	width: $progress-indicator-width;
+	height: $progress-indicator-height;
+	margin-left: -$progress-indicator-width/2;
+	margin-top: 60px;
+	overflow: visible;
+
+	span {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		line-height: 140%;
+		text-align: center;
+		font-weight: bold;
+		text-shadow: -1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white;
+	}
+	.progress-bar {
+		height: calc(100% - 5px);
+		overflow: hidden;
+		margin: 2px 1px;
+		position: relative;
+		border-radius: 4px;
+		box-shadow: 1px 0 4px rgba(0, 0, 0, 0.4);
+		transition: width 1s;
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			// Shine
+			background: rgba(0, 0, 0, 0);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(218, 218, 218, 0) 30%, rgba(235, 235, 235, 0) 40%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+	.progress-bar-background {
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+}

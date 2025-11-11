@@ -7,7 +7,7 @@
 		"targetLanguageCode": "fr-FR",
 		"intro": "This lesson teaches learners how to express likes, dislikes, and preferences in French using verbs such as aimer, adorer, détester, and préférer. It introduces sentence patterns for talking about activities, sports, and favourite things, and shows how to use definite articles with general nouns (j’aime le football, je n’aime pas la natation). Learners also practise interrogative adjectives (quel, quelle, quels, quelles) to ask questions, and work on pronunciation of borrowed English words like le tennis, le foot, and le week-end."
 	},
-	"dialogs": {
+	"dialogues": {
 		"component": "Section",
 		"expandable": false,
 		"content": [
@@ -127,8 +127,8 @@
 				}
 			}
 		],
-		"id": "dialogs",
-		"titleText": "Dialogs"
+		"id": "dialogues",
+		"titleText": "Dialogues"
 	},
 	"vocabulary": {
 		"component": "PhraseTable",
@@ -353,7 +353,7 @@
 		"content": [
 			{
 				"memorycards1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Félicitations !",
 					"id": "MemoryMatchGame1",
@@ -462,7 +462,7 @@
 					"congratulationsText": "Superbe !",
 					"instructionsText": "Listen to the speakers and select the correct definite article.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrases": [
 						"Marc n'aime pas [le|la|*l'|les] athlétisme.",
 						"Serge déteste [*le|la|l'|les] foot.",
@@ -495,7 +495,7 @@
 			{
 				"phrases1": {
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Blanks",
 					"congratulationsText": "Très bien !",
 					"id": "phrases1",
@@ -517,7 +517,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to this poem by Mymi Doinet about the rainbow and fill in the colours as you hear them.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"phrasesHTML": "<ul><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|Vert|*Rouge] comme un fruit du Mexique</p></li><li><p>[Bleu|Indigo|Jaune|*Orangé|Violet|Vert|Rouge] comme le sable d'Afrique</p></li><li><p>[Bleu|Indigo|*Jaune|Orangé|Violet|Vert|Rouge] comme les girafes chics</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|*Vert|Rouge] comme un sorbet de Jamaïque</p></li><li><p>[*Bleu|Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme les vagues du Pacifique</p></li><li><p>[Bleu|*Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme un papillon des tropiques</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|*Violet|Vert|Rouge] comme les volcans de Martinique</p></li><li><p>Qui donc est aussi fantastique ?</p></li><li><p>Est-ce un rêve ou est-ce véridique ?</p></li><li><p>C'est dans le ciel magnifique</p></li><li><p>L'arc aux sept couleurs magiques.</p></li></ul><p><i>Mymi Doinet</i></p>",
 					"audio": [
 						"sounds/fr/rainbow-poem.mp3"

@@ -217,9 +217,9 @@ export class WordGrid extends PureComponent {
 		} = this.state;
 		const { showDialog } = this.props;
 		if(nPlaced === nToSolve) return;
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const positions = this.getLinearSelection(selection);
 		let letters = positions.map(pos => grid[pos.row][pos.col]).join('');
@@ -254,7 +254,7 @@ export class WordGrid extends PureComponent {
 
 				const { showDialog } = this.props;
 				soundFile.onended = () => {
-					tadaAudio.play();
+					// tadaAudio.play();
 					showDialog(congratulationsText);
 				};
 				soundFile.play();
@@ -281,7 +281,7 @@ export class WordGrid extends PureComponent {
 				selection: [],
 			});
 		} else {
-			errorAudio.play();
+			// errorAudio.play();
 			failCount++,
 			failCount = Math.min(words.length, failCount);
 
@@ -297,6 +297,7 @@ export class WordGrid extends PureComponent {
 
 	handleHints = (e) => {
 		// console.log("handleHints", e);
+		e.stopPropagation();
 		this.setState({showHints: e.target.checked});
 	};
 
@@ -444,7 +445,7 @@ export class WordGrid extends PureComponent {
 
 				<div className="word-grid-table-outer-container">
 					<div className='help'>
-						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
+						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
 						<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 					</div>
 					<div className={`table-top`}>
