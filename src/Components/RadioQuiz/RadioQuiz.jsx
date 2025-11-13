@@ -1,12 +1,12 @@
 import './RadioQuiz.scss';
 import {
 	AudioClip,
-	Button,
-	Label,
-	Monologue,
-	Radio,
-	RadioField,
-	RadioGroup,
+	// Button,
+	// Label,
+	// Monologue,
+	// Radio,
+	// RadioField,
+	// RadioGroup,
 } from '..';
 import React from 'react';
 import {
@@ -181,7 +181,7 @@ export class RadioQuiz extends React.Component {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
+				<button className={`reset btn`} onClick={this.handleReset}>Reset</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<table>

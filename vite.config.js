@@ -1,7 +1,7 @@
 import { createLogger, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import tailwindcss from '@tailwindcss/vite';
+// import tailwindcss from '@tailwindcss/vite';
 import fs from 'fs';
 import path from 'path';
 
@@ -37,7 +37,6 @@ export default defineConfig(({ command }) => ({
 	customLogger: logger,
 	plugins: [
 		{
-			name: 'preserve-dist-index',
 			buildStart() {
 				const src = path.resolve('dist/index.html');
 				const backup = path.resolve('.vite-index-backup.html');
@@ -54,10 +53,11 @@ export default defineConfig(({ command }) => ({
 					fs.unlinkSync(backup);
 					console.log('✅ Restored custom dist/index.html');
 				}
-			}
+			},
+			name: 'preserve-dist-index'
 		},
 		react(),
-		tailwindcss(),
+		// tailwindcss(),
 		viteStaticCopy({
 			targets: [
 				{

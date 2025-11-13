@@ -4,7 +4,7 @@ import {Card, Congratulate} from '../../Components';
 import React from 'react';
 import {resolveAsset} from '../../utility';
 import Variables from '../../styles/_variables.module.scss';
-import { Button } from '..';
+// import { Button } from '..';
 
 const getShuffledDeck = (cards, nCards) => {
 	cards = cards.sort(() => Math.random() - 0.5);
@@ -195,8 +195,8 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
-				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
-				<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
+				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<div className={`memory-match-game`}>

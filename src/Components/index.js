@@ -4,7 +4,7 @@ export * from './Attribution';
 export * from './AudioClip';
 export * from './Blanks';
 export * from './Blanks/Word';
-export * from './Catalyst';
+// export * from './Catalyst';
 export * from './Congratulate';
 export * from './ConnectFour';
 export * from './CrossWord';

@@ -1,12 +1,12 @@
 import './PhraseTable.scss';
-import {
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow
-} from '..';
+// import {
+// 	Table,
+// 	TableBody,
+// 	TableCell,
+// 	TableHead,
+// 	TableHeader,
+// 	TableRow
+// } from '..';
 import {
 	AudioClip,
 } from '../../Components';
@@ -47,7 +47,7 @@ export class PhraseTable extends React.PureComponent {
 		const headerCells = new Array;
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<TableHeader key={`${id}header${i}`}>{header[i]}</TableHeader>);
+				headerCells.push(<thead key={`${id}header${i}`}>{header[i]}</thead>);
 			}
 		}
 		const rows = new Array();
@@ -57,9 +57,9 @@ export class PhraseTable extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<TableRow className={`spacer`} key={`row${i}`}>
-						<TableCell colSpan={longestRow}></TableCell>
-					</TableRow>
+					<tr className={`spacer`} key={`row${i}`}>
+						<td colSpan={longestRow}></td>
+					</tr>
 				);
 			} else {
 				for (let j = 0; j < phrases[i].length; j++) {
@@ -68,21 +68,21 @@ export class PhraseTable extends React.PureComponent {
 						// Spound file!
 						const soundFile = resolveAsset(`${phrase[j]}`);
 						cells.push(
-							<TableCell key={`row${i}cell${j}`}>
+							<td key={`row${i}cell${j}`}>
 								<AudioClip className={`compact`} label={""} soundFile={soundFile} />
-							</TableCell>
+							</td>
 						);
 					} else {
 						cells.push(
-							<TableCell key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></TableCell>
+							<td key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></td>
 						);
 					}
 				}
 
 				rows.push(
-					<TableRow key={`row${i}`}>
+					<tr key={`row${i}`}>
 						{cells}
-					</TableRow>
+					</tr>
 				);
 			}
 		}
@@ -95,17 +95,17 @@ export class PhraseTable extends React.PureComponent {
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
-				<Table>
+				<table>
 					{header ?
-						<TableHead>
+						<thead>
 							<TableRow>
 								{headerCells}
 							</TableRow>
-						</TableHead> : null}
-					<TableBody>
+						</thead> : null}
+					<tbody>
 						{rows}
-					</TableBody>
-				</Table>
+					</tbody>
+				</table>
 				{footnote ? <p className={`ootnote`}>{footnote}</p> : null}
 				{footnoteHTML ? <p className={`footNote`} dangerouslySetInnerHTML={{ __html: footnoteHTML }} /> : null}
 			</div>

@@ -5,7 +5,7 @@ import {
 } from '../../utility';
 import {AudioClip} from '../';
 import React from 'react';
-import { Button, Input, Textarea } from '..';
+// import { Button, Input, Textarea } from '..';
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -95,14 +95,14 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						{!compact ? <Button className={`reset`} onClick={this.handleReset}>Reset</Button> : null}
+						{!compact ? <button className={`reset`} onClick={this.handleReset}>Reset</button> : null}
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
 							(
 								<form onKeyPress={this.handleKeyPress}>
 									{compact ?
-										<Input
+										<input
 											id={`monologue${id}text`}
 											name={`monologue${id}text`}
 											onChange={this.handleChange}
@@ -110,14 +110,14 @@ export class Monologue extends React.PureComponent {
 											value={userInput}
 										/>
 										:
-										<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
+										<textarea value={userInput} onChange={this.handleChange} ></textarea>
 									}
-									<Button
+									<button
 										className={``}
 										htmlFor={`monologue${id}text`}
 										type={`submit`}
 										onClick={this.handleValidation}
-									>Check</Button>
+									>Check</button>
 								</form>
 							)
 						}
@@ -128,7 +128,7 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
-						<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
+						<button className={`reset btn`} onClick={this.handleReset}>Reset</button>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
@@ -137,12 +137,12 @@ export class Monologue extends React.PureComponent {
 							:
 							(
 								<>
-									<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
-									<Button
+									<textarea value={userInput} onChange={this.handleChange} ></textarea>
+									<button
 										className={``}
 										onClick={this.handleValidation}
 										type={`submit`}
-									>Check</Button>
+									>Check</button>
 								</>
 							)
 						}

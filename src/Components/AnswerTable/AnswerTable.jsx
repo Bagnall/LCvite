@@ -2,12 +2,12 @@ import './AnswerTable.scss';
 import {
 	AudioClip,
 	Monologue,
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow,
+	// Table,
+	// TableBody,
+	// TableCell,
+	// TableHead,
+	// TableHeader,
+	// TableRow,
 } from '..';
 import React from 'react';
 import {
@@ -75,7 +75,7 @@ export class AnswerTable extends React.PureComponent {
 
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<TableHeader key={`header-cell-${i}`}>{header[i]}</TableHeader>);
+				headerCells.push(<thead key={`header-cell-${i}`}>{header[i]}</thead>);
 			}
 		}
 		const rows = new Array();
@@ -85,16 +85,16 @@ export class AnswerTable extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<TableRow className={`spacer`} key={`row${i}`}>
-						<TableCell colSpan={longestRow} key={`cell-of-row-${i}`}></TableCell>
-					</TableRow>
+					<tr className={`spacer`} key={`row${i}`}>
+						<td colSpan={longestRow} key={`cell-of-row-${i}`}></td>
+					</tr>
 				);
 			} else {
 				if (phrase[0] !== '') {
 					cells.push(
-						<TableCell key={`row${i}cell0`}>
+						<td key={`row${i}cell0`}>
 							{phrase[0]}
-						</TableCell>
+						</td>
 					);
 				}
 				if (phrase[1] !== '') {
@@ -126,25 +126,25 @@ export class AnswerTable extends React.PureComponent {
 						parts.push(phrase[1].slice(lastIndex));
 					}
 					cells.push(
-						<TableCell key={`row${i}cell1`}>
+						<td key={`row${i}cell1`}>
 							<span className='inline-monologue'>{parts}</span>
-						</TableCell>
+						</td>
 					);
 				}
 				if (longestRow > 2) {
 					const soundCellIndex = 2;
 					const soundFile = resolveAsset(`${phrase[soundCellIndex]}`);
 					cells.push(
-						<TableCell key={`row${i}cell${soundCellIndex}`}>
+						<td key={`row${i}cell${soundCellIndex}`}>
 							<AudioClip className={`compact`} label={""} soundFile={soundFile} />
-						</TableCell>
+						</td>
 					);
 				}
 
 				rows.push(
-					<TableRow key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
+					<tr key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
 						{cells}
-					</TableRow>
+					</tr>
 				);
 			}
 		}
@@ -156,17 +156,17 @@ export class AnswerTable extends React.PureComponent {
 				key={`${id}PhraseTable`}
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				<Table>
+				<table>
 					{header ?
-						<TableHead>
-							<TableRow>
+						<thead>
+							<tr>
 								{headerCells}
-							</TableRow>
-						</TableHead> : null}
-					<TableBody>
+							</tr>
+						</thead> : null}
+					<tbody>
 						{rows}
-					</TableBody>
-				</Table>
+					</tbody>
+				</table>
 				<p>{nCorrect} correct out of {nPhrases}.</p>
 			</div>
 		);

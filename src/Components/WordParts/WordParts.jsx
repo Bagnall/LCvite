@@ -1,13 +1,13 @@
 import './WordParts.scss';
 import {
 	AudioClip,
-	Button,
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow
+	// Button,
+	// Table,
+	// TableBody,
+	// td,
+	// TableHead,
+	// TableHeader,
+	// TableRow
 } from '..';
 import React from 'react';
 import {resolveAsset} from '../../utility';
@@ -157,28 +157,28 @@ export class WordParts extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<TableRow className={`spacer`} key={`row${i}`}>
+					<tr className={`spacer`} key={`row${i}`}>
 						<td colSpan={3}></td>
-					</TableRow>
+					</tr>
 				);
 			} else {
 				cells.push(
-					<TableCell key={`row${i}cell1`}>
+					<td key={`row${i}cell1`}>
 						{phraseList[i]}
-					</TableCell>
+					</td>
 				);
 				const soundFile = resolveAsset(`${audio[i]}`);
 
 				cells.push(
-					<TableCell key={`row${i}cell2`}>
+					<td key={`row${i}cell2`}>
 						<AudioClip className={`compact`} soundFile={soundFile} />
-					</TableCell>
+					</td>
 				);
 
 				rows.push(
-					<TableRow key={`row${i}`}>
+					<tr key={`row${i}`}>
 						{cells}
-					</TableRow>
+					</tr>
 				);
 			}
 		}
@@ -189,7 +189,7 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
-				<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
+				<button className={`reset`} onClick={this.handleReset}>Reset</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
@@ -199,11 +199,11 @@ export class WordParts extends React.PureComponent {
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
 					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
 				</div>
-				<Table>
-					<TableBody>
+				<table>
+					<tbody>
 						{rows}
-					</TableBody>
-				</Table>
+					</tbody>
+				</table>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 			</div>
