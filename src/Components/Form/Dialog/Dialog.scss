@@ -1,9 +1,9 @@
 /*
 Dialog.scss
 */
-@import "../../../styles/_colours.module.scss";
-@import "../../../styles/_variables.module.scss";
-@import "../../../styles/_mixins.module.scss";
+@use "../../../styles/_colours.module.scss";
+@use "../../../styles/_variables.module.scss";
+@use "../../../styles/_mixins.module.scss";
 
 $dialog-width: 600px;
 
@@ -20,12 +20,12 @@ $dialog-width: 600px;
 	align-items: center;
 	background: transparent;
 	div.background {
-		@include dialog-background;
+		@include mixins.$dialog-background;
 	}
 
 	&-box {
 		z-index: 1000;
-		width: $dialog-width;
+		width: variables.$dialog-width;
 		position: absolute;
 		border-width: 4px;
 		border-style: solid;

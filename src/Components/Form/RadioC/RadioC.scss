@@ -2,9 +2,9 @@
 RadioC.scss
 */
 
-@import "../../../styles/_colours.module.scss";
-@import "../../../styles/_mixins.module.scss";
-@import "../../../styles/_variables.module.scss";
+@use "../../../styles/_colours.module.scss";
+@use "../../../styles/_mixins.module.scss";
+@use "../../../styles/_variables.module.scss";
 
 .radio-container {
 	grid-template-columns: 1fr;
@@ -73,10 +73,10 @@ RadioC.scss
 	> label {
 		// border: 1px solid green;
 		padding: 1vh;
-		min-height: $form-common-height;
+		min-height: variables.$form-common-height;
 	}
 	&.same-row {
-		grid-gap: $common-grid-gap;
+		grid-gap: variables.$common-grid-gap;
 		grid-template-rows: 2fr;
 		transition:
 			padding 0.5s,
@@ -193,7 +193,7 @@ RadioC.scss
 	}
 }
 $radio-diameter: 16px;
-$dot-diameter: $radio-diameter - 6px;
+$dot-diameter: calc($radio-diameter - 6px);
 .radio-device {
 	display: flex;
 	flex-direction: row;
@@ -203,11 +203,11 @@ $dot-diameter: $radio-diameter - 6px;
 	position: relative;
 	&.disabled {
 		&::before {
-			border-color: $disabled-foreground !important;
+			border-color: colours.$disabled-foreground !important;
 		}
 		&.checked {
 			&::after {
-				background-color: $disabled-foreground !important;
+				background-color: colours.$disabled-foreground !important;
 			}
 		}
 		cursor: not-allowed;
@@ -235,7 +235,7 @@ $dot-diameter: $radio-diameter - 6px;
 			background-color: black;
 			border-radius: 50%;
 			top: 50%;
-			margin: -$dot-diameter/2 ($radio-diameter - $dot-diameter) / 2;
+			margin: calc(- $dot-diameter / 2) calc(($radio-diameter - $dot-diameter) / 2);
 			// right: 0;
 		}
 	}
