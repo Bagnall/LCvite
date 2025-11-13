@@ -1,4 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+import daisyui from 'daisyui';
 
 const buildPalette = (token) => ({
 	50: `rgb(var(--color-${token}-50) / <alpha-value>)`,
@@ -20,6 +21,9 @@ export default {
 		themes: ["light", "dark"],
 	},
 	darkMode: 'class',
+	plugins: [
+		daisyui
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -51,5 +55,4 @@ export default {
 			},
 		},
 	},
-	plugins: [require("daisyui")],
 };

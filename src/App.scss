@@ -6,16 +6,7 @@
 @use "./styles/_skin.module.scss";
 @use "./styles/_variables.module.scss";
 @use "sass:color";
-@use "tailwindcss";
-@use "index.css";
-// @font-face {
-// font-family: "Feijoa";
-// src: url("/fonts/Feijoa-bold.otf");
-//    format("truetype");
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: swap;
-// }
+
 @font-face {
 	font-family: "Feijoa Bold";
 	src: url("/fonts/Feijoa-Bold.otf");
