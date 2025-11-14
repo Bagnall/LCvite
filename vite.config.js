@@ -1,9 +1,9 @@
 import { createLogger, defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
-import tailwindcss from '@tailwindcss/vite';
 import fs from 'fs';
 import path from 'path';
+import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const logger = createLogger();
 const loggerWarn = logger.warn;
@@ -86,5 +86,10 @@ export default defineConfig(({ command }) => ({
 				}
 			]
 		})
-	]
+	],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./src"),
+		},
+	}
 }));
