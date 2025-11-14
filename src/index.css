@@ -1,4 +1,5 @@
 /* Tailwind v4 entrypoint */
+@config "../tailwind.config.js";
 @import "tailwindcss";
 /* Optional: add any small project-wide tweaks here. */
 

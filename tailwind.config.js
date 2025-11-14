@@ -1,5 +1,6 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
 import daisyui from 'daisyui';
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 
 const buildPalette = (token) => ({
 	50: `rgb(var(--color-${token}-50) / <alpha-value>)`,
@@ -27,31 +28,31 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: buildPalette('primary'),
-				secondary: buildPalette('secondary'),
-				tertiary: buildPalette('tertiary'),
-				surface: {
-					base: 'rgb(var(--color-surface-base) / <alpha-value>)',
-					elevated: 'rgb(var(--color-surface-elevated) / <alpha-value>)',
-					overlay: 'rgb(var(--color-surface-overlay) / <alpha-value>)',
-				},
-				text: {
-					primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
-					secondary: 'rgb(var(--color-text-secondary) / <alpha-value>)',
-					tertiary: 'rgb(var(--color-text-tertiary) / <alpha-value>)',
-					disabled: 'rgb(var(--color-text-disabled) / <alpha-value>)',
-				},
 				border: {
 					subtle: 'rgb(var(--color-border-subtle) / <alpha-value>)',
 					default: 'rgb(var(--color-border-default) / <alpha-value>)',
 					strong: 'rgb(var(--color-border-strong) / <alpha-value>)',
 					DEFAULT: 'rgb(var(--color-border-default) / <alpha-value>)',
 				},
+				primary: buildPalette('primary'),
+				secondary: buildPalette('secondary'),
+				surface: {
+					base: 'rgb(var(--color-surface-base) / <alpha-value>)',
+					elevated: 'rgb(var(--color-surface-elevated) / <alpha-value>)',
+					overlay: 'rgb(var(--color-surface-overlay) / <alpha-value>)',
+				},
+				tertiary: buildPalette('tertiary'),
+				text: {
+					primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
+					secondary: 'rgb(var(--color-text-secondary) / <alpha-value>)',
+					tertiary: 'rgb(var(--color-text-tertiary) / <alpha-value>)',
+					disabled: 'rgb(var(--color-text-disabled) / <alpha-value>)',
+				},
 			},
 			fontFamily: {
-				sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
 				heading: ['var(--font-heading)', ...defaultTheme.fontFamily.sans],
 				mono: ['var(--font-mono)', ...defaultTheme.fontFamily.mono],
+				sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
