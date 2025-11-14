@@ -20,12 +20,12 @@ $dialog-width: 600px;
 	align-items: center;
 	background: transparent;
 	div.background {
-		@include mixins.$dialog-background;
+		@include mixins.dialog-background;
 	}
 
 	&-box {
 		z-index: 1000;
-		width: variables.$dialog-width;
+		width: $dialog-width;
 		position: absolute;
 		border-width: 4px;
 		border-style: solid;

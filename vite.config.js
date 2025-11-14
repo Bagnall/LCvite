@@ -1,7 +1,7 @@
 import { createLogger, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-// import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite';
 import fs from 'fs';
 import path from 'path';
 
@@ -57,7 +57,7 @@ export default defineConfig(({ command }) => ({
 			name: 'preserve-dist-index'
 		},
 		react(),
-		// tailwindcss(),
+		tailwindcss(),
 		viteStaticCopy({
 			targets: [
 				{

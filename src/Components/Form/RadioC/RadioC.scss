@@ -235,7 +235,7 @@ $dot-diameter: calc($radio-diameter - 6px);
 			background-color: black;
 			border-radius: 50%;
 			top: 50%;
-			margin: calc(- $dot-diameter / 2) calc(($radio-diameter - $dot-diameter) / 2);
+			margin: - calc($dot-diameter / 2) calc(($radio-diameter - $dot-diameter) / 2);
 			// right: 0;
 		}
 	}

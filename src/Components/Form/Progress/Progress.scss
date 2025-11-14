@@ -13,7 +13,7 @@ Progress.scss
 	left: 50%;
 	width: variables.$progress-indicator-width;
 	height: variables.$progress-indicator-height;
-	margin-left: calc(- variables.$progress-indicator-width / 2);
+	margin-left: - calc(variables.$progress-indicator-width / 2);
 	margin-top: 60px;
 	overflow: visible;
 
