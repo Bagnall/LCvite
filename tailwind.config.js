@@ -29,10 +29,10 @@ export default {
 		extend: {
 			colors: {
 				border: {
-					subtle: 'rgb(var(--color-border-subtle) / <alpha-value>)',
+					DEFAULT: 'rgb(var(--color-border-default) / <alpha-value>)',
 					default: 'rgb(var(--color-border-default) / <alpha-value>)',
 					strong: 'rgb(var(--color-border-strong) / <alpha-value>)',
-					DEFAULT: 'rgb(var(--color-border-default) / <alpha-value>)',
+					subtle: 'rgb(var(--color-border-subtle) / <alpha-value>)',
 				},
 				primary: buildPalette('primary'),
 				secondary: buildPalette('secondary'),
@@ -43,10 +43,10 @@ export default {
 				},
 				tertiary: buildPalette('tertiary'),
 				text: {
+					disabled: 'rgb(var(--color-text-disabled) / <alpha-value>)',
 					primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
 					secondary: 'rgb(var(--color-text-secondary) / <alpha-value>)',
 					tertiary: 'rgb(var(--color-text-tertiary) / <alpha-value>)',
-					disabled: 'rgb(var(--color-text-disabled) / <alpha-value>)',
 				},
 			},
 			fontFamily: {
