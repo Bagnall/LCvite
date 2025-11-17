@@ -120,7 +120,7 @@ html body::before {
 	position: fixed;
 	left: -9999px; // Hide but have it possible to interrogate in JS
 	top: 0;
-	z-index: 99;
+	z-index: 9999;
 	text-align: center;
 	border-radius: 0 0 12px 0;
 }

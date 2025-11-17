@@ -2,46 +2,46 @@
 Accordion.scss
 */
 
-.accordion-article {
-	> a > button {
-		cursor: pointer;
+// .accordion-article {
+// > a > button {
+// 	cursor: pointer;
 
-		display: flex;
-		padding: 1px;
-		flex-direction: column;
-		align-items: flex-start;
-		align-self: stretch;
+// 	display: flex;
+// 	padding: 1px;
+// 	flex-direction: column;
+// 	align-items: flex-start;
+// 	align-self: stretch;
 
-		border-radius: var(--d-borderRadius-box, 16px);
-		background: var(--d-color-base-200, #f2f2f2);
-		// background: red;
-		> span > svg.arrow-icon {
-			transition: transform 1s;
-			transform: rotate(0deg);
-			// for debug box-shadow: 0 0 12px red;
-		}
-	}
-	> div {
-		max-height: 0;
-		transition: max-height 1s;
-		overflow: hidden;
-		padding: 0;
-	}
-	&.expanded {
-		> a > button {
-			// background: green;
-			> span > svg.arrow-icon {
-				// for debug box-shadow: 0 0 12px green;
-				transform: rotate(180deg);
-				transition: transform 1s;
-			}
-		}
-		> div {
-			max-height: 4000px;
-			transition: max-height 1s;
-		}
-	}
-}
+// 	border-radius: var(--d-borderRadius-box, 16px);
+// 	background: var(--d-color-base-200, #f2f2f2);
+// 	// background: red;
+// 	> span > svg.arrow-icon {
+// 		transition: transform 1s;
+// 		transform: rotate(0deg);
+// 		// for debug box-shadow: 0 0 12px red;
+// 	}
+// }
+// > div {
+// 	max-height: 0;
+// 	transition: max-height 1s;
+// 	overflow: hidden;
+// 	padding: 0;
+// }
+// &.expanded {
+// 	> a > button {
+// 		// background: green;
+// 		> span > svg.arrow-icon {
+// 			// for debug box-shadow: 0 0 12px green;
+// 			transform: rotate(180deg);
+// 			transition: transform 1s;
+// 		}
+// 	}
+// 	> div {
+// 		max-height: 4000px;
+// 		transition: max-height 1s;
+// 	}
+// }
+// }
 
 // @use "../../styles/_colours.module.scss";
 // @use "../../styles/_mixins.module.scss";

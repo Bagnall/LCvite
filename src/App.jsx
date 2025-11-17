@@ -266,7 +266,7 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile, learningObjectConfigFile) => {
-		console.log("loadConfig", configFile);
+		// console.log("loadConfig", configFile);
 
 		// Read the config
 		const headers = new Headers();
@@ -283,7 +283,7 @@ export default class App extends React.Component {
 				.then(handleResponse)
 				.then(res => {
 					const { settings } = res;
-					console.log("config loaded...");
+					// console.log("config loaded...");
 					delete res["settings"];
 					const {
 						class: configClass,
@@ -463,7 +463,7 @@ export default class App extends React.Component {
 			}
 		}
 
-		let flag = '';
+		// let flag = '';
 		let subTitle;
 		let title;
 		if (learningObjects[currentLearningObject]) {
@@ -475,7 +475,7 @@ export default class App extends React.Component {
 		// let subTitle = '';
 		let targetLanguageCode = '';
 		if (settings) {
-			if (settings.flag) flag = `/images/${settings.flag}`;
+			// if (settings.flag) flag = `/images/${settings.flag}`;
 			({ targetLanguageCode/* , title, subTitle*/ } = settings);
 			this.targetLanguageCode = targetLanguageCode;
 		}
@@ -626,7 +626,7 @@ export default class App extends React.Component {
 			currentLearningObject,
 			languageCode
 		} = this.state;
-		console.log("currentLearningObject", currentLearningObject);
+		// console.log("currentLearningObject", currentLearningObject);
 		// console.log("renderComponent languageCode", languageCode);
 		const compoundID = `LO${currentLearningObject + 1}-${id}`;
 		switch (component) {
@@ -742,12 +742,12 @@ export default class App extends React.Component {
 				});
 
 				const {
-					htmlContent,
+					// htmlContent,
 					id,
-					informationText,
-					informationTextHTML,
-					instructionsText,
-					instructionsTextHTML,
+					// informationText,
+					// informationTextHTML,
+					// instructionsText,
+					// instructionsTextHTML,
 				} = value;
 				// console.log(`Group${compoundID}-Accordion`);
 				if (expandable) {
@@ -967,10 +967,10 @@ export default class App extends React.Component {
 				});
 
 				const {
-					htmlContent,
+					// htmlContent,
 					id,
-					instructionsText,
-					instructionsTextHTML,
+					// instructionsText,
+					// instructionsTextHTML,
 				} = value;
 
 				articles.push(
