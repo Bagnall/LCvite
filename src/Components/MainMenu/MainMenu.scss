@@ -1,47 +1,44 @@
-// MainMenu.scss
-
-@use "../../styles/_variables.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
 .main-menu {
-	display: flex;
-	background: white;
+	width: 100%;
+	padding: 0.75rem 1rem;
+	background: rgb(var(--color-surface-base));
 	position: fixed;
-	height: variables.$main-menu-height;
-	width: 100vw;
-	justify-content: space-between;
-	padding: 4px;
-	// color: white;
-	z-index: 999;
-	ul {
-		display: flex;
-		color: white;
-		li {
-			// margin: 0 4px;
-			display: flex;
-			height: var(--t-spacing-12, 48px);
-			padding: var(--t-spacing-0, 0) var(--t-spacing-4, 16px);
-			justify-content: center;
-			align-items: center;
-			gap: var(--t-spacing-2, 8px);
+	background: white;
+	z-index: 9998;
 
-			color: var(--d-color-base-content, #1f2937);
-			text-align: center;
-
-			/* 🌼 DaisyUI/sans/text-sm/semibold */
-			font-family: Inter;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 14px; /* 100% */
-		}
+	.menu-root {
+		width: 100%;
+		display: inline;
 	}
-}
-@include respond-above(m) {
-	.main-menu {
-		ul {
-			// 	h1 {
-			// 		font-size: 2rem;
+
+	/* New flex wrapper */
+	.menu-flex {
+		width: 100%;
+		display: flex;
+		justify-content: space-between; /* THIS fixes right alignment */
+		align-items: center;
+	}
+
+	.menu-left,
+	.menu-right {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.nav-title {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: rgb(var(--color-text-primary));
+	}
+
+	.nav-link {
+		font-size: 0.95rem;
+		color: rgb(var(--color-text-secondary));
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: rgb(var(--color-text-primary));
 		}
 	}
 }

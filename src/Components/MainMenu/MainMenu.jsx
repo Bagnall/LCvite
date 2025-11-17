@@ -1,46 +1,80 @@
-import './MainMenu.scss';
-import React from 'react';
+import "./MainMenu.scss";
+import React from "react";
+
+import {
+	NavigationMenu,
+	NavigationMenuItem,
+	NavigationMenuLink,
+	NavigationMenuList,
+} from "@/components/ui/navigation-menu";
 
 export class MainMenu extends React.Component {
-
 	render = () => {
-		const {
-			config,
-			subTitle,
-		} = this.props;
-		// console.log("MainMenu render", config, subTitle);
-		const topMenu = []; // new Array;
+		const { config, subTitle } = this.props;
 
-		if (config) {
+		if (!config) return null;
 
-			for (const [/* key */, value] of Object.entries(config)) {
-				// console.log(key, value);
-				const { component, menuText, titleText } = value;
-				if (component) {
+		const topMenu = [];
 
-					const { id } = value;
-					topMenu.push(<li key={`menuItem-${id}`}>
-						<a className={`special-anchor`} href={`#special-anchor-${id}`}>{menuText ? menuText : titleText}</a>
-					</li>
-					);
-				}
+		for (const [, value] of Object.entries(config)) {
+			const { component, menuText, titleText, id } = value;
+
+			if (component) {
+				topMenu.push(
+					<NavigationMenuItem key={`menuItem-${id}`}>
+						<NavigationMenuLink asChild>
+							<a
+								className="special-anchor nav-link"
+								href={`#special-anchor-${id}`}
+							>
+								{menuText ? menuText : titleText}
+							</a>
+						</NavigationMenuLink>
+					</NavigationMenuItem>
+				);
 			}
-
-			return (
-				<div className={`main-menu`}>
-					<a className={`special-anchor`} href={`#special-anchor-top`}>{subTitle}</a>
-					<ul id='topMenu'>				<li
-						className={`menu-item`}
-						key={`menu-item-intro`}>
-						<a
-							className={`special-anchor`}
-							href={`#special-anchor-intro`}
-						>Introduction</a>
-					</li>
-					{topMenu}</ul>
-				</div>
-			);
 		}
+
+		return (
+			<div className="main-menu">
+				<NavigationMenu className="menu-root">
+
+					{/* FLEX container to split left vs right */}
+					<div className="menu-flex">
+
+						{/* LEFT SIDE — Title */}
+						<NavigationMenuList className="menu-left">
+							<NavigationMenuItem>
+								<NavigationMenuLink asChild>
+									<a
+										className="special-anchor nav-title"
+										href="#special-anchor-top"
+									>
+										{subTitle}
+									</a>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+						</NavigationMenuList>
+
+						{/* RIGHT SIDE — Items */}
+						<NavigationMenuList className="menu-right">
+							<NavigationMenuItem key="menu-item-intro">
+								<NavigationMenuLink asChild>
+									<a
+										className="special-anchor nav-link"
+										href="#special-anchor-intro"
+									>
+                    Introduction
+									</a>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+
+							{topMenu}
+						</NavigationMenuList>
+
+					</div>
+				</NavigationMenu>
+			</div>
+		);
 	};
 }
-

@@ -130,34 +130,37 @@ figure {
 // 	font-size: 1.6em;
 // }
 
-html.debug {
-	.blanks-container .target .word.blank {
-		opacity: 0.2;
-	}
-	#fontSamples {
-		// display: block;
-	}
-}
-
-html.can-speak {
-	#content {
-		.special-anchor,
-		.speak {
-			color: blue;
-			text-decoration: underline;
-			cursor: pointer;
-			// following doesn't help eliminate contextual search :-(
-			-webkit-user-select: none; /* Chrome/Safari */
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* IE10+ */
-			user-select: none; /* Standard */
+html {
+	scroll-behavior: smooth;
+	&.debug {
+		.blanks-container .target .word.blank {
+			opacity: 0.2;
+		}
+		#fontSamples {
+			// display: block;
 		}
 	}
-	#SpeechSynthesisError {
-		display: none;
-		// opacity: 0;
-		// transition: opacity 0;
-		animation-name: none;
+
+	&.can-speak {
+		#content {
+			.special-anchor,
+			.speak {
+				color: blue;
+				text-decoration: underline;
+				cursor: pointer;
+				// following doesn't help eliminate contextual search :-(
+				-webkit-user-select: none; /* Chrome/Safari */
+				-moz-user-select: none; /* Firefox */
+				-ms-user-select: none; /* IE10+ */
+				user-select: none; /* Standard */
+			}
+		}
+		#SpeechSynthesisError {
+			display: none;
+			// opacity: 0;
+			// transition: opacity 0;
+			animation-name: none;
+		}
 	}
 }
 
