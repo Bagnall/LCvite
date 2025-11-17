@@ -70,11 +70,18 @@
 			letter-spacing: 0.5rem;
 		}
 	}
+	// .help {
+	// 	padding: 1rem;
+	// 	display: flex;
+	// 	justify-content: space-evenly;
+	// 	width: 600px;
+	// }
 	.help {
 		padding: 1rem;
 		display: flex;
-		justify-content: space-evenly;
-		width: 600px;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
 	}
 
 	.hidden-help {

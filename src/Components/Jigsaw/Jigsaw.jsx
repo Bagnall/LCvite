@@ -7,6 +7,7 @@ import {
 	AudioClip,
 	Piece,
 } from '../../Components';
+import { Button } from "@/components/ui/button";
 import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
@@ -392,7 +393,7 @@ export class Jigsaw extends React.PureComponent {
 
 				<div className='help'>
 					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
 				</div>
 				<div
 					className={`jigsaw ${showHints ? 'show-hints' : ''}`}

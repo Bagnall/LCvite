@@ -9,6 +9,7 @@ import {
 	// TableHeader,
 	// TableRow
 } from '..';
+import { Button } from "@/components/ui/button";
 import React from 'react';
 import {resolveAsset} from '../../utility';
 
@@ -189,7 +190,7 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
+				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
@@ -197,7 +198,8 @@ export class WordParts extends React.PureComponent {
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
+					<Button className={`hidden-help ${nPlaced >= 1 || failCount >= 1 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
 				</div>
 				<table>
 					<tbody>

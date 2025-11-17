@@ -8,6 +8,7 @@ import {
 	resolveAsset,
 	shuffleArray
 } from '../../utility';
+import { Button } from "@/components/ui/button";
 import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
@@ -39,6 +40,7 @@ export class Blanks extends React.Component {
 			pictures,
 			questions,
 		} = config;
+		// console.log("id", id);
 		const {words = []} = config;
 		let wordTiles = new Array;
 		let nToPlace = 0;
@@ -154,11 +156,14 @@ export class Blanks extends React.Component {
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 		// this.handleReset = this.handleReset.bind(this);
 		this.inLimits = this.inLimits.bind(this);
+		this.pinTiles = this.pinTiles.bind(this);
 
 		this.state = ({
 			...config,
+			id: id,
 			margin: 20,
 			nToPlace: nToPlace,
 			showHints: false,
@@ -213,18 +218,12 @@ export class Blanks extends React.Component {
 	};
 
 	handleHints = (e) => {
-		console.log("handleHints", e, e.target.checked);
+		// console.log("handleHints", e, e.target.checked);
 		// e.preventDefault();
 		e.stopPropagation();
 		// const { showHints } = this.state;
 		this.setState({ showHints: e.target.checked });
 	};
-
-	// handleChange = (id, value) => {
-	// 	this.setState({
-	// 		[id]: value,
-	// 	});
-	// };
 
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
@@ -245,23 +244,25 @@ export class Blanks extends React.Component {
 			this.wordsContainerRef.current.style.width = width;
 			this.wordsContainerRef.current.style.height = height;
 
-			// draggable words (relatively positioned)
-			const draggables = document.querySelectorAll(`#${id} .draggable`);
-			const coords = new Array;
-			for (let i = 0; i < draggables.length; i++) {
-				const draggable = draggables[i];
-				const style = window.getComputedStyle(draggable);
-				coords.push({
-					x: `${draggable.offsetLeft - parseInt(style.paddingLeft)}px`,
-					y: `${draggable.offsetTop - parseInt(style.marginTop)}px`
-				});
-			}
-			for (let i = 0; i < draggables.length; i++) {
-				const draggable = draggables[i];
-				draggable.style.left = coords[i].x;
-				draggable.style.top = coords[i].y;
-				draggable.style.position = `absolute`;
-			}
+			this.pinTiles();
+
+			// // draggable words (relatively positioned)
+			// const draggables = document.querySelectorAll(`#${id} .draggable`);
+			// const coords = new Array;
+			// for (let i = 0; i < draggables.length; i++) {
+			// 	const draggable = draggables[i];
+			// 	const style = window.getComputedStyle(draggable);
+			// 	coords.push({
+			// 		x: `${draggable.offsetLeft - parseInt(style.paddingLeft)}px`,
+			// 		y: `${draggable.offsetTop - parseInt(style.marginTop)}px`
+			// 	});
+			// }
+			// for (let i = 0; i < draggables.length; i++) {
+			// 	const draggable = draggables[i];
+			// 	draggable.style.left = coords[i].x;
+			// 	draggable.style.top = coords[i].y;
+			// 	draggable.style.position = `absolute`;
+			// }
 		}
 
 		if (e.target.classList.contains('word') && (e.target.classList.contains('draggable') || e.target.classList.contains('dragged'))) { // Not context menu (right mouse)
@@ -403,13 +404,35 @@ export class Blanks extends React.Component {
 		}
 	};
 
-	// handleReset = () => {
-	// 	// console.log("RESET!");
-	// 	// this.setState({
-	// 	// 	matched: [],
-	// 	// 	nPlaced: 0,
-	// 	// });
-	// };
+	handleReset = () => {
+		// console.log("RESET!");
+
+		// Set all tiles with class placed to remove that class
+
+		// Remove position absolute from tiles in the words-container
+		let tiles = document.querySelectorAll('.words-container .word');
+		tiles.forEach((tile) => {
+			tile.classList.remove('placed');
+			tile.classList.add('draggable');
+			tile.style = [];
+
+		});
+
+		tiles = document.querySelectorAll('.target .blank');
+		tiles.forEach((tile) => {
+		// tile.classList = ['word target'];
+			tile.style.opacity = 0;
+		// tile.style.top = '';
+		});
+
+		this.pinTiles();
+
+		this.setState({
+			firstMouseDown: false,
+			matched: [],
+			nPlaced: 0,
+		});
+	};
 
 	inLimits = () => {
 
@@ -446,6 +469,29 @@ export class Blanks extends React.Component {
 		return { success: false };
 	};
 
+	pinTiles = () => {
+		const { id } = this.state;
+		// console.log("pinTiles id=", id);
+		// draggable words (relatively positioned)
+		const draggables = document.querySelectorAll(`#${id} .draggable`);
+		const coords = new Array;
+		for (let i = 0; i < draggables.length; i++) {
+			const draggable = draggables[i];
+			const style = window.getComputedStyle(draggable);
+			coords.push({
+				x: `${draggable.offsetLeft - parseInt(style.paddingLeft)}px`,
+				y: `${draggable.offsetTop - parseInt(style.marginTop)}px`
+			});
+		}
+		for (let i = 0; i < draggables.length; i++) {
+			const draggable = draggables[i];
+			draggable.style.left = coords[i].x;
+			draggable.style.top = coords[i].y;
+			draggable.style.position = `absolute`;
+		}
+
+	};
+
 	render = () => {
 		const {
 			answers,
@@ -458,6 +504,7 @@ export class Blanks extends React.Component {
 			htmlContent,
 			id = '',
 			listenDescriptionText,
+			nPlaced = 0,
 			phrases = [],
 			pictures,
 			questions,
@@ -629,7 +676,7 @@ export class Blanks extends React.Component {
 				});
 			}
 		}
-		console.log("showHints", showHints, showHints.constructor, typeof showHints);
+		// console.log("showHints", showHints, showHints.constructor, typeof showHints);
 
 		return (
 			<div
@@ -656,23 +703,11 @@ export class Blanks extends React.Component {
 					null
 				}
 
-				<p>showHints: |{showHints ? 'true' : 'false'}|{showHints}|</p>
-				<label>Checked = true: <input type='checkbox' checked={true}/></label>
-				<label>Checked = false: <input type='checkbox' checked={false}/></label>
-				<label>Value = true: <input type='checkbox' value={true}/></label>
-				<label>Value = false: <input type='checkbox' value={false}/></label>
-				<label>{showHintsText}:&nbsp;
-					<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
 				<div className='help'>
-					{/* <CheckBox
-						id={`showHintsId-${id ? id : ''}`}
-						name={`showHintsId-${id ? id : ''}`}
-						handleChange={this.handleChange}
-						label={showHintsText}
-						checked={showHints}
-						value={`showHintsId-${id ? id : ''}`} /> */}
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: </label>
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+					<label>{showHintsText}:&nbsp;
+						<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
+					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>
+					<Button className={`hidden-help ${nPlaced >= 1 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
 				</div>
 				<div
 					className={`blanks ${showHints ? 'show-hints' : ''}`}
@@ -709,6 +744,7 @@ export class Blanks extends React.Component {
 						}
 					</div>
 				</div>
+				<p>{nPlaced} correct out of {words.length}</p>
 			</div>
 		);
 	};

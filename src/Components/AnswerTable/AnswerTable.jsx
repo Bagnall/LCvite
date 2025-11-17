@@ -75,7 +75,7 @@ export class AnswerTable extends React.PureComponent {
 
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<thead key={`header-cell-${i}`}>{header[i]}</thead>);
+				headerCells.push(<th key={`header-cell-${i}`}>{header[i]}</th>);
 			}
 		}
 		const rows = new Array();
@@ -121,6 +121,7 @@ export class AnswerTable extends React.PureComponent {
 						);
 						monologueIndex++;
 						lastIndex = regex.lastIndex;
+						console.log("lastIndex", lastIndex);
 					}
 					if (lastIndex < phrase[1].length) {
 						parts.push(phrase[1].slice(lastIndex));

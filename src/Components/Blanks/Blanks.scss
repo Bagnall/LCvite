@@ -75,8 +75,9 @@ $max-tile-width: 360px;
 	.help {
 		padding: 0 1rem;
 		display: flex;
-		justify-content: space-evenly;
-		width: 600px;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
 	}
 
 	.hidden-help {

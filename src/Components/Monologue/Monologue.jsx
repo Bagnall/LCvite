@@ -4,8 +4,9 @@ import {
 	resolveAsset,
 } from '../../utility';
 import {AudioClip} from '../';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import React from 'react';
-// import { Button, Input, Textarea } from '..';
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -102,7 +103,7 @@ export class Monologue extends React.PureComponent {
 							(
 								<form onKeyPress={this.handleKeyPress}>
 									{compact ?
-										<input
+										<Input
 											id={`monologue${id}text`}
 											name={`monologue${id}text`}
 											onChange={this.handleChange}
@@ -112,12 +113,12 @@ export class Monologue extends React.PureComponent {
 										:
 										<textarea value={userInput} onChange={this.handleChange} ></textarea>
 									}
-									<button
-										className={``}
+									<Button
+										className={`${compact ? 'sm' : null}`}
 										htmlFor={`monologue${id}text`}
 										type={`submit`}
 										onClick={this.handleValidation}
-									>Check</button>
+									>Check</Button>
 								</form>
 							)
 						}

@@ -1,6 +1,7 @@
 import './WordGrid.scss';
 import '../../styles/_variables.module.scss';
 import React, { PureComponent } from 'react';
+import { Button } from "@/components/ui/button";
 import colours from '../../styles/_colours.module.scss';
 import {resolveAsset} from '../../utility';
 // import { Button } from '..';
@@ -147,6 +148,9 @@ export class WordGrid extends PureComponent {
 		this.handleReset = this.handleReset.bind(this);
 		this.handleShuffle = this.handleShuffle.bind(this);
 		this.getLinearSelection = this.getLinearSelection.bind(this);
+		this.clearSVG = this.clearSVG.bind(this);
+
+		this.SVGRef = React.createRef();
 	}
 
 	handleMouseDown = (e, row, col) => {
@@ -303,15 +307,27 @@ export class WordGrid extends PureComponent {
 
 	handleReset = () => {
 		// console.log("handleReset");
+		debugger;
 		const { words } = this.state;
+		this.clearSVG();
 
 		this.setState({
+			failCount: 0,
 			foundLines: [],
 			foundWords: [],
 			nPlaced: 0,
 			nToSolve: words.length,
+			showSolution: false,
+			// solutionLines:[],
 			startTime: undefined,
 			timeReport: '',
+		});
+	};
+
+	clearSVG = () => {
+		this.setState({
+			foundLines:[],
+			// solutionLines: [],
 		});
 	};
 
@@ -322,12 +338,15 @@ export class WordGrid extends PureComponent {
 		const foreignWords = words.map(w => w[0]);
 		const solutionLines = new Array;
 		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
+		this.clearSVG();
 		this.setState({
 			foundLines: [],
 			foundWords: [],
 			grid: grid,
 			nPlaced: 0,
 			nToSolve: words.length,
+			showSolution: false,
+			solutionLines: solutionLines,
 			startTime: undefined,
 			timeReport: '',
 		});
@@ -370,6 +389,7 @@ export class WordGrid extends PureComponent {
 			localWords,
 			nPlaced,
 			nToSolve,
+			showAnswer = false,
 			showHints = false,
 			showHintsText,
 			solutionLines,
@@ -432,8 +452,6 @@ export class WordGrid extends PureComponent {
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
-				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
@@ -442,11 +460,12 @@ export class WordGrid extends PureComponent {
 				<p className={`hidden-hints ${showHints ? 'show' : ''}`}>You're looking for these words:</p>
 				<p className={`hidden-hints word-list ${showHints ? 'show' : ''}`} >{foreignWordsRendered}</p>
 
-
 				<div className="word-grid-table-outer-container">
 					<div className='help'>
 						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
-						<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+						<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve}>{cheatText}</Button>
+						<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
+						<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
 					</div>
 					<div className={`table-top`}>
 						<div className="word-grid-table-container"
@@ -454,12 +473,14 @@ export class WordGrid extends PureComponent {
 							onTouchEnd={this.handleMouseUp}
 						>
 							<svg
+								id={`${id}SVG`}
 								width={grid.length * cellDimension}
 								height={grid.length * cellDimension}
+								ref={this.SVGRef}
 								style={{ left: 0, pointerEvents: 'none', position: 'absolute', top: 0 }}
 							>
 								{renderedFoundLines}
-								{renderedSolutionLines}
+								{showSolution ? renderedSolutionLines : null}
 								{line && (
 									<line
 										x1={line.start.col * cellDimension + cellDimension / 2}

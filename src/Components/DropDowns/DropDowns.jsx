@@ -1,8 +1,9 @@
 import './DropDowns.scss';
+import { replaceSelectWithSpan, resolveAsset } from '../../utility';
 import {
 	AudioClip,
 } from '..';
-import { replaceSelectWithSpan, resolveAsset } from '../../utility';
+import { Button } from "@/components/ui/button";
 import React from 'react';
 
 export class DropDowns extends React.PureComponent {
@@ -269,18 +270,18 @@ export class DropDowns extends React.PureComponent {
 					);
 				} else {
 					cells.push(
-						<tr key={`row${i}cell1`}>
+						<td key={`row${i}cell1`}>
 							{phraseList[i]}
-						</tr>
+						</td>
 					);
 
 					if (audio && audio[i]) {
 						const soundFile = resolveAsset(`${audio[i]}`);
 
 						cells.push(
-							<tr key={`row${i}cell2`}>
+							<td key={`row${i}cell2`}>
 								<AudioClip className={`compact`} id={`row${i}cell2AudioClip`} soundFile={soundFile} />
-							</tr>
+							</td>
 						);
 					}
 
@@ -333,7 +334,7 @@ export class DropDowns extends React.PureComponent {
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
+					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
 				</div>
 
 				{content}

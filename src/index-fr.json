@@ -79,6 +79,11 @@
 			"title": "DEMO",
 			"subTitle": "Sample components to pick from",
 			"file": "demo"
+		},
+		{
+			"title": "ANSWER",
+			"subTitle": "Answer Table Test",
+			"file": "answer"
 		}
 	]
 }
