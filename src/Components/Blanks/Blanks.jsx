@@ -405,12 +405,13 @@ export class Blanks extends React.Component {
 	};
 
 	handleReset = () => {
-		// console.log("RESET!");
 
 		// Set all tiles with class placed to remove that class
+		const { id } = this.state;
+		console.log("RESET!", id);
 
 		// Remove position absolute from tiles in the words-container
-		let tiles = document.querySelectorAll('.words-container .word');
+		let tiles = document.querySelectorAll(`#${id} .words-container .word`);
 		tiles.forEach((tile) => {
 			tile.classList.remove('placed');
 			tile.classList.add('draggable');
@@ -418,7 +419,7 @@ export class Blanks extends React.Component {
 
 		});
 
-		tiles = document.querySelectorAll('.target .blank');
+		tiles = document.querySelectorAll(`#${id} .target .blank`);
 		tiles.forEach((tile) => {
 		// tile.classList = ['word target'];
 			tile.style.opacity = 0;
@@ -505,6 +506,7 @@ export class Blanks extends React.Component {
 			id = '',
 			listenDescriptionText,
 			nPlaced = 0,
+			nToPlace,
 			phrases = [],
 			pictures,
 			questions,
@@ -744,7 +746,7 @@ export class Blanks extends React.Component {
 						}
 					</div>
 				</div>
-				<p>{nPlaced} correct out of {words.length}</p>
+				<p>{nPlaced} correct out of {nToPlace}</p>
 			</div>
 		);
 	};

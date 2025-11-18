@@ -7,6 +7,7 @@ import {AudioClip} from '../';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from 'react';
+import { Textarea } from "@/components/ui/textarea";
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -32,6 +33,7 @@ export class Monologue extends React.PureComponent {
 			});
 		}
 
+		this.countCorrect = this.countCorrect.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleValidation = this.handleValidation.bind(this);
 		this.handleReset = this.handleReset.bind(this);
@@ -67,6 +69,29 @@ export class Monologue extends React.PureComponent {
 		}
 	};
 
+	countCorrect = () => {
+		console.log("countCorrect");
+		// const {
+		// 	congratulationsText,
+		// 	phrases,
+		// } = this.state;
+		let {
+			nCorrect,
+		} = this.state;
+		// let newNCorrect = nCorrect;
+		// const { showDialog } = this.props;
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+
+		nCorrect++;
+		// if (nCorrect === phrases.length) {
+		// 	// tadaAudio.play();
+		// 	showDialog(congratulationsText);
+		// }
+		this.setState({
+			nCorrect: nCorrect,
+		});
+	};
+
 	render = () => {
 		const {
 			compact,
@@ -79,13 +104,13 @@ export class Monologue extends React.PureComponent {
 			soundFile,
 			userInput = ``,
 		} = this.state;
-		const {
-			countCorrect
-		} = this.props;
+		// const {
+		// 	countCorrect
+		// } = this.props;
 
 
 		let text = userInput;
-		if (showResult) text = highlightTextDiff(userInput, content, countCorrect, true);
+		if (showResult) text = highlightTextDiff(userInput, content, this.countCorrect, false);
 
 		if (compact) {
 			const {
@@ -96,7 +121,7 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						{!compact ? <button className={`reset`} onClick={this.handleReset}>Reset</button> : null}
+						{!compact ? <Button className={`reset`} size="sm" onClick={this.handleReset}>Reset</Button> : null}
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
@@ -111,7 +136,7 @@ export class Monologue extends React.PureComponent {
 											value={userInput}
 										/>
 										:
-										<textarea value={userInput} onChange={this.handleChange} ></textarea>
+										<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
 									}
 									<Button
 										className={`${compact ? 'sm' : null}`}
@@ -129,7 +154,7 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
-						<button className={`reset btn`} onClick={this.handleReset}>Reset</button>
+						<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
@@ -138,12 +163,12 @@ export class Monologue extends React.PureComponent {
 							:
 							(
 								<>
-									<textarea value={userInput} onChange={this.handleChange} ></textarea>
-									<button
-										className={``}
+									<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
+									<Button
+										className={`${compact ? 'sm' : null}`}
 										onClick={this.handleValidation}
 										type={`submit`}
-									>Check</button>
+									>Check</Button>
 								</>
 							)
 						}

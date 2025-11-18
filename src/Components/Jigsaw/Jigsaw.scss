@@ -31,7 +31,7 @@
 			left: 0;
 		}
 		transform: scale(0.2);
-		transform-origin: center top;
+		transform-origin: left top;
 		margin-bottom: variables.$tile-size * -2.4px;
 		box-sizing: border-box;
 		display: flex;
@@ -97,14 +97,15 @@
 	.jigsaw-container {
 		max-height: 990px;
 		.jigsaw {
-			transform: scale(0.5);
+			transform: scale(0.45);
 		}
 	}
 }
 @include respond-above(xl) {
 	.jigsaw-container {
+		max-height: 990px;
 		.jigsaw {
-			transform: scale(0.5);
+			transform: scale(0.45);
 		}
 	}
 }

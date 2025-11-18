@@ -1,12 +1,14 @@
 import './PhraseTable.scss';
-// import {
-// 	Table,
-// 	TableBody,
-// 	TableCell,
-// 	TableHead,
-// 	TableHeader,
-// 	TableRow
-// } from '..';
+import {
+	Table,
+	TableBody,
+	// TableCaption,
+	TableCell,
+	// TableFooter,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 import {
 	AudioClip,
 } from '../../Components';
@@ -47,7 +49,7 @@ export class PhraseTable extends React.PureComponent {
 		const headerCells = new Array;
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<thead key={`${id}header${i}`}>{header[i]}</thead>);
+				headerCells.push(<TableHead key={`${id}header${i}`}>{header[i]}</TableHead>);
 			}
 		}
 		const rows = new Array();
@@ -57,9 +59,9 @@ export class PhraseTable extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<tr className={`spacer`} key={`row${i}`}>
-						<td colSpan={longestRow}></td>
-					</tr>
+					<TableRow className={`spacer`} key={`row${i}`}>
+						<TableCell colSpan={longestRow}></TableCell>
+					</TableRow>
 				);
 			} else {
 				for (let j = 0; j < phrases[i].length; j++) {
@@ -68,21 +70,21 @@ export class PhraseTable extends React.PureComponent {
 						// Spound file!
 						const soundFile = resolveAsset(`${phrase[j]}`);
 						cells.push(
-							<td key={`row${i}cell${j}`}>
+							<TableCell key={`row${i}cell${j}`}>
 								<AudioClip className={`compact`} label={""} soundFile={soundFile} />
-							</td>
+							</TableCell>
 						);
 					} else {
 						cells.push(
-							<td key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></td>
+							<TableCell key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></TableCell>
 						);
 					}
 				}
 
 				rows.push(
-					<tr key={`row${i}`}>
+					<TableRow key={`row${i}`}>
 						{cells}
-					</tr>
+					</TableRow>
 				);
 			}
 		}
@@ -95,17 +97,17 @@ export class PhraseTable extends React.PureComponent {
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
-				<table>
+				<Table>
 					{header ?
-						<thead>
+						<TableHeader>
 							<TableRow>
 								{headerCells}
 							</TableRow>
-						</thead> : null}
-					<tbody>
+						</TableHeader> : null}
+					<TableBody>
 						{rows}
-					</tbody>
-				</table>
+					</TableBody>
+				</Table>
 				{footnote ? <p className={`ootnote`}>{footnote}</p> : null}
 				{footnoteHTML ? <p className={`footNote`} dangerouslySetInnerHTML={{ __html: footnoteHTML }} /> : null}
 			</div>

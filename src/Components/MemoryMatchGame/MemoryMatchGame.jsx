@@ -1,10 +1,10 @@
 // React component for bilingual memory matching game
 import './MemoryMatchGame.scss';
 import {Card, Congratulate} from '../../Components';
+import { Button } from "@/components/ui/button";
 import React from 'react';
 import {resolveAsset} from '../../utility';
 import Variables from '../../styles/_variables.module.scss';
-// import { Button } from '..';
 
 const getShuffledDeck = (cards, nCards) => {
 	cards = cards.sort(() => Math.random() - 0.5);
@@ -195,8 +195,10 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
-				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
+				<div className={`help`}>
+					<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
+					<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
+				</div>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<div className={`memory-match-game`}>

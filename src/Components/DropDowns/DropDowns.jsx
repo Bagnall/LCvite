@@ -1,11 +1,16 @@
 import './DropDowns.scss';
 import { replaceSelectWithSpan, resolveAsset } from '../../utility';
 import {
+	Table,
+	TableBody,
+	TableCell,
+	TableRow,
+} from "@/components/ui/table";
+import {
 	AudioClip,
 } from '..';
 import { Button } from "@/components/ui/button";
 import React from 'react';
-
 export class DropDowns extends React.PureComponent {
 
 	// Table of phrases with dropdowns and sound files column.
@@ -264,41 +269,41 @@ export class DropDowns extends React.PureComponent {
 				if ((phrase[0] === undefined || phrase[0] === '') && phrase.length === 0) {
 					// blank row
 					rows.push(
-						<tr className={`spacer`} key={`row${i}`}>
-							<td colSpan={3}></td>
-						</tr>
+						<TableRow className={`spacer`} key={`row${i}`}>
+							<TableCell colSpan={3}></TableCell>
+						</TableRow>
 					);
 				} else {
 					cells.push(
-						<td key={`row${i}cell1`}>
+						<TableCell key={`row${i}cell1`}>
 							{phraseList[i]}
-						</td>
+						</TableCell>
 					);
 
 					if (audio && audio[i]) {
 						const soundFile = resolveAsset(`${audio[i]}`);
 
 						cells.push(
-							<td key={`row${i}cell2`}>
+							<TableCell key={`row${i}cell2`}>
 								<AudioClip className={`compact`} id={`row${i}cell2AudioClip`} soundFile={soundFile} />
-							</td>
+							</TableCell>
 						);
 					}
 
 					rows.push(
-						<tr key={`row${i}`}>
+						<TableRow key={`row${i}`}>
 							{cells}
-						</tr>
+						</TableRow>
 					);
 				}
 			}
 
 			content = (
-				<table>
-					<tbody>
+				<Table>
+					<TableBody>
 						{rows}
-					</tbody>
-				</table>
+					</TableBody>
+				</Table>
 			);
 		} else {
 			// We have HTML content

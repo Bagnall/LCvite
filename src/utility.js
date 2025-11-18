@@ -202,7 +202,7 @@ export const handleSpecialLinkClick = (e) => {
 	// console.log("href", href);
 	const [, name] = href.split('#');
 	// console.log("name", name);
-	const specialAnchorTargets = document.querySelectorAll(`a.special-anchor-target[name='${name}']`);
+	const specialAnchorTargets = document.querySelectorAll(`.special-anchor-target[name='${name}']`);
 	// console.log("specialAnchorTargets.length", specialAnchorTargets.length);
 	if (specialAnchorTargets.length === 1) { // Should only ever be one!
 		const [specialAnchorTarget] = specialAnchorTargets;

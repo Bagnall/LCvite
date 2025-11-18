@@ -36,12 +36,12 @@ export class AccordionArticle extends React.PureComponent {
 				className={`accordion-article special-anchor-target ${className}`}
 			>
 				{/* Anchor target for scrolling */}
-				<a
+				{/* <a
 					className="special-anchor-target"
-					name={`special-anchor-${target}`}
-				/>
 
-				<AccordionTrigger className="w-full flex items-center gap-2 py-5 text-text-primary">
+				> */}
+
+				<AccordionTrigger className="special-anchor-target w-full flex items-center gap-2 py-5 text-text-primary" name={`special-anchor-${target}`}>
 					{/* Icon that rotates when open via data-state */}
 					{/* <span
 						className="mr-2 flex h-4 w-4 items-center justify-center
@@ -68,6 +68,7 @@ export class AccordionArticle extends React.PureComponent {
 						<span>{title}</span>
 					)}
 				</AccordionTrigger>
+				{/* </a> */}
 
 				<AccordionContent className="overflow-hidden transition-all duration-300 ease-in-out">
 					<div className="pb-5 text-sm text-text-secondary">

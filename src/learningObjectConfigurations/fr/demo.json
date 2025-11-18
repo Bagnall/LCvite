@@ -696,85 +696,85 @@
 					"nPairsToPlay": 6,
 					"cards": [
 						{
-							"audio": "sounds/fr/memory/la lampe à lave.mp3",
+							"audio": "sounds/fr/la lampe à lave.mp3",
 							"localLanguage": "lava lamp",
 							"foreignLanguage": "la lampe à lave",
 							"image": "images/memory/lava-lamp.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/le télescope.mp3",
+							"audio": "sounds/fr/le télescope.mp3",
 							"localLanguage": "telescope",
 							"foreignLanguage": "le télescope",
 							"image": "images/memory/telescope.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le pinceau.mp3",
+							"audio": "sounds/fr/le pinceau.mp3",
 							"localLanguage": "paintbrush",
 							"foreignLanguage": "le pinceau",
 							"image": "images/memory/paint-brush.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/l'arrosoir.mp3",
+							"audio": "sounds/fr/l'arrosoir.mp3",
 							"localLanguage": "watering can",
 							"foreignLanguage": "l'arrosoir",
 							"image": "images/memory/watering-can.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/la fermeture éclair.mp3",
+							"audio": "sounds/fr/la fermeture éclair.mp3",
 							"localLanguage": "zipper",
 							"foreignLanguage": "la fermeture éclair",
 							"image": "images/memory/zip.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/l'échiquier.mp3",
+							"audio": "sounds/fr/l'échiquier.mp3",
 							"localLanguage": "chessboard",
 							"foreignLanguage": "l'échiquier",
 							"image": "images/memory/chess-board.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/le coquillage.mp3",
+							"audio": "sounds/fr/le coquillage.mp3",
 							"localLanguage": "seashell",
 							"foreignLanguage": "le coquillage",
 							"image": "images/memory/seashell.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/la tasse.mp3",
+							"audio": "sounds/fr/la tasse.mp3",
 							"localLanguage": "mug",
 							"foreignLanguage": "la tasse",
 							"image": "images/memory/mug.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le sac à dos.mp3",
+							"audio": "sounds/fr/le sac à dos.mp3",
 							"localLanguage": "backpack",
 							"foreignLanguage": "le sac à dos",
 							"image": "images/memory/backpack.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le parapluie.mp3",
+							"audio": "sounds/fr/le parapluie.mp3",
 							"localLanguage": "umbrella",
 							"foreignLanguage": "le parapluie",
 							"image": "images/memory/umbrella.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/l'agrafeuse.mp3",
+							"audio": "sounds/fr/l'agrafeuse.mp3",
 							"localLanguage": "stapler",
 							"foreignLanguage": "l'agrafeuse",
 							"image": "images/memory/stapler.png"
 						},
 						{
-							"audio": "sounds/fr/memory/les lunettes.mp3",
+							"audio": "sounds/fr/les lunettes.mp3",
 							"localLanguage": "spectacles",
 							"foreignLanguage": "les lunettes",
 							"image": "images/memory/spectacles.png"
 						},
 						{
-							"audio": "sounds/fr/memory/la brosse à cheveux.mp3",
+							"audio": "sounds/fr/la brosse à cheveux.mp3",
 							"localLanguage": "hair brush",
 							"foreignLanguage": "la brosse à cheveux",
 							"image": "images/memory/hairbrush.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/la carte postale.mp3",
+							"audio": "sounds/fr/la carte postale.mp3",
 							"localLanguage": "postcard",
 							"foreignLanguage": "la carte postale",
 							"image": "images/memory/postcard.jpg"
@@ -1686,7 +1686,7 @@
 						],
 						[
 							"pharmacien",
-							"pharmacienne"
+							"[pharmacienne]"
 						]
 					],
 					"titleText": "AnswerTable"

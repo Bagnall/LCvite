@@ -45,6 +45,9 @@ html.debug {
 					background: colours.$incorrect-background;
 				}
 			}
+			span {
+				padding: 10px 6px 5px 7px;
+			}
 		}
 	}
 
@@ -111,7 +114,12 @@ html.debug {
 				span {
 					font-size: 1.2rem;
 					padding: 4px;
+
 					min-width: 12rem;
+				}
+				span {
+					padding: 10px 6px 5px 7px;
+					vertical-align: -2px;
 				}
 			}
 		}

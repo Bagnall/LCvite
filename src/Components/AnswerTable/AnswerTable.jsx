@@ -2,13 +2,16 @@ import './AnswerTable.scss';
 import {
 	AudioClip,
 	Monologue,
-	// Table,
-	// TableBody,
-	// TableCell,
-	// TableHead,
-	// TableHeader,
-	// TableRow,
 } from '..';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
 import React from 'react';
 import {
 	resolveAsset,
@@ -26,6 +29,7 @@ export class AnswerTable extends React.PureComponent {
 			nCorrect: 0,
 		});
 		this.countCorrect = this.countCorrect.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 	}
 
 	// nCorrect = 0;
@@ -53,6 +57,13 @@ export class AnswerTable extends React.PureComponent {
 		});
 	};
 
+	handleReset = () => {
+		console.log("handleReset");
+		this.setState({
+			nCorrect: 0,
+		});
+	};
+
 	render = () => {
 		const {
 			compoundID,
@@ -75,7 +86,7 @@ export class AnswerTable extends React.PureComponent {
 
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<th key={`header-cell-${i}`}>{header[i]}</th>);
+				headerCells.push(<TableHead key={`header-cell-${i}`}>{header[i]}</TableHead>);
 			}
 		}
 		const rows = new Array();
@@ -85,16 +96,16 @@ export class AnswerTable extends React.PureComponent {
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
-					<tr className={`spacer`} key={`row${i}`}>
-						<td colSpan={longestRow} key={`cell-of-row-${i}`}></td>
-					</tr>
+					<TableRow className={`spacer`} key={`row${i}`}>
+						<TableCell colSpan={longestRow} key={`cell-of-row-${i}`}></TableCell>
+					</TableRow>
 				);
 			} else {
 				if (phrase[0] !== '') {
 					cells.push(
-						<td key={`row${i}cell0`}>
+						<TableCell key={`row${i}cell0`}>
 							{phrase[0]}
-						</td>
+						</TableCell>
 					);
 				}
 				if (phrase[1] !== '') {
@@ -108,8 +119,11 @@ export class AnswerTable extends React.PureComponent {
 					let monologueIndex = 0;
 					while ((match = regex.exec(phrase[1])) !== null) {
 						if (match.index > lastIndex) {
+							console.log(10, phrase[1].slice(lastIndex, match.index));
 							parts.push(phrase[1].slice(lastIndex, match.index));
 						}
+						console.log(20, "monologue");
+
 						parts.push(
 							<Monologue
 								key={`Monologue${i}-${monologueIndex}`}
@@ -120,32 +134,36 @@ export class AnswerTable extends React.PureComponent {
 							/>
 						);
 						monologueIndex++;
-						lastIndex = regex.lastIndex;
-						console.log("lastIndex", lastIndex);
+						({ lastIndex } = regex);// .lastIndex;
+						// console.log("lastIndex", lastIndex);
 					}
 					if (lastIndex < phrase[1].length) {
+						console.log(30, phrase[1].slice(lastIndex));
+
 						parts.push(phrase[1].slice(lastIndex));
 					}
+					console.log("1 cells.push");
 					cells.push(
-						<td key={`row${i}cell1`}>
+						<TableCell key={`row${i}cell1`}>
 							<span className='inline-monologue'>{parts}</span>
-						</td>
+						</TableCell>
 					);
 				}
 				if (longestRow > 2) {
 					const soundCellIndex = 2;
 					const soundFile = resolveAsset(`${phrase[soundCellIndex]}`);
+					console.log("2 cells.push");
 					cells.push(
-						<td key={`row${i}cell${soundCellIndex}`}>
+						<TableCell key={`row${i}cell${soundCellIndex}`}>
 							<AudioClip className={`compact`} label={""} soundFile={soundFile} />
-						</td>
+						</TableCell>
 					);
 				}
-
+				console.log("rows.push");
 				rows.push(
-					<tr key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
+					<TableRow key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
 						{cells}
-					</tr>
+					</TableRow>
 				);
 			}
 		}
@@ -156,18 +174,21 @@ export class AnswerTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				{/* <div className={`help`}>
+					<Button className={`reset`} size="sm" onClick={this.handleReset}>Reset</Button>
+				</div> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				<table>
+				<Table>
 					{header ?
-						<thead>
-							<tr>
+						<TableHeader>
+							<TableRow>
 								{headerCells}
-							</tr>
-						</thead> : null}
-					<tbody>
+							</TableRow>
+						</TableHeader> : null}
+					<TableBody>
 						{rows}
-					</tbody>
-				</table>
+					</TableBody>
+				</Table>
 				<p>{nCorrect} correct out of {nPhrases}.</p>
 			</div>
 		);

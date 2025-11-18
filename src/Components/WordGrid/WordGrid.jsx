@@ -389,7 +389,7 @@ export class WordGrid extends PureComponent {
 			localWords,
 			nPlaced,
 			nToSolve,
-			showAnswer = false,
+			// showAnswer = false,
 			showHints = false,
 			showHintsText,
 			solutionLines,

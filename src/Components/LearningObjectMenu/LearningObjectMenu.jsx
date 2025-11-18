@@ -22,7 +22,7 @@ export class LearningObjectMenu extends React.Component {
 						<a
 							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
 							onClick={() => this.selectLearningObject(index)}
-						>{index <= 14 ? index + 1 : 'Demo'}</a>
+						>{index <= 14 ? index + 1 : index === 15 ? 'Demo' : "Answer"}</a>
 					</li>
 				);
 			}
