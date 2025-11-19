@@ -70,7 +70,7 @@ export class Monologue extends React.PureComponent {
 	};
 
 	countCorrect = () => {
-		console.log("countCorrect");
+		// console.log("countCorrect");
 		// const {
 		// 	congratulationsText,
 		// 	phrases,

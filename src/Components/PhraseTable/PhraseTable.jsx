@@ -1,5 +1,9 @@
 import './PhraseTable.scss';
 import {
+	AudioClip,
+	Info,
+} from '../../Components';
+import {
 	Table,
 	TableBody,
 	// TableCaption,
@@ -9,9 +13,6 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import {
-	AudioClip,
-} from '../../Components';
 import React from 'react';
 import {
 	resolveAsset,
@@ -36,8 +37,6 @@ export class PhraseTable extends React.PureComponent {
 			header,
 			htmlContent,
 			id = [],
-			// instructionsText,
-			// instructionsTextHTML,
 			phrases,
 		} = this.state;
 		// const { id = '' } = config;

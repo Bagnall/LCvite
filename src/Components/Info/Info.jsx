@@ -37,18 +37,7 @@ export class Info extends React.PureComponent {
 					className={`information`}
 					id={`${id}-Info`}
 				>
-					<svg
-						fill={`#1e40af`}
-						className='info-icon'
-					// stroke={`blue`}
-					>
-						<use
-							// fill={`blue`}
-							href={`#info-icon`}
-						// stroke={`blue`}
-						/>
-					</svg>
-					<div dangerouslySetInnerHTML={{ __html: informationTextHTML }}/>
+					<div className={`info-content`} dangerouslySetInnerHTML={{ __html: informationTextHTML }}/>
 				</div>
 			);
 		} else if (informationText) {
@@ -57,31 +46,9 @@ export class Info extends React.PureComponent {
 					className={`information`}
 					id={`${id}-Info`}
 				>
-					<svg
-						fill={`#1e40af`}
-						className='info-icon'
-					// stroke={`blue`}
-					>
-						<use
-							// fill={`blue`}
-							href={`#info-icon`}
-						// stroke={`blue`}
-						/>
-					</svg>
-					{informationText ? informationText : null}
-					{/* <header>
-						< button
-							title="Close"
-							onClick={() => { this.setState({ showInfo: false }); }}
-							className='window-close' >
-						</button >
-					</header>
-					<div className='background' /> */}
-					{/* <div className={`for-scrolling`}>
-						<h1>{infoTitle}</h1>
-						{infoMessage}
-					</div> */}
-
+					<div className={`info-content`}>
+						{informationText ? informationText : null}
+					</div>
 				</div>
 			);
 		} else if (children) {
@@ -90,15 +57,9 @@ export class Info extends React.PureComponent {
 					className={`information`}
 					id={`${id}-Info`}
 				>
-					<svg
-						fill={`#1e40af`}
-						className='info-icon'
-					>
-						<use
-							href={`#info-icon`}
-						/>
-					</svg>
-					{children}
+					<div className={`info-content`}>
+						{children}
+					</div>
 				</div>
 			);
 

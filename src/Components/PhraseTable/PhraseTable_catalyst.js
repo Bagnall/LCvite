@@ -33,6 +33,8 @@ export class PhraseTable extends React.PureComponent {
 			header,
 			htmlContent,
 			id = [],
+			informationText,
+			informationTextHTML,
 			instructionsText,
 			instructionsTextHTML,
 			phrases,
@@ -93,6 +95,7 @@ export class PhraseTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				<Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}

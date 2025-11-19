@@ -117,11 +117,8 @@ export class LO1Demystify1 extends PureComponent {
 				key={`${id}CustomComponent`}
 			>
 				<Info>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to pronounce nasal sounds in words like bonjour and bonsoir.</li>
-						<li>How airflow through nose and mouth creates the French nasal sound.</li>
-					</ul>
+					<p>In this part, you'll focus on mastering the French nasal sounds found in words like bonjour and bonsoir.
+						You'll learn how airflow through your nose and mouth creates this unique sound in French.</p>
 				</Info>
 				<div
 					className={`panel`}
@@ -151,12 +148,7 @@ export class LO1Demystify2 extends PureComponent {
 				key={`${id}CustomComponent`}
 			>
 				<Info>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to form the <i><AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip></i> at the back of the throat (not like in English).</li>
-						<li>How to feel the vibration when producing the sound.</li>
-						<li>Common examples: <i><AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>, <AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-					</ul>
+					<p>Here, you'll practise producing the French <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><i>r</i></AudioClip>, which is formed at the back of the throat - quite different from the English r. You'll learn to feel the vibration when pronouncing it and recognise it in words like <i>bonjour</i>, <i>bonsoir</i>, and <i>au revoir</i>.</p>
 				</Info>
 				<div
 					className={`panel`}
@@ -188,11 +180,7 @@ export class LO1Demystify3 extends PureComponent {
 				key={`${id}CustomComponent`}
 			>
 				<Info>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>How to pronounce <i>oi</i> as in <i><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`} >moi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`} >toi</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au revoir</AudioClip></i>.</li>
-						<li>To recognise this sound pattern in many French words.</li>
-					</ul>
+					<p>In this section, you'll learn how to pronounce oi as in moi, toi, and au revoir. You'll also become familiar with this common sound pattern across many French words.</p>
 				</Info>
 				<div
 					className={`panel`}
@@ -220,10 +208,7 @@ export class LO1Demystify4 extends PureComponent {
 				key={`${id}CustomComponent`}
 			>
 				<Info>
-					<h4>You will learn:</h4>
-					<ul>
-						<li>That h is never aspirated in French (<i><AudioClip className={`link`} soundFile={`sounds/fr/homme.mp3`} >homme</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horrible.mp3`} >horrible</AudioClip></i>, <i><AudioClip className={`link`} soundFile={`sounds/fr/horizon.mp3`} >horizon</AudioClip></i>).</li>
-					</ul>
+					<p>Finally, you'll find out why the letter <i>h</i> is never pronounced in French. You'll see examples like homme, horrible, and horizon, where the <i>h</i> remains completely silent.</p>
 				</Info>
 				<div
 					className={`panel`}

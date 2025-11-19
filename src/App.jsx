@@ -417,6 +417,7 @@ export default class App extends React.Component {
 			dialogContent,
 			// dropdowns1,
 			errors,
+			id,
 			// jigsaw1,
 			// jigsaw2,
 			// jigsaw3,
@@ -483,10 +484,7 @@ export default class App extends React.Component {
 		// console.log("render languageCode", languageCode, "learningObjects", learningObjects, learningObjects.length, "currentLearningObject", currentLearningObject);
 		return (
 			<>
-				<svg xmlns="http://www.w3.org/2000/svg" id="info-icon" viewBox="0 0 24 24">
-					<path
-						d="M12 0C5.373 0 0 5.375 0 12c0 6.629 5.373 12 12 12s12-5.371 12-12c0-6.625-5.373-12-12-12m0 5.323a2.032 2.032 0 1 1 0 4.064 2.032 2.032 0 0 1 0-4.064m2.71 12.29c0 .32-.26.58-.581.58H9.871a.58.58 0 0 1-.58-.58v-1.161c0-.321.26-.581.58-.581h.58v-3.097h-.58a.58.58 0 0 1-.58-.58v-1.162c0-.32.26-.58.58-.58h3.097c.32 0 .58.26.58.58v4.839h.581c.32 0 .58.26.58.58z" />
-				</svg>
+
 				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`} key={`languageDiv`}>
 					<a className={`special-anchor-target`} name={`special-anchor-top`}/>
 					<ErrorLog
@@ -571,7 +569,7 @@ export default class App extends React.Component {
 									</a>
 									{intro ? <p className={`intro`}>{intro}</p> : null}
 									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
-									{informationHTML ? <Info informationTextHTML={informationHTML} /> : null}
+									{informationHTML ? <Info id={currentLearningObject} informationTextHTML={informationHTML} /> : null}
 								</div>
 								{/* <label>Test: <input type='checkbox'/></label> */}
 								{currentLearningObject !== -1 ?
@@ -608,26 +606,20 @@ export default class App extends React.Component {
 	};
 
 	renderComponent = (value, articles) => {
-		// console.log(`renderComponent`);
-		// console.log(value);
 		const {
 			id,
 			component,
-			// instructionsText,
-			// instructionsTextHTML,
+			infoText,
+			infoTextHTML,
 			titleText = '',
 			titleTextHTML = ''
 		} = value;
-		// console.log(`component [${component}]`);
-		// console.log("renderComponent id=", id);
 		const { expandable = true } = value;
 
 		const {
 			currentLearningObject,
 			languageCode
 		} = this.state;
-		// console.log("currentLearningObject", currentLearningObject);
-		// console.log("renderComponent languageCode", languageCode);
 		const compoundID = `LO${currentLearningObject + 1}-${id}`;
 		switch (component) {
 			case 'AnswerTable': {
@@ -742,14 +734,8 @@ export default class App extends React.Component {
 				});
 
 				const {
-					// htmlContent,
 					id,
-					// informationText,
-					// informationTextHTML,
-					// instructionsText,
-					// instructionsTextHTML,
 				} = value;
-				// console.log(`Group${compoundID}-Accordion`);
 				if (expandable) {
 					articles.push(
 						<AccordionArticle
@@ -762,11 +748,6 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
-							{/* {informationText ? <div className={`information text accordion`}>{informationText}</div> : null}
-							{informationTextHTML ? <div className={`information html accordion`} dangerouslySetInnerHTML={{ __html: informationTextHTML }} /> : null}
-							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-							{instructionsText ? <p className={`instructions text accordion`}>{instructionsText}</p> : null}
-							{instructionsTextHTML ? <p className={`instructions html accordion`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 							{renderedGroupContent}
 						</AccordionArticle>
 					);
@@ -777,16 +758,10 @@ export default class App extends React.Component {
 							className={`group`}
 							id={`${compoundID}-Group-Section`}
 							key={`${compoundID}-Group-Section`}
-							// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
 							target={id}
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
-							{/* {informationText ? <div className={`information text accordion`}>{informationText}</div> : null}
-							{informationTextHTML ? <div className={`information html accordion`} dangerouslySetInnerHTML={{ __html: informationTextHTML }} /> : null}
-							{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-							{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-							{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 							{renderedGroupContent}
 						</Section>
 					);
@@ -967,10 +942,7 @@ export default class App extends React.Component {
 				});
 
 				const {
-					// htmlContent,
 					id,
-					// instructionsText,
-					// instructionsTextHTML,
 				} = value;
 
 				articles.push(
@@ -983,9 +955,6 @@ export default class App extends React.Component {
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
-						{/* // 	{htmlContent ? <div className={`html-content`} key={`html-content${id}`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-					// 	{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-					// 	{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 						{renderedSectionContent}
 					</Section>
 				);
@@ -1062,6 +1031,7 @@ export default class App extends React.Component {
 								title={titleText}
 								titleHTML={titleTextHTML}
 							>
+								<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
 								<CustomComponent
 									id={id}
 									showDialog={this.showDialog}
