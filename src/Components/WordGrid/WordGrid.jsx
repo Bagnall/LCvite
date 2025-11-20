@@ -307,7 +307,6 @@ export class WordGrid extends PureComponent {
 
 	handleReset = () => {
 		// console.log("handleReset");
-		debugger;
 		const { words } = this.state;
 		this.clearSVG();
 

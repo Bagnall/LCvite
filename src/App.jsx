@@ -89,7 +89,7 @@ export default class App extends React.Component {
 
 	componentDidMount = () => {
 
-		// console.log("componentDidMount");
+		console.log("componentDidMount");
 		const queryString = window.location.search;
 
 		const urlParams = new URLSearchParams(queryString);
@@ -113,7 +113,7 @@ export default class App extends React.Component {
 	};
 
 	componentDidUpdate = () => {
-		// console.log("componentDidUpdate");
+		console.log("componentDidUpdate");
 
 		this.initialiseSpecialAnchors();
 	};
@@ -150,9 +150,9 @@ export default class App extends React.Component {
 	};
 
 	initialiseSpecialAnchors = () => {
-		// console.log("initialiseSpecialAnchors");
+		console.log("initialiseSpecialAnchors");
 		const anchors = document.querySelectorAll('.special-anchor');
-		// console.log("anchors.length", anchors.length);
+		console.log("anchors.length", anchors.length);
 		anchors.forEach((anchor) => {
 			// console.log("anchor", anchor);
 			if (anchor.setup) {
@@ -415,27 +415,11 @@ export default class App extends React.Component {
 			config,
 			currentLearningObject,
 			dialogContent,
-			// dropdowns1,
 			errors,
-			id,
-			// jigsaw1,
-			// jigsaw2,
-			// jigsaw3,
-			// learningObjects,
-			// monologues,
-			// phrases1,
-			// phrases2,
-			// phrases3,
-			// phraseTable1,
 			languageCode,
 			learningObjects = [],
 			refreshErrorLog,
 			showDialog = false,
-			// vocabulary1,
-			// vocabulary2,
-			// wordparts1,
-			// wordsIntoSlots1,
-			// wordsIntoSlots2,
 			settings,
 			showSpeechError = false,
 		} = this.state;
@@ -748,6 +732,7 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
+							<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
 							{renderedGroupContent}
 						</AccordionArticle>
 					);
@@ -762,6 +747,7 @@ export default class App extends React.Component {
 							title={titleText}
 							titleHTML={titleTextHTML}
 						>
+							<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
 							{renderedGroupContent}
 						</Section>
 					);

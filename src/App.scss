@@ -3,7 +3,7 @@
 @use "./styles/_colours.module.scss";
 @use "./styles/_media-queries.scss" as *;
 @use "./styles/_mixins.module.scss";
-@use "./styles/_skin.module.scss";
+// @use "./styles/_skin.module.scss";
 @use "./styles/_variables.module.scss";
 @use "sass:color";
 
@@ -168,7 +168,7 @@ html {
 	animation-name: flash-animation;
 	animation-duration: 1000ms;
 	animation-timing-function: ease;
-	animation-iteration-count: 6;
+	animation-iteration-count: 3;
 }
 
 @keyframes flash-animation {
@@ -268,7 +268,7 @@ hr {
 	// align-items: center;
 	flex-direction: column;
 	z-index: 1;
-	margin: 1rem auto;
+	// margin: 1rem auto;
 	// max-width: 1200px;
 	// touch-action: none;
 
@@ -600,7 +600,7 @@ hr {
 	.content {
 		text-align: justify;
 		margin: 0 auto;
-		font-size: 1.2rem;
+		// font-size: 1.2rem;
 		li {
 			.video {
 				margin-left: 40px;

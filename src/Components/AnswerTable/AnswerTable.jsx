@@ -58,7 +58,7 @@ export class AnswerTable extends React.PureComponent {
 	};
 
 	handleReset = () => {
-		console.log("handleReset");
+		// console.log("handleReset");
 		this.setState({
 			nCorrect: 0,
 		});
@@ -119,10 +119,10 @@ export class AnswerTable extends React.PureComponent {
 					let monologueIndex = 0;
 					while ((match = regex.exec(phrase[1])) !== null) {
 						if (match.index > lastIndex) {
-							console.log(10, phrase[1].slice(lastIndex, match.index));
+							// console.log(10, phrase[1].slice(lastIndex, match.index));
 							parts.push(phrase[1].slice(lastIndex, match.index));
 						}
-						console.log(20, "monologue");
+						// console.log(20, "monologue");
 
 						parts.push(
 							<Monologue
@@ -138,11 +138,11 @@ export class AnswerTable extends React.PureComponent {
 						// console.log("lastIndex", lastIndex);
 					}
 					if (lastIndex < phrase[1].length) {
-						console.log(30, phrase[1].slice(lastIndex));
+						// console.log(30, phrase[1].slice(lastIndex));
 
 						parts.push(phrase[1].slice(lastIndex));
 					}
-					console.log("1 cells.push");
+					// console.log("1 cells.push");
 					cells.push(
 						<TableCell key={`row${i}cell1`}>
 							<span className='inline-monologue'>{parts}</span>
@@ -152,14 +152,14 @@ export class AnswerTable extends React.PureComponent {
 				if (longestRow > 2) {
 					const soundCellIndex = 2;
 					const soundFile = resolveAsset(`${phrase[soundCellIndex]}`);
-					console.log("2 cells.push");
+					// console.log("2 cells.push");
 					cells.push(
 						<TableCell key={`row${i}cell${soundCellIndex}`}>
 							<AudioClip className={`compact`} label={""} soundFile={soundFile} />
 						</TableCell>
 					);
 				}
-				console.log("rows.push");
+				// console.log("rows.push");
 				rows.push(
 					<TableRow key={`${compoundID}-row${i}`} visible-key={`${id}-row${i}`}>
 						{cells}

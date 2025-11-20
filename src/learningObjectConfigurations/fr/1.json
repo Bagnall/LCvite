@@ -11,7 +11,8 @@
 	"dialogues": {
 		"component": "Group",
 		"expandable": false,
-		"instructionsTextHTML": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/><p>This section introduces a series of short dialogues to show how to greet and introduce oneself in both formal and informal situations in French.</p>",
+		"instructionsTextHTMLOld": "<img src='images/handshake.png' style='width: 200px; border: 1px solid black;margin-bottom: 20px;'/><p>This section introduces a series of short dialogues to show how to greet and introduce oneself in both formal and informal situations in French.</p>",
+		"instructionsTextHTML": "<p>This section introduces a series of short dialogues to show how to greet and introduce oneself in both formal and informal situations in French.</p>",
 		"content": [
 			{
 				"phraseTable1": {
@@ -530,7 +531,7 @@
 		],
 		"expandable": false,
 		"id": "exercises",
-		"instructionsTextHTML": "<p>This section introduces a range of exercises to help practise French pronunciation, greetings, introductions, and listening comprehension through interactive gap-filling and sound recognition activities.</p>",
+		"infoTextHTML": "<p>This section introduces a range of exercises to help practise French pronunciation, greetings, introductions, and listening comprehension through interactive gap-filling and sound recognition activities.</p>",
 		"titleText": "Exercises"
 	}
 }

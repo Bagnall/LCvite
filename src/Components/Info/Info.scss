@@ -9,17 +9,19 @@ Info.scss
 	background-color: #eff6ff;
 	padding: 12px 16px 12px 16px;
 	position: relative;
-	border: 1px solid #95a4ffff;
+	// border: 1px solid #95a4ffff;
 	border-radius: 0.6rem;
 	display: flex;
 	// flex-direction: column;
 	column-gap: 0.75rem;
+	color: #1c398e;
 	&::before {
 		content: "";
 		position: absolute;
 		width: variables.$info-diameter;
 		height: variables.$info-diameter;
 		background: url("/public/images/icons/info-icon.svg");
+		top: 14px;
 	}
 	.info-icon {
 		// position: absolute;
@@ -33,7 +35,7 @@ Info.scss
 		margin-left: 2rem;
 		h3 {
 			font-size: 1.2rem;
-			margin-top: 0rem;
+			margin-top: 1px;
 		}
 		h4 {
 			font-size: 1rem;

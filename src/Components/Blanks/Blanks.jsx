@@ -408,7 +408,7 @@ export class Blanks extends React.Component {
 
 		// Set all tiles with class placed to remove that class
 		const { id } = this.state;
-		console.log("RESET!", id);
+		// console.log("RESET!", id);
 
 		// Remove position absolute from tiles in the words-container
 		let tiles = document.querySelectorAll(`#${id} .words-container .word`);

@@ -1,100 +1,128 @@
-// src/Components/Accordion/AccordionArticle.jsx
-import {
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Info } from "..";
-import React from "react";
+import {Info} from '..';
+import React from 'react';
 
 export class AccordionArticle extends React.PureComponent {
-	render() {
-		const {
-			config,
-			title = "",
-			titleHTML = "",
-			className = "",
-			children,
-			target,
-			id,
-			value,
+
+	constructor(props) {
+		super(props);
+
+		let {
+			expandedByDefault: expanded = false,
 		} = this.props;
 
 		const {
-			informationText,
-			informationTextHTML,
-			instructionsText,
-			instructionsTextHTML,
-		} = config;
+			id,
+		} = this.props;
 
-		// shadcn needs a stable string value per item
-		const itemValue = value || String(id);
+		if (sessionStorage.getItem(`${id}-expanded`)) expanded = JSON.parse(sessionStorage.getItem(`${id}-expanded`));
+
+		this.state = ({
+			expanded: expanded, // Set up from sessionStorage
+			id: id,
+		});
+
+		this.toggleExpanded = this.toggleExpanded.bind(this);
+	}
+
+	componentDidUpdate = (prevProps) => {
+		if (this.props.expandNow !== prevProps.expandNow) {
+			this.expand();
+		}
+	};
+
+	expand = () => {
+		const {
+			id,
+		} = this.state;
+
+		sessionStorage.setItem(`${id}-expanded`, JSON.stringify(true));
+		this.setState({
+			expanded: true
+		});
+	};
+
+	toggleExpanded = () => {
+		let {
+			expanded,
+		} = this.state;
+		const {
+			id,
+		} = this.state;
+		expanded = !expanded;
+		sessionStorage.setItem(`${id}-expanded`, JSON.stringify(expanded));
+		this.setState({
+			expanded: expanded
+		});
+		if ("vibrate" in navigator) {
+			window.navigator.vibrate(100);
+		}
+	};
+
+	render = () => {
+		const {
+			children,
+			className,
+			info,
+			title = '',
+			titleHTML = '',
+		} = this.props;
+
+		const {
+			expanded,
+			id,
+		} = this.state;
+
+		let h2 = (
+			<h2
+				onClick={this.toggleExpanded}
+				title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+			>
+				{title}
+				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+			</h2>
+		);
+
+		if (titleHTML !== '') {
+			h2 = (
+				<h2
+					onClick={this.toggleExpanded}
+					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				>
+					<span dangerouslySetInnerHTML={{ __html: titleHTML }}/>
+					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
+				</h2>
+			);
+		}
 
 		return (
-			<AccordionItem
-				value={itemValue}
-				className={`accordion-article special-anchor-target ${className}`}
+			<article
+				className={`accordion-article ${expanded ? 'expanded' : ''} ${className ? className : ''}`}
+				id={`${id}`}
+				key={`article${id}`}
 			>
-				{/* Anchor target for scrolling */}
-				{/* <a
-					className="special-anchor-target"
-
-				> */}
-
-				<AccordionTrigger className="special-anchor-target w-full flex items-center gap-2 py-5 text-text-primary" name={`special-anchor-${target}`}>
-					{/* Icon that rotates when open via data-state */}
-					{/* <span
-						className="mr-2 flex h-4 w-4 items-center justify-center
-                       transition-transform duration-300
-                       data-[state=open]:rotate-180"
+				<header
+					onClick={this.toggleExpanded}
+					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				>
+					<svg
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24" height="24"
+						viewBox="0 0 24 24" fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						className="arrow lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
 					>
-						<svg
-							className="arrow-icon h-4 w-4"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 16 16"
-							fill="currentColor"
-						>
-							<path
-								fillRule="evenodd"
-								d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-								clipRule="evenodd"
-							/>
-						</svg>
-					</span> */}
-
-					{titleHTML ? (
-						<span dangerouslySetInnerHTML={{ __html: titleHTML }} />
-					) : (
-						<span>{title}</span>
-					)}
-				</AccordionTrigger>
-				{/* </a> */}
-
-				<AccordionContent className="overflow-hidden transition-all duration-300 ease-in-out">
-					<div className="pb-5 text-sm text-text-secondary">
-						<Info
-							className="text accordionarticle"
-							id={`info-${id}`}
-							informationText={informationText}
-							informationTextHTML={informationTextHTML}
-						/>
-						{instructionsText ? (
-							<p className="instructions text accordionarticle">
-								{instructionsText}
-							</p>
-						) : null}
-						{instructionsTextHTML ? (
-							<p
-								className="instructions html accordionarticle"
-								dangerouslySetInnerHTML={{
-									__html: instructionsTextHTML,
-								}}
-							/>
-						) : null}
-						{children}
-					</div>
-				</AccordionContent>
-			</AccordionItem>
+						<path d="m6 9 6 6 6-6"></path>
+					</svg>
+					{h2}
+				</header>
+				<div className='content'>
+					{children}
+				</div>
+			</article >
 		);
-	}
+	};
 }

@@ -196,17 +196,17 @@ export const handleSpecialLinkClick = (e) => {
 	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
 	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
 
-	// console.log("handleSpecialLinkClick", e);
+	console.log("handleSpecialLinkClick", e);
 	e.preventDefault();
 	const href = e.target.getAttribute('href');
-	// console.log("href", href);
+	console.log("href", href);
 	const [, name] = href.split('#');
-	// console.log("name", name);
+	console.log(`.special-anchor-target[name='${name}']`, `.special-anchor-target[name='${name}']`);
 	const specialAnchorTargets = document.querySelectorAll(`.special-anchor-target[name='${name}']`);
-	// console.log("specialAnchorTargets.length", specialAnchorTargets.length);
+	console.log("specialAnchorTargets.length", specialAnchorTargets.length);
 	if (specialAnchorTargets.length === 1) { // Should only ever be one!
 		const [specialAnchorTarget] = specialAnchorTargets;
-		// console.log("SPECIAL ANCHOR TARGET", specialAnchorTarget);
+		console.log("SPECIAL ANCHOR TARGET", specialAnchorTarget);
 		// And it should be within an accordion (or even nested accordions)
 		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
 		// console.log("accordionArticle", accordionArticle);
@@ -214,8 +214,8 @@ export const handleSpecialLinkClick = (e) => {
 		if (accordionArticle !== null) {
 			while (accordionArticle) {
 				// Expand it!
-				// console.log("while", accordionArticle);
-				// console.log("window.refs", window.refs);
+				console.log("while", accordionArticle);
+				console.log("window.refs", window.refs);
 				try {
 					const ref = window.refs.find((r) => {
 						// console.log("searching", r, r && r.props.id, accordionArticle.id);
@@ -227,7 +227,7 @@ export const handleSpecialLinkClick = (e) => {
 							// Flash a highlight colour to help the user to spot it.
 							specialAnchorTarget.classList.add('flash');
 							// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-							const targetRect = specialAnchorTarget.getBoundingClientRect();
+							// const targetRect = specialAnchorTarget.getBoundingClientRect();
 							// console.log("10 targetRect", targetRect);
 							// console.log("10 SCROLLTO", targetRect.top, -80);
 							// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
@@ -241,11 +241,11 @@ export const handleSpecialLinkClick = (e) => {
 				accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
 			}
 		} else {
-			// console.log("Not an accordion");
+			console.log("Not an accordion");
 			// Flash a highlight colour to help the user to spot it.
 			specialAnchorTarget.classList.add('flash');
 			// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-			const targetRect = specialAnchorTarget.getBoundingClientRect();
+			// const targetRect = specialAnchorTarget.getBoundingClientRect();
 			// console.log("20 targetRect", targetRect);
 			// console.log("20 SCROLLTO", targetRect.top, -80);
 			// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
@@ -335,7 +335,7 @@ export const isTouchChrome = () => {
 };
 
 export const playAudioLink = (soundFile) => {
-	console.log("playAudioLink", soundFile);
+	// console.log("playAudioLink", soundFile);
 	const soundFileAudio = new Audio(resolveAsset(soundFile));
 	soundFileAudio.play();
 };
