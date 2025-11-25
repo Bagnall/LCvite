@@ -1,12 +1,11 @@
 import "./MainMenu.scss";
-import React from "react";
-
 import {
 	NavigationMenu,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import React from "react";
 
 export class MainMenu extends React.Component {
 	render = () => {

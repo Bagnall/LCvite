@@ -157,7 +157,6 @@ export class Blanks extends React.Component {
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
 		this.handleReset = this.handleReset.bind(this);
-		// this.handleReset = this.handleReset.bind(this);
 		this.inLimits = this.inLimits.bind(this);
 		this.pinTiles = this.pinTiles.bind(this);
 
@@ -211,8 +210,8 @@ export class Blanks extends React.Component {
 		// });
 
 		// console.log(`#${id} .word.target`);
-		const objectTiles = document.querySelectorAll(`#${id} .word.draggable`);
-		const targetTiles = document.querySelectorAll(`#${id} .word.target`);
+		const objectTiles = document.querySelectorAll(`#${id} .word.draggable > span`);
+		const targetTiles = document.querySelectorAll(`#${id} .word.target > span`);
 		targetTiles.forEach((w) => { w.style.opacity = 1; });
 		objectTiles.forEach((w) => { w.style.opacity = 0; });
 	};
@@ -245,28 +244,11 @@ export class Blanks extends React.Component {
 			this.wordsContainerRef.current.style.height = height;
 
 			this.pinTiles();
-
-			// // draggable words (relatively positioned)
-			// const draggables = document.querySelectorAll(`#${id} .draggable`);
-			// const coords = new Array;
-			// for (let i = 0; i < draggables.length; i++) {
-			// 	const draggable = draggables[i];
-			// 	const style = window.getComputedStyle(draggable);
-			// 	coords.push({
-			// 		x: `${draggable.offsetLeft - parseInt(style.paddingLeft)}px`,
-			// 		y: `${draggable.offsetTop - parseInt(style.marginTop)}px`
-			// 	});
-			// }
-			// for (let i = 0; i < draggables.length; i++) {
-			// 	const draggable = draggables[i];
-			// 	draggable.style.left = coords[i].x;
-			// 	draggable.style.top = coords[i].y;
-			// 	draggable.style.position = `absolute`;
-			// }
 		}
-
-		if (e.target.classList.contains('word') && (e.target.classList.contains('draggable') || e.target.classList.contains('dragged'))) { // Not context menu (right mouse)
-			this.movingPiece = e.target;
+		let { target } = e;
+		if (!target.classList.contains('draggable'))target = target.parentElement;
+		if (target.classList.contains('word') && (target.classList.contains('draggable') || target.classList.contains('dragged'))) { // Not context menu (right mouse)
+			this.movingPiece = target;
 			const cl = this.movingPiece.classList;
 
 			const startWord = document.querySelector(`#${id} .draggable.${cl[0]}`);
@@ -295,7 +277,7 @@ export class Blanks extends React.Component {
 					this.movingPiece.style.top = `${relMouseY}px`;
 				}
 
-				e.target.classList.add("dragging");
+				target.classList.add("dragging");
 			}
 		}
 	};
@@ -342,43 +324,44 @@ export class Blanks extends React.Component {
 		if (this.movingPiece !== undefined) {
 
 			const {
-				congratulationsText,
+				// congratulationsText,
 				nToPlace,
 			} = this.state;
 			let {
 				nPlaced = 0,
 			} = this.state;
 
-			let targetX, targetY, target;
+			let targetLeft, targetTop, targetSpan;
 			const inLimitsResult = this.inLimits();
 			if (inLimitsResult.success) {
-				({ targetX, targetY, target } = inLimitsResult);
+				({ targetLeft, targetTop, targetSpan } = inLimitsResult);
 				// The eagle has landed
 				clickAudio.play();
 
-				this.movingPiece.style.left = `${targetX}px`;
-				this.movingPiece.style.top = `${targetY}px`;
+				// if (this.movingPiece) {
+				this.movingPiece.style.left = `${targetLeft}px`;
+				this.movingPiece.style.top = `${targetTop}px`;
+				this.movingPiece.style.opacity = `0`;
 				// debugger;
 				// console.log(target);
 				// const _this = this;
-				if (this.movingPiece) {
-					this.movingPiece.classList.remove("dragging");
-					this.movingPiece.classList.add("placed");
-					this.movingPiece.classList.remove("draggable");
-					this.movingPiece.classList.remove('highlight');
-					// console.log(10, "Removing movingPiece");
-					this.movingPiece = undefined;
-				}
+				this.movingPiece.classList.remove("dragging");
+				this.movingPiece.classList.add("placed");
+				this.movingPiece.classList.remove("draggable");
+				this.movingPiece.classList.remove('highlight');
+				// console.log(10, "Removing movingPiece");
+				this.movingPiece = undefined;
+				// }
 				// setTimeout(() => {
-				target.style.opacity = 1;
+				targetSpan.style.opacity = 1;
 				// }
 				// , 1); // 000); // Corresponds to SCSS transition times
 				nPlaced++;
 				if (nPlaced === nToPlace) {
 
 					// Last piece of the jigsaw placed
-					const { showDialog } = this.props;
-					showDialog(congratulationsText);
+					// const { showDialog } = this.props;
+					// showDialog(congratulationsText);
 					// tadaAudio.play();
 					this.setState({
 						complete: true,
@@ -419,7 +402,7 @@ export class Blanks extends React.Component {
 
 		});
 
-		tiles = document.querySelectorAll(`#${id} .target .blank`);
+		tiles = document.querySelectorAll(`#${id} .target-board .blank span`);
 		tiles.forEach((tile) => {
 		// tile.classList = ['word target'];
 			tile.style.opacity = 0;
@@ -429,6 +412,7 @@ export class Blanks extends React.Component {
 		this.pinTiles();
 
 		this.setState({
+			failCount: 0,
 			firstMouseDown: false,
 			matched: [],
 			nPlaced: 0,
@@ -444,28 +428,28 @@ export class Blanks extends React.Component {
 		} = this.state;
 
 		const cl = this.movingPiece.classList;
+		// console.log("id", id);
 		const targetWord = document.querySelector(`#${id} .target.${cl[0]}`);
-		let targetX, targetY;
+		const targetSpan = document.querySelector(`#${id} .target.${cl[0]} span`);
 		if (targetWord) {
 			// targeting point in case we want to return it
-			const style = window.getComputedStyle(targetWord);
-			let { marginLeft, marginTop } = style;
-			marginLeft = parseInt(marginLeft);
-			marginTop = parseInt(marginTop);
-			targetX = parseInt(targetWord.offsetLeft - marginLeft);
-			targetY = parseInt(targetWord.offsetTop - marginTop);
-		}
+			const targetRect = targetWord.getBoundingClientRect();
+			const { left:targetLeft, top:targetTop, right:targetRight, bottom: targetBottom, width:targetWidth} = targetRect;
 
-		let { left, top } = this.movingPiece.style;
-		left = parseInt(left);
-		top = parseInt(top);
-		if (Math.abs(left - targetX) < margin && Math.abs(top - targetY) < margin) {
-			return {
-				success: true,
-				"target": targetWord,
-				"targetX": targetX,
-				"targetY": targetY,
-			};
+			const pieceRect = this.movingPiece.getBoundingClientRect();
+			const { left: pieceLeft, top: pieceTop, right: pieceRight, bottom: pieceBottom, width: pieceWidth } = pieceRect;
+
+			// console.log("pieceWidth", pieceWidth, "targetWidth", targetWidth);
+
+			// console.log("pieceLeft", pieceLeft, "targetLeft", targetLeft, "pieceTop", pieceTop, "targetTop", targetTop, "pieceRight", pieceRight, "targetRight", targetRight, "pieceBottom", pieceBottom, "targetBottom", targetBottom, "margin", margin);
+			if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
+				return {
+					success: true,
+					"targetLeft": targetLeft,
+					"targetSpan": targetSpan,
+					"targetTop": targetTop,
+				};
+			}
 		}
 		return { success: false };
 	};
@@ -490,7 +474,6 @@ export class Blanks extends React.Component {
 			draggable.style.top = coords[i].y;
 			draggable.style.position = `absolute`;
 		}
-
 	};
 
 	render = () => {
@@ -545,9 +528,9 @@ export class Blanks extends React.Component {
 							for (let i = 0; i < words.length; i++) {
 								if (words[i] === cleanedPhraseSplit) foundIndex = i;
 							}
-							phrase.push(<span
+							phrase.push(<div
 								className={`word${foundIndex} word blank target `}
-								key={`phraseSpan${i}-${j}`}>{cleanedPhraseSplit} </span>);
+								key={`phraseSpan${i}-${j}`}><span>{cleanedPhraseSplit}</span></div>);
 						}else {
 							phrase.push(<span className='word' key={`phraseSpan${i}-${j}`}>{phraseSplit[j]} </span>);
 						}
@@ -697,7 +680,7 @@ export class Blanks extends React.Component {
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip
-						id={`bollox`}
+						id={`${id}Audio`}
 						listenText={listenDescriptionText}
 						soundFile={soundFile}
 					/>
@@ -705,12 +688,6 @@ export class Blanks extends React.Component {
 					null
 				}
 
-				<div className='help'>
-					<label>{showHintsText}:&nbsp;
-						<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>
-					<Button className={`hidden-help ${nPlaced >= 1 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
-				</div>
 				<div
 					className={`blanks ${showHints ? 'show-hints' : ''}`}
 					onMouseDown={this.handleMouseDown}
@@ -724,7 +701,7 @@ export class Blanks extends React.Component {
 						{wordTiles}
 					</div>
 					<div
-						className='target'
+						className='target-board'
 						onMouseDown={this.handleMouseDown}
 						onMouseMove={this.handleMouseMove}
 						onMouseUp={this.handleMouseUp}
@@ -746,6 +723,13 @@ export class Blanks extends React.Component {
 						}
 					</div>
 				</div>
+				<div className='help'>
+					<label>{showHintsText}:&nbsp;
+						<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
+					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>
+					<Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
+				</div>
+
 				<p>{nPlaced} correct out of {nToPlace}</p>
 			</div>
 		);

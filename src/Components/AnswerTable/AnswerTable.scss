@@ -1,13 +1,17 @@
 // AnswerTable.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module.scss" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module.scss" as *;
+@use "../../styles/variables.module.scss" as *;
 
 .answer-table-container {
 	.help {
-		display: flex;
-		justify-content: flex-end;
+		// display: flex;
+		// flex-direction: column;
+		// row-gap: 8px;
+		// justify-content: flex-between;
+		@include help();
 	}
 	// table {
 	// 	text-align: left;
@@ -47,12 +51,12 @@
 	// }
 }
 @include respond-above(m) {
-	.answer-table-container {
-		// table {
-		// 	td {
-		// 		font-size: 1rem;
-		// 		padding: 0.25rem 1rem;
-		// 	}
-		// }
-	}
+	// .answer-table-container {
+	// 	// table {
+	// 	// 	td {
+	// 	// 		font-size: 1rem;
+	// 	// 		padding: 0.25rem 1rem;
+	// 	// 	}
+	// 	// }
+	// }
 }

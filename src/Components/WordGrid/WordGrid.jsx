@@ -204,7 +204,7 @@ export class WordGrid extends PureComponent {
 
 	handleMouseUp = () => {
 		const {
-			congratulationsText,
+			// congratulationsText,
 			line,
 			foundLines,
 			foundWords,
@@ -256,11 +256,11 @@ export class WordGrid extends PureComponent {
 					timeReport: timeReport,
 				});
 
-				const { showDialog } = this.props;
-				soundFile.onended = () => {
-					// tadaAudio.play();
-					showDialog(congratulationsText);
-				};
+				// const { showDialog } = this.props;
+				// soundFile.onended = () => {
+				// 	// tadaAudio.play();
+				// 	showDialog(congratulationsText);
+				// };
 				soundFile.play();
 				// tadaAudio.play();
 			} else {
@@ -460,12 +460,6 @@ export class WordGrid extends PureComponent {
 				<p className={`hidden-hints word-list ${showHints ? 'show' : ''}`} >{foreignWordsRendered}</p>
 
 				<div className="word-grid-table-outer-container">
-					<div className='help'>
-						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
-						<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve}>{cheatText}</Button>
-						<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
-						<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
-					</div>
 					<div className={`table-top`}>
 						<div className="word-grid-table-container"
 							onMouseUp={this.handleMouseUp}
@@ -529,6 +523,12 @@ export class WordGrid extends PureComponent {
 								</tbody>
 							</table>
 						</div>
+					</div>
+					<div className='help'>
+						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
+						<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve}>{cheatText}</Button>
+						<Button className={`reset hidden-help ${nPlaced > 0 || failCount >= 2 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
+						<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
 					</div>
 					<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 					<p className='time-taken'>{timeReport}</p>

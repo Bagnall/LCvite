@@ -21,6 +21,15 @@ _mixins.module.scss
 	}
 }
 
+@mixin help() {
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	justify-content: space-between;
+}
+
 @mixin comparison() {
 	textarea,
 	.comparison-result {

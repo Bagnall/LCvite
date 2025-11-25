@@ -8,16 +8,18 @@
 .show-hints {
 	.word {
 		&.highlight {
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: rgb(201, 255, 122);
-				background: radial-gradient(circle, rgba(201, 255, 122, 1) 0%, rgba(0, 212, 255, 0) 100%);
-				z-index: 14;
-				position: absolute;
-				top: 0;
-				left: 0;
+			span {
+				&::after {
+					content: "";
+					width: 100%;
+					height: 100%;
+					background: rgb(201, 255, 122);
+					background: radial-gradient(circle, rgba(201, 255, 122, 1) 0%, rgba(0, 212, 255, 0) 100%);
+					z-index: 14;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
 		}
 	}
@@ -37,35 +39,49 @@
 		padding: 0.4rem 1rem;
 	}
 }
+div.word {
+	display: inline-flex;
+	justify-content: center;
+}
+span.word {
+	display: inline;
+}
 .word {
-	z-index: 10;
-	transition-property: left, top, box-shadow;
-	transition-duration: 1s; //$word-transition-time;
 	// cursor: pointer;
 	user-select: none;
-	border-radius: 6px;
-
+	// display: inline-block;
 	&.blank {
 		position: relative;
-		margin: 0.25rem;
-		&::after {
-			@include mixins.standard-pseudo();
+
+		span {
+			position: relative;
+			z-index: 10;
 			border-radius: 6px;
-			box-shadow:
-				-2px -2px 2px inset black,
-				2px 2px 2px inset white;
+			transition-property: left, top, box-shadow;
+			transition-duration: 1s; //$word-transition-time;
+			margin: 0.25rem;
+			&::after {
+				@include mixins.standard-pseudo();
+				position: absolute;
+				border-radius: 6px;
+				box-shadow:
+					-2px -2px 2px inset black,
+					2px 2px 2px inset white;
+			}
+			@include ph;
 		}
-		@include ph;
 	}
-	&.placeholder,
-	&.target {
-		position: relative;
-	}
+	// &.placeholder,
+	// &.target {
+	// 	position: relative;
+	// }
 
 	&.dragged {
 		position: absolute;
-		transition-property: left, top, box-shadow;
-		transition-duration: 1s; //$word-transition-time;
+		span {
+			transition-property: left, top, box-shadow;
+			transition-duration: 1s; //$word-transition-time;
+		}
 		cursor: grab;
 	}
 
@@ -78,26 +94,35 @@
 			box-shadow 1s; // $word-transition-time;
 		// transition-duration: 0s;
 		cursor: grab;
-		box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+		span {
+			transition: box-shadow 1s; // $word-transition-time;
+			box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+		}
 	}
 
 	&.placed {
 		position: absolute;
 		cursor: default;
-		transition-property: left, top;
-		transition-duration: 1s; //$word-transition-time;
+		span {
+			transition-property: left, top;
+			transition-duration: 1s; //$word-transition-time;
+		}
 	}
 }
 @include respond-above(l) {
 	.word {
 		&.blank {
-			margin: 0.2rem 1rem;
+			span {
+				margin: 0.2rem 1rem;
+			}
 		}
 	}
 	.type-group-table {
 		.word {
 			&.blank {
-				margin: 0.2rem 0.2rem;
+				span {
+					margin: 0.2rem 0.2rem;
+				}
 			}
 		}
 	}

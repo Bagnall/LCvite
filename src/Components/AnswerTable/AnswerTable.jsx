@@ -36,22 +36,22 @@ export class AnswerTable extends React.PureComponent {
 
 	countCorrect = () => {
 		// console.log("countCorrect");
-		const {
-			congratulationsText,
-			phrases,
-		} = this.state;
+		// const {
+		// 	// congratulationsText,
+		// 	// phrases,
+		// } = this.state;
 		let {
 			nCorrect,
 		} = this.state;
 		// let newNCorrect = nCorrect;
-		const { showDialog } = this.props;
+		// const { showDialog } = this.props;
 		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		nCorrect++;
-		if (nCorrect === phrases.length) {
-			// tadaAudio.play();
-			showDialog(congratulationsText);
-		}
+		// if (nCorrect === phrases.length) {
+		// 	// tadaAudio.play();
+		// 	showDialog(congratulationsText);
+		// }
 		this.setState({
 			nCorrect: nCorrect,
 		});

@@ -49,6 +49,7 @@ export class WordParts extends React.PureComponent {
 				targets[i].classList.add('animate');
 			}
 			this.setState({
+				complete: true,
 				nPlaced: this.nToSolve
 			});
 
@@ -61,9 +62,9 @@ export class WordParts extends React.PureComponent {
 		// const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 		// console.log("handlePartWordClick");
 		// wofAudio.play();
-		const {
-			congratulationsText,
-		} = this.state;
+		// const {
+		// 	congratulationsText,
+		// } = this.state;
 		let {
 			nPlaced = 0,
 		} = this.state;
@@ -73,8 +74,8 @@ export class WordParts extends React.PureComponent {
 		if (nPlaced === this.nToSolve){
 
 			// Last piece of the jigsaw placed
-			const { showDialog } = this.props;
-			showDialog(congratulationsText);
+			// const { showDialog } = this.props;
+			// showDialog(congratulationsText);
 			// tadaAudio.play();
 			this.setState({
 				complete: true,
@@ -106,8 +107,9 @@ export class WordParts extends React.PureComponent {
 			span.classList.remove('error');
 		});
 		this.setState({
+			complete: false,
+			failCount: 0,
 			nPlaced: 0,
-
 		});
 	};
 
@@ -115,6 +117,7 @@ export class WordParts extends React.PureComponent {
 		const {
 			audio,
 			cheatText,
+			complete = false,
 			failCount = 0,
 			htmlContent,
 			id = [],
@@ -196,16 +199,17 @@ export class WordParts extends React.PureComponent {
 				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 
 
-				<div className='help'>
-					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
-					<Button className={`hidden-help ${nPlaced >= 1 || failCount >= 1 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
-				</div>
 				<table>
 					<tbody>
 						{rows}
 					</tbody>
 				</table>
+
+				<div className='help'>
+					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
+					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</Button>
+					<Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
+				</div>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 			</div>

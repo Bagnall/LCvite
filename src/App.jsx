@@ -89,7 +89,7 @@ export default class App extends React.Component {
 
 	componentDidMount = () => {
 
-		console.log("componentDidMount");
+		// console.log("componentDidMount");
 		const queryString = window.location.search;
 
 		const urlParams = new URLSearchParams(queryString);
@@ -113,7 +113,7 @@ export default class App extends React.Component {
 	};
 
 	componentDidUpdate = () => {
-		console.log("componentDidUpdate");
+		// console.log("componentDidUpdate");
 
 		this.initialiseSpecialAnchors();
 	};
@@ -150,9 +150,9 @@ export default class App extends React.Component {
 	};
 
 	initialiseSpecialAnchors = () => {
-		console.log("initialiseSpecialAnchors");
+		// console.log("initialiseSpecialAnchors");
 		const anchors = document.querySelectorAll('.special-anchor');
-		console.log("anchors.length", anchors.length);
+		// console.log("anchors.length", anchors.length);
 		anchors.forEach((anchor) => {
 			// console.log("anchor", anchor);
 			if (anchor.setup) {
@@ -452,8 +452,8 @@ export default class App extends React.Component {
 		let subTitle;
 		let title;
 		if (learningObjects[currentLearningObject]) {
-			// console.log("BINGO!");
-			({ subTitle, title } = learningObjects[currentLearningObject]);
+			console.log("BINGO!", currentLearningObject);
+			({ subTitle, title } = learningObjects[currentLearningObject - 1]);
 		}
 		// console.log("title", title, "subTitle", subTitle);
 
@@ -604,7 +604,8 @@ export default class App extends React.Component {
 			currentLearningObject,
 			languageCode
 		} = this.state;
-		const compoundID = `LO${currentLearningObject + 1}-${id}`;
+		// console.log("renderComponent currentLearningObject", currentLearningObject);
+		const compoundID = `LO${currentLearningObject}-${id}`;
 		switch (component) {
 			case 'AnswerTable': {
 				articles.push(

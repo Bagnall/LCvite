@@ -1,6 +1,7 @@
 // DropDowns.scss
 @use "../../styles/_colours.module.scss";
 @use "../../styles/_media-queries.scss" as *;
+@use "../../styles/_mixins.module.scss" as *;
 @use "../../styles/_variables.module.scss";
 
 html.debug {
@@ -57,7 +58,9 @@ html.debug {
 	}
 
 	.help {
-		padding: 1rem;
+		@include help();
+
+		// padding: 1rem;
 	}
 
 	.hidden-help {

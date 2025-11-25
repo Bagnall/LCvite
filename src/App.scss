@@ -133,7 +133,7 @@ figure {
 html {
 	scroll-behavior: smooth;
 	&.debug {
-		.blanks-container .target .word.blank {
+		.blanks-container .target-board .word.blank span {
 			opacity: 0.2;
 		}
 		#fontSamples {

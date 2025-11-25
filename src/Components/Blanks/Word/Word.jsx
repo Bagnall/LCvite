@@ -22,7 +22,7 @@ export class Word extends React.PureComponent {
 
 		// word${index} must be the first class
 		return (
-			<span
+			<div
 				className={`word${index} word ${className ? className : ''} `}
 				onMouseDown={handleMouseDown}
 				onMouseMove={handleMouseMove}
@@ -31,7 +31,7 @@ export class Word extends React.PureComponent {
 				onTouchMove={handleMouseMove}
 				onTouchEnd={handleMouseUp}
 				style={styles}
-			>{children}</span>
+			><span>{children}</span></div>
 		);
 	};
 }

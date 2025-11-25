@@ -40,10 +40,10 @@ export class LO1Grammar1 extends PureComponent {
 					<p>You will learn:</p>
 					<ul><li>When to use Monsieur, Madame, and Mademoiselle.</li><li>Abbreviations: M., Mme., Mlle.</li></ul>
 
-					<p><a className={`special-anchor-target`} name={`madame`} />In French there is no equivalent to the English Ms.
+					<p><span className={`special-anchor-target`} name={`madame`}>In French there is no equivalent to the English Ms.
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
-					<a className={`special-anchor-target`} name={`mademoiselle`} /><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
-						for a teenage girl.</p>
+					</span><span className={`special-anchor-target`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+						for a teenage girl.</span></p>
 					<table>
 						<tbody>
 							<tr>
@@ -87,15 +87,15 @@ export class LO1Grammar2 extends PureComponent {
 						<li>How to use <i>vous</i> formally or when speaking to several people.</li>
 						<li>How <i>toi</i> replaces <i>tu</i> in responses (<i>Et toi ?</i>).</li>
 					</ul>
-					<p><a className={`special-anchor-target`} name={`tuvous`}>2&nbsp;
+					<p><span className={`special-anchor-target`} name={`tuvous`}>2&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip> and&nbsp;
-						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</a></p>
+						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</span></p>
 					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
-						a classmate or a child etc. <a className={`special-anchor-target`} name={`toi`} />When returning question i.e. when you ask 'and you?' you use the
+						a classmate or a child etc. <span className={`special-anchor-target`} name={`toi`} >When returning question i.e. when you ask 'and you?' you use the
 						form&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip> instead of&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu:</b></AudioClip>&nbsp;
-					<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle Michel et toi.mp3`}><b>Je m'appelle Michel, et toi ?</b></AudioClip></p>
+					<AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle Michel et toi.mp3`}><b>Je m'appelle Michel, et toi ?</b></AudioClip></span></p>
 					<p>You use <AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip> when addressing an adult that you don't know e.g.
 						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
 						a health professional, a legal advisor, an acquaintance of your parents etc.</p>
@@ -2371,7 +2371,6 @@ export class L13ASummersDay extends Component {
 
 		const RQConfig = {
 			"component": "RadioQuiz",
-			"congratulationsText": "Well done!",
 			"id": "L13SummersDayRadioQuiz",
 			"options": [
 				"Vrai",

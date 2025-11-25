@@ -254,7 +254,7 @@ export class Jigsaw extends React.PureComponent {
 			// Check to see if it is close enough to its intended position
 			const {
 				jigsawBorderWidth,
-				congratulationsText,
+				// congratulationsText,
 				piecesPerBoard,
 				startTime,
 				tabSize,
@@ -293,11 +293,11 @@ export class Jigsaw extends React.PureComponent {
 					}
 					this.setState({
 						timeReport: timeReport,
-					}, () => {
-						const { showDialog } = this.props;
-						showDialog(congratulationsText);
-						// tadaAudio.play();
-					});
+					});// , () => {
+					// 	const { showDialog } = this.props;
+					// 	showDialog(congratulationsText);
+					// 	// tadaAudio.play();
+					// });
 				}
 				this.setState({ nPlaced: nPlaced });
 			} else {
@@ -391,10 +391,6 @@ export class Jigsaw extends React.PureComponent {
 					soundFile={resolveAsset(soundFile)}
 				/>
 
-				<div className='help'>
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					<Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
-				</div>
 				<div
 					className={`jigsaw ${showHints ? 'show-hints' : ''}`}
 					onTouchStart={this.handleMouseDown}
@@ -418,6 +414,10 @@ export class Jigsaw extends React.PureComponent {
 					>
 					</div>
 					<p className='time-taken'>{timeReport}</p>
+				</div>
+				<div className='help'>
+					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
+					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
 				</div>
 			</div>
 		);
