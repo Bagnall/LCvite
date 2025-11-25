@@ -1,7 +1,7 @@
 /*
 OkCancel.scss
 */
-@use "../../../styles/_colours.module.scss";
+@use "../../../styles/colours.module" as *;
 
 .btn-group {
 	width: 100%;

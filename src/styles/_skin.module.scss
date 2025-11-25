@@ -1,7 +1,7 @@
 /*
 _skin.module.scss
 */
-@use "_colours.module.scss";
+@use "_colours.module" as *;
 @use "sass:color";
 
 @mixin affected_by_skin($home, $button, $background, $article-base-background, $panel-back, $body-back, $menu, $congratulate) {
@@ -339,48 +339,48 @@ _skin.module.scss
 
 .fr-FR {
 	$french-home: green;
-	$background: colours.$body-back;
-	$button: colours.$french-button;
-	// $article-base-background: colours.$french-article-base-background;
-	$french-panel-back: colours.$french-panel-back;
+	$background: $body-back;
+	$button: $french-button;
+	// $article-base-background: $french-article-base-background;
+	$french-panel-back: $french-panel-back;
 	$french-body-back: white;
 	$panel-back: $french-panel-back;
 	$menu: blue;
-	$congratulate: colours.$french-congratulate;
+	$congratulate: $french-congratulate;
 	// $body-back: $french-body-back;
-	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back, $menu, $congratulate);
+	@include affected_by_skin($french-home, $button, $background, $french-article-base-background, $french-panel-back, $french-body-back, $menu, $congratulate);
 }
 .uk-UA {
 	$french-home: green;
 	$background: white;
-	$button: colours.$french-button;
-	// $article-base-background: colours.$french-article-base-background;
-	$french-panel-back: colours.$french-panel-back;
+	$button: $french-button;
+	// $article-base-background: $french-article-base-background;
+	$french-panel-back: $french-panel-back;
 	$french-body-back: white;
 	$panel-back: $french-panel-back;
 	$menu: blue;
-	$congratulate: colours.$french-congratulate;
+	$congratulate: $french-congratulate;
 	// $body-back: $french-body-back;
-	@include affected_by_skin($french-home, $button, $background, colours.$french-article-base-background, $french-panel-back, $french-body-back, $menu, $congratulate);
+	@include affected_by_skin($french-home, $button, $background, $french-article-base-background, $french-panel-back, $french-body-back, $menu, $congratulate);
 }
 .de-DE {
 	$german-body-back: white;
 	$menu: blue;
-	$congratulate: colours.$french-congratulate;
+	$congratulate: $french-congratulate;
 
-	@include affected_by_skin(colours.$german-home, colours.$german-button, $german-body-back, colours.$german-article-base-background, colours.$german-panel-back, $german-body-back, $menu, $congratulate);
+	@include affected_by_skin($german-home, $german-button, $german-body-back, $german-article-base-background, $german-panel-back, $german-body-back, $menu, $congratulate);
 }
 
 .es-US {
 	$spanish-home: rgb(247, 188, 28);
 	$background: #ffefcc;
 	$spanish-article-base-background: $spanish-home;
-	$spanish-panel-back: colours.$spanish-panel-back;
+	$spanish-panel-back: $spanish-panel-back;
 	$spanish-body-back: white;
-	$button: colours.$spanish-button;
+	$button: $spanish-button;
 	$panel-back: $spanish-panel-back;
 	$menu: rgb(206, 134, 0);
-	$congratulate: colours.$spanish-congratulate;
+	$congratulate: $spanish-congratulate;
 
 	// $body-back: $spanish-body-back;
 	@include affected_by_skin($spanish-home, $button, $background, $spanish-article-base-background, $spanish-panel-back, $spanish-body-back, $menu, $congratulate);
@@ -390,12 +390,12 @@ _skin.module.scss
 	$arabic-home: rgb(230, 203, 130);
 	$background: #ffefcc;
 	$arabic-article-base-background: $arabic-home;
-	$arabic-panel-back: colours.$arabic-panel-back;
+	$arabic-panel-back: $arabic-panel-back;
 	$arabic-body-back: white;
-	$button: colours.$arabic-button;
+	$button: $arabic-button;
 	$panel-back: $arabic-panel-back;
 	$menu: rgb(206, 134, 0);
-	$congratulate: colours.$french-congratulate;
+	$congratulate: $french-congratulate;
 	// $body-back: $arabic-body-back;
 	@include affected_by_skin($arabic-home, $button, $background, $arabic-article-base-background, $arabic-panel-back, $arabic-body-back, $menu, $congratulate);
 }

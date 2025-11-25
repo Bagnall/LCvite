@@ -1,9 +1,9 @@
 // Word.scss
 
-@use "../../../styles/_colours.module.scss";
-@use "../../../styles/_media-queries.scss" as *;
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/colours.module" as *;
+@use "../../../styles/media-queries" as *;
+@use "../../../styles/variables.module" as *;
+@use "../../../styles/mixins.module" as *;
 
 .show-hints {
 	.word {
@@ -28,7 +28,7 @@
 	// box-shadow: 8px 8px 8px gray;
 	border: 0px; //1px solid transparent;
 	padding: 0.25rem 0.5rem;
-	background: colours.$ivory;
+	background: $ivory;
 	font-size: 1.2rem;
 	font-weight: bold;
 	line-height: 1.4rem;
@@ -61,7 +61,7 @@ span.word {
 			transition-duration: 1s; //$word-transition-time;
 			margin: 0.25rem;
 			&::after {
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 				position: absolute;
 				border-radius: 6px;
 				box-shadow:

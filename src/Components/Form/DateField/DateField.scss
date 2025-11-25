@@ -2,9 +2,9 @@
 DateField.scss
 */
 
-@use "../../../styles/_colours.module.scss";
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/colours.module" as *;
+@use "../../../styles/mixins.module" as *;
+@use "../../../styles/variables.module" as *;
 
 form .row {
 	&.date-field {
@@ -15,11 +15,11 @@ form .row {
 			}
 		}
 		input {
-			@include mixins.form-field-common-font-padding();
+			@include form-field-common-font-padding();
 			align-self: flex-end;
 			grid-area: device;
 			justify-self: end;
-			height: variables.$form-common-height;
+			height: $form-common-height;
 			max-width: 170px;
 			width: 100%;
 		}

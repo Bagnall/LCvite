@@ -1,10 +1,10 @@
 /*
 Monologue.scss
 */
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 .monologue-container {
 	padding: 20px;
@@ -24,7 +24,7 @@ Monologue.scss
 	// 	width: 100vw;
 	// 	min-width: 100vw;
 	// }
-	@include mixins.comparison();
+	@include comparison();
 	.comparison-result {
 		border-radius: 8px;
 		padding: 2px 4px;

@@ -1,8 +1,8 @@
 // CrossWord.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/variables.module" as *;
 
 .crossword-container {
 	display: grid;
@@ -12,7 +12,7 @@
 	grid-template-areas:
 		"instructions instructions"
 		"board clues";
-	// background: colours.$panel-back;
+	// background: $panel-back;
 	table {
 		p {
 			margin: 0;
@@ -26,8 +26,8 @@
 			animation-duration: 0.5s;
 			animation-timing-function: linear;
 			animation-iteration-count: 8;
-			background-color: colours.$correct-background;
-			border: 1px solid colours.$correct-border;
+			background-color: $correct-background;
+			border: 1px solid $correct-border;
 			box-sizing: border-box;
 		}
 		padding: 0.5rem 0;
@@ -37,8 +37,8 @@
 		border: 1px solid white;
 		user-select: none;
 		&.error {
-			border: 1px solid colours.$incorrect-border;
-			background: colours.$incorrect-background;
+			border: 1px solid $incorrect-border;
+			background: $incorrect-background;
 		}
 	}
 

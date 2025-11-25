@@ -1,7 +1,7 @@
 /*
 FieldSet.scss
 */
-@use "../../../styles/_colours.module.scss";
+@use "../../../styles/colours.module" as *;
 
 .form-group {
 	width: 100%;

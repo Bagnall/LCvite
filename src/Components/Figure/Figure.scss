@@ -1,10 +1,10 @@
 /*
 Figure.scss
 */
-@use "../../styles/_variables.module.scss";
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/variables.module" as *;
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
 figure {
 	display: flex;
 	align-items: center;

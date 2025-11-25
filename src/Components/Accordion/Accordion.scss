@@ -1,9 +1,9 @@
 /*
 Accordion.scss
 */
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module.scss" as *;
+@use "../../styles/mixins.module.scss" as *;
+@use "../../styles/variables.module.scss" as *;
 @use "sass:color";
 $header-height: 40px;
 $header-font-size: 14px;

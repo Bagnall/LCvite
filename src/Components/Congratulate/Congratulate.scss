@@ -1,8 +1,8 @@
 // Header.scss
 
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
+@use "../../styles/media-queries" as *;
 
 .dialog-mask {
 	position: fixed;
@@ -22,7 +22,7 @@
 	background-color: white;
 	background: white;
 	border-radius: 16px;
-	// border: variables.$border-width * 1px ridge darkblue;
+	// border: $border-width * 1px ridge darkblue;
 	box-sizing: border-box;
 	// color: darkblue;
 	display: flex;
@@ -65,7 +65,7 @@
 		text-indent: -9999px;
 		border-radius: 8px;
 		&::after {
-			@include mixins.standard-pseudo();
+			@include standard-pseudo();
 			mask-image: url(/images/cross.svg);
 			mask-position: center center;
 			mask-repeat: no-repeat;

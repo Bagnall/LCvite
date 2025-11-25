@@ -8,10 +8,89 @@ import {
 import React from "react";
 
 export class MainMenu extends React.Component {
+
+	constructor(props) {
+
+		super(props);
+		this.state = ({menuHighlight: `menuItem-intro`});
+
+	}
+
+	componentDidMount = () => {
+		console.log("MainMenu Mount");
+
+		let ticking = false;
+		let lastKnownScrollPosition = 0;
+
+		// Determine if an element is in the visible viewport
+		const isInViewport = (element) => {
+			const mainMenu = document.getElementById('mainMenu');
+			const mainMenuRect = mainMenu.getBoundingClientRect();
+			const { bottom: mainMenuBottom } = mainMenuRect;
+			const rect = element.getBoundingClientRect();
+			const html = document.documentElement;
+			return (
+				rect.top >= 0 + mainMenuBottom &&
+				// rect.left >= 0 &&
+				rect.bottom <= (window.innerHeight || html.clientHeight)
+				// rect.right <= (window.innerWidth || html.clientWidth)
+			);
+		};
+
+		document.addEventListener("scroll", (e) => {
+			lastKnownScrollPosition = window.scrollY;
+			const { config } = this.props;
+
+			if (!ticking) {
+				// console.log("scrolly e=", e);
+				// Throttle the event to "do something" every 200ms
+				setTimeout(() => {
+					// console.log("lastKnownScrollPosition", lastKnownScrollPosition);
+
+					// const specialAnchorTargets = document.querySelectorAll('.special-anchor-target');
+					// specialAnchorTargets.forEach((sat) => {
+					// 	console.log("special-anchor-target", sat);
+					// });
+
+					// Is introduction in view?
+					const target = document.getElementById(`special-anchor-intro`);
+					if (target !== null && isInViewport(target)) {
+						// Found intro
+						// console.log("Found intro in view", target, target.id);
+						this.setState({menuHighlight: `menuItem-intro`});
+					} else {
+						if (!config) return null;
+						for (const [, value] of Object.entries(config)) {
+							const { component, menuText, titleText, id } = value;
+							const target = document.getElementById(`special-anchor-${id}`);
+
+							// console.log("target", target, `#special-anchor-${id}`);
+							if (isInViewport(target)) {
+								console.log("Found target in view", target, target.id);
+								this.setState({menuHighlight: `menuItem-${id}`});
+							}
+						}
+					}
+
+
+					ticking = false;
+				}, 200);
+
+				ticking = true;
+			}
+
+		});
+	};
+
+
 	render = () => {
 		const { config, subTitle } = this.props;
+		const { menuHighlight } = this.state;
 
 		if (!config) return null;
+
+		let introHighlight = true;
+		if (menuHighlight !== 'menuItem-intro') introHighlight = false;
 
 		const topMenu = [];
 
@@ -19,8 +98,10 @@ export class MainMenu extends React.Component {
 			const { component, menuText, titleText, id } = value;
 
 			if (component) {
+				let highlight = false;
+				if (menuHighlight === `menuItem-${id}`) highlight = true;
 				topMenu.push(
-					<NavigationMenuItem key={`menuItem-${id}`}>
+					<NavigationMenuItem className={`${highlight ? 'highlight' : ''} `} id={`menuItem-${id}`} key={`menuItem-${id}`}>
 						<NavigationMenuLink asChild>
 							<a
 								className="special-anchor nav-link"
@@ -35,7 +116,7 @@ export class MainMenu extends React.Component {
 		}
 
 		return (
-			<div className="main-menu">
+			<div className="main-menu" id="mainMenu">
 				<NavigationMenu className="menu-root">
 
 					{/* FLEX container to split left vs right */}
@@ -57,13 +138,13 @@ export class MainMenu extends React.Component {
 
 						{/* RIGHT SIDE — Items */}
 						<NavigationMenuList className="menu-right">
-							<NavigationMenuItem key="menu-item-intro">
+							<NavigationMenuItem className={`${introHighlight ? 'highlight' : ''}`} id="menu-item-intro" key="menu-item-intro">
 								<NavigationMenuLink asChild>
 									<a
 										className="special-anchor nav-link"
 										href="#special-anchor-intro"
 									>
-                    Introduction
+										Introduction
 									</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>

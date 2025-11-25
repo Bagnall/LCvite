@@ -1,9 +1,9 @@
 // Header.scss
 
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
 header.main-header {
-	@include mixins.header-footer-background;
+	@include header-footer-background;
 	color: white;
 	display: block;
 	left: 0;

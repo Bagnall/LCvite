@@ -1,9 +1,9 @@
 // WordParts.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 html.debug {
 	.word-parts-container {
@@ -28,7 +28,7 @@ html.debug {
 		// justify-content: space-between;
 		// width: 100%;
 		// align-items: center;
-		@include mixins.help();
+		@include help();
 	}
 	span {
 		$tumble-iterations: 1; //8;
@@ -46,12 +46,12 @@ html.debug {
 			animation-duration: $tumble-time;
 			animation-timing-function: linear;
 			animation-iteration-count: $tumble-iterations;
-			@include mixins.correct-highlight();
+			@include correct-highlight();
 			box-sizing: border-box;
 			display: inline-block;
 			&:before {
 				// shade
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 				animation-name: shade;
 				animation-duration: calc($tumble-time / 2);
 				animation-timing-function: linear;
@@ -59,10 +59,10 @@ html.debug {
 			}
 		}
 		&:before {
-			@include mixins.standard-pseudo();
+			@include standard-pseudo();
 		}
 		&.error {
-			@include mixins.incorrect-highlight();
+			@include incorrect-highlight();
 		}
 	}
 

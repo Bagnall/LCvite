@@ -60,7 +60,7 @@ export class Section extends React.PureComponent {
 				className={`section ${className ? className : ''}`}
 				id={`${id}`}
 			>
-				<span className={`special-anchor-target`} name={`special-anchor-${target}`} >
+				<span className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`} >
 					<h2>{titleHTML ? (
 						<span
 							dangerouslySetInnerHTML={{ __html: titleHTML }}

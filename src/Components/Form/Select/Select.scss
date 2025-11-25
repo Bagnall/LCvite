@@ -1,12 +1,12 @@
 /*
 Select.scss
 */
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/variables.module" as *;
 .select-row {
 	.select-editable,
 	.select-multiple {
 		width: 100%;
-		height: variables.$form-common-height;
+		height: $form-common-height;
 		align-self: flex-end;
 		display: block;
 		grid-area: device;
@@ -29,7 +29,7 @@ Select.scss
 		overflow: hidden;
 	}
 	.select-multiple {
-		height: calc(variables.$form-common-height * 3);
+		height: calc($form-common-height * 3);
 	}
 	select,
 	input {

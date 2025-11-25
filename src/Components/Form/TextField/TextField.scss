@@ -2,9 +2,9 @@
 TextField.scss
 */
 
-@use "../../../styles/_colours.module.scss";
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/colours.module" as *;
+@use "../../../styles/mixins.module" as *;
+@use "../../../styles/variables.module" as *;
 
 .text-field-row,
 .file {
@@ -23,8 +23,8 @@ TextField.scss
 	}
 	input {
 		width: 100%;
-		@include mixins.form-field-common-font-padding();
-		height: variables.$form-common-height;
+		@include form-field-common-font-padding();
+		height: $form-common-height;
 		// grid-column-start: 2;
 		// grid-column-end: 2;
 		// grid-row-start: 1;

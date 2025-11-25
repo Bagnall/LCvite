@@ -1,10 +1,10 @@
 // React component for bilingual memory matching game
-import './MemoryMatchGame.scss';
-import {Card, Congratulate} from '../../Components';
+import "./MemoryMatchGame.scss";
+import {Card, Congratulate} from "../../Components";
 import { Button } from "@/components/ui/button";
-import React from 'react';
-import {resolveAsset} from '../../utility';
-import Variables from '../../styles/_variables.module.scss';
+import React from "react";
+import {resolveAsset} from "../../utility";
+import Variables from "../../styles/_variables.module.scss";
 
 const getShuffledDeck = (cards, nCards) => {
 	cards = cards.sort(() => Math.random() - 0.5);

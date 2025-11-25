@@ -1,10 +1,10 @@
-import './WordGrid.scss';
-import '../../styles/_variables.module.scss';
-import React, { PureComponent } from 'react';
+import "./WordGrid.scss";
+// import "../../styles/variables.module.scss";
+import React, { PureComponent } from "react";
 import { Button } from "@/components/ui/button";
-import colours from '../../styles/_colours.module.scss';
-import {resolveAsset} from '../../utility';
-// import { Button } from '..';
+import colours from "../../styles/_colours.module.scss";
+import {resolveAsset} from "../../utility";
+// import { Button } from "..";
 
 const directions = [
 	{ x: 1, y: 0 }, // right

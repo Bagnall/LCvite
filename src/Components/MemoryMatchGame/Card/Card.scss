@@ -1,10 +1,10 @@
 // Card.scss
 
-@use "../../../styles/_media-queries.scss" as *;
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/media-queries.scss" as *;
+@use "../../../styles/mixins.module" as *;
+@use "../../../styles/variables.module" as *;
 $border-radius: 10px;
-$transition-time: variables.$memory-card-transition-time;
+$transition-time: $memory-card-transition-time;
 $units: 4px;
 $none: rgba(#fff, 0);
 $blue: #302e9b;
@@ -84,7 +84,7 @@ $card-back-border-width: 8px;
 			box-shadow $transition-time;
 		.card-contents-container {
 			&:before {
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 				backface-visibility: hidden;
 				border-radius: $border-radius;
 			}
@@ -112,7 +112,7 @@ $card-back-border-width: 8px;
 		}
 		.card-back {
 			&:after {
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 				background-image: url("/images/memory/yorkshire-rose.png");
 				background-position: center;
 				background-repeat: no-repeat;
@@ -143,7 +143,7 @@ $card-back-border-width: 8px;
 				display: none;
 			}
 			&:before {
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 			}
 		}
 		&.been-flipped {
@@ -154,7 +154,7 @@ $card-back-border-width: 8px;
 			}
 			.card-contents-container {
 				&:before {
-					@include mixins.standard-pseudo();
+					@include standard-pseudo();
 					animation: shade calc($transition-time/2) ease-in-out;
 				}
 			}

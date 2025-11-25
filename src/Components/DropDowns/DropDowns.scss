@@ -1,8 +1,8 @@
 // DropDowns.scss
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module.scss" as *;
+@use "../../styles/variables.module" as *;
 
 html.debug {
 	.drop-downs-container {
@@ -37,13 +37,13 @@ html.debug {
 				border-radius: 8px;
 				border-width: 1px;
 				&.correct {
-					border-color: colours.$correct-border;
-					background: colours.$correct-background;
+					border-color: $correct-border;
+					background: $correct-background;
 					pointer-events: none;
 				}
 				&.incorrect {
-					border-color: colours.$incorrect-border;
-					background: colours.$incorrect-background;
+					border-color: $incorrect-border;
+					background: $incorrect-background;
 				}
 			}
 			span {

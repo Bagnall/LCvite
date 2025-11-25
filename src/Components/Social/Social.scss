@@ -1,7 +1,7 @@
 // Social.scss
 
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
 
 #social {
 	display: none;

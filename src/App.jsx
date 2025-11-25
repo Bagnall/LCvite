@@ -452,7 +452,7 @@ export default class App extends React.Component {
 		let subTitle;
 		let title;
 		if (learningObjects[currentLearningObject]) {
-			console.log("BINGO!", currentLearningObject);
+			// console.log("BINGO!", currentLearningObject, learningObjects[currentLearningObject]);
 			({ subTitle, title } = learningObjects[currentLearningObject - 1]);
 		}
 		// console.log("title", title, "subTitle", subTitle);
@@ -548,7 +548,7 @@ export default class App extends React.Component {
 									learningObjects={learningObjects}
 								/>
 								<div className={`intro`} name={`intro`}>
-									<a className={`special-anchor-target`} name={`special-anchor-intro`} >
+									<a className={`special-anchor-target`} name={`special-anchor-intro`} id={`special-anchor-intro`} >
 										<h2>Introduction</h2>
 									</a>
 									{intro ? <p className={`intro`}>{intro}</p> : null}

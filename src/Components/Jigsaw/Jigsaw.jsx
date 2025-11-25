@@ -1,18 +1,19 @@
-import './Jigsaw.scss';
+import "./Jigsaw.scss";
 import {
 	arrayIncludesObject,
 	resolveAsset,
-} from '../../utility';
+} from "../../utility";
 import {
 	AudioClip,
 	Piece,
-} from '../../Components';
+} from "../../Components";
 import { Button } from "@/components/ui/button";
 import {
 	mouseRelativeTo,
-} from '../../mouseUtility';
-import React from 'react';
-import variables from '../../styles/_variables.module.scss';
+} from "../../mouseUtility";
+import React from "react";
+import Variables from "../../styles/_variables.module.scss";
+
 
 export class Jigsaw extends React.PureComponent {
 
@@ -27,12 +28,12 @@ export class Jigsaw extends React.PureComponent {
 		super(props);
 
 		// Import some variables from scss (they are also used in other scss files and so should never get out of step unlike duplicated variables).
-		const piecesPerBoard = parseInt(variables.piecesPerBoard);
-		const boardWidth = parseInt(variables.boardWidth);
-		const boardHeight = parseInt(variables.boardHeight);
-		const tabSize = parseInt(variables.tabSize);
-		const tileSize = parseInt(variables.tileSize);
-		const jigsawBorderWidth = parseInt(variables.jigsawBorderWidth);
+		const piecesPerBoard = parseInt(Variables.piecesPerBoard);
+		const boardWidth = parseInt(Variables.boardWidth);
+		const boardHeight = parseInt(Variables.boardHeight);
+		const tabSize = parseInt(Variables.tabSize);
+		const tileSize = parseInt(Variables.tileSize);
+		const jigsawBorderWidth = parseInt(Variables.jigsawBorderWidth);
 
 		// We will use Pieces to build up our JSX for the pieces
 		const Pieces = new Array;

@@ -1,6 +1,6 @@
 // AudioClip.scss
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
+@use "../../styles/media-queries" as *;
+@use "../../styles/mixins.module" as *;
 
 :root {
 	--compact-dimension: 27px;
@@ -80,13 +80,13 @@ audio.super-compact {
 	}
 	&::after,
 	&::before {
-		@include mixins.standard-pseudo();
+		@include standard-pseudo();
 		width: 0;
 		height: 0;
 	}
 	&::before {
 		// Arrow icon constructed from a border segment. Smart huh?
-		@include mixins.standard-pseudo();
+		@include standard-pseudo();
 		width: 0;
 		height: 0;
 		border-width: 7.9px 10px;

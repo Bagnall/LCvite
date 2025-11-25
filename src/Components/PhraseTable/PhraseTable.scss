@@ -1,12 +1,12 @@
 // PhraseTable.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/variables.module" as *;
 
 .phrases-table-container {
-	// @include mixins.standard-table();
+	// @include standard-table();
 	table {
 		tbody {
 			tr {

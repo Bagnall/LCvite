@@ -1,9 +1,9 @@
 // MemoryMatchGame.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 @use "sass:math";
 
 html.debug {
@@ -16,7 +16,7 @@ html.debug {
 $none: rgba(#fff, 0);
 $blue: #302e9b;
 $border-radius: 10px;
-$transition-time: variables.$memory-card-transition-time;
+$transition-time: $memory-card-transition-time;
 .help {
 	// padding: 1rem;
 	// display: flex;

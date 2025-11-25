@@ -1,9 +1,9 @@
 /*
 _mixins.module.scss
 */
-@use "./colours.module";
+@use "./colours.module" as *;
 @use "./media-queries" as *;
-@use "./variables.module";
+@use "./variables.module" as *;
 
 @mixin header-footer-background {
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00087c+0,0003d3+51,00087c+100 */
@@ -172,16 +172,16 @@ _mixins.module.scss
 }
 
 @mixin correct-highlight() {
-	background-color: colours.$correct-background;
-	border: 1px solid colours.$correct-border;
+	background-color: $correct-background;
+	border: 1px solid $correct-border;
 }
 
 @mixin incorrect-highlight() {
 	// 	border: 1px solid red;
 	// 	background: rgba(255, 0, 0, 0.2);
 
-	border: 1px solid colours.$incorrect-border;
-	background: colours.$incorrect-background;
+	border: 1px solid $incorrect-border;
+	background: $incorrect-background;
 }
 
 @mixin threeSixtyRotate {
@@ -211,8 +211,8 @@ _mixins.module.scss
 	padding: 10px 20px;
 	font-weight: bold;
 	border: none;
-	border-radius: variables.$button-border-radius;
-	height: variables.$button-height;
+	border-radius: $button-border-radius;
+	height: $button-height;
 	outline: none;
 }
 
@@ -226,8 +226,8 @@ _mixins.module.scss
 	padding: 10px 20px;
 	font-weight: bold;
 	border: none;
-	border-radius: variables.$button-border-radius;
-	height: variables.$button-height;
+	border-radius: $button-border-radius;
+	height: $button-height;
 	outline: none;
 	&.disabled {
 		@include disabled;

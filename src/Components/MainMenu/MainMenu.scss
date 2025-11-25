@@ -24,6 +24,12 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		li {
+			border-bottom: 2px solid transparent;
+			&.highlight {
+				border-bottom: 2px solid red;
+			}
+		}
 	}
 
 	.nav-title {

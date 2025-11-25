@@ -2,9 +2,9 @@
 RadioC.scss
 */
 
-@use "../../../styles/_colours.module.scss";
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/colours.module" as *;
+@use "../../../styles/mixins.module" as *;
+@use "../../../styles/variables.module" as *;
 
 .radio-container {
 	grid-template-columns: 1fr;
@@ -73,10 +73,10 @@ RadioC.scss
 	> label {
 		// border: 1px solid green;
 		padding: 1vh;
-		min-height: variables.$form-common-height;
+		min-height: $form-common-height;
 	}
 	&.same-row {
-		grid-gap: variables.$common-grid-gap;
+		grid-gap: $common-grid-gap;
 		grid-template-rows: 2fr;
 		transition:
 			padding 0.5s,
@@ -203,11 +203,11 @@ $dot-diameter: calc($radio-diameter - 6px);
 	position: relative;
 	&.disabled {
 		&::before {
-			border-color: colours.$disabled-foreground !important;
+			border-color: $disabled-foreground !important;
 		}
 		&.checked {
 			&::after {
-				background-color: colours.$disabled-foreground !important;
+				background-color: $disabled-foreground !important;
 			}
 		}
 		cursor: not-allowed;

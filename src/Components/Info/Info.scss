@@ -1,9 +1,9 @@
 /*
 Info.scss
 */
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 .information {
 	background-color: #eff6ff;
@@ -19,8 +19,8 @@ Info.scss
 	&::before {
 		content: "";
 		position: absolute;
-		width: variables.$info-diameter;
-		height: variables.$info-diameter;
+		width: $info-diameter;
+		height: $info-diameter;
 		background: url("/public/images/icons/info-icon.svg");
 		top: 14px;
 	}
@@ -28,8 +28,8 @@ Info.scss
 		// position: absolute;
 		// top: 8px;
 		// left: 8px;
-		width: variables.$info-diameter;
-		height: variables.$info-diameter;
+		width: $info-diameter;
+		height: $info-diameter;
 		// grid-column: 0;
 	}
 	> div.info-content {

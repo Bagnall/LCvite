@@ -1,10 +1,10 @@
 // App.scss
 
-@use "./styles/_colours.module.scss";
-@use "./styles/_media-queries.scss" as *;
-@use "./styles/_mixins.module.scss";
-// @use "./styles/_skin.module.scss";
-@use "./styles/_variables.module.scss";
+@use "./styles/colours.module" as *;
+@use "./styles/media-queries" as *;
+@use "./styles/variables.module" as *;
+@use "./styles/mixins.module" as *;
+// @use "./styles/skin.module" as *;
 @use "sass:color";
 
 @font-face {
@@ -39,7 +39,7 @@ body {
 	font-size: 16px;
 	color: black;
 	margin: 0;
-	background: colours.$body-back;
+	background: $body-back;
 	// background: green;
 }
 h1 {
@@ -351,7 +351,7 @@ hr {
 	text-align: left;
 	padding: 1rem 0;
 	margin: auto;
-	margin-top: variables.$main-menu-height;
+	margin-top: $main-menu-height;
 	// h1 {
 	// 	text-align: center;
 	// }
@@ -389,7 +389,7 @@ hr {
 		box-sizing: border-box;
 	}
 	> .html-content {
-		padding: variables.$common-left-margin;
+		padding: $common-left-margin;
 	}
 	.html-content,
 	.instructions {

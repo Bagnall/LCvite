@@ -13,7 +13,7 @@ import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
 import React from 'react';
-import Variables from '../../styles/_variables.module.scss';
+// import Variables from '../../styles/variables.module';
 
 export class Blanks extends React.Component {
 

@@ -1,7 +1,7 @@
 // LandingPage.scss
 
-// @use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+// @use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 ul.landing-page {
 	display: flex;
@@ -11,8 +11,8 @@ ul.landing-page {
 	row-gap: 20px;
 	column-gap: 20px;
 	li {
-		width: variables.$card-size;
-		height: variables.$card-size;
+		width: $card-size;
+		height: $card-size;
 		border: 1px solid black;
 		border-radius: 20px;
 		display: flex;

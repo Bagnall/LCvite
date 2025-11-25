@@ -1,7 +1,7 @@
 /*
 ErrorLog.scss
 */
-@use "../../styles/_variables.module.scss";
+@use "../../styles/variables.module" as *;
 
 $border-width: 2px;
 $button-dimension: 30px;

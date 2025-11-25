@@ -1,9 +1,9 @@
 // Blanks.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/variables.module" as *;
+@use "../../styles/media-queries" as *;
+@use "../../styles/mixins.module" as *;
 
 $max-tile-width: 360px;
 @mixin blanks() {
@@ -33,7 +33,7 @@ $max-tile-width: 360px;
 		justify-content: flex-start;
 		align-items: center;
 		flex-direction: column;
-		color: colours.$text;
+		color: $text;
 	}
 
 	.words-container {
@@ -269,7 +269,7 @@ $max-tile-width: 360px;
 			&.blank {
 				span {
 					opacity: 0;
-					color: colours.$text;
+					color: $text;
 				}
 			}
 		}
