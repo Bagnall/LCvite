@@ -32,6 +32,9 @@ export class PhraseTable extends React.PureComponent {
 
 	render = () => {
 		const {
+			config,
+		} = this.props;
+		const{
 			footnote = '',
 			footnoteHTML,
 			header,
@@ -39,7 +42,10 @@ export class PhraseTable extends React.PureComponent {
 			id = [],
 			phrases,
 		} = this.state;
-		// const { id = '' } = config;
+		const {
+			informationText,
+			informationTextHTML,
+		} = config;
 		let longestRow = 0;
 		for (let i = 0; i < phrases.length; i++) {
 			if (phrases[i].length > longestRow)longestRow = phrases[i].length;
@@ -94,6 +100,7 @@ export class PhraseTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
+				<Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<Table>

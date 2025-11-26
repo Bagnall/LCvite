@@ -13,17 +13,18 @@ export class MainMenu extends React.Component {
 
 		super(props);
 		this.state = ({menuHighlight: `menuItem-intro`});
+		this.lastKnownScrollPosition = 0;
 
 	}
 
 	componentDidMount = () => {
-		console.log("MainMenu Mount");
+		// console.log("MainMenu Mount");
 
 		let ticking = false;
-		let lastKnownScrollPosition = 0;
 
 		// Determine if an element is in the visible viewport
 		const isInViewport = (element) => {
+			if (!element) return false;
 			const mainMenu = document.getElementById('mainMenu');
 			const mainMenuRect = mainMenu.getBoundingClientRect();
 			const { bottom: mainMenuBottom } = mainMenuRect;
@@ -37,8 +38,8 @@ export class MainMenu extends React.Component {
 			);
 		};
 
-		document.addEventListener("scroll", (e) => {
-			lastKnownScrollPosition = window.scrollY;
+		document.addEventListener("scroll", () => {
+			this.lastKnownScrollPosition = window.scrollY;
 			const { config } = this.props;
 
 			if (!ticking) {
@@ -61,12 +62,12 @@ export class MainMenu extends React.Component {
 					} else {
 						if (!config) return null;
 						for (const [, value] of Object.entries(config)) {
-							const { component, menuText, titleText, id } = value;
+							const { id } = value;
 							const target = document.getElementById(`special-anchor-${id}`);
 
 							// console.log("target", target, `#special-anchor-${id}`);
 							if (isInViewport(target)) {
-								console.log("Found target in view", target, target.id);
+								// console.log("Found target in view", target, target.id);
 								this.setState({menuHighlight: `menuItem-${id}`});
 							}
 						}

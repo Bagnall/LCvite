@@ -23,6 +23,58 @@ html.debug {
 	table td {
 		p {
 			margin: 0;
+			span {
+				&.select-wrapper {
+					padding: 0;
+					position: relative;
+					box-sizing: border-box;
+					border-color: lightgray;
+					border-radius: 8px;
+					border-width: 1px;
+					&.correct {
+						border-color: $correct-border;
+						background-color: $correct-background;
+						pointer-events: none;
+						&::after {
+							content: "";
+							top: 4px;
+							right: 5px;
+							height: 30px;
+							width: 30px;
+							position: absolute;
+							mask-repeat: no-repeat;
+							mask-position: center center;
+							background-color: green;
+							mask-size: 100%;
+							mask-image: url("/images/icons/tick.svg");
+						}
+					}
+					&.incorrect {
+						border-color: $incorrect-border;
+						background-color: $incorrect-background;
+						border-width: 1px;
+						border-radius: 8px;
+						select {
+							// appearance: none; // hide native arrow (WebKit)
+							// -webkit-appearance: none;
+							// -moz-appearance: none;
+						}
+						&::after {
+							top: 4px;
+							right: 5px;
+							height: 30px;
+							width: 30px;
+							position: absolute;
+							mask-repeat: no-repeat;
+							mask-position: center center;
+							background-color: green;
+							mask-size: 100%;
+							mask-image: url("/images/icons/tick.svg");
+							z-index: 9999;
+						}
+					}
+				}
+			}
 			select,
 			span {
 				font-size: 0.8rem;
@@ -32,22 +84,49 @@ html.debug {
 				min-width: 9rem;
 				display: inline-block;
 				outline: none;
-				box-sizing: border-box;
-				border-color: lightgray;
-				border-radius: 8px;
-				border-width: 1px;
+				// box-sizing: border-box;
+				// border-color: lightgray;
+				// border-radius: 8px;
+				// border-width: 1px;
+				position: relative;
 				&.correct {
-					border-color: $correct-border;
-					background: $correct-background;
-					pointer-events: none;
+					// border-color: $correct-border;
+					// background-color: $correct-background;
+					// pointer-events: none;
+					// &::after {
+					// 	content: "";
+					// 	top: 4px;
+					// 	right: 5px;
+					// 	height: 30px;
+					// 	width: 30px;
+					// 	position: absolute;
+					// 	mask-repeat: no-repeat;
+					// 	mask-position: center center;
+					// 	background-color: green;
+					// 	mask-size: 100%;
+					// 	mask-image: url("/images/icons/tick.svg");
+					// }
 				}
 				&.incorrect {
-					border-color: $incorrect-border;
-					background: $incorrect-background;
+					// border-color: $incorrect-border;
+					// background-color: $incorrect-background;
+					// &::before {
+					// 	top: 4px;
+					// 	right: 5px;
+					// 	height: 30px;
+					// 	width: 30px;
+					// 	position: absolute;
+					// 	mask-repeat: no-repeat;
+					// 	mask-position: center center;
+					// 	background-color: green;
+					// 	mask-size: 100%;
+					// 	mask-image: url("/images/icons/tick.svg");
+					// 	z-index: 9999;
+					// }
 				}
 			}
 			span {
-				padding: 10px 6px 5px 7px;
+				padding: 10px 40px 5px 7px;
 			}
 		}
 	}

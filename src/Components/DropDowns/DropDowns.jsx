@@ -56,7 +56,7 @@ export class DropDowns extends React.PureComponent {
 		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
 		const { value } = event.target;
-		const cl = event.target.classList;
+		const cl = event.target.parentElement.classList;
 		if (parseInt(value) === winner) {
 			cl.add("correct");
 			cl.remove("incorrect");
@@ -122,11 +122,13 @@ export class DropDowns extends React.PureComponent {
 			// Add a JSX select
 			// console.log(`${id}select${nSelects}`);
 			segments.push(
-				<select id={`${id}select${nSelects}`} key={`${id}select${nSelects}`} onChange={(e) => this.handleSelectChange(e, winner)} ><option defaultValue>-</option>
-					{cleanOptions.map((opt, i) => (
-						<option key={i} value={i} className={`${i === winner ? 'hint' : ''}`}>{opt}</option>
-					))}
-				</select>
+				<span className={`select-wrapper`} id={`${id}select${nSelects}`} key={`${id}select${nSelects}`} >
+					<select onChange={(e) => this.handleSelectChange(e, winner)} ><option defaultValue>Select answer</option>
+						{cleanOptions.map((opt, i) => (
+							<option key={i} value={i} className={`${i === winner ? 'hint' : ''}`}>{opt}</option>
+						))}
+					</select>
+				</span>
 			);
 			nSelects++;
 
@@ -203,12 +205,12 @@ export class DropDowns extends React.PureComponent {
 
 				const nodeId = `${id}select${nSelects}`;
 				let selectHTML = '';
-				selectHTML += `<select class="${wrong.includes(nodeId) && !solved.includes(nodeId) ? 'incorrect' : ''}" id="${nodeId}" key="${nodeId}" ><option>-</option>`;
+				selectHTML += `<div class="select-wrapper ${wrong.includes(nodeId) && !solved.includes(nodeId) ? 'incorrect' : '' }id="${nodeId}" key="${nodeId}" ><select  ><option>-</option>`;
 				cleanOptions.forEach((opt, i) => {
 					const classAttr = i === winner ? ' class="hint"' : '';
 					selectHTML += `<option value="${i}"${classAttr}>${opt}</option>`;
 				});
-				selectHTML += '</select>';
+				selectHTML += '</select></div>';
 				nSelects++;
 
 				result += selectHTML;
@@ -307,6 +309,7 @@ export class DropDowns extends React.PureComponent {
 			);
 		} else {
 			// We have HTML content
+			alert("HTML CONTENT");
 			({ nSelects, html } = this.transformBracketedHTML(phrasesHTML));
 			this.nToSolve = nSelects;
 			content = (

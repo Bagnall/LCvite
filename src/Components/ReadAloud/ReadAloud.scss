@@ -17,7 +17,8 @@ ReadAloud.scss
 	gap: 8px;
 	grid-template-areas:
 		"instructions instructions"
-		"form microphone";
+		"form microphone"
+		"help help";
 	.recording-container {
 		height: 160px;
 		width: 80px;
@@ -59,7 +60,10 @@ ReadAloud.scss
 			border: 1px solid black;
 		}
 	}
-
+	.help {
+		@include help();
+		grid-area: help;
+	}
 	@include comparison();
 }
 @include respond-above(s) {

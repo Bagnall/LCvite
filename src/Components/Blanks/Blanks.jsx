@@ -2,6 +2,8 @@ import './Blanks.scss';
 import {
 	AudioClip,
 	CheckBox,
+	IconButton,
+	Info,
 	Word,
 } from '../../Components';
 import {
@@ -399,7 +401,10 @@ export class Blanks extends React.Component {
 			tile.classList.remove('placed');
 			tile.classList.add('draggable');
 			tile.style = [];
-
+		});
+		tiles = document.querySelectorAll(`#${id} .words-container .blank span`);
+		tiles.forEach((tile) => {
+			tile.style = [];
 		});
 
 		tiles = document.querySelectorAll(`#${id} .target-board .blank span`);
@@ -434,10 +439,10 @@ export class Blanks extends React.Component {
 		if (targetWord) {
 			// targeting point in case we want to return it
 			const targetRect = targetWord.getBoundingClientRect();
-			const { left:targetLeft, top:targetTop, right:targetRight, bottom: targetBottom, width:targetWidth} = targetRect;
+			const { left:targetLeft, top:targetTop, right:targetRight, bottom: targetBottom} = targetRect;
 
 			const pieceRect = this.movingPiece.getBoundingClientRect();
-			const { left: pieceLeft, top: pieceTop, right: pieceRight, bottom: pieceBottom, width: pieceWidth } = pieceRect;
+			const { left: pieceLeft, top: pieceTop, right: pieceRight, bottom: pieceBottom } = pieceRect;
 
 			// console.log("pieceWidth", pieceWidth, "targetWidth", targetWidth);
 
@@ -502,8 +507,14 @@ export class Blanks extends React.Component {
 		let {
 			wordTiles,
 		} = this.state;
-		const { logError } = this.props;
-
+		const {
+			config,
+			logError,
+		} = this.props;
+		const {
+			informationText,
+			informationTextHTML,
+		} = config;
 		const phraseList = new Array;
 		const tableRows = new Array;
 		const headerCells = new Array;
@@ -676,6 +687,7 @@ export class Blanks extends React.Component {
 				key={`${id}Blanks`}
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
+				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				{listenDescriptionText && soundFile ?
@@ -726,8 +738,10 @@ export class Blanks extends React.Component {
 				<div className='help'>
 					<label>{showHintsText}:&nbsp;
 						<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>
-					<Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
+					{/* <Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button> */}
+					<IconButton className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+					{/* <Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button> */}
+					<IconButton className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 				</div>
 
 				<p>{nPlaced} correct out of {nToPlace}</p>

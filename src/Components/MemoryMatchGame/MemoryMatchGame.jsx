@@ -1,6 +1,10 @@
 // React component for bilingual memory matching game
 import "./MemoryMatchGame.scss";
-import {Card, Congratulate} from "../../Components";
+import {
+	Card,
+	// Congratulate,
+	IconButton
+} from "../../Components";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import {resolveAsset} from "../../utility";
@@ -195,10 +199,6 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
-				<div className={`help`}>
-					<Button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</Button>
-					<Button className={`reset`} onClick={this.handleReset}>Reset</Button>
-				</div>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<div className={`memory-match-game`}>
@@ -239,6 +239,12 @@ export class MemoryMatchGame extends React.PureComponent {
 						</div>
 					</div>
 					<p>{`${nTries} tries. ${nPairs} matched.${timeReport}`}</p>
+
+				</div>
+				<div className={`help`}>
+					<Button className={`shuffle w-full`} onClick={this.handleShuffle}>Shuffle</Button>
+					{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
+					<IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 
 				</div>
 			</div>

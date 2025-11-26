@@ -33,6 +33,7 @@ export * from './PhraseTable';
 export * from './RadioQuiz';
 export * from './RadioTest';
 export * from './ReadAloud';
+export * from './IconButton';
 export * from './Section';
 export * from './Social';
 export * from './TopButton';

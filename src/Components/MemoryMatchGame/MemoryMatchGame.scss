@@ -23,7 +23,7 @@ $transition-time: $memory-card-transition-time;
 	// justify-content: space-between;
 	// width: 100%;
 	// align-items: center;
-	// @include help();
+	@include help();
 }
 .memory-match-game-container {
 	position: relative;

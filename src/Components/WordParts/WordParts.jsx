@@ -1,7 +1,8 @@
 import './WordParts.scss';
 import {
 	AudioClip,
-	// Button,
+	IconButton,
+	Info,
 	// Table,
 	// TableBody,
 	// td,
@@ -115,14 +116,19 @@ export class WordParts extends React.PureComponent {
 
 	render = () => {
 		const {
+			config
+		} = this.props;
+		const {
+			informationText,
+			informationTextHTML,
+		} = config;
+		const {
 			audio,
 			cheatText,
 			complete = false,
 			failCount = 0,
 			htmlContent,
 			id = [],
-			// instructionsText,
-			// instructionsTextHTML,
 			nPlaced = 0,
 			phrases,
 			// showHintsText,
@@ -194,9 +200,8 @@ export class WordParts extends React.PureComponent {
 				key={`${id}WordParts`}
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
+				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
 
 
 				<table>
@@ -207,8 +212,8 @@ export class WordParts extends React.PureComponent {
 
 				<div className='help'>
 					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</Button>
-					<Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button>
+					<IconButton className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+					<IconButton className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`}>Reset</IconButton>
 				</div>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>

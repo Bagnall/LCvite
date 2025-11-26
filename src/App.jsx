@@ -453,7 +453,7 @@ export default class App extends React.Component {
 		let title;
 		if (learningObjects[currentLearningObject]) {
 			// console.log("BINGO!", currentLearningObject, learningObjects[currentLearningObject]);
-			({ subTitle, title } = learningObjects[currentLearningObject - 1]);
+			({ subTitle = '', title } = learningObjects[currentLearningObject - 1]);
 		}
 		// console.log("title", title, "subTitle", subTitle);
 

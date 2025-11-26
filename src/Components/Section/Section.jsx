@@ -1,9 +1,9 @@
 // src/Components/Accordion/Section.jsx
-import React from 'react';
 import {
 	Info,
 	TopButton
 } from '..';
+import React from 'react';
 
 export class Section extends React.PureComponent {
 	constructor(props) {
@@ -70,7 +70,7 @@ export class Section extends React.PureComponent {
 						>{title}</span>
 					)}</h2>
 				</span>
-				<Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
+				{/* <Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/> */}
 				{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
 				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
 

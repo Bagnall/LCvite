@@ -3,7 +3,10 @@ import {
 	highlightTextDiff,
 	resolveAsset,
 } from '../../utility';
-import {AudioClip} from '../';
+import {
+	AudioClip,
+	IconButton,
+} from '../';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from 'react';
@@ -121,7 +124,6 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						{!compact ? <Button className={`reset`} size="sm" onClick={this.handleReset}>Reset</Button> : null}
 						{showResult ?
 							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
 							:
@@ -154,7 +156,7 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
-						<Button className={`reset btn`} onClick={this.handleReset}>Reset</Button>
+						{/* <Button className={`reset btn`} onClick={this.handleReset}>Reset</Button> */}
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
@@ -173,6 +175,7 @@ export class Monologue extends React.PureComponent {
 							)
 						}
 					</div>
+					{!compact ? <IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>	: null}
 				</>
 			);
 

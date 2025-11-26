@@ -2,8 +2,8 @@ import './ReadAloud.scss';
 import {
 	highlightTextDiff,
 } from '../../utility';
+import { IconButton } from '..';
 import React from 'react';
-// import { Button } from '..';
 
 export class ReadAloud extends React.PureComponent {
 	constructor(props) {
@@ -197,7 +197,7 @@ export class ReadAloud extends React.PureComponent {
 		} else {
 			return (
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
-					<button className={`reset`} onClick={this.handleReset}>Reset</button>
+					{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
@@ -214,6 +214,10 @@ export class ReadAloud extends React.PureComponent {
 
 						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: `${comparison}` }} />
 					</div>
+					<div className={`help`}>
+						<IconButton className={`hidden-help w-full reset`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+					</div>
+
 				</div>
 			);
 		}
