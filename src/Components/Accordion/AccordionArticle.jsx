@@ -63,6 +63,7 @@ export class AccordionArticle extends React.PureComponent {
 			children,
 			className,
 			info,
+			target,
 			title = '',
 			titleHTML = '',
 		} = this.props;
@@ -76,6 +77,7 @@ export class AccordionArticle extends React.PureComponent {
 			<h2
 				onClick={this.toggleExpanded}
 				title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`}
 			>
 				{title}
 				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
@@ -87,6 +89,7 @@ export class AccordionArticle extends React.PureComponent {
 				<h2
 					onClick={this.toggleExpanded}
 					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+					className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`}
 				>
 					<span dangerouslySetInnerHTML={{ __html: titleHTML }}/>
 					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}

@@ -122,13 +122,11 @@ export class DropDowns extends React.PureComponent {
 			// Add a JSX select
 			// console.log(`${id}select${nSelects}`);
 			segments.push(
-				<span className={`select-wrapper`} id={`${id}select${nSelects}`} key={`${id}select${nSelects}`} >
-					<select onChange={(e) => this.handleSelectChange(e, winner)} ><option defaultValue>Select answer</option>
-						{cleanOptions.map((opt, i) => (
-							<option key={i} value={i} className={`${i === winner ? 'hint' : ''}`}>{opt}</option>
-						))}
-					</select>
-				</span>
+				<select id={`${id}select${nSelects}`} key={`${id}select${nSelects}`} onChange={(e) => this.handleSelectChange(e, winner)} ><option defaultValue>Select answer</option>
+					{cleanOptions.map((opt, i) => (
+						<option key={i} value={i} className={`${i === winner ? 'hint' : ''}`}>{opt}</option>
+					))}
+				</select>
 			);
 			nSelects++;
 
@@ -142,7 +140,8 @@ export class DropDowns extends React.PureComponent {
 		}
 
 		return {
-			"jsx": (<p>{segments}</p>),
+			"jsx": (<p>{segments}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tick"><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"	class="cross"><path fill="currentColor"	d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+			</svg></p>),
 			"nSelects": nSelects,
 		};
 	};
@@ -205,12 +204,12 @@ export class DropDowns extends React.PureComponent {
 
 				const nodeId = `${id}select${nSelects}`;
 				let selectHTML = '';
-				selectHTML += `<div class="select-wrapper ${wrong.includes(nodeId) && !solved.includes(nodeId) ? 'incorrect' : '' }id="${nodeId}" key="${nodeId}" ><select  ><option>-</option>`;
+				selectHTML += `<select class="select-wrapper ${wrong.includes(nodeId) && !solved.includes(nodeId) ? 'incorrect' : '' }" id="${nodeId}" key="${nodeId}><option defaultValue>Select answer</option>`;
 				cleanOptions.forEach((opt, i) => {
 					const classAttr = i === winner ? ' class="hint"' : '';
 					selectHTML += `<option value="${i}"${classAttr}>${opt}</option>`;
 				});
-				selectHTML += '</select></div>';
+				selectHTML += '</select>';
 				nSelects++;
 
 				result += selectHTML;
@@ -263,6 +262,16 @@ export class DropDowns extends React.PureComponent {
 				phraseList.push(jsx);
 				this.nToSolve += nSelects;
 			}
+
+			phraseList.push(
+				<span>HELLO</span>
+			);
+			phraseList.push(
+				<img src="images/tick.svg" />
+			);
+			phraseList.push(
+				<img src="images/cross.svg" />
+			);
 
 			const rows = [];
 			for (let i = 0; i < phrases.length; i++) {
