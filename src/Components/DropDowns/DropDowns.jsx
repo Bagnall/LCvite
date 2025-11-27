@@ -256,7 +256,7 @@ export class DropDowns extends React.PureComponent {
 		// const _this = this;
 		if (phrases.length > 0) {
 			// Construct a table
-			const phraseList = new Array;
+			const phraseList = [];
 
 			for (let i = 0; i < phrases.length; i++) {
 				({ nSelects, jsx } = this.parseBracketedOptions(phrases[i]));
@@ -264,10 +264,10 @@ export class DropDowns extends React.PureComponent {
 				this.nToSolve += nSelects;
 			}
 
-			const rows = new Array();
+			const rows = [];
 			for (let i = 0; i < phrases.length; i++) {
 				const phrase = phrases[i];
-				const cells = new Array();
+				const cells = [];
 				if ((phrase[0] === undefined || phrase[0] === '') && phrase.length === 0) {
 					// blank row
 					rows.push(

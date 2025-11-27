@@ -21,7 +21,7 @@ export class RadioQuiz extends React.Component {
 
 	constructor(props) {
 		super(props);
-		// const answers = new Array();
+		// const answers = [];
 		const { phrases } = props.config;
 		const answers = Array.from({ length: phrases.length }, () => Array(2).fill(false));
 		this.state = ({
@@ -127,13 +127,13 @@ export class RadioQuiz extends React.Component {
 			if (phrases[i].length > longestRow)longestRow = phrases[i].length;
 		}
 		// console.log("longestRow", longestRow);
-		const headerCells = new Array;
+		const headerCells = [];
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
 				headerCells.push(<th key={`${id}header${i}`}>{header[i]}</th>);
 			}
 		}
-		const rows = new Array();
+		const rows = [];
 		for (let i = 0; i < phrases.length; i++){
 			const phrase = phrases[i][0];
 			// const answerIndex = phrases[i][1];
@@ -182,7 +182,6 @@ export class RadioQuiz extends React.Component {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				<IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
 
 				<table>
@@ -190,6 +189,7 @@ export class RadioQuiz extends React.Component {
 						{rows}
 					</tbody>
 				</table>
+				<IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 
 				<p>{nCorrect} correct out of {nPhrases}.</p>
 			</div>

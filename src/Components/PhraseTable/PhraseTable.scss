@@ -18,4 +18,12 @@
 			}
 		}
 	}
+	.sort-container {
+		// width: 100%;
+		align-items: space-between;
+		display: flex;
+		flex-direction: row;
+		column-gap: 8px;
+		// justify-content: space-between;
+	}
 }

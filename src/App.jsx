@@ -26,6 +26,7 @@ import {
 	ReadAloud,
 	Section,
 	Social,
+	Sortable,
 	WordGrid,
 	WordParts,
 } from './Components';
@@ -70,7 +71,7 @@ export default class App extends React.Component {
 		this.renderComponent = this.renderComponent.bind(this);
 		this.selectLearningObject = this.selectLearningObject.bind(this);
 
-		window.refs = new Array();
+		window.refs = [];
 	}
 
 	clearError = (index) => {
@@ -423,7 +424,7 @@ export default class App extends React.Component {
 			settings,
 			showSpeechError = false,
 		} = this.state;
-		const articles = new Array;
+		const articles = [];
 		let intro, introHTML, informationHTML;
 		if (settings) {
 			({ intro, introHTML, informationHTML } = settings);
@@ -707,7 +708,7 @@ export default class App extends React.Component {
 				break;
 			}
 			case 'Group': {
-				const renderedGroupContent = new Array;
+				const renderedGroupContent = [];
 				const { content: groupContent = [] } = value;
 				// console.log("groupContent", groupContent);
 
@@ -832,6 +833,7 @@ export default class App extends React.Component {
 								config={value}
 								logError={this.logError}
 								showDialog={this.showDialog}
+								languageCode={languageCode}
 							/>
 						</AccordionArticle>
 					);
@@ -850,6 +852,7 @@ export default class App extends React.Component {
 								config={value}
 								logError={this.logError}
 								showDialog={this.showDialog}
+								languageCode={languageCode}
 							/>
 						</Section>
 					);
@@ -917,7 +920,7 @@ export default class App extends React.Component {
 				break;
 			}
 			case 'Section': {
-				const renderedSectionContent = new Array;
+				const renderedSectionContent = [];
 				const { content: sectionContent = [] } = value;
 				// console.log("sectionContent", sectionContent);
 
@@ -944,6 +947,26 @@ export default class App extends React.Component {
 					>
 						{renderedSectionContent}
 					</Section>
+				);
+				break;
+			}
+			case 'Sortable': {
+				articles.push(
+					<AccordionArticle
+						config={value}
+						id={`${compoundID}-Accordion`}
+						key={`${compoundID}-Accordion`}
+						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						target={id}
+						title={titleText}
+						titleHTML={titleTextHTML}
+					>
+						<Sortable
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</AccordionArticle>
 				);
 				break;
 			}

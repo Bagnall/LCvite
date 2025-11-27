@@ -9,7 +9,7 @@ export class LearningObjectMenu extends React.Component {
 			languageCode,
 			learningObjects
 		} = this.props;
-		const renderedMenu = new Array;
+		const renderedMenu = [];
 		if (learningObjects !== undefined) {
 			// const nLearningObjects = learningObjects.length;
 			const { href } = window.location;

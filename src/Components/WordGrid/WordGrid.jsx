@@ -120,7 +120,7 @@ export class WordGrid extends PureComponent {
 		const soundFiles = words.map(w => w[2]);
 		const foreignWords = words.map(w => w[0]);
 		const localWords = words.map(w => w[1]);
-		const solutionLines = new Array;
+		const solutionLines = [];
 		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
 		this.state = ({
 			...props.config,
@@ -335,7 +335,7 @@ export class WordGrid extends PureComponent {
 		const { config, logError } = this.props;
 		const { words } = config;
 		const foreignWords = words.map(w => w[0]);
-		const solutionLines = new Array;
+		const solutionLines = [];
 		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
 		this.clearSVG();
 		this.setState({
@@ -402,7 +402,7 @@ export class WordGrid extends PureComponent {
 		const cellDimension = parseInt(root.getPropertyValue('--cell-dimension').trim());
 		// console.log("cellDimension", cellDimension);
 
-		const renderedFoundLines = new Array();
+		const renderedFoundLines = [];
 		const strokeWidth = cellDimension / 1.2;
 
 		const {highlight} = colours;
@@ -420,7 +420,7 @@ export class WordGrid extends PureComponent {
 				strokeLinecap="round"
 			/>
 		));
-		const renderedSolutionLines = new Array();
+		const renderedSolutionLines = [];
 		if (showSolution) {
 			solutionLines.forEach((l, index) => renderedSolutionLines.push(
 				<line
@@ -436,8 +436,8 @@ export class WordGrid extends PureComponent {
 			));
 		}
 
-		const foreignWordsRendered = new Array();
-		const localWordsRendered = new Array();
+		const foreignWordsRendered = [];
+		const localWordsRendered = [];
 		for (let i = 0; i < localWords.length; i++){
 			if (foundWords.includes(foreignWords[i])) {
 				foreignWordsRendered.push(<span key={`lw${i}`} className={`found`}>{foreignWords[i]}{i === foreignWords.length - 1 ? '' : ', '}</span>);

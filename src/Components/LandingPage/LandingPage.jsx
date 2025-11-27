@@ -14,7 +14,7 @@ export class LandingPage extends React.Component{
 		const { href } = window.location;
 		const [baseURL] = href.split('?');
 		if (learningObjects.length > 0) {
-			const cards = []; // new Array();
+			const cards = []; // [];
 			learningObjects.forEach((learningObject, index) => {
 				cards.push(
 					<li

@@ -44,16 +44,16 @@ export class Blanks extends React.Component {
 		} = config;
 		// console.log("id", id);
 		const {words = []} = config;
-		let wordTiles = new Array;
+		let wordTiles = [];
 		let nToPlace = 0;
-		const phraseList = new Array;
-		let mixer = new Array;
+		const phraseList = [];
+		let mixer = [];
 		switch (blanksType) {
 			case 'phrases': {
 				let wordTileIndex = 0;
 				for (let i = 0; i < phrases.length; i++) {
 					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
-					const phrase = new Array;
+					const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
 							// span it as a target!
@@ -182,7 +182,7 @@ export class Blanks extends React.Component {
 			// wordTiles,
 		} = this.state;
 
-		// const newWordTiles = new Array;
+		// const newWordTiles = [];
 		// for (let i = 0; i < wordTiles.length; i++) {
 		// 	const wordTile = wordTiles[i];
 
@@ -464,7 +464,7 @@ export class Blanks extends React.Component {
 		// console.log("pinTiles id=", id);
 		// draggable words (relatively positioned)
 		const draggables = document.querySelectorAll(`#${id} .draggable`);
-		const coords = new Array;
+		const coords = [];
 		for (let i = 0; i < draggables.length; i++) {
 			const draggable = draggables[i];
 			const style = window.getComputedStyle(draggable);
@@ -515,9 +515,9 @@ export class Blanks extends React.Component {
 			informationText,
 			informationTextHTML,
 		} = config;
-		const phraseList = new Array;
-		const tableRows = new Array;
-		const headerCells = new Array;
+		const phraseList = [];
+		const tableRows = [];
+		const headerCells = [];
 
 		// phrases, table or questions/answers?
 		switch (blanksType) {
@@ -530,7 +530,7 @@ export class Blanks extends React.Component {
 				for (let i = 0; i < phrases.length; i++) {
 					// const phraseSplit = phrases[i].split(reg);
 					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
-					const phrase = new Array;
+					const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
 							const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');

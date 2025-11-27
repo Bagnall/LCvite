@@ -36,8 +36,8 @@ export class Jigsaw extends React.PureComponent {
 		const jigsawBorderWidth = parseInt(Variables.jigsawBorderWidth);
 
 		// We will use Pieces to build up our JSX for the pieces
-		const Pieces = new Array;
-		const usedSpaces = new Array; // So we can track where pieces have been randomised to and therefore not get conflicts
+		const Pieces = [];
+		const usedSpaces = []; // So we can track where pieces have been randomised to and therefore not get conflicts
 
 		// Initial x,y
 		let r = Math.random();
@@ -129,7 +129,7 @@ export class Jigsaw extends React.PureComponent {
 		const targetTrayX = parseInt(window.getComputedStyle(targetTray).left);
 		const targetTrayY = parseInt(window.getComputedStyle(targetTray).top);
 
-		const newPieces = new Array;
+		const newPieces = [];
 		for (let i = 0; i < 40; i++) {
 			const piece = Pieces[i];
 			const { index, correctSet, correctx, correcty, x, y } = piece.props;

@@ -218,33 +218,52 @@
 				}
 			},
 			{
-				"wordsIntoSlots2": {
-					"component": "Blanks",
-					"congratulationsText": "Superbe !",
-					"id": "wordsIntoSlots2",
+				"dropdowns4": {
+					"component": "DropDowns",
+					"id": "dropdowns4",
+					"congratulationsText": "Well done!",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
-					"blanksType": "questions-answers",
-					"questions": [
-						"Salut les enfants ! Tout va bien ?",
-						"Tu es archiviste ?",
-						"Monsieur Tondereau est journaliste ?",
-						"Que faites-vous dans la vie ?"
+					"phrases": [
+						"Salut les enfants ! Tout va bien ? [*Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+						"Tu es archiviste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|*Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+						"Monsieur Tondereau est journaliste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|*Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+						"Que faites-vous dans la vie ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|*Je suis professeur de géographie.]"
 					],
-					"answers": [
-						"Moi, oui, ça va … mais Teri est malade depuis hier.",
-						"Ah non ! je suis étudiant en histoire.",
-						"Non, il est bibliothécaire.",
-						"Je suis professeur de géographie."
-					],
-					"soundFiles": [
+					"audio": [
 						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-teri-est-malade-depuis-hier.mp3",
 						"sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
 						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
 						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
 					],
 					"titleText": "Answering Questions"
+				}
+			},
+			{
+				"sortable1": {
+					"component": "Sortable",
+					"id": "sortable1",
+					"titleText": "Small talk",
+					"proinstructionsTextmpt": "Put the sentences in a natural order to form a short dialogue.",
+					"shuffleOnLoad": true,
+					"phrases": [
+						[
+							"grenouille",
+							"frog",
+							"sounds/fr/grenouille.mp3"
+						],
+						[
+							"chat",
+							"cat",
+							"sounds/fr/chat.mp3"
+						],
+						[
+							"chien",
+							"dog",
+							"sounds/fr/chien.mp3"
+						]
+					]
 				}
 			}
 		],

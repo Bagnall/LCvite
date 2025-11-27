@@ -161,13 +161,13 @@ export class RadioTest extends React.Component {
 		// // 	if (phrases[i].length > longestRow)longestRow = phrases[i].length;
 		// // }
 		// // console.log("longestRow", longestRow);
-		// const headerCells = new Array;
+		// const headerCells = [];
 		// if (header) {
 		// 	for(let i = 0; i < header.length; i++) {
 		// 		headerCells.push(<th key={`${id}header${i}`}>{header[i]}</th>);
 		// 	}
 		// }
-		// const rows = new Array();
+		// const rows = [];
 		// for (let i = 0; i < phrases.length; i++){
 		// 	const phrase = phrases[i][0];
 		// 	const answerIndex = phrases[i][1];

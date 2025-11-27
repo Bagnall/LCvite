@@ -28,7 +28,7 @@ export class Explanation extends React.PureComponent {
 			htmlContent,
 			id
 		} = config;
-		const contents = new Array;
+		const contents = [];
 		if (content.length) {
 			for (let i = 0; i < content.length; i++) {
 				contents.push(

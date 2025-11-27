@@ -134,14 +134,14 @@ export class WordParts extends React.PureComponent {
 			// showHintsText,
 		} = this.state;
 
-		const phraseList = new Array;
+		const phraseList = [];
 		let nToSolve = 0;
 
 		const reg = /(\[.*?\])/;
 		for (let i = 0; i < phrases.length; i++) {
 
 			const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
-			const phrase = new Array;
+			const phrase = [];
 			for (let j = 0; j < phraseSplit.length; j++) {
 
 				if (phraseSplit[j][0] === '[') {
@@ -160,10 +160,10 @@ export class WordParts extends React.PureComponent {
 			);
 		}
 
-		const rows = new Array();
+		const rows = [];
 		for (let i = 0; i < phrases.length; i++){
 			const phrase = phrases[i];
-			const cells = new Array();
+			const cells = [];
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(

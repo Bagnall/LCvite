@@ -82,17 +82,17 @@ export class AnswerTable extends React.PureComponent {
 			if (phrases[i].length > longestRow)longestRow = phrases[i].length;
 		}
 		// console.log("longestRow", longestRow);
-		const headerCells = new Array;
+		const headerCells = [];
 
 		if (header) {
 			for(let i = 0; i < header.length; i++) {
 				headerCells.push(<TableHead key={`header-cell-${i}`}>{header[i]}</TableHead>);
 			}
 		}
-		const rows = new Array();
+		const rows = [];
 		for (let i = 0; i < phrases.length; i++){
 			const phrase = phrases[i];
-			const cells = new Array();
+			const cells = [];
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(

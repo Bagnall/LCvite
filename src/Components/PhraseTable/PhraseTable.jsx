@@ -1,87 +1,151 @@
-import './PhraseTable.scss';
+import "./PhraseTable.scss";
 import {
 	AudioClip,
+	IconButton,
 	Info,
-} from '../../Components';
+} from "../../Components";
 import {
 	Table,
 	TableBody,
-	// TableCaption,
 	TableCell,
-	// TableFooter,
 	TableHead,
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import React from 'react';
-import {
-	resolveAsset,
-} from '../../utility';
+import React from "react";
+import { resolveAsset } from "../../utility";
 
 export class PhraseTable extends React.PureComponent {
-
-	// Table of phrases with translatiopns column and sound files column.
+	// Table of phrases with translations column and sound files column.
 	// config is passed from the parent so that multiple exercises are possible.
 
 	constructor(props) {
 		super(props);
-		this.state = ({
-			...props.config
-		});
+
+		// Make a *detached* copy of the phrases so we never mutate props.config
+		const configPhrases = (props.config && props.config.phrases) || [];
+		this.originalPhrases = configPhrases.map((row) => [...row]);
+
+		this.state = {
+			...props.config,
+			tableSort: "natural",
+			// we *don't* keep phrases in state anymore
+		};
 	}
+
+	normalizeForSort = (value) => {
+		// Strip HTML tags, lowercase, and remove accents
+		if (!value) return "";
+
+		const noTags = value.replace(/<[^>]*>/g, ""); // remove HTML tags
+		const lower = noTags.toLocaleLowerCase("fr");
+
+		// Normalize accents: é -> e, à -> a, etc.
+		return lower
+			.normalize("NFD")
+			.replace(/\p{Diacritic}/gu, ""); // needs modern JS (Unicode regex)
+	};
 
 	render = () => {
 		const {
 			config,
-		} = this.props;
-		const{
-			footnote = '',
+			targetLanguageCode,
+		 } = this.props;
+		const {
+			footnote = "",
 			footnoteHTML,
 			header,
 			htmlContent,
 			id = [],
-			phrases,
+			tableSort,
 		} = this.state;
-		const {
-			informationText,
-			informationTextHTML,
-		} = config;
-		let longestRow = 0;
-		for (let i = 0; i < phrases.length; i++) {
-			if (phrases[i].length > longestRow)longestRow = phrases[i].length;
+
+		const { informationText, informationTextHTML } = config;
+
+		// Always start from the immutable original
+		const basePhrases = this.originalPhrases || [];
+
+		// Use this for both alphabetical and reverse
+		const collator = new Intl.Collator(targetLanguageCode, { sensitivity: "base" });
+
+		let phrasesForView;
+
+		if (tableSort === "natural") {
+			// NATURAL: original phrases including blank spacer rows
+			phrasesForView = basePhrases;
+		} else {
+			// SORTED VIEWS: remove blank rows before sorting
+			const nonBlank = basePhrases.filter(
+				(p) => !(p[0] === "" && p.length === 1)
+			);
+
+			// Sort ascending by first column
+			nonBlank.sort((a, b) => {
+				const A = this.normalizeForSort(a[0]);
+				const B = this.normalizeForSort(b[0]);
+				return collator.compare(A, B);
+			});
+
+			if (tableSort === "reverse") {
+				// Reverse alphabetical: alphabetical, then reversed
+				nonBlank.reverse();
+			}
+
+			phrasesForView = nonBlank;
 		}
-		// console.log("longestRow", longestRow);
-		const headerCells = new Array;
+
+		// Longest row: use original phrases so spacer colSpan is correct in natural mode
+		let longestRow = 0;
+		for (let i = 0; i < basePhrases.length; i++) {
+			if (basePhrases[i].length > longestRow) longestRow = basePhrases[i].length;
+		}
+
+		// Header cells
+		const headerCells = [];
 		if (header) {
-			for(let i = 0; i < header.length; i++) {
-				headerCells.push(<TableHead key={`${id}header${i}`}>{header[i]}</TableHead>);
+			for (let i = 0; i < header.length; i++) {
+				headerCells.push(
+					<TableHead key={`${id}header${i}`}>{header[i]}</TableHead>
+				);
 			}
 		}
-		const rows = new Array();
-		for (let i = 0; i < phrases.length; i++){
-			const phrase = phrases[i];
-			const cells = new Array();
-			if (phrase[0] === '' && phrase.length === 1) {
-				// blank row
+
+		// Table rows from phrasesForView
+		const rows = [];
+		for (let i = 0; i < phrasesForView.length; i++) {
+			const phrase = phrasesForView[i];
+			const cells = [];
+
+			if (phrase[0] === "" && phrase.length === 1) {
+				// Blank row (only possible in natural mode now)
 				rows.push(
-					<TableRow className={`spacer`} key={`row${i}`}>
+					<TableRow className="spacer" key={`row${i}`}>
 						<TableCell colSpan={longestRow}></TableCell>
 					</TableRow>
 				);
 			} else {
-				for (let j = 0; j < phrases[i].length; j++) {
-					// console.log("phrase[j].slice(-4)", phrase[j], phrase[j].slice(-4));
-					if (phrase[j].slice(-4) === '.mp3') {
-						// Spound file!
-						const soundFile = resolveAsset(`${phrase[j]}`);
+				for (let j = 0; j < phrase.length; j++) {
+					const value = phrase[j];
+
+					if (typeof value === "string" && value.slice(-4) === ".mp3") {
+						// Sound file
+						const soundFile = resolveAsset(`${value}`);
 						cells.push(
 							<TableCell key={`row${i}cell${j}`}>
-								<AudioClip className={`compact`} label={""} soundFile={soundFile} />
+								<AudioClip
+									className="compact"
+									label=""
+									soundFile={soundFile}
+								/>
 							</TableCell>
 						);
 					} else {
 						cells.push(
-							<TableCell key={`row${i}cell${j}`}><span dangerouslySetInnerHTML={{ __html: phrase[j] }}/></TableCell>
+							<TableCell key={`row${i}cell${j}`}>
+								<span
+									dangerouslySetInnerHTML={{ __html: value }}
+								/>
+							</TableCell>
 						);
 					}
 				}
@@ -96,26 +160,64 @@ export class PhraseTable extends React.PureComponent {
 
 		return (
 			<div
-				className={`phrases-table-container container`}
-				id={`${id ? id : ''}`}
+				className="phrases-table-container container"
+				id={`${id ? id : ""}`}
 				key={`${id}PhraseTable`}
 			>
-				<Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				<Info
+					className="text accordionarticle"
+					id={`info-${id}`}
+					informationText={informationText}
+					informationTextHTML={informationTextHTML}
+				/>
+
+				{htmlContent ? (
+					<div
+						className="html-content"
+						dangerouslySetInnerHTML={{ __html: htmlContent }}
+					/>
+				) : null}
+
+				<div className="sort-container">
+					<IconButton
+						theme="natural"
+						size="sm"
+						onClick={() => this.setState({ tableSort: "natural" })}
+					>
+            Natural
+					</IconButton>
+					<IconButton
+						theme="alphabetic"
+						size="sm"
+						onClick={() => this.setState({ tableSort: "alphabetical" })}
+					>
+            Alphabetical
+					</IconButton>
+					<IconButton
+						theme="reverse"
+						size="sm"
+						onClick={() => this.setState({ tableSort: "reverse" })}
+					>
+            Reverse Alphabetical
+					</IconButton>
+				</div>
 
 				<Table>
-					{header ?
+					{header ? (
 						<TableHeader>
-							<TableRow>
-								{headerCells}
-							</TableRow>
-						</TableHeader> : null}
-					<TableBody>
-						{rows}
-					</TableBody>
+							<TableRow>{headerCells}</TableRow>
+						</TableHeader>
+					) : null}
+					<TableBody>{rows}</TableBody>
 				</Table>
-				{footnote ? <p className={`ootnote`}>{footnote}</p> : null}
-				{footnoteHTML ? <p className={`footNote`} dangerouslySetInnerHTML={{ __html: footnoteHTML }} /> : null}
+
+				{footnote ? <p className="ootnote">{footnote}</p> : null}
+				{footnoteHTML ? (
+					<p
+						className="footNote"
+						dangerouslySetInnerHTML={{ __html: footnoteHTML }}
+					/>
+				) : null}
 			</div>
 		);
 	};

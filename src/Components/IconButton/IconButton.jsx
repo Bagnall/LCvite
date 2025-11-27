@@ -41,6 +41,35 @@ export class IconButton extends React.PureComponent {
 				</svg>;
 				break;
 			}
+			case 'natural':			{
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<path d="m12 2 10 5-10 5L2 7Z" />
+					<path d="m2 17 10 5 10-5" />
+					<path d="m2 12 10 5 10-5" />
+				</svg>;
+				break;
+			}
+			case 'alphabetic':			{
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<path d="m3 16 4 4 4-4" />
+					<path d="M7 20V4" />
+					<path d="M20 8h-5" />
+					<path d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10" />
+					<path d="M15 14h5l-5 6h5" />
+				</svg>;
+				break;
+			}
+			case 'reverse':			{
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<path d="m3 8 4-4 4 4" />
+					<path d="M7 4v16" />
+					<path d="M20 8h-5" />
+					<path d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10" />
+					<path d="M15 14h5l-5 6h5" />
+				</svg>;
+				break;
+			}
+
 		}
 		return (
 			<Button size="sm" className={`w-full icon-button ${className}`} onClick={onClick}>
