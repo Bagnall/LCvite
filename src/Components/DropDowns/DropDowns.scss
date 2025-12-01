@@ -23,6 +23,11 @@ html.debug {
 	table td {
 		p {
 			margin: 0;
+			// > span {
+			// padding: 0;
+			// margin: 0;
+			// border: 0 solid transparent;
+			// }
 			svg {
 				&.tick,
 				&.cross {
@@ -47,8 +52,9 @@ html.debug {
 					opacity: 1;
 					transition: opacity 1s;
 				}
-				select,
-				span {
+				// select,
+				// .select,
+				> span {
 					border-color: $correct-border;
 					background-color: $correct-background;
 					pointer-events: none;
@@ -60,14 +66,16 @@ html.debug {
 					opacity: 1;
 					transition: opacity 1s;
 				}
-				select,
-				span {
+				// select,
+				// .select,
+				> span {
 					border-color: $incorrect-border;
 					background-color: $incorrect-background;
 				}
 			}
 			select,
-			span {
+			.select {
+				// span {
 				font-size: 0.8rem;
 				line-height: 1.4rem;
 				padding: 0;
@@ -82,7 +90,8 @@ html.debug {
 				position: relative;
 			}
 			span {
-				padding: 10px 40px 5px 7px;
+				// 	padding: 10px 40px 5px 7px;
+				border-radius: calc(var(--radius) - 2px);
 			}
 		}
 	}
@@ -94,8 +103,6 @@ html.debug {
 
 	.help {
 		@include help();
-
-		// padding: 1rem;
 	}
 
 	.hidden-help {
@@ -149,16 +156,17 @@ html.debug {
 			padding: 0.25rem 1rem;
 			p {
 				select,
-				span {
+				.select {
+					// span {
 					font-size: 1.2rem;
 					padding: 4px;
 
 					min-width: 12rem;
 				}
-				span {
-					padding: 10px 6px 5px 7px;
-					vertical-align: -2px;
-				}
+				// span {
+				// 	padding: 10px 6px 5px 7px;
+				// 	vertical-align: -2px;
+				// }
 			}
 		}
 	}

@@ -225,12 +225,12 @@
 				"sounds/fr/Pas mal.mp3"
 			],
 			[
-				"Comment t'appelles-<a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>tu</a> ?",
+				"Comment t'appelles-<a class='special-anchor' href='#tuvous'>tu</a> ?",
 				"What's your name?",
 				"sounds/fr/Comment t'appelles-tu.mp3"
 			],
 			[
-				"Comment <a class='special-anchor' href='./?config=config-fr-1.json#tuvous'>vous</a> appelez-vous ?",
+				"Comment <a class='special-anchor' href='#tuvous'>vous</a> appelez-vous ?",
 				"What's your name?",
 				"sounds/fr/Comment vous appelez-vous.mp3"
 			],

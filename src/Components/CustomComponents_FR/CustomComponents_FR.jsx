@@ -267,12 +267,12 @@ export class LO2Grammar extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/tu es.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>il</a> est</td>
+								<td><a className={`special-anchor`} href={`#subject-pronouns`}>il</a> est</td>
 								<td>he is, it is</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>elle</a> est</td>
+								<td><a className={`special-anchor`} href={`#subject-pronouns`}>elle</a> est</td>
 								<td>she is, it is</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elle est.mp3`} /></td>
 							</tr>
@@ -287,12 +287,12 @@ export class LO2Grammar extends PureComponent {
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>ils</a> sont</td>
+								<td><a className={`special-anchor`} href={`#subject-pronouns`}>ils</a> sont</td>
 								<td>they are</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/ils sont.mp3`} /></td>
 							</tr>
 							<tr>
-								<td><a href={`./?config=config-fr-2.json#subject-pronouns`}>elles</a> sont</td>
+								<td><a className={`special-anchor`} href={`#subject-pronouns`}>elles</a> sont</td>
 								<td>they are</td>
 								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elles sont.mp3`} /></td>
 							</tr>
@@ -341,7 +341,7 @@ export class LO2Grammar extends PureComponent {
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p><a name={`subject-pronouns`} /><b>3. Subject pronouns</b></p>
+					<p><a className={`special-anchor-target`} name={`subject-pronouns`} ><b>3. Subject pronouns</b>.</a></p>
 					<ul>
 						<li><b>Il</b> is used to replace a masculine noun.</li>
 						<li><b>Elle</b> is used to replace a feminine noun.</li>

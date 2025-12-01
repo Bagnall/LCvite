@@ -1,4 +1,5 @@
 // Sortable.jsx
+import './Sortable.scss';
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -224,7 +225,7 @@ export class Sortable extends React.Component {
 		const { phrases } = config;
 
 		return (
-			<Card className="w-full">
+			<Card className="w-full sortable">
 				<CardHeader>
 					<CardTitle className="text-base font-semibold">
 						{title}
@@ -262,7 +263,7 @@ export class Sortable extends React.Component {
 							return (
 								<div
 									key={index}
-									className="grid grid-cols-[auto_minmax(0,1fr)_minmax(0,1.4fr)] gap-3 items-center py-1"
+									className="grid grid-cols-[auto_minmax(0,1fr)_minmax(0,1.4fr)_auto] gap-3 items-center py-1"
 								>
 									{/* LEFT: Audio */}
 									<div className="flex items-center justify-center pr-2">
@@ -279,7 +280,7 @@ export class Sortable extends React.Component {
 									{/* RIGHT: Sortable English phrase + tick/cross */}
 									<div
 										className={
-											`flex items-center justify-between text-sm font-medium cursor-move px-3 py-1 rounded-md border border-dashed border-slate-300 bg-slate-50 transition ${
+											`flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 bg-slate-50 transition ${
 												isDragging
 													? "opacity-70 scale-[0.99]"
 													: "hover:bg-slate-100"
@@ -302,24 +303,65 @@ export class Sortable extends React.Component {
 										{/* Handle + text */}
 										<div className="flex items-center gap-2">
 											<span className="text-slate-400 text-lg leading-none">
-												≡
-											</span>
+												<svg
+													className="w-4 h-4"
+													viewBox="0 0 24 24"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													{/* Up arrow */}
+													<path
+														d="M12 4L7 9H17L12 4Z"
+														fill="currentColor"
+													/>
+													{/* Down arrow */}
+													<path
+														d="M12 20L7 15H17L12 20Z"
+														fill="currentColor"
+													/>
+												</svg>											</span>
 											<span>
 												{englishItem ? englishItem.english : ""}
 											</span>
 										</div>
 
 										{/* Tick / cross */}
-										<div className="ml-3 text-lg leading-none">
+										{/* <div className="ml-3 text-lg leading-none">
 											{status === "correct" && (
 												<span className="text-green-600">✓</span>
 											)}
 											{status === "incorrect" && (
 												<span className="text-red-600">✗</span>
 											)}
-										</div>
+										</div> */}
 									</div>
-								</div>
+									{/* NEW: far-right narrow column with SVG tick/cross */}
+									<div className="flex items-center justify-center w-6">
+										{status === "correct" && (
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 512 512"
+												className="tick w-4 h-4 text-green-600"
+											>
+												<path
+													fill="currentColor"
+													d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+												/>
+											</svg>
+										)}
+										{status === "incorrect" && (
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 352 512"
+												className="cross w-4 h-4 text-red-600"
+											>
+												<path
+													fill="currentColor"
+													d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+												/>
+											</svg>
+										)}
+									</div>								</div>
 							);
 						})}
 					</div>

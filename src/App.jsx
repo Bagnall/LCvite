@@ -938,7 +938,6 @@ export default class App extends React.Component {
 				articles.push(
 					<Section
 						config={value}
-						className={`section`}
 						id={`${compoundID}-Section-Section`}
 						key={`${compoundID}-Section-Section`}
 						target={id}

@@ -50,7 +50,7 @@ export class PhraseTable extends React.PureComponent {
 		const {
 			config,
 			targetLanguageCode,
-		 } = this.props;
+		} = this.props;
 		const {
 			footnote = "",
 			footnoteHTML,

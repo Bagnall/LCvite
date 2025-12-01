@@ -118,7 +118,7 @@
 				}
 			}
 		],
-		"id": "groupJigsaws",
+		"id": "group1",
 		"titleText": "Jigsaws"
 	},
 	"group2": {
@@ -1537,7 +1537,7 @@
 		"id": "LO9Grammar",
 		"titleText": "Regional map example"
 	},
-	"group": {
+	"group4": {
 		"component": "Group",
 		"content": [
 			{
@@ -1694,10 +1694,10 @@
 			}
 		],
 		"htmlContent": "<p>This <b>Group</b> component is for grouping a number of other components together. I have generally used it for grouping Exercises in the real learning objects.</p>",
-		"id": "group1",
+		"id": "group4",
 		"titleText": "Group"
 	},
-	"group4": {
+	"group5": {
 		"component": "Group",
 		"content": [
 			{
@@ -1934,7 +1934,7 @@
 				}
 			}
 		],
-		"id": "group4",
+		"id": "group5",
 		"titleText": "Blanks"
 	},
 	"custom2": {
