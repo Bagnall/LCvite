@@ -1572,7 +1572,7 @@
 					"htmlContent": "<p>The <b>DropDowns</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase should be replaced by a 'dropdown' or 'select'. The verttical bar '|' separated phrases or words are used to populate the options of the select. The one preceded by the asterisk indicates the correct answer. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p>",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Female : Je suis [marocain|*marocaine|africain|africaine].",
 						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",

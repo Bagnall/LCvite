@@ -765,7 +765,7 @@
 					"congratulationsText": "Muy bien !",
 					"instructionsText": "<p>Select the correct option from the dropdown.</p>",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Cuántos gatos tienes? → Tengo dos gatos. (How many cats do you have? → I have two cats.)</p><p>¿Cuántos años tienes? → Tengo ocho años. (How old are you? → I’m eight years old.)</p>",
 					"phrases": [
 						"Tengo [cero|uno|dos|tres|*cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
@@ -791,7 +791,7 @@
 					"congratulationsText": "Muy bien !",
 					"instructionsText": "<p>Select the correct option from the dropdown.</p>",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Qué ves en la foto? → Veo tres manzanas. (What do you see in the picture? → I see three aples.)</p><p>¿Cuántos perros hay? → Hay dos perros. (How many dogs are there? → There are two dogs.)</p><p>¿Cuántos zumos hay? → Hay diez zumos. (How many juices are there? → There are ten juices.)</p>",
 					"phrases": [
 						"🍎🍎🍎 En la foto hay [cero|uno|dos|*tres|cuatro|cinco|seis|siete|ocho|nueve|diez] manzanas.",

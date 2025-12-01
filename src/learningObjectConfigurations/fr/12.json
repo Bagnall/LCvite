@@ -328,7 +328,7 @@
 					"congratulationsText": "Incroyable !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
 						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
@@ -367,7 +367,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"trois bouteilles [*de|d'|du|de la|de l'|des] vin rouge",
 						"cinq bouteilles [de|*d'|du|de la|de l'|des] eau minérale",
@@ -394,7 +394,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"[de|d'|du|*de la|de l'|des] salade",
 						"[de|d'|du|de la|de l'|*des] oignons",

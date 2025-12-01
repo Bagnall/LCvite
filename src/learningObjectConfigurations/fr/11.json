@@ -329,7 +329,7 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Je [*voudrais|voudrait|voudriez|voudrions|voudraient] un chocolat chaud.",
 						"Ma mère [voudrais|*voudrait|voudriez|voudrions|voudraient] un thé vert.",
@@ -356,7 +356,7 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Qu'est-ce que tu [*prends|prend|prenez|prenons|prennent] ?",
 						"Vous [prends|prend|*prenez|prenons|prennent] un café ?",
@@ -385,7 +385,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsTextHTML": "Fill in the gaps with <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Je voudrais un thé [*au|à la|à l'|aux] citron.",
 						"Alex voudrait un sandwich [*au|à la|à l'|aux] poulet. ",

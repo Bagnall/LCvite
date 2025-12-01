@@ -384,7 +384,7 @@
 					"congratulationsText": "Très bien !",
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Je fais [*du|de la|de l'|des] shopping.",
 						"Vous faites [*du|de la|*de l'|des] jogging le matin ?",
@@ -419,7 +419,7 @@
 					"congratulationsText": "Superbe !",
 					"instructionsText": "In the following sentences and questions select au , à la, à l' or aux as appropriate:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Le lundi, il joue [*au|à la|à l'|aux] foot.",
 						"Le mardi, il joue [*au|à la|à l'|aux] tennis.",
@@ -448,7 +448,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Listen to the responses to this question and select answers accordingly:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
 						"2 Je fais [*de l'équitation|de la course d'orientation|de la natation]",

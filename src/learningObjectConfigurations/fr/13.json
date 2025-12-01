@@ -297,7 +297,7 @@
 					"congratulationsText": "Incroyable !",
 					"instructionsText": " Fill in the gaps with the correct reflexive pronoun supplied.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Je [m'|*me|t'|te|s'|se|nous|vous] réveille à huit heures. (se réveiller)",
 						"Je [*m'|me|t'|te|s'|se|nous|vous] habille avant de prendre mon petit déjeuner. (s'habiller)",
@@ -343,7 +343,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsText": "Select the time that you hear.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"[*6h00|7h00|8h00]",
 						"[2h00|6h00|*10h00]",

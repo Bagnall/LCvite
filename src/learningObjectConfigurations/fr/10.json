@@ -398,7 +398,7 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> ('Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p><p>&copy; Jacqueline Rosen</p>",
 					"audio": [
 						"sounds/fr/Chacun à son goût !.mp3"
@@ -413,7 +413,7 @@
 					"id": "wordsIntoSlots1",
 					"instructionsText": "Match the French with the English",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Martin veut acheter un vélo.",
@@ -461,7 +461,7 @@
 					"congratulationsText": "Excellent !",
 					"instructionsTextHTML": "Select <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Je vais [au|*à la|à l'|aux] bibliothèque.",
 						"Ma copine travaille [au|*à la|à l'|aux] pharmacie.",

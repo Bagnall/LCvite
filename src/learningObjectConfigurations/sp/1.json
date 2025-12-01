@@ -394,7 +394,7 @@
 					"congratulationsText": "Muy bien !",
 					"instructionsText": "Select the correct option from the dropdown.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"una [*amiga|amigo|amigas|amigos] ruidosa",
 						"un amigo ruidoso",
@@ -543,7 +543,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsText": "Consider the greetings and replies below. Select whether they are formal or informal.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Bien, gracias. ¿Y usted? [*Formal|Informal]",
 						"¿Hola, cómo estás? [Formal|*Informal]",
@@ -605,7 +605,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsTextHTML": "In the Dialogues below, select the correct conjugation of the verb <b>ESTAR</b>.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
+					"cheatText": "Show answers",
 					"phrases": [
 						"Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien?",
 						"Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú?",
