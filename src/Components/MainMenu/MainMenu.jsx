@@ -5,6 +5,9 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import {
+	IconButton
+} from '..';
 import React from "react";
 
 export class MainMenu extends React.Component {
@@ -85,7 +88,7 @@ export class MainMenu extends React.Component {
 
 
 	render = () => {
-		const { config, subTitle } = this.props;
+		const { config, subTitle, toggleDark } = this.props;
 		const { menuHighlight } = this.state;
 
 		if (!config) return null;
@@ -115,6 +118,9 @@ export class MainMenu extends React.Component {
 				);
 			}
 		}
+
+		let theme = 'moon'; // Going from light to dark hence moon
+		if (document.documentElement.classList.contains("dark")) theme = 'sun';
 
 		return (
 			<div className="main-menu" id="mainMenu">
@@ -151,8 +157,8 @@ export class MainMenu extends React.Component {
 							</NavigationMenuItem>
 
 							{topMenu}
+							<IconButton className={'size-9'} onClick={toggleDark} size={`m`} theme={theme} title={`${theme === 'moon' ? 'Switch to dark mode' : 'Switch to light mode'}`} />
 						</NavigationMenuList>
-
 					</div>
 				</NavigationMenu>
 			</div>

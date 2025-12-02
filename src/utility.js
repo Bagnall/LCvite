@@ -185,77 +185,158 @@ function scrollToElement(element, menuOffset) {
 
 	// Scroll to that position
 	window.scrollTo({
-		top: top,
+		behavior: 'smooth',
 		left: left,
-		behavior: 'smooth'
+		top: top,
 	});
 }
 
 export const handleSpecialLinkClick = (e) => {
-	// Wow, we need this (unfortunately) so that we can hyperlink between parts of the document, most importantly,
-	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
-	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
-
-	// console.log("handleSpecialLinkClick", e);
+	// Stop the browser's default "jump to hash"
 	e.preventDefault();
-	const href = e.target.getAttribute('href');
-	// console.log("href", href);
-	const [, name] = href.split('#');
-	// console.log(`.special-anchor-target[name='${name}']`, `.special-anchor-target[name='${name}']`);
-	const specialAnchorTargets = document.querySelectorAll(`.special-anchor-target[name='${name}']`);
-	// console.log("specialAnchorTargets.length", specialAnchorTargets.length);
-	if (specialAnchorTargets.length === 1) { // Should only ever be one!
-		const [specialAnchorTarget] = specialAnchorTargets;
-		// console.log("SPECIAL ANCHOR TARGET", specialAnchorTarget);
-		// And it should be within an accordion (or even nested accordions)
-		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
-		// console.log("accordionArticle", accordionArticle);
 
-		if (accordionArticle !== null) {
-			while (accordionArticle) {
-				// Expand it!
-				// console.log("while", accordionArticle);
-				// console.log("window.refs", window.refs);
-				try {
-					const ref = window.refs.find((r) => {
-						// console.log("searching", r, r && r.props.id, accordionArticle.id);
-						return r !== null && r.props.id === accordionArticle.id;
-					});
-					// console.log("ref", ref);
-					ref.setState({ expanded: true },
-						() => setTimeout(() => {
-							// Flash a highlight colour to help the user to spot it.
-							specialAnchorTarget.classList.add('flash');
-							// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-							// const targetRect = specialAnchorTarget.getBoundingClientRect();
-							// console.log("10 targetRect", targetRect);
-							// console.log("10 SCROLLTO", targetRect.top, -80);
-							// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
-							scrollToElement(specialAnchorTarget, 80);
-							setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
-						}, 500)
-					);
-				} catch (err) {
-					console.log(err); // eslint-disable-line
-				}
-				accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
-			}
-		} else {
-			// console.log("Not an accordion");
-			// Flash a highlight colour to help the user to spot it.
-			specialAnchorTarget.classList.add('flash');
-			// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-			// const targetRect = specialAnchorTarget.getBoundingClientRect();
-			// console.log("20 targetRect", targetRect);
-			// console.log("20 SCROLLTO", targetRect.top, -80);
-			// scrollTo({ behavior: 'smooth', left: targetRect.left, top: targetRect.top - 80 });
-			scrollToElement(specialAnchorTarget, 80);
-			setTimeout(() => { specialAnchorTarget.classList.remove('flash'); }, 5000); // Remove the flashing highlight afte a suitable delay
+	// Use currentTarget so nested spans inside the <a> don't confuse us
+	const href = e.currentTarget.getAttribute('href');
+	if (!href) return;
+
+	const [, rawName] = href.split('#');
+	if (!rawName) return;
+
+	const name = rawName.trim();
+	if (!name) return;
+
+	// ---------------------------------------------------------------------------
+	// 1. Find target: MUST have .special-anchor-target, matched by id OR name
+	// ---------------------------------------------------------------------------
+
+	let specialAnchorTarget = null;
+
+	// Try id first
+	const byId = document.getElementById(name);
+	if (byId && byId.classList && byId.classList.contains('special-anchor-target')) {
+		specialAnchorTarget = byId;
+	}
+
+	// Fallback: match by name attribute
+	if (!specialAnchorTarget) {
+		specialAnchorTarget = document.querySelector(
+			`.special-anchor-target[name="${name}"]`
+		);
+	}
+
+	if (!specialAnchorTarget) {
+		// Nothing found – bail quietly
+		return;
+	}
+
+	// ---------------------------------------------------------------------------
+	// 2. TAB SUPPORT (shadcn / Radix Tabs)
+	//    If the target is inside a tabpanel, activate the corresponding tab trigger
+	// ---------------------------------------------------------------------------
+	const tabPanel = specialAnchorTarget.closest('[role="tabpanel"]');
+
+	if (tabPanel) {
+		// Try to find the Tabs "root" element – your markup uses .group-tabs as wrapper
+		let tabRoot =
+      tabPanel.closest('.group-tabs') || // your class
+      tabPanel.parentElement;
+
+		while (tabRoot && !tabRoot.querySelector('[role="tablist"]')) {
+			tabRoot = tabRoot.parentElement;
 		}
 
-	}
-	// console.log("specialAnchorTargets", specialAnchorTargets);
+		if (tabRoot) {
+			const panelId = tabPanel.id;
+			let trigger = null;
 
+			// Prefer matching by aria-controls (more robust than index)
+			if (panelId) {
+				trigger = tabRoot.querySelector(
+					`[role="tab"][aria-controls="${panelId}"]`
+				);
+			}
+
+			// Fallback: index-based matching if aria-controls fails
+			if (!trigger) {
+				const panels = Array.from(
+					tabRoot.querySelectorAll('[role="tabpanel"]')
+				);
+				const triggers = Array.from(tabRoot.querySelectorAll('[role="tab"]'));
+				const idx = panels.indexOf(tabPanel);
+				if (idx !== -1 && triggers[idx]) {
+					trigger = triggers[idx];
+				}
+			}
+
+			if (trigger) {
+				const isActive = trigger.getAttribute('data-state') === 'active';
+
+				// Only poke Radix if it's not already the active tab
+				if (!isActive) {
+					// Radix uses roving focus; make sure focus + click are both applied
+					trigger.focus();
+
+					// Dispatch a "realistic" click sequence so Radix' internal state updates cleanly
+					['pointerdown', 'mousedown', 'mouseup', 'click'].forEach((type) => {
+						const ev = new MouseEvent(type, {
+							bubbles: true,
+							cancelable: true,
+							view: window,
+						});
+						trigger.dispatchEvent(ev);
+					});
+				}
+			}
+		}
+	}
+
+	// ---------------------------------------------------------------------------
+	// 3. ACCORDION SUPPORT – your existing window.refs pattern
+	// ---------------------------------------------------------------------------
+	let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
+
+	if (accordionArticle !== null) {
+		while (accordionArticle) {
+			try {
+				const ref =
+          window.refs &&
+          window.refs.find(
+          	(r) => r && r.props && r.props.id === accordionArticle.id
+          );
+
+				if (ref && typeof ref.setState === 'function') {
+					ref.setState(
+						{ expanded: true },
+						() =>
+							setTimeout(() => {
+								// Highlight + scroll once accordion has animated
+								specialAnchorTarget.classList.add('flash');
+								scrollToElement(specialAnchorTarget, 80);
+								setTimeout(() => {
+									specialAnchorTarget.classList.remove('flash');
+								}, 5000);
+							}, 500)
+					);
+				}
+			} catch (err) {
+				// eslint-disable-next-line no-console
+				console.log(err);
+			}
+
+			accordionArticle = accordionArticle.parentNode
+				? accordionArticle.parentNode.closest('article.accordion-article')
+				: null;
+		}
+	} else {
+		// -----------------------------------------------------------------------
+		// 4. Plain target: just scroll + flash
+		// -----------------------------------------------------------------------
+		specialAnchorTarget.classList.add('flash');
+		scrollToElement(specialAnchorTarget, 80);
+		setTimeout(() => {
+			specialAnchorTarget.classList.remove('flash');
+		}, 5000);
+	}
 };
 
 export const highlightTextDiff = (a, b, countCorrect, sounds = false) => {

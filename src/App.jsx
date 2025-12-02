@@ -37,12 +37,6 @@ import {
 	playAudioLink,
 	speak,
 } from "./utility";
-import { AllCustomComponentsFR } from "./Components/CustomComponents_FR/index.js";
-import { AllCustomComponentsSP } from "./Components/CustomComponents_SP/index.js";
-import DOMPurify from "dompurify";
-
-import React from "react";
-
 // NEW: shadcn tabs
 import {
 	Tabs,
@@ -50,6 +44,12 @@ import {
 	TabsList,
 	TabsTrigger,
 } from "@/components/ui/tabs";
+import { AllCustomComponentsFR } from "./Components/CustomComponents_FR/index.js";
+import { AllCustomComponentsSP } from "./Components/CustomComponents_SP/index.js";
+import DOMPurify from "dompurify";
+
+import React from "react";
+
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -60,6 +60,7 @@ export default class App extends React.Component {
 		const languageCode = urlParams.get("lang");
 
 		this.state = {
+			dark: false,
 			dialogContent: "",
 			errors: [],
 			languageCode: languageCode,
@@ -74,6 +75,7 @@ export default class App extends React.Component {
 		this.initialiseSynth = this.initialiseSynth.bind(this);
 		this.renderComponent = this.renderComponent.bind(this);
 		this.selectLearningObject = this.selectLearningObject.bind(this);
+		this.toggleDark = this.toggleDark.bind(this);
 
 		window.refs = [];
 	}
@@ -112,6 +114,11 @@ export default class App extends React.Component {
 
 			configPromise.then(this.initialiseSynth);
 		}
+		if (sessionStorage.getItem(`dark`)) {
+			const dark = JSON.parse(sessionStorage.getItem(`dark`));
+			if (dark) this.setDark(true);
+		}
+
 	};
 
 	componentDidUpdate = () => {
@@ -384,6 +391,27 @@ export default class App extends React.Component {
 		});
 	};
 
+	setDark = (dark) => {
+		if (typeof document === "undefined") return;
+		document.documentElement.classList.toggle("dark", dark);
+	};
+
+	toggleDark = () => {
+
+		let dark = false;
+
+		if (sessionStorage.getItem(`dark`)) dark = JSON.parse(sessionStorage.getItem(`dark`));
+
+		this.setDark(!dark);
+		// const html = document.getElementsByName('html');
+		// const cl = html.classList;
+
+		// console.log("html", html, cl);
+		this.setState({ dark: !dark },
+			sessionStorage.setItem('dark', !dark)
+		);
+	};
+
 	/**
    * NEW: renderComponentForTab
    * Returns "bare" content for a component (no AccordionArticle / Section wrapper)
@@ -612,6 +640,7 @@ export default class App extends React.Component {
 					<MainMenu
 						config={config}
 						subTitle={subTitle}
+						toggleDark={this.toggleDark}
 					/>
 
 					<Congratulate
@@ -979,8 +1008,8 @@ export default class App extends React.Component {
 					articles.push(
 						outerWrapper(
 							<Tabs
-								defaultValue={defaultTabValue || (tabItems[0] && tabItems[0].value)}
 								className="group-tabs"
+								defaultValue={defaultTabValue || (tabItems[0] && tabItems[0].value)}
 							>
 								<TabsList className="group-tabs-list">
 									{tabItems.map((item) => (
@@ -993,7 +1022,11 @@ export default class App extends React.Component {
 									))}
 								</TabsList>
 								{tabItems.map((item) => (
-									<TabsContent key={item.value} value={item.value}>
+									<TabsContent
+										key={item.value}
+										value={item.value}
+										forceMount
+									>
 										{item.content}
 									</TabsContent>
 								))}

@@ -246,7 +246,7 @@
 			],
 			[
 				"Tab Test NAME",
-				"<a class='special-anchor' href='#tabTestName'>Tab test NAME</a>",
+				"<a class='special-anchor' href='.#tabTestName'>Tab test NAME</a>",
 				""
 			],
 			[
@@ -256,7 +256,7 @@
 			],
 			[
 				"Tab Test ID",
-				"<a class='special-anchor' href='#tabTestId'>Tab test ID</a>",
+				"<a class='special-anchor' href='.#tabTestId'>Tab test ID</a>",
 				""
 			],
 			[

@@ -7,9 +7,12 @@ export class IconButton extends React.PureComponent {
 			children,
 			className,
 			onClick,
+			size,
 			theme = 'reset',
+			title,
 		} = this.props;
 		let svgContent;
+		let extraClasses = '';
 		switch (theme){
 			case 'reset': {
 				svgContent = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" strokeWidth="2"
@@ -19,6 +22,7 @@ export class IconButton extends React.PureComponent {
 					<path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
 					<path d="M16 16h5v5" />
 				</svg>;
+				extraClasses = 'w-full';
 				break;
 			}
 			case 'eye': {
@@ -28,6 +32,7 @@ export class IconButton extends React.PureComponent {
 					</path>
 					<circle cx="12" cy="12" r="3"></circle>
 				</svg>;
+				extraClasses = 'w-full';
 				break;
 			}
 			case 'shuffle':			{
@@ -39,6 +44,7 @@ export class IconButton extends React.PureComponent {
 					<path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"></path>
 					<path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"></path>
 				</svg>;
+				extraClasses = 'w-full';
 				break;
 			}
 			case 'natural':			{
@@ -69,10 +75,37 @@ export class IconButton extends React.PureComponent {
 				</svg>;
 				break;
 			}
+			case 'sun':			{
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<circle cx="12" cy="12" r="4" />
+					<line x1="12" y1="2" x2="12" y2="4" />
+					<line x1="12" y1="20" x2="12" y2="22" />
+					<line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+					<line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+					<line x1="2" y1="12" x2="4" y2="12" />
+					<line x1="20" y1="12" x2="22" y2="12" />
+					<line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+					<line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+				</svg>;
+				extraClasses = 'rounded-full cursor-pointer';
+				break;
+			}
+			case 'moon':			{
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+				</svg>;
+				extraClasses = 'rounded-full cursor-pointer';
+				break;
+			}
 
 		}
 		return (
-			<Button size="sm" className={`w-full icon-button ${className}`} onClick={onClick}>
+			<Button
+				size={size}
+				className={`icon-button ${className ? className : ''} ${extraClasses}`}
+				onClick={onClick}
+				title={title}
+			>
 				{svgContent}
 				{children}</Button>
 		);
