@@ -1,13 +1,14 @@
 import './Monologue.scss';
 import {
-	highlightTextDiff,
-	resolveAsset,
-} from '../../utility';
-import {
 	AudioClip,
 	IconButton,
 } from '../';
+import {
+	highlightTextDiff,
+	resolveAsset,
+} from '../../utility';
 import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import { Input } from "@/components/ui/input";
 import React from 'react';
 import { Textarea } from "@/components/ui/textarea";
@@ -125,7 +126,7 @@ export class Monologue extends React.PureComponent {
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
 						{showResult ?
-							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}></div>)
 							:
 							(
 								<form onKeyPress={this.handleKeyPress}>
@@ -157,11 +158,11 @@ export class Monologue extends React.PureComponent {
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
 						{/* <Button className={`reset btn`} onClick={this.handleReset}>Reset</Button> */}
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
 						{showResult ?
-							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}></div>)
 							:
 							(
 								<>

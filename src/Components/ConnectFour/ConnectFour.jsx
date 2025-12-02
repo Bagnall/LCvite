@@ -1,6 +1,7 @@
 import './ConnectFour.scss';
 import React, { PureComponent } from 'react';
 import { copyObject } from '../../utility.js';
+import DOMPurify from "dompurify";
 
 const boardWidth = 4;
 const boardHeight = 4;
@@ -188,7 +189,7 @@ export class ConnectFour extends PureComponent {
 				<div className={`connect-four-container`}>
 					<h1>Connect Four</h1>
 					<div className={`instructions`}>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 					</div>
 					<table className={`board`} style={{ borderCollapse: 'collapse' }}>
 						<tbody>

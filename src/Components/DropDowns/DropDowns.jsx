@@ -17,6 +17,7 @@ import {
 	TableCell,
 	TableRow,
 } from "@/components/ui/table";
+import DOMPurify from "dompurify";
 import React from "react";
 import { resolveAsset } from "../../utility";
 
@@ -191,9 +192,9 @@ export class DropDowns extends React.PureComponent {
 		}
 
 		return {
+			nSelects,
 			segments,
 			selectIndices,
-			nSelects,
 		};
 	};
 
@@ -208,11 +209,11 @@ export class DropDowns extends React.PureComponent {
 		const nCorrect = solved.filter((s) => s === 1).length;
 
 		this.setState({
-			values: correctValues,
-			solved,
-			nCorrect,
 			// You can decide whether to reset failCount here or not:
-			// failCount: 0,
+			failCount: 0,
+			nCorrect,
+			solved,
+			values: correctValues,
 		});
 	};
 
@@ -220,7 +221,7 @@ export class DropDowns extends React.PureComponent {
 		const {
 			audio,
 			cheatText,
-			complete = false,
+			// complete = false,
 			failCount = 0,
 			footnote,
 			footnoteHTML,
@@ -364,7 +365,7 @@ export class DropDowns extends React.PureComponent {
 				{htmlContent && htmlContent !== "" ? (
 					<div
 						className="html-content"
-						dangerouslySetInnerHTML={{ __html: htmlContent }}
+						dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }}
 					/>
 				) : null}
 
@@ -412,7 +413,7 @@ export class DropDowns extends React.PureComponent {
 					<p
 						key={`p-footnote-html`}
 						className="footNote"
-						dangerouslySetInnerHTML={{ __html: footnoteHTML }}
+						dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(footnoteHTML) }}
 					/>
 				) : null}
 			</div>

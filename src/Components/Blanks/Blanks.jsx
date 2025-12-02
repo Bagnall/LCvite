@@ -11,6 +11,7 @@ import {
 	shuffleArray
 } from '../../utility';
 import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import {
 	mouseRelativeTo,
 } from '../../mouseUtility';
@@ -688,7 +689,7 @@ export class Blanks extends React.Component {
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 				{listenDescriptionText && soundFile ?
 					<AudioClip

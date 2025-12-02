@@ -3,6 +3,7 @@ import {
 	Info,
 	TopButton
 } from '..';
+import DOMPurify from "dompurify";
 import React from 'react';
 
 export class Section extends React.PureComponent {
@@ -36,7 +37,7 @@ export class Section extends React.PureComponent {
 			config,
 			title = '',
 			titleHTML = '',
-			info,
+			// info,
 			className = '',
 			children,
 			target,
@@ -63,7 +64,7 @@ export class Section extends React.PureComponent {
 				<span className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`} >
 					<h2>{titleHTML ? (
 						<span
-							dangerouslySetInnerHTML={{ __html: titleHTML }}
+							dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(titleHTML) }}
 						/>
 					) : (
 						<span
@@ -72,7 +73,7 @@ export class Section extends React.PureComponent {
 				</span>
 				{/* <Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/> */}
 				{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null}
 
 				<div
 					id={`${id}`}

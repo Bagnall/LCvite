@@ -1,4 +1,5 @@
 import './Info.scss';
+import DOMPurify from "dompurify";
 import React from 'react';
 
 export class Info extends React.PureComponent {
@@ -37,7 +38,7 @@ export class Info extends React.PureComponent {
 					className={`information`}
 					id={`${id}-Info`}
 				>
-					<div className={`info-content`} dangerouslySetInnerHTML={{ __html: informationTextHTML }}/>
+					<div className={`info-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(informationTextHTML) }}/>
 				</div>
 			);
 		} else if (informationText) {

@@ -1,3 +1,4 @@
+import DOMPurify from "dompurify";
 import {Info} from '..';
 import React from 'react';
 
@@ -91,7 +92,7 @@ export class AccordionArticle extends React.PureComponent {
 					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
 					className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`}
 				>
-					<span dangerouslySetInnerHTML={{ __html: titleHTML }}/>
+					<span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(titleHTML) }}/>
 					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
 				</h2>
 			);

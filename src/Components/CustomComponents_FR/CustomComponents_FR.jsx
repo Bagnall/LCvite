@@ -40,9 +40,9 @@ export class LO1Grammar1 extends PureComponent {
 					<p>You will learn:</p>
 					<ul><li>When to use Monsieur, Madame, and Mademoiselle.</li><li>Abbreviations: M., Mme., Mlle.</li></ul>
 
-					<p><span className={`special-anchor-target`} name={`madame`}>In French there is no equivalent to the English Ms.
+					<p><span className={`special-anchor-target`} id={`madame`} name={`madame`}>In French there is no equivalent to the English Ms.
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
-					</span><span className={`special-anchor-target`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+					</span><span className={`special-anchor-target`} id={`mademoiselle`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</span></p>
 					<table>
 						<tbody>
@@ -87,11 +87,11 @@ export class LO1Grammar2 extends PureComponent {
 						<li>How to use <i>vous</i> formally or when speaking to several people.</li>
 						<li>How <i>toi</i> replaces <i>tu</i> in responses (<i>Et toi ?</i>).</li>
 					</ul>
-					<p><span className={`special-anchor-target`} name={`tuvous`}>2&nbsp;
+					<p><span className={`special-anchor-target`} id={`tuvous`} name={`tuvous`}>2&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>Tu</b></AudioClip> and&nbsp;
 						<AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip>&nbsp;both mean 'you'.</span></p>
 					<p><b>Tu</b> is used when addressing one person and is familiar. That means you use it when speaking to your partner, a relative, a friend,
-						a classmate or a child etc. <span className={`special-anchor-target`} name={`toi`} >When returning question i.e. when you ask 'and you?' you use the
+						a classmate or a child etc. <span className={`special-anchor-target`} id={`toi`} name={`toi`} >When returning question i.e. when you ask 'and you?' you use the
 						form&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip> instead of&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/tu.mp3`}><b>tu:</b></AudioClip>&nbsp;
@@ -100,7 +100,7 @@ export class LO1Grammar2 extends PureComponent {
 						a shop assistant, bus driver, waiting staff etc or an adult to whom you wish to show a degree of distance or respect e.g. your professor,
 						a health professional, a legal advisor, an acquaintance of your parents etc.</p>
 					<p><b>Vous</b> is also used when addressing more than one person
-							whatever your relationship to them.</p>
+						whatever your relationship to them.</p>
 				</div>
 			</div>
 		);
@@ -155,6 +155,7 @@ export class LO1Demystify2 extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
+					<p className={`special-anchor-target`} name={`tabTestName`}>Special test for target NAME in tabs!</p>
 					<h3>2. The French "<AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip>"</h3>
 					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
@@ -164,6 +165,7 @@ export class LO1Demystify2 extends PureComponent {
 					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
 					<p>It is worth noting that the pronunciation of the letter <b>r</b> may vary across the French speaking world.</p>
+					<p className={`special-anchor-target`} id={`tabTestId`}>Special test for target ID in tabs!</p>
 				</div>
 			</div>
 		);
@@ -341,7 +343,7 @@ export class LO2Grammar extends PureComponent {
 					id={`${id ? `${id}Panel3` : ''}`}
 					key={`${id}Panel3`}
 				>
-					<p><a className={`special-anchor-target`} name={`subject-pronouns`} ><b>3. Subject pronouns</b>.</a></p>
+					<p><a className={`special-anchor-target`} id={`subject-pronouns`} name={`subject-pronouns`} ><b>3. Subject pronouns</b>.</a></p>
 					<ul>
 						<li><b>Il</b> is used to replace a masculine noun.</li>
 						<li><b>Elle</b> is used to replace a feminine noun.</li>

@@ -12,6 +12,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import DOMPurify from "dompurify";
 import React from "react";
 import { resolveAsset } from "../../utility";
 
@@ -143,7 +144,7 @@ export class PhraseTable extends React.PureComponent {
 						cells.push(
 							<TableCell key={`row${i}cell${j}`}>
 								<span
-									dangerouslySetInnerHTML={{ __html: value }}
+									dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(value) }}
 								/>
 							</TableCell>
 						);
@@ -174,7 +175,7 @@ export class PhraseTable extends React.PureComponent {
 				{htmlContent ? (
 					<div
 						className="html-content"
-						dangerouslySetInnerHTML={{ __html: htmlContent }}
+						dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }}
 					/>
 				) : null}
 
@@ -215,7 +216,7 @@ export class PhraseTable extends React.PureComponent {
 				{footnoteHTML ? (
 					<p
 						className="footNote"
-						dangerouslySetInnerHTML={{ __html: footnoteHTML }}
+						dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(footnoteHTML) }}
 					/>
 				) : null}
 			</div>

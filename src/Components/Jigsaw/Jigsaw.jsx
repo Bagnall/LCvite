@@ -8,12 +8,12 @@ import {
 	Piece,
 } from "../../Components";
 import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import {
 	mouseRelativeTo,
 } from "../../mouseUtility";
 import React from "react";
 import Variables from "../../styles/_variables.module.scss";
-
 
 export class Jigsaw extends React.PureComponent {
 
@@ -383,7 +383,7 @@ export class Jigsaw extends React.PureComponent {
 				onMouseUp={this.handleMouseUp}
 			>
 				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				<p className='clue'>{descriptionText}&nbsp;</p>
 
 				<AudioClip

@@ -1,5 +1,6 @@
 import './CrossWord.scss';
 import React, { PureComponent } from 'react';
+import DOMPurify from "dompurify";
 
 // Create a 2D grid filled with null values
 const createEmptyGrid = (size) => {
@@ -229,7 +230,7 @@ export class CrossWord extends PureComponent {
 			<div>
 				<div className={`crossword-container`}>
 					<div className={`instructions`}>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 					</div>
 					<table className={`board`} style={{ borderCollapse: 'collapse' }}>
 						<tbody>

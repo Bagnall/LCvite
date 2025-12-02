@@ -6,6 +6,7 @@ import {
 	IconButton
 } from "../../Components";
 import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import React from "react";
 import {resolveAsset} from "../../utility";
 import Variables from "../../styles/_variables.module.scss";
@@ -199,7 +200,7 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 				<div className={`memory-match-game`}>
 					<p className='clue'>{descriptionText}&nbsp;</p>

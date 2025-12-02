@@ -9,6 +9,7 @@ import {
 	// RadioField,
 	// RadioGroup,
 } from '..';
+import DOMPurify from "dompurify";
 import React from 'react';
 import {
 	resolveAsset,
@@ -182,7 +183,7 @@ export class RadioQuiz extends React.Component {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 				<table>
 					<tbody>

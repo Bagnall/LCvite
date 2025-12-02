@@ -12,6 +12,7 @@ import {
 	TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import React from 'react';
 import {
 	resolveAsset,
@@ -177,7 +178,7 @@ export class AnswerTable extends React.PureComponent {
 				{/* <div className={`help`}>
 					<Button className={`reset`} size="sm" onClick={this.handleReset}>Reset</Button>
 				</div> */}
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				<Table>
 					{header ?
 						<TableHeader>

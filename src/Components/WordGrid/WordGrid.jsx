@@ -3,6 +3,7 @@ import "./WordGrid.scss";
 import React, { PureComponent } from "react";
 import { Button } from "@/components/ui/button";
 import colours from "../../styles/_colours.module.scss";
+import DOMPurify from "dompurify";
 import { IconButton } from "..";
 import {resolveAsset} from "../../utility";
 
@@ -451,9 +452,9 @@ export class WordGrid extends PureComponent {
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null} */}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null} */}
 				<p className={`word-list`}>{localWordsRendered}</p>
 
 				<p className={`hidden-hints ${showHints ? 'show' : ''}`}>You're looking for these words:</p>

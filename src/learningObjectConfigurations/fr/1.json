@@ -245,9 +245,19 @@
 				"sounds/fr/Bonne journée !.mp3"
 			],
 			[
+				"Tab Test NAME",
+				"<a class='special-anchor' href='#tabTestName'>Tab test NAME</a>",
+				""
+			],
+			[
 				"Bonne soirée !",
 				"Have a nice evening!   ",
 				"sounds/fr/Bonne soirée !.mp3"
+			],
+			[
+				"Tab Test ID",
+				"<a class='special-anchor' href='#tabTestId'>Tab test ID</a>",
+				""
 			],
 			[
 				"Bonne nuit !",
@@ -356,6 +366,7 @@
 			}
 		],
 		"expandable": false,
+		"displayAsTabs": true,
 		"id": "pronunciation",
 		"menuText": "Pronunciation",
 		"comment": "menuText wins over titleText",

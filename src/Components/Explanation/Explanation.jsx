@@ -3,6 +3,7 @@ import './Explanation.scss';
 // 	resolveAsset,
 // 	speak,
 // } from '../../utility';
+import DOMPurify from "dompurify";
 import { Panel } from "./Panel";
 import React from 'react';
 
@@ -42,7 +43,7 @@ export class Explanation extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 				{contents}
 			</div>

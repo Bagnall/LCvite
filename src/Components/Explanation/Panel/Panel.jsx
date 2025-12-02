@@ -1,6 +1,8 @@
 import './Panel.scss';
+import DOMPurify from "dompurify";
 import React from 'react';
 import { resolveAssetHTML } from '../../../utility.js';
+
 export class Panel extends React.PureComponent {
 
 	render = () => {

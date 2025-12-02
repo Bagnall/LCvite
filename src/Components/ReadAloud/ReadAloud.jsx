@@ -1,4 +1,5 @@
 import './ReadAloud.scss';
+import DOMPurify from "dompurify";
 import {
 	highlightTextDiff,
 } from '../../utility';
@@ -199,7 +200,7 @@ export class ReadAloud extends React.PureComponent {
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
 					{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
 					<div className={`instructions`}>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>
@@ -212,7 +213,7 @@ export class ReadAloud extends React.PureComponent {
 					<div className={`form`}>
 						<p ref={this.resultRef}>{`${understood !== '' ? 'I heard: ' : ''}`}<span className='understood'>{`${ understood !== '' ? understood : ''}`}</span></p>
 
-						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: `${comparison}` }} />
+						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comparison) }} />
 					</div>
 					<div className={`help`}>
 						<IconButton className={`hidden-help w-full reset`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>

@@ -1,4 +1,4 @@
-import './App.scss';
+import "./App.scss";
 import {
 	Accordion,
 	AccordionArticle,
@@ -29,38 +29,42 @@ import {
 	Sortable,
 	WordGrid,
 	WordParts,
-} from './Components';
+} from "./Components";
 import {
 	handleResponse,
 	handleSpecialLinkClick,
 	isTouchChrome,
 	playAudioLink,
-	// resolveAsset,
 	speak,
-} from './utility';
-import { AllCustomComponentsFR } from './Components/CustomComponents_FR/index.js';
-import { AllCustomComponentsSP } from './Components/CustomComponents_SP/index.js';
+} from "./utility";
+import { AllCustomComponentsFR } from "./Components/CustomComponents_FR/index.js";
+import { AllCustomComponentsSP } from "./Components/CustomComponents_SP/index.js";
+import DOMPurify from "dompurify";
 
-import React from 'react';
+import React from "react";
+
+// NEW: shadcn tabs
+import {
+	Tabs,
+	TabsContent,
+	TabsList,
+	TabsTrigger,
+} from "@/components/ui/tabs";
 
 export default class App extends React.Component {
-
 	constructor(props) {
 		super(props);
 
 		const queryString = window.location.search;
-
 		const urlParams = new URLSearchParams(queryString);
+		const languageCode = urlParams.get("lang");
 
-		const languageCode = urlParams.get('lang');
-		// console.log("constructor languageCode", languageCode);
-
-		this.state = ({
-			dialogContent: '',
+		this.state = {
+			dialogContent: "",
 			errors: [],
 			languageCode: languageCode,
 			showDialog: false,
-		});
+		};
 
 		this.loadConfig = this.loadConfig.bind(this);
 		this.loadIndex = this.loadIndex.bind(this);
@@ -89,24 +93,21 @@ export default class App extends React.Component {
 	};
 
 	componentDidMount = () => {
-
-		// console.log("componentDidMount");
 		const queryString = window.location.search;
-
 		const urlParams = new URLSearchParams(queryString);
 
-		// const languageCode = urlParams.get('lang');
 		const { languageCode } = this.state;
-		// console.log("componentDidMount languageCode", languageCode);
-
-		const learningObjectConfigFile = urlParams.get('lo');
+		const learningObjectConfigFile = urlParams.get("lo");
 
 		let configPromise;
 		if (languageCode) {
 			this.loadIndex(learningObjectConfigFile, languageCode);
 		}
 		if (learningObjectConfigFile && languageCode) {
-			configPromise = this.loadConfig(`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`, learningObjectConfigFile);
+			configPromise = this.loadConfig(
+				`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`,
+				learningObjectConfigFile
+			);
 			this.initialiseSpecialAnchors();
 
 			configPromise.then(this.initialiseSynth);
@@ -114,105 +115,88 @@ export default class App extends React.Component {
 	};
 
 	componentDidUpdate = () => {
-		// console.log("componentDidUpdate");
-
 		this.initialiseSpecialAnchors();
 	};
 
 	expandAllAccordions = () => {
-
-		console.log("expandAllAccordions"); // eslint-disable-line
-		// Not good as it does not affect state of accordion, in particular 'expanded' true/false.
-		const closedArticles = document.querySelectorAll('article.accordion-article:not(.expanded)');
-		const closedArrows = document.querySelectorAll('div.arrow:not(.expanded)');
-		// console.log("closedArticles", closedArticles); // eslint-disable-line
+    console.log("expandAllAccordions"); // eslint-disable-line
+		const closedArticles = document.querySelectorAll(
+			"article.accordion-article:not(.expanded)"
+		);
+		const closedArrows = document.querySelectorAll(
+			"div.arrow:not(.expanded)"
+		);
 		closedArticles.forEach((closedArticle) => {
-			closedArticle.classList.add('expanded');
+			closedArticle.classList.add("expanded");
 		});
 		closedArrows.forEach((closedArrow) => {
-			closedArrow.classList.add('expanded');
+			closedArrow.classList.add("expanded");
 		});
 	};
 
 	hideDialog = () => {
-		// console.log("hideDialog");
 		this.setState({
-			dialogContent: '',
+			dialogContent: "",
 			showDialog: false,
 		});
 	};
 
 	hideSpeechError = () => {
-		// console.log("hideSpeechError");
 		this.setState({
-			dialogContent: '',
+			dialogContent: "",
 			showSpeechError: false,
 		});
 	};
 
 	initialiseSpecialAnchors = () => {
-		// console.log("initialiseSpecialAnchors");
-		const anchors = document.querySelectorAll('.special-anchor');
-		// console.log("anchors.length", anchors.length);
+		const anchors = document.querySelectorAll(".special-anchor");
 		anchors.forEach((anchor) => {
-			// console.log("anchor", anchor);
 			if (anchor.setup) {
-				// Do nowt!
+				// do nothing
 			} else {
-				anchor.addEventListener('click', (e) => handleSpecialLinkClick(e));
+				anchor.addEventListener("click", (e) => handleSpecialLinkClick(e));
 			}
 			anchor.setup = true;
 		});
-		const targets = document.querySelectorAll('.special-anchor-target');
+		const targets = document.querySelectorAll(".special-anchor-target");
 		targets.forEach((target) => {
-			// console.log("anchor", anchor);
 			if (target.setup) {
-				// Do nowt!
+				// do nothing
 			} else {
-				target.addEventListener('click', (e) => e.preventDefault);
+				target.addEventListener("click", (e) => e.preventDefault());
 			}
 			target.setup = true;
 		});
-
-
 	};
 
 	initialiseSpeeches = (synth, targetLanguageCode, voices) => {
-		// console.log("initialiseSpeeches", targetLanguageCode, synth, voices);
-
-		// console.log("initialiseSpeeches", voices.length);
-		const speeches = document.querySelectorAll('.speak');
+		const speeches = document.querySelectorAll(".speak");
 		speeches.forEach((speech) => {
 			if (targetLanguageCode && synth && voices && voices.length >= 1) {
-				console.error("There's a '.speak' that I missed"); // eslint-disable-line
-				// console.log("Setting speeches", voices.length);
-				if (speech.setup !== true && speech.getAttribute('setup') !== true){
-					// Do nowt!
-				// } else {
-					// speech.setAttribute('title', 'Click to play sound');
-					speech.setAttribute('aria-label', 'Non-selectable text');
-					speech.setAttribute('setup', 'true');
-					speech.addEventListener('click', (e) => speak(e, synth, targetLanguageCode, voices));
-
-					// following doesn't help eliminate contextual search :-(
-					// speech.addEventListener('tap', (e) => speak(e, synth, targetLanguageCode, voices));
-					// speech.addEventListener('contextmenu', function (e) {
-					// 	e.preventDefault();
-					// }, { passive: false });
+        console.error("There's a '.speak' that I missed"); // eslint-disable-line
+				if (
+					speech.setup !== true &&
+          speech.getAttribute("setup") !== true
+				) {
+					speech.setAttribute("aria-label", "Non-selectable text");
+					speech.setAttribute("setup", "true");
+					speech.addEventListener("click", (e) =>
+						speak(e, synth, targetLanguageCode, voices)
+					);
 					speech.setup = true;
 				}
 			}
 		});
 
-		const audioLinks = document.querySelectorAll('.audio-link');
+		const audioLinks = document.querySelectorAll(".audio-link");
 		audioLinks.forEach((audioLink) => {
-			// console.log(audioLink.getAttribute('sound-file'));
-			if (audioLink.setup !== true && audioLink.getAttribute('setup') !== true) {
-				const soundFile = audioLink.getAttribute('sound-file');
-				// console.log("soundFile", soundFile);
-				if (soundFile !== null){ // i.e. not fully loaded yet
-					audioLink.setAttribute('setup', 'true');
-					audioLink.addEventListener('click', () => playAudioLink(soundFile));
+			if (audioLink.setup !== true && audioLink.getAttribute("setup") !== true) {
+				const soundFile = audioLink.getAttribute("sound-file");
+				if (soundFile !== null) {
+					audioLink.setAttribute("setup", "true");
+					audioLink.addEventListener("click", () =>
+						playAudioLink(soundFile)
+					);
 					audioLink.setup = true;
 				}
 			}
@@ -220,45 +204,46 @@ export default class App extends React.Component {
 	};
 
 	initialiseSynth = () => {
-		// console.log("initialiseSynth");
 		const { targetLanguageCode } = this.state;
 		const synth = window.speechSynthesis;
 
 		const mediaContent = window
-			.getComputedStyle(document.body, '::before')
-			.getPropertyValue('content');
+			.getComputedStyle(document.body, "::before")
+			.getPropertyValue("content");
 
 		const isFirefox = /firefox/i.test(navigator.userAgent);
 
 		const sortVoices = (voices) =>
-			voices.sort((a, b) => a.lang.localeCompare(b.lang, undefined, { sensitivity: 'base' }));
+			voices.sort((a, b) =>
+				a.lang.localeCompare(b.lang, undefined, { sensitivity: "base" })
+			);
 
 		const filterVoicesByLang = (voices, lang) =>
 			voices.filter((voice) => voice.lang === lang);
 
 		const enableSpeech = (voices) => {
-			const filteredVoices = filterVoicesByLang(sortVoices(voices), targetLanguageCode);
+			const filteredVoices = filterVoicesByLang(
+				sortVoices(voices),
+				targetLanguageCode
+			);
 			this.initialiseSpeeches(synth, targetLanguageCode, filteredVoices);
-			document.documentElement.classList.add('can-speak');
+			document.documentElement.classList.add("can-speak");
 			this.setState({ showSpeechError: false });
 		};
 
-		// Firefox requires a delay before voices are populated
 		if (isFirefox) {
-			// console.log("Firefox fallback");
 			setTimeout(() => {
 				const voices = synth.getVoices();
 				enableSpeech(voices);
 			}, 1000);
 		}
 
-		// Non-Firefox
 		synth.onvoiceschanged = () => {
-			// console.log("onvoiceschanged");
-
-			if ((mediaContent[1] === 'S' || mediaContent[1] === 'M') && isTouchChrome()) {
-			// Context-search issue workaround for Chrome on touch devices
-			// Optional: display error to user
+			if (
+				(mediaContent[1] === "S" || mediaContent[1] === "M") &&
+        isTouchChrome()
+			) {
+				// Chrome touch workaround, do nothing
 			} else {
 				const voices = synth.getVoices();
 				enableSpeech(voices);
@@ -267,46 +252,43 @@ export default class App extends React.Component {
 	};
 
 	loadConfig = (configFile, learningObjectConfigFile) => {
-		// console.log("loadConfig", configFile);
-
-		// Read the config
 		const headers = new Headers();
 		headers.append("Content-Type", "application/json");
 
 		const requestOptions = {
 			headers: headers,
-			method: 'GET',
-			redirect: 'follow',
+			method: "GET",
+			redirect: "follow",
 		};
 
 		return new Promise((resolve, reject) => {
 			fetch(`${configFile}`, requestOptions)
 				.then(handleResponse)
-				.then(res => {
+				.then((res) => {
 					const { settings } = res;
-					// console.log("config loaded...");
 					delete res["settings"];
 					const {
 						class: configClass,
 						targetLanguageCode,
-						// title,
 					} = settings;
-					// document.title = title;
-					if (configClass)document.getElementsByTagName('html')[0].classList.add(configClass);
+					if (configClass)
+						document
+							.getElementsByTagName("html")[0]
+							.classList.add(configClass);
 
 					const currentLearningObject = learningObjectConfigFile;
 
-					// 🔁 Return a Promise that resolves only when setState is done
-					this.setState({
-						config: { ...res },
-						currentLearningObject: currentLearningObject,
-						settings: { ...settings },
-						targetLanguageCode,
-					},
-					() => resolve({ targetLanguageCode })
+					this.setState(
+						{
+							config: { ...res },
+							currentLearningObject: currentLearningObject,
+							settings: { ...settings },
+							targetLanguageCode,
+						},
+						() => resolve({ targetLanguageCode })
 					);
 				})
-				.catch(error => {
+				.catch((error) => {
 					const action = `Loading configuration`;
 					this.logError(action, error);
 					reject();
@@ -315,32 +297,30 @@ export default class App extends React.Component {
 	};
 
 	loadIndex = (LO, languageCode) => {
-		// console.log("loadIndex", LO, languageCode);
-
-		// Read the index file
 		const headers = new Headers();
 		headers.append("Content-Type", "application/json");
 
 		const requestOptions = {
 			headers: headers,
-			method: 'GET',
-			redirect: 'follow',
+			method: "GET",
+			redirect: "follow",
 		};
 
-		let currentLearningObject;// = 0;
+		let currentLearningObject;
 		if (LO !== undefined && !isNaN(LO)) {
 			currentLearningObject = LO - 1;
-		}else{
-			if (sessionStorage.getItem("currentLearningObject")) currentLearningObject = parseInt(sessionStorage.getItem("currentLearningObject"));
+		} else {
+			if (sessionStorage.getItem("currentLearningObject"))
+				currentLearningObject = parseInt(
+					sessionStorage.getItem("currentLearningObject")
+				);
 		}
 		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
-			.then(res => {
-				// console.log("res", res);
+			.then((res) => {
 				const { learningObjects } = res;
 				let title, subTitle;
 				if (learningObjects[currentLearningObject]) {
-					// console.log("BINGO!");
 					({ subTitle, title } = learningObjects[currentLearningObject]);
 					document.title = title;
 				}
@@ -352,21 +332,15 @@ export default class App extends React.Component {
 					title: title,
 				});
 			})
-			.catch(error => {
+			.catch((error) => {
 				const action = `Loading index`;
 				this.logError(action, error);
 			});
 	};
 
 	logError = (action, ...params) => {
-		// (action, statusCode, statusText, message) or
-		// (action, error)
-		const {
-			errors,
-			refreshErrorLog,
-		} = this.state;
+		const { errors, refreshErrorLog } = this.state;
 		if (params.length === 1) {
-			// Is error object
 			const [error] = params;
 			const {
 				detail,
@@ -374,11 +348,11 @@ export default class App extends React.Component {
 				error_message: errorMessage,
 				message,
 				status,
-				statusText = '',
+				statusText = "",
 			} = error;
-			let Message = '';
-			let Status = '';
-			if (errorCode && errorMessage) { // Most likely an error from Metabolism Server
+			let Message = "";
+			let Status = "";
+			if (errorCode && errorMessage) {
 				Message += errorMessage;
 				Status += errorCode;
 			}
@@ -392,9 +366,8 @@ export default class App extends React.Component {
 				statusCode: Status,
 				statusText: statusText,
 			});
-
 		} else {
-			const [statusCode = '', statusText = '', message = ''] = params;
+			const [statusCode = "", statusText = "", message = ""] = params;
 
 			errors.push({
 				action: action,
@@ -409,6 +382,171 @@ export default class App extends React.Component {
 			refreshErrorLog: !refreshErrorLog,
 			showSpinner: false,
 		});
+	};
+
+	/**
+   * NEW: renderComponentForTab
+   * Returns "bare" content for a component (no AccordionArticle / Section wrapper)
+   * so that we can render it as a tab panel inside a Group.
+   */
+	renderComponentForTab = (value) => {
+		const {
+			component,
+			id,
+			infoText,
+			infoTextHTML,
+			titleText = "",
+			titleTextHTML = "",
+		} = value;
+
+		const { languageCode } = this.state;
+
+		switch (component) {
+			case "AnswerTable":
+				return (
+					<AnswerTable
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "Blanks":
+				return (
+					<Blanks
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "DropDowns":
+				return (
+					<DropDowns
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "Explanation":
+				return (
+					<>
+						<Info informationText={infoText} informationTextHTML={infoTextHTML} />
+						<Explanation
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
+						/>
+					</>
+				);
+			case "Jigsaw":
+				return (
+					<Jigsaw
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "MemoryMatchGame":
+				return (
+					<MemoryMatchGame
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "Monologue":
+				return (
+					<Monologue
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "PhraseTable":
+				return (
+					<PhraseTable
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+						languageCode={languageCode}
+					/>
+				);
+			case "RadioQuiz":
+				return (
+					<RadioQuiz
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "RadioTest":
+				return (
+					<RadioTest
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "ReadAloud":
+				return (
+					<ReadAloud
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "Sortable":
+				return (
+					<Sortable
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "WordGrid":
+				return (
+					<WordGrid
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			case "WordParts":
+				return (
+					<WordParts
+						config={value}
+						logError={this.logError}
+						showDialog={this.showDialog}
+					/>
+				);
+			default: {
+				let CustomComponent;
+				switch (languageCode) {
+					case "fr":
+						CustomComponent = AllCustomComponentsFR[component];
+						break;
+					case "sp":
+						CustomComponent = AllCustomComponentsSP[component];
+						break;
+					default:
+						CustomComponent = AllCustomComponentsFR[component];
+						break;
+				}
+				if (CustomComponent) {
+					return (
+						<>
+							<Info
+								informationText={infoText}
+								informationTextHTML={infoTextHTML}
+							/>
+							<CustomComponent id={id} showDialog={this.showDialog} />
+						</>
+					);
+				}
+				return (
+					<p>Component {component} not implemented</p>
+				);
+			}
+		}
 	};
 
 	render = () => {
@@ -430,18 +568,8 @@ export default class App extends React.Component {
 			({ intro, introHTML, informationHTML } = settings);
 		}
 
-
-		// We have 2 ways to approach this:
-		// 1. What you can see here is a solution which relies totally on content from config.json.
-		// Each definition corresponds to a component type (as indicated in config.json).
-		// This code loads those components into the articles array.
-		// 2. The alternative is to uncomment the commented lines in the setting from state block above and
-		// uncomment the hard-coded components in the returned render below. This allows for more ad-hoc html inclusions,
-		// but does mean that the whole thing has to be hard-coded.
-		// console.log("render currentLearningObject", currentLearningObject, "languageCode", languageCode, "learningObjects", learningObjects);
 		if (config) {
 			for (const [/* key */, value] of Object.entries(config)) {
-				// console.log(key, value);
 				const { component } = value;
 				if (component) {
 					this.renderComponent(value, articles);
@@ -449,29 +577,30 @@ export default class App extends React.Component {
 			}
 		}
 
-		// let flag = '';
 		let subTitle;
 		let title;
 		if (learningObjects[currentLearningObject]) {
-			// console.log("BINGO!", currentLearningObject, learningObjects[currentLearningObject]);
-			({ subTitle = '', title } = learningObjects[currentLearningObject - 1]);
+			({ subTitle = "", title } =
+        learningObjects[currentLearningObject - 1] || {});
 		}
-		// console.log("title", title, "subTitle", subTitle);
 
-		// let subTitle = '';
-		let targetLanguageCode = '';
+		let targetLanguageCode = "";
 		if (settings) {
-			// if (settings.flag) flag = `/images/${settings.flag}`;
-			({ targetLanguageCode/* , title, subTitle*/ } = settings);
+			({ targetLanguageCode } = settings);
 			this.targetLanguageCode = targetLanguageCode;
 		}
 
-		// console.log("render languageCode", languageCode, "learningObjects", learningObjects, learningObjects.length, "currentLearningObject", currentLearningObject);
 		return (
 			<>
-
-				<div className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ''}`} key={`languageDiv`}>
-					<a className={`special-anchor-target`} name={`special-anchor-top`}/>
+				<div
+					className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ""}`}
+					key={`languageDiv`}
+				>
+					<a
+						className={`special-anchor-target`}
+						id={`special-anchor-top`}
+						name={`special-anchor-top`}
+					/>
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}
@@ -479,33 +608,30 @@ export default class App extends React.Component {
 						clearError={this.clearError}
 						refreshErrorLog={refreshErrorLog}
 					/>
-					{/* <Header /> */}
-					{/* <div className={`top-menu`}>
-						<a className={`special-anchor`} href={`#top`}>{subTitle}</a>
-						<ul id='topMenu'>{topMenu}</ul>
-					</div> */}
+
 					<MainMenu
 						config={config}
 						subTitle={subTitle}
 					/>
+
 					<Congratulate
-						className={`${showDialog ? 'show' : ''}`}
+						className={`${showDialog ? "show" : ""}`}
 						enabled={settings ? settings.showCongratulations : null}
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
 					<Congratulate
-						className={`${showSpeechError ? 'show' : ''}`}
+						className={`${showSpeechError ? "show" : ""}`}
 						enabled={true}
 						hideDialog={this.hideSpeechError}
-						id='SpeechSynthesisError'
+						id="SpeechSynthesisError"
 						content={`This browser cannot perform speech synthesis. Please use a larger device and a browser such as Chrome`}
 					/>
-					{/* <div id='SpeechSynthesisError' key='SpeechSynthesisError'>This browser cannot perform speech synthesis. Please use another such as Chrome</div> */}
-					{languageCode !== undefined ?
+
+					{languageCode !== undefined ? (
 						<>
 							<div id="content" key="content">
-								<div id='fontSamples'>
+								<div id="fontSamples">
 									<h1>Heading 1 Feijoa Bold</h1>
 									<h2>Heading 2 Feijoa Medium</h2>
 									<h3>Heading 3 Feijoa Medium</h3>
@@ -517,75 +643,93 @@ export default class App extends React.Component {
 										<img
 											src={`images/bsc_logo_flat.svg`}
 											title={`BSC logo`}
-											style={{ width: '60px'}}
+											style={{ width: "60px" }}
 										/>
 										<figcaption>Captions Opensans Regular</figcaption>
 									</figure>
 									<Info>
 										<p>Children</p>
 									</Info>
-									<Info informationText={'Information Text'}/>
-									<Info informationTextHTML={'<p>Information Text <b>HTML</b></p>'}/>
+									<Info informationText={"Information Text"} />
+									<Info
+										informationTextHTML={
+											"<p>Information Text <b>HTML</b></p>"
+										}
+									/>
 								</div>
-								{/* <div id='hero' key='hero'>
-										<Flag flag={resolveAsset(flag)} shadow={false} fix={'left'} />
-										<h1>{title}</h1>
-										<h2>{subTitle}</h2>
-									</div> */}
+
 								<div id="hero">
 									<div className="hero bg-base-200  w-full">
 										<div className="hero-content text-center">
 											<div className="w-full">
 												<h1 className="text-5xl font-bold">{title}</h1>
-												<h1 className="text-5xl font-bold">{subTitle}</h1>
+												<h1 className="text-5xl font-bold">
+													{subTitle}
+												</h1>
 											</div>
 										</div>
 									</div>
 								</div>
-								{/* {this.renderMenu()} */}
+
 								<LearningObjectMenu
 									currentLearningObject={currentLearningObject}
 									languageCode={languageCode}
 									learningObjects={learningObjects}
 								/>
+
 								<div className={`intro`} name={`intro`}>
-									<a className={`special-anchor-target`} name={`special-anchor-intro`} id={`special-anchor-intro`} >
+									<a
+										className={`special-anchor-target`}
+										name={`special-anchor-intro`}
+										id={`special-anchor-intro`}
+									>
 										<h2>Introduction</h2>
 									</a>
-									{intro ? <p className={`intro`}>{intro}</p> : null}
-									{introHTML ? <p className={`intro`} dangerouslySetInnerHTML={{ __html: introHTML }} /> : null}
-									{informationHTML ? <Info id={currentLearningObject} informationTextHTML={informationHTML} /> : null}
+									{intro ? (
+										<p className={`intro`}>{intro}</p>
+									) : null}
+									{introHTML ? (
+										<p
+											className={`intro`}
+											dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(introHTML) }}
+										/>
+									) : null}
+									{informationHTML ? (
+										<Info
+											id={currentLearningObject}
+											informationTextHTML={informationHTML}
+										/>
+									) : null}
 								</div>
-								{/* <label>Test: <input type='checkbox'/></label> */}
-								{currentLearningObject !== -1 ?
+
+								{currentLearningObject !== -1 ? (
 									<Accordion id={`accordion1`} key={`accordion1`}>
 										{articles}
 									</Accordion>
-									:
-									null
-								}
-								{(learningObjects.length > 0) && (currentLearningObject === -1) ?
-									<LandingPage
-										languageCode={languageCode}
-										learningObjects={learningObjects}
-									/>
-									:
-									null
-								}
-
+								) : null}
+								{learningObjects.length > 0 &&
+                currentLearningObject === -1 ? (
+										<LandingPage
+											languageCode={languageCode}
+											learningObjects={learningObjects}
+										/>
+									) : null}
 							</div>
 						</>
-						:
+					) : (
 						<div className={`no-config`}>
 							<h1>No configuration parameter given of the form</h1>
 							<h2>{`${window.location.host}${window.location.pathname}?lang=fr&lo=3`}</h2>
-							<p>Where '3' in this example is the learning object number or index. If absent, but language is the landing page is shown</p>
+							<p>
+                Where &apos;3&apos; in this example is the learning object
+                number or index. If absent, but language is the landing
+                page is shown
+							</p>
 						</div>
-					}
+					)}
 					<Social />
 					<Footer />
 				</div>
-
 			</>
 		);
 	};
@@ -596,45 +740,46 @@ export default class App extends React.Component {
 			component,
 			infoText,
 			infoTextHTML,
-			titleText = '',
-			titleTextHTML = ''
+			titleText = "",
+			titleTextHTML = "",
 		} = value;
 		const { expandable = true } = value;
 
-		const {
-			currentLearningObject,
-			languageCode
-		} = this.state;
-		// console.log("renderComponent currentLearningObject", currentLearningObject);
+		const { currentLearningObject, languageCode } = this.state;
 		const compoundID = `LO${currentLearningObject}-${id}`;
+
 		switch (component) {
-			case 'AnswerTable': {
+			case "AnswerTable": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
 					>
 						<AnswerTable
-							config = {value}
-							logError = {this.logError}
-							showDialog = {this.showDialog}
+							config={value}
+							logError={this.logError}
+							showDialog={this.showDialog}
 						/>
 					</AccordionArticle>
 				);
 				break;
 			}
-			case 'Blanks': {
+			case "Blanks": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -648,13 +793,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'DropDowns': {
+			case "DropDowns": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -668,14 +815,16 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'Explanation': {
+			case "Explanation": {
 				if (expandable) {
 					articles.push(
 						<AccordionArticle
 							config={value}
 							id={`${compoundID}-Accordion`}
 							key={`${compoundID}-Accordion`}
-							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							ref={(AccordionArticle) => {
+								window.refs.push(AccordionArticle);
+							}}
 							target={id}
 							title={titleText}
 							titleHTML={titleTextHTML}
@@ -707,63 +856,163 @@ export default class App extends React.Component {
 				}
 				break;
 			}
-			case 'Group': {
+			case "Group": {
 				const renderedGroupContent = [];
 				const { content: groupContent = [] } = value;
-				// console.log("groupContent", groupContent);
+				const { id: groupId, displayAsTabs = false } = value;
 
-				groupContent.forEach((child) => {
-					for (const [/* key */, v] of Object.entries(child)) {
-						// console.log("v", v.id);
-						this.renderComponent(v, renderedGroupContent);
+				if (!displayAsTabs) {
+					// ORIGINAL BEHAVIOUR: children as sub-accordions/sections
+					groupContent.forEach((child) => {
+						for (const [/* key */, v] of Object.entries(child)) {
+							this.renderComponent(v, renderedGroupContent);
+						}
+					});
+
+					if (expandable) {
+						articles.push(
+							<AccordionArticle
+								config={value}
+								className={`group`}
+								id={`${compoundID}-Group-Accordion`}
+								key={`${compoundID}-Group-Accordion`}
+								ref={(AccordionArticle) => {
+									window.refs.push(AccordionArticle);
+								}}
+								target={groupId}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<Info
+									informationText={infoText}
+									informationTextHTML={infoTextHTML}
+								/>
+								{renderedGroupContent}
+							</AccordionArticle>
+						);
+					} else {
+						articles.push(
+							<Section
+								config={value}
+								className={`group`}
+								id={`${compoundID}-Group-Section`}
+								key={`${compoundID}-Group-Section`}
+								target={groupId}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<Info
+									informationText={infoText}
+									informationTextHTML={infoTextHTML}
+								/>
+								{renderedGroupContent}
+							</Section>
+						);
 					}
-				});
-
-				const {
-					id,
-				} = value;
-				if (expandable) {
-					articles.push(
-						<AccordionArticle
-							config={value}
-							className={`group`}
-							id={`${compoundID}-Group-Accordion`}
-							key={`${compoundID}-Group-Accordion`}
-							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
-							target={id}
-							title={titleText}
-							titleHTML={titleTextHTML}
-						>
-							<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
-							{renderedGroupContent}
-						</AccordionArticle>
-					);
 				} else {
-					articles.push(
-						<Section
-							config={value}
-							className={`group`}
-							id={`${compoundID}-Group-Section`}
-							key={`${compoundID}-Group-Section`}
-							target={id}
-							title={titleText}
-							titleHTML={titleTextHTML}
-						>
-							<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
-							{renderedGroupContent}
-						</Section>
-					);
+					// NEW BEHAVIOUR: children rendered as tabs
+					const tabItems = [];
+					let defaultTabValue = null;
 
+					groupContent.forEach((child, index) => {
+						for (const [/* key */, v] of Object.entries(child)) {
+							const childId = v.id || `child-${index}`;
+							const tabValue = childId;
+							if (defaultTabValue === null) defaultTabValue = tabValue;
+
+							const tabLabel =
+                v.menuText ||
+                v.titleText ||
+                (typeof v.titleTextHTML === "string"
+                	? v.titleTextHTML.replace(/<[^>]+>/g, "")
+                	: "") ||
+                childId;
+
+							const contentNode = this.renderComponentForTab(v);
+
+							tabItems.push({
+								value: tabValue,
+								label: tabLabel,
+								content: contentNode,
+							});
+						}
+					});
+
+					const outerWrapper = (inner) =>
+						expandable ? (
+							<AccordionArticle
+								config={value}
+								className={`group`}
+								id={`${compoundID}-Group-Accordion`}
+								key={`${compoundID}-Group-Accordion`}
+								ref={(AccordionArticle) => {
+									window.refs.push(AccordionArticle);
+								}}
+								target={groupId}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<Info
+									informationText={infoText}
+									informationTextHTML={infoTextHTML}
+								/>
+								{inner}
+							</AccordionArticle>
+						) : (
+							<Section
+								config={value}
+								className={`group`}
+								id={`${compoundID}-Group-Section`}
+								key={`${compoundID}-Group-Section`}
+								target={groupId}
+								title={titleText}
+								titleHTML={titleTextHTML}
+							>
+								<Info
+									informationText={infoText}
+									informationTextHTML={infoTextHTML}
+								/>
+								{inner}
+							</Section>
+						);
+
+					articles.push(
+						outerWrapper(
+							<Tabs
+								defaultValue={defaultTabValue || (tabItems[0] && tabItems[0].value)}
+								className="group-tabs"
+							>
+								<TabsList className="group-tabs-list">
+									{tabItems.map((item) => (
+										<TabsTrigger
+											className="cursor-pointer"
+											key={item.value}
+											value={item.value}>
+											{item.label}
+										</TabsTrigger>
+									))}
+								</TabsList>
+								{tabItems.map((item) => (
+									<TabsContent key={item.value} value={item.value}>
+										{item.content}
+									</TabsContent>
+								))}
+							</Tabs>
+						)
+					);
 				}
+
 				break;
 			}
-			case 'Jigsaw': {
+			case "Jigsaw": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -777,13 +1026,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'MemoryMatchGame': {
+			case "MemoryMatchGame": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -797,13 +1048,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'Monologue': {
+			case "Monologue": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -817,14 +1070,16 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'PhraseTable': {
+			case "PhraseTable": {
 				if (expandable) {
 					articles.push(
 						<AccordionArticle
 							config={value}
 							id={`${compoundID}-Accordion`}
 							key={`${compoundID}-Accordion`}
-							ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+							ref={(AccordionArticle) => {
+								window.refs.push(AccordionArticle);
+							}}
 							target={id}
 							title={titleText}
 							titleHTML={titleTextHTML}
@@ -843,7 +1098,6 @@ export default class App extends React.Component {
 							config={value}
 							id={`${compoundID}-Section`}
 							key={`${compoundID}-Section`}
-							// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
 							target={id}
 							title={titleText}
 							titleHTML={titleTextHTML}
@@ -859,13 +1113,15 @@ export default class App extends React.Component {
 				}
 				break;
 			}
-			case 'RadioQuiz': {
+			case "RadioQuiz": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -879,13 +1135,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'RadioTest': {
+			case "RadioTest": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -899,13 +1157,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'ReadAloud': {
+			case "ReadAloud": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -919,21 +1179,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'Section': {
+			case "Section": {
 				const renderedSectionContent = [];
 				const { content: sectionContent = [] } = value;
-				// console.log("sectionContent", sectionContent);
 
 				sectionContent.forEach((child) => {
 					for (const [/* key */, v] of Object.entries(child)) {
-						// console.log("v", v.id);
 						this.renderComponent(v, renderedSectionContent);
 					}
 				});
-
-				const {
-					id,
-				} = value;
 
 				articles.push(
 					<Section
@@ -949,13 +1203,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'Sortable': {
+			case "Sortable": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -969,13 +1225,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'WordGrid': {
+			case "WordGrid": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -989,13 +1247,15 @@ export default class App extends React.Component {
 				);
 				break;
 			}
-			case 'WordParts': {
+			case "WordParts": {
 				articles.push(
 					<AccordionArticle
 						config={value}
 						id={`${compoundID}-Accordion`}
 						key={`${compoundID}-Accordion`}
-						ref={AccordionArticle => {window.refs.push(AccordionArticle);}}
+						ref={(AccordionArticle) => {
+							window.refs.push(AccordionArticle);
+						}}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}
@@ -1010,24 +1270,18 @@ export default class App extends React.Component {
 				break;
 			}
 			default: {
-				// console.log("Component name:", component);
-				// console.log("AllCustomComponentsFR", AllCustomComponentsFR);
 				let CustomComponent;
 				switch (languageCode) {
-					case 'fr': {
+					case "fr":
 						CustomComponent = AllCustomComponentsFR[component];
 						break;
-					}
-					case 'sp': {
+					case "sp":
 						CustomComponent = AllCustomComponentsSP[component];
 						break;
-					}
-					default: {
+					default:
 						CustomComponent = AllCustomComponentsFR[component];
 						break;
-					}
 				}
-				// console.log(component.slice(0, 4), component);
 				if (CustomComponent) {
 					if (expandable) {
 						articles.push(
@@ -1035,16 +1289,18 @@ export default class App extends React.Component {
 								config={value}
 								id={`${compoundID}-Accordion`}
 								key={`${compoundID}-Accordion`}
-								ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
+								ref={(AccordionArticle) => {
+									window.refs.push(AccordionArticle);
+								}}
 								target={id}
 								title={titleText}
 								titleHTML={titleTextHTML}
 							>
-								<Info informationText={infoText} informationTextHTML={infoTextHTML}/>
-								<CustomComponent
-									id={id}
-									showDialog={this.showDialog}
+								<Info
+									informationText={infoText}
+									informationTextHTML={infoTextHTML}
 								/>
+								<CustomComponent id={id} showDialog={this.showDialog} />
 							</AccordionArticle>
 						);
 					} else {
@@ -1053,36 +1309,28 @@ export default class App extends React.Component {
 								config={value}
 								id={`${compoundID}-Section`}
 								key={`${compoundID}-Section`}
-								// ref={AccordionArticle => { window.refs.push(AccordionArticle); }}
 								target={id}
 								title={titleText}
 								titleHTML={titleTextHTML}
 							>
-								<CustomComponent
-									id={id}
-									showDialog={this.showDialog}
-								/>
+								<CustomComponent id={id} showDialog={this.showDialog} />
 							</Section>
-
 						);
 					}
-				} else if(component.slice(0, 4) === 'HIDE') {
-					// articles.push(
-					// 	<p>HIDE</p>
-					// );
+				} else if (component.slice(0, 4) === "HIDE") {
+					// do nothing
 				} else {
 					articles.push(
-						<p key={`notImplemented${id}`}>Component {component} not implemented</p>
+						<p key={`notImplemented${id}`}>
+              Component {component} not implemented
+						</p>
 					);
-					// console.log(`Component ${component} not implemented`);
 				}
 			}
 		}
-		// return articles;
 	};
 
 	selectLearningObject = (index) => {
-		// console.log("selectLearningObject", index);
 		this.setState({
 			currentLearningObject: index,
 		});
@@ -1096,4 +1344,3 @@ export default class App extends React.Component {
 		});
 	};
 }
-
