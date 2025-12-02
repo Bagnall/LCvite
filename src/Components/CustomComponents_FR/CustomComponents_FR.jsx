@@ -155,7 +155,6 @@ export class LO1Demystify2 extends PureComponent {
 					id={`${id ? `${id}Panel2` : ''}`}
 					key={`${id}Panel2`}
 				>
-					<p className={`special-anchor-target`} name={`tabTestName`}>Special test for target NAME in tabs!</p>
 					<h3>2. The French "<AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} >r</AudioClip>"</h3>
 					<p>The letter <AudioClip className={`link`} soundFile={`sounds/fr/r.mp3`} ><b>r</b></AudioClip> in French can prove tricky to begin with, so it's worth practising it right way.
 						It isn't the same sound as in English formed at the front of the mouth nor is it the rolled r of Spanish.
@@ -165,7 +164,6 @@ export class LO1Demystify2 extends PureComponent {
 					<AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoi<b>r</b></AudioClip>,&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/Au revoir.mp3`} >au <b>r</b>evoi<b>r</b></AudioClip>.</p>
 					<p>It is worth noting that the pronunciation of the letter <b>r</b> may vary across the French speaking world.</p>
-					<p className={`special-anchor-target`} id={`tabTestId`}>Special test for target ID in tabs!</p>
 				</div>
 			</div>
 		);
