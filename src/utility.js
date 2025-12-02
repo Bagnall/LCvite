@@ -207,21 +207,23 @@ export const handleSpecialLinkClick = (e) => {
 
 	// ---------------------------------------------------------------------------
 	// 1. Find target: MUST have .special-anchor-target, matched by id OR name
+	//    (manual scan to avoid any weird selector edge cases)
 	// ---------------------------------------------------------------------------
 
+	const candidates = document.querySelectorAll('.special-anchor-target');
 	let specialAnchorTarget = null;
 
-	// Try id first
-	const byId = document.getElementById(name);
-	if (byId && byId.classList && byId.classList.contains('special-anchor-target')) {
-		specialAnchorTarget = byId;
-	}
+	for (let i = 0; i < candidates.length; i += 1) {
+		const el = candidates[i];
+		if (!el) continue;
 
-	// Fallback: match by name attribute
-	if (!specialAnchorTarget) {
-		specialAnchorTarget = document.querySelector(
-			`.special-anchor-target[name="${name}"]`
-		);
+		const elId = el.id || el.getAttribute('id');
+		const elName = el.getAttribute('name');
+
+		if (elId === name || elName === name) {
+			specialAnchorTarget = el;
+			break;
+		}
 	}
 
 	if (!specialAnchorTarget) {
@@ -271,12 +273,12 @@ export const handleSpecialLinkClick = (e) => {
 			if (trigger) {
 				const isActive = trigger.getAttribute('data-state') === 'active';
 
-				// Only poke Radix if it's not already the active tab
+				// Only poke Radix/Shadcn if it's not already the active tab
 				if (!isActive) {
 					// Radix uses roving focus; make sure focus + click are both applied
 					trigger.focus();
 
-					// Dispatch a "realistic" click sequence so Radix' internal state updates cleanly
+					// Dispatch a "realistic" click sequence so internal state updates cleanly
 					['pointerdown', 'mousedown', 'mouseup', 'click'].forEach((type) => {
 						const ev = new MouseEvent(type, {
 							bubbles: true,
