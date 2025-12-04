@@ -164,7 +164,11 @@ export default class App extends React.Component {
 			if (anchor.setup) {
 				// do nothing
 			} else {
-				if (!anchor.classList.contains('nav')) anchor.addEventListener("click", (e) => handleSpecialLinkClick(e));
+				if (anchor.classList.contains('nav')) {
+					anchor.addEventListener("click", (e) => handleSpecialLinkClick(e, false));
+				} else {
+					anchor.addEventListener("click", (e) => handleSpecialLinkClick(e, true));
+				}
 			}
 			anchor.setup = true;
 		});

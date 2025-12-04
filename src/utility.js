@@ -184,13 +184,14 @@ export const scrollBack = () => {
 };
 
 export const scrollToElement = (element, showBackButton = true) => {
-
+	// console.log("scrollToElement");
 	if (!element) return;
 
 	// Get the main menu height
 	const mainMenu = document.getElementById('mainMenu');
 	if (!mainMenu) return;
 	const mainMenuHeight = mainMenu.offsetHeight;
+	// console.log("mainMenuHeight", mainMenuHeight);
 
 	const backToLinkButton = document.getElementById('backToLinkButton');
 	if (!backToLinkButton) return;
@@ -208,7 +209,7 @@ export const scrollToElement = (element, showBackButton = true) => {
 
 	// Where is our current scroll position (for back button)
 	backLink = scrollTop;
-	backToLinkButton.classList.add('show', 'flash');
+	if (showBackButton)backToLinkButton.classList.add('show', 'flash');
 
 	// Flag this as a programmatic scroll so listeners can ignore it
 	window.__programmaticScroll = true;
@@ -226,23 +227,17 @@ export const scrollToElement = (element, showBackButton = true) => {
 	}, 2000);
 
 	setTimeout(() => {
-		backToLinkButton.classList.remove('flash');
+		if (showBackButton)backToLinkButton.classList.remove('flash');
 	}, 2000);
 };
 
-export const handleSpecialLinkClick = (e) => {
+export const handleSpecialLinkClick = (e, showBackButton = true) => {
 	// Stop the browser's default "jump to hash"
 	e.preventDefault();
 
 	// Use currentTarget so nested spans inside the <a> don't confuse us
 	const href = e.currentTarget.getAttribute('href');
 	if (!href) return;
-
-	// Don't show backbutton for mainMenu anchors
-	const { classList } = e.currentTarget;
-	let showBackButton = true;
-	if (classList.contains('nav')) showBackButton = false;
-
 
 	// -------------------------------------------------------------------------
 	// Extract target name/id:
@@ -363,7 +358,7 @@ export const handleSpecialLinkClick = (e) => {
 							setTimeout(() => {
 								// Highlight + scroll once accordion has animated
 								specialAnchorTarget.classList.add('flash');
-								scrollToElement(specialAnchorTarget);
+								scrollToElement(specialAnchorTarget, showBackButton);
 								setTimeout(() => {
 									specialAnchorTarget.classList.remove('flash');
 								}, 5000);
@@ -386,7 +381,7 @@ export const handleSpecialLinkClick = (e) => {
 		// -----------------------------------------------------------------------
 		const doScroll = () => {
 			specialAnchorTarget.classList.add('flash');
-			scrollToElement(specialAnchorTarget);
+			scrollToElement(specialAnchorTarget, showBackButton);
 			setTimeout(() => {
 				specialAnchorTarget.classList.remove('flash');
 			}, 5000);

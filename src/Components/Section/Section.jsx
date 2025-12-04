@@ -92,7 +92,6 @@ export class Section extends React.PureComponent {
 					</div>
 				</div>
 				<TopButton />
-				{/* <button className={`top`} onClick={() => { scrollTo({ behavior: 'smooth', left: 0, top: 0 }); }}>Top</button> */}
 			</div>
 		);
 	};
