@@ -131,7 +131,7 @@ export class MainMenu extends React.Component {
 		if (document.documentElement.classList.contains("dark")) theme = 'sun';
 
 		return (
-			<div className="main-menu" id="mainMenu">
+			<div className="main-menu sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur text-foreground" id="mainMenu">
 				<NavigationMenu className="menu-root">
 
 					{/* FLEX container to split left vs right */}
