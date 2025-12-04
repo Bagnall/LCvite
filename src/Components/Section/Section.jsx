@@ -44,8 +44,8 @@ export class Section extends React.PureComponent {
 		} = this.props;
 
 		const {
-			informationText,
-			informationTextHTML,
+			// informationText,
+			// informationTextHTML,
 			instructionsText,
 			instructionsTextHTML,
 		} = config;

@@ -16,14 +16,12 @@ export class MainMenu extends React.Component {
 
 		super(props);
 		this.state = ({menuHighlight: `menuItem-intro`});
-		this.lastKnownScrollPosition = 0;
+		window.__lastKnownScrollPosition = 0;
 
 	}
 
 	componentDidMount = () => {
 		// console.log("MainMenu Mount");
-
-		let ticking = false;
 
 		// Determine if an element is in the visible viewport
 		const isInViewport = (element) => {
@@ -41,15 +39,25 @@ export class MainMenu extends React.Component {
 			);
 		};
 
+		let running = false;
 		document.addEventListener("scroll", () => {
-			this.lastKnownScrollPosition = window.scrollY;
+
+			window.__lastKnownScrollPosition = window.scrollY;
 			const { config } = this.props;
 
-			if (!ticking) {
+			if (!running) {
 				// console.log("scrolly e=", e);
 				// Throttle the event to "do something" every 200ms
 				setTimeout(() => {
 					// console.log("lastKnownScrollPosition", lastKnownScrollPosition);
+
+					// Is user uninterested in using back to link button?
+					// console.log("window.scrollY", window.scrollY, "window.__lastKnownScrollPosition", window.__lastKnownScrollPosition, window.scrollY - window.__lastKnownScrollPosition);
+					// if (window.scrollY - window.__lastKnownScrollPosition > 200 && window.__programmaticScroll === false) {
+					// 	// Uninterested
+					// 	const backToLinkButton = document.getElementById('backToLinkButton');
+					// 	backToLinkButton.classList.remove('show', 'flash');
+					// }
 
 					// const specialAnchorTargets = document.querySelectorAll('.special-anchor-target');
 					// specialAnchorTargets.forEach((sat) => {
@@ -77,10 +85,10 @@ export class MainMenu extends React.Component {
 					}
 
 
-					ticking = false;
+					running = false;
 				}, 200);
 
-				ticking = true;
+				running = true;
 			}
 
 		});
@@ -108,7 +116,7 @@ export class MainMenu extends React.Component {
 					<NavigationMenuItem className={`${highlight ? 'highlight' : ''} `} id={`menuItem-${id}`} key={`menuItem-${id}`}>
 						<NavigationMenuLink asChild>
 							<a
-								className="special-anchor nav-link"
+								className="special-anchor nav nav-link"
 								href={`#special-anchor-${id}`}
 							>
 								{menuText ? menuText : titleText}
@@ -134,7 +142,7 @@ export class MainMenu extends React.Component {
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
 									<a
-										className="special-anchor nav-title"
+										className="special-anchor nav nav-title"
 										href="#special-anchor-top"
 									>
 										{subTitle}
@@ -148,7 +156,7 @@ export class MainMenu extends React.Component {
 							<NavigationMenuItem className={`${introHighlight ? 'highlight' : ''}`} id="menu-item-intro" key="menu-item-intro">
 								<NavigationMenuLink asChild>
 									<a
-										className="special-anchor nav-link"
+										className="special-anchor nav nav-link"
 										href="#special-anchor-intro"
 									>
 										Introduction

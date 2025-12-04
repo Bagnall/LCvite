@@ -169,8 +169,31 @@ export const handleResponseText = (response) => {
 		});
 };
 
-function scrollToElement(element, menuOffset) {
+let backLink = 0;
+let programmaticScrollTimeout;
+export const scrollBack = () => {
+	// Scroll to back to last position before link was clicked
+	window.scrollTo({
+		behavior: 'smooth',
+		left: 0,
+		top: backLink,
+	});
+	const backToLinkButton = document.getElementById('backToLinkButton');
+	backToLinkButton.classList.remove('show', 'flash');
+
+};
+
+export const scrollToElement = (element, showBackButton = true) => {
+
 	if (!element) return;
+
+	// Get the main menu height
+	const mainMenu = document.getElementById('mainMenu');
+	if (!mainMenu) return;
+	const mainMenuHeight = mainMenu.offsetHeight;
+
+	const backToLinkButton = document.getElementById('backToLinkButton');
+	if (!backToLinkButton) return;
 
 	// Get bounding rectangle relative to viewport
 	const rect = element.getBoundingClientRect();
@@ -180,8 +203,16 @@ function scrollToElement(element, menuOffset) {
 	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
 	// Calculate coordinates relative to the page
-	const top = rect.top + scrollTop - menuOffset;
+	const top = rect.top + scrollTop - mainMenuHeight;
 	const left = rect.left + scrollLeft;
+
+	// Where is our current scroll position (for back button)
+	backLink = scrollTop;
+	backToLinkButton.classList.add('show', 'flash');
+
+	// Flag this as a programmatic scroll so listeners can ignore it
+	window.__programmaticScroll = true;
+	if (programmaticScrollTimeout) clearTimeout(programmaticScrollTimeout);
 
 	// Scroll to that position
 	window.scrollTo({
@@ -189,7 +220,15 @@ function scrollToElement(element, menuOffset) {
 		left: left,
 		top: top,
 	});
-}
+
+	programmaticScrollTimeout = setTimeout(() => {
+		window.__programmaticScroll = false;
+	}, 2000);
+
+	setTimeout(() => {
+		backToLinkButton.classList.remove('flash');
+	}, 2000);
+};
 
 export const handleSpecialLinkClick = (e) => {
 	// Stop the browser's default "jump to hash"
@@ -199,17 +238,24 @@ export const handleSpecialLinkClick = (e) => {
 	const href = e.currentTarget.getAttribute('href');
 	if (!href) return;
 
-	const [, rawName] = href.split('#');
-	if (!rawName) return;
+	// Don't show backbutton for mainMenu anchors
+	const { classList } = e.currentTarget;
+	let showBackButton = true;
+	if (classList.contains('nav')) showBackButton = false;
 
-	const name = rawName.trim();
+
+	// -------------------------------------------------------------------------
+	// Extract target name/id:
+	// - use the part after the LAST '#'
+	// - strip any leading '.' or '#' (so .#foo -> foo, #foo -> foo)
+	// -------------------------------------------------------------------------
+	const rawAfterHash = href.split('#').pop() || '';
+	const name = rawAfterHash.replace(/^[.#]+/, '').trim();
 	if (!name) return;
 
-	// ---------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 	// 1. Find target: MUST have .special-anchor-target, matched by id OR name
-	//    (manual scan to avoid any weird selector edge cases)
-	// ---------------------------------------------------------------------------
-
+	// -------------------------------------------------------------------------
 	const candidates = document.querySelectorAll('.special-anchor-target');
 	let specialAnchorTarget = null;
 
@@ -231,10 +277,12 @@ export const handleSpecialLinkClick = (e) => {
 		return;
 	}
 
-	// ---------------------------------------------------------------------------
+	// We'll use this to know whether we just activated a tab
+	let activatedTab = false;
+
+	// -------------------------------------------------------------------------
 	// 2. TAB SUPPORT (shadcn / Radix Tabs)
-	//    If the target is inside a tabpanel, activate the corresponding tab trigger
-	// ---------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 	const tabPanel = specialAnchorTarget.closest('[role="tabpanel"]');
 
 	if (tabPanel) {
@@ -275,6 +323,8 @@ export const handleSpecialLinkClick = (e) => {
 
 				// Only poke Radix/Shadcn if it's not already the active tab
 				if (!isActive) {
+					activatedTab = true;
+
 					// Radix uses roving focus; make sure focus + click are both applied
 					trigger.focus();
 
@@ -292,9 +342,9 @@ export const handleSpecialLinkClick = (e) => {
 		}
 	}
 
-	// ---------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 	// 3. ACCORDION SUPPORT – your existing window.refs pattern
-	// ---------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 	let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
 
 	if (accordionArticle !== null) {
@@ -313,7 +363,7 @@ export const handleSpecialLinkClick = (e) => {
 							setTimeout(() => {
 								// Highlight + scroll once accordion has animated
 								specialAnchorTarget.classList.add('flash');
-								scrollToElement(specialAnchorTarget, 80);
+								scrollToElement(specialAnchorTarget);
 								setTimeout(() => {
 									specialAnchorTarget.classList.remove('flash');
 								}, 5000);
@@ -332,12 +382,22 @@ export const handleSpecialLinkClick = (e) => {
 	} else {
 		// -----------------------------------------------------------------------
 		// 4. Plain target: just scroll + flash
+		//    BUT: if we just activated a tab, give Radix a moment to switch panels
 		// -----------------------------------------------------------------------
-		specialAnchorTarget.classList.add('flash');
-		scrollToElement(specialAnchorTarget, 80);
-		setTimeout(() => {
-			specialAnchorTarget.classList.remove('flash');
-		}, 5000);
+		const doScroll = () => {
+			specialAnchorTarget.classList.add('flash');
+			scrollToElement(specialAnchorTarget);
+			setTimeout(() => {
+				specialAnchorTarget.classList.remove('flash');
+			}, 5000);
+		};
+
+		if (activatedTab) {
+			// Small delay so the tab content is visible before we measure/scroll
+			setTimeout(doScroll, 250);
+		} else {
+			doScroll();
+		}
 	}
 };
 

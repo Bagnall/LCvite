@@ -1,11 +1,19 @@
 import './IconButton.scss';
 import { Button } from "@/components/ui/button";
 import React from 'react';
+
+/**
+ * IconButton renders a themed icon button using the shadcn Button component.
+ * Props: `children` optional label/content, `className` extra classes, `id` DOM id,
+ * `onClick` click handler, `size` forwarded to the Button, `theme` icon variant,
+ * and `title` for the tooltip/accessibility title.
+ */
 export class IconButton extends React.PureComponent {
 	render = () => {
 		const {
 			children,
 			className,
+			id,
 			onClick,
 			size,
 			theme = 'reset',
@@ -14,6 +22,16 @@ export class IconButton extends React.PureComponent {
 		let svgContent;
 		let extraClasses = '';
 		switch (theme){
+			case 'back': {
+				svgContent = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="m12 8-4 4 4 4" /><path d="M16 12H8" />
+				</svg>;
+				break;
+			}
 			case 'reset': {
 				svgContent = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" strokeWidth="2"
 					strokeLinecap="round" strokeLinejoin="round" stroke="currentColor" >
@@ -101,6 +119,7 @@ export class IconButton extends React.PureComponent {
 		}
 		return (
 			<Button
+				id={`${id ? id : ''}`}
 				size={size}
 				className={`icon-button ${className ? className : ''} ${extraClasses}`}
 				onClick={onClick}

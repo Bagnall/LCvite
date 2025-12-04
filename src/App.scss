@@ -169,6 +169,31 @@ html {
 	display: none;
 }
 
+button.back-to-link-button {
+	position: fixed;
+	right: 2px;
+	top: 50%;
+	z-index: 999;
+	display: none;
+	opacity: 0;
+	transition:
+		display 1s 1s,
+		opacity 1s;
+	&.show {
+		display: flex;
+		opacity: 1;
+		transition:
+			display 0s,
+			opacity 0.1s 1s;
+	}
+	&.flash {
+		animation-name: button-flash-animation;
+		animation-duration: 1000ms;
+		animation-timing-function: ease;
+		animation-iteration-count: 3;
+	}
+}
+
 .flash {
 	animation-name: flash-animation;
 	animation-duration: 1000ms;
@@ -187,6 +212,21 @@ html {
 		background-color: rgba(166, 255, 0, 0);
 	}
 }
+
+@keyframes button-flash-animation {
+	0% {
+		background-color: rgba(166, 255, 0, 0);
+		color: black;
+	}
+	50% {
+		background-color: rgba(166, 255, 0, 1);
+	}
+	100% {
+		background-color: rgba(166, 255, 0, 0);
+		color: initial;
+	}
+}
+
 #hero {
 	// background: green;
 	// background-image: url(../img/swahili.png), url(../img/basic.png), url(../img/banner.png);

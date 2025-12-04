@@ -13,6 +13,7 @@ import {
 	Flag,
 	Footer,
 	Header,
+	IconButton,
 	Info,
 	Jigsaw,
 	LandingPage,
@@ -35,15 +36,16 @@ import {
 	handleSpecialLinkClick,
 	isTouchChrome,
 	playAudioLink,
+	scrollBack,
 	speak,
 } from "./utility";
-// NEW: shadcn tabs
-import {
+import{
 	Tabs,
 	TabsContent,
 	TabsList,
 	TabsTrigger,
 } from "@/components/ui/tabs";
+
 import { AllCustomComponentsFR } from "./Components/CustomComponents_FR/index.js";
 import { AllCustomComponentsSP } from "./Components/CustomComponents_SP/index.js";
 import DOMPurify from "dompurify";
@@ -78,6 +80,7 @@ export default class App extends React.Component {
 		this.toggleDark = this.toggleDark.bind(this);
 
 		window.refs = [];
+		this.backLink = 0;
 	}
 
 	clearError = (index) => {
@@ -161,7 +164,7 @@ export default class App extends React.Component {
 			if (anchor.setup) {
 				// do nothing
 			} else {
-				anchor.addEventListener("click", (e) => handleSpecialLinkClick(e));
+				if (!anchor.classList.contains('nav')) anchor.addEventListener("click", (e) => handleSpecialLinkClick(e));
 			}
 			anchor.setup = true;
 		});
@@ -629,6 +632,12 @@ export default class App extends React.Component {
 						id={`special-anchor-top`}
 						name={`special-anchor-top`}
 					/>
+					<IconButton
+						id={`backToLinkButton`}
+						size={`sm`}
+						theme={`back`}
+						className={`back-to-link-button cursor-pointer`}
+						onClick={scrollBack}>Back to link</IconButton>
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}

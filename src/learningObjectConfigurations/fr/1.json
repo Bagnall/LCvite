@@ -51,7 +51,7 @@
 							"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
 						],
 						[
-							"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='.#tuvous'>vous</a> ?",
+							"Bonjour Monsieur Letort ! Ça va très bien. Et <a class='special-anchor' href='#tuvous'>vous</a> ?",
 							"Hello M Letort, I'm very well, thank you. And you?",
 							"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
 						],
@@ -71,12 +71,12 @@
 					"informationTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
-							"Comment t'appelles-<a class='special-anchor' href='.#tuvous'>tu</a> ?",
+							"Comment t'appelles-<a class='special-anchor' href='#tuvous'>tu</a> ?",
 							"What's your name?",
 							"sounds/fr/Comment t'appelles-tu.mp3"
 						],
 						[
-							"Je m'appelle Max, et <a class='special-anchor' href='.#toi'>toi</a> ?",
+							"Je m'appelle Max, et <a class='special-anchor' href='#toi'>toi</a> ?",
 							"My name is Max. And you're….?",
 							"sounds/fr/Je m'appelle Max, et toi.mp3"
 						],
@@ -96,7 +96,7 @@
 					"informationTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
-							"Comment <a class='special-anchor' href='.#tuvous'>vous</a> appelez-vous ?",
+							"Comment <a class='special-anchor' href='#tuvous'>vous</a> appelez-vous ?",
 							"What's your name?",
 							"sounds/fr/Comment vous appelez-vous.mp3"
 						],
