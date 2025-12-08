@@ -5,7 +5,6 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { handleSpecialLinkClick } from "../../utility.js";
 import { IconButton } from "..";
 import React from "react";
 
@@ -20,19 +19,21 @@ export class MainMenu extends React.Component {
 	}
 
 	componentDidMount = () => {
-		// Determine if an element is in the visible viewport
 		const isInViewport = (element) => {
 			if (!element) return false;
+
 			const mainMenu = document.getElementById("mainMenu");
 			const mainMenuRect = mainMenu
 				? mainMenu.getBoundingClientRect()
 				: { bottom: 0 };
 			const { bottom: mainMenuBottom } = mainMenuRect;
+
 			const rect = element.getBoundingClientRect();
 			const html = document.documentElement;
+
 			return (
-				rect.top >= 0 + mainMenuBottom &&
-        rect.bottom <= (window.innerHeight || html.clientHeight)
+				rect.top >= mainMenuBottom &&
+				rect.bottom <= (window.innerHeight || html.clientHeight)
 			);
 		};
 
@@ -42,30 +43,32 @@ export class MainMenu extends React.Component {
 			window.__lastKnownScrollPosition = window.scrollY;
 			const { config } = this.props;
 
-			if (!config) return;
-
 			if (!running) {
-				running = true;
-
 				setTimeout(() => {
-					// Is introduction in view?
-					const target = document.getElementById(`special-anchor-intro`);
-					if (target !== null && isInViewport(target)) {
-						this.setState({ menuHighlight: `menuItem-intro` });
+					// Check intro first
+					const introTarget = document.getElementById("special-anchor-intro");
+					if (introTarget !== null && isInViewport(introTarget)) {
+						this.setState({ menuHighlight: "menuItem-intro" });
 					} else {
-						for (const [, value] of Object.entries(config)) {
-							const { id } = value;
-							const sectionTarget = document.getElementById(
-								`special-anchor-${id}`
-							);
-							if (isInViewport(sectionTarget)) {
-								this.setState({ menuHighlight: `menuItem-${id}` });
+						if (config) {
+							for (const [, value] of Object.entries(config)) {
+								const { id } = value;
+								const target = document.getElementById(
+									`special-anchor-${id}`
+								);
+								if (isInViewport(target)) {
+									// Use first matching section only
+									this.setState({ menuHighlight: `menuItem-${id}` });
+									break;
+								}
 							}
 						}
 					}
 
 					running = false;
 				}, 200);
+
+				running = true;
 			}
 		};
 
@@ -92,19 +95,13 @@ export class MainMenu extends React.Component {
 		this.setState((prev) => ({ mobileOpen: !prev.mobileOpen }));
 	};
 
-	/**
-   * Shared nav click handler for desktop + mobile.
-   * Uses your existing handleSpecialLinkClick for smart scrolling,
-   * and closes the mobile menu if it’s open.
-   */
-	handleNavClick = (e) => {
-		// Use your global special link handler (handles preventDefault internally)
-		handleSpecialLinkClick(e, true); // or false if you *don’t* want the back button
-
-		// Close mobile menu if open
+	handleNavClick = (href) => {
+		// Close mobile menu on click (for mobile)
 		if (this.state.mobileOpen) {
 			this.setState({ mobileOpen: false });
 		}
+		// Let the browser handle the anchor jump; highlight will then be
+		// updated by the scroll handler as the section comes into view.
 	};
 
 	render = () => {
@@ -137,7 +134,7 @@ export class MainMenu extends React.Component {
 							<a
 								className="special-anchor nav nav-link"
 								href={href}
-								onClick={this.handleNavClick}
+								onClick={() => this.handleNavClick(href)}
 							>
 								{label}
 							</a>
@@ -147,11 +144,14 @@ export class MainMenu extends React.Component {
 
 				// Mobile item
 				mobileMenuItems.push(
-					<li key={`mobile-${id}`} className={highlight ? "highlight" : ""}>
+					<li
+						key={`mobile-${id}`}
+						className={highlight ? "highlight" : ""}
+					>
 						<a
 							href={href}
-							className="nav-link nav-link-mobile special-anchor"
-							onClick={this.handleNavClick}
+							className="nav-link nav-link-mobile"
+							onClick={() => this.handleNavClick(href)}
 						>
 							{label}
 						</a>
@@ -171,7 +171,7 @@ export class MainMenu extends React.Component {
 
 		return (
 			<header className="main-menu" id="mainMenu">
-				<NavigationMenu className="menu-root w-100">
+				<NavigationMenu className="menu-root">
 					<div className="menu-flex">
 						{/* LEFT — Title / brand */}
 						<NavigationMenuList className="menu-left">
@@ -180,7 +180,7 @@ export class MainMenu extends React.Component {
 									<a
 										className="special-anchor nav nav-title"
 										href="#special-anchor-top"
-										onClick={this.handleNavClick}
+										onClick={() => this.handleNavClick("#special-anchor-top")}
 									>
 										{subTitle}
 									</a>
@@ -199,9 +199,9 @@ export class MainMenu extends React.Component {
 									<a
 										className="special-anchor nav nav-link"
 										href={introHref}
-										onClick={this.handleNavClick}
+										onClick={() => this.handleNavClick(introHref)}
 									>
-                    Introduction
+										Introduction
 									</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -225,16 +225,15 @@ export class MainMenu extends React.Component {
 							/>
 							<button
 								type="button"
-								className={`menu-toggle-button ${
-									mobileOpen ? "is-open" : ""
-								}`}
+								className={`menu-toggle-button ${mobileOpen ? "is-open" : ""
+									}`}
 								aria-label="Toggle navigation menu"
 								aria-expanded={mobileOpen}
 								onClick={this.toggleMobileMenu}
 							>
 								{/* Hamburger / close icon */}
 								{!mobileOpen ? (
-								// Hamburger
+									// Hamburger
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -243,7 +242,7 @@ export class MainMenu extends React.Component {
 										<path d="M4 6h16M4 12h16M4 18h16" />
 									</svg>
 								) : (
-								// Close
+									// Close
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 24 24"
@@ -256,7 +255,6 @@ export class MainMenu extends React.Component {
 						</div>
 					</div>
 				</NavigationMenu>
-
 				{/* MOBILE DROPDOWN NAV */}
 				<nav
 					className={`mobile-menu ${mobileOpen ? "open" : ""}`}
@@ -266,10 +264,10 @@ export class MainMenu extends React.Component {
 						<li className={introHighlight ? "highlight" : ""}>
 							<a
 								href={introHref}
-								className="nav-link nav-link-mobile special-anchor"
-								onClick={this.handleNavClick}
+								className="nav-link nav-link-mobile"
+								onClick={() => this.handleNavClick(introHref)}
 							>
-                Introduction
+								Introduction
 							</a>
 						</li>
 						{mobileMenuItems}

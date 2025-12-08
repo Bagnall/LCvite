@@ -1,20 +1,18 @@
-/*
-ResetButton.scss
-*/
+.icon-button {
+	/* Let the shadcn Button handle sizing, just tweak visuals */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 9999px;
 
-// .icon-button {
-// 	color: white;
-// 	svg,
-// 	.svg {
-// 		fill: white;
-// 		stroke: white;
-// 	}
-// }
+	background-color: transparent;
+}
 
-// .reset-button {
-// 	&-container {
-// 		display: flex;
-// 		// border: 1px solid red;
-// 		justify-content: flex-end;
-// 	}
-// }
+/* All SVG icons inside IconButton */
+.icon-button svg {
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	stroke: currentColor;
+	fill: none;
+}

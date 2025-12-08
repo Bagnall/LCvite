@@ -239,32 +239,6 @@
 					],
 					"titleText": "Answering Questions"
 				}
-			},
-			{
-				"sortable1": {
-					"component": "Sortable",
-					"id": "sortable1",
-					"titleText": "Small talk",
-					"proinstructionsTextmpt": "Put the sentences in a natural order to form a short dialogue.",
-					"shuffleOnLoad": true,
-					"phrases": [
-						[
-							"grenouille",
-							"frog",
-							"sounds/fr/grenouille.mp3"
-						],
-						[
-							"chat",
-							"cat",
-							"sounds/fr/chat.mp3"
-						],
-						[
-							"chien",
-							"dog",
-							"sounds/fr/chien.mp3"
-						]
-					]
-				}
 			}
 		],
 		"expandable": false,

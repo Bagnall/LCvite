@@ -1,4 +1,5 @@
 // src/Components/Accordion/Section.jsx
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
 	Info,
 	TopButton
@@ -61,37 +62,49 @@ export class Section extends React.PureComponent {
 				className={`section ${className ? className : ''}`}
 				id={`${id}`}
 			>
-				<span className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`} >
-					<h2>{titleHTML ? (
-						<span
-							dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(titleHTML) }}
-						/>
-					) : (
-						<span
-						>{title}</span>
-					)}</h2>
-				</span>
-				{/* <Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/> */}
-				{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null}
+				<Card className="w-full sortable mt-8">
+					<CardHeader>
+						<CardTitle className="text-base">{/* font-semibold">*/}
+							<span className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`} >
+								<h2>{titleHTML ? (
+									<span
+										dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(titleHTML) }}
+									/>
+								) : (
+									<span
+									>{title}</span>
+								)}</h2>
+							</span>
 
-				<div
-					id={`${id}`}
-					name={`article-${id}`}
-					key={`article-${id}`}
-				>
-					<div
-						id={`content-${id}`}
-						onClick={this.doNowt}
-					>
+							{/* {title} */}
+						</CardTitle>
+						{/* <Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/> */}
+						{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
+						{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null}
+
+					</CardHeader>
+
+					<CardContent>
+
 						<div
-							className={`pb-5 text-sm text-slate-500`}
+							id={`${id}`}
+							name={`article-${id}`}
+							key={`article-${id}`}
 						>
-							{children}
+							<div
+								id={`content-${id}`}
+								onClick={this.doNowt}
+							>
+								<div
+									className={`pb-5 text-sm text-slate-500`}
+								>
+									{children}
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<TopButton />
+						<TopButton />
+					</CardContent>
+				</Card>
 			</div>
 		);
 	};

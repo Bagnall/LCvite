@@ -1,3 +1,4 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DOMPurify from "dompurify";
 import {Info} from '..';
 import React from 'react';
@@ -64,6 +65,7 @@ export class AccordionArticle extends React.PureComponent {
 			children,
 			className,
 			info,
+			noCard = false,
 			target,
 			title = '',
 			titleHTML = '',
@@ -123,9 +125,18 @@ export class AccordionArticle extends React.PureComponent {
 					</svg>
 					{h2}
 				</header>
-				<div className='content'>
-					{children}
-				</div>
+
+				{noCard ?
+					<div className='content'>
+						{children}
+					</div>
+					:
+					<Card className="content w-full sortable mt-4">
+						<CardContent>
+							{children}
+						</CardContent>
+					</Card>
+				}
 			</article >
 		);
 	};

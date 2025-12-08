@@ -1258,6 +1258,7 @@ export default class App extends React.Component {
 						ref={(AccordionArticle) => {
 							window.refs.push(AccordionArticle);
 						}}
+						noCard={true}
 						target={id}
 						title={titleText}
 						titleHTML={titleTextHTML}

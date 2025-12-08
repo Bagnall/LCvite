@@ -187,11 +187,22 @@ export const scrollToElement = (element, showBackButton = true) => {
 	// console.log("scrollToElement");
 	if (!element) return;
 
-	// Get the main menu height
 	const mainMenu = document.getElementById('mainMenu');
 	if (!mainMenu) return;
-	const mainMenuHeight = mainMenu.offsetHeight;
-	// console.log("mainMenuHeight", mainMenuHeight);
+
+	// Start with the full mainMenu height (this was your original behaviour
+	// and works correctly on desktop).
+	let mainMenuHeight = mainMenu.offsetHeight;
+
+	// If the mobile dropdown is open, its height is included in mainMenuHeight.
+	// We want only the fixed header height, so subtract the dropdown height.
+	const mobileMenu = mainMenu.querySelector('.mobile-menu');
+	if (mobileMenu && mobileMenu.offsetHeight > 0) {
+		// dropdown visible -> remove its height from the offset
+		mainMenuHeight -= mobileMenu.offsetHeight;
+	}
+
+	// console.log("mainMenuHeight (adjusted)", mainMenuHeight);
 
 	const backToLinkButton = document.getElementById('backToLinkButton');
 	if (!backToLinkButton) return;
@@ -203,13 +214,13 @@ export const scrollToElement = (element, showBackButton = true) => {
 	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-	// Calculate coordinates relative to the page
+	// Calculate coordinates relative to the page, minus header height
 	const top = rect.top + scrollTop - mainMenuHeight;
 	const left = rect.left + scrollLeft;
 
 	// Where is our current scroll position (for back button)
 	backLink = scrollTop;
-	if (showBackButton)backToLinkButton.classList.add('show', 'flash');
+	if (showBackButton) backToLinkButton.classList.add('show', 'flash');
 
 	// Flag this as a programmatic scroll so listeners can ignore it
 	window.__programmaticScroll = true;
@@ -218,8 +229,8 @@ export const scrollToElement = (element, showBackButton = true) => {
 	// Scroll to that position
 	window.scrollTo({
 		behavior: 'smooth',
-		left: left,
-		top: top,
+		left,
+		top,
 	});
 
 	programmaticScrollTimeout = setTimeout(() => {
@@ -227,11 +238,14 @@ export const scrollToElement = (element, showBackButton = true) => {
 	}, 2000);
 
 	setTimeout(() => {
-		if (showBackButton)backToLinkButton.classList.remove('flash');
+		if (showBackButton) backToLinkButton.classList.remove('flash');
 	}, 2000);
 };
 
+
 export const handleSpecialLinkClick = (e, showBackButton = true) => {
+
+	// console.log("handleSpecialLinkClick");
 	// Stop the browser's default "jump to hash"
 	e.preventDefault();
 
