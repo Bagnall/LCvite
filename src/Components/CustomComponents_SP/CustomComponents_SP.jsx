@@ -222,28 +222,28 @@ export class LO1UngenderedSpanish extends PureComponent {
 						<p className="px-5 text-xl">
         Learn how:
 						</p>
-						<table>
-							<tbody>
-								<tr>
-									<td><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>una amiga ruidosa</b></AudioClip></td><td>a loud (female) friend</td></tr>
-								<tr>
-									<td><AudioClip className={`link`} soundFile={`sounds/sp/un amigo ruidoso.mp3`}><b>un amigo ruidoso</b></AudioClip></td><td>a loud (male) friend</td></tr>
-								<tr>
-									<td><AudioClip className={`link`} soundFile={`sounds/sp/unas amigas ruidosas.mp3`}><b>unas amigas ruidosas</b></AudioClip></td><td>some loud (female) friends</td></tr>
-								<tr>
-									<td><AudioClip className={`link`} soundFile={`sounds/sp/unos amigos ruidosos.mp3`}><b>unos amigos ruidosos</b></AudioClip></td><td>some loud (not-all-female) friends</td></tr>
-							</tbody>
-						</table>
+						<Table>
+							<TableBody>
+								<TableRow>
+									<TableCell><AudioClip className={`link`} soundFile={`sounds/sp/una amiga ruidosa.mp3`}><b>una amiga ruidosa</b></AudioClip></TableCell><TableCell>a loud (female) friend</TableCell></TableRow>
+								<TableRow>
+									<TableCell><AudioClip className={`link`} soundFile={`sounds/sp/un amigo ruidoso.mp3`}><b>un amigo ruidoso</b></AudioClip></TableCell><TableCell>a loud (male) friend</TableCell></TableRow>
+								<TableRow>
+									<TableCell><AudioClip className={`link`} soundFile={`sounds/sp/unas amigas ruidosas.mp3`}><b>unas amigas ruidosas</b></AudioClip></TableCell><TableCell>some loud (female) friends</TableCell></TableRow>
+								<TableRow>
+									<TableCell><AudioClip className={`link`} soundFile={`sounds/sp/unos amigos ruidosos.mp3`}><b>unos amigos ruidosos</b></AudioClip></TableCell><TableCell>some loud (not-all-female) friends</TableCell></TableRow>
+							</TableBody>
+						</Table>
 						<br/>
 						<p className="px-5 text-xl">
         following the development of gender-neutral -e:
 						</p>
-						<table>
-							<tbody>
-								<tr>
-									<td><b>unes amigues ruidoses</b></td><td>some loud friends</td></tr>
-							</tbody>
-						</table>
+						<Table>
+							<TableBody>
+								<TableRow>
+									<TableCell><b>unes amigues ruidoses</b></TableCell><TableCell>some loud friends</TableCell></TableRow>
+							</TableBody>
+						</Table>
 					</section>
 				</div>
 			</div>

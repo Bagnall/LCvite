@@ -244,13 +244,15 @@ export const scrollToElement = (element, showBackButton = true) => {
 
 
 export const handleSpecialLinkClick = (e, showBackButton = true) => {
-
 	// console.log("handleSpecialLinkClick");
+
 	// Stop the browser's default "jump to hash"
 	e.preventDefault();
 
+	const linkEl = e.currentTarget;
+
 	// Use currentTarget so nested spans inside the <a> don't confuse us
-	const href = e.currentTarget.getAttribute('href');
+	const href = linkEl.getAttribute("href");
 	if (!href) return;
 
 	// -------------------------------------------------------------------------
@@ -258,22 +260,22 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 	// - use the part after the LAST '#'
 	// - strip any leading '.' or '#' (so .#foo -> foo, #foo -> foo)
 	// -------------------------------------------------------------------------
-	const rawAfterHash = href.split('#').pop() || '';
-	const name = rawAfterHash.replace(/^[.#]+/, '').trim();
+	const rawAfterHash = href.split("#").pop() || "";
+	const name = rawAfterHash.replace(/^[.#]+/, "").trim();
 	if (!name) return;
 
 	// -------------------------------------------------------------------------
 	// 1. Find target: MUST have .special-anchor-target, matched by id OR name
 	// -------------------------------------------------------------------------
-	const candidates = document.querySelectorAll('.special-anchor-target');
+	const candidates = document.querySelectorAll(".special-anchor-target");
 	let specialAnchorTarget = null;
 
 	for (let i = 0; i < candidates.length; i += 1) {
 		const el = candidates[i];
 		if (!el) continue;
 
-		const elId = el.id || el.getAttribute('id');
-		const elName = el.getAttribute('name');
+		const elId = el.id || el.getAttribute("id");
+		const elName = el.getAttribute("name");
 
 		if (elId === name || elName === name) {
 			specialAnchorTarget = el;
@@ -297,8 +299,8 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 	if (tabPanel) {
 		// Try to find the Tabs "root" element – your markup uses .group-tabs as wrapper
 		let tabRoot =
-      tabPanel.closest('.group-tabs') || // your class
-      tabPanel.parentElement;
+			tabPanel.closest(".group-tabs") || // your class
+			tabPanel.parentElement;
 
 		while (tabRoot && !tabRoot.querySelector('[role="tablist"]')) {
 			tabRoot = tabRoot.parentElement;
@@ -328,7 +330,7 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 			}
 
 			if (trigger) {
-				const isActive = trigger.getAttribute('data-state') === 'active';
+				const isActive = trigger.getAttribute("data-state") === "active";
 
 				// Only poke Radix/Shadcn if it's not already the active tab
 				if (!isActive) {
@@ -338,7 +340,7 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 					trigger.focus();
 
 					// Dispatch a "realistic" click sequence so internal state updates cleanly
-					['pointerdown', 'mousedown', 'mouseup', 'click'].forEach((type) => {
+					["pointerdown", "mousedown", "mouseup", "click"].forEach((type) => {
 						const ev = new MouseEvent(type, {
 							bubbles: true,
 							cancelable: true,
@@ -354,27 +356,27 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 	// -------------------------------------------------------------------------
 	// 3. ACCORDION SUPPORT – your existing window.refs pattern
 	// -------------------------------------------------------------------------
-	let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
+	let accordionArticle = specialAnchorTarget.closest("article.accordion-article");
 
 	if (accordionArticle !== null) {
 		while (accordionArticle) {
 			try {
 				const ref =
-          window.refs &&
-          window.refs.find(
-          	(r) => r && r.props && r.props.id === accordionArticle.id
-          );
+					window.refs &&
+					window.refs.find(
+						(r) => r && r.props && r.props.id === accordionArticle.id
+					);
 
-				if (ref && typeof ref.setState === 'function') {
+				if (ref && typeof ref.setState === "function") {
 					ref.setState(
 						{ expanded: true },
 						() =>
 							setTimeout(() => {
 								// Highlight + scroll once accordion has animated
-								specialAnchorTarget.classList.add('flash');
+								specialAnchorTarget.classList.add("flash");
 								scrollToElement(specialAnchorTarget, showBackButton);
 								setTimeout(() => {
-									specialAnchorTarget.classList.remove('flash');
+									specialAnchorTarget.classList.remove("flash");
 								}, 5000);
 							}, 500)
 					);
@@ -385,7 +387,7 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 			}
 
 			accordionArticle = accordionArticle.parentNode
-				? accordionArticle.parentNode.closest('article.accordion-article')
+				? accordionArticle.parentNode.closest("article.accordion-article")
 				: null;
 		}
 	} else {
@@ -394,10 +396,10 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 		//    BUT: if we just activated a tab, give Radix a moment to switch panels
 		// -----------------------------------------------------------------------
 		const doScroll = () => {
-			specialAnchorTarget.classList.add('flash');
+			specialAnchorTarget.classList.add("flash");
 			scrollToElement(specialAnchorTarget, showBackButton);
 			setTimeout(() => {
-				specialAnchorTarget.classList.remove('flash');
+				specialAnchorTarget.classList.remove("flash");
 			}, 5000);
 		};
 

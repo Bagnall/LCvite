@@ -9,6 +9,14 @@ import {
 	// RadioField,
 	// RadioGroup,
 } from '..';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	// TableHead,
+	// TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 import DOMPurify from "dompurify";
 import React from 'react';
 import {
@@ -40,11 +48,11 @@ export class RadioQuiz extends React.Component {
 		const {
 			// id,
 			onComplete = () => { },
-			showDialog,
+			// showDialog,
 		} = this.props;
 		const {
 			answers,
-			congratulationsText,
+			// congratulationsText,
 			disabled,
 			phrases,
 		} = this.state;
@@ -68,7 +76,7 @@ export class RadioQuiz extends React.Component {
 			nCorrect++;
 			if (nCorrect === phrases.length) {
 				// tadaAudio.play();
-				showDialog(congratulationsText);
+				// showDialog(congratulationsText);
 				onComplete();
 			}
 			disabled[rowNum] = true;
@@ -142,22 +150,24 @@ export class RadioQuiz extends React.Component {
 			const radios = [];
 			for (let j = 0; j < options.length; j++) {
 				radios.push(
-					<label
-						className={disabled[i] ? 'disabled' : ''}
-						key={`label-${id}-${i}-${j}`}
-						onClick={(e) => this.handleChange(e, i, j)}
-						forhtml={`${id}-${i}-${j}`}>{options[j]}:&nbsp;
-						<input
-							checked={answers && answers[i] && answers[i][j] ? true : ''}
-							disabled={disabled[i] === true}
-							id={`${id}-${i}-${j}`}
-							key={`input-${id}-${i}-${j}`}
-							visible-key={`input-${id}-${i}-${j}`}
-							name={`${id}-${i}`}
-							type={`checkbox`}
-							onChange={(e) => this.handleChange(e, i, j)}
-						/>
-					</label>
+					<TableCell key={`radio-${id}-${i}-2-${j}`}>
+						<label
+							className={disabled[i] ? 'disabled' : ''}
+							key={`label-${id}-${i}-${j}`}
+							onClick={(e) => this.handleChange(e, i, j)}
+							forhtml={`${id}-${i}-${j}`}>{options[j]}:&nbsp;
+							<input
+								checked={answers && answers[i] && answers[i][j] ? true : ''}
+								disabled={disabled[i] === true}
+								id={`${id}-${i}-${j}`}
+								key={`input-${id}-${i}-${j}`}
+								visible-key={`input-${id}-${i}-${j}`}
+								name={`${id}-${i}`}
+								type={`checkbox`}
+								onChange={(e) => this.handleChange(e, i, j)}
+							/>
+						</label>
+					</TableCell>
 				);
 			};
 			const sound = [];
@@ -168,12 +178,12 @@ export class RadioQuiz extends React.Component {
 				);
 			}
 			rows.push(
-				<tr key={`radio-${id}-${i}`}>
-					<td key={`radio-${id}-${i}-1`}><span className={`phrase`}>{phrase}</span>&nbsp;</td>
-					<td key={`radio-${id}-${i}-2`}>{radios}</td>
-					<td key={`radio-${id}-${i}-3`}>{sound}&nbsp;</td>
-					<td key={`radio-${id}-${i}-4`}><span className={`explanation ${showExplanation[i] ? 'show' : ''}`}>{explanation}</span></td>
-				</tr>
+				<TableRow key={`radio-${id}-${i}`}>
+					<TableCell key={`radio-${id}-${i}-1`}><span className={`text-slate-400`}>{phrase}</span></TableCell>
+					{radios}
+					<TableCell key={`radio-${id}-${i}-3`}>{sound}</TableCell>
+					<TableCell key={`radio-${id}-${i}-4`}><span className={`explanation ${showExplanation[i] ? 'show' : ''}`}>{explanation}</span></TableCell>
+				</TableRow>
 			);
 		}
 		// const value = 1;
@@ -185,11 +195,11 @@ export class RadioQuiz extends React.Component {
 			>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
-				<table>
-					<tbody>
+				<Table>
+					<TableBody>
 						{rows}
-					</tbody>
-				</table>
+					</TableBody>
+				</Table>
 				<IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 
 				<p>{nCorrect} correct out of {nPhrases}.</p>

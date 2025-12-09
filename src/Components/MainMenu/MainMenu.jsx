@@ -20,53 +20,70 @@ export class MainMenu extends React.Component {
 	}
 
 	componentDidMount = () => {
-		// Determine if an element is in the visible viewport
-		const isInViewport = (element) => {
-			if (!element) return false;
+		// Helper: choose the section whose heading is just below the menu
+		const updateHighlight = () => {
+			const { config } = this.props;
 			const mainMenu = document.getElementById("mainMenu");
-			const mainMenuRect = mainMenu
-				? mainMenu.getBoundingClientRect()
-				: { bottom: 0 };
-			const { bottom: mainMenuBottom } = mainMenuRect;
-			const rect = element.getBoundingClientRect();
+			if (!mainMenu || !config) return;
+
+			const mainMenuRect = mainMenu.getBoundingClientRect();
+			const mainMenuBottom = mainMenuRect.bottom;
 			const html = document.documentElement;
-			return (
-				rect.top >= 0 + mainMenuBottom &&
-        rect.bottom <= (window.innerHeight || html.clientHeight)
-			);
+			const viewportHeight = window.innerHeight || html.clientHeight;
+
+			const candidates = [];
+
+			// 1. Intro
+			const introEl = document.getElementById("special-anchor-intro");
+			if (introEl) {
+				const rect = introEl.getBoundingClientRect();
+				// We only care that the top is below the menu and somewhere in the viewport
+				if (rect.top >= mainMenuBottom && rect.top < viewportHeight) {
+					candidates.push({
+						key: "menuItem-intro",
+						top: rect.top,
+					});
+				}
+			}
+
+			// 2. Config sections (including Monologues)
+			for (const [, value] of Object.entries(config)) {
+				const { id } = value;
+				const target = document.getElementById(`special-anchor-${id}`);
+				if (!target) continue;
+
+				const rect = target.getBoundingClientRect();
+				if (rect.top >= mainMenuBottom && rect.top < viewportHeight) {
+					candidates.push({
+						key: `menuItem-${id}`,
+						top: rect.top,
+					});
+				}
+			}
+
+			// Pick the section whose top is closest to the menu
+			if (candidates.length > 0) {
+				candidates.sort((a, b) => a.top - b.top);
+				const best = candidates[0].key;
+
+				if (this.state.menuHighlight !== best) {
+					this.setState({ menuHighlight: best });
+				}
+			}
 		};
 
 		let running = false;
 
 		this.scrollHandler = () => {
 			window.__lastKnownScrollPosition = window.scrollY;
-			const { config } = this.props;
 
-			if (!config) return;
+			if (running) return;
+			running = true;
 
-			if (!running) {
-				running = true;
-
-				setTimeout(() => {
-					// Is introduction in view?
-					const target = document.getElementById(`special-anchor-intro`);
-					if (target !== null && isInViewport(target)) {
-						this.setState({ menuHighlight: `menuItem-intro` });
-					} else {
-						for (const [, value] of Object.entries(config)) {
-							const { id } = value;
-							const sectionTarget = document.getElementById(
-								`special-anchor-${id}`
-							);
-							if (isInViewport(sectionTarget)) {
-								this.setState({ menuHighlight: `menuItem-${id}` });
-							}
-						}
-					}
-
-					running = false;
-				}, 200);
-			}
+			setTimeout(() => {
+				updateHighlight();
+				running = false;
+			}, 200); // throttle
 		};
 
 		document.addEventListener("scroll", this.scrollHandler, {
@@ -78,9 +95,14 @@ export class MainMenu extends React.Component {
 			if (window.innerWidth >= 768 && this.state.mobileOpen) {
 				this.setState({ mobileOpen: false });
 			}
+			// Recalculate which section is "current"
+			updateHighlight();
 		};
 
 		window.addEventListener("resize", this.resizeHandler);
+
+		// Initial highlight on mount
+		updateHighlight();
 	};
 
 	componentWillUnmount() {
@@ -99,7 +121,7 @@ export class MainMenu extends React.Component {
    */
 	handleNavClick = (e) => {
 		// Use your global special link handler (handles preventDefault internally)
-		handleSpecialLinkClick(e, true); // or false if you *don’t* want the back button
+		handleSpecialLinkClick(e, false); // or false if you *don’t* want the back button
 
 		// Close mobile menu if open
 		if (this.state.mobileOpen) {

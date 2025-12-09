@@ -10,6 +10,14 @@ import {
 	resolveAsset,
 	shuffleArray
 } from '../../utility';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import DOMPurify from "dompurify";
 import {
@@ -564,28 +572,28 @@ export class Blanks extends React.Component {
 				for (let i = 1; i <= nRows; i++) {
 					const phrase = words[i - 1].replace(/ /g, '\u00a0');
 					tableRows.push(
-						<tr key={`${id}row${i}`}>
-							<td>{i}.</td>
-							<td>
+						<TableRow key={`${id}row${i}`}>
+							<TableCell>{i}.</TableCell>
+							<TableCell>
 								<Word
 									className={`blank target`}
 									index={i - 1}
 									key={`${id}word${i}`}>{phrase}</Word>
-							</td>
+							</TableCell>
 							{i <= words.length / 2 ?
 								<>
-									<td>{i + nRows}.</td>
-									<td>
+									<TableCell>{i + nRows}.</TableCell>
+									<TableCell>
 										<Word
 											className={`blank target`}
 											index={i - 1 + nRows}
 											key={`${id}word${i + nRows}`}>{words[i - 1 + nRows]}</Word>
-									</td>
+									</TableCell>
 								</>
 								:
 								null
 							}
-						</tr>
+						</TableRow>
 					);
 				}
 				break;
@@ -594,23 +602,23 @@ export class Blanks extends React.Component {
 				for (let i = 1; i <= questions.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
 					tableRows.push(
-						<tr key={`${id}row${i}`}>
-							<td>
+						<TableRow key={`${id}row${i}`}>
+							<TableCell>
 								{questions[i - 1]}
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<Word
 									className={`blank target`}
 									index={i - 1}
 									key={`${id}word${i}`}>{answers[i - 1]}</Word>
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<AudioClip
 									className={`compact`}
 									soundFile={soundFile}
 								/>
-							</td>
-						</tr>
+							</TableCell>
+						</TableRow>
 					);
 				}
 				break;
@@ -618,25 +626,25 @@ export class Blanks extends React.Component {
 			case "group-table": {
 				if (header) {
 					for(let i = 0; i < header.length; i++) {
-						headerCells.push(<th key={`${id}header${i}`}>{header[i]}</th>);
+						headerCells.push(<TableHead key={`${id}header${i}`}>{header[i]}</TableHead>);
 					}
 				}
 				for (let i = 1; i <= answers.length; i++) {
 					tableRows.push(
-						<tr key={`${id}row${i}`}>
-							<td>
+						<TableRow key={`${id}row${i}`}>
+							<TableCell>
 								<Word
 									className={`blank target`}
 									index={words.indexOf(answers[i - 1][0])}
 									key={`${id}word${i}`}>{answers[i - 1][0]}</Word>
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<Word
 									className={`blank target`}
 									index={words.indexOf(answers[i - 1][1])}
 									key={`${id}word${i}`}>{answers[i - 1][1]}</Word>
-							</td>
-						</tr>
+							</TableCell>
+						</TableRow>
 					);
 				}
 				break;
@@ -645,23 +653,23 @@ export class Blanks extends React.Component {
 				for (let i = 1; i <= pictures.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
 					tableRows.push(
-						<tr key={`${id}row${i}`}>
-							<td>
+						<TableRow key={`${id}row${i}`}>
+							<TableCell>
 								<img src={`${pictures[i - 1]}`}/>
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<Word
 									className={`blank target`}
 									index={i - 1}
 									key={`${id}word${i}`}>{answers[i - 1]}</Word>
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<AudioClip
 									className={`compact`}
 									soundFile={soundFile}
 								/>
-							</td>
-						</tr>
+							</TableCell>
+						</TableRow>
 					);
 				}
 				break;
@@ -726,13 +734,13 @@ export class Blanks extends React.Component {
 							<ul>
 								{phraseList}
 							</ul> :
-							<table>
+							<Table>
 								{header.length > 0 ?
-									<thead><tr>{headerCells}</tr></thead> : null}
-								<tbody>
+									<TableHeader><TableRow>{headerCells}</TableRow></TableHeader> : null}
+								<TableBody>
 									{tableRows}
-								</tbody>
-							</table>
+								</TableBody>
+							</Table>
 						}
 					</div>
 				</div>

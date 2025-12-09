@@ -169,6 +169,7 @@ export default class App extends React.Component {
 				} else {
 					anchor.addEventListener("click", (e) => handleSpecialLinkClick(e, true));
 				}
+				anchor.setAttribute('title', 'Click to find out more');
 			}
 			anchor.setup = true;
 		});
@@ -430,8 +431,8 @@ export default class App extends React.Component {
 			id,
 			infoText,
 			infoTextHTML,
-			titleText = "",
-			titleTextHTML = "",
+			// titleText = "",
+			// titleTextHTML = "",
 		} = value;
 
 		const { languageCode } = this.state;
@@ -640,6 +641,7 @@ export default class App extends React.Component {
 						id={`backToLinkButton`}
 						size={`sm`}
 						theme={`back`}
+						title={`Click to go back to the link you came from`}
 						className={`back-to-link-button cursor-pointer`}
 						onClick={scrollBack}>Back to link</IconButton>
 					<ErrorLog

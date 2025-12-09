@@ -234,7 +234,7 @@ export class Sortable extends React.Component {
 
 				<CardContent>
 					{prompt && (
-						<p className="mb-4 text-sm text-gray-700">
+						<p className="mb-4 text-sm">
 							{prompt}
 						</p>
 					)}
@@ -280,7 +280,7 @@ export class Sortable extends React.Component {
 									{/* RIGHT: Sortable English phrase + tick/cross */}
 									<div
 										className={
-											`flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 bg-slate-50 transition ${
+											`bg-secondary flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 transition ${
 												isDragging
 													? "opacity-70 scale-[0.99]"
 													: "hover:bg-slate-100"
@@ -304,36 +304,21 @@ export class Sortable extends React.Component {
 										<div className="flex items-center gap-2">
 											<span className="text-slate-400 text-lg leading-none">
 												<svg
-													className="w-4 h-4"
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
 													viewBox="0 0 24 24"
 													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													{/* Up arrow */}
-													<path
-														d="M12 4L7 9H17L12 4Z"
-														fill="currentColor"
-													/>
-													{/* Down arrow */}
-													<path
-														d="M12 20L7 15H17L12 20Z"
-														fill="currentColor"
-													/>
-												</svg>											</span>
-											<span>
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												><path d="M12 2v20" /><path d="m8 18 4 4 4-4" /><path d="m8 6 4-4 4 4" /></svg>
+											</span>
+											<span className={``}>
 												{englishItem ? englishItem.english : ""}
 											</span>
 										</div>
-
-										{/* Tick / cross */}
-										{/* <div className="ml-3 text-lg leading-none">
-											{status === "correct" && (
-												<span className="text-green-600">✓</span>
-											)}
-											{status === "incorrect" && (
-												<span className="text-red-600">✗</span>
-											)}
-										</div> */}
 									</div>
 									{/* NEW: far-right narrow column with SVG tick/cross */}
 									<div className="flex items-center justify-center w-6">

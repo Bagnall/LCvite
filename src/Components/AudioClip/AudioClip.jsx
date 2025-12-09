@@ -101,7 +101,9 @@ export class AudioClip extends React.PureComponent {
 			soundFile,
 		} = this.props;
 
-		if (className.includes('link')) {
+		const classes = className.split(/\s+/);
+
+		if (classes.includes('link')) {
 			return (
 				<LinkAudioProgress
 					id={id}
@@ -109,7 +111,7 @@ export class AudioClip extends React.PureComponent {
 					soundFile={soundFile}
 				>{children}</LinkAudioProgress>
 			);
-		} else if (className.includes('super-compact')) {
+		} else if (classes.includes('super-compact')) {
 			return (
 				<CircularAudioProgress
 					id={id}
@@ -118,7 +120,16 @@ export class AudioClip extends React.PureComponent {
 					soundFile={soundFile}
 				/>
 			);
-		} else if (className.includes('compact')) {
+		} else if (classes.includes('super-compact-speaker')) {
+			return (
+				<CircularAudioProgressAnimatedSpeaker
+					id={id}
+					inline={inline}
+					key={id}
+					soundFile={soundFile}
+				/>
+			);
+		} else if (classes.includes('compact')) {
 			return (
 				<audio
 					className={`${className ? className : ''}`}
@@ -234,7 +245,7 @@ class CircularAudioProgress extends AudioClip {
 
 	render = () => {
 		const strokeWidth = 2;
-		const colour = '#000';
+		// const colour = '#000';
 		const bgColour = '#ddd';
 
 		const inline = this.props;
@@ -277,13 +288,102 @@ class CircularAudioProgress extends AudioClip {
 							cx={size / 2}
 							cy={size / 2}
 							r={radius}
-							stroke={colour}
+							stroke="currentColor"
 							strokeWidth={strokeWidth}
 							fill="none"
 							strokeDasharray={circumference}
 							strokeDashoffset={circumference}
 							transform={`rotate(-90 ${size / 2} ${size / 2})`}
 							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
+						/>
+					</svg>
+				</span>
+			);
+		}
+	};
+}
+
+class CircularAudioProgressAnimatedSpeaker extends CircularAudioProgress {
+
+	render = () => {
+		const strokeWidth = 2;
+		const arcStrokeWidth = 1.2;
+		// const colour = '#000';
+		const bgColour = '#ddd';
+
+		const inline = this.props;
+
+		const root = getComputedStyle(document.documentElement);
+		let compactDimension = root.getPropertyValue('--compact-dimension').trim();
+		compactDimension = parseInt(compactDimension);
+		const size = compactDimension;
+		const radius = (size - strokeWidth) / 2;
+		const circumference = 2 * Math.PI * radius;
+		const { status = 'stopped' } = this.state;
+		if (isNaN(size)){
+			return null;
+		} else {
+			return (
+				<span
+					className={`audio-container ${inline ? 'inline' : ''} super-compact-speaker circular-audio-progress-speaker ${status}`}
+					onClick={this.handleClick}
+					onPlay={(e) => this.notePlaying(e, false)}
+					ref={this.audioRef}
+					title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
+					style={{
+						backgroundPosition: `center center`,
+						backgroundSize: `${compactDimension / 2}px`,
+					}}
+				>
+					<svg width={size} height={size}>
+						{/* Background ring */}
+						<circle
+							cx={size / 2}
+							cy={size / 2}
+							r={radius}
+							stroke={bgColour}
+							strokeWidth={strokeWidth}
+							fill="none"
+						/>
+						{/* Progress ring */}
+						<circle
+							ref={this.circleRef}
+							cx={size / 2}
+							cy={size / 2}
+							r={radius}
+							stroke="currentColor"
+							strokeWidth={strokeWidth}
+							fill="none"
+							strokeDasharray={circumference}
+							strokeDashoffset={circumference}
+							transform={`rotate(-90 ${size / 2} ${size / 2})`}
+							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
+						/>
+						{/* Speaker */}
+						<path
+							fill="currentColor"
+							d="m 13.43611,6.201 a 0.705,0.705 0 0 0 -1.203,-0.498 L 8.8491185,9.086 a 1.4,1.4 0 0 1 -0.997,0.413 H 5.4361182 a 1,1 0 0 0 -1,1 v 6 a 1,1 0 0 0 1,1 h 2.4160003 a 1.4,1.4 0 0 1 0.997,0.413 l 3.3829915,3.384 a 0.705,0.705 0 0 0 1.204,-0.499 z"
+							id="path2" />
+						{/* Arcs */}
+						<path
+							className={`speaker-arc speaker-arc1`}
+							id="arc1"
+							fill="none"
+							stroke="currentColor"
+							strokeLinecap='round'
+							strokeWidth={arcStrokeWidth}
+							vectorEffect="non-scaling-stroke"
+							d="m 15.19902,17.870116 c 1.839235,-0.04527 3.312505,-1.987363 3.314457,-4.369171 -0.0012,-2.382542 -1.474655,-4.3257717 -3.314457,-4.371061"
+						/>
+						<path
+							className={`speaker-arc speaker-arc2`}
+							id="arc2"
+							fill="none"
+							stroke="currentColor"
+							strokeLinecap='round'
+							strokeWidth={arcStrokeWidth}
+							vectorEffect="non-scaling-stroke"
+							d="m 15.19902,17.870116 c 1.839235,-0.04527 3.312505,-1.987363 3.314457,-4.369171 -0.0012,-2.382542 -1.474655,-4.3257717 -3.314457,-4.371061"
 						/>
 					</svg>
 				</span>
@@ -337,7 +437,8 @@ class LinkAudioProgress extends CircularAudioProgress {
 				onPlay={(e) => this.notePlaying(e, false)}
 				ref={this.linkRef}
 				title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
-			><svg xmlns="http://www.w3.org/2000/svg"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
@@ -346,7 +447,9 @@ class LinkAudioProgress extends CircularAudioProgress {
 					strokeWidth="2"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					className="lucide lucide-volume-icon lucide-volume"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /></svg>{children}</span>
+				><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /></svg>
+				{children}
+			</span>
 		);
 	};
 }

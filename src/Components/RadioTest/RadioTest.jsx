@@ -12,6 +12,14 @@ import {
 	// RadioGroup,
 	// Text
 } from '..';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 import React from 'react';
 // import {
 // 	resolveAsset,
@@ -63,19 +71,19 @@ export class RadioTest extends React.Component {
 	// };
 
 	handleChange = (value) => {
-		const {
-			// id,
-			showDialog,
-		} = this.props;
-		const {
-			congratulationsText,
-			disabled,
-			phrases,
-		} = this.state;
-		const {
-			nCorrect,
-			showExplanation
-		} = this.state;
+		// const {
+		// 	// id,
+		// 	// showDialog,
+		// } = this.props;
+		// const {
+		// 	// congratulationsText,
+		// 	// disabled,
+		// 	// phrases,
+		// } = this.state;
+		// const {
+		// 	// nCorrect,
+		// 	// showExplanation
+		// } = this.state;
 
 		console.log("handleChange", value);// , e.target.id, e.target.value);
 		this.setState({
@@ -143,16 +151,16 @@ export class RadioTest extends React.Component {
 
 	render = () => {
 		const {
-			disabled,
-			header,
-			htmlContent,
+			// disabled,
+			// header,
+			// htmlContent,
 			id = [],
 			// instructionsText,
 			// instructionsTextHTML,
-			nCorrect = 0,
-			options,
-			phrases,
-			showExplanation = [],
+			// nCorrect = 0,
+			// options,
+			// phrases,
+			// showExplanation = [],
 		} = this.state;
 		// // const { id = '' } = config;
 		// // const nPhrases = phrases.length;
@@ -262,10 +270,10 @@ export class RadioTest extends React.Component {
 						<Label className="inline-flex items-center gap-2 cursor-pointer">Goodbye:&nbsp;</Label><Radio value="goodbye" disabled/>
 					</RadioField>
 				</RadioGroup>
-				<table style={{ width: '400px' }}>
-					<tbody>
-						<tr>
-							<td>
+				<Table style={{ width: '400px' }}>
+					<TableBody>
+						<TableRow>
+							<TableCell>
 								<label>Greeting:&nbsp;
 									<input
 										type='radio'
@@ -273,8 +281,8 @@ export class RadioTest extends React.Component {
 										value="greeting"
 									/>
 								</label>
-							</td>
-							<td>
+							</TableCell>
+							<TableCell>
 								<label>Goodbye:&nbsp;
 									<input
 										type='radio'
@@ -282,10 +290,10 @@ export class RadioTest extends React.Component {
 										value="goodbye"
 									/>
 								</label>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+							</TableCell>
+						</TableRow>
+					</TableBody>
+				</Table>
 			</div>
 		);
 	};

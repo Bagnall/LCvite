@@ -9,6 +9,14 @@ import {
 } from '..';
 import { Component, PureComponent } from 'react';
 import {
+	Table,
+	TableBody,
+	TableCell,
+	// TableHead,
+	// TableHeader,
+	TableRow,
+} from "@/components/ui/table";
+import {
 	resolveAsset,
 } from '../../utility';
 
@@ -44,22 +52,22 @@ export class LO1Grammar1 extends PureComponent {
 						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
 					</span><span className={`special-anchor-target`} id={`mademoiselle`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</span></p>
-					<table>
-						<tbody>
-							<tr>
-								<td>Abbreviations:</td>
-								<td>Monsieur - <b>M</b>.</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Madame - <b>Mme</b>.</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Mademoiselle - <b>Mlle</b>.</td>
-							</tr>
-						</tbody>
-					</table>
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell>Abbreviations:</TableCell>
+								<TableCell>Monsieur - <b>M</b>.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell></TableCell>
+								<TableCell>Madame - <b>Mme</b>.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell></TableCell>
+								<TableCell>Mademoiselle - <b>Mlle</b>.</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 				</div>
 			</div>
 		);
@@ -254,50 +262,50 @@ export class LO2Grammar extends PureComponent {
 						described as the most irregular of all the irregulars! It is worth studying this verb now, not only for this reason,
 						but because it occurs so frequently, and It will also enable you to master the subject pronouns.</p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/être.mp3`}><b>Être</b></AudioClip> to be</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>je suis</td>
-								<td>I am</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/je suis.mp3`} /></td>
-							</tr>
-							<tr>
-								<td>tu es</td>
-								<td>you are</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/tu es.mp3`} /></td>
-							</tr>
-							<tr>
-								<td><a className={`special-anchor`} href={`#subject-pronouns`}>il</a> est</td>
-								<td>he is, it is</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></td>
-							</tr>
-							<tr>
-								<td><a className={`special-anchor`} href={`#subject-pronouns`}>elle</a> est</td>
-								<td>she is, it is</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elle est.mp3`} /></td>
-							</tr>
-							<tr>
-								<td>nous sommes</td>
-								<td>we are</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/nous sommes.mp3`} /></td>
-							</tr>
-							<tr>
-								<td>vous êtes</td>
-								<td>you are</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></td>
-							</tr>
-							<tr>
-								<td><a className={`special-anchor`} href={`#subject-pronouns`}>ils</a> sont</td>
-								<td>they are</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/ils sont.mp3`} /></td>
-							</tr>
-							<tr>
-								<td><a className={`special-anchor`} href={`#subject-pronouns`}>elles</a> sont</td>
-								<td>they are</td>
-								<td><AudioClip className={`compact`} soundFile={`sounds/fr/elles sont.mp3`} /></td>
-							</tr>
-						</tbody>
-					</table>
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell>je suis</TableCell>
+								<TableCell>I am</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/je suis.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>tu es</TableCell>
+								<TableCell>you are</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/tu es.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><a className={`special-anchor`} href={`#subject-pronouns`}>il</a> est</TableCell>
+								<TableCell>he is, it is</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/il est.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><a className={`special-anchor`} href={`#subject-pronouns`}>elle</a> est</TableCell>
+								<TableCell>she is, it is</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/elle est.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>nous sommes</TableCell>
+								<TableCell>we are</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/nous sommes.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>vous êtes</TableCell>
+								<TableCell>you are</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/vous êtes.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><a className={`special-anchor`} href={`#subject-pronouns`}>ils</a> sont</TableCell>
+								<TableCell>they are</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/ils sont.mp3`} /></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><a className={`special-anchor`} href={`#subject-pronouns`}>elles</a> sont</TableCell>
+								<TableCell>they are</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={`sounds/fr/elles sont.mp3`} /></TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 					<hr />
 				</div>
 				<div
@@ -440,111 +448,111 @@ export class LO3Grammar extends PureComponent {
 						<AudioClip className={`link`} soundFile={`sounds/fr/danser.mp3`}>danser</AudioClip> (to dance) are examples of <b>-er</b> verbs.</p>
 					<p><b>NB</b> There is only <b>ONE present tense</b> in French, so you translate je parle either as 'I speak' or 'I am speaking'
 						depending on the context.</p>
-					<table>
+					<Table>
 						<thead>
-							<tr>
+							<TableRow>
 								<th>
 									<AudioClip className={`link`} soundFile={`sounds/fr/parler.mp3`}>parler</AudioClip></th>
 								<th>to speak</th>
-							</tr>
+							</TableRow>
 						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/je parle.mp3`}>je parle</AudioClip></td>
-								<td>I speak / am speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/tu parles.mp3`}>tu parles</AudioClip></td>
-								<td>you speak / are speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/il parle.mp3`}>il parle</AudioClip></td>
-								<td>he / it speaks / is speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/elle parle.mp3`}>elle parle</AudioClip></td>
-								<td>she / it speaks / is speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/nous parlons.mp3`}>nous parlons</AudioClip></td>
-								<td>we speak / are speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/vous parlez.mp3`}>vous parlez</AudioClip></td>
-								<td>you speak / are speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>ils parlent</AudioClip></td>
-								<td>they speak / are speaking</td>
-							</tr>
-							<tr>
-								<td>
-									<AudioClip className={`link`} soundFile={`sounds/fr/elles parlent.mp3`}>elles parlent</AudioClip></td>
-								<td>they speak / are speaking</td>
-							</tr>
-						</tbody>
-					</table><p><b>venir</b> is a common irregular verb.</p>
+						<TableBody>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/je parle.mp3`}>je parle</AudioClip></TableCell>
+								<TableCell>I speak / am speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/tu parles.mp3`}>tu parles</AudioClip></TableCell>
+								<TableCell>you speak / are speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/il parle.mp3`}>il parle</AudioClip></TableCell>
+								<TableCell>he / it speaks / is speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elle parle.mp3`}>elle parle</AudioClip></TableCell>
+								<TableCell>she / it speaks / is speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/nous parlons.mp3`}>nous parlons</AudioClip></TableCell>
+								<TableCell>we speak / are speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/vous parlez.mp3`}>vous parlez</AudioClip></TableCell>
+								<TableCell>you speak / are speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/ils parlent.mp3`}>ils parlent</AudioClip></TableCell>
+								<TableCell>they speak / are speaking</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
+									<AudioClip className={`link`} soundFile={`sounds/fr/elles parlent.mp3`}>elles parlent</AudioClip></TableCell>
+								<TableCell>they speak / are speaking</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table><p><b>venir</b> is a common irregular verb.</p>
 					<p>
 						<AudioClip className={`link`} soundFile={`sounds/fr/venir de.mp3`}><b>venir de</b></AudioClip> to come from</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/je viens.mp3`}>je viens</AudioClip> (de Marseille)
-								</td>
-								<td>I come (from Marseille)...</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>I come (from Marseille)...</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/tu viens.mp3`}>tu viens</AudioClip>
-								</td>
-								<td>you come</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>you come</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/il vient.mp3`}>il vient</AudioClip>
-								</td>
-								<td>he/it comes</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>he/it comes</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/elle vient.mp3`}>elle vient</AudioClip>
-								</td>
-								<td>she/it comes</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>she/it comes</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/nous venons.mp3`}>nous venons</AudioClip>
-								</td>
-								<td>we come</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>we come</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/vous venez.mp3`}>vous venez</AudioClip>
-								</td>
-								<td>you come</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>you come</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/ils viennent.mp3`}>ils viennent</AudioClip>
-								</td>
-								<td>they come</td>
-							</tr>
-							<tr>
-								<td>
+								</TableCell>
+								<TableCell>they come</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>
 									<AudioClip className={`link`} soundFile={`sounds/fr/elles viennent.mp3`}>elles viennent</AudioClip>
-								</td>
-								<td>they come</td>
-							</tr>
-						</tbody>
-					</table>
+								</TableCell>
+								<TableCell>they come</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 				</div>
 				<div
 					className={`panel`}
@@ -857,127 +865,127 @@ export class LO6Grammar extends PureComponent {
 					<AudioClip className={`link`} soundFile={`sounds/fr/mes oncles.mp3`} ><b>mes</b> oncles</AudioClip> (my uncles),&nbsp;
 					<AudioClip className={`link`} soundFile={`sounds/fr/mes tantes.mp3`} ><b>mes</b> tantes</AudioClip> (my aunts).<br />
 						Here is a complete list of the possessive adjectives.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/mon.mp3`} >mon</AudioClip>,&nbsp;
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/mon.mp3`} >mon</AudioClip>,&nbsp;
 									<AudioClip className={`link`} soundFile={`sounds/fr/ma.mp3`} >ma</AudioClip>,&nbsp;
-									<AudioClip className={`link`} soundFile={`sounds/fr/mes.mp3`} >mes</AudioClip></td>
-								<td>my</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/ton.mp3`} >ton</AudioClip>,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/mes.mp3`} >mes</AudioClip></TableCell>
+								<TableCell>my</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ton.mp3`} >ton</AudioClip>,&nbsp;
 									<AudioClip className={`link`} soundFile={`sounds/fr/ta.mp3`} >ta</AudioClip>,&nbsp;
-									<AudioClip className={`link`} soundFile={`sounds/fr/tes.mp3`} >tes</AudioClip></td>
-								<td>your (sing)</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/son.mp3`} >son</AudioClip>,&nbsp;
+									<AudioClip className={`link`} soundFile={`sounds/fr/tes.mp3`} >tes</AudioClip></TableCell>
+								<TableCell>your (sing)</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/son.mp3`} >son</AudioClip>,&nbsp;
 									<AudioClip className={`link`} soundFile={`sounds/fr/sa.mp3`} >sa</AudioClip>,&nbsp;
-									<AudioClip className={`link`} soundFile={`sounds/fr/ses.mp3`} >ses</AudioClip> *</td>
-								<td>his / her</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/notre.mp3`} >notre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/nos.mp3`} >nos</AudioClip> (pl)</td>
-								<td>our</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/votre.mp3`} >votre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/vos.mp3`} >vos</AudioClip> (pl)</td>
-								<td>your (formal, pl)</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/leur.mp3`} >leur</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/leurs.mp3`} >leurs</AudioClip> (pl)</td>
-								<td>their</td>
-							</tr></tbody></table><p className={`footnote`}>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
+									<AudioClip className={`link`} soundFile={`sounds/fr/ses.mp3`} >ses</AudioClip> *</TableCell>
+								<TableCell>his / her</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/notre.mp3`} >notre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/nos.mp3`} >nos</AudioClip> (pl)</TableCell>
+								<TableCell>our</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/votre.mp3`} >votre</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/vos.mp3`} >vos</AudioClip> (pl)</TableCell>
+								<TableCell>your (formal, pl)</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/leur.mp3`} >leur</AudioClip> (sing), <AudioClip className={`link`} soundFile={`sounds/fr/leurs.mp3`} >leurs</AudioClip> (pl)</TableCell>
+								<TableCell>their</TableCell>
+							</TableRow></TableBody></Table><p className={`footnote`}>(*NB all of these can mean his or her as the gender of the noun and not the owner is the factor to consider.)</p>
 					<p><b>2 Verbs in French continued</b></p>
 					<p><AudioClip className={`link`} soundFile={`sounds/fr/avoir.mp3`} ><b>Avoir</b></AudioClip> is one of the many irregular verbs in French.
 						It means <b>to have</b>.
 						e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai une soeur.mp3`} >J'ai une soeur</AudioClip> - I have a sister.</p>
 					<p>It occurs very frequently and so is worth memorising if possible.</p>
-					<table>
+					<Table>
 						<thead>
-							<tr>
+							<TableRow>
 								<th>Avoir</th>
 								<th>to have</th>
-							</tr>
+							</TableRow>
 						</thead>
-						<tbody>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/j'ai.mp3`}>j'ai</AudioClip></td>
-								<td>I have</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/tu as.mp3`}>tu as</AudioClip></td>
-								<td>you have</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/il a.mp3`}>il a</AudioClip></td>
-								<td>he has, it has</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/elle a.mp3`}>elle a</AudioClip></td>
-								<td>she has, it has</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/nous avons.mp3`}>nous avons</AudioClip></td>
-								<td>we have</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/vous avez.mp3`}>vous avez</AudioClip></td>
-								<td>you have</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/ils ont.mp3`}>ils ont</AudioClip></td>
-								<td>they have</td>
-							</tr>
-							<tr>
-								<td><AudioClip className={`link`} soundFile={`sounds/fr/elles ont.mp3`}>elles ont</AudioClip></td>
-								<td>they have</td>
-							</tr>
-						</tbody>
-					</table>
+						<TableBody>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/j'ai.mp3`}>j'ai</AudioClip></TableCell>
+								<TableCell>I have</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu as.mp3`}>tu as</AudioClip></TableCell>
+								<TableCell>you have</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il a.mp3`}>il a</AudioClip></TableCell>
+								<TableCell>he has, it has</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elle a.mp3`}>elle a</AudioClip></TableCell>
+								<TableCell>she has, it has</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous avons.mp3`}>nous avons</AudioClip></TableCell>
+								<TableCell>we have</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous avez.mp3`}>vous avez</AudioClip></TableCell>
+								<TableCell>you have</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils ont.mp3`}>ils ont</AudioClip></TableCell>
+								<TableCell>they have</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elles ont.mp3`}>elles ont</AudioClip></TableCell>
+								<TableCell>they have</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 					<p>The verb <b>avoir</b> occurs in some expressions when in English the
 						verb <b>to be</b> or sometimes <b>to feel</b> would be used. Here are some of these expressions:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td><b>avoir … ans</b></td>
-								<td>to be … years old</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai 25 ans.mp3`}><b>J'ai 25 ans.</b></AudioClip></td>
-								<td>I'm 25 years old.</td>
-							</tr>
-							<tr>
-								<td><b>avoir soif </b></td>
-								<td>to be thirsty</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai soif.mp3`}><b>J'ai soif. </b></AudioClip></td>
-								<td>I'm thirsty.</td>
-							</tr>
-							<tr>
-								<td><b>avoir faim </b></td>
-								<td>to be hungry</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Elle a faim.mp3`}><b>Elle a faim.</b></AudioClip></td>
-								<td>She's hungry.</td>
-							</tr>
-							<tr>
-								<td><b>avoir peur </b></td>
-								<td>to be frightened</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Il a peur.mp3`}><b>Il a peur.</b></AudioClip></td>
-								<td>He's frightened.</td>
-							</tr>
-							<tr>
-								<td><b>avoir froid</b></td>
-								<td>to be / feel cold</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Tu as froid.mp3`}><b>Tu as froid ?</b></AudioClip></td>
-								<td>Are you / do you feel cold?</td>
-							</tr>
-							<tr>
-								<td><b>avoir chaud</b></td>
-								<td>to be / feel hot</td>
-								<td>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Vous avez chaud.mp3`}><b>Vous avez chaud ?</b></AudioClip></td>
-								<td>Are you hot / do you feel hot?</td>
-							</tr>
-						</tbody>
-					</table>
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell><b>avoir … ans</b></TableCell>
+								<TableCell>to be … years old</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai 25 ans.mp3`}><b>J'ai 25 ans.</b></AudioClip></TableCell>
+								<TableCell>I'm 25 years old.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><b>avoir soif </b></TableCell>
+								<TableCell>to be thirsty</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai soif.mp3`}><b>J'ai soif. </b></AudioClip></TableCell>
+								<TableCell>I'm thirsty.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><b>avoir faim </b></TableCell>
+								<TableCell>to be hungry</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Elle a faim.mp3`}><b>Elle a faim.</b></AudioClip></TableCell>
+								<TableCell>She's hungry.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><b>avoir peur </b></TableCell>
+								<TableCell>to be frightened</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Il a peur.mp3`}><b>Il a peur.</b></AudioClip></TableCell>
+								<TableCell>He's frightened.</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><b>avoir froid</b></TableCell>
+								<TableCell>to be / feel cold</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Tu as froid.mp3`}><b>Tu as froid ?</b></AudioClip></TableCell>
+								<TableCell>Are you / do you feel cold?</TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell><b>avoir chaud</b></TableCell>
+								<TableCell>to be / feel hot</TableCell>
+								<TableCell>e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Vous avez chaud.mp3`}><b>Vous avez chaud ?</b></AudioClip></TableCell>
+								<TableCell>Are you hot / do you feel hot?</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 				</div>
 			</div>
 		);
@@ -1139,34 +1147,34 @@ export class LO8Grammar extends PureComponent {
 							<ol type="i">
 								<li>The verb <AudioClip className={`link`} soundFile={`sounds/fr/faire.mp3`}><b>faire</b></AudioClip>, meaning both 'to make' and 'to do',
 									is a frequently occurring very irregular verb. Here it is conjugated in the present tense:<br />
-								<table>
-									<tbody>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/je fais.mp3`}>je <b>fais</b></AudioClip></td>
-											<td>I do / make</td>
-										</tr>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/tu fais.mp3`}>tu <b>fais</b></AudioClip></td>
-											<td>You do / make</td>
-										</tr>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/il fait. elle fait.mp3`}>il / elle <b>fait</b></AudioClip></td>
-											<td>He / she / it does / makes</td>
-										</tr>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/nous faisons.mp3`}>nous <b>faisons</b></AudioClip></td>
-											<td>We do / make</td>
-										</tr>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/vous faites.mp3`}>vous <b>faites</b></AudioClip></td>
-											<td>You do /make</td>
-										</tr>
-										<tr>
-											<td><AudioClip className={`link`} soundFile={`sounds/fr/ils font. elles font.mp3`}>ils / elles <b>font</b></AudioClip></td>
-											<td>They do /make</td>
-										</tr>
-									</tbody>
-								</table>
+								<Table>
+									<TableBody>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je fais.mp3`}>je <b>fais</b></AudioClip></TableCell>
+											<TableCell>I do / make</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu fais.mp3`}>tu <b>fais</b></AudioClip></TableCell>
+											<TableCell>You do / make</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il fait. elle fait.mp3`}>il / elle <b>fait</b></AudioClip></TableCell>
+											<TableCell>He / she / it does / makes</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous faisons.mp3`}>nous <b>faisons</b></AudioClip></TableCell>
+											<TableCell>We do / make</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous faites.mp3`}>vous <b>faites</b></AudioClip></TableCell>
+											<TableCell>You do /make</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils font. elles font.mp3`}>ils / elles <b>font</b></AudioClip></TableCell>
+											<TableCell>They do /make</TableCell>
+										</TableRow>
+									</TableBody>
+								</Table>
 								</li>
 								<li>
 									In English you can express what you do or make simply by adding the activity after the verb e.g. 'I do gymnastics' or
@@ -1177,22 +1185,22 @@ export class LO8Grammar extends PureComponent {
 									<AudioClip className={`link`} soundFile={`sounds/fr/des.mp3`}><b>des</b></AudioClip>&nbsp;
 									for plurals.<br/>
 									The partitive is usually translated by "some" or "any," i.e an unspecified amount, or is often left out entirely as in the examples below. <br/>
-									<table>
-										<tbody>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/je fais de la gymnastique.mp3`}><b>Je fais de la gymnastique</b></AudioClip></td>
-												<td> I do gymnastics</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></td>
-												<td>I do gardening</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></td>
-												<td>I make cakes</td>
-											</tr>
-										</tbody>
-									</table>
+									<Table>
+										<TableBody>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je fais de la gymnastique.mp3`}><b>Je fais de la gymnastique</b></AudioClip></TableCell>
+												<TableCell> I do gymnastics</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je fais du jardinage.mp3`}><b>Je fais du jardinage</b></AudioClip></TableCell>
+												<TableCell>I do gardening</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je fais des gâteaux.mp3`}><b>Je fais des gâteaux</b></AudioClip></TableCell>
+												<TableCell>I make cakes</TableCell>
+											</TableRow>
+										</TableBody>
+									</Table>
 								</li>
 							</ol>
 						</li>
@@ -1202,18 +1210,18 @@ export class LO8Grammar extends PureComponent {
 								<li>
 									The regular <b>-er</b> verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> meaning to play is useful when talking about pastimes.
 									You use the partitive article after the verb <AudioClip className={`link`} soundFile={`sounds/fr/jouer.mp3`}><b>jouer</b></AudioClip> when speaking about playing a musical instrument:<br />
-									<table>
-										<tbody>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue du piano.mp3`}><b>Je joue du piano</b></AudioClip></td>
-												<td>I play the piano</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue de la clarinette.mp3`}><b>Je joue de la clarinette</b></AudioClip></td>
-												<td>I play the clarinet</td>
-											</tr>
-										</tbody>
-									</table>
+									<Table>
+										<TableBody>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je joue du piano.mp3`}><b>Je joue du piano</b></AudioClip></TableCell>
+												<TableCell>I play the piano</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je joue de la clarinette.mp3`}><b>Je joue de la clarinette</b></AudioClip></TableCell>
+												<TableCell>I play the clarinet</TableCell>
+											</TableRow>
+										</TableBody>
+									</Table>
 
 								</li>
 								<li>
@@ -1221,18 +1229,18 @@ export class LO8Grammar extends PureComponent {
 									You use <AudioClip className={`link`} soundFile={`sounds/fr/jouer à.mp3`}><b>jouer à</b></AudioClip>.
 									If the activity is masculine it's <AudioClip className={`link`} soundFile={`sounds/fr/jouer au.mp3`}><b>jouer au</b></AudioClip>, if feminine, <AudioClip className={`link`} soundFile={`sounds/fr/jouer à la.mp3`}><b>jouer à la</b></AudioClip>,
 									if starting with a vowel or silent h then <AudioClip className={`link`} soundFile={`sounds/fr/jouer à l'.mp3`}><b>jouer à l'</b></AudioClip> and for plurals <AudioClip className={`link`} soundFile={`sounds/fr/jouer aux.mp3`}><b>jouer aux</b></AudioClip>. e.g.
-									<table>
-										<tbody>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue au football.mp3`}><b>Je joue au football</b></AudioClip></td>
-												<td> I play football</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je joue à la pétanque.mp3`}><b>Je joue à la pétanque</b></AudioClip></td>
-												<td> I play pétanque</td>
-											</tr>
-										</tbody>
-									</table>
+									<Table>
+										<TableBody>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je joue au football.mp3`}><b>Je joue au football</b></AudioClip></TableCell>
+												<TableCell> I play football</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je joue à la pétanque.mp3`}><b>Je joue à la pétanque</b></AudioClip></TableCell>
+												<TableCell> I play pétanque</TableCell>
+											</TableRow>
+										</TableBody>
+									</Table>
 								</li>
 							</ol>
 						</li>
@@ -1490,58 +1498,58 @@ export class LO9Grammar extends PureComponent {
 								</figure>
 								{/* I removed this since unless the author is a cartographer, they have not attributed the source of their mapping data <Attribution>By <a href="//commons.wikimedia.org/wiki/User:Babsy" title="User:Babsy">Babsy</a> - <span className="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5173950">Link</a></Attribution> */}
 							</div>
-							<table>
-								<tbody>
-									<tr>
-										<td>Île-de-France</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/01.mp3`}>01</AudioClip></td>
-									</tr>
-									<tr>
-										<td>Northwest France</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/02.mp3`}>02</AudioClip></td>
-									</tr>
-									<tr>
-										<td>Northeast France</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/03.mp3`}>03</AudioClip></td>
-									</tr>
-									<tr>
-										<td>Southeast France</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/04.mp3`}>04</AudioClip></td>
-									</tr>
-									<tr>
-										<td>Southwest France</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/05.mp3`}>05</AudioClip></td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell>Île-de-France</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/01.mp3`}>01</AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>Northwest France</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/02.mp3`}>02</AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>Northeast France</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/03.mp3`}>03</AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>Southeast France</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/04.mp3`}>04</AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>Southwest France</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/05.mp3`}>05</AudioClip></TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 
 							<p>Mobile numbers have the prefix 06 or 07.</p>
 							<p>Telephone numbers are given in two-digit groups: e.g. <AudioClip className={`link`} soundFile={`sounds/fr/07 11 15 22 55.mp3`}>07 11 15 22 55</AudioClip></p>
 						</li>
 						<li>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/bien.mp3`} ><b>Bien</b></AudioClip> is usually translated as 'well' or 'good'. However, here's an exception: It can sometimes be translated as 'isn't it', 'aren't you' etc or 'indeed' to verify something, as in the following examples:</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></td>
-										<td>This is 06 22 14 66 33, isn't it?</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td>
-										<td>That's right / It is indeed.</td>
-									</tr>
-									<tr className={`spacer`}><td colSpan="2"></td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></td>
-										<td>You are Mme Galipot aren't you?</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></td>
-										<td>That's right / I am indeed.</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien le 06 22 14 66 33.mp3`} >C'est bien le 06 22 14 66 33 ?</AudioClip></TableCell>
+										<TableCell>This is 06 22 14 66 33, isn't it?</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></TableCell>
+										<TableCell>That's right / It is indeed.</TableCell>
+									</TableRow>
+									<TableRow className={`spacer`}><TableCell colSpan="2"></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Vous êtes bien Madame Galipot.mp3`} >Vous êtes bien Madame Galipot ?</AudioClip></TableCell>
+										<TableCell>You are Mme Galipot aren't you?</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est bien ça !.mp3`} >C'est bien ça !</AudioClip></TableCell>
+										<TableCell>That's right / I am indeed.</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 					</ol>
 				</div>
@@ -1607,80 +1615,80 @@ export class L10Grammar extends PureComponent {
 								<img src={resolveAsset(`images/vouloir.jpg`)} title="vouloir" alt="A young girl points to the cake she wants"/>
 								<div className={`text`}>
 									<p>Using the verb <AudioClip className={`audio-link`} soundFile={`sounds/fr/vouloir.mp3`} >vouloir</AudioClip> meaning 'to want'</p>
-									<table>
-										<tbody>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Je veux.mp3`} >je veux</AudioClip></td>
-												<td>I want</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux.mp3`} >tu veux</AudioClip></td>
-												<td>you want</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} >il / elle veut</AudioClip></td>
-												<td>he / she/ it wants</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Nous voulons.mp3`} >nous voulons</AudioClip></td>
-												<td>we want</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous voulez.mp3`} >vous voulez</AudioClip></td>
-												<td>you want</td>
-											</tr>
-											<tr>
-												<td><AudioClip className={`link`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} >ils / elles veulent</AudioClip></td>
-												<td>they want</td>
-											</tr>
-										</tbody>
-									</table>
+									<Table>
+										<TableBody>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je veux.mp3`} >je veux</AudioClip></TableCell>
+												<TableCell>I want</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux.mp3`} >tu veux</AudioClip></TableCell>
+												<TableCell>you want</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Il veut. elle veut.mp3`} >il / elle veut</AudioClip></TableCell>
+												<TableCell>he / she/ it wants</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Nous voulons.mp3`} >nous voulons</AudioClip></TableCell>
+												<TableCell>we want</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Vous voulez.mp3`} >vous voulez</AudioClip></TableCell>
+												<TableCell>you want</TableCell>
+											</TableRow>
+											<TableRow>
+												<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Ils veulent. Elles veulent.mp3`} >ils / elles veulent</AudioClip></TableCell>
+												<TableCell>they want</TableCell>
+											</TableRow>
+										</TableBody>
+									</Table>
 								</div>
 							</div>
 
 							<p>The verb vouloir is very frequently used together with another verb. This second verb is used in its infinitive form. e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je veux aller au Canada.mp3`} >Je veux aller au Canada.</AudioClip></td>
-										<td>I want to go to Canada.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Ma copine veut étudier en France.mp3`} >Ma copine veut étudier en France.</AudioClip></td>
-										<td>My girlfriend wants to study in France.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Mes amis veulent passer le week-end à Londres.mp3`} >Mes amis veulent passer le week-end à Londres.</AudioClip></td>
-										<td>My friends want to spend the weekend in London.</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je veux aller au Canada.mp3`} >Je veux aller au Canada.</AudioClip></TableCell>
+										<TableCell>I want to go to Canada.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Ma copine veut étudier en France.mp3`} >Ma copine veut étudier en France.</AudioClip></TableCell>
+										<TableCell>My girlfriend wants to study in France.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Mes amis veulent passer le week-end à Londres.mp3`} >Mes amis veulent passer le week-end à Londres.</AudioClip></TableCell>
+										<TableCell>My friends want to spend the weekend in London.</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 						<li>
 							<p>The preposition à has a variety of meanings. It is used to mean <i>to the</i> or <i>in the</i> or <i>at the</i> before a common noun.&nbsp;
 							You will see the following forms: <b>au</b> before a masculine noun,&nbsp;
 							<b>à la</b> before a feminine noun, <b>à l'</b> before a noun beginning with a vowel or silent h and&nbsp;
 							<b>aux</b> before a plural noun. e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je travaille au laboratoire.mp3`} >Je travaille au laboratoire.</AudioClip></td>
-										<td>I work / I am working at the laboratory.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux aller à la piscine.mp3`} >Tu veux aller à la piscine ?</AudioClip></td>
-										<td>Do you want to go to the swimming pool?</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Elle veut aller à l'exposition.mp3`} >Elle veut aller à l'exposition.</AudioClip></td>
-										<td>She wants to go to the exhibition.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/J'aime aller aux magasins.mp3`} >J'aime aller aux magasins.</AudioClip></td>
-										<td>I like going to the shops.</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je travaille au laboratoire.mp3`} >Je travaille au laboratoire.</AudioClip></TableCell>
+										<TableCell>I work / I am working at the laboratory.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Tu veux aller à la piscine.mp3`} >Tu veux aller à la piscine ?</AudioClip></TableCell>
+										<TableCell>Do you want to go to the swimming pool?</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Elle veut aller à l'exposition.mp3`} >Elle veut aller à l'exposition.</AudioClip></TableCell>
+										<TableCell>She wants to go to the exhibition.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/J'aime aller aux magasins.mp3`} >J'aime aller aux magasins.</AudioClip></TableCell>
+										<TableCell>I like going to the shops.</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 					</ol>
 				</div>
@@ -1744,34 +1752,34 @@ export class L11Grammar extends PureComponent {
 								to go to the market tomorrow.<br /><br />
 
 								You can see the forms for all the persons of the verb below:</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>je voudrais</b></AudioClip></td>
-										<td>I would like</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Tu voudrais.mp3`}><b>tu voudrais</b></AudioClip></td>
-										<td>you would like</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Il voudrais. Elle voudrais.mp3`}><b>il / elle voudrait</b></AudioClip></td>
-										<td>he / she would like</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous voudrions.mp3`}><b>nous voudrions</b></AudioClip></td>
-										<td>we would like</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous voudriez.mp3`}><b>vous voudriez</b></AudioClip></td>
-										<td>you would like</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils voudraient. elles voudraient.mp3`}><b>ils / elles voudraient</b></AudioClip></td>
-										<td>they would like</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais.mp3`}><b>je voudrais</b></AudioClip></TableCell>
+										<TableCell>I would like</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Tu voudrais.mp3`}><b>tu voudrais</b></AudioClip></TableCell>
+										<TableCell>you would like</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Il voudrais. Elle voudrais.mp3`}><b>il / elle voudrait</b></AudioClip></TableCell>
+										<TableCell>he / she would like</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous voudrions.mp3`}><b>nous voudrions</b></AudioClip></TableCell>
+										<TableCell>we would like</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous voudriez.mp3`}><b>vous voudriez</b></AudioClip></TableCell>
+										<TableCell>you would like</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils voudraient. elles voudraient.mp3`}><b>ils / elles voudraient</b></AudioClip></TableCell>
+										<TableCell>they would like</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 						<li>
 							<p>The verb <AudioClip className={`link`} soundFile={`sounds/fr/prendre.mp3`}><b>prendre</b></AudioClip> is a frequently occurring irregular
@@ -1784,119 +1792,119 @@ export class L11Grammar extends PureComponent {
 								this context, you use <AudioClip className={`link`} soundFile={`sounds/fr/prendre.mp3`}><b>prendre</b></AudioClip> instead
 								e.g. <AudioClip className={`link`} soundFile={`sounds/fr/Je prends un café.mp3`}><b>Je prends un café</b></AudioClip> or <AudioClip className={`link`} soundFile={`sounds/fr/Je prends mon petit déjeuner à huit heures.mp3`}><b>Je prends mon petit déjeuner à huit heures</b></AudioClip>.</p>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/prendre.mp3`}><b>Prendre</b></AudioClip></p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/je prends.mp3`}><b>je prends</b></AudioClip></td>
-										<td> I take / have - I am taking / having</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu prends.mp3`}><b>tu prends</b></AudioClip></td>
-										<td> you take / have - you are taking / having</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/il prend. elle prend.mp3`}><b>il / elle prend</b></AudioClip></td>
-										<td>He / she takes / has – he/she is taking / having</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous prenons.mp3`}><b>nous prenons</b></AudioClip></td>
-										<td>we take / have - we are taking / having</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous prenez.mp3`}><b>vous prenez</b></AudioClip></td>
-										<td>you take / have - you are taking / having</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils prennent. elles prennent.mp3`}><b>ils / elles prennent</b></AudioClip></td>
-										<td>they take / have - they are taking / having</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je prends.mp3`}><b>je prends</b></AudioClip></TableCell>
+										<TableCell> I take / have - I am taking / having</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu prends.mp3`}><b>tu prends</b></AudioClip></TableCell>
+										<TableCell> you take / have - you are taking / having</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il prend. elle prend.mp3`}><b>il / elle prend</b></AudioClip></TableCell>
+										<TableCell>He / she takes / has – he/she is taking / having</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous prenons.mp3`}><b>nous prenons</b></AudioClip></TableCell>
+										<TableCell>we take / have - we are taking / having</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous prenez.mp3`}><b>vous prenez</b></AudioClip></TableCell>
+										<TableCell>you take / have - you are taking / having</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils prennent. elles prennent.mp3`}><b>ils / elles prennent</b></AudioClip></TableCell>
+										<TableCell>they take / have - they are taking / having</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 						<li><p><b>Flavours, filling and toppings</b></p>
 							<p>To describe the flavours, filling and toppings of food stuffs, you use the preposition <b>à</b> with the definite article: <b>au</b>, <b>à la</b>, <b>à l'</b>, <b>aux</b> e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Pour moi un sandwich au fromage.mp3`}><b>Pour moi un sandwich au fromage</b></AudioClip></td>
-										<td>A cheese sandwich for me.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace à la vanille.mp3`}><b>Je voudrais une glace à la vanille</b></AudioClip></td>
-										<td>I'd like a vanilla ice-cream.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/J'aime la sauce à l'orange.mp3`}><b>J'aime la sauce à l'orange</b></AudioClip></td>
-										<td>I like the orange sauce.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous prenez une omelette aux champignons.mp3`}><b>Vous prenez une omelette aux champignons ?</b></AudioClip></td>
-										<td>Are you having a mushroom omelette?</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Pour moi un sandwich au fromage.mp3`}><b>Pour moi un sandwich au fromage</b></AudioClip></TableCell>
+										<TableCell>A cheese sandwich for me.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je voudrais une glace à la vanille.mp3`}><b>Je voudrais une glace à la vanille</b></AudioClip></TableCell>
+										<TableCell>I'd like a vanilla ice-cream.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/J'aime la sauce à l'orange.mp3`}><b>J'aime la sauce à l'orange</b></AudioClip></TableCell>
+										<TableCell>I like the orange sauce.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Vous prenez une omelette aux champignons.mp3`}><b>Vous prenez une omelette aux champignons ?</b></AudioClip></TableCell>
+										<TableCell>Are you having a mushroom omelette?</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 						<li>
 							<p>In French there are some pronouns called <b>disjunctive pronouns</b> (or <b>stressed pronouns</b>). They are listed below.
 								They are the pronouns which are used after prepositions such as <AudioClip className={`link`} soundFile={`sounds/fr/pour.mp3`}><b>pour</b></AudioClip>,&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/avec.mp3`}><b>avec</b></AudioClip>,&nbsp;
 							<AudioClip className={`link`} soundFile={`sounds/fr/sans.mp3`}><b>sans</b></AudioClip> etc. e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Pour moi un café s'il vous plait.mp3`}><b>Pour moi un café s'il vous plait</b></AudioClip></td>
-										<td>A coffee for me please.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Les enfants ne veulent pas jouer au football sans lui.mp3`}><b>Les enfants ne veulent pas jouer au football sans lui</b></AudioClip></td>
-										<td>The children don't want to play football without him.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je travaille avec eux.mp3`}><b>Je travaille avec eux</b></AudioClip></td>
-										<td>I work with them.</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Pour moi un café s'il vous plait.mp3`}><b>Pour moi un café s'il vous plait</b></AudioClip></TableCell>
+										<TableCell>A coffee for me please.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Les enfants ne veulent pas jouer au football sans lui.mp3`}><b>Les enfants ne veulent pas jouer au football sans lui</b></AudioClip></TableCell>
+										<TableCell>The children don't want to play football without him.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je travaille avec eux.mp3`}><b>Je travaille avec eux</b></AudioClip></TableCell>
+										<TableCell>I work with them.</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 							<br/>
-							<table>
+							<Table>
 								<thead>
-									<tr><th>Subject pronouns&nbsp;&nbsp;&nbsp;</th><th>Disjunctive pronouns</th></tr>
+									<TableRow><th>Subject pronouns&nbsp;&nbsp;&nbsp;</th><th>Disjunctive pronouns</th></TableRow>
 								</thead>
-								<tbody>
-									<tr>
-										<td>je</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`}><b>moi</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>tu</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>il</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/lui.mp3`}><b>lui</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>elle</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/elle.mp3`}><b>elle</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>nous</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous.mp3`}><b>nous</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>vous</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>ils</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/eux.mp3`}><b>eux</b></AudioClip></td>
-									</tr>
-									<tr>
-										<td>elles</td>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/elles.mp3`}><b>elles</b></AudioClip></td>
-									</tr>
-								</tbody>
-							</table>
+								<TableBody>
+									<TableRow>
+										<TableCell>je</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/moi.mp3`}><b>moi</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>tu</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/toi.mp3`}><b>toi</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>il</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/lui.mp3`}><b>lui</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>elle</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elle.mp3`}><b>elle</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>nous</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous.mp3`}><b>nous</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>vous</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous.mp3`}><b>vous</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>ils</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/eux.mp3`}><b>eux</b></AudioClip></TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell>elles</TableCell>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elles.mp3`}><b>elles</b></AudioClip></TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 					</ol>
 				</div>
@@ -1924,54 +1932,54 @@ export class L12Grammar extends PureComponent {
 						<li>
 							<p>The verb <AudioClip className={`link`} soundFile={`sounds/fr/aller.mp3`}><b>aller</b></AudioClip> is a
 								frequently occurring irregular verb meaning 'to go'.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/je vais.mp3`}>je vais</AudioClip></td><td>I go / am going</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu vas.mp3`}>tu vas</AudioClip></td><td>you go / are going</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/il va, elle va.mp3`}>il / elle va</AudioClip></td><td>he /she/ it goes / is going</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous allons.mp3`}>nous allons</AudioClip></td><td>we go / are going</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous allez.mp3`}>vous allez</AudioClip></td><td>you go / are going</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils vont, elles vont.mp3`}>ils / elles vont</AudioClip></td><td>they go / are going</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je vais.mp3`}>je vais</AudioClip></TableCell><TableCell>I go / am going</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu vas.mp3`}>tu vas</AudioClip></TableCell><TableCell>you go / are going</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il va, elle va.mp3`}>il / elle va</AudioClip></TableCell><TableCell>he /she/ it goes / is going</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous allons.mp3`}>nous allons</AudioClip></TableCell><TableCell>we go / are going</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous allez.mp3`}>vous allez</AudioClip></TableCell><TableCell>you go / are going</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils vont, elles vont.mp3`}>ils / elles vont</AudioClip></TableCell><TableCell>they go / are going</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 							<p>e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je vais en ville.mp3`}>Je vais en ville</AudioClip>.</td><td>I'm going into town.</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Mélanie va au marché le mardi.mp3`}>Mélanie va au marché le mardi</AudioClip>.</td><td>Mélanie goes to the market on Tuesdays.</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je vais en ville.mp3`}>Je vais en ville</AudioClip>.</TableCell><TableCell>I'm going into town.</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Mélanie va au marché le mardi.mp3`}>Mélanie va au marché le mardi</AudioClip>.</TableCell><TableCell>Mélanie goes to the market on Tuesdays.</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 							<p><b>NB</b>: The verb <AudioClip className={`link`} soundFile={`sounds/fr/aller.mp3`}><b>aller</b></AudioClip> is also the verb used when
 								asking how someone is. English uses the verb 'to be' to ask after someone. In French, it is incorrect to use <b>être</b> in
 								this context. You use <AudioClip className={`link`} soundFile={`sounds/fr/aller.mp3`}><b>aller</b></AudioClip> instead. e.g.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Comment ça va.mp3`}>Comment ça va ?</AudioClip></td>
-										<td>How are you? / How's it going?</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Vous allez bien.mp3`}>Vous allez bien ?</AudioClip></td>
-										<td>Are you well?</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Comment ça va.mp3`}>Comment ça va ?</AudioClip></TableCell>
+										<TableCell>How are you? / How's it going?</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Vous allez bien.mp3`}>Vous allez bien ?</AudioClip></TableCell>
+										<TableCell>Are you well?</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 						<li>
 							<p>The little words <b>de</b>, <b>d'</b>, <b>du</b>, <b>de la</b>, <b>de l'</b> and <b>des</b> occur often in French and can sometimes
@@ -1995,50 +2003,50 @@ export class L12Grammar extends PureComponent {
 							something <AudioClip className={`link`} soundFile={`sounds/fr/de.mp3`}><b>de</b></AudioClip> is used meaning <b>'of'</b>.
 							Before a vowel <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> is used. e.g.
 
-								<table>
-									<tbody>
-										<tr>
-											<td>
+								<Table>
+									<TableBody>
+										<TableRow>
+											<TableCell>
 												<AudioClip className={`link`} soundFile={`sounds/fr/un kilo de pommes.mp3`}>un kilo de pommes</AudioClip>
-											</td>
-											<td>
+											</TableCell>
+											<TableCell>
 											a kilo of apples
-											</td>
-										</tr>
-										<tr>
-											<td>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell>
 												<AudioClip className={`link`} soundFile={`sounds/fr/une barquette de fraises.mp3`}>une barquette de fraises</AudioClip>
-											</td>
-											<td>
+											</TableCell>
+											<TableCell>
 											a punnet of strawberries
-											</td>
-										</tr>
-										<tr>
-											<td>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell>
 												<AudioClip className={`link`} soundFile={`sounds/fr/une tasse de thé.mp3`}>une tasse de thé</AudioClip>
-											</td>
-											<td>
+											</TableCell>
+											<TableCell>
 											a cup of tea
-											</td>
-										</tr>
-										<tr>
-											<td>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell>
 												<AudioClip className={`link`} soundFile={`sounds/fr/200 grammes d'amandes.mp3`}>200 grammes d'amandes</AudioClip>
-											</td>
-											<td>
+											</TableCell>
+											<TableCell>
 											200 grams of almonds
-											</td>
-										</tr>
-										<tr>
-											<td>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell>
 												<AudioClip className={`link`} soundFile={`sounds/fr/une bouteille d'eau minérale.mp3`}>une bouteille d'eau minérale</AudioClip>
-											</td>
-											<td>
+											</TableCell>
+											<TableCell>
 											a bottle of mineral water
-											</td>
-										</tr>
-									</tbody>
-								</table><br/>
+											</TableCell>
+										</TableRow>
+									</TableBody>
+								</Table><br/>
 								</li>
 								<li>The forms <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> or <AudioClip className={`link`} soundFile={`sounds/fr/d'.mp3`}><b>d'</b></AudioClip> are also used after a <b>negation</b>:<br/><br/>
 									e.g. <AudioClip className={`link`} soundFile={`sounds/fr/J'ai du pain.mp3`}><b>J'ai du pain</b></AudioClip>. I have (some) bread
@@ -2145,68 +2153,68 @@ export class L13Grammar extends PureComponent {
 
 							<p>Here is an example of a reflexive verb in the present tense:</p>
 
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/se reposer.mp3`}><b>se reposer</b></AudioClip></td><td>to rest (oneself)</td>
-									</tr>
-									<tr><td>&nbsp;</td></tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/je me repose.mp3`}><b>je me repose</b></AudioClip></td><td>I rest / I am resting (myself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu te reposes.mp3`}><b>tu te reposes</b></AudioClip></td><td>you rest / you are resting (yourself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/il se repose.mp3`}><b>il se repose</b></AudioClip></td><td>he rests / he is resting (himself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Elle se repose.mp3`}><b>elle se repose</b></AudioClip></td><td>she rests / she is resting (herself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/on se repose.mp3`}><b>on se repose</b></AudioClip></td><td>people /we rest / we are resting (themselves / ourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous nous reposons.mp3`}><b>nous nous reposons</b></AudioClip></td><td>we rest / we are resting (ourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous vous reposez.mp3`}><b>vous vous reposez</b></AudioClip></td><td>you rest / you are resting (yourself / yourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils se reposent, elles se reposent.mp3`}><b>ils / elles se reposent</b></AudioClip></td><td>they rest / theyare resting (themselves)</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/se reposer.mp3`}><b>se reposer</b></AudioClip></TableCell><TableCell>to rest (oneself)</TableCell>
+									</TableRow>
+									<TableRow><TableCell>&nbsp;</TableCell></TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je me repose.mp3`}><b>je me repose</b></AudioClip></TableCell><TableCell>I rest / I am resting (myself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu te reposes.mp3`}><b>tu te reposes</b></AudioClip></TableCell><TableCell>you rest / you are resting (yourself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il se repose.mp3`}><b>il se repose</b></AudioClip></TableCell><TableCell>he rests / he is resting (himself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Elle se repose.mp3`}><b>elle se repose</b></AudioClip></TableCell><TableCell>she rests / she is resting (herself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/on se repose.mp3`}><b>on se repose</b></AudioClip></TableCell><TableCell>people /we rest / we are resting (themselves / ourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous nous reposons.mp3`}><b>nous nous reposons</b></AudioClip></TableCell><TableCell>we rest / we are resting (ourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous vous reposez.mp3`}><b>vous vous reposez</b></AudioClip></TableCell><TableCell>you rest / you are resting (yourself / yourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils se reposent, elles se reposent.mp3`}><b>ils / elles se reposent</b></AudioClip></TableCell><TableCell>they rest / theyare resting (themselves)</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 							<p>If the verb begins with a vowel, then the reflexive pronouns are <b>s'</b>, <b>t'</b>, <b>s'</b>, <b>nous</b>, <b>vous</b>, <b>s'</b>. Below is
 								the verb <AudioClip className={`link`} soundFile={`sounds/fr/s'appeler.mp3`}><b>s'appeler</b></AudioClip> - to be called which illustrates this.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle.mp3`}><b>je m'appelle</b></AudioClip></td><td>I am called (I call myself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu t'appelles.mp3`}><b>tu t'appelles</b></AudioClip></td><td>you are called (you call yourself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/il s'appelle.mp3`}><b>il s'appelle</b></AudioClip></td><td>he is called (he calls himself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/elle s'appelle.mp3`}><b>elle s'appelle</b></AudioClip></td><td>she is called (she calls herself)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/on s'appelle.mp3`}><b>on s'appelle</b></AudioClip></td><td>they / we are called (they call themselves / we call ourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous nous appelons.mp3`}><b>nous nous appelons</b></AudioClip></td><td>we are called (we call ourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous vous appelez.mp3`}><b>vous vous appelez</b></AudioClip></td><td>you are called (you call yourself / yourselves)</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils s'appellent, elles s'appellent.mp3`}><b>ils / elles s'appellent</b></AudioClip></td><td>they / are called (they call themselves)</td>
-									</tr >
-								</tbody >
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je m'appelle.mp3`}><b>je m'appelle</b></AudioClip></TableCell><TableCell>I am called (I call myself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu t'appelles.mp3`}><b>tu t'appelles</b></AudioClip></TableCell><TableCell>you are called (you call yourself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il s'appelle.mp3`}><b>il s'appelle</b></AudioClip></TableCell><TableCell>he is called (he calls himself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elle s'appelle.mp3`}><b>elle s'appelle</b></AudioClip></TableCell><TableCell>she is called (she calls herself)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/on s'appelle.mp3`}><b>on s'appelle</b></AudioClip></TableCell><TableCell>they / we are called (they call themselves / we call ourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous nous appelons.mp3`}><b>nous nous appelons</b></AudioClip></TableCell><TableCell>we are called (we call ourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous vous appelez.mp3`}><b>vous vous appelez</b></AudioClip></TableCell><TableCell>you are called (you call yourself / yourselves)</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils s'appellent, elles s'appellent.mp3`}><b>ils / elles s'appellent</b></AudioClip></TableCell><TableCell>they / are called (they call themselves)</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 					</ol>
 				</div>
@@ -2485,22 +2493,22 @@ export class L13ASummersDay extends Component {
 					showDialog={showDialog}
 					onComplete={() => this.setState({allAnswered: true})}
 				/>
-				{/* <table>
-							<tbody>
-								<tr>
-									<td>Véronique se lève vers 7 heures le week-end.</td>
-									<td><L13TrueFalse
+				{/* <Table>
+							<TableBody>
+								<TableRow>
+									<TableCell>Véronique se lève vers 7 heures le week-end.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[0]}
 										onAnswer={this.answerRow}
 										id={`line0`}
 										explanation={`Véronique se lève vers 6 heures le week-end.`}
 										value={userChose[0]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Elle se promène en ville.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle se promène en ville.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[1]}
 										onAnswer={this.answerRow}
@@ -2508,116 +2516,116 @@ export class L13ASummersDay extends Component {
 										explanation={`Elle se promène dans le village.`}
 										value={userChose[1]}
 									/>
-									</td>
-								</tr>
-								<tr>
-									<td>Elle aime être dehors quand il fait beau.</td>
-									<td><L13TrueFalse
+									</TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle aime être dehors quand il fait beau.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={true}
 										disabled={rowsAnswered[2]}
 										onAnswer={this.answerRow}
 										id={`line2`}
 										value={userChose[2]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Après sa promenade, Véronique prend un bain.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Après sa promenade, Véronique prend un bain.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[3]}
 										onAnswer={this.answerRow}
 										id={`line3`}
 										explanation={`Elle prend une douche rapide.`}
 										value={userChose[3]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Elle prend un bol de yaourt.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle prend un bol de yaourt.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[4]}
 										onAnswer={this.answerRow}
 										id={`line4`}
 										explanation={`Elle prend un bol de céréales.`}
 										value={userChose[4]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Elle boit du café-crème.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle boit du café-crème.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={true}
 										disabled={rowsAnswered[5]}
 										onAnswer={this.answerRow}
 										id={`line5`}
 										value={userChose[5]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Dans le jardin il y a deux arbres.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Dans le jardin il y a deux arbres.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[6]}
 										onAnswer={this.answerRow}
 										id={`line6`}
 										explanation={`Dans le jardin il y a trois arbres.`}
 										value={userChose[6]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Véronique passe une heure dans le jardin.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Véronique passe une heure dans le jardin.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[7]}
 										onAnswer={this.answerRow}
 										id={`line7`}
 										explanation={`Véronique passe la matinée entière dans le jardin.`}
 										value={userChose[7]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Elle passe l'après-midi avec ses parents.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle passe l'après-midi avec ses parents.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[8]}
 										onAnswer={this.answerRow}
 										id={`line8`}
 										explanation={`Elle passe l'après-midi avec ses amis.`}
 										value={userChose[8]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Parfois, ils vont en ville.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Parfois, ils vont en ville.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={true}
 										disabled={rowsAnswered[9]}
 										onAnswer={this.answerRow}
 										id={`line9`}
 										value={userChose[9]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Elle dîne dans la salle à manger.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Elle dîne dans la salle à manger.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={false}
 										disabled={rowsAnswered[10]}
 										onAnswer={this.answerRow}
 										id={`line10`}
 										explanation={`Elle dîne dans le jardin ou sur le balcon.`}
 										value={userChose[10]}
-									/></td>
-								</tr>
-								<tr>
-									<td>Le soir, elle se détend.</td>
-									<td><L13TrueFalse
+									/></TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Le soir, elle se détend.</TableCell>
+									<TableCell><L13TrueFalse
 										answer={true}
 										disabled={rowsAnswered[11]}
 										onAnswer={this.answerRow}
 										id={`line11`}
 										value={userChose[11]}
-									/></td>
-								</tr>
-							</tbody>
-						</table> */}
+									/></TableCell>
+								</TableRow>
+							</TableBody>
+						</Table> */}
 				{/* <p>{nCorrect} correct out of 12</p> */}
 			</div>
 			// </div>
@@ -2645,34 +2653,34 @@ export class L14Grammar extends PureComponent {
 								An example of this is when asking what people like, prefer, do etc. Using a construction
 								with <AudioClip className={`link`} soundFile={`sounds/fr/comme.mp3`}><b>comme</b></AudioClip> is an idiomatic way of
 								asking the question:</p>
-							<table>
-								<tbody>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que vous faites comme sports.mp3`}>Qu'est-ce que vous faites <b>comme</b> sports ?</AudioClip></td><td>What sports do you do?</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que tu aimes comme musique.mp3`}>Qu'est-ce que tu aimes <b>comme</b> musique ?</AudioClip></td><td>What sort of music do you like?</td></tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que vous faites comme sports.mp3`}>Qu'est-ce que vous faites <b>comme</b> sports ?</AudioClip></TableCell><TableCell>What sports do you do?</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Qu'est-ce que tu aimes comme musique.mp3`}>Qu'est-ce que tu aimes <b>comme</b> musique ?</AudioClip></TableCell><TableCell>What sort of music do you like?</TableCell></TableRow>
+								</TableBody>
+							</Table>
 						</li>
 
 						<li>
 							<p>The irregular verb <AudioClip className={`link`} soundFile={`sounds/fr/devoir.mp3`}><b>devoir</b></AudioClip> means "to have to." It is used together with another verb in its infinitive form.</p>
-							<table>
-								<tbody>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Je dois partir à trois heures.mp3`}><b>Je dois partir</b> à trois heures.</AudioClip></td><td>I have to leave at 3 o'clock.</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/Ils doivent travailler très dur.mp3`}><b>Ils doivent travailler</b> très dur.</AudioClip></td><td>They have to work hard.</td></tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je dois partir à trois heures.mp3`}><b>Je dois partir</b> à trois heures.</AudioClip></TableCell><TableCell>I have to leave at 3 o'clock.</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Ils doivent travailler très dur.mp3`}><b>Ils doivent travailler</b> très dur.</AudioClip></TableCell><TableCell>They have to work hard.</TableCell></TableRow>
+								</TableBody>
+							</Table>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/devoir.mp3`}><b>devoir</b></AudioClip></p>
-							<table>
-								<tbody>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/je dois.mp3`}>je dois</AudioClip></td><td>I have to / I must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/tu dois.mp3`}>tu dois</AudioClip></td><td>you have to / you must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/il doit, elle doit.mp3`}>il / elle doit</AudioClip></td><td>he / she has to — he / she must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/on doit.mp3`}>on doit</AudioClip></td><td>people / we have to — people / we must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/nous devons.mp3`}>nous devons</AudioClip></td><td>we have to — we must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/vous devez.mp3`}>vous devez</AudioClip></td><td>you have to / you must</td></tr>
-									<tr><td><AudioClip className={`link`} soundFile={`sounds/fr/ils doivent, elles doivent.mp3`}>ils / elles doivent</AudioClip></td><td>they have to / they must</td></tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je dois.mp3`}>je dois</AudioClip></TableCell><TableCell>I have to / I must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu dois.mp3`}>tu dois</AudioClip></TableCell><TableCell>you have to / you must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il doit, elle doit.mp3`}>il / elle doit</AudioClip></TableCell><TableCell>he / she has to — he / she must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/on doit.mp3`}>on doit</AudioClip></TableCell><TableCell>people / we have to — people / we must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous devons.mp3`}>nous devons</AudioClip></TableCell><TableCell>we have to — we must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous devez.mp3`}>vous devez</AudioClip></TableCell><TableCell>you have to / you must</TableCell></TableRow>
+									<TableRow><TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils doivent, elles doivent.mp3`}>ils / elles doivent</AudioClip></TableCell><TableCell>they have to / they must</TableCell></TableRow>
+								</TableBody>
+							</Table>
 						</li>
 
 						<li>
@@ -2681,42 +2689,42 @@ export class L14Grammar extends PureComponent {
 							<p>Je peux répondre à votre question tout de suite. — I can answer your question right away.
 								Vous pouvez ouvrir la fenêtre, s'il vous plaît ? — Can you open the window, please?</p>
 							<p><AudioClip className={`link`} soundFile={`sounds/fr/pouvoir.mp3`}><b>pouvoir</b></AudioClip></p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/je peux.mp3`}>je peux</AudioClip></td>
-										<td>I am able to / I can / I may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/tu peux.mp3`}>tu peux</AudioClip></td>
-										<td>you are able to / you can / you may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/il peut.mp3`}>il peut</AudioClip></td>
-										<td>he is able to / he can / he may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/elle peut.mp3`}>elle peut</AudioClip></td>
-										<td>she is able to / she can / she may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/on peut.mp3`}>on peut</AudioClip></td>
-										<td>people / we are able to / can / may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/nous pouvons.mp3`}>nous pouvons</AudioClip></td>
-										<td>we are able to / we can / we may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/vous pouvez.mp3`}>vous pouvez</AudioClip></td>
-										<td>you are able to / you can / you may</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/ils peuvent, elles peuvent.mp3`}>ils / elles peuvent</AudioClip></td>
-										<td>they are able to / they can / they may</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/je peux.mp3`}>je peux</AudioClip></TableCell>
+										<TableCell>I am able to / I can / I may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/tu peux.mp3`}>tu peux</AudioClip></TableCell>
+										<TableCell>you are able to / you can / you may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/il peut.mp3`}>il peut</AudioClip></TableCell>
+										<TableCell>he is able to / he can / he may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/elle peut.mp3`}>elle peut</AudioClip></TableCell>
+										<TableCell>she is able to / she can / she may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/on peut.mp3`}>on peut</AudioClip></TableCell>
+										<TableCell>people / we are able to / can / may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/nous pouvons.mp3`}>nous pouvons</AudioClip></TableCell>
+										<TableCell>we are able to / we can / we may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/vous pouvez.mp3`}>vous pouvez</AudioClip></TableCell>
+										<TableCell>you are able to / you can / you may</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/ils peuvent, elles peuvent.mp3`}>ils / elles peuvent</AudioClip></TableCell>
+										<TableCell>they are able to / they can / they may</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 						</li>
 
 						<li>
@@ -2726,42 +2734,42 @@ export class L14Grammar extends PureComponent {
 
 							<p>In English the present participle ends in <em>-ing</em> (e.g. interesting, encouraging).
 								In French the present participle is the verb form that ends in <em>-ant</em>. Present participles can often be used as adjectives:</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est fatigant.mp3`}>C'est fatigant</AudioClip></td>
-										<td>It's tiring</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est motivant.mp3`}>C'est motivant</AudioClip></td>
-										<td>It's motivating</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/C'est intéressant.mp3`}>C'est intéressant</AudioClip></td>
-										<td>It's interesting</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est fatigant.mp3`}>C'est fatigant</AudioClip></TableCell>
+										<TableCell>It's tiring</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est motivant.mp3`}>C'est motivant</AudioClip></TableCell>
+										<TableCell>It's motivating</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/C'est intéressant.mp3`}>C'est intéressant</AudioClip></TableCell>
+										<TableCell>It's interesting</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 
 							<p><strong>ii. Past Participles</strong><br/>
 								Examples of past participles in English are: tired, motivated, fascinated.
 								In French many past participles end in <b>-é</b>. These are the past participles of <b>-er</b> verbs. Past participles can often be used as adjectives:</p>
-							<table>
-								<tbody>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Je suis fatigué.mp3`}>Je suis fatigué.e</AudioClip></td>
-										<td>I am tired</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Les étudiants sont très motivés.mp3`}>Les étudiants sont très motivés</AudioClip></td>
-										<td>The students are very motivated</td>
-									</tr>
-									<tr>
-										<td><AudioClip className={`link`} soundFile={`sounds/fr/Il est fasciné.mp3`}>Il est fasciné</AudioClip></td>
-										<td>He is fascinated</td>
-									</tr>
-								</tbody>
-							</table>
+							<Table>
+								<TableBody>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Je suis fatigué.mp3`}>Je suis fatigué.e</AudioClip></TableCell>
+										<TableCell>I am tired</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Les étudiants sont très motivés.mp3`}>Les étudiants sont très motivés</AudioClip></TableCell>
+										<TableCell>The students are very motivated</TableCell>
+									</TableRow>
+									<TableRow>
+										<TableCell><AudioClip className={`link`} soundFile={`sounds/fr/Il est fasciné.mp3`}>Il est fasciné</AudioClip></TableCell>
+										<TableCell>He is fascinated</TableCell>
+									</TableRow>
+								</TableBody>
+							</Table>
 
 							<p><strong>NB:</strong> Present and past participles used as adjectives must agree in gender and number with the noun they are describing.</p>
 						</li>
@@ -2828,26 +2836,30 @@ export class AudioClipSamples extends PureComponent {
 					key={`${id}CustomComponent`}
 				>
 					<h2>AudioClip Samples</h2>
-					<table>
-						<tbody>
-							<tr>
-								<td>link:</td>
-								<td><AudioClip className={`link`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
-							</tr>
-							<tr>
-								<td>compact:</td>
-								<td><AudioClip className={`compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
-							</tr>
-							<tr>
-								<td>super-compact:</td>
-								<td><AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
-							</tr>
-							<tr>
-								<td>default:</td>
-								<td><AudioClip className={``} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></td>
-							</tr>
-						</tbody>
-					</table>
+					<Table>
+						<TableBody>
+							<TableRow>
+								<TableCell>link:</TableCell>
+								<TableCell><AudioClip className={`link`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>compact:</TableCell>
+								<TableCell><AudioClip className={`compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>super-compact:</TableCell>
+								<TableCell><AudioClip className={`super-compact`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>super-compact-speaker:</TableCell>
+								<TableCell><AudioClip className={`super-compact-speaker`} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></TableCell>
+							</TableRow>
+							<TableRow>
+								<TableCell>default:</TableCell>
+								<TableCell><AudioClip className={``} soundFile={resolveAsset(`/sounds/fr/Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16.mp3`)} >Ah non, je suis désolée, il y a une erreur ! C'est le 01 23 08 08 16</AudioClip></TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
 				</div>
 			</div>
 		);
