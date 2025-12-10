@@ -1,9 +1,14 @@
 // Sortable.jsx
 import './Sortable.scss';
+import {
+	AudioClip,
+	IconButton,
+	Info,
+} from "../../Components";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AudioClip } from "../../Components";
 import { Button } from "@/components/ui/button";
 import React from "react";
+
 
 export class Sortable extends React.Component {
 	constructor(props) {
@@ -216,21 +221,21 @@ export class Sortable extends React.Component {
 			"Sortable activity";
 
 		const prompt =
-			config.proinstructionsTextmpt ||
-			config.instructionsText ||
-			config.prompt ||
-			config.promptText ||
-			"";
+			config.instructionsText ||	"";
 
-		const { phrases } = config;
+		const {
+			phrases, id,
+			informationText,
+			informationTextHTML
+		} = config;
 
 		return (
-			<Card className="w-full sortable">
-				<CardHeader>
+			<Card className="w-full sortable pt-4">
+				{/* <CardHeader>
 					<CardTitle className="text-base font-semibold">
 						{title}
 					</CardTitle>
-				</CardHeader>
+				</CardHeader> */}
 
 				<CardContent>
 					{prompt && (
@@ -240,6 +245,7 @@ export class Sortable extends React.Component {
 					)}
 
 					<div className="space-y-1">
+						<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 						{phrases.map((phrase, index) => {
 							let french = "";
 							let audio = null;
@@ -268,7 +274,7 @@ export class Sortable extends React.Component {
 									{/* LEFT: Audio */}
 									<div className="flex items-center justify-center pr-2">
 										{audio && (
-											<AudioClip className={`super-compact`} soundFile={audio} />
+											<AudioClip className={`super-compact-speaker`} soundFile={audio} />
 										)}
 									</div>
 
@@ -352,15 +358,15 @@ export class Sortable extends React.Component {
 					</div>
 
 					<div className="mt-4 flex flex-wrap gap-2">
-						<Button onClick={this.checkAnswer}>
+						<IconButton theme={`check`} onClick={this.checkAnswer}>
 							Check answer
-						</Button>
-						<Button variant="outline" onClick={this.reset}>
+						</IconButton>
+						<IconButton theme={`reset`} onClick={this.reset}>
 							Reset
-						</Button>
-						<Button variant="outline" onClick={this.shuffleEnglish}>
-							Shuffle English
-						</Button>
+						</IconButton>
+						<IconButton theme={`shuffle`} onClick={this.shuffleEnglish}>
+							Shuffle
+						</IconButton>
 					</div>
 
 					{this.renderFeedback()}

@@ -246,7 +246,7 @@ class CircularAudioProgress extends AudioClip {
 	render = () => {
 		const strokeWidth = 2;
 		// const colour = '#000';
-		const bgColour = '#ddd';
+		const bgColour = '#f0f0f0ff'; // Needs to be about this so it works in dark mode and light mode.
 
 		const inline = this.props;
 
@@ -272,7 +272,10 @@ class CircularAudioProgress extends AudioClip {
 						backgroundSize: `${compactDimension / 2}px`,
 					}}
 				>
-					<svg width={size} height={size}>
+					<svg
+						fill="none"
+						width={size}
+						height={size}>
 						{/* Background ring */}
 						<circle
 							cx={size / 2}
@@ -296,6 +299,9 @@ class CircularAudioProgress extends AudioClip {
 							transform={`rotate(-90 ${size / 2} ${size / 2})`}
 							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
 						/>
+						<path fill="currentColor" d="m18.64 13.5-5.14 3.448-5.14 3.447V6.604l5.14 3.447z" className="play" />
+
+						<path fill="currentColor" className="pause" d="M6.501 6.617h4.611v13.765H6.501zM14.966 6.617h4.611v13.765h-4.611z"/>
 					</svg>
 				</span>
 			);

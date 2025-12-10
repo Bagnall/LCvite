@@ -5,6 +5,7 @@ import {
 } from "../../utility";
 import {
 	AudioClip,
+	IconButton,
 	Piece,
 } from "../../Components";
 import { Button } from "@/components/ui/button";
@@ -382,7 +383,6 @@ export class Jigsaw extends React.PureComponent {
 				onMouseMove={this.handleMouseMove}
 				onMouseUp={this.handleMouseUp}
 			>
-				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				<p className='clue'>{descriptionText}&nbsp;</p>
 
@@ -418,7 +418,7 @@ export class Jigsaw extends React.PureComponent {
 				</div>
 				<div className='help'>
 					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					<Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button>&nbsp;
+					<IconButton className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} theme={`eye`} onClick={this.autoSolve}>{cheatText}</IconButton>
 				</div>
 			</div>
 		);

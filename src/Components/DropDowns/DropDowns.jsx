@@ -379,16 +379,14 @@ export class DropDowns extends React.PureComponent {
 
 				{content}
 
+
+				<p key={`p-n-of-m`}>
+					<span className="n-placed">{nCorrect}</span> correct out of{" "}
+					{`${this.nToSolve}`}
+				</p>
 				<div className="help">
 					<IconButton
-						className={`hidden-help ${failCount >= 1 ? "show" : ""}`}
-						onClick={this.autoSolve}
-						theme={`eye`}
-					>
-						{cheatText}
-					</IconButton>
-					<IconButton
-						className={`hidden-help w-full ${
+						className={`hidden-help ${
 							nCorrect >= 1 || failCount >= 1 ? "show" : ""
 						}`}
 						onClick={this.handleReset}
@@ -396,12 +394,14 @@ export class DropDowns extends React.PureComponent {
 					>
             Reset
 					</IconButton>
+					<IconButton
+						className={`hidden-help ${failCount >= 1 ? "show" : ""}`}
+						onClick={this.autoSolve}
+						theme={`eye`}
+					>
+						{cheatText}
+					</IconButton>
 				</div>
-
-				<p key={`p-n-of-m`}>
-					<span className="n-placed">{nCorrect}</span> correct out of{" "}
-					{`${this.nToSolve}`}
-				</p>
 
 				{footnote ? (
 					<p key={`p-footnote`} className="footnote">

@@ -1,4 +1,6 @@
 import './Blanks.scss';
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import {
 	AudioClip,
 	CheckBox,
@@ -163,6 +165,7 @@ export class Blanks extends React.Component {
 
 		this.autoSolve = this.autoSolve.bind(this);
 		this.handleHints = this.handleHints.bind(this);
+		this.handleToggle = this.handleToggle.bind(this);
 		// this.handleChange = this.handleChange.bind(this);
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -228,13 +231,16 @@ export class Blanks extends React.Component {
 	};
 
 	handleHints = (e) => {
-		// console.log("handleHints", e, e.target.checked);
+		console.log("handleHints", e, e.target.checked);
+		// const { showHints = false } = this.state;
 		// e.preventDefault();
-		e.stopPropagation();
+		// e.stopPropagation();
 		// const { showHints } = this.state;
 		this.setState({ showHints: e.target.checked });
 	};
-
+	handleToggle = (value) => {
+		this.setState({ showHints: value });
+	};
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
 		if (e.button && e.button !== 0) return;
@@ -695,7 +701,6 @@ export class Blanks extends React.Component {
 				onTouchEnd={this.handleMouseUp}
 				key={`${id}Blanks`}
 			>
-				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
@@ -710,7 +715,7 @@ export class Blanks extends React.Component {
 				}
 
 				<div
-					className={`blanks ${showHints ? 'show-hints' : ''}`}
+					className={`blanks ${showHints ? 'show-hints' : ''} mb-8`}
 					onMouseDown={this.handleMouseDown}
 					onMouseMove={this.handleMouseMove}
 					onMouseUp={this.handleMouseUp}
@@ -744,16 +749,39 @@ export class Blanks extends React.Component {
 						}
 					</div>
 				</div>
-				<div className='help'>
-					<label>{showHintsText}:&nbsp;
-						<input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
-					{/* <Button className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button> */}
-					<IconButton className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
-					{/* <Button className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button> */}
-					<IconButton className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
-				</div>
 
 				<p>{nPlaced} correct out of {nToPlace}</p>
+
+				<div className='help'>
+					{/* <label>{showHintsText}:&nbsp; */}
+					{/* <div className={`flex items-center space-x-2`}> */}
+					{/* <input name={`showHintsId-${id ? id : ''}`} type='checkbox' onClick={this.handleHints} checked={showHints} /> */}
+					{/* <Label htmlFor={`showHintsId-${id ? id : ''}`} className={`cursor-pointer`}>
+							<Switch id={`showHintsId-${id ? id : ''}`} onClick={this.handleHints} />
+							{showHintsText}</Label> */}
+
+
+						        <Switch
+						id={`showHintsId-${id ? id : ''}`}
+						checked={showHints}
+						onCheckedChange={this.handleToggle}
+					/>
+					<Label
+						htmlFor={`showHintsId-${id ? id : ''}`}
+						className="cursor-pointer"
+						onClick={() => {console.log("Label clicked"); this.handleToggle(!showHints);}}
+					>
+						{showHintsText}
+					</Label>
+					{/* </div> */}
+					{/* </label> */}
+					{/* <div className='mt-4 flex justify-start gap-2'> */}
+					{/* <Button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</Button> */}
+					<IconButton className={`hidden-help ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+					<IconButton className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+					{/* <Button className={`hidden-help ${nPlaced >= 1 || failCount >= 2 || complete ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button> */}
+					{/* </div> */}
+				</div>
 			</div>
 		);
 	};

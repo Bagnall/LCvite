@@ -243,10 +243,8 @@ export class MemoryMatchGame extends React.PureComponent {
 
 				</div>
 				<div className={`help`}>
-					<IconButton className={`shuffle w-full`} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
-					{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
-					<IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
-
+					<IconButton className={`hidden-help`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+					<IconButton className={`shuffle`} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
 				</div>
 			</div>
 		);

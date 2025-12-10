@@ -6,11 +6,6 @@
 		"targetLanguage": "french",
 		"targetLanguageCode": "fr-FR"
 	},
-	"radiotest1": {
-		"component": "HIDERadioTest",
-		"id": "radioTest1",
-		"titleText": "Radio Test"
-	},
 	"group1": {
 		"component": "Group",
 		"htmlContent": "<p>This <b>Jigsaw</b> component presents 2 sets of jigsaw pieces. The student needs to read / listen to the phrase that describes a picture. This should enable the student to choose the correct pieces to place into a simple jigsaw picture.</p><p>Two or more errors reveal some help options.</p>",
@@ -2024,7 +2019,8 @@
 				""
 			]
 		],
-		"titleText": "RadioQuiz TEST!"
+		"titleText": "RadioQuiz TEST!",
+		"menuText": "RQT"
 	},
 	"connectFour1": {
 		"cheatText": "Show answer",
@@ -2034,7 +2030,7 @@
 		"id": "ConnectFour1",
 		"instructionsText": "Simple Connect Four",
 		"showHintsText": "Show hints",
-		"titleText": "ConnectFour"
+		"titleText": "C4"
 	},
 	"mockney1": {
 		"cheatText": "Show answer",
@@ -2043,7 +2039,7 @@
 		"id": "Mockney1",
 		"instructionsText": "Type text to translate to mockney",
 		"showHintsText": "Show hints",
-		"titleText": "Mockney"
+		"titleText": "M"
 	},
 	"crossword1": {
 		"cheatText": "Show answer",
@@ -2095,12 +2091,12 @@
 			]
 		],
 		"showHintsText": "Show hints",
-		"titleText": "Shops Crossword"
+		"titleText": "Crossword"
 	},
 	"sortable1": {
 		"component": "Sortable",
 		"id": "sortable1",
-		"titleText": "Small talk",
+		"titleText": "Sortable",
 		"proinstructionsTextmpt": "Put the sentences in a natural order to form a short dialogue.",
 		"shuffleOnLoad": true,
 		"phrases": [

@@ -175,9 +175,6 @@ export class AnswerTable extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				{/* <div className={`help`}>
-					<Button className={`reset`} size="sm" onClick={this.handleReset}>Reset</Button>
-				</div> */}
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				<Table>
 					{header ?

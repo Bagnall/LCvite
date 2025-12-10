@@ -167,16 +167,19 @@ export class Monologue extends React.PureComponent {
 							(
 								<>
 									<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
-									<Button
-										className={`${compact ? 'sm' : null}`}
-										onClick={this.handleValidation}
-										type={`submit`}
-									>Check</Button>
 								</>
 							)
 						}
 					</div>
-					{!compact ? <IconButton className={`hidden-help w-full`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>	: null}
+					<div className={`help`}>
+						{!compact ? <IconButton className={`hidden-help`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton> : null}
+						<IconButton
+							className={`${compact ? 'sm' : null}`}
+							onClick={this.handleValidation}
+							type={`submit`}
+							theme={`check`}
+						>Check</IconButton>
+					</div>
 				</>
 			);
 

@@ -23,11 +23,11 @@ _mixins.module.scss
 
 @mixin help() {
 	width: 100%;
-	align-items: center;
+	align-items: flex-start;
 	display: flex;
-	flex-direction: column;
-	row-gap: 8px;
-	justify-content: space-between;
+	flex-direction: row;
+	column-gap: 8px;
+	align-items: center;
 }
 
 @mixin comparison() {

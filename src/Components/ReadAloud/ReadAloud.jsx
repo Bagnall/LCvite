@@ -198,7 +198,6 @@ export class ReadAloud extends React.PureComponent {
 		} else {
 			return (
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
-					{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
 					<div className={`instructions`}>
 						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
@@ -216,7 +215,7 @@ export class ReadAloud extends React.PureComponent {
 						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comparison) }} />
 					</div>
 					<div className={`help`}>
-						<IconButton className={`hidden-help w-full reset`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+						<IconButton className={`hidden-help reset`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
 					</div>
 
 				</div>

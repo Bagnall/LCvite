@@ -2335,13 +2335,10 @@ export class L13ASummersDay extends Component {
 			nCorrect,
 		} = this.state;
 		const { showDialog } = this.props;
-		// console.log("answerRow", rowNum, answer);
 
 		rowsAnswered[rowNum] = true;
 		userChose[rowNum] = answer;
 		if (correct) nCorrect++;
-		// console.log("rowsAnswered", rowsAnswered);
-		// console.log("userChose", userChose);
 		allAnswered = rowsAnswered.every(this.isTrue);
 		this.setState({
 			allAnswered: allAnswered,
@@ -2351,8 +2348,6 @@ export class L13ASummersDay extends Component {
 		});
 
 		if (allAnswered && nCorrect === 12)showDialog("Félicitations !");
-
-		// console.log("allTrue", rowsAnswered.every(this.isTrue));
 	};
 
 	handleChange = (e) => {
@@ -2461,11 +2456,6 @@ export class L13ASummersDay extends Component {
 		};
 
 		return (
-			// <div
-			// 	className={`lo13-a-summers-day container`}
-			// 	id={`${id ? id : ''}`}
-			// 	key={`${id}CustomComponent`}
-			// >
 			<div
 				className={`panel`}
 				id={`${id ? `${id}Panel` : ''}`}
@@ -2493,142 +2483,7 @@ export class L13ASummersDay extends Component {
 					showDialog={showDialog}
 					onComplete={() => this.setState({allAnswered: true})}
 				/>
-				{/* <Table>
-							<TableBody>
-								<TableRow>
-									<TableCell>Véronique se lève vers 7 heures le week-end.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[0]}
-										onAnswer={this.answerRow}
-										id={`line0`}
-										explanation={`Véronique se lève vers 6 heures le week-end.`}
-										value={userChose[0]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle se promène en ville.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[1]}
-										onAnswer={this.answerRow}
-										id={`line1`}
-										explanation={`Elle se promène dans le village.`}
-										value={userChose[1]}
-									/>
-									</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle aime être dehors quand il fait beau.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={true}
-										disabled={rowsAnswered[2]}
-										onAnswer={this.answerRow}
-										id={`line2`}
-										value={userChose[2]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Après sa promenade, Véronique prend un bain.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[3]}
-										onAnswer={this.answerRow}
-										id={`line3`}
-										explanation={`Elle prend une douche rapide.`}
-										value={userChose[3]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle prend un bol de yaourt.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[4]}
-										onAnswer={this.answerRow}
-										id={`line4`}
-										explanation={`Elle prend un bol de céréales.`}
-										value={userChose[4]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle boit du café-crème.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={true}
-										disabled={rowsAnswered[5]}
-										onAnswer={this.answerRow}
-										id={`line5`}
-										value={userChose[5]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Dans le jardin il y a deux arbres.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[6]}
-										onAnswer={this.answerRow}
-										id={`line6`}
-										explanation={`Dans le jardin il y a trois arbres.`}
-										value={userChose[6]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Véronique passe une heure dans le jardin.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[7]}
-										onAnswer={this.answerRow}
-										id={`line7`}
-										explanation={`Véronique passe la matinée entière dans le jardin.`}
-										value={userChose[7]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle passe l'après-midi avec ses parents.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[8]}
-										onAnswer={this.answerRow}
-										id={`line8`}
-										explanation={`Elle passe l'après-midi avec ses amis.`}
-										value={userChose[8]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Parfois, ils vont en ville.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={true}
-										disabled={rowsAnswered[9]}
-										onAnswer={this.answerRow}
-										id={`line9`}
-										value={userChose[9]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Elle dîne dans la salle à manger.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={false}
-										disabled={rowsAnswered[10]}
-										onAnswer={this.answerRow}
-										id={`line10`}
-										explanation={`Elle dîne dans le jardin ou sur le balcon.`}
-										value={userChose[10]}
-									/></TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell>Le soir, elle se détend.</TableCell>
-									<TableCell><L13TrueFalse
-										answer={true}
-										disabled={rowsAnswered[11]}
-										onAnswer={this.answerRow}
-										id={`line11`}
-										value={userChose[11]}
-									/></TableCell>
-								</TableRow>
-							</TableBody>
-						</Table> */}
-				{/* <p>{nCorrect} correct out of 12</p> */}
 			</div>
-			// </div>
 		);
 	};
 }

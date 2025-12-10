@@ -200,7 +200,6 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
-				{/* <Button className={`reset`} onClick={this.handleReset}>Reset</Button> */}
 				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
@@ -212,9 +211,8 @@ export class WordParts extends React.PureComponent {
 				</table>
 
 				<div className='help'>
-					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<IconButton className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
-					<IconButton className={`hidden-help w-full ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`}>Reset</IconButton>
+					<IconButton className={`hidden-help ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`}>Reset</IconButton>
+					<IconButton className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
 				</div>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>

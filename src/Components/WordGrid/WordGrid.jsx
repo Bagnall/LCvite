@@ -527,12 +527,9 @@ export class WordGrid extends PureComponent {
 					</div>
 					<div className='help'>
 						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
-						<IconButton className={`hidden-help w-full ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
-						{/* <Button className={`reset hidden-help ${nPlaced > 0 || failCount >= 2 ? 'show' : ''}`} onClick={this.handleReset}>Reset</Button> */}
-
-						<IconButton className={`hidden-help w-full reset ${nPlaced > 0 || failCount >= 2 ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
-
-						<IconButton className={`shuffle w-full `} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
+						<IconButton className={`hidden-help  reset ${nPlaced > 0 || failCount >= 2 ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+						<IconButton className={`hidden-help  ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+						<IconButton className={`shuffle  `} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
 					</div>
 					<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 					<p className='time-taken'>{timeReport}</p>

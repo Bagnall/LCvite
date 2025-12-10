@@ -528,6 +528,37 @@
 					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
 					"titleText": "7. Listening comprehension"
 				}
+			},
+			{
+				"sortable1": {
+					"component": "Sortable",
+					"id": "sortable1",
+					"titleText": "7. Listening comprehension",
+					"informationText": "Listen and drag to match the correct words.",
+					"shuffleOnLoad": true,
+					"phrases": [
+						[
+							"",
+							"homme",
+							"sounds/fr/homme.mp3"
+						],
+						[
+							"",
+							"hôtel",
+							"sounds/fr/hôtel.mp3"
+						],
+						[
+							"",
+							"hôpital",
+							"sounds/fr/hôpital.mp3"
+						],
+						[
+							"",
+							"horrible",
+							"sounds/fr/horrible.mp3"
+						]
+					]
+				}
 			}
 		],
 		"expandable": false,
