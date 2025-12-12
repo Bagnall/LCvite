@@ -85,7 +85,8 @@
 #LO9-grammar-Section {
 	.svg-container {
 		overflow: hidden;
-		width: 100%;
+		border: 1px solid rgb(229 229 229);
+		// width: 100%;
 		max-width: 600px; // adjust as needed
 	}
 

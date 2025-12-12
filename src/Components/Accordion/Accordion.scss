@@ -91,7 +91,7 @@ $common-left-margin: 20px;
 	width: 100%;
 
 	.accordion-article {
-		border-bottom: 1px solid oklch(0.922 0 0);
+		// border-bottom: 1px solid oklch(0.922 0 0);
 		overflow: hidden;
 		height: auto;
 		@include hideArticle;
