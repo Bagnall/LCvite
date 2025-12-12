@@ -510,26 +510,6 @@
 				}
 			},
 			{
-				"wordsIntoSlots7": {
-					"component": "Blanks",
-					"id": "wordsIntoSlots7",
-					"congratulationsText": "Très bien !",
-					"informationTextHTML": "Listen and drag or match the correct words to complete short spoken exercises — focusing on <i>on</i> / <i>om</i> and <i>oi</i> sounds.",
-					"listenDescriptionText": "Speech",
-					"showHintsText": "Show hints when moving",
-					"cheatText": "Show answer",
-					"blanksType": "table",
-					"words": [
-						"homme",
-						"hôtel",
-						"hôpital",
-						"horrible"
-					],
-					"soundFile": "sounds/fr/LO1 7 words-in-order.mp3",
-					"titleText": "7. Listening comprehension"
-				}
-			},
-			{
 				"sortable1": {
 					"component": "Sortable",
 					"id": "sortable1",

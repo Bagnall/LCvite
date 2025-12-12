@@ -1,6 +1,5 @@
 import './AudioClip.scss';
 import React from 'react';
-
 export class AudioClip extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -13,8 +12,7 @@ export class AudioClip extends React.PureComponent {
 		this.audioRef = React.createRef();
 	}
 
-	notePlaying = (e, useRef) =>
-	{
+	notePlaying = (e, useRef) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// useRef is true when the player is an audio control

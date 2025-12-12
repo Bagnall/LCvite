@@ -4,6 +4,7 @@ import { Switch } from "@/components/ui/switch";
 import {
 	AudioClip,
 	CheckBox,
+	ConcatenatedPlaylist,
 	IconButton,
 	Info,
 	Word,
@@ -238,9 +239,11 @@ export class Blanks extends React.Component {
 		// const { showHints } = this.state;
 		this.setState({ showHints: e.target.checked });
 	};
+
 	handleToggle = (value) => {
 		this.setState({ showHints: value });
 	};
+
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
 		if (e.button && e.button !== 0) return;
@@ -516,10 +519,10 @@ export class Blanks extends React.Component {
 			showHints,
 			showHintsText,
 			soundFile,
-			soundFiles,
 			words = [],
 		} = this.state;
 		let {
+			soundFiles = [],
 			wordTiles,
 		} = this.state;
 		const {
@@ -562,12 +565,15 @@ export class Blanks extends React.Component {
 						}
 					}
 					let soundFile;
-					if (audio) soundFile = resolveAsset(`${audio[i]}`);
+					if (audio) {
+						soundFile = resolveAsset(`${audio[i]}`);
+						soundFiles.push(soundFile);
+					}
 					phraseList.push(
-						<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> {audio ? <AudioClip
-							className={`compact inset`}
+						<li key={`phrase${i}`}>{audio ? <AudioClip
+							className={`super-compact-speaker inset`}
 							soundFile={soundFile}
-						/> : null}</li>
+						/> : null}<div className='phrase'>{phrase}</div> </li>
 					);
 				}
 				wordTiles = shuffleArray(wordTiles);
@@ -607,6 +613,8 @@ export class Blanks extends React.Component {
 			case "questions-answers": {
 				for (let i = 1; i <= questions.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
+					soundFiles.push(soundFile);
+
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
 							<TableCell>
@@ -658,6 +666,8 @@ export class Blanks extends React.Component {
 			case "pictures-answers": {
 				for (let i = 1; i <= pictures.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
+					soundFiles.push(soundFile);
+
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
 							<TableCell>
@@ -713,6 +723,12 @@ export class Blanks extends React.Component {
 					:
 					null
 				}
+				{soundFiles.length > 0 && blanksType === 'phrases' ?
+					<ConcatenatedPlaylist
+						sources={soundFiles}
+						pauseSeconds={0.5}
+					/> : null}
+
 
 				<div
 					className={`blanks ${showHints ? 'show-hints' : ''} mb-8`}
