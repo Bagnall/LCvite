@@ -120,176 +120,177 @@
 		"informationTextHTML": "<h3>You will learn:</h3><ul><li>Key greeting and farewell expressions (<i>Bonjour, Salut, Au revoir, À bientôt</i>).</li><li>Terms of address (<i>Monsieur, Madame, Mademoiselle, Jeune homme, Les enfants</i>).</li><li>Friendly and affectionate expressions (<i>Mon chéri, Ma chérie, Mon amour</i>).</li></ul>",
 		"phrases": [
 			[
+				"sounds/fr/Bonjour.mp3",
 				"Bonjour",
-				"Hello, good morning, good afternoon",
-				"sounds/fr/Bonjour.mp3"
+				"Hello, good morning, good afternoon"
 			],
 			[
+				"sounds/fr/Bonsoir.mp3",
 				"Bonsoir",
-				"Hello, good evening",
-				"sounds/fr/Bonsoir.mp3"
+				"Hello, good evening"
 			],
 			[
+				"sounds/fr/Coucou.mp3",
 				"Coucou",
-				"Hi, cooee, peek-a-boo",
-				"sounds/fr/Coucou.mp3"
+				"Hi, cooee, peek-a-boo"
 			],
 			[
+				"sounds/fr/Salut.mp3",
 				"Salut",
-				"Hi, bye",
-				"sounds/fr/Salut.mp3"
+				"Hi, bye"
 			],
 			[
+				"sounds/fr/Au revoir.mp3",
 				"Au revoir",
-				"Goodbye",
-				"sounds/fr/Au revoir.mp3"
+				"Goodbye"
 			],
 			[
+				"sounds/fr/À bientôt.mp3",
 				"À bientôt",
-				"See you soon!",
-				"sounds/fr/À bientôt.mp3"
+				"See you soon!"
 			],
 			[
+				"sounds/fr/Monsieur.mp3",
 				"Monsieur",
-				"Sir, Mr",
-				"sounds/fr/Monsieur.mp3"
+				"Sir, Mr"
 			],
 			[
+				"sounds/fr/Madame.mp3",
 				"<a class='special-anchor' href='#madame'>Madame</a>",
-				"Madam, Mrs / Ms",
-				"sounds/fr/Madame.mp3"
+				"Madam, Mrs / Ms"
 			],
 			[
+				"sounds/fr/Mademoiselle.mp3",
 				"<a class='special-anchor' href='#mademoiselle'>Mademoiselle</a>",
-				"Young lady, Miss",
-				"sounds/fr/Mademoiselle.mp3"
+				"Young lady, Miss"
 			],
 			[
+				"sounds/fr/Messieurs-dames.mp3",
 				"Messieurs-dames",
-				"Ladies and gentlemen",
-				"sounds/fr/Messieurs-dames.mp3"
+				"Ladies and gentlemen"
 			],
 			[
+				"sounds/fr/jeune homme.mp3",
 				"Jeune homme",
-				"Young man",
-				"sounds/fr/jeune homme.mp3"
+				"Young man"
 			],
 			[
+				"sounds/fr/mon petit ma petite.mp3",
 				"Mon petit (m) / Ma petite (f)",
-				"Poppet  (literally: my little one)",
-				"sounds/fr/mon petit ma petite.mp3"
+				"Poppet  (literally: my little one)"
 			],
 			[
+				"sounds/fr/mon amour.mp3",
 				"Mon amour",
-				"My love",
-				"sounds/fr/mon amour.mp3"
+				"My love"
 			],
 			[
+				"sounds/fr/mon cheri ma cherie.mp3",
 				"Mon chéri (m) / ma chérie (f)",
-				"My darling",
-				"sounds/fr/mon cheri ma cherie.mp3"
+				"My darling"
 			],
 			[
+				"sounds/fr/les enfants.mp3",
 				"Les enfants",
-				"Children",
-				"sounds/fr/les enfants.mp3"
+				"Children"
 			],
 			[
+				"sounds/fr/tout le monde.mp3",
 				"Tout le monde",
-				"Everyone (literally : all the world)",
-				"sounds/fr/tout le monde.mp3"
+				"Everyone (literally : all the world)"
 			],
 			[
+				"sounds/fr/Ça va (q).mp3",
 				"Ça va ?",
-				"Are you well / OK?  Are things alright/ OK?",
-				"sounds/fr/Ça va (q).mp3"
+				"Are you well / OK?  Are things alright/ OK?"
 			],
 			[
+				"sounds/fr/Comment ça va.mp3",
 				"Comment ça va ?",
-				"How are you? (literally: how's it going?)",
-				"sounds/fr/Comment ça va.mp3"
+				"How are you? (literally: how's it going?)"
 			],
 			[
+				"sounds/fr/Très bien.mp3",
 				"Très bien",
-				"Very well",
-				"sounds/fr/Très bien.mp3"
+				"Very well"
 			],
 			[
+				"sounds/fr/Ça va.mp3",
 				"Ça va.",
-				"(I'm) fine",
-				"sounds/fr/Ça va.mp3"
+				"(I'm) fine"
 			],
 			[
+				"sounds/fr/Pas mal.mp3",
 				"Pas mal",
-				"Not bad",
-				"sounds/fr/Pas mal.mp3"
+				"Not bad"
 			],
 			[
+				"sounds/fr/Comment t'appelles-tu.mp3",
 				"Comment t'appelles-<a class='special-anchor' href='#tuvous'>tu</a> ?",
-				"What's your name?",
-				"sounds/fr/Comment t'appelles-tu.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Comment vous appelez-vous.mp3",
 				"Comment <a class='special-anchor' href='#tuvous'>vous</a> appelez-vous ?",
-				"What's your name?",
-				"sounds/fr/Comment vous appelez-vous.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Je m'appelle.mp3",
 				"Je m'appelle …",
-				"My name is …",
-				"sounds/fr/Je m'appelle.mp3"
+				"My name is …"
 			],
 			[
+				"sounds/fr/Bonne journée !.mp3",
 				"Bonne journée !",
-				"Have a nice day!",
-				"sounds/fr/Bonne journée !.mp3"
+				"Have a nice day!"
 			],
 			[
+				"sounds/fr/Bonne soirée !.mp3",
 				"Bonne soirée !",
-				"Have a nice evening!   ",
-				"sounds/fr/Bonne soirée !.mp3"
+				"Have a nice evening!   "
 			],
 			[
+				"sounds/fr/Bonne nuit !.mp3",
 				"Bonne nuit !",
-				"Good night!",
-				"sounds/fr/Bonne nuit !.mp3"
+				"Good night!"
 			],
 			[
+				"sounds/fr/Bon voyage !.mp3",
 				"Bon voyage !",
-				"Have a safe journey! / Have a good trip!",
-				"sounds/fr/Bon voyage !.mp3"
+				"Have a safe journey! / Have a good trip!"
 			],
 			[
+				"sounds/fr/Bonnes vacances !.mp3",
 				"Bonnes vacances !",
-				"Enjoy your holiday!",
-				"sounds/fr/Bonnes vacances !.mp3"
+				"Enjoy your holiday!"
 			],
 			[
+				"sounds/fr/oui, non.mp3",
 				"Oui, non",
-				"Yes, no",
-				"sounds/fr/oui, non.mp3"
+				"Yes, no"
 			],
 			[
+				"sounds/fr/merci.mp3",
 				"Merci",
-				"Thank you",
-				"sounds/fr/merci.mp3"
+				"Thank you"
 			],
 			[
+				"sounds/fr/d'accord.mp3",
 				"D'accord",
-				"OK then, alright",
-				"sounds/fr/d'accord.mp3"
+				"OK then, alright"
 			],
 			[
+				"sounds/fr/aujourd'hui.mp3",
 				"Aujourd'hui",
-				"Today",
-				"sounds/fr/aujourd'hui.mp3"
+				"Today"
 			],
 			[
+				"sounds/fr/enchanté.mp3",
 				"Enchanté.e",
-				"Pleased to meet you (literally: delighted)",
-				"sounds/fr/enchanté.mp3"
+				"Pleased to meet you (literally: delighted)"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

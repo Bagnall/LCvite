@@ -172,7 +172,7 @@ export class MainMenu extends React.Component {
 					<li key={`mobile-${id}`} className={highlight ? "highlight" : ""}>
 						<a
 							href={href}
-							className="nav-link nav-link-mobile special-anchor"
+							className="nav-link nav-link-mobile nav special-anchor"
 							onClick={this.handleNavClick}
 						>
 							{label}
@@ -288,7 +288,7 @@ export class MainMenu extends React.Component {
 						<li className={introHighlight ? "highlight" : ""}>
 							<a
 								href={introHref}
-								className="nav-link nav-link-mobile special-anchor"
+								className="nav-link nav-link-mobile nav special-anchor"
 								onClick={this.handleNavClick}
 							>
                 Introduction

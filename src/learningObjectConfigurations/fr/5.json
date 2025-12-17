@@ -49,156 +49,157 @@
 		"footnote": "* In France the plural form is used even if there is just one facility. In other francophone countries, the singular 'la toilette' occurs.",
 		"phrases": [
 			[
+				"/sounds/fr/logement.mp3",
 				"logement (m)",
-				"accommodation",
-				"/sounds/fr/logement.mp3"
+				"accommodation"
 			],
 			[
+				"/sounds/fr/louer.mp3",
 				"louer",
-				"to rent  / hire",
-				"/sounds/fr/louer.mp3"
+				"to rent  / hire"
 			],
 			[
+				"/sounds/fr/loyer.mp3",
 				"loyer (m)",
-				"rent ",
-				"/sounds/fr/loyer.mp3"
+				"rent "
 			],
 			[
+				"/sounds/fr/colocataire.mp3",
 				"colocataire  (m/f)",
-				"flat /house mate",
-				"/sounds/fr/colocataire.mp3"
+				"flat /house mate"
 			],
 			[
+				"/sounds/fr/au sous-sol.mp3",
 				"au sous-sol",
-				"in the basement",
-				"/sounds/fr/au sous-sol.mp3"
+				"in the basement"
 			],
 			[
+				"/sounds/fr/au rez-de-chaussée.mp3",
 				"au rez-de-chaussée",
-				"on the ground floor",
-				"/sounds/fr/au rez-de-chaussée.mp3"
+				"on the ground floor"
 			],
 			[
+				"/sounds/fr/au premier étage au deuxième étage au troisième étage.mp3",
 				"au premier / deuxième / troisième étage",
-				"on the first / second / third floor",
-				"/sounds/fr/au premier étage au deuxième étage au troisième étage.mp3"
+				"on the first / second / third floor"
 			],
 			[
+				"/sounds/fr/chambre.mp3",
 				"chambre (f)",
-				"bedroom",
-				"/sounds/fr/chambre.mp3"
+				"bedroom"
 			],
 			[
+				"/sounds/fr/salle de bains.mp3",
 				"salle (f) de bains",
-				"bathroom",
-				"/sounds/fr/salle de bains.mp3"
+				"bathroom"
 			],
 			[
+				"/sounds/fr/douche.mp3",
 				"douche (f)",
-				"shower room",
-				"/sounds/fr/douche.mp3"
+				"shower room"
 			],
 			[
+				"/sounds/fr/toilettes.mp3",
 				"toilettes (fpl)*",
-				"toilet",
-				"/sounds/fr/toilettes.mp3"
+				"toilet"
 			],
 			[
+				"/sounds/fr/salon.mp3",
 				"salon (m)",
-				"lounge",
-				"/sounds/fr/salon.mp3"
+				"lounge"
 			],
 			[
+				"/sounds/fr/salle de séjour.mp3",
 				"salle (f) de séjour",
-				"living room",
-				"/sounds/fr/salle de séjour.mp3"
+				"living room"
 			],
 			[
+				"/sounds/fr/salle à manger.mp3",
 				"salle (f) à manger",
-				"dining room",
-				"/sounds/fr/salle à manger.mp3"
+				"dining room"
 			],
 			[
+				"/sounds/fr/cuisine.mp3",
 				"cuisine (f)",
-				"kitchen",
-				"/sounds/fr/cuisine.mp3"
+				"kitchen"
 			],
 			[
+				"/sounds/fr/buanderie.mp3",
 				"buanderie (f)",
-				"utility / laundry room",
-				"/sounds/fr/buanderie.mp3"
+				"utility / laundry room"
 			],
 			[
+				"/sounds/fr/cave.mp3",
 				"cave (f)",
-				"cellar",
-				"/sounds/fr/cave.mp3"
+				"cellar"
 			],
 			[
+				"/sounds/fr/grenier.mp3",
 				"grenier (m)",
-				"attic ",
-				"/sounds/fr/grenier.mp3"
+				"attic "
 			],
 			[
+				"/sounds/fr/balcon.mp3",
 				"balcon (m)",
-				"balcony",
-				"/sounds/fr/balcon.mp3"
+				"balcony"
 			],
 			[
+				"/sounds/fr/jardin.mp3",
 				"jardin (m)",
-				"garden",
-				"/sounds/fr/jardin.mp3"
+				"garden"
 			],
 			[
+				"/sounds/fr/derrière.mp3",
 				"derrière",
-				"behind",
-				"/sounds/fr/derrière.mp3"
+				"behind"
 			],
 			[
+				"/sounds/fr/devant.mp3",
 				"devant",
-				"in front of",
-				"/sounds/fr/devant.mp3"
+				"in front of"
 			],
 			[
+				"/sounds/fr/à l'étage.mp3",
 				"à l'étage",
-				"upstairs",
-				"/sounds/fr/à l'étage.mp3"
+				"upstairs"
 			],
 			[
+				"/sounds/fr/confortable.mp3",
 				"confortable",
-				"comfortable",
-				"/sounds/fr/confortable.mp3"
+				"comfortable"
 			],
 			[
+				"/sounds/fr/spacieux spacieuse.mp3",
 				"spacieux / spacieuse",
-				"spacious ",
-				"/sounds/fr/spacieux spacieuse.mp3"
+				"spacious "
 			],
 			[
+				"/sounds/fr/lumineux lumineuse.mp3",
 				"lumineux / lumineuse",
-				"light",
-				"/sounds/fr/lumineux lumineuse.mp3"
+				"light"
 			],
 			[
+				"/sounds/fr/délicieux délicieuse.mp3",
 				"délicieux / délicieuse",
-				"delicious",
-				"/sounds/fr/délicieux délicieuse.mp3"
+				"delicious"
 			],
 			[
+				"/sounds/fr/dangereux dangereuse.mp3",
 				"dangereux / dangereuse",
-				"dangerous",
-				"/sounds/fr/dangereux dangereuse.mp3"
+				"dangerous"
 			],
 			[
+				"/sounds/fr/courageux courageuse.mp3",
 				"courageux / courageuse",
-				"courageous /brave",
-				"/sounds/fr/courageux courageuse.mp3"
+				"courageous /brave"
 			],
 			[
+				"/sounds/fr/ambitieux ambitieuse.mp3",
 				"ambitieux / ambitieuse",
-				"ambitious",
-				"/sounds/fr/ambitieux ambitieuse.mp3"
+				"ambitious"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

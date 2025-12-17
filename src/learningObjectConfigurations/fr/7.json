@@ -137,201 +137,202 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/adorer.mp3",
 				"adorer",
-				"to adore",
-				"sounds/fr/adorer.mp3"
+				"to adore"
 			],
 			[
+				"sounds/fr/aimer.mp3",
 				"aimer",
-				"to like, to love",
-				"sounds/fr/aimer.mp3"
+				"to like, to love"
 			],
 			[
+				"sounds/fr/détester.mp3",
 				"détester",
-				"to hate",
-				"sounds/fr/détester.mp3"
+				"to hate"
 			],
 			[
+				"sounds/fr/préférer.mp3",
 				"préférer",
-				"to prefer",
-				"sounds/fr/préférer.mp3"
+				"to prefer"
 			],
 			[
+				"sounds/fr/chanter.mp3",
 				"chanter",
-				"to sing",
-				"sounds/fr/chanter.mp3"
+				"to sing"
 			],
 			[
+				"sounds/fr/danser.mp3",
 				"danser",
-				"to dance",
-				"sounds/fr/danser.mp3"
+				"to dance"
 			],
 			[
+				"sounds/fr/dormir.mp3",
 				"dormir",
-				"to sleep",
-				"sounds/fr/dormir.mp3"
+				"to sleep"
 			],
 			[
+				"sounds/fr/écouter.mp3",
 				"écouter",
-				"to listen",
-				"sounds/fr/écouter.mp3"
+				"to listen"
 			],
 			[
+				"sounds/fr/faire.mp3",
 				"faire",
-				"to make, to do",
-				"sounds/fr/faire.mp3"
+				"to make, to do"
 			],
 			[
+				"sounds/fr/regarder.mp3",
 				"regarder",
-				"to watch",
-				"sounds/fr/regarder.mp3"
+				"to watch"
 			],
 			[
+				"sounds/fr/tricoter.mp3",
 				"tricoter",
-				"to knit",
-				"sounds/fr/tricoter.mp3"
+				"to knit"
 			],
 			[
+				"sounds/fr/athlétisme.mp3",
 				"athlétisme (m)",
-				"athletics",
-				"sounds/fr/athlétisme.mp3"
+				"athletics"
 			],
 			[
+				"sounds/fr/baby-foot.mp3",
 				"baby-foot (m)",
-				"table football",
-				"sounds/fr/baby-foot.mp3"
+				"table football"
 			],
 			[
+				"sounds/fr/basket, basketball.mp3",
 				"basket, basketball (m)",
-				"basketball",
-				"sounds/fr/basket, basketball.mp3"
+				"basketball"
 			],
 			[
+				"sounds/fr/cricket.mp3",
 				"cricket (m)",
-				"cricket",
-				"sounds/fr/cricket.mp3"
+				"cricket"
 			],
 			[
+				"sounds/fr/foot, football.mp3",
 				"foot, football (m)",
-				"football",
-				"sounds/fr/foot, football.mp3"
+				"football"
 			],
 			[
+				"sounds/fr/karaté.mp3",
 				"karaté (m)",
-				"karate",
-				"sounds/fr/karaté.mp3"
+				"karate"
 			],
 			[
+				"sounds/fr/musculation.mp3",
 				"musculation (f)",
-				"weight training",
-				"sounds/fr/musculation.mp3"
+				"weight training"
 			],
 			[
+				"sounds/fr/tennis.mp3",
 				"tennis (m)",
-				"tennis",
-				"sounds/fr/tennis.mp3"
+				"tennis"
 			],
 			[
+				"sounds/fr/tae-kwondo.mp3",
 				"tae-kwondo (m)",
-				"taekwondo",
-				"sounds/fr/tae-kwondo.mp3"
+				"taekwondo"
 			],
 			[
+				"sounds/fr/volley, volleyball.mp3",
 				"volley, volleyball (m)",
-				"volleyball",
-				"sounds/fr/volley, volleyball.mp3"
+				"volleyball"
 			],
 			[
+				"sounds/fr/yoga.mp3",
 				"yoga (m)",
-				"yoga",
-				"sounds/fr/yoga.mp3"
+				"yoga"
 			],
 			[
+				"sounds/fr/animal, animaux.mp3",
 				"animal (m) animaux (mpl)",
-				"animal (s)",
-				"sounds/fr/animal, animaux.mp3"
+				"animal (s)"
 			],
 			[
+				"sounds/fr/arbre.mp3",
 				"arbre (m)",
-				"tree",
-				"sounds/fr/arbre.mp3"
+				"tree"
 			],
 			[
+				"sounds/fr/chaleur.mp3",
 				"chaleur (f)",
-				"heat",
-				"sounds/fr/chaleur.mp3"
+				"heat"
 			],
 			[
+				"sounds/fr/cinéma.mp3",
 				"cinéma (m)",
-				"cinema",
-				"sounds/fr/cinéma.mp3"
+				"cinema"
 			],
 			[
+				"sounds/fr/fleur.mp3",
 				"fleur (f)",
-				"flower",
-				"sounds/fr/fleur.mp3"
+				"flower"
 			],
 			[
+				"sounds/fr/forêt.mp3",
 				"forêt (f)",
-				"forest",
-				"sounds/fr/forêt.mp3"
+				"forest"
 			],
 			[
+				"sounds/fr/froid.mp3",
 				"froid m)",
-				"cold",
-				"sounds/fr/froid.mp3"
+				"cold"
 			],
 			[
+				"sounds/fr/neige.mp3",
 				"neige (f)",
-				"snow",
-				"sounds/fr/neige.mp3"
+				"snow"
 			],
 			[
+				"sounds/fr/pluie.mp3",
 				"pluie (f)",
-				"rain",
-				"sounds/fr/pluie.mp3"
+				"rain"
 			],
 			[
+				"sounds/fr/soleil.mp3",
 				"soleil (m)",
-				"sun",
-				"sounds/fr/soleil.mp3"
+				"sun"
 			],
 			[
+				"sounds/fr/théâtre.mp3",
 				"théâtre",
-				"theatre",
-				"sounds/fr/théâtre.mp3"
+				"theatre"
 			],
 			[
+				"sounds/fr/pourquoi.mp3",
 				"pourquoi ?",
-				"why? ",
-				"sounds/fr/pourquoi.mp3"
+				"why? "
 			],
 			[
+				"sounds/fr/parce que.mp3",
 				"parce que",
-				"because",
-				"sounds/fr/parce que.mp3"
+				"because"
 			],
 			[
+				"sounds/fr/bruyant bruyante.mp3",
 				"bruyant (m) bruyante (f)",
-				"noisy",
-				"sounds/fr/bruyant bruyante.mp3"
+				"noisy"
 			],
 			[
+				"sounds/fr/ennuyeux ennuyeuse.mp3",
 				"ennuyeux (m) ennuyeuse (f)",
-				"boring",
-				"sounds/fr/ennuyeux ennuyeuse.mp3"
+				"boring"
 			],
 			[
+				"sounds/fr/intéressant intéressante.mp3",
 				"intéressant (m) intéressante (f)",
-				"interesting",
-				"sounds/fr/intéressant intéressante.mp3"
+				"interesting"
 			],
 			[
+				"sounds/fr/tranquille.mp3",
 				"tranquille",
-				"quiet, peaceful",
-				"sounds/fr/tranquille.mp3"
+				"quiet, peaceful"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

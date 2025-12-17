@@ -61,7 +61,7 @@ export class PhraseTable extends React.PureComponent {
 			tableSort,
 		} = this.state;
 
-		const { informationText, informationTextHTML } = config;
+		const { informationText, informationTextHTML, sortable = false } = config;
 
 		// Always start from the immutable original
 		const basePhrases = this.originalPhrases || [];
@@ -134,7 +134,7 @@ export class PhraseTable extends React.PureComponent {
 						cells.push(
 							<TableCell key={`row${i}cell${j}`}>
 								<AudioClip
-									className="compact"
+									className="super-compact-speaker"
 									label=""
 									soundFile={soundFile}
 								/>
@@ -179,29 +179,31 @@ export class PhraseTable extends React.PureComponent {
 					/>
 				) : null}
 
-				<div className="sort-container">
-					<IconButton
-						theme="natural"
-						size="sm"
-						onClick={() => this.setState({ tableSort: "natural" })}
-					>
-            Natural
-					</IconButton>
-					<IconButton
-						theme="alphabetic"
-						size="sm"
-						onClick={() => this.setState({ tableSort: "alphabetical" })}
-					>
-            Alphabetical
-					</IconButton>
-					<IconButton
-						theme="reverse"
-						size="sm"
-						onClick={() => this.setState({ tableSort: "reverse" })}
-					>
-            Reverse Alphabetical
-					</IconButton>
-				</div>
+				{sortable ?
+					<div className="sort-container">
+						<IconButton
+							theme="natural"
+							size="sm"
+							onClick={() => this.setState({ tableSort: "natural" })}
+						>
+							Natural
+						</IconButton>
+						<IconButton
+							theme="alphabetic"
+							size="sm"
+							onClick={() => this.setState({ tableSort: "alphabetical" })}
+						>
+							Alphabetical
+						</IconButton>
+						<IconButton
+							theme="reverse"
+							size="sm"
+							onClick={() => this.setState({ tableSort: "reverse" })}
+						>
+							Reverse Alphabetical
+						</IconButton>
+					</div>
+					: null}
 
 				<Table>
 					{header ? (

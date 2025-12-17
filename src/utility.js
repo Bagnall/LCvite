@@ -193,6 +193,7 @@ export const scrollToElement = (element, showBackButton = true) => {
 	// Start with the full mainMenu height (this was your original behaviour
 	// and works correctly on desktop).
 	let mainMenuHeight = mainMenu.offsetHeight;
+	// console.log(10, "mainMenuHight", mainMenuHeight);
 
 	// If the mobile dropdown is open, its height is included in mainMenuHeight.
 	// We want only the fixed header height, so subtract the dropdown height.
@@ -215,7 +216,7 @@ export const scrollToElement = (element, showBackButton = true) => {
 	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
 	// Calculate coordinates relative to the page, minus header height
-	const top = rect.top + scrollTop - mainMenuHeight;
+	const top = rect.top + scrollTop - mainMenuHeight - 100; // 100 = fudge factor
 	const left = rect.left + scrollLeft;
 
 	// Where is our current scroll position (for back button)

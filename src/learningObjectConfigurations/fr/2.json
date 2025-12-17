@@ -48,131 +48,132 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/être.mp3",
 				"être",
-				"to be",
-				"sounds/fr/être.mp3"
+				"to be"
 			],
 			[
+				"sounds/fr/marié.mp3",
 				"marié.e",
-				"married",
-				"sounds/fr/marié.mp3"
+				"married"
 			],
 			[
+				"sounds/fr/divorcé.mp3",
 				"divorcé.e",
-				"divorced",
-				"sounds/fr/divorcé.mp3"
+				"divorced"
 			],
 			[
+				"sounds/fr/séparé.mp3",
 				"séparé.e",
-				"separated",
-				"sounds/fr/séparé.mp3"
+				"separated"
 			],
 			[
+				"sounds/fr/fiancé.mp3",
 				"fiancé.e",
-				"engaged",
-				"sounds/fr/fiancé.mp3"
+				"engaged"
 			],
 			[
+				"sounds/fr/pacsé.mp3",
 				"pacsé.e",
-				"In a civil partnership",
-				"sounds/fr/pacsé.mp3"
+				"In a civil partnership"
 			],
 			[
+				"sounds/fr/célibataire.mp3",
 				"célibataire",
-				"single",
-				"sounds/fr/célibataire.mp3"
+				"single"
 			],
 			[
+				"sounds/fr/étudiant, étudiante.mp3",
 				"étudiant (m) / étudiante (f)",
-				"University student",
-				"sounds/fr/étudiant, étudiante.mp3"
+				"University student"
 			],
 			[
+				"sounds/fr/élève.mp3",
 				"élève",
-				"school pupil",
-				"sounds/fr/élève.mp3"
+				"school pupil"
 			],
 			[
+				"sounds/fr/chercheur, chercheuse.mp3",
 				"chercheur (m) / chercheuse (f)",
-				"researcher",
-				"sounds/fr/chercheur, chercheuse.mp3"
+				"researcher"
 			],
 			[
+				"sounds/fr/doctorant, doctorante.mp3",
 				"doctorant (m) / doctorante (f)",
-				"PhD student",
-				"sounds/fr/doctorant, doctorante.mp3"
+				"PhD student"
 			],
 			[
+				"sounds/fr/professeur, professeure, prof.mp3",
 				"professeur (m) / professeure (f) / prof (m and f)",
-				"teacher, professor",
-				"sounds/fr/professeur, professeure, prof.mp3"
+				"teacher, professor"
 			],
 			[
+				"sounds/fr/médecin.mp3",
 				"médecin (m and f)",
-				"doctor",
-				"sounds/fr/médecin.mp3"
+				"doctor"
 			],
 			[
+				"sounds/fr/archiviste.mp3",
 				"archiviste",
-				"archiviste",
-				"sounds/fr/archiviste.mp3"
+				"archiviste"
 			],
 			[
+				"sounds/fr/bibliothécaire.mp3",
 				"bibliothécaire",
-				"librarian",
-				"sounds/fr/bibliothécaire.mp3"
+				"librarian"
 			],
 			[
+				"sounds/fr/administrateur, administratrice.mp3",
 				"administrateur (m) / administratrice (f)",
-				"administrator",
-				"sounds/fr/administrateur, administratrice.mp3"
+				"administrator"
 			],
 			[
+				"sounds/fr/informaticien, informaticienne.mp3",
 				"informaticien (m) / informaticienne (f)",
-				"IT specialist",
-				"sounds/fr/informaticien, informaticienne.mp3"
+				"IT specialist"
 			],
 			[
+				"sounds/fr/avocat, avocate.mp3",
 				"avocat (m) / avocate (f)",
-				"lawyer",
-				"sounds/fr/avocat, avocate.mp3"
+				"lawyer"
 			],
 			[
+				"sounds/fr/Que faites-vous (dans la vie).mp3",
 				"Que faites-vous (dans la vie) ?",
-				"What do you do (for a living)?",
-				"sounds/fr/Que faites-vous (dans la vie).mp3"
+				"What do you do (for a living)?"
 			],
 			[
+				"sounds/fr/Que fais-tu (dans la vie).mp3",
 				"Que fais-tu (dans la vie) ?",
-				"What do you do (for a living)?",
-				"sounds/fr/Que fais-tu (dans la vie).mp3"
+				"What do you do (for a living)?"
 			],
 			[
+				"sounds/fr/Quelle est ta profession Quelle est votre profession.mp3",
 				"Quelle est ta profession ? Quelle est votre profession ?",
-				"What's your profession?",
-				"sounds/fr/Quelle est ta profession Quelle est votre profession.mp3"
+				"What's your profession?"
 			],
 			[
+				"sounds/fr/Quel est ton métier Quel est votre métier.mp3",
 				"Quel est ton / votre métier ?",
-				"What's your profession?",
-				"sounds/fr/Quel est ton métier Quel est votre métier.mp3"
+				"What's your profession?"
 			],
 			[
+				"sounds/fr/depuis.mp3",
 				"depuis",
-				"for (a period of time), since",
-				"sounds/fr/depuis.mp3"
+				"for (a period of time), since"
 			],
 			[
+				"sounds/fr/malade.mp3",
 				"malade",
-				"ill",
-				"sounds/fr/malade.mp3"
+				"ill"
 			],
 			[
+				"sounds/fr/hier.mp3",
 				"hier",
-				"yesterday",
-				"sounds/fr/hier.mp3"
+				"yesterday"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

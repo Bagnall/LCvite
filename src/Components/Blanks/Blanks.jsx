@@ -618,6 +618,12 @@ export class Blanks extends React.Component {
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
 							<TableCell>
+								<AudioClip
+									className={`super-compact-speaker`}
+									soundFile={soundFile}
+								/>
+							</TableCell>
+							<TableCell>
 								{questions[i - 1]}
 							</TableCell>
 							<TableCell>
@@ -625,12 +631,6 @@ export class Blanks extends React.Component {
 									className={`blank target`}
 									index={i - 1}
 									key={`${id}word${i}`}>{answers[i - 1]}</Word>
-							</TableCell>
-							<TableCell>
-								<AudioClip
-									className={`compact`}
-									soundFile={soundFile}
-								/>
 							</TableCell>
 						</TableRow>
 					);
@@ -671,6 +671,12 @@ export class Blanks extends React.Component {
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
 							<TableCell>
+								<AudioClip
+									className={`super-compact-speaker`}
+									soundFile={soundFile}
+								/>
+							</TableCell>
+							<TableCell>
 								<img src={`${pictures[i - 1]}`}/>
 							</TableCell>
 							<TableCell>
@@ -678,12 +684,6 @@ export class Blanks extends React.Component {
 									className={`blank target`}
 									index={i - 1}
 									key={`${id}word${i}`}>{answers[i - 1]}</Word>
-							</TableCell>
-							<TableCell>
-								<AudioClip
-									className={`compact`}
-									soundFile={soundFile}
-								/>
 							</TableCell>
 						</TableRow>
 					);
@@ -731,7 +731,7 @@ export class Blanks extends React.Component {
 
 
 				<div
-					className={`blanks ${showHints ? 'show-hints' : ''} mb-8`}
+					className={`blanks ${showHints ? 'show-hints' : ''} ${blanksType} mb-8`}
 					onMouseDown={this.handleMouseDown}
 					onMouseMove={this.handleMouseMove}
 					onMouseUp={this.handleMouseUp}
@@ -777,7 +777,7 @@ export class Blanks extends React.Component {
 							{showHintsText}</Label> */}
 
 
-						        <Switch
+					<Switch
 						id={`showHintsId-${id ? id : ''}`}
 						checked={showHints}
 						onCheckedChange={this.handleToggle}
@@ -785,7 +785,6 @@ export class Blanks extends React.Component {
 					<Label
 						htmlFor={`showHintsId-${id ? id : ''}`}
 						className="cursor-pointer"
-						onClick={() => {console.log("Label clicked"); this.handleToggle(!showHints);}}
 					>
 						{showHintsText}
 					</Label>

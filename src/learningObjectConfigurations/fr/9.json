@@ -147,81 +147,82 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"/sounds/fr/numéro.mp3",
 				"numéro (m)",
-				"number",
-				"/sounds/fr/numéro.mp3"
+				"number"
 			],
 			[
+				"/sounds/fr/portable.mp3",
 				"portable (m)",
-				"mobile",
-				"/sounds/fr/portable.mp3"
+				"mobile"
 			],
 			[
+				"/sounds/fr/téléphone.mp3",
 				"téléphone (m)",
-				"telephone",
-				"/sounds/fr/téléphone.mp3"
+				"telephone"
 			],
 			[
+				"/sounds/fr/téléphone fixe.mp3",
 				"(téléphone) fixe (m)",
-				"landline",
-				"/sounds/fr/téléphone fixe.mp3"
+				"landline"
 			],
 			[
+				"/sounds/fr/âllo.mp3",
 				"âllo",
-				"hello (on the telephone only)",
-				"/sounds/fr/âllo.mp3"
+				"hello (on the telephone only)"
 			],
 			[
+				"/sounds/fr/C'est moi.mp3",
 				"C'est moi.",
-				"It's me.",
-				"/sounds/fr/C'est moi.mp3"
+				"It's me."
 			],
 			[
+				"/sounds/fr/d'accord.mp3",
 				"d'accord",
-				"alright, agreed",
-				"/sounds/fr/d'accord.mp3"
+				"alright, agreed"
 			],
 			[
+				"/sounds/fr/désolé.mp3",
 				"désolé.e",
-				"sorry",
-				"/sounds/fr/désolé.mp3"
+				"sorry"
 			],
 			[
+				"/sounds/fr/erreur.mp3",
 				"erreur (f)",
-				"mistake",
-				"/sounds/fr/erreur.mp3"
+				"mistake"
 			],
 			[
+				"/sounds/fr/À demain !.mp3",
 				"À demain !",
-				"See you tomorrow!",
-				"/sounds/fr/À demain !.mp3"
+				"See you tomorrow!"
 			],
 			[
+				"/sounds/fr/À plus tard ! À plus !.mp3",
 				"À plus tard !  /  À plus !",
-				"See you later!",
-				"/sounds/fr/À plus tard ! À plus !.mp3"
+				"See you later!"
 			],
 			[
+				"/sounds/fr/se tromper de.mp3",
 				"se tromper de",
-				"to make a mistake / to be mistaken about something",
-				"/sounds/fr/se tromper de.mp3"
+				"to make a mistake / to be mistaken about something"
 			],
 			[
+				"/sounds/fr/Je me suis trompé de numéro.mp3",
 				"Je me suis trompé.e  de numéro.",
-				"I've made a mistake about the number.  ",
-				"/sounds/fr/Je me suis trompé de numéro.mp3"
+				"I've made a mistake about the number.  "
 			],
 			[
+				"/sounds/fr/Tu t'es trompé de numéro.mp3",
 				"Tu t'es trompé.e de numéro.",
-				"You've made a mistake about the number.",
-				"/sounds/fr/Tu t'es trompé de numéro.mp3"
+				"You've made a mistake about the number."
 			],
 			[
+				"/sounds/fr/Vous vous êtes trompé de numéro.mp3",
 				"Vous vous êtes trompé.e  de numéro.",
-				"You've made a mistake about the number.",
-				"/sounds/fr/Vous vous êtes trompé de numéro.mp3"
+				"You've made a mistake about the number."
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

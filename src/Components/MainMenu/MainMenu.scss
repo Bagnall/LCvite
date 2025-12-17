@@ -143,10 +143,13 @@
 				&:last-child {
 					border-bottom: none;
 				}
-
-				&.highlight > a {
-					color: var(--primary);
-					font-weight: 600;
+				padding-left: 12px;
+				&.highlight {
+					& > a {
+						color: var(--primary);
+						font-weight: 600;
+					}
+					border-left: 2px var(--primary) solid;
 				}
 			}
 		}

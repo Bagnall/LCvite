@@ -334,9 +334,9 @@ export default class App extends React.Component {
 			.then(handleResponse)
 			.then((res) => {
 				const { learningObjects } = res;
-				let title, subTitle;
+				let title, subTitle, subTitleShort;
 				if (learningObjects[currentLearningObject]) {
-					({ subTitle, title } = learningObjects[currentLearningObject]);
+					({ subTitle, title, subTitleShort = '' } = learningObjects[currentLearningObject]);
 					document.title = title;
 				}
 
@@ -344,6 +344,7 @@ export default class App extends React.Component {
 					currentLearningObject: currentLearningObject,
 					learningObjects: learningObjects,
 					subTitle: subTitle,
+					subTitleShort: subTitleShort,
 					title: title,
 				});
 			})
@@ -613,10 +614,10 @@ export default class App extends React.Component {
 			}
 		}
 
-		let subTitle;
+		let subTitle, subTitleShort;
 		let title;
 		if (learningObjects[currentLearningObject]) {
-			({ subTitle = "", title } =
+			({ subTitle = "", title, subTitleShort = '' } =
         learningObjects[currentLearningObject - 1] || {});
 		}
 
@@ -654,7 +655,7 @@ export default class App extends React.Component {
 
 					<MainMenu
 						config={config}
-						subTitle={subTitle}
+						subTitle={subTitleShort !== '' ? subTitleShort : subTitle}
 						toggleDark={this.toggleDark}
 					/>
 

@@ -122,251 +122,252 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/étudiant. étudiante.mp3",
 				"étudiant / étudiante",
-				"student",
-				"sounds/fr/étudiant. étudiante.mp3"
+				"student"
 			],
 			[
+				"sounds/fr/chercheur. chercheuse.mp3",
 				"chercheur / chercheuse",
-				"researcher",
-				"sounds/fr/chercheur. chercheuse.mp3"
+				"researcher"
 			],
 			[
+				"sounds/fr/doctorant, doctorante.mp3",
 				"doctorant / doctorante",
-				"PhD student",
-				"sounds/fr/doctorant, doctorante.mp3"
+				"PhD student"
 			],
 			[
+				"sounds/fr/professeur.mp3",
 				"professeur.e",
-				"professor",
-				"sounds/fr/professeur.mp3"
+				"professor"
 			],
 			[
+				"sounds/fr/scientifique.mp3",
 				"scientifique",
-				"scientist",
-				"sounds/fr/scientifique.mp3"
+				"scientist"
 			],
 			[
+				"sounds/fr/étudier, faire des études.mp3",
 				"étudier, faire des études (fpl)",
-				"to study",
-				"sounds/fr/étudier, faire des études.mp3"
+				"to study"
 			],
 			[
+				"sounds/fr/faire une fac.mp3",
 				"faire une fac (colloquial)",
-				"to study at university",
-				"sounds/fr/faire une fac.mp3"
+				"to study at university"
 			],
 			[
+				"sounds/fr/Je fais une fac de linguistique.mp3",
 				"Je fais une fac de linguistique",
-				"I'm studying linguistics at university",
-				"sounds/fr/Je fais une fac de linguistique.mp3"
+				"I'm studying linguistics at university"
 			],
 			[
+				"sounds/fr/Qu'est-ce que tu fais comme études Qu'est-ce que vous faites comme études.mp3",
 				"Qu'est-ce que tu fais comme études ? Qu'est-ce que vous faites comme études ?",
-				"What are you studying? ",
-				"sounds/fr/Qu'est-ce que tu fais comme études Qu'est-ce que vous faites comme études.mp3"
+				"What are you studying? "
 			],
 			[
+				"sounds/fr/Tu fais quoi comme études Vous faites quoi comme études.mp3",
 				"Tu fais quoi comme études ? Vous faites quoi comme études ? (colloquial)",
-				"What are you studying?",
-				"sounds/fr/Tu fais quoi comme études Vous faites quoi comme études.mp3"
+				"What are you studying?"
 			],
 			[
+				"sounds/fr/faire de la recherche.mp3",
 				"faire de la recherche",
-				"to do research",
-				"sounds/fr/faire de la recherche.mp3"
+				"to do research"
 			],
 			[
+				"sounds/fr/passer un examen.mp3",
 				"passer un examen",
-				"to take an exam",
-				"sounds/fr/passer un examen.mp3"
+				"to take an exam"
 			],
 			[
+				"sounds/fr/licence.mp3",
 				"licence (f)",
-				"First degree, bachelor's degree",
-				"sounds/fr/licence.mp3"
+				"First degree, bachelor's degree"
 			],
 			[
+				"sounds/fr/master.mp3",
 				"master (m)",
-				"masters",
-				"sounds/fr/master.mp3"
+				"masters"
 			],
 			[
+				"sounds/fr/doctorat.mp3",
 				"doctorat (m)",
-				"PhD",
-				"sounds/fr/doctorat.mp3"
+				"PhD"
 			],
 			[
+				"sounds/fr/thèse.mp3",
 				"thèse (f)",
-				"thesis, dissertation",
-				"sounds/fr/thèse.mp3"
+				"thesis, dissertation"
 			],
 			[
+				"sounds/fr/dissertation.mp3",
 				"dissertation (f)",
-				"essay",
-				"sounds/fr/dissertation.mp3"
+				"essay"
 			],
 			[
+				"sounds/fr/anthropologie.mp3",
 				"anthropologie (f)",
-				"anthropologie",
-				"sounds/fr/anthropologie.mp3"
+				"anthropologie"
 			],
 			[
+				"sounds/fr/architecture.mp3",
 				"architecture (f)",
-				"architecture",
-				"sounds/fr/architecture.mp3"
+				"architecture"
 			],
 			[
+				"sounds/fr/biologie.mp3",
 				"biologie (f)",
-				"biologie",
-				"sounds/fr/biologie.mp3"
+				"biologie"
 			],
 			[
+				"sounds/fr/chimie.mp3",
 				"chimie (f)",
-				"chemistry",
-				"sounds/fr/chimie.mp3"
+				"chemistry"
 			],
 			[
+				"sounds/fr/droit.mp3",
 				"droit (m)",
-				"law",
-				"sounds/fr/droit.mp3"
+				"law"
 			],
 			[
+				"sounds/fr/éducation.mp3",
 				"éducation (f)",
-				"education",
-				"sounds/fr/éducation.mp3"
+				"education"
 			],
 			[
+				"sounds/fr/géographie.mp3",
 				"géographie (f)",
-				"geography",
-				"sounds/fr/géographie.mp3"
+				"geography"
 			],
 			[
+				"sounds/fr/histoire.mp3",
 				"histoire (f)",
-				"history",
-				"sounds/fr/histoire.mp3"
+				"history"
 			],
 			[
+				"sounds/fr/informatique.mp3",
 				"informatique (f) ",
-				"IT",
-				"sounds/fr/informatique.mp3"
+				"IT"
 			],
 			[
+				"sounds/fr/ingénierie.mp3",
 				"ingénierie (f)",
-				"engineering",
-				"sounds/fr/ingénierie.mp3"
+				"engineering"
 			],
 			[
+				"sounds/fr/langues médiévales.mp3",
 				"langues médiévales (fpl)",
-				"medieval languages",
-				"sounds/fr/langues médiévales.mp3"
+				"medieval languages"
 			],
 			[
+				"sounds/fr/linguistique.mp3",
 				"linguistique (f)",
-				"linguistics",
-				"sounds/fr/linguistique.mp3"
+				"linguistics"
 			],
 			[
+				"sounds/fr/littérature anglaise, littérature française.mp3",
 				"littérature (f) anglaise, littérature française",
-				"English literature, French literature",
-				"sounds/fr/littérature anglaise, littérature française.mp3"
+				"English literature, French literature"
 			],
 			[
+				"sounds/fr/politique.mp3",
 				"politique (f)",
-				"politics",
-				"sounds/fr/politique.mp3"
+				"politics"
 			],
 			[
+				"sounds/fr/robotique.mp3",
 				"robotique (f)",
-				"robotics",
-				"sounds/fr/robotique.mp3"
+				"robotics"
 			],
 			[
+				"sounds/fr/sciences naturelles.mp3",
 				"sciences naturelles (fpl)",
-				"natural sciences",
-				"sounds/fr/sciences naturelles.mp3"
+				"natural sciences"
 			],
 			[
+				"sounds/fr/théologie.mp3",
 				"théologie (f)",
-				"theology",
-				"sounds/fr/théologie.mp3"
+				"theology"
 			],
 			[
+				"sounds/fr/en première année, en deuxième année, en troisième année.mp3",
 				"en première année, en deuxième année, en troisième année",
-				"in the first, second, third year",
-				"sounds/fr/en première année, en deuxième année, en troisième année.mp3"
+				"in the first, second, third year"
 			],
 			[
+				"sounds/fr/cours magistral, cours magistraux.mp3",
 				"cours magistral (m), cours magistraux (mpl)",
-				"lecture (s)",
-				"sounds/fr/cours magistral, cours magistraux.mp3"
+				"lecture (s)"
 			],
 			[
+				"sounds/fr/séminaire.mp3",
 				"séminaire (m)",
-				"seminar",
-				"sounds/fr/séminaire.mp3"
+				"seminar"
 			],
 			[
+				"sounds/fr/travaux pratiques.mp3",
 				"travaux pratiques (mpl)",
-				"practical work",
-				"sounds/fr/travaux pratiques.mp3"
+				"practical work"
 			],
 			[
+				"sounds/fr/tutorat.mp3",
 				"tutorat (m)",
-				"tutorial",
-				"sounds/fr/tutorat.mp3"
+				"tutorial"
 			],
 			[
+				"sounds/fr/C'est facile.mp3",
 				"C'est facile",
-				"It's easy",
-				"sounds/fr/C'est facile.mp3"
+				"It's easy"
 			],
 			[
+				"sounds/fr/C'est difficile.mp3",
 				"C'est difficile",
-				"It's difficult",
-				"sounds/fr/C'est difficile.mp3"
+				"It's difficult"
 			],
 			[
+				"sounds/fr/C'est intéressant.mp3",
 				"C'est intéressant",
-				"It's interesting",
-				"sounds/fr/C'est intéressant.mp3"
+				"It's interesting"
 			],
 			[
+				"sounds/fr/C'est fascinant.mp3",
 				"C'est fascinant",
-				"It's fascinating",
-				"sounds/fr/C'est fascinant.mp3"
+				"It's fascinating"
 			],
 			[
+				"sounds/fr/C'est stressant.mp3",
 				"C'est stressant",
-				"It's stressful",
-				"sounds/fr/C'est stressant.mp3"
+				"It's stressful"
 			],
 			[
+				"sounds/fr/Je suis stressé.mp3",
 				"Je suis stressé.e",
-				"I'm stressed",
-				"sounds/fr/Je suis stressé.mp3"
+				"I'm stressed"
 			],
 			[
+				"sounds/fr/C'est fatigant.mp3",
 				"C'est fatigant",
-				"It's tiring",
-				"sounds/fr/C'est fatigant.mp3"
+				"It's tiring"
 			],
 			[
+				"sounds/fr/Je suis fatigué.mp3",
 				"Je suis fatigué.e",
-				"I'm tired",
-				"sounds/fr/Je suis fatigué.mp3"
+				"I'm tired"
 			],
 			[
+				"sounds/fr/J'ai un emploi du temps chargé.mp3",
 				"J'ai un emploi du temps chargé",
-				"I have a heavy / full timetable",
-				"sounds/fr/J'ai un emploi du temps chargé.mp3"
+				"I have a heavy / full timetable"
 			],
 			[
+				"sounds/fr/Je suis très occupé.mp3",
 				"Je suis très occupé.e",
-				"I'm very busy",
-				"sounds/fr/Je suis très occupé.mp3"
+				"I'm very busy"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

@@ -97,144 +97,145 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/vacances.mp3",
 				"vacances (fpl)",
-				"holiday (s)",
-				"sounds/fr/vacances.mp3"
+				"holiday (s)"
 			],
 			[
+				"sounds/fr/passer.mp3",
 				"passer",
-				"to spend time",
-				"sounds/fr/passer.mp3"
+				"to spend time"
 			],
 			[
+				"sounds/fr/loger.mp3",
 				"loger",
-				"to stay",
-				"sounds/fr/loger.mp3"
+				"to stay"
 			],
 			[
+				"sounds/fr/bronzer.mp3",
 				"bronzer",
-				"to sunbathe",
-				"sounds/fr/bronzer.mp3"
+				"to sunbathe"
 			],
 			[
+				"sounds/fr/nager.mp3",
 				"nager",
-				"to swim",
-				"sounds/fr/nager.mp3"
+				"to swim"
 			],
 			[
+				"sounds/fr/visiter.mp3",
 				"visiter",
-				"to visit (a place)",
-				"sounds/fr/visiter.mp3"
+				"to visit (a place)"
 			],
 			[
+				"sounds/fr/voyager.mp3",
 				"voyager",
-				"to travel",
-				"sounds/fr/voyager.mp3"
+				"to travel"
 			],
 			[
+				"sounds/fr/se détendre.mp3",
 				"se détendre",
-				"to relax",
-				"sounds/fr/se détendre.mp3"
+				"to relax"
 			],
 			[
+				"sounds/fr/faire du ski.mp3",
 				"faire du ski",
-				"to go ski-ing",
-				"sounds/fr/faire du ski.mp3"
+				"to go ski-ing"
 			],
 			[
+				"sounds/fr/faire du tourisme.mp3",
 				"faire du tourisme",
-				"to do some sightseeing",
-				"sounds/fr/faire du tourisme.mp3"
+				"to do some sightseeing"
 			],
 			[
+				"sounds/fr/partir.mp3",
 				"partir",
-				"to leave, to depart, to set off",
-				"sounds/fr/partir.mp3"
+				"to leave, to depart, to set off"
 			],
 			[
+				"sounds/fr/en avion, train, voiture, bateau, car, taxi, métro, bus, ferry, hélicoptère.mp3",
 				"en avion, train, voiture, bateau, car, taxi, métro, bus, ferry, hélicoptère",
-				"by plane, train, car, boat, coach, taxi, underground train, bus, ferry, helicopter",
-				"sounds/fr/en avion, train, voiture, bateau, car, taxi, métro, bus, ferry, hélicoptère.mp3"
+				"by plane, train, car, boat, coach, taxi, underground train, bus, ferry, helicopter"
 			],
 			[
+				"sounds/fr/à vélo. à moto.mp3",
 				"à vélo, moto",
-				"by bike, motorcycle",
-				"sounds/fr/à vélo. à moto.mp3"
+				"by bike, motorcycle"
 			],
 			[
+				"sounds/fr/à cheval.mp3",
 				"à cheval",
-				"on horseback",
-				"sounds/fr/à cheval.mp3"
+				"on horseback"
 			],
 			[
+				"sounds/fr/à pied.mp3",
 				"à pied",
-				"on foot",
-				"sounds/fr/à pied.mp3"
+				"on foot"
 			],
 			[
+				"sounds/fr/sur la plage.mp3",
 				"sur la plage",
-				"on the beach",
-				"sounds/fr/sur la plage.mp3"
+				"on the beach"
 			],
 			[
+				"sounds/fr/sable.mp3",
 				"sable (m)",
-				"sand",
-				"sounds/fr/sable.mp3"
+				"sand"
 			],
 			[
+				"sounds/fr/vague.mp3",
 				"vague (f)",
-				"wave",
-				"sounds/fr/vague.mp3"
+				"wave"
 			],
 			[
+				"sounds/fr/francophone.mp3",
 				"francophone",
-				"French-speaking",
-				"sounds/fr/francophone.mp3"
+				"French-speaking"
 			],
 			[
 				""
 			],
 			[
+				"sounds/fr/Quel temps fait-il.mp3",
 				"Quel temps fait-il ?",
-				"What's the weather like?",
-				"sounds/fr/Quel temps fait-il.mp3"
+				"What's the weather like?"
 			],
 			[
+				"sounds/fr/Il fait beau, Il fait chaud, Il fait froid, Il fait mauvais.mp3",
 				"Il fait beau / chaud / froid / mauvais.",
-				"The weather is good / hot / cold / bad.",
-				"sounds/fr/Il fait beau, Il fait chaud, Il fait froid, Il fait mauvais.mp3"
+				"The weather is good / hot / cold / bad."
 			],
 			[
+				"sounds/fr/Il y a du soleil.mp3",
 				"Il y a du soleil",
-				"It's sunny.",
-				"sounds/fr/Il y a du soleil.mp3"
+				"It's sunny."
 			],
 			[
+				"sounds/fr/Il y a du vent.mp3",
 				"Il y a du vent",
-				"It's windy.",
-				"sounds/fr/Il y a du vent.mp3"
+				"It's windy."
 			],
 			[
+				"sounds/fr/au printemps.mp3",
 				"au printemps",
-				"in the spring",
-				"sounds/fr/au printemps.mp3"
+				"in the spring"
 			],
 			[
+				"sounds/fr/en été.mp3",
 				"en été",
-				"in the summer",
-				"sounds/fr/en été.mp3"
+				"in the summer"
 			],
 			[
+				"sounds/fr/en automne.mp3",
 				"en automne",
-				"in the autumn",
-				"sounds/fr/en automne.mp3"
+				"in the autumn"
 			],
 			[
+				"sounds/fr/en hiver.mp3",
 				"en hiver",
-				"in the winter",
-				"sounds/fr/en hiver.mp3"
+				"in the winter"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

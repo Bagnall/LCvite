@@ -158,12 +158,20 @@ $max-tile-width: 360px;
 	&.type-phrases {
 		.target-board {
 			padding: 0 1rem 0 0;
-		}
-		li {
-			min-height: 40px;
+			ul {
+				li {
+					min-height: 40px;
+					justify-content: flex-start;
+					align-items: center;
+					column-gap: 12px;
+				}
+			}
 		}
 		.phrase {
 			margin-right: 1rem;
+			column-gap: 8px;
+			display: flex;
+			align-items: center;
 		}
 	}
 	&.type-pictures-answers,

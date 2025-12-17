@@ -364,9 +364,9 @@ export class Sortable extends React.Component {
 						<IconButton theme={`reset`} onClick={this.reset}>
 							Reset
 						</IconButton>
-						<IconButton theme={`shuffle`} onClick={this.shuffleEnglish}>
+						{/* <IconButton theme={`shuffle`} onClick={this.shuffleEnglish}>
 							Shuffle
-						</IconButton>
+						</IconButton> */}
 					</div>
 
 					{this.renderFeedback()}

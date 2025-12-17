@@ -121,139 +121,140 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"/sounds/fr/temps libre.mp3",
 				"temps libre (m)",
-				"free time, spare time",
-				"/sounds/fr/temps libre.mp3"
+				"free time, spare time"
 			],
 			[
+				"/sounds/fr/loisirs.mp3",
 				"loisirs (mpl)",
-				"leisure pursuits",
-				"/sounds/fr/loisirs.mp3"
+				"leisure pursuits"
 			],
 			[
+				"/sounds/fr/les passe-temps.mp3",
 				"les passe-temps (mpl)",
-				"pastimes",
-				"/sounds/fr/les passe-temps.mp3"
+				"pastimes"
 			],
 			[
+				"/sounds/fr/faire.mp3",
 				"faire",
-				"to do , to make",
-				"/sounds/fr/faire.mp3"
+				"to do , to make"
 			],
 			[
+				"/sounds/fr/jouer à.mp3",
 				"jouer à",
-				"to play (ball sports, games)",
-				"/sounds/fr/jouer à.mp3"
+				"to play (ball sports, games)"
 			],
 			[
+				"/sounds/fr/jouer de.mp3",
 				"jouer de",
-				"to play (musical instruments)",
-				"/sounds/fr/jouer de.mp3"
+				"to play (musical instruments)"
 			],
 			[
+				"/sounds/fr/aviron.mp3",
 				"aviron (m) ",
-				"rowing",
-				"/sounds/fr/aviron.mp3"
+				"rowing"
 			],
 			[
+				"/sounds/fr/boules.mp3",
 				"boules (fpl)",
-				"bowls",
-				"/sounds/fr/boules.mp3"
+				"bowls"
 			],
 			[
+				"/sounds/fr/boxe.mp3",
 				"boxe (f)",
-				"boxing",
-				"/sounds/fr/boxe.mp3"
+				"boxing"
 			],
 			[
+				"/sounds/fr/cheval chevaux.mp3",
 				"cheval (m) chevaux (mpl)",
-				"horse (s)",
-				"/sounds/fr/cheval chevaux.mp3"
+				"horse (s)"
 			],
 			[
+				"/sounds/fr/course à pied.mp3",
 				"course (f) à pied",
-				"running",
-				"/sounds/fr/course à pied.mp3"
+				"running"
 			],
 			[
+				"/sounds/fr/course d'orientation.mp3",
 				"course d'orientation (f)",
-				"orienteering",
-				"/sounds/fr/course d'orientation.mp3"
+				"orienteering"
 			],
 			[
+				"/sounds/fr/cricket.mp3",
 				"cricket (m)",
-				"cricket",
-				"/sounds/fr/cricket.mp3"
+				"cricket"
 			],
 			[
+				"/sounds/fr/équitation.mp3",
 				"équitation (f)",
-				"horse riding",
-				"/sounds/fr/équitation.mp3"
+				"horse riding"
 			],
 			[
+				"/sounds/fr/escalade.mp3",
 				"escalade (f)",
-				"climbing",
-				"/sounds/fr/escalade.mp3"
+				"climbing"
 			],
 			[
+				"/sounds/fr/escrime.mp3",
 				"escrime (f)",
-				"fencing",
-				"/sounds/fr/escrime.mp3"
+				"fencing"
 			],
 			[
+				"/sounds/fr/lèche-vitrine.mp3",
 				"lèche-vitrine (m)",
-				"window shopping",
-				"/sounds/fr/lèche-vitrine.mp3"
+				"window shopping"
 			],
 			[
+				"/sounds/fr/lecture.mp3",
 				"lecture (f)",
-				"reading",
-				"/sounds/fr/lecture.mp3"
+				"reading"
 			],
 			[
+				"/sounds/fr/natation.mp3",
 				"natation (f)",
-				"swimming",
-				"/sounds/fr/natation.mp3"
+				"swimming"
 			],
 			[
+				"/sounds/fr/peinture.mp3",
 				"peinture (f)",
-				"painting",
-				"/sounds/fr/peinture.mp3"
+				"painting"
 			],
 			[
+				"/sounds/fr/pétanque.mp3",
 				"pétanque (f)",
-				"pétanque (French bowls)",
-				"/sounds/fr/pétanque.mp3"
+				"pétanque (French bowls)"
 			],
 			[
+				"/sounds/fr/randonnée.mp3",
 				"randonnée (f)",
-				"hiking, country walks",
-				"/sounds/fr/randonnée.mp3"
+				"hiking, country walks"
 			],
 			[
 				""
 			],
 			[
+				"/sounds/fr/actif, active.mp3",
 				"actif, active",
-				"active",
-				"/sounds/fr/actif, active.mp3"
+				"active"
 			],
 			[
+				"/sounds/fr/dangereux, dangereuse.mp3",
 				"dangereux, dangereuse",
-				"dangerous",
-				"/sounds/fr/dangereux, dangereuse.mp3"
+				"dangerous"
 			],
 			[
+				"/sounds/fr/sportif, sportive.mp3",
 				"sportif, sportive",
-				"sporty",
-				"/sounds/fr/sportif, sportive.mp3"
+				"sporty"
 			],
 			[
+				"/sounds/fr/trop.mp3",
 				"trop",
-				"too",
-				"/sounds/fr/trop.mp3"
+				"too"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

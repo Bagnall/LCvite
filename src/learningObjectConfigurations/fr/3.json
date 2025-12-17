@@ -121,168 +121,169 @@
 		"id": "vocabulary",
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"header": [
+			"",
 			"Nationalité",
 			"Pays",
 			"Nationality",
-			"Country",
-			""
+			"Country"
 		],
 		"phrases": [
 			[
+				"sounds/fr/algérien, algérienne, Algérie.mp3",
 				"algérien / algérienne",
 				"Algérie (f)",
 				"Algerian",
-				"Algeria",
-				"sounds/fr/algérien, algérienne, Algérie.mp3"
+				"Algeria"
 			],
 			[
+				"sounds/fr/allemand, allemande, Allemagne.mp3",
 				"allemand / allemande",
 				"Allemagne (f)",
 				"German",
-				"Germany",
-				"sounds/fr/allemand, allemande, Allemagne.mp3"
+				"Germany"
 			],
 			[
+				"sounds/fr/américain, américaine, Etats-Unis.mp3",
 				"américain / américaine",
 				"Etats-Unis (mpl)",
 				"American",
-				"USA",
-				"sounds/fr/américain, américaine, Etats-Unis.mp3"
+				"USA"
 			],
 			[
+				"sounds/fr/anglais, anglaise, Angleterre.mp3",
 				"anglais / anglaise",
 				"Angleterre (f)",
 				"English",
-				"England",
-				"sounds/fr/anglais, anglaise, Angleterre.mp3"
+				"England"
 			],
 			[
+				"sounds/fr/australien, australienne, Australie.mp3",
 				"australien / australienne",
 				"Australie (f)",
 				"Australian",
-				"Australia",
-				"sounds/fr/australien, australienne, Australie.mp3"
+				"Australia"
 			],
 			[
+				"sounds/fr/belge, Belgique.mp3",
 				"belge",
 				"Belgique (f)",
 				"Belgian",
-				"Belgium",
-				"sounds/fr/belge, Belgique.mp3"
+				"Belgium"
 			],
 			[
+				"sounds/fr/britannique, Grande Bretagne.mp3",
 				"britannique",
 				"Grande Bretagne (f)",
 				"British",
-				"Great Britain",
-				"sounds/fr/britannique, Grande Bretagne.mp3"
+				"Great Britain"
 			],
 			[
+				"sounds/fr/canadien, canadienne, Canada.mp3",
 				"canadien / canadienne",
 				"Canada (m)",
 				"Canadian",
-				"Canada",
-				"sounds/fr/canadien, canadienne, Canada.mp3"
+				"Canada"
 			],
 			[
+				"sounds/fr/chinois, chinoise, Chine.mp3",
 				"chinois / chinoise",
 				"Chine (f)",
 				"Chinese",
-				"China",
-				"sounds/fr/chinois, chinoise, Chine.mp3"
+				"China"
 			],
 			[
+				"sounds/fr/écossais, écossaise, Ecosse.mp3",
 				"écossais / écossaise",
 				"Ecosse (f)",
 				"Scottish",
-				"Scotland",
-				"sounds/fr/écossais, écossaise, Ecosse.mp3"
+				"Scotland"
 			],
 			[
+				"sounds/fr/espagnol, espagnole, Espagne.mp3",
 				"espagnol / espagnole",
 				"Espagne (f)",
 				"Spanish",
-				"Spain",
-				"sounds/fr/espagnol, espagnole, Espagne.mp3"
+				"Spain"
 			],
 			[
+				"sounds/fr/français, française, France.mp3",
 				"français / française",
 				"France (f)",
 				"French",
-				"France",
-				"sounds/fr/français, française, France.mp3"
+				"France"
 			],
 			[
+				"sounds/fr/gallois, galloise, Pays de Galles.mp3",
 				"gallois / galloise",
 				"Pays de Galles (m)",
 				"Welsh",
-				"Wales  ",
-				"sounds/fr/gallois, galloise, Pays de Galles.mp3"
+				"Wales  "
 			],
 			[
+				"sounds/fr/ghanéen, ghanéenne, Ghana.mp3",
 				"ghanéen / ghanéenne",
 				"Ghana (m)",
 				"Ghanean",
-				"Ghana",
-				"sounds/fr/ghanéen, ghanéenne, Ghana.mp3"
+				"Ghana"
 			],
 			[
+				"sounds/fr/libanais, libanaise, Liban.mp3",
 				"libanais / libanaise",
 				"Liban (m)",
 				"Lebanese",
-				"Lebanon",
-				"sounds/fr/libanais, libanaise, Liban.mp3"
+				"Lebanon"
 			],
 			[
+				"sounds/fr/luxembourgeois, luxembourgeoise, Luxembourg.mp3",
 				"luxembourgeois / luxembourgeoise",
 				"Luxembourg (m)",
 				"Luxembourgish",
-				"Luxemburg",
-				"sounds/fr/luxembourgeois, luxembourgeoise, Luxembourg.mp3"
+				"Luxemburg"
 			],
 			[
+				"sounds/fr/marocain, marocaine, Maroc.mp3",
 				"marocain / marocaine",
 				"Maroc (m)",
 				"Maroccan",
-				"Morocco",
-				"sounds/fr/marocain, marocaine, Maroc.mp3"
+				"Morocco"
 			],
 			[
+				"sounds/fr/irlandais, irlandaise, irelande.mp3",
 				"irlandais / irlandaise",
 				"Irelande (f)",
 				"Irish",
-				"Ireland",
-				"sounds/fr/irlandais, irlandaise, irelande.mp3"
+				"Ireland"
 			],
 			[
+				"sounds/fr/nord irlandais, nord irlandaise, Irelande du Nord.mp3",
 				"nord irlandais / nord irlandaise",
 				"Irelande (f) du Nord",
 				"Northern Irish",
-				"Northern Ireland",
-				"sounds/fr/nord irlandais, nord irlandaise, Irelande du Nord.mp3"
+				"Northern Ireland"
 			],
 			[
+				"sounds/fr/sénégalais, sénégalaise, Sénégal.mp3",
 				"sénégalais / sénégalaise",
 				"Sénégal (m)",
 				"Senegalese",
-				"Senegal",
-				"sounds/fr/sénégalais, sénégalaise, Sénégal.mp3"
+				"Senegal"
 			],
 			[
+				"sounds/fr/suisse, Suisse.mp3",
 				"suisse",
 				"Suisse (f)",
 				"Swiss",
-				"Switzerland",
-				"sounds/fr/suisse, Suisse.mp3"
+				"Switzerland"
 			],
 			[
+				"sounds/fr/tunisien, tunisienne, Tunisie.mp3",
 				"tunisien / tunisienne",
 				"Tunisie (f)",
 				"Tunisian",
-				"Tunisia",
-				"sounds/fr/tunisien, tunisienne, Tunisie.mp3"
+				"Tunisia"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"phraseTable5": {

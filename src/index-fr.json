@@ -3,11 +3,13 @@
 		{
 			"title": "French Learning Object 1",
 			"subTitle": "First Contact: greetings, farewells and social niceties",
+			"subTitleShort": "First Contact",
 			"file": "1"
 		},
 		{
 			"title": "French Learning Object 2",
 			"subTitle": "About me: marital status, occupation",
+			"subTitleShort": "About me",
 			"file": "2"
 		},
 		{
@@ -33,6 +35,7 @@
 		{
 			"title": "French Learning Object 7",
 			"subTitle": "Opinions matter: Likes and dislikes",
+			"subTitleShort": "Opinions matter",
 			"file": "7"
 		},
 		{
@@ -52,12 +55,14 @@
 		},
 		{
 			"title": "French Learning Object 11",
-			"subTitle": "Out and about : going to a café",
+			"subTitle": "Out and about: going to a café",
+			"subTitleShort": "Going to a café",
 			"file": "11"
 		},
 		{
 			"title": "French Learning Object 12",
 			"subTitle": "Out and about: Shopping in the market",
+			"subTitleShort": "Shopping in the market",
 			"file": "12"
 		},
 		{

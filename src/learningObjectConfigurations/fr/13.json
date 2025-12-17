@@ -122,162 +122,163 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/routine matinale.mp3",
 				"routine (f) matinale",
-				"morning routine",
-				"sounds/fr/routine matinale.mp3"
+				"morning routine"
 			],
 			[
+				"sounds/fr/routine quotidienne.mp3",
 				"routine (f) quotidienne",
-				"daily routine",
-				"sounds/fr/routine quotidienne.mp3"
+				"daily routine"
 			],
 			[
+				"sounds/fr/petit déjeuner.mp3",
 				"petit déjeuner (m)",
-				"breakfast",
-				"sounds/fr/petit déjeuner.mp3"
+				"breakfast"
 			],
 			[
+				"sounds/fr/déjeuner.mp3",
 				"déjeuner (m)",
-				"lunch",
-				"sounds/fr/déjeuner.mp3"
+				"lunch"
 			],
 			[
+				"sounds/fr/dîner.mp3",
 				"dîner (m)",
-				"dinner",
-				"sounds/fr/dîner.mp3"
+				"dinner"
 			],
 			[
+				"sounds/fr/aller.mp3",
 				"aller",
-				"to go",
-				"sounds/fr/aller.mp3"
+				"to go"
 			],
 			[
+				"sounds/fr/dîner.mp3",
 				"dîner",
-				"to have dinner*",
-				"sounds/fr/dîner.mp3"
+				"to have dinner*"
 			],
 			[
+				"sounds/fr/dormir.mp3",
 				"dormir",
-				"to sleep",
-				"sounds/fr/dormir.mp3"
+				"to sleep"
 			],
 			[
+				"sounds/fr/prendre.mp3",
 				"prendre",
-				"to take, to have (something to eat or drink) ",
-				"sounds/fr/prendre.mp3"
+				"to take, to have (something to eat or drink) "
 			],
 			[
+				"sounds/fr/se brosser les dents.mp3",
 				"se brosser les dents",
-				"to brush one's teeth",
-				"sounds/fr/se brosser les dents.mp3"
+				"to brush one's teeth"
 			],
 			[
+				"sounds/fr/se coiffer.mp3",
 				"se coiffer",
-				"to do one's hair",
-				"sounds/fr/se coiffer.mp3"
+				"to do one's hair"
 			],
 			[
+				"sounds/fr/se coucher.mp3",
 				"se coucher",
-				"to go to bed",
-				"sounds/fr/se coucher.mp3"
+				"to go to bed"
 			],
 			[
+				"sounds/fr/s'endormir.mp3",
 				"s'endormir",
-				"to fall asleep",
-				"sounds/fr/s'endormir.mp3"
+				"to fall asleep"
 			],
 			[
+				"sounds/fr/s'habiller, se déshabiller.mp3",
 				"s'habiller, se déshabiller",
-				"to get dressed, to get undressed",
-				"sounds/fr/s'habiller, se déshabiller.mp3"
+				"to get dressed, to get undressed"
 			],
 			[
+				"sounds/fr/se lever.mp3",
 				"se lever",
-				"to get up, to stand up",
-				"sounds/fr/se lever.mp3"
+				"to get up, to stand up"
 			],
 			[
+				"sounds/fr/se maquiller.mp3",
 				"se maquiller",
-				"to put on one's make-up",
-				"sounds/fr/se maquiller.mp3"
+				"to put on one's make-up"
 			],
 			[
+				"sounds/fr/se raser.mp3",
 				"se raser",
-				"to shave",
-				"sounds/fr/se raser.mp3"
+				"to shave"
 			],
 			[
+				"sounds/fr/se reposer.mp3",
 				"se reposer",
-				"to have a rest",
-				"sounds/fr/se reposer.mp3"
+				"to have a rest"
 			],
 			[
+				"sounds/fr/se réveiller.mp3",
 				"se réveiller",
-				"to wake up",
-				"sounds/fr/se réveiller.mp3"
+				"to wake up"
 			],
 			[
+				"sounds/fr/Quelle heure est-il Il est quelle heure.mp3",
 				"Quelle heure est-il ? Il est quelle heure ?",
-				"What's the time?",
-				"sounds/fr/Quelle heure est-il Il est quelle heure.mp3"
+				"What's the time?"
 			],
 			[
+				"sounds/fr/À quelle heure.mp3",
 				"À quelle heure ?",
-				"At what time?",
-				"sounds/fr/À quelle heure.mp3"
+				"At what time?"
 			],
 			[
+				"sounds/fr/À une heure et demie, à deux heures et demie.mp3",
 				"À une heure et demie, à deux heures et demie",
-				"At half past one, at half past two",
-				"sounds/fr/À une heure et demie, à deux heures et demie.mp3"
+				"At half past one, at half past two"
 			],
 			[
+				"sounds/fr/À cinq heures et quart.mp3",
 				"À cinq heures et quart",
-				"At quarter past five",
-				"sounds/fr/À cinq heures et quart.mp3"
+				"At quarter past five"
 			],
 			[
+				"sounds/fr/À six heures moins le quart.mp3",
 				"À six heures moins le quart",
-				"At quarter to six",
-				"sounds/fr/À six heures moins le quart.mp3"
+				"At quarter to six"
 			],
 			[
+				"sounds/fr/À deux heures cinq.mp3",
 				"À deux heures cinq",
-				"At five past two",
-				"sounds/fr/À deux heures cinq.mp3"
+				"At five past two"
 			],
 			[
+				"sounds/fr/À trois heures moins dix.mp3",
 				"À trois heures moins dix",
-				"At ten to three",
-				"sounds/fr/À trois heures moins dix.mp3"
+				"At ten to three"
 			],
 			[
+				"sounds/fr/à midi.mp3",
 				"À midi",
-				"At noon ",
-				"sounds/fr/à midi.mp3"
+				"At noon "
 			],
 			[
+				"sounds/fr/à minuit.mp3",
 				"À minuit",
-				"At midnight",
-				"sounds/fr/à minuit.mp3"
+				"At midnight"
 			],
 			[
+				"sounds/fr/Vers trois heures et demie.mp3",
 				"Vers trois heures et demie",
-				"At about half past three",
-				"sounds/fr/Vers trois heures et demie.mp3"
+				"At about half past three"
 			],
 			[
+				"sounds/fr/Je suis matinal, Je suis matinale.mp3",
 				"Je suis matinal.e ",
-				"I'm a morning person",
-				"sounds/fr/Je suis matinal, Je suis matinale.mp3"
+				"I'm a morning person"
 			],
 			[
+				"sounds/fr/Je suis un couche-tard. Je suis une couche-tard.mp3",
 				"Je suis un couche-tard. / Je suis une couche-tard",
-				"I'm a night owl",
-				"sounds/fr/Je suis un couche-tard. Je suis une couche-tard.mp3"
+				"I'm a night owl"
 			]
 		],
 		"footnote": "*In France le dîner is the evening meal. In some French speaking countries such as Canada, Belgium and Switzerland le dîner is the lunchtime meal and the evening meal is referred to as le souper.",
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

@@ -108,161 +108,162 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/famille.mp3",
 				"famille (f)",
-				"family",
-				"sounds/fr/famille.mp3"
+				"family"
 			],
 			[
+				"sounds/fr/père mère.mp3",
 				"père (m) mère (f)",
-				"father, mother",
-				"sounds/fr/père mère.mp3"
+				"father, mother"
 			],
 			[
+				"sounds/fr/parent.mp3",
 				"parent (m)",
-				"parent / relative",
-				"sounds/fr/parent.mp3"
+				"parent / relative"
 			],
 			[
+				"sounds/fr/maman, papa.mp3",
 				"maman, papa",
-				"mum, dad",
-				"sounds/fr/maman, papa.mp3"
+				"mum, dad"
 			],
 			[
+				"sounds/fr/frère, sœur.mp3",
 				"frère (m) sœur (f)",
-				"brother, sister",
-				"sounds/fr/frère, sœur.mp3"
+				"brother, sister"
 			],
 			[
+				"sounds/fr/jumeau, jumelle.mp3",
 				"jumeau (m) jumelle (f)",
-				"twin brother, twin sister",
-				"sounds/fr/jumeau, jumelle.mp3"
+				"twin brother, twin sister"
 			],
 			[
+				"sounds/fr/fils, fille.mp3",
 				"fils (m) fille (f)",
-				"son, daughter",
-				"sounds/fr/fils, fille.mp3"
+				"son, daughter"
 			],
 			[
+				"sounds/fr/garçon, fille.mp3",
 				"garçon (m) fille (f)",
-				"boy, girl",
-				"sounds/fr/garçon, fille.mp3"
+				"boy, girl"
 			],
 			[
+				"sounds/fr/bébé.mp3",
 				"bébé (m)",
-				"baby",
-				"sounds/fr/bébé.mp3"
+				"baby"
 			],
 			[
+				"sounds/fr/oncle, tante.mp3",
 				"oncle (m) tante (f)",
-				"uncle, aunt",
-				"sounds/fr/oncle, tante.mp3"
+				"uncle, aunt"
 			],
 			[
+				"sounds/fr/cousin, cousine.mp3",
 				"cousin (m) cousine (f)",
-				"cousin",
-				"sounds/fr/cousin, cousine.mp3"
+				"cousin"
 			],
 			[
+				"sounds/fr/grands-parents.mp3",
 				"grands-parents (mpl)",
-				"grandparents",
-				"sounds/fr/grands-parents.mp3"
+				"grandparents"
 			],
 			[
+				"sounds/fr/grand-père, grand-mère.mp3",
 				"grand-père (m) grand-mère (f)",
-				"grandfather",
-				"sounds/fr/grand-père, grand-mère.mp3"
+				"grandfather"
 			],
 			[
+				"sounds/fr/beau-père.mp3",
 				"beau-père (m)",
-				"father-in-law, stepfather",
-				"sounds/fr/beau-père.mp3"
+				"father-in-law, stepfather"
 			],
 			[
+				"sounds/fr/belle-mère.mp3",
 				"belle-mère (f)",
-				"mother-in-law, stepmother",
-				"sounds/fr/belle-mère.mp3"
+				"mother-in-law, stepmother"
 			],
 			[
+				"sounds/fr/beau-frère.mp3",
 				"beau-frère  (m)",
-				"brother-in-law, stepbrother",
-				"sounds/fr/beau-frère.mp3"
+				"brother-in-law, stepbrother"
 			],
 			[
+				"sounds/fr/belle-sœur.mp3",
 				"belle-sœur (f)",
-				"sister-in-law, stepsister",
-				"sounds/fr/belle-sœur.mp3"
+				"sister-in-law, stepsister"
 			],
 			[
+				"sounds/fr/enfant unique.mp3",
 				"enfant unique",
-				"only child",
-				"sounds/fr/enfant unique.mp3"
+				"only child"
 			],
 			[
+				"sounds/fr/demi-frère, demi-sœur.mp3",
 				"demi-frère (m) demi-sœur (f)",
-				"half-brother, half-sister",
-				"sounds/fr/demi-frère, demi-sœur.mp3"
+				"half-brother, half-sister"
 			],
 			[
+				"sounds/fr/petits-enfants.mp3",
 				"petits-enfants (mpl)",
-				"grandchildren",
-				"sounds/fr/petits-enfants.mp3"
+				"grandchildren"
 			],
 			[
+				"sounds/fr/petit-fils, petite-fille.mp3",
 				"petit-fils (m) petite-fille (f)",
-				"grandson, granddaughter",
-				"sounds/fr/petit-fils, petite-fille.mp3"
+				"grandson, granddaughter"
 			],
 			[
+				"sounds/fr/mari, femme.mp3",
 				"mari (m) femme (f)",
-				"husband, wife",
-				"sounds/fr/mari, femme.mp3"
+				"husband, wife"
 			],
 			[
+				"sounds/fr/personne.mp3",
 				"personne (f)",
-				"person",
-				"sounds/fr/personne.mp3"
+				"person"
 			],
 			[
+				"sounds/fr/ami, amie.mp3",
 				"ami (m) amie (f)",
-				"friend",
-				"sounds/fr/ami, amie.mp3"
+				"friend"
 			],
 			[
+				"sounds/fr/copain, copine.mp3",
 				"copain (m) copine (f)",
-				"friend / boyfriend, girlfriend",
-				"sounds/fr/copain, copine.mp3"
+				"friend / boyfriend, girlfriend"
 			],
 			[
+				"sounds/fr/compagnon, compagne.mp3",
 				"compagnon (m) compagne (f)",
-				"partner",
-				"sounds/fr/compagnon, compagne.mp3"
+				"partner"
 			],
 			[
+				"sounds/fr/conjoint, conjointe.mp3",
 				"conjoint (m) conjointe (f)",
-				"spouse",
-				"sounds/fr/conjoint, conjointe.mp3"
+				"spouse"
 			],
 			[
+				"sounds/fr/voisin, voisine.mp3",
 				"voisin (m) voisine (f)",
-				"neighbour",
-				"sounds/fr/voisin, voisine.mp3"
+				"neighbour"
 			],
 			[
+				"sounds/fr/Quel âge as-tu. Tu as quel âge.mp3",
 				"Quel âge as-tu ? Tu as quel âge ?",
-				"How old are you ?",
-				"sounds/fr/Quel âge as-tu. Tu as quel âge.mp3"
+				"How old are you ?"
 			],
 			[
+				"sounds/fr/Quel âge avez-vous. Vous avez quel âge.mp3",
 				"Quel âge avez-vous ? Vous avez quel âge ?",
-				"How old are you ?",
-				"sounds/fr/Quel âge avez-vous. Vous avez quel âge.mp3"
+				"How old are you ?"
 			],
 			[
+				"sounds/fr/gentil, gentille.mp3",
 				"gentil (m) gentille (f)",
-				"nice, kind",
-				"sounds/fr/gentil, gentille.mp3"
+				"nice, kind"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

@@ -132,146 +132,147 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/Vous désirez.mp3",
 				"Vous désirez ?",
-				"What can I get you? ",
-				"sounds/fr/Vous désirez.mp3"
+				"What can I get you? "
 			],
 			[
+				"sounds/fr/Qu'est-ce que vous prenez.mp3",
 				"Qu'est-ce que vous prenez ?",
-				"What are you having? ",
-				"sounds/fr/Qu'est-ce que vous prenez.mp3"
+				"What are you having? "
 			],
 			[
+				"sounds/fr/boire.mp3",
 				"boire",
-				"to drink",
-				"sounds/fr/boire.mp3"
+				"to drink"
 			],
 			[
+				"sounds/fr/prendre.mp3",
 				"prendre",
-				"to take, to have (food or drink) ",
-				"sounds/fr/prendre.mp3"
+				"to take, to have (food or drink) "
 			],
 			[
+				"sounds/fr/Je voudrais.mp3",
 				"Je voudrais",
-				"I'd like",
-				"sounds/fr/Je voudrais.mp3"
+				"I'd like"
 			],
 			[
+				"sounds/fr/Pour moi.mp3",
 				"Pour moi",
-				"For me ",
-				"sounds/fr/Pour moi.mp3"
+				"For me "
 			],
 			[
+				"sounds/fr/café, café-crème.mp3",
 				"café (m), café-crème (m)",
-				"coffee, coffee with milk",
-				"sounds/fr/café, café-crème.mp3"
+				"coffee, coffee with milk"
 			],
 			[
+				"sounds/fr/chocolat chaud.mp3",
 				"chocolat (m) chaud",
-				"hot chocolate",
-				"sounds/fr/chocolat chaud.mp3"
+				"hot chocolate"
 			],
 			[
+				"sounds/fr/jus de pomme, jus d'orange.mp3",
 				"jus (m) de pomme, jus d'orange",
-				"apple juice, orange juice",
-				"sounds/fr/jus de pomme, jus d'orange.mp3"
+				"apple juice, orange juice"
 			],
 			[
+				"sounds/fr/vin blanc, vin rouge.mp3",
 				"vin (m) blanc, vin rouge",
-				"white wine, red wine",
-				"sounds/fr/vin blanc, vin rouge.mp3"
+				"white wine, red wine"
 			],
 			[
+				"sounds/fr/bière, bière pression.mp3",
 				"bière (f), bière pression",
-				"beer, draft beer",
-				"sounds/fr/bière, bière pression.mp3"
+				"beer, draft beer"
 			],
 			[
+				"sounds/fr/verre.mp3",
 				"verre (m)",
-				"glass",
-				"sounds/fr/verre.mp3"
+				"glass"
 			],
 			[
+				"sounds/fr/bouteille.mp3",
 				"bouteille (f)",
-				"bottle",
-				"sounds/fr/bouteille.mp3"
+				"bottle"
 			],
 			[
+				"sounds/fr/carafe.mp3",
 				"carafe (f)",
-				"jug",
-				"sounds/fr/carafe.mp3"
+				"jug"
 			],
 			[
+				"sounds/fr/Vous voulez quelque chose à manger.mp3",
 				"Vous voulez quelque chose à manger ?",
-				"Do you want something to eat?",
-				"sounds/fr/Vous voulez quelque chose à manger.mp3"
+				"Do you want something to eat?"
 			],
 			[
+				"sounds/fr/Tu veux quelque chose à manger.mp3",
 				"Tu veux quelque chose à manger ?",
-				"Do you want something to eat?",
-				"sounds/fr/Tu veux quelque chose à manger.mp3"
+				"Do you want something to eat?"
 			],
 			[
+				"sounds/fr/Qu'est-ce que vous avez comme sandwiches.mp3",
 				"Qu'est-ce que vous avez comme sandwiches ?",
-				"What sort of sandwiches do you have?",
-				"sounds/fr/Qu'est-ce que vous avez comme sandwiches.mp3"
+				"What sort of sandwiches do you have?"
 			],
 			[
+				"sounds/fr/crêpe.mp3",
 				"crêpe (f)",
-				"pancake",
-				"sounds/fr/crêpe.mp3"
+				"pancake"
 			],
 			[
+				"sounds/fr/croque-monsieur.mp3",
 				"croque-monsieur (m)",
-				"cheese and ham toasted sandwich",
-				"sounds/fr/croque-monsieur.mp3"
+				"cheese and ham toasted sandwich"
 			],
 			[
+				"sounds/fr/omelette aux champignons.mp3",
 				"omelette (f) aux champignons",
-				"mushroom omelette",
-				"sounds/fr/omelette aux champignons.mp3"
+				"mushroom omelette"
 			],
 			[
+				"sounds/fr/pizza au fromage et à la tomate.mp3",
 				"pizza (f) au fromage et à la tomate",
-				"cheese and tomato pizza",
-				"sounds/fr/pizza au fromage et à la tomate.mp3"
+				"cheese and tomato pizza"
 			],
 			[
+				"sounds/fr/sandwich au jambon.mp3",
 				"sandwich (f) au jambon",
-				"ham sandwich",
-				"sounds/fr/sandwich au jambon.mp3"
+				"ham sandwich"
 			],
 			[
+				"sounds/fr/frites.mp3",
 				"frites (fpl)",
-				"French fries",
-				"sounds/fr/frites.mp3"
+				"French fries"
 			],
 			[
+				"sounds/fr/glace au chocolat, glace à la vanille.mp3",
 				"glace (f) au chocolat, glace à la vanille",
-				"chocolate ice-cream, vanilla ice-cream",
-				"sounds/fr/glace au chocolat, glace à la vanille.mp3"
+				"chocolate ice-cream, vanilla ice-cream"
 			],
 			[
+				"sounds/fr/parfum.mp3",
 				"parfum (m)",
-				"flavour",
-				"sounds/fr/parfum.mp3"
+				"flavour"
 			],
 			[
+				"sounds/fr/Quel parfum.mp3",
 				"Quel(s) parfum(s) ?",
-				"What flavour(s)?",
-				"sounds/fr/Quel parfum.mp3"
+				"What flavour(s)?"
 			],
 			[
+				"sounds/fr/boule.mp3",
 				"boule (f)",
-				"scoop",
-				"sounds/fr/boule.mp3"
+				"scoop"
 			],
 			[
+				"sounds/fr/Combien de boules.mp3",
 				"Combien de boules ?",
-				"How many scoops ?",
-				"sounds/fr/Combien de boules.mp3"
+				"How many scoops ?"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

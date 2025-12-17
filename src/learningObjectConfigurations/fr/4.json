@@ -101,136 +101,137 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"/sounds/fr/habiter.mp3",
 				"habiter",
-				"to live",
-				"/sounds/fr/habiter.mp3"
+				"to live"
 			],
 			[
+				"/sounds/fr/où.mp3",
 				"où",
-				"where",
-				"/sounds/fr/où.mp3"
+				"where"
 			],
 			[
+				"/sounds/fr/Où habites-tu Tu habites où.mp3",
 				"Où habites-tu ? Tu habites où ?",
-				"Where do you live?",
-				"/sounds/fr/Où habites-tu Tu habites où.mp3"
+				"Where do you live?"
 			],
 			[
+				"/sounds/fr/Où habitez-vous Vous habitez où.mp3",
 				"Où habitez-vous ? Vous habitez où ?",
-				"Where do you live?",
-				"/sounds/fr/Où habitez-vous Vous habitez où.mp3"
+				"Where do you live?"
 			],
 			[
+				"/sounds/fr/Où se trouve Lille Lille se trouve en France.mp3",
 				"Où se trouve Lille ? Lille se trouve en France.",
-				"Where is Lille? Lille is in France.",
-				"/sounds/fr/Où se trouve Lille Lille se trouve en France.mp3"
+				"Where is Lille? Lille is in France."
 			],
 			[
+				"/sounds/fr/Où es-tu né Où êtes-vous née.mp3",
 				"Où es-tu né.e ? Où êtes-vous né.e ?",
-				"Where were you born?",
-				"/sounds/fr/Où es-tu né Où êtes-vous née.mp3"
+				"Where were you born?"
 			],
 			[
+				"/sounds/fr/Je suis née.mp3",
 				"Je suis né.e …",
-				"I was born …",
-				"/sounds/fr/Je suis née.mp3"
+				"I was born …"
 			],
 			[
+				"/sounds/fr/au bord de la mer.mp3",
 				"au bord de la mer",
-				"at the seaside",
-				"/sounds/fr/au bord de la mer.mp3"
+				"at the seaside"
 			],
 			[
+				"/sounds/fr/à la campagne.mp3",
 				"à la campagne",
-				"in the countryside",
-				"/sounds/fr/à la campagne.mp3"
+				"in the countryside"
 			],
 			[
+				"/sounds/fr/à la montagne.mp3",
 				"à la montagne",
-				"In the mountains",
-				"/sounds/fr/à la montagne.mp3"
+				"In the mountains"
 			],
 			[
+				"/sounds/fr/au centre-ville.mp3",
 				"au centre-ville",
-				"in the town / city centre",
-				"/sounds/fr/au centre-ville.mp3"
+				"in the town / city centre"
 			],
 			[
+				"/sounds/fr/en banlieue.mp3",
 				"en banlieue",
-				"in the suburbs",
-				"/sounds/fr/en banlieue.mp3"
+				"in the suburbs"
 			],
 			[
+				"/sounds/fr/dans un petit village dans un grand village.mp3",
 				"dans un petit / grand village",
-				"in a small / large village",
-				"/sounds/fr/dans un petit village dans un grand village.mp3"
+				"in a small / large village"
 			],
 			[
+				"/sounds/fr/Dans une petite ville. Dans une grande ville.mp3",
 				"dans une petite / grande ville",
-				"In a small/ large town",
-				"/sounds/fr/Dans une petite ville. Dans une grande ville.mp3"
+				"In a small/ large town"
 			],
 			[
+				"/sounds/fr/C'est près d'ici.mp3",
 				"C'est près d'ici.",
-				"It's near here.",
-				"/sounds/fr/C'est près d'ici.mp3"
+				"It's near here."
 			],
 			[
+				"/sounds/fr/C'est très loin d'ici.mp3",
 				"C'est très loin d'ici.",
-				"It's a long way from here.",
-				"/sounds/fr/C'est très loin d'ici.mp3"
+				"It's a long way from here."
 			],
 			[
+				"/sounds/fr/C'est à 15 minutes d'ici.mp3",
 				"C'est à 15 minutes d'ici.",
-				"It's 15 minutes away from here.",
-				"/sounds/fr/C'est à 15 minutes d'ici.mp3"
+				"It's 15 minutes away from here."
 			],
 			[
+				"/sounds/fr/C'est près de Cambridge.mp3",
 				"C'est près de Cambridge.",
-				"It's near Cambridge.",
-				"/sounds/fr/C'est près de Cambridge.mp3"
+				"It's near Cambridge."
 			],
 			[
+				"/sounds/fr/C'est à 20 kilomètres de Paris.mp3",
 				"C'est à 20 kilomètres de Paris.",
-				"It's 20 km from Paris.",
-				"/sounds/fr/C'est à 20 kilomètres de Paris.mp3"
+				"It's 20 km from Paris."
 			],
 			[
+				"/sounds/fr/dans une maison.mp3",
 				"dans une maison",
-				"in a house",
-				"/sounds/fr/dans une maison.mp3"
+				"in a house"
 			],
 			[
+				"/sounds/fr/dans un immeuble.mp3",
 				"dans un immeuble",
-				"in a block of flats",
-				"/sounds/fr/dans un immeuble.mp3"
+				"in a block of flats"
 			],
 			[
+				"/sounds/fr/dans un appartement.mp3",
 				"dans un appartement",
-				"in a flat",
-				"/sounds/fr/dans un appartement.mp3"
+				"in a flat"
 			],
 			[
+				"/sounds/fr/en résidence universitaire.mp3",
 				"en résidence universitaire",
-				"in university accommodation",
-				"/sounds/fr/en résidence universitaire.mp3"
+				"in university accommodation"
 			],
 			[
+				"/sounds/fr/en colocation.mp3",
 				"en colocation",
-				"in a flat / house share",
-				"/sounds/fr/en colocation.mp3"
+				"in a flat / house share"
 			],
 			[
+				"/sounds/fr/seule.mp3",
 				"seul.e",
-				"alone",
-				"/sounds/fr/seule.mp3"
+				"alone"
 			],
 			[
+				"/sounds/fr/aimer.mp3",
 				"aimer",
-				"to love, to like",
-				"/sounds/fr/aimer.mp3"
+				"to love, to like"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

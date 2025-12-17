@@ -122,186 +122,187 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/faire les courses.mp3",
 				"faire les courses",
-				"to do the shopping",
-				"sounds/fr/faire les courses.mp3"
+				"to do the shopping"
 			],
 			[
+				"sounds/fr/aller.mp3",
 				"aller",
-				"to go",
-				"sounds/fr/aller.mp3"
+				"to go"
 			],
 			[
+				"sounds/fr/boucherie.mp3",
 				"boucherie (f)",
-				"butcher's shop",
-				"sounds/fr/boucherie.mp3"
+				"butcher's shop"
 			],
 			[
+				"sounds/fr/boulangerie.mp3",
 				"boulangerie (f)",
-				"bakery",
-				"sounds/fr/boulangerie.mp3"
+				"bakery"
 			],
 			[
+				"sounds/fr/épicerie.mp3",
 				"épicerie (f)",
-				"grocer's, corner shop ",
-				"sounds/fr/épicerie.mp3"
+				"grocer's, corner shop "
 			],
 			[
+				"sounds/fr/fleuriste.mp3",
 				"fleuriste (m and f)",
-				"florist's",
-				"sounds/fr/fleuriste.mp3"
+				"florist's"
 			],
 			[
+				"sounds/fr/marchand de fruits et légumes.mp3",
 				"marchand (m) de fruits et légumes",
-				"greengrocer's",
-				"sounds/fr/marchand de fruits et légumes.mp3"
+				"greengrocer's"
 			],
 			[
+				"sounds/fr/marché.mp3",
 				"marché (m)",
-				"market",
-				"sounds/fr/marché.mp3"
+				"market"
 			],
 			[
+				"sounds/fr/poissonnerie.mp3",
 				"poissonnerie (f)",
-				"fishmonger's",
-				"sounds/fr/poissonnerie.mp3"
+				"fishmonger's"
 			],
 			[
+				"sounds/fr/supermarché.mp3",
 				"supermarché (m)",
-				"supermarket",
-				"sounds/fr/supermarché.mp3"
+				"supermarket"
 			],
 			[
+				"sounds/fr/kilo, demi-kilo.mp3",
 				"kilo (m), demi-kilo (m)",
-				"kilo, half a kilo",
-				"sounds/fr/kilo, demi-kilo.mp3"
+				"kilo, half a kilo"
 			],
 			[
+				"sounds/fr/barquette de framboises.mp3",
 				"barquette (f) de framboises",
-				"punnet of raspberries",
-				"sounds/fr/barquette de framboises.mp3"
+				"punnet of raspberries"
 			],
 			[
+				"sounds/fr/pièce.mp3",
 				"pièce (f)",
-				"each",
-				"sounds/fr/pièce.mp3"
+				"each"
 			],
 			[
+				"sounds/fr/Les pommes de terre, c'est combien le kilo.mp3",
 				"Les pommes de terre, c'est combien le kilo ?",
-				"How much is a kilo of potatoes?",
-				"sounds/fr/Les pommes de terre, c'est combien le kilo.mp3"
+				"How much is a kilo of potatoes?"
 			],
 			[
+				"sounds/fr/Les concombres, c'est combien la pièce.mp3",
 				"Les concombres, c'est combien la pièce ?",
-				"How much is a cucumber?",
-				"sounds/fr/Les concombres, c'est combien la pièce.mp3"
+				"How much is a cucumber?"
 			],
 			[
+				"sounds/fr/C'est tout Oui, c'est tout.mp3",
 				"C'est tout ? Oui, c'est tout.",
-				"Is that all / everything? Yes, that's all / everything.",
-				"sounds/fr/C'est tout Oui, c'est tout.mp3"
+				"Is that all / everything? Yes, that's all / everything."
 			],
 			[
+				"sounds/fr/Avec ça Avec ceci.mp3",
 				"Avec ça ? Avec ceci ?",
-				"Anything else?",
-				"sounds/fr/Avec ça Avec ceci.mp3"
+				"Anything else?"
 			],
 			[
+				"sounds/fr/Donnez-moi.mp3",
 				"Donnez-moi...",
-				"Give me...",
-				"sounds/fr/Donnez-moi.mp3"
+				"Give me..."
 			],
 			[
+				"sounds/fr/Ça fait.mp3",
 				"Ça fait...",
-				"That comes to...",
-				"sounds/fr/Ça fait.mp3"
+				"That comes to..."
 			],
 			[
+				"sounds/fr/carotte.mp3",
 				"carotte (f)",
-				"carrot",
-				"sounds/fr/carotte.mp3"
+				"carrot"
 			],
 			[
+				"sounds/fr/chou, choux.mp3",
 				"chou (m) choux (mpl)",
-				"cabbage(s)",
-				"sounds/fr/chou, choux.mp3"
+				"cabbage(s)"
 			],
 			[
+				"sounds/fr/concombre.mp3",
 				"concombre (m)",
-				"cucumber",
-				"sounds/fr/concombre.mp3"
+				"cucumber"
 			],
 			[
+				"sounds/fr/oignon.mp3",
 				"oignon (m)",
-				"onion",
-				"sounds/fr/oignon.mp3"
+				"onion"
 			],
 			[
+				"sounds/fr/pain.mp3",
 				"pain (m)",
-				"bread",
-				"sounds/fr/pain.mp3"
+				"bread"
 			],
 			[
+				"sounds/fr/poireau, poireaux.mp3",
 				"poireau (m) poireaux (mpl)",
-				"leek (s)",
-				"sounds/fr/poireau, poireaux.mp3"
+				"leek (s)"
 			],
 			[
+				"sounds/fr/poivron.mp3",
 				"poivron (m)",
-				"pepper",
-				"sounds/fr/poivron.mp3"
+				"pepper"
 			],
 			[
+				"sounds/fr/salade.mp3",
 				"salade (f)",
-				"salad, lettuce",
-				"sounds/fr/salade.mp3"
+				"salad, lettuce"
 			],
 			[
+				"sounds/fr/cerise.mp3",
 				"cerise (f)",
-				"cherry",
-				"sounds/fr/cerise.mp3"
+				"cherry"
 			],
 			[
+				"sounds/fr/citron.mp3",
 				"citron (m)",
-				"lemon",
-				"sounds/fr/citron.mp3"
+				"lemon"
 			],
 			[
+				"sounds/fr/fraise.mp3",
 				"fraise (f)",
-				"strawberry",
-				"sounds/fr/fraise.mp3"
+				"strawberry"
 			],
 			[
+				"sounds/fr/framboise.mp3",
 				"framboise (f)",
-				"raspberry",
-				"sounds/fr/framboise.mp3"
+				"raspberry"
 			],
 			[
+				"sounds/fr/huile d'olives.mp3",
 				"huile (f) d'olives",
-				"olive oil",
-				"sounds/fr/huile d'olives.mp3"
+				"olive oil"
 			],
 			[
+				"sounds/fr/melon.mp3",
 				"melon (m)",
-				"melon",
-				"sounds/fr/melon.mp3"
+				"melon"
 			],
 			[
+				"sounds/fr/pomme.mp3",
 				"pomme (f)",
-				"apple",
-				"sounds/fr/pomme.mp3"
+				"apple"
 			],
 			[
+				"sounds/fr/légume.mp3",
 				"légume (m)",
-				"vegetable",
-				"sounds/fr/légume.mp3"
+				"vegetable"
 			],
 			[
+				"sounds/fr/fruit.mp3",
 				"fruit (m)",
-				"fruit",
-				"sounds/fr/fruit.mp3"
+				"fruit"
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {

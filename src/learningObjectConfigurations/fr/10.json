@@ -187,191 +187,192 @@
 		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/vouloir.mp3",
 				"vouloir",
-				"to want ",
-				"sounds/fr/vouloir.mp3"
+				"to want "
 			],
 			[
+				"sounds/fr/Tu veux aller Vous voulez aller.mp3",
 				"Tu veux aller…? Vous voulez aller… ?",
-				"Do you want to go…?",
-				"sounds/fr/Tu veux aller Vous voulez aller.mp3"
+				"Do you want to go…?"
 			],
 			[
+				"sounds/fr/Je veux bien !.mp3",
 				"Je veux bien !",
-				"(Set expression when expressing acceptance) I'd like to. ",
-				"sounds/fr/Je veux bien !.mp3"
+				"(Set expression when expressing acceptance) I'd like to. "
 			],
 			[
+				"sounds/fr/demain.mp3",
 				"demain",
-				"tomorrow",
-				"sounds/fr/demain.mp3"
+				"tomorrow"
 			],
 			[
+				"sounds/fr/lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.mp3",
 				"lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche",
-				"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
-				"sounds/fr/lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.mp3"
+				"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
 			],
 			[
+				"sounds/fr/à une heure, à deux heures, à trois heures, à quatre heures.mp3",
 				"à une heure, à deux heures, à trois heures, à quatre heures …",
-				"At 1 o'clock, at 2 o'clock, at 3 o'clock, at 4 o'clock…",
-				"sounds/fr/à une heure, à deux heures, à trois heures, à quatre heures.mp3"
+				"At 1 o'clock, at 2 o'clock, at 3 o'clock, at 4 o'clock…"
 			],
 			[
+				"sounds/fr/à midi.mp3",
 				"à midi",
-				"At midday",
-				"sounds/fr/à midi.mp3"
+				"At midday"
 			],
 			[
+				"sounds/fr/à minuit.mp3",
 				"à minuit",
-				"At midnight",
-				"sounds/fr/à minuit.mp3"
+				"At midnight"
 			],
 			[
+				"sounds/fr/Pas de problème !.mp3",
 				"Pas de problème !",
-				"No problem! ",
-				"sounds/fr/Pas de problème !.mp3"
+				"No problem! "
 			],
 			[
+				"sounds/fr/bibliothèque.mp3",
 				"bibliothèque (f)",
-				"library",
-				"sounds/fr/bibliothèque.mp3"
+				"library"
 			],
 			[
+				"sounds/fr/café.mp3",
 				"café (m)",
-				"café",
-				"sounds/fr/café.mp3"
+				"café"
 			],
 			[
+				"sounds/fr/centre commercial.mp3",
 				"centre commercial (m)",
-				"shopping centre",
-				"sounds/fr/centre commercial.mp3"
+				"shopping centre"
 			],
 			[
+				"sounds/fr/cinéma.mp3",
 				"cinéma (m)",
-				"cinema",
-				"sounds/fr/cinéma.mp3"
+				"cinema"
 			],
 			[
+				"sounds/fr/exposition.mp3",
 				"exposition (f)",
-				"exhibition",
-				"sounds/fr/exposition.mp3"
+				"exhibition"
 			],
 			[
+				"sounds/fr/magasin.mp3",
 				"magasin (m)",
-				"shop",
-				"sounds/fr/magasin.mp3"
+				"shop"
 			],
 			[
+				"sounds/fr/piscine.mp3",
 				"piscine (f)",
-				"swimming pool",
-				"sounds/fr/piscine.mp3"
+				"swimming pool"
 			],
 			[
+				"sounds/fr/restaurant.mp3",
 				"restaurant (m)",
-				"restaurant",
-				"sounds/fr/restaurant.mp3"
+				"restaurant"
 			],
 			[
+				"sounds/fr/théâtre.mp3",
 				"théâtre (m)",
-				"theatre",
-				"sounds/fr/théâtre.mp3"
+				"theatre"
 			],
 			[
+				"sounds/fr/acheter.mp3",
 				"acheter",
-				"to buy",
-				"sounds/fr/acheter.mp3"
+				"to buy"
 			],
 			[
+				"sounds/fr/partir.mp3",
 				"partir",
-				"to leave, to depart",
-				"sounds/fr/partir.mp3"
+				"to leave, to depart"
 			],
 			[
+				"sounds/fr/chaussures de marche.mp3",
 				"chaussures de marche (fpl)",
-				"walking shoes",
-				"sounds/fr/chaussures de marche.mp3"
+				"walking shoes"
 			],
 			[
+				"sounds/fr/vacances.mp3",
 				"vacances (fpl)",
-				"holiday(s) (Always used in the plural in French) ",
-				"sounds/fr/vacances.mp3"
+				"holiday(s) (Always used in the plural in French) "
 			],
 			[
+				"sounds/fr/C'est dommage !.mp3",
 				"C'est dommage !",
-				"That's a pity !",
-				"sounds/fr/C'est dommage !.mp3"
+				"That's a pity !"
 			],
 			[
+				"sounds/fr/sortir.mp3",
 				"sortir",
-				"to go out",
-				"sounds/fr/sortir.mp3"
+				"to go out"
 			],
 			[
+				"sounds/fr/dormir.mp3",
 				"dormir",
-				"to sleep",
-				"sounds/fr/dormir.mp3"
+				"to sleep"
 			],
 			[
+				"sounds/fr/courir.mp3",
 				"courir",
-				"to run",
-				"sounds/fr/courir.mp3"
+				"to run"
 			],
 			[
+				"sounds/fr/tricoter.mp3",
 				"tricoter",
-				"to knit",
-				"sounds/fr/tricoter.mp3"
+				"to knit"
 			],
 			[
+				"sounds/fr/papoter.mp3",
 				"papoter",
-				"to natter",
-				"sounds/fr/papoter.mp3"
+				"to natter"
 			],
 			[
+				"sounds/fr/méditer.mp3",
 				"méditer",
-				"to meditate",
-				"sounds/fr/méditer.mp3"
+				"to meditate"
 			],
 			[
+				"sounds/fr/bouquiner.mp3",
 				"bouquiner (colloquial)",
-				"to read ",
-				"sounds/fr/bouquiner.mp3"
+				"to read "
 			],
 			[
+				"sounds/fr/bavarder.mp3",
 				"bavarder",
-				"to chat",
-				"sounds/fr/bavarder.mp3"
+				"to chat"
 			],
 			[
+				"sounds/fr/dessiner.mp3",
 				"dessiner",
-				"to draw",
-				"sounds/fr/dessiner.mp3"
+				"to draw"
 			],
 			[
+				"sounds/fr/grandir.mp3",
 				"grandir",
-				"to grow up",
-				"sounds/fr/grandir.mp3"
+				"to grow up"
 			],
 			[
+				"sounds/fr/rajeunir.mp3",
 				"rajeunir",
-				"to get younger",
-				"sounds/fr/rajeunir.mp3"
+				"to get younger"
 			],
 			[
+				"sounds/fr/vieillir.mp3",
 				"vieillir",
-				"to age, to grow old ",
-				"sounds/fr/vieillir.mp3"
+				"to age, to grow old "
 			],
 			[
+				"sounds/fr/Moi non plus !.mp3",
 				"Moi non plus !",
-				"Neither do I!",
-				"sounds/fr/Moi non plus !.mp3"
+				"Neither do I!"
 			],
 			[
+				"sounds/fr/Je ne sais pas.mp3",
 				"Je ne sais pas.",
-				"I don't know.",
-				"sounds/fr/Je ne sais pas.mp3"
+				"I don't know."
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
 	"grammar": {
