@@ -5,6 +5,8 @@ Info.scss
 @use "../../styles/mixins.module" as *;
 @use "../../styles/variables.module" as *;
 
+$info-blue: #1c398e;
+
 .information {
 	background-color: #eff6ff;
 	padding: 12px 16px 12px 16px;
@@ -14,14 +16,15 @@ Info.scss
 	display: flex;
 	// flex-direction: column;
 	column-gap: 0.75rem;
-	color: #1c398e;
+	color: $info-blue;
 	font-size: 0.9rem; //14px;
 	&::before {
 		content: "";
 		position: absolute;
 		width: $info-diameter;
 		height: $info-diameter;
-		background: url("/public/images/icons/info-icon.svg");
+		mask: url("/public/images/icons/info-icon.svg");
+		background-color: $info-blue;
 		top: 14px;
 	}
 	.info-icon {

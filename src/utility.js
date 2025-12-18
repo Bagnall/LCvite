@@ -397,7 +397,7 @@ export const handleSpecialLinkClick = (e, showBackButton = true) => {
 		//    BUT: if we just activated a tab, give Radix a moment to switch panels
 		// -----------------------------------------------------------------------
 		const doScroll = () => {
-			specialAnchorTarget.classList.add("flash");
+			if (showBackButton)specialAnchorTarget.classList.add("flash");
 			scrollToElement(specialAnchorTarget, showBackButton);
 			setTimeout(() => {
 				specialAnchorTarget.classList.remove("flash");

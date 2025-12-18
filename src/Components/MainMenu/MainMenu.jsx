@@ -223,7 +223,7 @@ export class MainMenu extends React.Component {
 										href={introHref}
 										onClick={this.handleNavClick}
 									>
-                    Introduction
+										Introduction
 									</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -291,7 +291,7 @@ export class MainMenu extends React.Component {
 								className="nav-link nav-link-mobile nav special-anchor"
 								onClick={this.handleNavClick}
 							>
-                Introduction
+								Introduction
 							</a>
 						</li>
 						{mobileMenuItems}

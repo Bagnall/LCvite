@@ -1,9 +1,6 @@
 import './Blanks.scss';
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import {
 	AudioClip,
-	CheckBox,
 	ConcatenatedPlaylist,
 	IconButton,
 	Info,
@@ -21,12 +18,12 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 import DOMPurify from "dompurify";
-import {
-	mouseRelativeTo,
-} from '../../mouseUtility';
+import { Label } from "@/components/ui/label";
+import { mouseRelativeTo } from '../../mouseUtility';
 import React from 'react';
+import { Switch } from "@/components/ui/switch";
+// import { Button } from "@/components/ui/button";
 // import Variables from '../../styles/variables.module';
 
 export class Blanks extends React.Component {
@@ -232,7 +229,7 @@ export class Blanks extends React.Component {
 	};
 
 	handleHints = (e) => {
-		console.log("handleHints", e, e.target.checked);
+		// console.log("handleHints", e, e.target.checked);
 		// const { showHints = false } = this.state;
 		// e.preventDefault();
 		// e.stopPropagation();
@@ -519,10 +516,10 @@ export class Blanks extends React.Component {
 			showHints,
 			showHintsText,
 			soundFile,
+			soundFiles = [],
 			words = [],
 		} = this.state;
 		let {
-			soundFiles = [],
 			wordTiles,
 		} = this.state;
 		const {

@@ -161,12 +161,16 @@ export default class App extends React.Component {
 	initialiseSpecialAnchors = () => {
 		const anchors = document.querySelectorAll(".special-anchor");
 		anchors.forEach((anchor) => {
+			// console.log("anchor", anchor);
 			if (anchor.setup) {
 				// do nothing
+				// console.log("already set up");
 			} else {
 				if (anchor.classList.contains('nav')) {
+					// console.log("with nav");
 					anchor.addEventListener("click", (e) => handleSpecialLinkClick(e, false));
 				} else {
+					// console.log("without nav");
 					anchor.addEventListener("click", (e) => handleSpecialLinkClick(e, true));
 				}
 				anchor.setAttribute('title', 'Click to find out more');
