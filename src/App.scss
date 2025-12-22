@@ -250,18 +250,6 @@ button.back-to-link-button {
 	}
 }
 
-#hero {
-	// background: green;
-	// background-image: url(../img/swahili.png), url(../img/basic.png), url(../img/banner.png);
-	background-size:
-		// 510px 199px,
-		// 448px 184px,
-		cover;
-	background-repeat: no-repeat, no-repeat;
-	color: white;
-	// min-height: 900px;
-	// background-position: 50% 40%, 5% 8%, left top;
-}
 .no-config {
 	opacity: 0;
 	animation-name: fadeIn;
@@ -474,8 +462,8 @@ hr {
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		background-size: 50%;
-		border-radius: 12px;
-		box-shadow: 2px 2px 8px darkgray;
+		// border-radius: 12px;
+		// box-shadow: 2px 2px 8px darkgray;
 		display: flex;
 		flex-direction: column;
 		height: 282px;
@@ -484,6 +472,11 @@ hr {
 		max-width: 100%;
 		overflow-y: hidden;
 		padding: 1rem;
+		h1,
+		h2 {
+			color: white;
+			text-shadow: 0 0 3px black;
+		}
 	}
 
 	span.audio-link,

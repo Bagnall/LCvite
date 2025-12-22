@@ -15,8 +15,8 @@ export class Sortable extends React.Component {
 		super(props);
 
 		this.state = {
-			englishItems: this.getInitialEnglish(props.config),
 			draggingId: null,
+			englishItems: this.getInitialEnglish(props.config),
 			lastResult: null,
 			rowStatuses: new Array(
 				props.config && props.config.phrases
@@ -35,10 +35,10 @@ export class Sortable extends React.Component {
 					: 0;
 
 			this.setState({
-				englishItems: this.getInitialEnglish(this.props.config),
 				draggingId: null,
+				englishItems: this.getInitialEnglish(this.props.config),
 				lastResult: null,
-				rowStatuses: new Array(phrasesLen).fill(null)
+				rowStatuses: new Array(phrasesLen).fill(null),
 			});
 		}
 	}
@@ -46,18 +46,18 @@ export class Sortable extends React.Component {
 	getInitialEnglish(config) {
 		if (!config || !config.phrases) return [];
 
-		// phrases: [ [french, english, audio], ... ]
+		// phrases: [ [foreignLanguage, english, audio], ... ]
 		const englishItems = config.phrases.map((phrase, index) => {
 			if (Array.isArray(phrase)) {
 				return {
+					english: phrase[1],
 					id: String(index), // used for correctness
-					english: phrase[1]
 				};
 			}
 			// fallback if you move to object form
 			return {
+				english: phrase.english,
 				id: String(index),
-				english: phrase.english
 			};
 		});
 
@@ -127,8 +127,8 @@ export class Sortable extends React.Component {
 			config && config.phrases ? config.phrases.length : 0;
 
 		this.setState({
-			englishItems: this.getInitialEnglish(config),
 			draggingId: null,
+			englishItems: this.getInitialEnglish(config),
 			lastResult: null,
 			rowStatuses: new Array(phrasesLen).fill(null)
 		});
@@ -141,21 +141,21 @@ export class Sortable extends React.Component {
 		const englishItems = config.phrases.map((phrase, index) => {
 			if (Array.isArray(phrase)) {
 				return {
+					english: phrase[1],
 					id: String(index),
-					english: phrase[1]
 				};
 			}
 			return {
+				english: phrase.english,
 				id: String(index),
-				english: phrase.english
 			};
 		});
 
 		this.shuffleArrayInPlace(englishItems);
 
 		this.setState({
-			englishItems,
 			draggingId: null,
+			englishItems,
 			lastResult: null,
 			rowStatuses: new Array(config.phrases.length).fill(null)
 		});
@@ -215,10 +215,10 @@ export class Sortable extends React.Component {
 			return <div>No configuration provided for Sortable.</div>;
 		}
 
-		const title =
-			config.titleText ||
-			config.title ||
-			"Sortable activity";
+		// const title =
+		// 	config.titleText ||
+		// 	config.title ||
+		// 	"Sortable activity";
 
 		const prompt =
 			config.instructionsText ||	"";
@@ -247,16 +247,15 @@ export class Sortable extends React.Component {
 					<div className="space-y-1">
 						<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
 						{phrases.map((phrase, index) => {
-							let french = "";
+							let foreignLanguage = "";
 							let audio = null;
 
 							if (Array.isArray(phrase)) {
-								// [french, english, audio]
-								french = phrase[0];
-								audio = phrase[2];
+								// [foreignLanguage, english, audio]
+								[foreignLanguage, , audio] = phrase;
 							} else {
-								french = phrase.original;
-								audio = phrase.audio;
+								foreignLanguage = phrase.original;
+								({ audio } = phrase);
 							}
 
 							const englishItem = englishItems[index];
@@ -280,7 +279,7 @@ export class Sortable extends React.Component {
 
 									{/* MIDDLE: French phrase */}
 									<div className="flex items-center text-sm">
-										<span>{french}</span>
+										<span>{foreignLanguage}</span>
 									</div>
 
 									{/* RIGHT: Sortable English phrase + tick/cross */}
