@@ -49,8 +49,8 @@ export class LO1Grammar1 extends PureComponent {
 					<ul><li>When to use Monsieur, Madame, and Mademoiselle.</li><li>Abbreviations: M., Mme., Mlle.</li></ul>
 
 					<p><span className={`special-anchor-target`} id={`madame`} name={`madame`}>In French there is no equivalent to the English Ms.
-						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/Madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
-					</span><span className={`special-anchor-target`} id={`mademoiselle`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/Mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
+						To be politically correct a woman is addressed as <AudioClip className={`link`} soundFile={`sounds/fr/madame.mp3`}><b>Madame</b></AudioClip> regardless of her marital status unless she is unmarried and specifies that she wishes to be addressed as&nbsp;
+					</span><span className={`special-anchor-target`} id={`mademoiselle`} name={`mademoiselle`} ><AudioClip className={`link`} soundFile={`sounds/fr/mademoiselle.mp3`}><b>Mademoiselle</b></AudioClip>. <b>Mademoiselle</b> is otherwise reserved
 						for a teenage girl.</span></p>
 					<Table>
 						<TableBody>
@@ -138,7 +138,7 @@ export class LO1Demystify1 extends PureComponent {
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
 						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
-						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
+						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/bonsoir.mp3`} >bonsoir</AudioClip>.
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
 					</div>
 				</div>

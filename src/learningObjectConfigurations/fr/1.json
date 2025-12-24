@@ -120,22 +120,22 @@
 		"informationTextHTML": "<h3>You will learn:</h3><ul><li>Key greeting and farewell expressions (<i>Bonjour, Salut, Au revoir, À bientôt</i>).</li><li>Terms of address (<i>Monsieur, Madame, Mademoiselle, Jeune homme, Les enfants</i>).</li><li>Friendly and affectionate expressions (<i>Mon chéri, Ma chérie, Mon amour</i>).</li></ul>",
 		"phrases": [
 			[
-				"sounds/fr/Bonjour.mp3",
+				"sounds/fr/bonjour.mp3",
 				"Bonjour",
 				"Hello, good morning, good afternoon"
 			],
 			[
-				"sounds/fr/Bonsoir.mp3",
+				"sounds/fr/bonsoir.mp3",
 				"Bonsoir",
 				"Hello, good evening"
 			],
 			[
-				"sounds/fr/Coucou.mp3",
+				"sounds/fr/coucou.mp3",
 				"Coucou",
 				"Hi, cooee, peek-a-boo"
 			],
 			[
-				"sounds/fr/Salut.mp3",
+				"sounds/fr/salut.mp3",
 				"Salut",
 				"Hi, bye"
 			],
@@ -150,22 +150,22 @@
 				"See you soon!"
 			],
 			[
-				"sounds/fr/Monsieur.mp3",
+				"sounds/fr/monsieur.mp3",
 				"Monsieur",
 				"Sir, Mr"
 			],
 			[
-				"sounds/fr/Madame.mp3",
+				"sounds/fr/madame.mp3",
 				"<a class='special-anchor' href='#madame'>Madame</a>",
 				"Madam, Mrs / Ms"
 			],
 			[
-				"sounds/fr/Mademoiselle.mp3",
+				"sounds/fr/mademoiselle.mp3",
 				"<a class='special-anchor' href='#mademoiselle'>Mademoiselle</a>",
 				"Young lady, Miss"
 			],
 			[
-				"sounds/fr/Messieurs-dames.mp3",
+				"sounds/fr/messieurs-dames.mp3",
 				"Messieurs-dames",
 				"Ladies and gentlemen"
 			],
@@ -426,7 +426,7 @@
 						"Ah pas mal [merci] !"
 					],
 					"audio": [
-						"sounds/fr/Bonsoir Monsieur Galipot ! Comment ça va.mp3",
+						"sounds/fr/Bonsoir Monsieur Galipot ! comment ça va.mp3",
 						"sounds/fr/Bonsoir Madame Bernard, ça va très bien, merci. Et vous.mp3",
 						"sounds/fr/Ah pas mal merci !.mp3"
 					],
