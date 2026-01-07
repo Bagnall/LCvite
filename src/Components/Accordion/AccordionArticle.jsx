@@ -132,7 +132,7 @@ export class AccordionArticle extends React.PureComponent {
 					</div>
 					:
 					<Card className="content w-full sortable mt-4">
-						<CardContent>
+						<CardContent className="p-2">
 							{children}
 						</CardContent>
 					</Card>

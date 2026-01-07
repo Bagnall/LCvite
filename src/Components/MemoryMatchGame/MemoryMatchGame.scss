@@ -58,7 +58,7 @@ $transition-time: $memory-card-transition-time;
 		perspective: 2000px;
 
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(auto);
 		gap: 0.5rem; /* spacing between items */
 		width: fit-content;
@@ -149,6 +149,9 @@ $transition-time: $memory-card-transition-time;
 	.memory-map-container {
 		.matches {
 			min-width: 280px;
+		}
+		.cards {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 }

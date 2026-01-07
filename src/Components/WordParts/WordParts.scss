@@ -84,6 +84,11 @@ html.debug {
 		}
 	}
 
+	.word-space {
+		display: inline-block;
+		width: 0.5em; /* tweak to match old visual spacing */
+	}
+
 	// table {
 	// 	text-align: left;
 	// 	border-collapse: collapse;

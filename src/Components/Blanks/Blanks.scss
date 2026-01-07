@@ -157,13 +157,17 @@ $max-tile-width: 360px;
 
 	&.type-phrases {
 		.target-board {
-			padding: 0 1rem 0 0;
+			padding: 0; // 1rem 0 0;
 			ul {
 				li {
 					min-height: 40px;
 					justify-content: flex-start;
 					align-items: center;
 					column-gap: 12px;
+					margin: 0;
+					flex-direction: row;
+					flex-wrap: wrap;
+					line-height: 2.6rem;
 				}
 			}
 		}
@@ -172,6 +176,9 @@ $max-tile-width: 360px;
 			column-gap: 8px;
 			display: flex;
 			align-items: center;
+			margin: 2px 1rem 2px 0;
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 	}
 	&.type-pictures-answers,

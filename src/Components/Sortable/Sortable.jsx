@@ -42,6 +42,62 @@ export class Sortable extends React.Component {
 			});
 		}
 	}
+	// inside class Sortable
+	dragIndex = null;
+	pointerId = null;
+
+	getIndexFromElement = (el) => {
+		const idx = el?.getAttribute?.("data-index");
+		return idx === null ? -1 : Number(idx);
+	};
+
+	handlePointerDown = (index) => (e) => {
+		// Only activate for touch/pen (leave mouse to native DnD)
+		if (e.pointerType === "mouse") return;
+
+		e.preventDefault();
+		e.currentTarget.setPointerCapture(e.pointerId);
+
+		this.pointerId = e.pointerId;
+		this.dragIndex = index;
+
+		const draggingId = this.state.englishItems[index]?.id ?? null;
+		this.setState({
+			draggingId,
+			lastResult: null,
+			rowStatuses: this.state.rowStatuses.map(() => null)
+		});
+	};
+
+	handlePointerMove = (e) => {
+		if (this.pointerId !== e.pointerId) return;
+		if (this.dragIndex === null) return;
+
+		// Find which sortable tile we're currently over
+		const el = document.elementFromPoint(e.clientX, e.clientY);
+		const tile = el?.closest?.("[data-sortable-tile='1']");
+		if (!tile) return;
+
+		const toIndex = this.getIndexFromElement(tile);
+		const fromIndex = this.dragIndex;
+
+		if (toIndex < 0 || toIndex === fromIndex) return;
+
+		const newItems = this.state.englishItems.slice();
+		const [moved] = newItems.splice(fromIndex, 1);
+		newItems.splice(toIndex, 0, moved);
+
+		this.dragIndex = toIndex;
+		this.setState({ englishItems: newItems });
+	};
+
+	handlePointerUp = (e) => {
+		if (this.pointerId !== e.pointerId) return;
+
+		this.pointerId = null;
+		this.dragIndex = null;
+		this.setState({ draggingId: null });
+	};
 
 	getInitialEnglish(config) {
 		if (!config || !config.phrases) return [];
@@ -284,6 +340,8 @@ export class Sortable extends React.Component {
 
 									{/* RIGHT: Sortable English phrase + tick/cross */}
 									<div
+										data-sortable-tile="1"
+										data-index={index}
 										className={
 											`bg-secondary flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 transition ${
 												isDragging
@@ -291,6 +349,8 @@ export class Sortable extends React.Component {
 													: "hover:bg-slate-100"
 											}`
 										}
+
+										/* Desktop HTML5 drag */
 										draggable
 										onDragStart={
 											englishItem
@@ -304,6 +364,12 @@ export class Sortable extends React.Component {
 										}
 										onDragOver={this.handleDragOver}
 										onDragEnd={this.handleDragEnd}
+
+										/* Mobile / touch: pointer-driven reorder */
+										onPointerDown={this.handlePointerDown(index)}
+										onPointerMove={this.handlePointerMove}
+										onPointerUp={this.handlePointerUp}
+										onPointerCancel={this.handlePointerUp}
 									>
 										{/* Handle + text */}
 										<div className="flex items-center gap-2">
@@ -318,9 +384,13 @@ export class Sortable extends React.Component {
 													strokeWidth="2"
 													strokeLinecap="round"
 													strokeLinejoin="round"
-												><path d="M12 2v20" /><path d="m8 18 4 4 4-4" /><path d="m8 6 4-4 4 4" /></svg>
+												>
+													<path d="M12 2v20" />
+													<path d="m8 18 4 4 4-4" />
+													<path d="m8 6 4-4 4 4" />
+												</svg>
 											</span>
-											<span className={``}>
+											<span>
 												{englishItem ? englishItem.english : ""}
 											</span>
 										</div>

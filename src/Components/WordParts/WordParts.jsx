@@ -141,18 +141,55 @@ export class WordParts extends React.PureComponent {
 		const reg = /(\[.*?\])/;
 		for (let i = 0; i < phrases.length; i++) {
 
-			const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
+			// const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
+			const phraseSplit = phrases[i].split(reg);
+
 			const phrase = [];
 			for (let j = 0; j < phraseSplit.length; j++) {
+				const part = phraseSplit[j];
 
-				if (phraseSplit[j][0] === '[') {
-					// span it as a target!
-					const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
+				if (!part) continue;
+
+				if (part[0] === '[') {
+					// target word
+					const cleaned = part.slice(1, -1);
 					nToSolve++;
-					phrase.push(<span className={`target`} onClick={this.handlePartWordClick} key={`${id}-phraseSpan${i}-${j}`}>{cleanedPhraseSplit}</span>);
-				}
-				else if(phraseSplit[j].length){
-					phrase.push(<span onClick={this.handlePartWordError} key={`${id}-phraseSpan${i}-${j}`}>{phraseSplit[j]}</span>);
+					phrase.push(
+						<span
+							className="target"
+							onClick={this.handlePartWordClick}
+							key={`${id}-phraseSpan${i}-${j}`}
+						>
+							{cleaned}
+						</span>
+					);
+				} else {
+					// split normal text into words + spaces
+					const tokens = part.split(/(\s+)/);
+					tokens.forEach((token, k) => {
+						if (!token) return;
+
+						if (token.trim() === "") {
+							// spacing span
+							phrase.push(
+								<span
+									className="word-space"
+									key={`${id}-phraseSpace${i}-${j}-${k}`}
+								>
+									{" "}
+								</span>
+							);
+						} else {
+							phrase.push(
+								<span
+									onClick={this.handlePartWordError}
+									key={`${id}-phraseText${i}-${j}-${k}`}
+								>
+									{token}
+								</span>
+							);
+						}
+					});
 				}
 			}
 
