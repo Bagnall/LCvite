@@ -183,7 +183,7 @@ export class DropDowns extends React.PureComponent {
 			selectIndices.push(selectIndex);
 			nSelects++;
 
-			lastIndex = regex.lastIndex;
+			({ lastIndex } = regex);// .lastIndex;
 		}
 
 		// Trailing text after the last match
@@ -327,7 +327,7 @@ export class DropDowns extends React.PureComponent {
 						cells.push(
 							<TableCell key={`row${i}cell2`}>
 								<AudioClip
-									className="compact"
+									className="super-compact-speaker"
 									id={`row${i}cell2AudioClip`}
 									soundFile={soundFile}
 								/>
@@ -351,7 +351,7 @@ export class DropDowns extends React.PureComponent {
 		} else {
 			// We have HTML content path (not implemented in this cleaned version)
 			if (phrasesHTML) {
-				console.warn("phrasesHTML path not implemented in this version.");
+				console.warn("phrasesHTML path not implemented in this version."); // eslint-disable-line
 			}
 			content = null;
 		}

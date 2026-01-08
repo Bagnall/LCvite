@@ -219,7 +219,7 @@ export class WordParts extends React.PureComponent {
 
 				cells.push(
 					<td key={`row${i}cell2`}>
-						<AudioClip className={`compact`} soundFile={soundFile} />
+						<AudioClip className={`super-compact-speaker`} soundFile={soundFile} />
 					</td>
 				);
 

@@ -71,10 +71,6 @@ html.debug {
 		font-weight: bold;
 	}
 
-	// .help {
-	// 	padding: 1rem;
-	// }
-
 	.hidden-help {
 		opacity: 0;
 		transition: opacity 4s;
@@ -88,31 +84,6 @@ html.debug {
 		display: inline-block;
 		width: 0.5em; /* tweak to match old visual spacing */
 	}
-
-	// table {
-	// 	text-align: left;
-	// 	border-collapse: collapse;
-	// 	background: white;
-	// 	td {
-	// 		border: 1px solid #000000;
-	// 		font-weight: bold;
-	// 		font-size: 0.8rem;
-	// 		padding: 0.1rem;
-	// 	}
-	// 	tbody {
-	// 		border: none;
-	// 		tr {
-	// 			&.spacer {
-	// 				border-left: none;
-	// 				border-right: none;
-	// 				td {
-	// 					border-left: none;
-	// 					border-right: none;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 @keyframes vertical-rotate {
 	0% {

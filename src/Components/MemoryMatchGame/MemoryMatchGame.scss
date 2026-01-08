@@ -36,7 +36,7 @@ $transition-time: $memory-card-transition-time;
 }
 
 .memory-map-container {
-	min-width: 670px;
+	// min-width: 670px;
 	display: grid;
 	grid-template-columns: 1fr 0.1fr;
 	grid-template-rows: auto 1fr;
@@ -52,7 +52,7 @@ $transition-time: $memory-card-transition-time;
 		font-weight: bold;
 	}
 	.cards {
-		padding: 0 0 2rem 1rem;
+		// padding: 0 0 2rem 1rem;
 		max-width: 1000px;
 		margin: 0 auto; // 1rem;
 		perspective: 2000px;
@@ -70,7 +70,7 @@ $transition-time: $memory-card-transition-time;
 	}
 
 	.matches {
-		min-width: 300px;
+		// min-width: 300px;
 		transform-origin: top;
 		grid-row-gap: 0.5rem;
 
@@ -147,11 +147,20 @@ $transition-time: $memory-card-transition-time;
 
 @include respond-above(m) {
 	.memory-map-container {
+		min-width: 670px;
 		.matches {
 			min-width: 280px;
 		}
 		.cards {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+			padding: 0 0 2rem 1rem;
+		}
+	}
+	@media screen and (orientation: landscape) {
+		.memory-map-container {
+			.cards {
+				grid-template-columns: repeat(5, 1fr);
+			}
 		}
 	}
 }
@@ -165,7 +174,7 @@ $transition-time: $memory-card-transition-time;
 			min-height: 760px;
 		}
 		.cards {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(5, 1fr);
 			grid-row-gap: 0.5rem;
 		}
 		.matches {
@@ -179,10 +188,11 @@ $transition-time: $memory-card-transition-time;
 	.memory-map-container {
 		gap: 0.5rem;
 		.cards {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(5, 1fr);
 			grid-row-gap: 0.5rem;
 		}
 		.matches {
+			min-width: 300px;
 			padding: 1.25rem 1rem; // To compensate for the 0.8 scale see below
 			gap: 0.5rem;
 		}
