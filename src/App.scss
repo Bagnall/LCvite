@@ -158,20 +158,32 @@ html {
 			.special-anchor {
 				position: relative;
 				padding-right: 17px;
-				&:before,
-				&:after {
+
+				&::before,
+				&::after {
 					content: "";
 					position: absolute;
 					right: 0;
 					top: 2px;
+					pointer-events: none;
 				}
-				&:before {
-					mask: url("images/icons/info-icon.svg");
-					background-color: blue;
-					height: 16px;
+
+				&::before {
 					width: 16px;
+					height: 16px;
+					background-color: blue;
+
+					-webkit-mask-image: url("/images/icons/info-icon.svg");
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-position: center;
+					-webkit-mask-size: contain;
+
+					mask-image: url("/images/icons/info-icon.svg");
+					mask-repeat: no-repeat;
+					mask-position: center;
+					mask-size: contain;
 				}
-				&:after {
+				&::after {
 					height: 17px;
 					width: 17px;
 					border-bottom: 1px solid blue;
@@ -533,7 +545,7 @@ hr {
 @include respond-above(m) {
 	$header-height: 8rem;
 	#content {
-		padding: 1rem 0;
+		padding: 1rem 2rem;
 		width: 100vw;
 		#hero {
 			// h1 {

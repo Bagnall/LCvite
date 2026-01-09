@@ -38,7 +38,11 @@ export class ConcatenatedPlaylist extends React.Component {
 		const { sources, pauseSeconds = 0.5 } = this.props;
 
 		if (!sources || !sources.length) {
-			this.setState({ audioUrl: null, error: null, loading: false });
+			this.setState({
+				audioUrl: null,
+				error: null,
+				loading: false,
+			});
 			return;
 		}
 
@@ -47,11 +51,17 @@ export class ConcatenatedPlaylist extends React.Component {
 			URL.revokeObjectURL(this.state.audioUrl);
 		}
 
-		this.setState({ loading: true, error: null });
+		this.setState({
+			error: null,
+			loading: true,
+		});
 
 		try {
 			const { audioUrl } = await concatAudioFiles(sources, pauseSeconds);
-			this.setState({ audioUrl, loading: false });
+			this.setState({
+				audioUrl,
+				loading: false
+			});
 		} catch (err) {
 			// eslint-disable-next-line no-console
 			console.error('Failed to build concatenated audio', err);
@@ -63,7 +73,11 @@ export class ConcatenatedPlaylist extends React.Component {
 	}
 
 	render() {
-		const { audioUrl, loading, error } = this.state;
+		const {
+			audioUrl,
+			error,
+			loading,
+		} = this.state;
 
 		return (
 			<div className="concatenated-playlist">

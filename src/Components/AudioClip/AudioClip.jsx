@@ -69,7 +69,8 @@ export class AudioClip extends React.PureComponent {
 		this.initialiseProgress(soundFileAudio);
 		soundFileAudio.onended = () => {
 			this.setState({
-				status: 'stopped'
+				progress: 0,
+				status: 'stopped',
 			});
 		};
 		soundFileAudio.play();
@@ -235,7 +236,6 @@ class CircularAudioProgress extends AudioClip {
 		const radius = (size - strokeWidth) / 2;
 		const circumference = 2 * Math.PI * radius;
 		const offset = circumference * (1 - (progress / duration || 0));
-
 		if (this.circleRef.current) {
 			this.circleRef.current.style.strokeDashoffset = offset;
 		}

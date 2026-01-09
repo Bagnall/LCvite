@@ -83,7 +83,7 @@ export const concatAudioFiles = async (urls, pauseSeconds = 0.5) => {
 	}
 
 	// Assume all same sampleRate – usually true if from same source
-	const {sampleRate} = buffers[0];
+	const [{sampleRate}] = buffers;
 	const numChannels = Math.max(...buffers.map(b => b.numberOfChannels));
 	const pauseSamples = Math.round(pauseSeconds * sampleRate);
 
@@ -128,7 +128,7 @@ export const concatAudioFiles = async (urls, pauseSeconds = 0.5) => {
 
 	return {
 		audioUrl: url,
-		sampleRate,
 		durationSeconds: mergedBuffer.length / sampleRate,
+		sampleRate,
 	};
 };
