@@ -16,7 +16,7 @@ export class Sortable extends React.Component {
 
 		this.state = {
 			draggingId: null,
-			englishItems: this.getInitialEnglish(props.config),
+			lang2Items: this.getInitialLang2(props.config),
 			lastResult: null,
 			rowStatuses: new Array(
 				props.config && props.config.phrases
@@ -36,7 +36,7 @@ export class Sortable extends React.Component {
 
 			this.setState({
 				draggingId: null,
-				englishItems: this.getInitialEnglish(this.props.config),
+				lang2Items: this.getInitialLang2(this.props.config),
 				lastResult: null,
 				rowStatuses: new Array(phrasesLen).fill(null),
 			});
@@ -61,7 +61,7 @@ export class Sortable extends React.Component {
 		this.pointerId = e.pointerId;
 		this.dragIndex = index;
 
-		const draggingId = this.state.englishItems[index]?.id ?? null;
+		const draggingId = this.state.lang2Items[index]?.id ?? null;
 		this.setState({
 			draggingId,
 			lastResult: null,
@@ -83,12 +83,12 @@ export class Sortable extends React.Component {
 
 		if (toIndex < 0 || toIndex === fromIndex) return;
 
-		const newItems = this.state.englishItems.slice();
+		const newItems = this.state.lang2Items.slice();
 		const [moved] = newItems.splice(fromIndex, 1);
 		newItems.splice(toIndex, 0, moved);
 
 		this.dragIndex = toIndex;
-		this.setState({ englishItems: newItems });
+		this.setState({ lang2Items: newItems });
 	};
 
 	handlePointerUp = (e) => {
@@ -99,20 +99,20 @@ export class Sortable extends React.Component {
 		this.setState({ draggingId: null });
 	};
 
-	getInitialEnglish(config) {
+	getInitialLang2(config) {
 		if (!config || !config.phrases) return [];
 
-		// phrases: [ [foreignLanguage, english, audio], ... ]
-		const englishItems = config.phrases.map((phrase, index) => {
+		// phrases: [ [foreignLanguage, lang2, audio], ... ]
+		const lang2Items = config.phrases.map((phrase, index) => {
 			if (Array.isArray(phrase)) {
 				return {
-					english: phrase[1],
+					lang2: phrase[1],
 					id: String(index), // used for correctness
 				};
 			}
 			// fallback if you move to object form
 			return {
-				english: phrase.english,
+				lang2: phrase.lang2,
 				id: String(index),
 			};
 		});
@@ -122,10 +122,10 @@ export class Sortable extends React.Component {
 			config.shuffleOnLoad === undefined ? true : !!config.shuffleOnLoad;
 
 		if (shouldShuffle) {
-			this.shuffleArrayInPlace(englishItems);
+			this.shuffleArrayInPlace(lang2Items);
 		}
 
-		return englishItems;
+		return lang2Items;
 	}
 
 	shuffleArrayInPlace(arr) {
@@ -135,7 +135,7 @@ export class Sortable extends React.Component {
 		}
 	}
 
-	/* ----------------------------- Drag & drop (English only) ----------------------------- */
+	/* ----------------------------- Drag & drop (lang2 only) ----------------------------- */
 
 	handleDragStart = (id) => (event) => {
 		event.dataTransfer.effectAllowed = "move";
@@ -151,10 +151,10 @@ export class Sortable extends React.Component {
 	handleDragEnter = (targetId) => (event) => {
 		event.preventDefault();
 
-		const { draggingId, englishItems } = this.state;
+		const { draggingId, lang2Items } = this.state;
 		if (!draggingId || draggingId === targetId) return;
 
-		const newItems = englishItems.slice();
+		const newItems = lang2Items.slice();
 		const fromIndex = newItems.findIndex((item) => item.id === draggingId);
 		const toIndex = newItems.findIndex((item) => item.id === targetId);
 
@@ -163,7 +163,7 @@ export class Sortable extends React.Component {
 		const [movedItem] = newItems.splice(fromIndex, 1);
 		newItems.splice(toIndex, 0, movedItem);
 
-		this.setState({ englishItems: newItems });
+		this.setState({ lang2Items: newItems });
 	};
 
 	handleDragOver = (event) => {
@@ -184,34 +184,34 @@ export class Sortable extends React.Component {
 
 		this.setState({
 			draggingId: null,
-			englishItems: this.getInitialEnglish(config),
+			lang2Items: this.getInitialLang2(config),
 			lastResult: null,
 			rowStatuses: new Array(phrasesLen).fill(null)
 		});
 	};
 
-	shuffleEnglish = () => {
+	shuffleLang2 = () => {
 		const { config } = this.props;
 		if (!config || !config.phrases) return;
 
-		const englishItems = config.phrases.map((phrase, index) => {
+		const lang2Items = config.phrases.map((phrase, index) => {
 			if (Array.isArray(phrase)) {
 				return {
-					english: phrase[1],
+					lang2: phrase[1],
 					id: String(index),
 				};
 			}
 			return {
-				english: phrase.english,
+				lang2: phrase.lang2,
 				id: String(index),
 			};
 		});
 
-		this.shuffleArrayInPlace(englishItems);
+		this.shuffleArrayInPlace(lang2Items);
 
 		this.setState({
 			draggingId: null,
-			englishItems,
+			lang2Items,
 			lastResult: null,
 			rowStatuses: new Array(config.phrases.length).fill(null)
 		});
@@ -221,10 +221,10 @@ export class Sortable extends React.Component {
 		const { config } = this.props;
 		if (!config || !config.phrases) return;
 
-		const { englishItems } = this.state;
+		const { lang2Items } = this.state;
 		const expectedIds = config.phrases.map((_, index) => String(index));
 
-		const rowStatuses = englishItems.map((item, index) =>
+		const rowStatuses = lang2Items.map((item, index) =>
 			item.id === expectedIds[index] ? "correct" : "incorrect"
 		);
 
@@ -265,7 +265,7 @@ export class Sortable extends React.Component {
 
 	render() {
 		const { config } = this.props;
-		const { englishItems, draggingId, rowStatuses } = this.state;
+		const { lang2Items, draggingId, rowStatuses } = this.state;
 
 		if (!config || !config.phrases) {
 			return <div>No configuration provided for Sortable.</div>;
@@ -284,6 +284,14 @@ export class Sortable extends React.Component {
 			informationText,
 			informationTextHTML
 		} = config;
+
+		let allLang1Blank = true;
+		phrases.forEach((phrase, index) => {
+			console.log("phrase[0]", phrase[0], phrase[0] === "");
+			if (phrase[0] !== "") allLang1Blank = false;
+		});
+
+		console.log("allLang1Blank", allLang1Blank);
 
 		return (
 			<Card className="w-full sortable pt-4">
@@ -307,24 +315,24 @@ export class Sortable extends React.Component {
 							let audio = null;
 
 							if (Array.isArray(phrase)) {
-								// [foreignLanguage, english, audio]
+								// [foreignLanguage, lang2, audio]
 								[foreignLanguage, , audio] = phrase;
 							} else {
 								foreignLanguage = phrase.original;
 								({ audio } = phrase);
 							}
 
-							const englishItem = englishItems[index];
+							const lang2Item = lang2Items[index];
 							const isDragging =
-								englishItem &&
-								englishItem.id === draggingId;
+								lang2Item &&
+								lang2Item.id === draggingId;
 
 							const status = rowStatuses[index]; // "correct" | "incorrect" | null
 
 							return (
 								<div
 									key={index}
-									className="grid grid-cols-[auto_minmax(0,1fr)_minmax(0,1.4fr)_auto] gap-3 items-center py-1"
+									className={`grid ${allLang1Blank ? "grid-cols-[auto_minmax(0,0.5fr)_auto]" : "grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)_auto]" } gap-3 items-center py-1`}
 								>
 									{/* LEFT: Audio */}
 									<div className="flex items-center justify-center pr-2">
@@ -333,12 +341,12 @@ export class Sortable extends React.Component {
 										)}
 									</div>
 
-									{/* MIDDLE: French phrase */}
-									<div className="flex items-center text-sm">
+									{/* MIDDLE: lang1 phrase */}
+									{allLang1Blank ? null : <div className="flex items-center text-sm">
 										<span>{foreignLanguage}</span>
-									</div>
+									</div>}
 
-									{/* RIGHT: Sortable English phrase + tick/cross */}
+									{/* RIGHT: Sortable lang2 phrase + tick/cross */}
 									<div
 										data-sortable-tile="1"
 										data-index={index}
@@ -353,13 +361,13 @@ export class Sortable extends React.Component {
 										/* Desktop HTML5 drag */
 										draggable
 										onDragStart={
-											englishItem
-												? this.handleDragStart(englishItem.id)
+											lang2Item
+												? this.handleDragStart(lang2Item.id)
 												: undefined
 										}
 										onDragEnter={
-											englishItem
-												? this.handleDragEnter(englishItem.id)
+											lang2Item
+												? this.handleDragEnter(lang2Item.id)
 												: undefined
 										}
 										onDragOver={this.handleDragOver}
@@ -391,7 +399,7 @@ export class Sortable extends React.Component {
 												</svg>
 											</span>
 											<span>
-												{englishItem ? englishItem.english : ""}
+												{lang2Item ? lang2Item.lang2 : ""}
 											</span>
 										</div>
 									</div>
@@ -433,7 +441,7 @@ export class Sortable extends React.Component {
 						<IconButton theme={`reset`} onClick={this.reset}>
 							Reset
 						</IconButton>
-						{/* <IconButton theme={`shuffle`} onClick={this.shuffleEnglish}>
+						{/* <IconButton theme={`shuffle`} onClick={this.shuffleLang2}>
 							Shuffle
 						</IconButton> */}
 					</div>
