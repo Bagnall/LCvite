@@ -347,72 +347,6 @@ hr {
 		text-align: center;
 	}
 }
-
-.ar-AE {
-	#content {
-		#hero {
-			background-image: url(/images/uae.jpg);
-			background-repeat: no-repeat;
-			background-position: center bottom;
-			background-size: cover;
-		}
-	}
-}
-.fr-FR {
-	#content {
-		#hero {
-			background-image: url(/images/paris.jpg);
-			background-repeat: no-repeat;
-			background-position: center bottom;
-			background-size: cover;
-		}
-		#radio2 {
-			span:nth-of-type(1) {
-				min-width: 30px;
-			}
-			li {
-				min-width: 0;
-			}
-		}
-	}
-}
-.de-DE {
-	#content {
-		#hero {
-			background-image: url(/images/berlin.jpg);
-			background-repeat: no-repeat;
-			background-position: center bottom;
-			background-size: cover;
-		}
-	}
-}
-.es-US {
-	#content {
-		#hero {
-			background-image: url(/images/barcelona.jpg);
-			background-repeat: no-repeat;
-			background-position: center top;
-			background-size: auto;
-		}
-	}
-}
-.uk-UA {
-	#content {
-		#hero {
-			background-image: url(/images/kyiv.jpg);
-			background-repeat: no-repeat;
-			background-position: center top;
-			background-size: cover;
-		}
-	}
-}
-// #info-icon {
-// 	// Reference SVG picked up by 'use' elsewhere
-// 	left: -9999px;
-// 	position: absolute;
-// 	width: 0;
-// 	height: 0;
-// }
 #content {
 	width: 100vw;
 	max-width: 1400px;
@@ -420,11 +354,6 @@ hr {
 	padding: 1rem 0;
 	margin: auto;
 	margin-top: $main-menu-height;
-	// h1 {
-	// 	text-align: center;
-	// }
-	// h2 {
-	// }
 	ul {
 		margin: 2rem 0;
 		padding-left: 1.2rem;
@@ -470,24 +399,33 @@ hr {
 
 	#hero {
 		align-items: center;
-		background-image: url(/images/paris.jpg);
+		background-image: url(/images/fr_banner.svg);
 		background-position: center bottom;
 		background-repeat: no-repeat;
-		background-size: 50%;
-		// border-radius: 12px;
-		// box-shadow: 2px 2px 8px darkgray;
+		background-size: cover;
 		display: flex;
 		flex-direction: column;
 		height: 282px;
-		justify-content: center;
+		justify-content: space-evenly;
 		margin-bottom: 0.5rem;
 		max-width: 100%;
 		overflow-y: hidden;
 		padding: 1rem;
-		h1,
-		h2 {
-			color: white;
-			text-shadow: 0 0 3px black;
+
+		h1 {
+			margin: 0;
+			background: rgba(255, 255, 255, 0.6);
+			color: rgb(0, 0, 161);
+			text-align: center;
+			font-size: 1.5rem;
+			text-shadow:
+				0 0 3px white,
+				0 0 3px white,
+				0 0 3px white,
+				0 0 3px white;
+			box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+			padding: 0.2rem 0.4rem;
+			border-radius: 8px;
 		}
 	}
 
@@ -501,6 +439,67 @@ hr {
 			text-decoration: initial;
 			display: block;
 			pointer-events: none; // Doesn't work :-(
+		}
+	}
+}
+
+.ar-AE {
+	#content {
+		#hero {
+			background-image: url(/images/uae.jpg);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;
+		}
+	}
+}
+.fr-FR {
+	#content {
+		#hero {
+			// background-repeat: no-repeat;
+			background-position: center center;
+			// background-size: cover;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		#radio2 {
+			span:nth-of-type(1) {
+				min-width: 30px;
+			}
+			li {
+				min-width: 0;
+			}
+		}
+	}
+}
+.de-DE {
+	#content {
+		#hero {
+			background-image: url(/images/berlin.jpg);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;
+		}
+	}
+}
+.es-US {
+	#content {
+		#hero {
+			background-image: url(/images/barcelona.jpg);
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: auto;
+		}
+	}
+}
+.uk-UA {
+	#content {
+		#hero {
+			background-image: url(/images/kyiv.jpg);
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
 		}
 	}
 }
@@ -540,29 +539,28 @@ hr {
 	.container {
 		padding: 2rem 3rem;
 	}
+	#content {
+		#hero {
+			h1 {
+				font-size: 2.5rem;
+			}
+		}
+	}
 }
 
 @include respond-above(m) {
 	$header-height: 8rem;
 	#content {
-		padding: 1rem 2rem;
-		width: 100vw;
 		#hero {
-			// h1 {
-			// 	font-size: 3rem;
-			// 	line-height: 3rem;
-			// }
-			// h2 {
-			// 	font-size: 1.6rem;
-			// 	margin: 0 0 0.5rem;
-			// }
+			h1 {
+				font-size: 3rem;
+			}
 		}
 	}
 
 	.content {
 		text-align: justify;
 		margin: 0 auto;
-		// font-size: 1.2rem;
 		li {
 			.video {
 				margin-left: 40px;
@@ -573,17 +571,12 @@ hr {
 		}
 	}
 
-	// h3 {
-	// 	margin: 1.8em 0 0.4em;
-	// }
-
 	p {
 		line-height: 1.6em;
 	}
 	.spinning-globe {
 		width: 256px;
 		height: 256px;
-		// display: block;
 		position: relative;
 		img {
 			width: 100%;
@@ -592,12 +585,10 @@ hr {
 		&::after {
 			// Crap attempt to anti-aliase
 			content: "";
-			// display: block;
 			width: 102%;
 			height: 102%;
 			position: absolute;
-			border: 4px solid #e3e2fd;
-			// background: red;
+			border: 4px solid $background-colour; //white; // #e3e2fd;
 			z-index: 12;
 			border-radius: 50%;
 			top: -1%;
@@ -610,6 +601,11 @@ hr {
 
 @include respond-above(xl) {
 	#content {
+		#hero {
+			h1 {
+				font-size: 3rem;
+			}
+		}
 		padding: 1rem 2rem;
 		width: calc(100vw - 4rem);
 	}

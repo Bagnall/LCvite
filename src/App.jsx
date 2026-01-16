@@ -708,16 +708,8 @@ export default class App extends React.Component {
 								</div>
 
 								<div id="hero">
-									<div className="hero bg-base-200  w-full">
-										<div className="hero-content text-center">
-											<div className="w-full">
-												<h1 className="text-5xl font-bold">{title}</h1>
-												<h1 className="text-5xl font-bold">
-													{subTitle}
-												</h1>
-											</div>
-										</div>
-									</div>
+									<h1>{title}</h1>
+									<h1>{subTitle}</h1>
 								</div>
 
 								<LearningObjectMenu

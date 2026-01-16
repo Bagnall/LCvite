@@ -286,12 +286,12 @@ export class Sortable extends React.Component {
 		} = config;
 
 		let allLang1Blank = true;
-		phrases.forEach((phrase, index) => {
-			console.log("phrase[0]", phrase[0], phrase[0] === "");
+		phrases.forEach((phrase) => {
+			// console.log("phrase[0]", phrase[0], phrase[0] === "");
 			if (phrase[0] !== "") allLang1Blank = false;
 		});
 
-		console.log("allLang1Blank", allLang1Blank);
+		// console.log("allLang1Blank", allLang1Blank);
 
 		return (
 			<Card className="w-full sortable pt-4">
