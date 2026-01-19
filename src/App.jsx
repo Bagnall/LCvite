@@ -679,6 +679,11 @@ export default class App extends React.Component {
 
 					{languageCode !== undefined ? (
 						<>
+
+							<div id="hero">
+								<h1>{title}</h1>
+								<h1>{subTitle}</h1>
+							</div>
 							<div id="content" key="content">
 								<div id="fontSamples">
 									<h1>Heading 1 Feijoa Bold</h1>
@@ -707,11 +712,6 @@ export default class App extends React.Component {
 									/>
 								</div>
 
-								<div id="hero">
-									<h1>{title}</h1>
-									<h1>{subTitle}</h1>
-								</div>
-
 								<LearningObjectMenu
 									currentLearningObject={currentLearningObject}
 									languageCode={languageCode}
@@ -726,6 +726,7 @@ export default class App extends React.Component {
 									>
 										<h2>Introduction</h2>
 									</a>
+									<div id='imagePlaceholder'/>
 									{intro ? (
 										<p className={`intro`}>{intro}</p>
 									) : null}

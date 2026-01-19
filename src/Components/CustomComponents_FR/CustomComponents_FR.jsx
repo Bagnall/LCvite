@@ -134,7 +134,7 @@ export class LO1Demystify1 extends PureComponent {
 					key={`${id}Panel`}
 				>
 					<h3>1. Nasal vowels: "on / om"</h3>
-					<img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} />
+					{/* <img src={resolveAsset(`images/nose-pinch.png`)} title={`Speak while pinching your nose`} /> */}
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
 						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)

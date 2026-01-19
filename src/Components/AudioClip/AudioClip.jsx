@@ -234,7 +234,8 @@ class CircularAudioProgress extends AudioClip {
 		const size = compactDimension;
 
 		const radius = (size - strokeWidth) / 2;
-		const circumference = 2 * Math.PI * radius;
+		// console.log("radius", radius);
+		const circumference = Math.PI * size; // 2 * Math.PI * radius;
 		const offset = circumference * (1 - (progress / duration || 0));
 		if (this.circleRef.current) {
 			this.circleRef.current.style.strokeDashoffset = offset;
@@ -243,7 +244,6 @@ class CircularAudioProgress extends AudioClip {
 
 	render = () => {
 		const strokeWidth = 2;
-		// const colour = '#000';
 		const bgColour = '#f0f0f0ff'; // Needs to be about this so it works in dark mode and light mode.
 
 		const inline = this.props;
@@ -253,7 +253,8 @@ class CircularAudioProgress extends AudioClip {
 		compactDimension = parseInt(compactDimension);
 		const size = compactDimension;
 		const radius = (size - strokeWidth) / 2;
-		const circumference = 2 * Math.PI * radius;
+
+		const circumference = Math.PI * size;
 		const { status = 'stopped' } = this.state;
 		if (isNaN(size)){
 			return null;
@@ -265,10 +266,6 @@ class CircularAudioProgress extends AudioClip {
 					onPlay={(e) => this.notePlaying(e, false)}
 					ref={this.audioRef}
 					title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
-					style={{
-						backgroundPosition: `center center`,
-						backgroundSize: `${compactDimension / 2}px`,
-					}}
 				>
 					<svg
 						fill="none"
@@ -322,7 +319,8 @@ class CircularAudioProgressAnimatedSpeaker extends CircularAudioProgress {
 		compactDimension = parseInt(compactDimension);
 		const size = compactDimension;
 		const radius = (size - strokeWidth) / 2;
-		const circumference = 2 * Math.PI * radius;
+
+		const circumference = Math.PI * size;
 		const { status = 'stopped' } = this.state;
 		if (isNaN(size)){
 			return null;
@@ -334,10 +332,6 @@ class CircularAudioProgressAnimatedSpeaker extends CircularAudioProgress {
 					onPlay={(e) => this.notePlaying(e, false)}
 					ref={this.audioRef}
 					title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
-					style={{
-						backgroundPosition: `center center`,
-						backgroundSize: `${compactDimension / 2}px`,
-					}}
 				>
 					<svg width={size} height={size}>
 						{/* Background ring */}

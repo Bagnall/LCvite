@@ -116,8 +116,8 @@ $circle-duration: 0.2s;
 
 .circular-audio-progress-speaker,
 .circular-audio-progress {
-	width: var(--compact-dimension);
-	height: var(--compact-dimension);
+	width: var(--compact-dimension + 2);
+	height: var(--compact-dimension + 2);
 	border-radius: calc(var(--compact-dimension) / 2);
 	cursor: pointer;
 	svg {

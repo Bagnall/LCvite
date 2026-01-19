@@ -319,10 +319,18 @@ export class Blanks extends React.Component {
 				this.movingPiece.style.left = `${relMouseX}px`;
 				this.movingPiece.style.top = `${relMouseY}px`;
 
-				if (this.inLimits().success)
+				if (this.inLimits().success) {
 					this.movingPiece.classList.add('highlight');
-				else
+					this.movingPiece.classList.add('success');
+				}
+				else if (this.inLimits().overTarget){
+					this.movingPiece.classList.add('highlight');
+					this.movingPiece.classList.remove('success');
+				}
+				else {
 					this.movingPiece.classList.remove('highlight');
+					this.movingPiece.classList.remove('success');
+				}
 			}
 		}
 	};
@@ -350,6 +358,7 @@ export class Blanks extends React.Component {
 
 			let targetLeft, targetTop, targetSpan;
 			const inLimitsResult = this.inLimits();
+			this.movingPiece.classList.remove('highlight');
 			if (inLimitsResult.success) {
 				({ targetLeft, targetTop, targetSpan } = inLimitsResult);
 				// The eagle has landed
@@ -365,7 +374,6 @@ export class Blanks extends React.Component {
 				this.movingPiece.classList.remove("dragging");
 				this.movingPiece.classList.add("placed");
 				this.movingPiece.classList.remove("draggable");
-				this.movingPiece.classList.remove('highlight');
 				// console.log(10, "Removing movingPiece");
 				this.movingPiece = undefined;
 				// }
@@ -446,6 +454,7 @@ export class Blanks extends React.Component {
 			id,
 			margin,
 		} = this.state;
+		// console.log("==========inLimits==========");
 
 		const cl = this.movingPiece.classList;
 		// console.log("id", id);
@@ -464,12 +473,39 @@ export class Blanks extends React.Component {
 			// console.log("pieceLeft", pieceLeft, "targetLeft", targetLeft, "pieceTop", pieceTop, "targetTop", targetTop, "pieceRight", pieceRight, "targetRight", targetRight, "pieceBottom", pieceBottom, "targetBottom", targetBottom, "margin", margin);
 			if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
 				return {
+					overTarget: true,
 					success: true,
 					"targetLeft": targetLeft,
 					"targetSpan": targetSpan,
 					"targetTop": targetTop,
 				};
 			}
+		}
+		// console.log(`#${id} .target.${cl[0]}`);
+		const targetWords = document.querySelectorAll(`#${id} .target.word`);
+		// const targetSpans = document.querySelectorAll(`.target.${cl[0]} span`);
+		// console.log("margin", margin);
+		const pieceRect = this.movingPiece.getBoundingClientRect();
+		const { left: pieceLeft, top: pieceTop, right: pieceRight, bottom: pieceBottom } = pieceRect;
+		// console.log("piece", pieceLeft, pieceTop, pieceRight, pieceBottom);
+		if (targetWords) {
+			for (let i = 0; i < targetWords.length; i++){ // [...targetWords].forEach((targetWord) => {
+				const targetWord = targetWords[i];
+
+				const targetRect = targetWord.getBoundingClientRect();
+				// console.log("targetRect", targetRect);
+				const { left:targetLeft, top:targetTop, right:targetRight, bottom: targetBottom} = targetRect;
+				// console.log("target", targetLeft, targetTop, targetRight, targetBottom);
+
+				// console.log((pieceLeft >= targetLeft - margin), (pieceRight <= targetRight + margin), (pieceTop >= targetTop - margin), (pieceBottom <= targetBottom + margin));
+
+				if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
+					// console.log("Boom");
+					return {
+						overTarget: true,
+					};
+				}
+			};
 		}
 		return { success: false };
 	};
@@ -537,13 +573,7 @@ export class Blanks extends React.Component {
 		// phrases, table or questions/answers?
 		switch (blanksType) {
 			case 'phrases': {
-				// const reg = /\]| /;
-				// const reg = /(?:(?<=\])|(?<!\[))\s+(?=\[|[^\]])/;
-				// words = []; // render is called multiple times in dev env, so don't add to it twice!
-				// wordTiles = []; // render is called multiple times in dev env, so don't add to it twice!
-				// let wordTileIndex = 0;
 				for (let i = 0; i < phrases.length; i++) {
-					// const phraseSplit = phrases[i].split(reg);
 					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
 					const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
@@ -567,10 +597,10 @@ export class Blanks extends React.Component {
 						soundFiles.push(soundFile);
 					}
 					phraseList.push(
-						<li key={`phrase${i}`}>{audio ? <AudioClip
+						<li key={`phrase${i}`}><div className='phrase'>{audio ? <AudioClip
 							className={`super-compact-speaker inset`}
 							soundFile={soundFile}
-						/> : null}<div className='phrase'>{phrase}</div> </li>
+						/> : null}{phrase}</div> </li>
 					);
 				}
 				wordTiles = shuffleArray(wordTiles);
