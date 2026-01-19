@@ -398,15 +398,19 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
 					"blanksType": "phrases",
-					"phrases": [
-						"Coucou [mon] amour ! Ça [va] aujourd'hui ?",
-						"Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
-						"Ça va !"
-					],
-					"audio": [
-						"sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3",
-						"sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3",
-						"sounds/fr/Ça va !.mp3"
+					"items": [
+						{
+							"text": "Coucou [mon] amour ! Ça [va] aujourd'hui ?",
+							"audio": "sounds/fr/Coucou mon amour ! Ça va aujourd'hui.mp3"
+						},
+						{
+							"text": "Oui, ma [chérie] ! Ça va [très] bien ! Et [toi] ?",
+							"audio": "sounds/fr/Oui, ma chérie ! Ça va très bien ! Et toi.mp3"
+						},
+						{
+							"text": "Ça va !",
+							"audio": "sounds/fr/Ça va !.mp3"
+						}
 					],
 					"titleText": "2. Meeting and greeting gap fillers"
 				}
@@ -420,15 +424,19 @@
 					"id": "phrases3",
 					"informationText": "Practise reconstructing short informal and formal conversations using the right words and register.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonsoir Monsieur Galipot ! [Comment] ça va ?",
-						"Bonsoir Madame Bernard, ça va très bien, merci. Et [vous] ?",
-						"Ah pas mal [merci] !"
-					],
-					"audio": [
-						"sounds/fr/Bonsoir Monsieur Galipot ! comment ça va.mp3",
-						"sounds/fr/Bonsoir Madame Bernard, ça va très bien, merci. Et vous.mp3",
-						"sounds/fr/Ah pas mal merci !.mp3"
+					"items": [
+						{
+							"text": "Bonsoir Monsieur Galipot ! [Comment] ça va ?",
+							"audio": "sounds/fr/Bonsoir Monsieur Galipot ! comment ça va.mp3"
+						},
+						{
+							"text": "Bonsoir Madame Bernard, ça va très bien, merci. Et [vous] ?",
+							"audio": "sounds/fr/Bonsoir Madame Bernard, ça va très bien, merci. Et vous.mp3"
+						},
+						{
+							"text": "Ah pas mal [merci] !",
+							"audio": "sounds/fr/Ah pas mal merci !.mp3"
+						}
 					],
 					"titleText": "3. Fill in the gaps: greetings and introductions"
 				}
@@ -443,21 +451,31 @@
 					"informationText": "Practise reconstructing short informal and formal conversations using the right words and register.",
 					"instructionsTextHTMLXXX": "<a name='nested' class='special-anchor-target'>nested target, how are we doing?</a>",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
-						"Bonjour Madame ! Je m' [appelle] Annie.",
-						"Et [moi], je m'appelle David.",
-						"D'accord. Très bien !",
-						"Merci Madame ! Bonne journée !",
-						"Au [revoir] les enfants !  Bonne journée !"
-					],
-					"audio": [
-						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
-						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
-						"sounds/fr/Et moi, je m'appelle David.mp3",
-						"sounds/fr/D'accord. Très bien !.mp3",
-						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
-						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+					"items": [
+						{
+							"text": "Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+							"audio": "sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3"
+						},
+						{
+							"text": "Bonjour Madame ! Je m' [appelle] Annie.",
+							"audio": "sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3"
+						},
+						{
+							"text": "Et [moi], je m'appelle David.",
+							"audio": "sounds/fr/Et moi, je m'appelle David.mp3"
+						},
+						{
+							"text": "D'accord. Très bien !",
+							"audio": "sounds/fr/D'accord. Très bien !.mp3"
+						},
+						{
+							"text": "Merci Madame ! Bonne journée !",
+							"audio": "sounds/fr/Merci Madame ! Bonne journée !.mp3"
+						},
+						{
+							"text": "Au [revoir] les enfants !  Bonne journée !",
+							"audio": "sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+						}
 					],
 					"titleText": "4. Fill in the gaps: greetings and introductions"
 				}

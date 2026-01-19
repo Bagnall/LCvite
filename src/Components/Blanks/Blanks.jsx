@@ -44,10 +44,11 @@ export class Blanks extends React.Component {
 		} = props;
 		const {
 			answers,
-			audio,
+			// audio,
 			blanksType,
 			id,
-			phrases,
+			items,
+			// phrases,
 			pictures,
 			questions,
 		} = config;
@@ -60,8 +61,10 @@ export class Blanks extends React.Component {
 		switch (blanksType) {
 			case 'phrases': {
 				let wordTileIndex = 0;
-				for (let i = 0; i < phrases.length; i++) {
-					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
+				for (let i = 0; i < items.length; i++) {
+					const item = items[i];
+					// const phrase = item.text;
+					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
 					const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
@@ -79,17 +82,26 @@ export class Blanks extends React.Component {
 							words.push(cleanedPhraseSplit);
 							nToPlace++;
 						}
+						if (item.audio) {
+							const soundFile = resolveAsset(`${item.audio}`);
+							phraseList.push(
+								<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+									className={`compact inset`}
+									soundFile={soundFile}
+								/></li>
+							);
+						}
 					}
 
-					if (audio) {
-						const soundFile = resolveAsset(`${audio[i]}`);
-						phraseList.push(
-							<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-								className={`compact inset`}
-								soundFile={soundFile}
-							/></li>
-						);
-					}
+					// if (audio) {
+					// 	const soundFile = resolveAsset(`${audio[i]}`);
+					// 	phraseList.push(
+					// 		<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+					// 			className={`compact inset`}
+					// 			soundFile={soundFile}
+					// 		/></li>
+					// 	);
+					// }
 				}
 				wordTiles = shuffleArray(wordTiles);
 				break;
@@ -471,7 +483,9 @@ export class Blanks extends React.Component {
 			// console.log("pieceWidth", pieceWidth, "targetWidth", targetWidth);
 
 			// console.log("pieceLeft", pieceLeft, "targetLeft", targetLeft, "pieceTop", pieceTop, "targetTop", targetTop, "pieceRight", pieceRight, "targetRight", targetRight, "pieceBottom", pieceBottom, "targetBottom", targetBottom, "margin", margin);
-			if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
+			const pieceMid = pieceLeft + (pieceRight - pieceLeft) / 2;
+			if ((pieceMid >= targetLeft) && (pieceMid <= targetRight) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
+			// if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
 				return {
 					overTarget: true,
 					success: true,
@@ -498,8 +512,9 @@ export class Blanks extends React.Component {
 				// console.log("target", targetLeft, targetTop, targetRight, targetBottom);
 
 				// console.log((pieceLeft >= targetLeft - margin), (pieceRight <= targetRight + margin), (pieceTop >= targetTop - margin), (pieceBottom <= targetBottom + margin));
-
-				if ((pieceLeft >= targetLeft - margin) && (pieceRight <= targetRight + margin) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
+				// Do it my middle of piece as some tiles/targets can be longer than other. See LO8 Ex5 for an example.
+				const pieceMid = pieceLeft + (pieceRight - pieceLeft) / 2;
+				if ((pieceMid >= targetLeft) && (pieceMid <= targetRight) && pieceTop >= targetTop - margin && pieceBottom <= targetBottom + margin) {
 					// console.log("Boom");
 					return {
 						overTarget: true,
@@ -535,7 +550,7 @@ export class Blanks extends React.Component {
 	render = () => {
 		const {
 			answers,
-			audio,
+			// audio,
 			blanksType = 'phrases',
 			cheatText,
 			complete = false,
@@ -543,10 +558,11 @@ export class Blanks extends React.Component {
 			header = [],
 			htmlContent,
 			id = '',
+			items,
 			listenDescriptionText,
 			nPlaced = 0,
 			nToPlace,
-			phrases = [],
+			// phrases = [],
 			pictures,
 			questions,
 			showHints,
@@ -573,9 +589,10 @@ export class Blanks extends React.Component {
 		// phrases, table or questions/answers?
 		switch (blanksType) {
 			case 'phrases': {
-				for (let i = 0; i < phrases.length; i++) {
-					const phraseSplit = phrases[i].match(/\[[^\]]+\]|\S+/g);
+				for (let i = 0; i < items.length; i++) {
+					const item = items[i];
 					const phrase = [];
+					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
 							const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
@@ -592,12 +609,12 @@ export class Blanks extends React.Component {
 						}
 					}
 					let soundFile;
-					if (audio) {
-						soundFile = resolveAsset(`${audio[i]}`);
+					if (item.audio) {
+						soundFile = resolveAsset(`${item.audio}`);
 						soundFiles.push(soundFile);
 					}
 					phraseList.push(
-						<li key={`phrase${i}`}><div className='phrase'>{audio ? <AudioClip
+						<li key={`phrase${i}`}><div className='phrase'>{item.audio ? <AudioClip
 							className={`super-compact-speaker inset`}
 							soundFile={soundFile}
 						/> : null}{phrase}</div> </li>

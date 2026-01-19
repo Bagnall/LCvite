@@ -733,19 +733,27 @@
 					"id": "phrases3",
 					"instructionsTextHTML": "<p>Listen to Numbers in Use (Millions and More)</p><p>You'll hear 5 sentences. Click on the icon to listen, then select the correct number from the list. Drag and drop the icon into the sentence and complete the structure.</p>",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes. The European Union has [448] million inhabitants.",
-						"Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra. Scientists say that Mars' climate, about [three billion] years ago, was very similar to Earth's.",
-						"Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad. A woman from Medellín won [108.000.000] pesos in the Christmas lottery.",
-						"Se necesitan [trece millones doscientos noventa euros] para restaurar 8 monumentos importantes en Cancún. €13.000.290 are needed to restore 8 important monuments in Cancún.",
-						"En 2013, la población de la Tierra superó los siete mil millones de personas. In 2013, the world's population passed [seven billion] people."
-					],
-					"audio": [
-						"sounds/sp/La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes.mp3",
-						"sounds/sp/Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra.mp3",
-						"sounds/sp/Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad.mp3",
-						"sounds/sp/Se necesitan trece millones doscientos noventa euros para restaurar 8 monumentos importantes en Cancún.mp3",
-						"sounds/sp/En 2013, la población de la Tierra superó los siete mil millones de personas.mp3"
+					"items": [
+						{
+							"text": "La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes. The European Union has [448] million inhabitants.",
+							"audio": "sounds/sp/La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes.mp3"
+						},
+						{
+							"text": "Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra. Scientists say that Mars' climate, about [three billion] years ago, was very similar to Earth's.",
+							"audio": "sounds/sp/Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra.mp3"
+						},
+						{
+							"text": "Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad. A woman from Medellín won [108.000.000] pesos in the Christmas lottery.",
+							"audio": "sounds/sp/Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad.mp3"
+						},
+						{
+							"text": "Se necesitan [trece millones doscientos noventa euros] para restaurar 8 monumentos importantes en Cancún. €13.000.290 are needed to restore 8 important monuments in Cancún.",
+							"audio": "sounds/sp/Se necesitan trece millones doscientos noventa euros para restaurar 8 monumentos importantes en Cancún.mp3"
+						},
+						{
+							"text": "En 2013, la población de la Tierra superó los siete mil millones de personas. In 2013, the world's population passed [seven billion] people.",
+							"audio": "sounds/sp/En 2013, la población de la Tierra superó los siete mil millones de personas.mp3"
+						}
 					],
 					"titleText": "3. Complete the Sentences (0–1,000,000)"
 				}

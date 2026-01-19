@@ -353,31 +353,51 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
 					"blanksType": "phrases",
-					"phrases": [
-						"Âllo, oui ?",
-						"Bonjour, c'est bien le 05 24 07 19 55 ?",
-						"[Oui, c'est bien ça.]",
-						"Dominique est là, s'il vous plaît ?",
-						"[Oui, c'est Dominique à l'appareil.]",
-						"Dominique, tu veux prendre un verre avec moi ce soir ?",
-						"[Oui, je veux bien. À quelle heure ?]",
-						"À huit heures ?",
-						"[Oui, d'accord. Tu veux aller où ?]",
-						"Au nouveau café au centre-ville ?",
-						"[Oui, très bien ! J'aime beaucoup le nouveau café.]"
-					],
-					"audio": [
-						"sounds/fr/Âllo, oui (male).mp3",
-						"sounds/fr/Bonjour, c'est bien le 05 24 07 19 55.mp3",
-						"sounds/fr/Oui, c'est bien ça (male).mp3",
-						"sounds/fr/Dominique est là, s'il vous plaît.mp3",
-						"sounds/fr/Oui, c'est Dominique à l'appareil.mp3",
-						"sounds/fr/Dominique, tu veux prendre un verre avec moi ce soir.mp3",
-						"sounds/fr/Oui, je veux bien. À quelle heure (male).mp3",
-						"sounds/fr/À huit heures.mp3",
-						"sounds/fr/Oui, d'accord. Tu veux aller où.mp3",
-						"sounds/fr/Au nouveau café au centre-ville.mp3",
-						"sounds/fr/Oui, très bien ! J'aime beaucoup le nouveau café.mp3"
+					"items": [
+						{
+							"text": "Âllo, oui ?",
+							"audio": "sounds/fr/Âllo, oui (male).mp3"
+						},
+						{
+							"text": "Bonjour, c'est bien le 05 24 07 19 55 ?",
+							"audio": "sounds/fr/Bonjour, c'est bien le 05 24 07 19 55.mp3"
+						},
+						{
+							"text": "[Oui, c'est bien ça.]",
+							"audio": "sounds/fr/Oui, c'est bien ça (male).mp3"
+						},
+						{
+							"text": "Dominique est là, s'il vous plaît ?",
+							"audio": "sounds/fr/Dominique est là, s'il vous plaît.mp3"
+						},
+						{
+							"text": "[Oui, c'est Dominique à l'appareil.]",
+							"audio": "sounds/fr/Oui, c'est Dominique à l'appareil.mp3"
+						},
+						{
+							"text": "Dominique, tu veux prendre un verre avec moi ce soir ?",
+							"audio": "sounds/fr/Dominique, tu veux prendre un verre avec moi ce soir.mp3"
+						},
+						{
+							"text": "[Oui, je veux bien. À quelle heure ?]",
+							"audio": "sounds/fr/Oui, je veux bien. À quelle heure (male).mp3"
+						},
+						{
+							"text": "À huit heures ?",
+							"audio": "sounds/fr/À huit heures.mp3"
+						},
+						{
+							"text": "[Oui, d'accord. Tu veux aller où ?]",
+							"audio": "sounds/fr/Oui, d'accord. Tu veux aller où.mp3"
+						},
+						{
+							"text": "Au nouveau café au centre-ville ?",
+							"audio": "sounds/fr/Au nouveau café au centre-ville.mp3"
+						},
+						{
+							"text": "[Oui, très bien ! J'aime beaucoup le nouveau café.]",
+							"audio": "sounds/fr/Oui, très bien ! J'aime beaucoup le nouveau café.mp3"
+						}
 					],
 					"titleText": "3. Answer the questions"
 				}

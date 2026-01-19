@@ -325,14 +325,28 @@
 					"id": "phrases1",
 					"instructionsText": "Drag the words in the box to fill the gaps in Martin's description of a typical day from when he wakes up until he goes to bed.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Je me réveille tous les matins à six heures et demie et je [me lève] tout de suite.",
-						"Je [prends] une douche et je [m'habille], puis je [descends] à la cuisine pour prendre mon petit déjeuner.",
-						"Vers sept heures et demie, je [quitte] la maison. [J'arrive] au travail à huit heures.",
-						"À midi, je [fais ]une pause-déjeuner. Je [reprends] le travail à une heure et quart, et je [travaille] jusqu'à cinq heures.",
-						"Je [n'habite] pas très loin de mon travail, donc une demi-heure plus tard, je [suis] chez moi.",
-						"Je [me détends] un peu avant de préparer le dîner. Je [dîne] avec mon colocataire vers sept heures.",
-						"Et ensuite, je [regarde] la télé. Je [me couche] vers onze heures."
+					"items": [
+						{
+							"text": "Je me réveille tous les matins à six heures et demie et je [me lève] tout de suite."
+						},
+						{
+							"text": "Je [prends] une douche et je [m'habille], puis je [descends] à la cuisine pour prendre mon petit déjeuner."
+						},
+						{
+							"text": "Vers sept heures et demie, je [quitte] la maison. [J'arrive] au travail à huit heures."
+						},
+						{
+							"text": "À midi, je [fais ]une pause-déjeuner. Je [reprends] le travail à une heure et quart, et je [travaille] jusqu'à cinq heures."
+						},
+						{
+							"text": "Je [n'habite] pas très loin de mon travail, donc une demi-heure plus tard, je [suis] chez moi."
+						},
+						{
+							"text": "Je [me détends] un peu avant de préparer le dîner. Je [dîne] avec mon colocataire vers sept heures."
+						},
+						{
+							"text": "Et ensuite, je [regarde] la télé. Je [me couche] vers onze heures."
+						}
 					],
 					"titleText": "2 A typical day"
 				}

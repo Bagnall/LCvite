@@ -229,13 +229,10 @@ class CircularAudioProgress extends AudioClip {
 
 	updateCircleOffset = () => {
 		const { progress, duration } = this.state;
-		const { strokeWidth = 2 } = this.props;
 		const compactDimension = 27;
 		const size = compactDimension;
 
-		const radius = (size - strokeWidth) / 2;
-		// console.log("radius", radius);
-		const circumference = Math.PI * size; // 2 * Math.PI * radius;
+		const circumference = Math.PI * size;
 		const offset = circumference * (1 - (progress / duration || 0));
 		if (this.circleRef.current) {
 			this.circleRef.current.style.strokeDashoffset = offset;

@@ -1826,21 +1826,31 @@
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
-						"Bonjour Madame ! Je m' [appelle] Annie.",
-						"Et [moi], je m'appelle David.",
-						"D'accord. Très bien !",
-						"Merci Madame ! Bonne journée !",
-						"Au [revoir] les enfants !  Bonne journée !"
-					],
-					"audio": [
-						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
-						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
-						"sounds/fr/Et moi, je m'appelle David.mp3",
-						"sounds/fr/D'accord. Très bien !.mp3",
-						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
-						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+					"items": [
+						{
+							"text": "Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+							"audio": "sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3"
+						},
+						{
+							"text": "Bonjour Madame ! Je m' [appelle] Annie.",
+							"audio": "sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3"
+						},
+						{
+							"text": "Et [moi], je m'appelle David.",
+							"audio": "sounds/fr/Et moi, je m'appelle David.mp3"
+						},
+						{
+							"text": "D'accord. Très bien !",
+							"audio": "sounds/fr/D'accord. Très bien !.mp3"
+						},
+						{
+							"text": "Merci Madame ! Bonne journée !",
+							"audio": "sounds/fr/Merci Madame ! Bonne journée !.mp3"
+						},
+						{
+							"text": "Au [revoir] les enfants !  Bonne journée !",
+							"audio": "sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+						}
 					],
 					"titleText": "Blanks blanksType='phrases'"
 				}

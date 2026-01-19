@@ -90,6 +90,10 @@ $common-left-margin: 20px;
 	}
 	width: 100%;
 
+	.section {
+		clear: both;
+	}
+
 	.accordion-article {
 		// border-bottom: 1px solid oklch(0.922 0 0);
 		overflow: hidden;

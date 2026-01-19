@@ -294,31 +294,51 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
 					"blanksType": "phrases",
-					"phrases": [
-						"Bonjour ! Vous [désirez] ? ",
-						"Je [voudrais] un café-crème, s'il vous plaît.",
-						"Et pour [moi] un chocolat chaud, s'il vous plaît.",
-						"Très bien ! Vous [voulez] quelque chose à [manger] ?",
-						"Oui ! Qu'est-ce que vous avez [comme] sandwiches ?",
-						"Aujourd'hui, nous [avons] des sandwiches au fromage, au jambon et au saumon.",
-						"Pour moi un sandwich au [saumon], s'il vous plaît. ",
-						"Et pour [vous] Madame ?",
-						"Je voudrais un [croque-monsieur] avec de la salade verte s'il vous plaît.",
-						"Très bien ! C'est [tout] ?",
-						"Oui, [c'est] tout merci ! "
-					],
-					"audio": [
-						"sounds/fr/Bonjour ! Vous désirez (m).mp3",
-						"sounds/fr/Je voudrais un café-crème, s'il vous plaît.mp3",
-						"sounds/fr/Et pour moi un chocolat chaud, s'il vous plaît.mp3",
-						"sounds/fr/Très bien ! Vous voulez quelque chose à manger.mp3",
-						"sounds/fr/Oui ! Qu'est-ce que vous avez comme sandwiches.mp3",
-						"sounds/fr/Aujourd'hui, nous avons des sandwiches au fromage, au jambon et au saumon.mp3",
-						"sounds/fr/Pour moi un sandwich au saumon, s'il vous plaît.mp3",
-						"sounds/fr/Et pour vous Madame.mp3",
-						"sounds/fr/Je voudrais un croque-monsieur avec de la salade verte s'il vous plaît.mp3",
-						"sounds/fr/Très bien ! C'est tout.mp3",
-						"sounds/fr/Oui, c'est tout merci !.mp3"
+					"items": [
+						{
+							"text": "Bonjour ! Vous [désirez] ? ",
+							"audio": "sounds/fr/Bonjour ! Vous désirez (m).mp3"
+						},
+						{
+							"text": "Je [voudrais] un café-crème, s'il vous plaît.",
+							"audio": "sounds/fr/Je voudrais un café-crème, s'il vous plaît.mp3"
+						},
+						{
+							"text": "Et pour [moi] un chocolat chaud, s'il vous plaît.",
+							"audio": "sounds/fr/Et pour moi un chocolat chaud, s'il vous plaît.mp3"
+						},
+						{
+							"text": "Très bien ! Vous [voulez] quelque chose à [manger] ?",
+							"audio": "sounds/fr/Très bien ! Vous voulez quelque chose à manger.mp3"
+						},
+						{
+							"text": "Oui ! Qu'est-ce que vous avez [comme] sandwiches ?",
+							"audio": "sounds/fr/Oui ! Qu'est-ce que vous avez comme sandwiches.mp3"
+						},
+						{
+							"text": "Aujourd'hui, nous [avons] des sandwiches au fromage, au jambon et au saumon.",
+							"audio": "sounds/fr/Aujourd'hui, nous avons des sandwiches au fromage, au jambon et au saumon.mp3"
+						},
+						{
+							"text": "Pour moi un sandwich au [saumon], s'il vous plaît. ",
+							"audio": "sounds/fr/Pour moi un sandwich au saumon, s'il vous plaît.mp3"
+						},
+						{
+							"text": "Et pour [vous] Madame ?",
+							"audio": "sounds/fr/Et pour vous Madame.mp3"
+						},
+						{
+							"text": "Je voudrais un [croque-monsieur] avec de la salade verte s'il vous plaît.",
+							"audio": "sounds/fr/Je voudrais un croque-monsieur avec de la salade verte s'il vous plaît.mp3"
+						},
+						{
+							"text": "Très bien ! C'est [tout] ?",
+							"audio": "sounds/fr/Très bien ! C'est tout.mp3"
+						},
+						{
+							"text": "Oui, [c'est] tout merci ! ",
+							"audio": "sounds/fr/Oui, c'est tout merci !.mp3"
+						}
 					],
 					"titleText": "1. Ordering food and drink."
 				}

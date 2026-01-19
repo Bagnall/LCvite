@@ -389,27 +389,43 @@
 					"id": "phrases1",
 					"instructionsText": "Drag the words in the box to fill in the gaps in the conversation below.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Qu'est-ce que tu fais [comme] études ?",
-						"Je suis étudiante [en] politique.",
-						"Tu fais une [licence] ?",
-						"Non, je fais un [master].",
-						"Tu es en [quelle] année ?",
-						"Je suis en première [année].",
-						"Je fais une fac [d']anthropologie. Je suis en troisième année [de] licence.",
-						"Et ta [copine] ? Elle étudie l' [anthropologie] aussi ?",
-						"Non, elle est [doctorante]. Elle fait un doctorat en histoire [médiévale]. Elle écrit sa [thèse]. Elle est très [occupée]. Elle passe des heures à la [bibliothèque] !"
-					],
-					"audio": [
-						"sounds/fr/Qu'est-ce que tu fais comme études (m).mp3",
-						"sounds/fr/Je suis étudiante en politique.mp3",
-						"sounds/fr/Tu fais une licence.mp3",
-						"sounds/fr/Non, je fais un master.mp3",
-						"sounds/fr/Tu es en quelle année.mp3",
-						"sounds/fr/Je suis en première année.mp3",
-						"sounds/fr/Je fais une fac d'anthropologie. Je suis en troisième année de licence.mp3",
-						"sounds/fr/Et ta copine Elle étudie l'anthropologie aussi.mp3",
-						"sounds/fr/Non, elle est doctorante. Elle fait un doctorat en histoire médiévale. Elle écrit sa thèse. Elle est très occupée. Elle passe des heures à la bibliothèque !.mp3"
+					"items": [
+						{
+							"text": "Qu'est-ce que tu fais [comme] études ?",
+							"audio": "sounds/fr/Qu'est-ce que tu fais comme études (m).mp3"
+						},
+						{
+							"text": "Je suis étudiante [en] politique.",
+							"audio": "sounds/fr/Je suis étudiante en politique.mp3"
+						},
+						{
+							"text": "Tu fais une [licence] ?",
+							"audio": "sounds/fr/Tu fais une licence.mp3"
+						},
+						{
+							"text": "Non, je fais un [master].",
+							"audio": "sounds/fr/Non, je fais un master.mp3"
+						},
+						{
+							"text": "Tu es en [quelle] année ?",
+							"audio": "sounds/fr/Tu es en quelle année.mp3"
+						},
+						{
+							"text": "Je suis en première [année].",
+							"audio": "sounds/fr/Je suis en première année.mp3"
+						},
+						{
+							"text": "Je fais une fac [d']anthropologie. Je suis en troisième année [de] licence.",
+							"audio": "sounds/fr/Je fais une fac d'anthropologie. Je suis en troisième année de licence.mp3"
+						},
+						{
+							"text": "Et ta [copine] ? Elle étudie l' [anthropologie] aussi ?",
+							"audio": "sounds/fr/Et ta copine Elle étudie l'anthropologie aussi.mp3"
+						},
+						{
+							"text": "Non, elle est [doctorante]. Elle fait un doctorat en histoire [médiévale]. Elle écrit sa [thèse]. Elle est très [occupée]. Elle passe des heures à la [bibliothèque] !",
+							"audio": "sounds/fr/Non, elle est doctorante. Elle fait un doctorat en histoire médiévale. Elle écrit sa thèse. Elle est très occupée. Elle passe des heures à la bibliothèque !.mp3"
+						}
 					],
 					"titleText": "1 Chatting about your studies"
 				}
