@@ -3,12 +3,6 @@ import {
 	AudioClip,
 	IconButton,
 	Info,
-	// Table,
-	// TableBody,
-	// td,
-	// TableHead,
-	// TableHeader,
-	// TableRow
 } from '..';
 import { Button } from "@/components/ui/button";
 import DOMPurify from "dompurify";
@@ -124,25 +118,23 @@ export class WordParts extends React.PureComponent {
 			informationTextHTML,
 		} = config;
 		const {
-			audio,
 			cheatText,
 			complete = false,
 			failCount = 0,
 			htmlContent,
 			id = [],
+			items,
 			nPlaced = 0,
-			phrases,
-			// showHintsText,
 		} = this.state;
 
 		const phraseList = [];
 		let nToSolve = 0;
 
 		const reg = /(\[.*?\])/;
-		for (let i = 0; i < phrases.length; i++) {
+		for (let i = 0; i < items.length; i++) {
 
 			// const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
-			const phraseSplit = phrases[i].split(reg);
+			const phraseSplit = items[i].text.split(reg);
 
 			const phrase = [];
 			for (let j = 0; j < phraseSplit.length; j++) {
@@ -199,8 +191,8 @@ export class WordParts extends React.PureComponent {
 		}
 
 		const rows = [];
-		for (let i = 0; i < phrases.length; i++){
-			const phrase = phrases[i];
+		for (let i = 0; i < items.length; i++){
+			const phrase = items[i].text;
 			const cells = [];
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
@@ -215,7 +207,8 @@ export class WordParts extends React.PureComponent {
 						{phraseList[i]}
 					</td>
 				);
-				const soundFile = resolveAsset(`${audio[i]}`);
+				// const soundFile = resolveAsset(`${audio[i]}`);
+				const soundFile = resolveAsset(`${items[i].audio}`);
 
 				cells.push(
 					<td key={`row${i}cell2`}>
