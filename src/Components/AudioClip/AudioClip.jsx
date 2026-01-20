@@ -1,5 +1,8 @@
 import './AudioClip.scss';
 import React from 'react';
+import { CircularAudioProgressAnimatedSpeakerDisplay } from '.';
+
+
 export class AudioClip extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -302,88 +305,26 @@ class CircularAudioProgress extends AudioClip {
 }
 
 class CircularAudioProgressAnimatedSpeaker extends CircularAudioProgress {
-
 	render = () => {
-		const strokeWidth = 2;
-		const arcStrokeWidth = 1.2;
-		// const colour = '#000';
-		const bgColour = '#ddd';
+		const { inline } = this.props;
+		const { status = 'stopped', progress = 0, duration = 0 } = this.state;
 
-		const inline = this.props;
-
-		const root = getComputedStyle(document.documentElement);
-		let compactDimension = root.getPropertyValue('--compact-dimension').trim();
-		compactDimension = parseInt(compactDimension);
-		const size = compactDimension;
-		const radius = (size - strokeWidth) / 2;
-
-		const circumference = Math.PI * size;
-		const { status = 'stopped' } = this.state;
-		if (isNaN(size)){
-			return null;
-		} else {
-			return (
-				<span
-					className={`audio-container ${inline ? 'inline' : ''} super-compact-speaker circular-audio-progress-speaker ${status}`}
-					onClick={this.handleClick}
-					onPlay={(e) => this.notePlaying(e, false)}
-					ref={this.audioRef}
-					title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
-				>
-					<svg width={size} height={size}>
-						{/* Background ring */}
-						<circle
-							cx={size / 2}
-							cy={size / 2}
-							r={radius}
-							stroke={bgColour}
-							strokeWidth={strokeWidth}
-							fill="none"
-						/>
-						{/* Progress ring */}
-						<circle
-							ref={this.circleRef}
-							cx={size / 2}
-							cy={size / 2}
-							r={radius}
-							stroke="currentColor"
-							strokeWidth={strokeWidth}
-							fill="none"
-							strokeDasharray={circumference}
-							strokeDashoffset={circumference}
-							transform={`rotate(-90 ${size / 2} ${size / 2})`}
-							style={{ transition: 'stroke-dashoffset 0.2s linear' }}
-						/>
-						{/* Speaker */}
-						<path
-							fill="currentColor"
-							d="m 13.43611,6.201 a 0.705,0.705 0 0 0 -1.203,-0.498 L 8.8491185,9.086 a 1.4,1.4 0 0 1 -0.997,0.413 H 5.4361182 a 1,1 0 0 0 -1,1 v 6 a 1,1 0 0 0 1,1 h 2.4160003 a 1.4,1.4 0 0 1 0.997,0.413 l 3.3829915,3.384 a 0.705,0.705 0 0 0 1.204,-0.499 z"
-							id="path2" />
-						{/* Arcs */}
-						<path
-							className={`speaker-arc speaker-arc1`}
-							id="arc1"
-							fill="none"
-							stroke="currentColor"
-							strokeLinecap='round'
-							strokeWidth={arcStrokeWidth}
-							vectorEffect="non-scaling-stroke"
-							d="m 15.19902,17.870116 c 1.839235,-0.04527 3.312505,-1.987363 3.314457,-4.369171 -0.0012,-2.382542 -1.474655,-4.3257717 -3.314457,-4.371061"
-						/>
-						<path
-							className={`speaker-arc speaker-arc2`}
-							id="arc2"
-							fill="none"
-							stroke="currentColor"
-							strokeLinecap='round'
-							strokeWidth={arcStrokeWidth}
-							vectorEffect="non-scaling-stroke"
-							d="m 15.19902,17.870116 c 1.839235,-0.04527 3.312505,-1.987363 3.314457,-4.369171 -0.0012,-2.382542 -1.474655,-4.3257717 -3.314457,-4.371061"
-						/>
-					</svg>
-				</span>
-			);
-		}
+		return (
+			<span
+				// Keep these wrappers if you still rely on ref/onPlay here.
+				// If you don't need them, you can drop the wrapper and pass everything straight through.
+				onPlay={(e) => this.notePlaying(e, false)}
+				ref={this.audioRef}
+			>
+				<CircularAudioProgressAnimatedSpeakerDisplay
+					inline={inline}
+					status={status}
+					progress={progress}
+					duration={duration}
+					handleClick={this.handleClick}
+				/>
+			</span>
+		);
 	};
 }
 
