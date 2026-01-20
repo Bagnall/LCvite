@@ -67,21 +67,31 @@
 		"instructionsText": "Elige la opción correcta.",
 		"showHintsText": "Show hints when moving",
 		"cheatText": "Show answers",
-		"phrases": [
-			"Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
-			"Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",
-			"Señor Benítez, es un placer conocerlo. — (formal answer) [*Igualmente, ¿cómo se llama usted?]",
-			"Buenas noches, ¿puedo saber sus nombres, por favor? [*Yo soy Pedro Martínez y él es el señor González.|Hola, Jairo y Pedro.|Hasta mañana.]",
-			"Hola, soy Fabiola. ¿Y tú? [Ella es Mónica.|*¡Qué gusto! Yo soy Beatriz.|Somos colombianas.]",
-			"Buenas tardes chicas. Esta es mi amiga Caterina. [¿Puedes repetir tu nombre?|*Mucho gusto en conocerte.|Hasta la vista.]"
-		],
-		"audio": [
-			"sounds/sp/je suis marocaine.mp3",
-			"sounds/sp/je suis mexicaine.mp3",
-			"sounds/sp/je suis canadien.mp3",
-			"sounds/sp/je suis française.mp3",
-			"sounds/sp/je suis chinois.mp3",
-			"sounds/sp/je suis sénégalaise.mp3"
+		"items": [
+			{
+				"text": "Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
+				"audio": "sounds/sp/je suis marocaine.mp3"
+			},
+			{
+				"text": "Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",
+				"audio": "sounds/sp/je suis mexicaine.mp3"
+			},
+			{
+				"text": "Señor Benítez, es un placer conocerlo. — (formal answer) [*Igualmente, ¿cómo se llama usted?]",
+				"audio": "sounds/sp/je suis canadien.mp3"
+			},
+			{
+				"text": "Buenas noches, ¿puedo saber sus nombres, por favor? [*Yo soy Pedro Martínez y él es el señor González.|Hola, Jairo y Pedro.|Hasta mañana.]",
+				"audio": "sounds/sp/je suis française.mp3"
+			},
+			{
+				"text": "Hola, soy Fabiola. ¿Y tú? [Ella es Mónica.|*¡Qué gusto! Yo soy Beatriz.|Somos colombianas.]",
+				"audio": "sounds/sp/je suis chinois.mp3"
+			},
+			{
+				"text": "Buenas tardes chicas. Esta es mi amiga Caterina. [¿Puedes repetir tu nombre?|*Mucho gusto en conocerte.|Hasta la vista.]",
+				"audio": "sounds/sp/je suis sénégalaise.mp3"
+			}
 		],
 		"titleText": "Actividad 1 — Completa con la respuesta correcta"
 	},
@@ -92,22 +102,33 @@
 		"instructionsText": "Ordena las palabras para formar frases correctas.",
 		"showHintsText": "Show hints when moving",
 		"cheatText": "Show answers",
-		"phrases": [
-			"Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
-			"Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",
-			"Señor Benítez, es un placer conocerlo. — (formal answer) [*Igualmente, ¿cómo se llama usted?]",
-			"Buenas noches, ¿puedo saber sus nombres, por favor? [*Yo soy Pedro Martínez y él es el señor González.|Hola, Jairo y Pedro.|Hasta mañana.]",
-			"Hola, soy Fabiola. ¿Y tú? [Ella es Mónica.|*¡Qué gusto! Yo soy Beatriz.|Somos colombianas.]",
-			"Buenas tardes chicas. Esta es mi amiga Caterina. [¿Puedes repetir tu nombre?|*Mucho gusto en conocerte.|Hasta la vista.]"
+		"items": [
+			{
+				"text": "Hola, me llamo Manuel. ¿Cómo te llamas? [Qué tal. Me llamas Carlos.|Hola, nos llama Martín.|*Soy Carlos, mucho gusto.]",
+				"audio": "sounds/sp/je suis marocaine.mp3"
+			},
+			{
+				"text": "Buenos días señora. ¿Cómo se llama usted? [Se llama Ana María.|*Soy la señora Montoya. María Montoya.|Te llamáis María.]",
+				"audio": "sounds/sp/je suis mexicaine.mp3"
+			},
+			{
+				"text": "Señor Benítez, es un placer conocerlo. — (formal answer) [*Igualmente, ¿cómo se llama usted?]",
+				"audio": "sounds/sp/je suis canadien.mp3"
+			},
+			{
+				"text": "Buenas noches, ¿puedo saber sus nombres, por favor? [*Yo soy Pedro Martínez y él es el señor González.|Hola, Jairo y Pedro.|Hasta mañana.]",
+				"audio": "sounds/sp/je suis française.mp3"
+			},
+			{
+				"text": "Hola, soy Fabiola. ¿Y tú? [Ella es Mónica.|*¡Qué gusto! Yo soy Beatriz.|Somos colombianas.]",
+				"audio": "sounds/sp/je suis chinois.mp3"
+			},
+			{
+				"text": "Buenas tardes chicas. Esta es mi amiga Caterina. [¿Puedes repetir tu nombre?|*Mucho gusto en conocerte.|Hasta la vista.]",
+				"audio": "sounds/sp/je suis sénégalaise.mp3"
+			}
 		],
-		"audio": [
-			"sounds/sp/je suis marocaine.mp3",
-			"sounds/sp/je suis mexicaine.mp3",
-			"sounds/sp/je suis canadien.mp3",
-			"sounds/sp/je suis française.mp3",
-			"sounds/sp/je suis chinois.mp3",
-			"sounds/sp/je suis sénégalaise.mp3"
-		],
+		"audio": [],
 		"titleText": "Actividad 2 — Ordena y responde / Reorder & Answer"
 	}
 }

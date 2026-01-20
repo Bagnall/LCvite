@@ -351,21 +351,31 @@
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je [*voudrais|voudrait|voudriez|voudrions|voudraient] un chocolat chaud.",
-						"Ma mère [voudrais|*voudrait|voudriez|voudrions|voudraient] un thé vert.",
-						"Nous [voudrais|voudrait|voudriez|*voudrions|voudraient] dîner au restaurant ce soir.",
-						"Les enfants [voudrais|voudrait|voudriez|voudrions|*voudraient] quelque chose à manger.",
-						"Caroline et moi [voudrais|voudrait|voudriez|*voudrions|voudraient] quelque chose à boire.",
-						"Amélie et Laurent [voudrais|voudrait|voudriez|voudrions|*voudraient] une pizza avec une salade verte."
-					],
-					"audio": [
-						"sounds/fr/Je voudrais un chocolat chaud.mp3",
-						"sounds/fr/Ma mère voudrait un thé vert.mp3",
-						"sounds/fr/Nous voudrions dîner au restaurant ce soir.mp3",
-						"sounds/fr/Les enfants voudraient quelque chose à manger.mp3",
-						"sounds/fr/Caroline et moi voudrions quelque chose à boire.mp3",
-						"sounds/fr/Amélie et Laurent voudraient une pizza avec une salade verte.mp3"
+					"items": [
+						{
+							"text": "Je [*voudrais|voudrait|voudriez|voudrions|voudraient] un chocolat chaud.",
+							"audio": "sounds/fr/Je voudrais un chocolat chaud.mp3"
+						},
+						{
+							"text": "Ma mère [voudrais|*voudrait|voudriez|voudrions|voudraient] un thé vert.",
+							"audio": "sounds/fr/Ma mère voudrait un thé vert.mp3"
+						},
+						{
+							"text": "Nous [voudrais|voudrait|voudriez|*voudrions|voudraient] dîner au restaurant ce soir.",
+							"audio": "sounds/fr/Nous voudrions dîner au restaurant ce soir.mp3"
+						},
+						{
+							"text": "Les enfants [voudrais|voudrait|voudriez|voudrions|*voudraient] quelque chose à manger.",
+							"audio": "sounds/fr/Les enfants voudraient quelque chose à manger.mp3"
+						},
+						{
+							"text": "Caroline et moi [voudrais|voudrait|voudriez|*voudrions|voudraient] quelque chose à boire.",
+							"audio": "sounds/fr/Caroline et moi voudrions quelque chose à boire.mp3"
+						},
+						{
+							"text": "Amélie et Laurent [voudrais|voudrait|voudriez|voudrions|*voudraient] une pizza avec une salade verte.",
+							"audio": "sounds/fr/Amélie et Laurent voudraient une pizza avec une salade verte.mp3"
+						}
 					],
 					"titleText": "2. Practise the verb forms"
 				}
@@ -378,23 +388,35 @@
 					"instructionsText": "Select the correct form of the verb to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Qu'est-ce que tu [*prends|prend|prenez|prenons|prennent] ?",
-						"Vous [prends|prend|*prenez|prenons|prennent] un café ?",
-						"Pauline [prends|*prend|prenez|prenons|prennent] un croque-monsieur.",
-						"David et moi [prends|prend|prenez|*prenons|prennent] une glace au chocolat.",
-						"Mon copain [prends|*prend|prenez|prenons|prennent] un sandwich au fromage.",
-						"Je [*prends|prend|prenez|prenons|prennent] un verre de vin blanc.",
-						"Mes enfants [prends|prend|prenez|prenons|*prennent] toujours des frites avec leur pizza."
-					],
-					"audio": [
-						"sounds/fr/Qu'est-ce que tu prends.mp3",
-						"sounds/fr/Vous prenez un café.mp3",
-						"sounds/fr/Pauline prend un croque-monsieur.mp3",
-						"sounds/fr/David et moi prenons une glace au chocolat.mp3",
-						"sounds/fr/Mon copain prend un sandwich au fromage.mp3",
-						"sounds/fr/Je prends un verre de vin blanc.mp3",
-						"sounds/fr/Mes enfants prennent toujours des frites avec leur pizza.mp3"
+					"items": [
+						{
+							"text": "Qu'est-ce que tu [*prends|prend|prenez|prenons|prennent] ?",
+							"audio": "sounds/fr/Qu'est-ce que tu prends.mp3"
+						},
+						{
+							"text": "Vous [prends|prend|*prenez|prenons|prennent] un café ?",
+							"audio": "sounds/fr/Vous prenez un café.mp3"
+						},
+						{
+							"text": "Pauline [prends|*prend|prenez|prenons|prennent] un croque-monsieur.",
+							"audio": "sounds/fr/Pauline prend un croque-monsieur.mp3"
+						},
+						{
+							"text": "David et moi [prends|prend|prenez|*prenons|prennent] une glace au chocolat.",
+							"audio": "sounds/fr/David et moi prenons une glace au chocolat.mp3"
+						},
+						{
+							"text": "Mon copain [prends|*prend|prenez|prenons|prennent] un sandwich au fromage.",
+							"audio": "sounds/fr/Mon copain prend un sandwich au fromage.mp3"
+						},
+						{
+							"text": "Je [*prends|prend|prenez|prenons|prennent] un verre de vin blanc.",
+							"audio": "sounds/fr/Je prends un verre de vin blanc.mp3"
+						},
+						{
+							"text": "Mes enfants [prends|prend|prenez|prenons|*prennent] toujours des frites avec leur pizza.",
+							"audio": "sounds/fr/Mes enfants prennent toujours des frites avec leur pizza.mp3"
+						}
 					],
 					"titleText": "3. More verb practice"
 				}
@@ -407,23 +429,35 @@
 					"instructionsTextHTML": "Fill in the gaps with <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je voudrais un thé [*au|à la|à l'|aux] citron.",
-						"Alex voudrait un sandwich [*au|à la|à l'|aux] poulet. ",
-						"Pour moi un sandwich [*au|à la|à l'|aux] jambon et [au|*à la|à l'|aux] tomate.",
-						"Je voudrais une pizza [*au|à la|à l'|aux] fromage et [au|à la|à l'|*aux] champignons.",
-						"J'aime la sauce [au|à la|*à l'|aux] orange.",
-						"Tu prends une glace [au|*à la|à l'|aux] vanille, ou [au|*à la|à l'|aux] fraise ?",
-						"Je prends une glace [*au|à la|à l'|aux] chocolat."
-					],
-					"audio": [
-						"sounds/fr/Je voudrais un thé au citron.mp3",
-						"sounds/fr/Alex voudrait un sandwich au poulet.mp3",
-						"sounds/fr/Pour moi un sandwich au jambon et à la tomate.mp3",
-						"sounds/fr/Je voudrais une pizza au fromage et aux champignons.mp3",
-						"sounds/fr/J'aime la sauce à l'orange.mp3",
-						"sounds/fr/Tu prends une glace à la vanille, ou à la fraise.mp3",
-						"sounds/fr/Je prends une glace au chocolat.mp3"
+					"items": [
+						{
+							"text": "Je voudrais un thé [*au|à la|à l'|aux] citron.",
+							"audio": "sounds/fr/Je voudrais un thé au citron.mp3"
+						},
+						{
+							"text": "Alex voudrait un sandwich [*au|à la|à l'|aux] poulet. ",
+							"audio": "sounds/fr/Alex voudrait un sandwich au poulet.mp3"
+						},
+						{
+							"text": "Pour moi un sandwich [*au|à la|à l'|aux] jambon et [au|*à la|à l'|aux] tomate.",
+							"audio": "sounds/fr/Pour moi un sandwich au jambon et à la tomate.mp3"
+						},
+						{
+							"text": "Je voudrais une pizza [*au|à la|à l'|aux] fromage et [au|à la|à l'|*aux] champignons.",
+							"audio": "sounds/fr/Je voudrais une pizza au fromage et aux champignons.mp3"
+						},
+						{
+							"text": "J'aime la sauce [au|à la|*à l'|aux] orange.",
+							"audio": "sounds/fr/J'aime la sauce à l'orange.mp3"
+						},
+						{
+							"text": "Tu prends une glace [au|*à la|à l'|aux] vanille, ou [au|*à la|à l'|aux] fraise ?",
+							"audio": "sounds/fr/Tu prends une glace à la vanille, ou à la fraise.mp3"
+						},
+						{
+							"text": "Je prends une glace [*au|à la|à l'|aux] chocolat.",
+							"audio": "sounds/fr/Je prends une glace au chocolat.mp3"
+						}
 					],
 					"titleText": "4 Flavours, toppings and fillings"
 				}

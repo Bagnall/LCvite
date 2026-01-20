@@ -219,7 +219,7 @@ export class DropDowns extends React.PureComponent {
 
 	render = () => {
 		const {
-			audio,
+			// audio,
 			cheatText,
 			// complete = false,
 			failCount = 0,
@@ -229,8 +229,8 @@ export class DropDowns extends React.PureComponent {
 			id = [],
 			listenDescriptionText,
 			nCorrect = 0,
-			phrases = [],
-			phrasesHTML = "",
+			items = [],
+			// phrasesHTML = "",
 			soundFile,
 			solved = [],
 		} = this.state;
@@ -239,39 +239,45 @@ export class DropDowns extends React.PureComponent {
 		this.nToSolve = 0;
 		this.correctValues = []; // reset before we re-parse in this render
 
-		if (phrases.length > 0) {
+		if (items.length > 0) {
 			// Build phrases -> JSX and track which selects belong to each phrase
 			const phraseList = []; // per row: JSX segments array
 			const phraseSelectIndices = []; // per row: array of select indices
 
 			let nSelects = 0;
 
-			for (let i = 0; i < phrases.length; i++) {
-				const phraseStr = phrases[i];
+			for (let i = 0; i < items.length; i++) {
+				const {text} = items[i];
+
+				if (!text) {
+					// spacer row → keep indices aligned
+					phraseList.push(null);
+					phraseSelectIndices.push([]);
+					continue;
+				}
+
 				const {
 					segments,
 					selectIndices,
 					nSelects: updatedNSelects,
-				} = this.parseBracketedOptions(nSelects, phraseStr);
+				} = this.parseBracketedOptions(nSelects, text);
 
 				phraseList.push(segments);
 				phraseSelectIndices.push(selectIndices);
 				nSelects = updatedNSelects;
 			}
 
+
 			this.nToSolve = nSelects;
 
 			// Build table rows
 			const rows = [];
 
-			for (let i = 0; i < phrases.length; i++) {
-				const phrase = phrases[i];
+			for (let i = 0; i < items.length; i++) {
+				const phrase = items[i].text;
 				const cells = [];
-
-				if (
-					(phrase[0] === undefined || phrase[0] === "") &&
-          phrase.length === 0
-				) {
+				// console.log("phrase", phrase[0]);// , phrase.length);
+				if (!phrase) {
 					// blank row
 					rows.push(
 						<TableRow className="spacer" key={`row${i}`}>
@@ -321,11 +327,11 @@ export class DropDowns extends React.PureComponent {
 						</TableCell>
 					);
 
-					if (audio && audio[i]) {
-						const soundFile = resolveAsset(`${audio[i]}`);
+					if (items[i].audio){// audio && audio[i]) {
+						const soundFile = resolveAsset(`${items[i].audio}`);
 
 						cells.push(
-							<TableCell key={`row${i}cell2`}>
+							<TableCell key={`row${i}cell2`} className={`audioCell`}>
 								<AudioClip
 									className="super-compact-speaker"
 									id={`row${i}cell2AudioClip`}
@@ -348,12 +354,6 @@ export class DropDowns extends React.PureComponent {
 					<TableBody>{rows}</TableBody>
 				</Table>
 			);
-		} else {
-			// We have HTML content path (not implemented in this cleaned version)
-			if (phrasesHTML) {
-				console.warn("phrasesHTML path not implemented in this version."); // eslint-disable-line
-			}
-			content = null;
 		}
 
 		return (

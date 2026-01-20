@@ -281,33 +281,55 @@
 					"instructionsText": "Listen to the speakers and select the correct definite article to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"[le|*la|les] salle de bains",
-						"[le|*la|les] chambre",
-						"[le|*la|les] cave",
-						"[le|*la|les] douche",
-						"[le|*la|les] salle à manger",
-						"[le|*la|les] buanderie",
-						"[*le|la|les] salon",
-						"[le|la|*les] toilettes",
-						"[*le|la|les] grenier",
-						"[*le|la|les] balcon",
-						"[le|*la|les] cuisine",
-						"[*le|la|les] bureau"
-					],
-					"audio": [
-						"sounds/fr/la salle de bains.mp3",
-						"sounds/fr/la chambre.mp3",
-						"sounds/fr/la cave.mp3",
-						"sounds/fr/la douche.mp3",
-						"sounds/fr/la salle à manger.mp3",
-						"sounds/fr/la buanderie.mp3",
-						"sounds/fr/le salon.mp3",
-						"sounds/fr/les toilettes.mp3",
-						"sounds/fr/le grenier.mp3",
-						"sounds/fr/le balcon.mp3",
-						"sounds/fr/la cuisine.mp3",
-						"sounds/fr/le bureau.mp3"
+					"items": [
+						{
+							"text": "[le|*la|les] salle de bains",
+							"audio": "sounds/fr/la salle de bains.mp3"
+						},
+						{
+							"text": "[le|*la|les] chambre",
+							"audio": "sounds/fr/la chambre.mp3"
+						},
+						{
+							"text": "[le|*la|les] cave",
+							"audio": "sounds/fr/la cave.mp3"
+						},
+						{
+							"text": "[le|*la|les] douche",
+							"audio": "sounds/fr/la douche.mp3"
+						},
+						{
+							"text": "[le|*la|les] salle à manger",
+							"audio": "sounds/fr/la salle à manger.mp3"
+						},
+						{
+							"text": "[le|*la|les] buanderie",
+							"audio": "sounds/fr/la buanderie.mp3"
+						},
+						{
+							"text": "[*le|la|les] salon",
+							"audio": "sounds/fr/le salon.mp3"
+						},
+						{
+							"text": "[le|la|*les] toilettes",
+							"audio": "sounds/fr/les toilettes.mp3"
+						},
+						{
+							"text": "[*le|la|les] grenier",
+							"audio": "sounds/fr/le grenier.mp3"
+						},
+						{
+							"text": "[*le|la|les] balcon",
+							"audio": "sounds/fr/le balcon.mp3"
+						},
+						{
+							"text": "[le|*la|les] cuisine",
+							"audio": "sounds/fr/la cuisine.mp3"
+						},
+						{
+							"text": "[*le|la|les] bureau",
+							"audio": "sounds/fr/le bureau.mp3"
+						}
 					],
 					"titleText": "2. Do you remember the gender?"
 				}
@@ -320,23 +342,33 @@
 					"instructionsText": "Listen to the speakers and select the correct form of the adjective to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
-					"phrases": [
-						"Le bureau est [*lumineux|lumineuse/ lumineuses].",
-						"La cave est [dangereux|*dangereuse|dangereuses].",
-						"Mme Leserre est très [curieux|*curieuse|curieuses].",
-						"Pauline, tu es très [courageux|*courageuse|courageuses]. ",
-						"Le Champagne est [*délicieux|délicieuse|délicieuses].",
-						"Les étudiantes sont [ambitieux|ambitieuse|*ambitieuses]."
+					"items": [
+						{
+							"text": "Le bureau est [*lumineux|lumineuse/ lumineuses].",
+							"audio": "sounds/fr/Le bureau est lumineux.mp3"
+						},
+						{
+							"text": "La cave est [dangereux|*dangereuse|dangereuses].",
+							"audio": "sounds/fr/La cave est dangereuse.mp3"
+						},
+						{
+							"text": "Mme Leserre est très [curieux|*curieuse|curieuses].",
+							"audio": "sounds/fr/Mme Leserre est très curieuse.mp3"
+						},
+						{
+							"text": "Pauline, tu es très [courageux|*courageuse|courageuses]. ",
+							"audio": "sounds/fr/Pauline, tu es très courageuse.mp3"
+						},
+						{
+							"text": "Le Champagne est [*délicieux|délicieuse|délicieuses].",
+							"audio": "sounds/fr/Le Champagne est délicieux.mp3"
+						},
+						{
+							"text": "Les étudiantes sont [ambitieux|ambitieuse|*ambitieuses].",
+							"audio": "sounds/fr/Les étudiantes sont ambitieuses.mp3"
+						}
 					],
 					"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
-					"audio": [
-						"sounds/fr/Le bureau est lumineux.mp3",
-						"sounds/fr/La cave est dangereuse.mp3",
-						"sounds/fr/Mme Leserre est très curieuse.mp3",
-						"sounds/fr/Pauline, tu es très courageuse.mp3",
-						"sounds/fr/Le Champagne est délicieux.mp3",
-						"sounds/fr/Les étudiantes sont ambitieuses.mp3"
-					],
 					"titleText": "3. Practise descriptions"
 				}
 			},

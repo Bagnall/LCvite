@@ -330,33 +330,55 @@
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
-						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
-						"Tu [vais|*vas|va|allons|allez|vont] à la boulangerie ?",
-						"Ma mère et moi [vais|vas|va|*allons|allez|vont] au marché.",
-						"Mon frère et son fils [vais|vas|va|allons|allez|*vont] à la bibliothèque.",
-						"Je [*vais|vas|va|allons|allez|vont] au centre sportif.",
-						"Thomas et Louise, vous [vais|vas|va|allons|*allez|vont] au centre-ville ?",
-						"[Je|Tu|Elle|Nous|Vous|*Elles] vont à l'épicerie. ",
-						"[*Je|Tu|Elle|Nous|Vous|Elles] vais à la boucherie.",
-						"[Je|Tu|*Elle|Nous|Vous|Elles] va chez le marchand de fruits et légumes.",
-						"[Je|Tu|Il|Nous|vous|*Ils] vont à la poissonnerie.",
-						"[Je|Tu|*Il|Nous|Vous|Ils] va chez la fleuriste."
-					],
-					"audio": [
-						"sounds/fr/Amel va à la piscine.mp3",
-						"sounds/fr/Mes voisins vont au supermarché.mp3",
-						"sounds/fr/Tu vas à la boulangerie.mp3",
-						"sounds/fr/Ma mère et moi allons au marché.mp3",
-						"sounds/fr/Mon frère et son fils vont à la bibliothèque.mp3",
-						"sounds/fr/Je vais au centre sportif.mp3",
-						"sounds/fr/Thomas et Louise, vous allez au centre-ville.mp3",
-						"sounds/fr/Elles vont à l'épicerie.mp3",
-						"sounds/fr/Je vais à la boucherie.mp3",
-						"sounds/fr/Elle va chez le marchand de fruits et légumes.mp3",
-						"sounds/fr/Ils vont à la poissonnerie.mp3",
-						"sounds/fr/Il va chez la fleuriste.mp3"
+					"items": [
+						{
+							"text": "Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
+							"audio": "sounds/fr/Amel va à la piscine.mp3"
+						},
+						{
+							"text": "Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
+							"audio": "sounds/fr/Mes voisins vont au supermarché.mp3"
+						},
+						{
+							"text": "Tu [vais|*vas|va|allons|allez|vont] à la boulangerie ?",
+							"audio": "sounds/fr/Tu vas à la boulangerie.mp3"
+						},
+						{
+							"text": "Ma mère et moi [vais|vas|va|*allons|allez|vont] au marché.",
+							"audio": "sounds/fr/Ma mère et moi allons au marché.mp3"
+						},
+						{
+							"text": "Mon frère et son fils [vais|vas|va|allons|allez|*vont] à la bibliothèque.",
+							"audio": "sounds/fr/Mon frère et son fils vont à la bibliothèque.mp3"
+						},
+						{
+							"text": "Je [*vais|vas|va|allons|allez|vont] au centre sportif.",
+							"audio": "sounds/fr/Je vais au centre sportif.mp3"
+						},
+						{
+							"text": "Thomas et Louise, vous [vais|vas|va|allons|*allez|vont] au centre-ville ?",
+							"audio": "sounds/fr/Thomas et Louise, vous allez au centre-ville.mp3"
+						},
+						{
+							"text": "[Je|Tu|Elle|Nous|Vous|*Elles] vont à l'épicerie. ",
+							"audio": "sounds/fr/Elles vont à l'épicerie.mp3"
+						},
+						{
+							"text": "[*Je|Tu|Elle|Nous|Vous|Elles] vais à la boucherie.",
+							"audio": "sounds/fr/Je vais à la boucherie.mp3"
+						},
+						{
+							"text": "[Je|Tu|*Elle|Nous|Vous|Elles] va chez le marchand de fruits et légumes.",
+							"audio": "sounds/fr/Elle va chez le marchand de fruits et légumes.mp3"
+						},
+						{
+							"text": "[Je|Tu|Il|Nous|vous|*Ils] vont à la poissonnerie.",
+							"audio": "sounds/fr/Ils vont à la poissonnerie.mp3"
+						},
+						{
+							"text": "[Je|Tu|*Il|Nous|Vous|Ils] va chez la fleuriste.",
+							"audio": "sounds/fr/Il va chez la fleuriste.mp3"
+						}
 					],
 					"titleText": "1. Where is everyone going?"
 				}
@@ -369,21 +391,31 @@
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"trois bouteilles [*de|d'|du|de la|de l'|des] vin rouge",
-						"cinq bouteilles [de|*d'|du|de la|de l'|des] eau minérale",
-						"300 grammes [*de|d'|du|de la|de l'|des] fromage",
-						"200 grammes [*de|d'|du|de la|de l'|des] jambon",
-						"une barquette [*de|d'|du|de la|de l'|des] framboises",
-						"une bouteille [de|*d'|du|de la|de l'|des] huile [de|*d'|du|de la|de l'|des] olives"
-					],
-					"audio": [
-						"sounds/fr/trois bouteilles de vin rouge.mp3",
-						"sounds/fr/cinq bouteilles d'eau minérale.mp3",
-						"sounds/fr/300 grammes de fromage.mp3",
-						"sounds/fr/200 grammes de jambon.mp3",
-						"sounds/fr/une barquette de framboises.mp3",
-						"sounds/fr/une bouteille d'huile d'olives.mp3"
+					"items": [
+						{
+							"text": "trois bouteilles [*de|d'|du|de la|de l'|des] vin rouge",
+							"audio": "sounds/fr/trois bouteilles de vin rouge.mp3"
+						},
+						{
+							"text": "cinq bouteilles [de|*d'|du|de la|de l'|des] eau minérale",
+							"audio": "sounds/fr/cinq bouteilles d'eau minérale.mp3"
+						},
+						{
+							"text": "300 grammes [*de|d'|du|de la|de l'|des] fromage",
+							"audio": "sounds/fr/300 grammes de fromage.mp3"
+						},
+						{
+							"text": "200 grammes [*de|d'|du|de la|de l'|des] jambon",
+							"audio": "sounds/fr/200 grammes de jambon.mp3"
+						},
+						{
+							"text": "une barquette [*de|d'|du|de la|de l'|des] framboises",
+							"audio": "sounds/fr/une barquette de framboises.mp3"
+						},
+						{
+							"text": "une bouteille [de|*d'|du|de la|de l'|des] huile [de|*d'|du|de la|de l'|des] olives",
+							"audio": "sounds/fr/une bouteille d'huile d'olives.mp3"
+						}
 					],
 					"titleText": "2. Marion's shopping list"
 				}
@@ -396,19 +428,27 @@
 					"instructionsText": "Select the correct word to fill in the gaps",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"[de|d'|du|*de la|de l'|des] salade",
-						"[de|d'|du|de la|de l'|*des] oignons",
-						"[de|d'|*du|de la|de l'|des] lait",
-						"[de|d'|*du|de la|de l'|des] café",
-						"[de|d'|*du|de la|de l'|des] jus [de|*d'|du|de la|de l'|des] orange"
-					],
-					"audio": [
-						"sounds/fr/de la salade.mp3",
-						"sounds/fr/des oignons.mp3",
-						"sounds/fr/du lait.mp3",
-						"sounds/fr/du café.mp3",
-						"sounds/fr/du jus d'orange.mp3"
+					"items": [
+						{
+							"text": "[de|d'|du|*de la|de l'|des] salade",
+							"audio": "sounds/fr/de la salade.mp3"
+						},
+						{
+							"text": "[de|d'|du|de la|de l'|*des] oignons",
+							"audio": "sounds/fr/des oignons.mp3"
+						},
+						{
+							"text": "[de|d'|*du|de la|de l'|des] lait",
+							"audio": "sounds/fr/du lait.mp3"
+						},
+						{
+							"text": "[de|d'|*du|de la|de l'|des] café",
+							"audio": "sounds/fr/du café.mp3"
+						},
+						{
+							"text": "[de|d'|*du|de la|de l'|des] jus [de|*d'|du|de la|de l'|des] orange",
+							"audio": "sounds/fr/du jus d'orange.mp3"
+						}
 					],
 					"titleText": "3. Yves' shopping list"
 				}

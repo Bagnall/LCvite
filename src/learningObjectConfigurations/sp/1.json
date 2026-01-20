@@ -395,11 +395,19 @@
 					"instructionsText": "Select the correct option from the dropdown.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"una [*amiga|amigo|amigas|amigos] ruidosa",
-						"un amigo ruidoso",
-						"unas amigas ruidosas",
-						"unos amigos ruidosos"
+					"items": [
+						{
+							"text": "una [*amiga|amigo|amigas|amigos] ruidosa"
+						},
+						{
+							"text": "un amigo ruidoso"
+						},
+						{
+							"text": "unas amigas ruidosas"
+						},
+						{
+							"text": "unos amigos ruidosos"
+						}
 					],
 					"titleTextHTML": "Ungendered Spanish."
 				}
@@ -544,23 +552,35 @@
 					"instructionsText": "Consider the greetings and replies below. Select whether they are formal or informal.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Bien, gracias. ¿Y usted? [*Formal|Informal]",
-						"¿Hola, cómo estás? [Formal|*Informal]",
-						"Hola Marta, ¿cómo estás? [Formal|*Informal]",
-						"Buenas noches, Sr. Gómez, ¿cómo está? [*Formal|Informal]",
-						"Señora, ¿cómo está? [*Formal|Informal]",
-						"Todo bien, gracias ¿y usted? [*Formal|Informal]",
-						"Así Así. Y tú ¿cómo estás? [Formal|*Informal]"
-					],
-					"audio": [
-						"sounds/sp/Bien, gracias. ¿Y usted.mp3",
-						"sounds/sp/¿Hola, cómo estás.mp3",
-						"sounds/sp/Hola Marta, ¿cómo estás.mp3",
-						"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3",
-						"sounds/sp/Señora, ¿cómo está.mp3",
-						"sounds/sp/Todo bien, gracias ¿y usted.mp3",
-						"sounds/sp/Así Así, Y tú, ¿cómo estás.mp3"
+					"items": [
+						{
+							"text": "Bien, gracias. ¿Y usted? [*Formal|Informal]",
+							"audio": "sounds/sp/Bien, gracias. ¿Y usted.mp3"
+						},
+						{
+							"text": "¿Hola, cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/¿Hola, cómo estás.mp3"
+						},
+						{
+							"text": "Hola Marta, ¿cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/Hola Marta, ¿cómo estás.mp3"
+						},
+						{
+							"text": "Buenas noches, Sr. Gómez, ¿cómo está? [*Formal|Informal]",
+							"audio": "sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3"
+						},
+						{
+							"text": "Señora, ¿cómo está? [*Formal|Informal]",
+							"audio": "sounds/sp/Señora, ¿cómo está.mp3"
+						},
+						{
+							"text": "Todo bien, gracias ¿y usted? [*Formal|Informal]",
+							"audio": "sounds/sp/Todo bien, gracias ¿y usted.mp3"
+						},
+						{
+							"text": "Así Así. Y tú ¿cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/Así Así, Y tú, ¿cómo estás.mp3"
+						}
 					],
 					"titleText": "2. Formal or Informal?"
 				}
@@ -606,25 +626,33 @@
 					"instructionsTextHTML": "In the Dialogues below, select the correct conjugation of the verb <b>ESTAR</b>.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien?",
-						"Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú?",
-						"",
-						"Buenos dias ¿cómo [estoy|estás|*está|estamos|estáis|están] su familia?",
-						"Sí, muy bien gracias. Y usted ¿cómo [estoy|estás|*está|estamos|estáis|están]?",
-						"",
-						"Buenas noches señores, ¿cómo [estoy|estás|está|estamos|estáis|*están]?",
-						"Gracias Carmela. Y usted, ¿cómo [estoy|estás|*está|estamos|estáis|están]?"
-					],
-					"audio": [
-						"sounds/sp/Hola Marcos estás bien.mp3",
-						"sounds/sp/Todo bien, estoy bien gracias. ¿Y tú.mp3",
-						"",
-						"sounds/sp/Buenos dias ¿cómo está su familia.mp3",
-						"sounds/sp/Sí, muy bien gracias. Y usted ¿cómo está.mp3",
-						"",
-						"sounds/sp/Buenas noches señores, ¿cómo están.mp3",
-						"sounds/sp/Gracias Carmela. Y usted, ¿cómo está.mp3"
+					"items": [
+						{
+							"text": "Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien?",
+							"audio": "sounds/sp/Hola Marcos estás bien.mp3"
+						},
+						{
+							"text": "Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú?",
+							"audio": "sounds/sp/Todo bien, estoy bien gracias. ¿Y tú.mp3"
+						},
+						{},
+						{
+							"text": "Buenos dias ¿cómo [estoy|estás|*está|estamos|estáis|están] su familia?",
+							"audio": "sounds/sp/Buenos dias ¿cómo está su familia.mp3"
+						},
+						{
+							"text": "Sí, muy bien gracias. Y usted ¿cómo [estoy|estás|*está|estamos|estáis|están]?",
+							"audio": "sounds/sp/Sí, muy bien gracias. Y usted ¿cómo está.mp3"
+						},
+						{},
+						{
+							"text": "Buenas noches señores, ¿cómo [estoy|estás|está|estamos|estáis|*están]?",
+							"audio": "sounds/sp/Buenas noches señores, ¿cómo están.mp3"
+						},
+						{
+							"text": "Gracias Carmela. Y usted, ¿cómo [estoy|estás|*está|estamos|estáis|están]?",
+							"audio": "sounds/sp/Gracias Carmela. Y usted, ¿cómo está.mp3"
+						}
 					],
 					"titleTextHTML": "4. Use of verb <b>ESTAR</b>"
 				}

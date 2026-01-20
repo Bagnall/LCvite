@@ -94,6 +94,13 @@ html.debug {
 				border-radius: calc(var(--radius) - 2px);
 			}
 		}
+		&.audioCell {
+			padding: 0;
+			.audio-container {
+				width: 27px;
+				height: 27px;
+			}
+		}
 	}
 
 	p.clue {

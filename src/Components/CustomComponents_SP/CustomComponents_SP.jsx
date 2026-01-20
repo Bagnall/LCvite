@@ -10,6 +10,14 @@ import {
 	// TableHeader,
 	// TableRow,
 } from '..';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	// TableHead,
+	// TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 import { Component, PureComponent } from 'react';
 import {
 	resolveAsset,

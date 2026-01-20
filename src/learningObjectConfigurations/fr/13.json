@@ -299,19 +299,43 @@
 					"instructionsText": " Fill in the gaps with the correct reflexive pronoun supplied.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je [m'|*me|t'|te|s'|se|nous|vous] réveille à huit heures. (se réveiller)",
-						"Je [*m'|me|t'|te|s'|se|nous|vous] habille avant de prendre mon petit déjeuner. (s'habiller)",
-						"Adèle [m'|me|t'|te|s'|*se|nous|vous] lève vers dix heures. (se lever)",
-						"Vous [m'|me|t'|te|s'|se|nous|*vous] levez à quelle heure ? (se lever)",
-						"Nous [m'|me|t'|te|s'|se|*nous|vous] reposons pendant le week-end. (se reposer)",
-						"Je [m'|*me|t'|te|s'|se|nous|vous] détends pendant les vacances. (se détendre) ",
-						"Les enfants [m'|me|t'|te|s'|*se|nous|vous] couchent… vers neuf heures. (se coucher)",
-						"Patrick [m'|me|t'|te|s'|*se|nous|vous] couche à minuit. (se coucher)",
-						"Tu [m'|me|t'|*te|s'|se|nous|vous] maquilles aujourd'hui ? (se maquiller) ",
-						"Tu [m'|me|*t'|te|s'|se|nous|vous] appelles comment ? (s'appeler) ",
-						"Et ta sœur, elle [m'|me|t'|te|*s'|se|nous|vous] appelle comment ? (s'appeler)",
-						"La Tour Eiffel [m'|me|t'|te|s'|*se|nous|vous] trouve à Paris (se trouver)."
+					"items": [
+						{
+							"text": "Je [m'|*me|t'|te|s'|se|nous|vous] réveille à huit heures. (se réveiller)"
+						},
+						{
+							"text": "Je [*m'|me|t'|te|s'|se|nous|vous] habille avant de prendre mon petit déjeuner. (s'habiller)"
+						},
+						{
+							"text": "Adèle [m'|me|t'|te|s'|*se|nous|vous] lève vers dix heures. (se lever)"
+						},
+						{
+							"text": "Vous [m'|me|t'|te|s'|se|nous|*vous] levez à quelle heure ? (se lever)"
+						},
+						{
+							"text": "Nous [m'|me|t'|te|s'|se|*nous|vous] reposons pendant le week-end. (se reposer)"
+						},
+						{
+							"text": "Je [m'|*me|t'|te|s'|se|nous|vous] détends pendant les vacances. (se détendre) "
+						},
+						{
+							"text": "Les enfants [m'|me|t'|te|s'|*se|nous|vous] couchent… vers neuf heures. (se coucher)"
+						},
+						{
+							"text": "Patrick [m'|me|t'|te|s'|*se|nous|vous] couche à minuit. (se coucher)"
+						},
+						{
+							"text": "Tu [m'|me|t'|*te|s'|se|nous|vous] maquilles aujourd'hui ? (se maquiller) "
+						},
+						{
+							"text": "Tu [m'|me|*t'|te|s'|se|nous|vous] appelles comment ? (s'appeler) "
+						},
+						{
+							"text": "Et ta sœur, elle [m'|me|t'|te|*s'|se|nous|vous] appelle comment ? (s'appeler)"
+						},
+						{
+							"text": "La Tour Eiffel [m'|me|t'|te|s'|*se|nous|vous] trouve à Paris (se trouver)."
+						}
 					],
 					"titleText": "1 Practise the reflexive verbs"
 				}
@@ -359,37 +383,63 @@
 					"instructionsText": "Select the time that you hear.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"[*6h00|7h00|8h00]",
-						"[2h00|6h00|*10h00]",
-						"[*2h30|6h30|10h30]",
-						"[1h30|0h30|*11h30]",
-						"[4h15|4h30|*5h15]",
-						"[*6h45|7h15|7h30]",
-						"[2h15|*2h45|3h15]",
-						"[*1h15|1h30|1h45]",
-						"[*midday|midnight]",
-						"[midday|*midnight]",
-						"[*1h10|10h10|11h10]",
-						"[4h10|*4h20|4h40]",
-						"[5h08|*7h55|8h05]",
-						"[*8h35|8h45|9h25]"
-					],
-					"audio": [
-						"sounds/fr/Il est six heures.mp3",
-						"sounds/fr/Il est dix heures.mp3",
-						"sounds/fr/Il est deux heures et demie.mp3",
-						"sounds/fr/Il est onze heures et demie.mp3",
-						"sounds/fr/Il est cinq heures et quart.mp3",
-						"sounds/fr/Il est sept heures moins le quart.mp3",
-						"sounds/fr/Il est trois heures moins le quart.mp3",
-						"sounds/fr/Il est une heure et quart.mp3",
-						"sounds/fr/Il est midi.mp3",
-						"sounds/fr/Il est minuit.mp3",
-						"sounds/fr/Il est une heure dix.mp3",
-						"sounds/fr/Il est quatre heures vingt.mp3",
-						"sounds/fr/Il est huit heures moins cinq.mp3",
-						"sounds/fr/Il est neuf heures moins vingt-cinq.mp3"
+					"items": [
+						{
+							"text": "[*6h00|7h00|8h00]",
+							"audio": "sounds/fr/Il est six heures.mp3"
+						},
+						{
+							"text": "[2h00|6h00|*10h00]",
+							"audio": "sounds/fr/Il est dix heures.mp3"
+						},
+						{
+							"text": "[*2h30|6h30|10h30]",
+							"audio": "sounds/fr/Il est deux heures et demie.mp3"
+						},
+						{
+							"text": "[1h30|0h30|*11h30]",
+							"audio": "sounds/fr/Il est onze heures et demie.mp3"
+						},
+						{
+							"text": "[4h15|4h30|*5h15]",
+							"audio": "sounds/fr/Il est cinq heures et quart.mp3"
+						},
+						{
+							"text": "[*6h45|7h15|7h30]",
+							"audio": "sounds/fr/Il est sept heures moins le quart.mp3"
+						},
+						{
+							"text": "[2h15|*2h45|3h15]",
+							"audio": "sounds/fr/Il est trois heures moins le quart.mp3"
+						},
+						{
+							"text": "[*1h15|1h30|1h45]",
+							"audio": "sounds/fr/Il est une heure et quart.mp3"
+						},
+						{
+							"text": "[*midday|midnight]",
+							"audio": "sounds/fr/Il est midi.mp3"
+						},
+						{
+							"text": "[midday|*midnight]",
+							"audio": "sounds/fr/Il est minuit.mp3"
+						},
+						{
+							"text": "[*1h10|10h10|11h10]",
+							"audio": "sounds/fr/Il est une heure dix.mp3"
+						},
+						{
+							"text": "[4h10|*4h20|4h40]",
+							"audio": "sounds/fr/Il est quatre heures vingt.mp3"
+						},
+						{
+							"text": "[5h08|*7h55|8h05]",
+							"audio": "sounds/fr/Il est huit heures moins cinq.mp3"
+						},
+						{
+							"text": "[*8h35|8h45|9h25]",
+							"audio": "sounds/fr/Il est neuf heures moins vingt-cinq.mp3"
+						}
 					],
 					"titleText": "3 What's the time? Practising the 12 hour clock"
 				}

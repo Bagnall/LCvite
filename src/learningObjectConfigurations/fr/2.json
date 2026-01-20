@@ -204,16 +204,34 @@
 					"instructionsText": "Select the correct part of être to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
-					"phrases": [
-						"Tu [*es|est|êtes] fiancé ? ",
-						"Je [sommes|*suis|sont] mariée avec Steffi. ",
-						"Vous [est|*êtes|sommes] professeurs ?",
-						"Nous [es|êtes|*sommes] pacsés.",
-						"Il [es|*est|sont] étudiant en astronomie.",
-						"Ils [suis|est|*sont] jeunes.",
-						"Elle  [es|*est|êtes] chercheuse.",
-						"Elles [suis|sommes|*sont] étudiantes en éducation.",
-						"Jérome et moi [suis|sont|*sommes] divorcés maintenant."
+					"items": [
+						{
+							"text": "Tu [*es|est|êtes] fiancé ? "
+						},
+						{
+							"text": "Je [sommes|*suis|sont] mariée avec Steffi. "
+						},
+						{
+							"text": "Vous [est|*êtes|sommes] professeurs ?"
+						},
+						{
+							"text": "Nous [es|êtes|*sommes] pacsés."
+						},
+						{
+							"text": "Il [es|*est|sont] étudiant en astronomie."
+						},
+						{
+							"text": "Ils [suis|est|*sont] jeunes."
+						},
+						{
+							"text": "Elle  [es|*est|êtes] chercheuse."
+						},
+						{
+							"text": "Elles [suis|sommes|*sont] étudiantes en éducation."
+						},
+						{
+							"text": "Jérome et moi [suis|sont|*sommes] divorcés maintenant."
+						}
 					],
 					"titleTextHTML": "Practise the verb <b>être</b>."
 				}
@@ -226,17 +244,23 @@
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Salut les enfants ! Tout va bien ? [*Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
-						"Tu es archiviste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|*Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
-						"Monsieur Tondereau est journaliste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|*Non, il est bibliothécaire.|Je suis professeur de géographie.]",
-						"Que faites-vous dans la vie ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|*Je suis professeur de géographie.]"
-					],
-					"audio": [
-						"sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-teri-est-malade-depuis-hier.mp3",
-						"sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3",
-						"sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3",
-						"sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+					"items": [
+						{
+							"text": "Salut les enfants ! Tout va bien ? [*Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+							"audio": "sounds/fr/salut-les-enfants-tout-va-bien-moi-oui-ca-va-mais-teri-est-malade-depuis-hier.mp3"
+						},
+						{
+							"text": "Tu es archiviste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|*Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+							"audio": "sounds/fr/tu-es-archiviste-ah-non-je-suis-etudiante-en-histoire.mp3"
+						},
+						{
+							"text": "Monsieur Tondereau est journaliste ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|*Non, il est bibliothécaire.|Je suis professeur de géographie.]",
+							"audio": "sounds/fr/monsieur-tondereau-est-journaliste-non-il-est-bibliothecaire.mp3"
+						},
+						{
+							"text": "Que faites-vous dans la vie ? [Moi, oui, ça va … mais Teri est malade depuis hier.|Ah non ! je suis étudiant en histoire.|Non, il est bibliothécaire.|*Je suis professeur de géographie.]",
+							"audio": "sounds/fr/que-faites-vous-dans-la-vie-je-suis-professeur-de-geographie.mp3"
+						}
 					],
 					"titleText": "Answering Questions"
 				}

@@ -386,29 +386,47 @@
 					"instructionsText": "",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je fais [*du|de la|de l'|des] shopping.",
-						"Vous faites [*du|de la|*de l'|des] jogging le matin ?",
-						"Tu fais [du|de la|*de l'|des] aviron ?",
-						"J'aime faire [*du|de la|de l'|des] lèche-vitrine.",
-						"Ma sœur aime faire [du|*de la|de l'|des] peinture.",
-						"Je  fais [du|de la|*de l'|des] équitation pendant mon temps libre.",
-						"Je joue [du|*de la|de l'|des] batterie.",
-						"Tu joues [du|*de la|de l'|des] guitare ?",
-						"Mes parents jouent [*du|de la|de l'|des] piano.",
-						"Vous jouez [*du|de la|de l'|des] trombone ?"
-					],
-					"audio": [
-						"sounds/fr/Je fais du shopping.mp3",
-						"sounds/fr/Vous faites du jogging le matin.mp3",
-						"sounds/fr/Tu fais de l'aviron.mp3",
-						"sounds/fr/J'aime faire du lèche-vitrine.mp3",
-						"sounds/fr/Ma sœur aime faire de la peinture.mp3",
-						"sounds/fr/Je fais de l'équitation pendant mon temps libre.mp3",
-						"sounds/fr/Je joue de la batterie.mp3",
-						"sounds/fr/Tu joues de la guitare.mp3",
-						"sounds/fr/Mes parents jouent du piano.mp3",
-						"sounds/fr/Vous jouez du trombone.mp3"
+					"items": [
+						{
+							"text": "Je fais [*du|de la|de l'|des] shopping.",
+							"audio": "sounds/fr/Je fais du shopping.mp3"
+						},
+						{
+							"text": "Vous faites [*du|de la|*de l'|des] jogging le matin ?",
+							"audio": "sounds/fr/Vous faites du jogging le matin.mp3"
+						},
+						{
+							"text": "Tu fais [du|de la|*de l'|des] aviron ?",
+							"audio": "sounds/fr/Tu fais de l'aviron.mp3"
+						},
+						{
+							"text": "J'aime faire [*du|de la|de l'|des] lèche-vitrine.",
+							"audio": "sounds/fr/J'aime faire du lèche-vitrine.mp3"
+						},
+						{
+							"text": "Ma sœur aime faire [du|*de la|de l'|des] peinture.",
+							"audio": "sounds/fr/Ma sœur aime faire de la peinture.mp3"
+						},
+						{
+							"text": "Je  fais [du|de la|*de l'|des] équitation pendant mon temps libre.",
+							"audio": "sounds/fr/Je fais de l'équitation pendant mon temps libre.mp3"
+						},
+						{
+							"text": "Je joue [du|*de la|de l'|des] batterie.",
+							"audio": "sounds/fr/Je joue de la batterie.mp3"
+						},
+						{
+							"text": "Tu joues [du|*de la|de l'|des] guitare ?",
+							"audio": "sounds/fr/Tu joues de la guitare.mp3"
+						},
+						{
+							"text": "Mes parents jouent [*du|de la|de l'|des] piano.",
+							"audio": "sounds/fr/Mes parents jouent du piano.mp3"
+						},
+						{
+							"text": "Vous jouez [*du|de la|de l'|des] trombone ?",
+							"audio": "sounds/fr/Vous jouez du trombone.mp3"
+						}
 					],
 					"titleText": "2. Talking about leisure activities."
 				}
@@ -421,23 +439,35 @@
 					"instructionsText": "In the following sentences and questions select au , à la, à l' or aux as appropriate:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Le lundi, il joue [*au|à la|à l'|aux] foot.",
-						"Le mardi, il joue [*au|à la|à l'|aux] tennis.",
-						"Le mercredi, il joue [*au|à la|à l'|aux] volley.",
-						"Le jeudi, il joue [au|*à la|à l'|aux] pétanque.",
-						"Le vendredi, il joue [au|à la|à l'|*aux] boules",
-						"Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis",
-						"Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [au|à la|à l'|*aux] échecs avec son frère."
-					],
-					"audio": [
-						"sounds/fr/Le lundi, il joue au foot.mp3",
-						"sounds/fr/Le mardi, il joue au tennis.mp3",
-						"sounds/fr/Le mercredi, il joue au volley.mp3",
-						"sounds/fr/Le jeudi, il joue à la pétanque.mp3",
-						"sounds/fr/Le vendredi, il joue aux boules.mp3",
-						"sounds/fr/Le samedi, il joue au baseball. Les soir, il joue au babyfoot avec ses amis.mp3",
-						"sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue aux échecs avec son frère.mp3"
+					"items": [
+						{
+							"text": "Le lundi, il joue [*au|à la|à l'|aux] foot.",
+							"audio": "sounds/fr/Le lundi, il joue au foot.mp3"
+						},
+						{
+							"text": "Le mardi, il joue [*au|à la|à l'|aux] tennis.",
+							"audio": "sounds/fr/Le mardi, il joue au tennis.mp3"
+						},
+						{
+							"text": "Le mercredi, il joue [*au|à la|à l'|aux] volley.",
+							"audio": "sounds/fr/Le mercredi, il joue au volley.mp3"
+						},
+						{
+							"text": "Le jeudi, il joue [au|*à la|à l'|aux] pétanque.",
+							"audio": "sounds/fr/Le jeudi, il joue à la pétanque.mp3"
+						},
+						{
+							"text": "Le vendredi, il joue [au|à la|à l'|*aux] boules",
+							"audio": "sounds/fr/Le vendredi, il joue aux boules.mp3"
+						},
+						{
+							"text": "Le samedi, il joue [*au|à la|à l'|aux] baseball. Les soir, il joue [*au|à la|à l'|aux] babyfoot avec ses amis",
+							"audio": "sounds/fr/Le samedi, il joue au baseball. Les soir, il joue au babyfoot avec ses amis.mp3"
+						},
+						{
+							"text": "Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue [au|à la|à l'|*aux] échecs avec son frère.",
+							"audio": "sounds/fr/Le dimanche, il est un peu fatigué. Il reste à la maison. Quelquefois, Il joue aux échecs avec son frère.mp3"
+						}
 					],
 					"titleText": "3. Julien est très sportif"
 				}
@@ -450,25 +480,39 @@
 					"instructionsText": "Listen to the responses to this question and select answers accordingly:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
-						"2 Je fais [*de l'équitation|de la course d'orientation|de la natation]",
-						"3 Je fais [du taekwondo|*du yoga|du jogging]",
-						"4 Je fais [*de la randonnée|de la course à pied|de l'équitation]",
-						"5 Je fais [de l'escalade|de la lecture|*du lèche-vitrine]",
-						"6 Je fais [de la lecture|*de l'escalade|de la course d'orientation]",
-						"7 Je fais [*des gâteaux|des crêpes des pizzas]",
-						"8 Je fais [de la lecture|*de la boxe|du jardinage]"
-					],
-					"audio": [
-						"sounds/fr/Je fais de la natation.mp3",
-						"sounds/fr/Je fais de l'équitation.mp3",
-						"sounds/fr/Je fais du yoga.mp3",
-						"sounds/fr/Je fais de la randonnée.mp3",
-						"sounds/fr/Je fais du lèche-vitrine.mp3",
-						"sounds/fr/Je fais de l'escalade.mp3",
-						"sounds/fr/Je fais des gâteaux.mp3",
-						"sounds/fr/Je fais de la boxe.mp3"
+					"items": [
+						{
+							"text": "1 Je fais [de l'équitation|de la course d'orientation|*de la natation]",
+							"audio": "sounds/fr/Je fais de la natation.mp3"
+						},
+						{
+							"text": "2 Je fais [*de l'équitation|de la course d'orientation|de la natation]",
+							"audio": "sounds/fr/Je fais de l'équitation.mp3"
+						},
+						{
+							"text": "3 Je fais [du taekwondo|*du yoga|du jogging]",
+							"audio": "sounds/fr/Je fais du yoga.mp3"
+						},
+						{
+							"text": "4 Je fais [*de la randonnée|de la course à pied|de l'équitation]",
+							"audio": "sounds/fr/Je fais de la randonnée.mp3"
+						},
+						{
+							"text": "5 Je fais [de l'escalade|de la lecture|*du lèche-vitrine]",
+							"audio": "sounds/fr/Je fais du lèche-vitrine.mp3"
+						},
+						{
+							"text": "6 Je fais [de la lecture|*de l'escalade|de la course d'orientation]",
+							"audio": "sounds/fr/Je fais de l'escalade.mp3"
+						},
+						{
+							"text": "7 Je fais [*des gâteaux|des crêpes des pizzas]",
+							"audio": "sounds/fr/Je fais des gâteaux.mp3"
+						},
+						{
+							"text": "8 Je fais [de la lecture|*de la boxe|du jardinage]",
+							"audio": "sounds/fr/Je fais de la boxe.mp3"
+						}
 					],
 					"titleText": "4. Qu’est-ce que tu fais le dimanche ?"
 				}

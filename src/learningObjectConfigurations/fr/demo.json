@@ -1574,21 +1574,31 @@
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Female : Je suis [marocain|*marocaine|africain|africaine].",
-						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
-						"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
-						"Female: Je suis [français|*française|anglais /anglaise].",
-						"Male: Je suis [*chinois|chinoise|gallois|galloise].",
-						"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
-					],
-					"audio": [
-						"sounds/fr/je suis marocaine.mp3",
-						"sounds/fr/je suis mexicaine.mp3",
-						"sounds/fr/je suis canadien.mp3",
-						"sounds/fr/je suis française.mp3",
-						"sounds/fr/je suis chinois.mp3",
-						"sounds/fr/je suis sénégalaise.mp3"
+					"items": [
+						{
+							"text": "Je suis [marocain|*marocaine|africain|africaine].",
+							"audio": "sounds/fr/je suis marocaine.mp3"
+						},
+						{
+							"text": "Je suis [américain|américaine|mexicain|*mexicaine].",
+							"audio": "sounds/fr/je suis mexicaine.mp3"
+						},
+						{
+							"text": "Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+							"audio": "sounds/fr/je suis canadien.mp3"
+						},
+						{
+							"text": "Je suis [français|*française|anglais|anglaise].",
+							"audio": "sounds/fr/je suis française.mp3"
+						},
+						{
+							"text": "Je suis [*chinois|chinoise|gallois|galloise].",
+							"audio": "sounds/fr/je suis chinois.mp3"
+						},
+						{
+							"text": "Je suis [anglais|anglaise|sénégalais|*sénégalaise].",
+							"audio": "sounds/fr/je suis sénégalaise.mp3"
+						}
 					],
 					"titleText": "DropDowns"
 				}

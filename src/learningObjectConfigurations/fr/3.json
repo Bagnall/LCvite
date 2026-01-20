@@ -363,23 +363,33 @@
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
-					"phrases": [
-						"Je suis [marocain|*marocaine|africain|africaine].",
-						"Je suis [américain|américaine|mexicain|*mexicaine].",
-						"Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
-						"Je suis [français|*française|anglais|anglaise].",
-						"Je suis [*chinois|chinoise|gallois|galloise].",
-						"Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
+					"items": [
+						{
+							"text": "Je suis [marocain|*marocaine|africain|africaine].",
+							"audio": "sounds/fr/je suis marocaine.mp3"
+						},
+						{
+							"text": "Je suis [américain|américaine|mexicain|*mexicaine].",
+							"audio": "sounds/fr/je suis mexicaine.mp3"
+						},
+						{
+							"text": "Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+							"audio": "sounds/fr/je suis canadien.mp3"
+						},
+						{
+							"text": "Je suis [français|*française|anglais|anglaise].",
+							"audio": "sounds/fr/je suis française.mp3"
+						},
+						{
+							"text": "Je suis [*chinois|chinoise|gallois|galloise].",
+							"audio": "sounds/fr/je suis chinois.mp3"
+						},
+						{
+							"text": "Je suis [anglais|anglaise|sénégalais|*sénégalaise].",
+							"audio": "sounds/fr/je suis sénégalaise.mp3"
+						}
 					],
 					"commented-out": "test [a|*b|c|d|e] and [*a|b|c|d].",
-					"audio": [
-						"sounds/fr/je suis marocaine.mp3",
-						"sounds/fr/je suis mexicaine.mp3",
-						"sounds/fr/je suis canadien.mp3",
-						"sounds/fr/je suis française.mp3",
-						"sounds/fr/je suis chinois.mp3",
-						"sounds/fr/je suis sénégalaise.mp3"
-					],
 					"titleText": "1. Select the Correct Adjective of Nationality"
 				}
 			},
@@ -391,25 +401,39 @@
 					"instructionsTextHTML": "Fill in the gaps with <b>de</b> / <b>du</b> / <b>d'</b> / <b>des</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je viens [*de|d'|du|des] France.",
-						"Je viens [*de|d'|du|des] Suisse.",
-						"Je viens [de|*d'|du|des] Orléans.",
-						"Je viens [de|d'|*du|des] Maroc.",
-						"Je viens [*de|d'|du|des] Tunisie.",
-						"Je viens [de|*d'|du|des] Ecosse.",
-						"Je viens [de|d'|*du|des] Gabon.",
-						"Je viens [de|d'|du|*des] États-Unis."
-					],
-					"audio": [
-						"sounds/fr/Je viens de France.mp3",
-						"sounds/fr/Je viens de Suisse.mp3",
-						"sounds/fr/Je viens d'Orléans.mp3",
-						"sounds/fr/Je viens du Maroc.mp3",
-						"sounds/fr/Je viens de Tunisie.mp3",
-						"sounds/fr/Je viens d'Ecosse.mp3",
-						"sounds/fr/Je viens du Gabon.mp3",
-						"sounds/fr/Je viens Des États-Unis.mp3"
+					"items": [
+						{
+							"text": "Je viens [*de|d'|du|des] France.",
+							"audio": "sounds/fr/Je viens de France.mp3"
+						},
+						{
+							"text": "Je viens [*de|d'|du|des] Suisse.",
+							"audio": "sounds/fr/Je viens de Suisse.mp3"
+						},
+						{
+							"text": "Je viens [de|*d'|du|des] Orléans.",
+							"audio": "sounds/fr/Je viens d'Orléans.mp3"
+						},
+						{
+							"text": "Je viens [de|d'|*du|des] Maroc.",
+							"audio": "sounds/fr/Je viens du Maroc.mp3"
+						},
+						{
+							"text": "Je viens [*de|d'|du|des] Tunisie.",
+							"audio": "sounds/fr/Je viens de Tunisie.mp3"
+						},
+						{
+							"text": "Je viens [de|*d'|du|des] Ecosse.",
+							"audio": "sounds/fr/Je viens d'Ecosse.mp3"
+						},
+						{
+							"text": "Je viens [de|d'|*du|des] Gabon.",
+							"audio": "sounds/fr/Je viens du Gabon.mp3"
+						},
+						{
+							"text": "Je viens [de|d'|du|*des] États-Unis.",
+							"audio": "sounds/fr/Je viens Des États-Unis.mp3"
+						}
 					],
 					"titleText": "2. Practise saying where you're from."
 				}

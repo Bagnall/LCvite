@@ -280,24 +280,58 @@
 					"showHintsText": "Show hints when moving",
 					"titleText": "2. Practise saying where people live",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Ma famille habite:",
-						"[à|*au|en|aux|dans le] Canada.",
-						"[à|au|*en|aux|dans le] France.",
-						"[*à|au|en|aux|dans le] Taiwan.",
-						"[à|*au|en|aux|dans le] Japon.",
-						"[*à|au|en|aux|dans le] Bordeaux.",
-						"[à|au|*en|aux|dans le] Nouvelle Zélande.",
-						"[à|au|*en|aux|dans le] Chine.",
-						"[à|au|*en|aux|dans le] Turquie.",
-						"[à|au|*en|aux|dans le] Suisse.",
-						"[à|*au|en|aux|dans le] Sénégal.",
-						"[à|au|en|*aux|dans le] Etats-Unis.",
-						"[à|au|*en|aux|dans le] Angleterre.",
-						"[à|au|*en|aux|dans le] Algérie.",
-						"[à|au|*en|aux|dans le] Afghanistan.",
-						"[*à|au|en|aux|dans le] Bruxelles.",
-						"[à|au|en|aux|*dans le] Yorkshire."
+					"items": [
+						{
+							"text": "Ma famille habite:"
+						}
+						{
+							"text": "[à|*au|en|aux|dans le] Canada."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] France."
+						}
+						{
+							"text": "[*à|au|en|aux|dans le] Taiwan."
+						}
+						{
+							"text": "[à|*au|en|aux|dans le] Japon."
+						}
+						{
+							"text": "[*à|au|en|aux|dans le] Bordeaux."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Nouvelle Zélande."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Chine."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Turquie."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Suisse."
+						}
+						{
+							"text": "[à|*au|en|aux|dans le] Sénégal."
+						}
+						{
+							"text": "[à|au|en|*aux|dans le] Etats-Unis."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Angleterre."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Algérie."
+						}
+						{
+							"text": "[à|au|*en|aux|dans le] Afghanistan."
+						}
+						{
+							"text": "[*à|au|en|aux|dans le] Bruxelles."
+						}
+						{
+							"text": "[à|au|en|aux|*dans le] Yorkshire."
+						}
 					]
 				}
 			},
@@ -310,20 +344,29 @@
 					"showHintsText": "Show hints when moving",
 					"titleText": "3. Where do you live?",
 					"cheatText": "Show answer",
-					"phrases": [
-						"Tu habites [*à la campagne | à la montagne | au bord de la mer] ?",
-						"Non, j'habite [au centre-ville |*dans une grande ville | pas loin de la ville]",
-						"Nous habitons [en résidence universitaire | près de l'université | *à deux minutes de l'université]",
-						" Nous habitons dans [un grand immeuble | une grande maison | *un petit immeuble]",
-						"L'immeuble se trouve [*en banlieue | au centre-ville | à 20 minutes d'ici]"
+					"items": [
+						{
+							"text": "Tu habites [*à la campagne | à la montagne | au bord de la mer] ?",
+							"audio": "sounds/fr/Tu habites à la campagne.mp3"
+						},
+						{
+							"text": "Non, j'habite [au centre-ville |*dans une grande ville | pas loin de la ville]",
+							"audio": "sounds/fr/Non, j'habite dans une grande ville.mp3"
+						},
+						{
+							"text": "Nous habitons [en résidence universitaire | près de l'université | *à deux minutes de l'université]",
+							"audio": "sounds/fr/Nous habitons à deux minutes de l'université.mp3"
+						},
+						{
+							"text": " Nous habitons dans [un grand immeuble | une grande maison | *un petit immeuble]",
+							"audio": "sounds/fr/Nous habitons dans un petit immeuble.mp3"
+						},
+						{
+							"text": "L'immeuble se trouve [*en banlieue | au centre-ville | à 20 minutes d'ici]",
+							"audio": "sounds/fr/L'immeuble se trouve en banlieue.mp3"
+						}
 					],
-					"audio": [
-						"sounds/fr/Tu habites à la campagne.mp3",
-						"sounds/fr/Non, j'habite dans une grande ville.mp3",
-						"sounds/fr/Nous habitons à deux minutes de l'université.mp3",
-						"sounds/fr/Nous habitons dans un petit immeuble.mp3",
-						"sounds/fr/L'immeuble se trouve en banlieue.mp3"
-					]
+					"audio": []
 				}
 			}
 		],

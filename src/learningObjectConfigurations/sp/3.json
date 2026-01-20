@@ -775,19 +775,27 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
 					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Cuántos gatos tienes? → Tengo dos gatos. (How many cats do you have? → I have two cats.)</p><p>¿Cuántos años tienes? → Tengo ocho años. (How old are you? → I’m eight years old.)</p>",
-					"phrases": [
-						"Tengo [cero|uno|dos|tres|*cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
-						"Hay [cero|uno|dos|tres|cuatro|cinco|seis|*siete|ocho|nueve|diez] estudiantes en la clase.",
-						"Mi hermano tiene [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] años.",
-						"En mi mochila hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|*nueve|diez] lápices.",
-						"Hay [*cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] gatos en casa."
-					],
-					"audio": [
-						"sounds/sp/Tengo cuatro perros.mp3",
-						"sounds/sp/Hay siete estudiantes en la clase.mp3",
-						"sounds/sp/Mi hermano tiene dos años.mp3",
-						"sounds/sp/En mi mochila hay nueve lápices.mp3",
-						"sounds/sp/Hay cero gatos en casa.mp3"
+					"items": [
+						{
+							"text": "Tengo [cero|uno|dos|tres|*cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
+							"audio": "sounds/sp/Tengo cuatro perros.mp3"
+						},
+						{
+							"text": "Hay [cero|uno|dos|tres|cuatro|cinco|seis|*siete|ocho|nueve|diez] estudiantes en la clase.",
+							"audio": "sounds/sp/Hay siete estudiantes en la clase.mp3"
+						},
+						{
+							"text": "Mi hermano tiene [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] años.",
+							"audio": "sounds/sp/Mi hermano tiene dos años.mp3"
+						},
+						{
+							"text": "En mi mochila hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|*nueve|diez] lápices.",
+							"audio": "sounds/sp/En mi mochila hay nueve lápices.mp3"
+						},
+						{
+							"text": "Hay [*cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] gatos en casa.",
+							"audio": "sounds/sp/Hay cero gatos en casa.mp3"
+						}
 					],
 					"titleText": "Actividad 1 - Escucha y elige / Listen and Choose"
 				}
@@ -801,18 +809,25 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
 					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Qué ves en la foto? → Veo tres manzanas. (What do you see in the picture? → I see three aples.)</p><p>¿Cuántos perros hay? → Hay dos perros. (How many dogs are there? → There are two dogs.)</p><p>¿Cuántos zumos hay? → Hay diez zumos. (How many juices are there? → There are ten juices.)</p>",
-					"phrases": [
-						"🍎🍎🍎 En la foto hay [cero|uno|dos|*tres|cuatro|cinco|seis|siete|ocho|nueve|diez] manzanas.",
-						"🐶🐶 En la foto hay [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
-						"🌼🌼🌼🌼🌼 En la foto hay [cero|uno|dos|tres|cuatro|*cinco|seis|siete|ocho|nueve|diez] flores.",
-						"🧃🧃🧃🧃🧃🧃🧃🧃🧃🧃En la foto hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|*diez] zumos."
+					"items": [
+						{
+							"text": "🍎🍎🍎 En la foto hay [cero|uno|dos|*tres|cuatro|cinco|seis|siete|ocho|nueve|diez] manzanas.",
+							"audio": "sounds/sp/En la foto hay tres manzanas.mp3"
+						},
+						{
+							"text": "🐶🐶 En la foto hay [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
+							"audio": "sounds/sp/En la foto hay tres perros.mp3"
+						},
+						{
+							"text": "🌼🌼🌼🌼🌼 En la foto hay [cero|uno|dos|tres|cuatro|*cinco|seis|siete|ocho|nueve|diez] flores.",
+							"audio": "sounds/sp/En la foto hay cinco flores.mp3"
+						},
+						{
+							"text": "🧃🧃🧃🧃🧃🧃🧃🧃🧃🧃En la foto hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|*diez] zumos.",
+							"audio": "sounds/sp/En la foto hay diez zumos.mp3"
+						}
 					],
-					"audio": [
-						"sounds/sp/En la foto hay tres manzanas.mp3",
-						"sounds/sp/En la foto hay tres perros.mp3",
-						"sounds/sp/En la foto hay cinco flores.mp3",
-						"sounds/sp/En la foto hay diez zumos.mp3"
-					],
+					"audio": [],
 					"titleText": "Actividad 2 - En la foto hay... / In the picture there are..."
 				}
 			}

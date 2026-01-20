@@ -464,31 +464,51 @@
 					"instructionsText": "Listen to the speakers and select the correct definite article.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Marc n'aime pas [le|la|*l'|les] athlétisme.",
-						"Serge déteste [*le|la|l'|les] foot.",
-						"Tu aimes  [*le|la|l'|les] surf ?",
-						"Mon copain aime beaucoup [le|*la|l'|les] course.",
-						"Clément n'aime pas du tout [le|la|*l'|les] équitation.",
-						"Je préfère [le|*la|l'|les] musculation.",
-						"Vous aimez [*le|la|l'|les] basket ?",
-						"Vous préférez [le|*la|l'|les] France ou [le|*la|l'|les] Suisse ?",
-						"Je déteste [le|*la|l'|les] pluie !",
-						"J'adore [le|*la|l'|les] neige !",
-						"Tu aimes [le|la|l'|*les] animaux ?"
-					],
-					"audio": [
-						"sounds/fr/Marc n'aime pas l'athlétisme.mp3",
-						"sounds/fr/Serge déteste le foot.mp3",
-						"sounds/fr/Tu aimes le surf.mp3",
-						"sounds/fr/Mon copain aime beaucoup la course.mp3",
-						"sounds/fr/Clément n'aime pas du tout l'équitation.mp3",
-						"sounds/fr/Je préfère la musculation.mp3",
-						"sounds/fr/Vous aimez le basket.mp3",
-						"sounds/fr/Vous préférez la France ou la Suisse.mp3",
-						"sounds/fr/Je déteste la pluie !.mp3",
-						"sounds/fr/J'adore la neige !.mp3",
-						"sounds/fr/Tu aimes les animaux.mp3"
+					"items": [
+						{
+							"text": "Marc n'aime pas [le|la|*l'|les] athlétisme.",
+							"audio": "sounds/fr/Marc n'aime pas l'athlétisme.mp3"
+						},
+						{
+							"text": "Serge déteste [*le|la|l'|les] foot.",
+							"audio": "sounds/fr/Serge déteste le foot.mp3"
+						},
+						{
+							"text": "Tu aimes  [*le|la|l'|les] surf ?",
+							"audio": "sounds/fr/Tu aimes le surf.mp3"
+						},
+						{
+							"text": "Mon copain aime beaucoup [le|*la|l'|les] course.",
+							"audio": "sounds/fr/Mon copain aime beaucoup la course.mp3"
+						},
+						{
+							"text": "Clément n'aime pas du tout [le|la|*l'|les] équitation.",
+							"audio": "sounds/fr/Clément n'aime pas du tout l'équitation.mp3"
+						},
+						{
+							"text": "Je préfère [le|*la|l'|les] musculation.",
+							"audio": "sounds/fr/Je préfère la musculation.mp3"
+						},
+						{
+							"text": "Vous aimez [*le|la|l'|les] basket ?",
+							"audio": "sounds/fr/Vous aimez le basket.mp3"
+						},
+						{
+							"text": "Vous préférez [le|*la|l'|les] France ou [le|*la|l'|les] Suisse ?",
+							"audio": "sounds/fr/Vous préférez la France ou la Suisse.mp3"
+						},
+						{
+							"text": "Je déteste [le|*la|l'|les] pluie !",
+							"audio": "sounds/fr/Je déteste la pluie !.mp3"
+						},
+						{
+							"text": "J'adore [le|*la|l'|les] neige !",
+							"audio": "sounds/fr/J'adore la neige !.mp3"
+						},
+						{
+							"text": "Tu aimes [le|la|l'|*les] animaux ?",
+							"audio": "sounds/fr/Tu aimes les animaux.mp3"
+						}
 					],
 					"titleText": "2. Talking about likes and dislikes"
 				}
@@ -519,9 +539,43 @@
 					"instructionsText": "Listen to this poem by Mymi Doinet about the rainbow and fill in the colours as you hear them.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answer",
-					"phrasesHTML": "<ul><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|Vert|*Rouge] comme un fruit du Mexique</p></li><li><p>[Bleu|Indigo|Jaune|*Orangé|Violet|Vert|Rouge] comme le sable d'Afrique</p></li><li><p>[Bleu|Indigo|*Jaune|Orangé|Violet|Vert|Rouge] comme les girafes chics</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|Violet|*Vert|Rouge] comme un sorbet de Jamaïque</p></li><li><p>[*Bleu|Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme les vagues du Pacifique</p></li><li><p>[Bleu|*Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme un papillon des tropiques</p></li><li><p>[Bleu|Indigo|Jaune|Orangé|*Violet|Vert|Rouge] comme les volcans de Martinique</p></li><li><p>Qui donc est aussi fantastique ?</p></li><li><p>Est-ce un rêve ou est-ce véridique ?</p></li><li><p>C'est dans le ciel magnifique</p></li><li><p>L'arc aux sept couleurs magiques.</p></li></ul><p><i>Mymi Doinet</i></p>",
-					"audio": [
-						"sounds/fr/rainbow-poem.mp3"
+					"items": [
+						{
+							"text": "[Bleu|Indigo|Jaune|Orangé|Violet|Vert|*Rouge] comme un fruit du Mexique"
+						},
+						{
+							"text": "[Bleu|Indigo|Jaune|*Orangé|Violet|Vert|Rouge] comme le sable d'Afrique"
+						},
+						{
+							"text": "[Bleu|Indigo|*Jaune|Orangé|Violet|Vert|Rouge] comme les girafes chics"
+						},
+						{
+							"text": "[Bleu|Indigo|Jaune|Orangé|Violet|*Vert|Rouge] comme un sorbet de Jamaïque"
+						},
+						{
+							"text": "[*Bleu|Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme les vagues du Pacifique"
+						},
+						{
+							"text": "[Bleu|*Indigo|Jaune|Orangé|Violet|Vert|Rouge] comme un papillon des tropiques"
+						},
+						{
+							"text": "[Bleu|Indigo|Jaune|Orangé|*Violet|Vert|Rouge] comme les volcans de Martinique"
+						},
+						{
+							"text": "Qui donc est aussi fantastique ?"
+						},
+						{
+							"text": "Est-ce un rêve ou est-ce véridique ?"
+						},
+						{
+							"text": "C'est dans le ciel magnifique"
+						},
+						{
+							"text": "L'arc aux sept couleurs magiques."
+						},
+						{
+							"text": "Mymi Doinet"
+						}
 					],
 					"titleText": "4. Sept Couleurs Magiques"
 				}

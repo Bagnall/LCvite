@@ -384,31 +384,51 @@
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
 					"instructionsText": "Quand je suis en vacances...",
-					"phrases": [
-						"je ne [travaillez|travailles|*travaille] pas.",
-						"je me [détend|*détends|détendent] !",
-						"je me [*lève|lèves|lèvent] tard.",
-						"je [bronzes|bronzent|*bronze].",
-						"je [lisent|*lis|lit] un peu.",
-						"je [nagent|*nage|nagez].",
-						"je [*fais|fait|font] du tourisme.",
-						"je [*vois|voit|voient] des amis.",
-						"nous [font|faites|*faisons] des randonnées ensemble.",
-						"le soir, ils ne [*cuisinent|cuisinons|cuisine] pas.",
-						"nous [dînent|dînez|*dînons] au restaurant."
-					],
-					"audio": [
-						"sounds/fr/Quand je suis en vacances je ne travaille pas.mp3",
-						"sounds/fr/Quand je suis en vacances je me détends !.mp3",
-						"sounds/fr/Quand je suis en vacances je me lève tard.mp3",
-						"sounds/fr/Quand je suis en vacances je bronze.mp3",
-						"sounds/fr/Quand je suis en vacances je lis un peu.mp3",
-						"sounds/fr/Quand je suis en vacances je nage.mp3",
-						"sounds/fr/Quand je suis en vacances je fais du tourisme.mp3",
-						"sounds/fr/Quand je suis en vacances je vois des amis.mp3",
-						"sounds/fr/Quand je suis en vacances nous faisons des randonnées ensemble.mp3",
-						"sounds/fr/Quand je suis en vacances le soir, ils ne cuisinent pas.mp3",
-						"sounds/fr/Quand je suis en vacances nous dînons au restaurant.mp3"
+					"items": [
+						{
+							"text": "je ne [travaillez|travailles|*travaille] pas.",
+							"audio": "sounds/fr/Quand je suis en vacances je ne travaille pas.mp3"
+						},
+						{
+							"text": "je me [détend|*détends|détendent] !",
+							"audio": "sounds/fr/Quand je suis en vacances je me détends !.mp3"
+						},
+						{
+							"text": "je me [*lève|lèves|lèvent] tard.",
+							"audio": "sounds/fr/Quand je suis en vacances je me lève tard.mp3"
+						},
+						{
+							"text": "je [bronzes|bronzent|*bronze].",
+							"audio": "sounds/fr/Quand je suis en vacances je bronze.mp3"
+						},
+						{
+							"text": "je [lisent|*lis|lit] un peu.",
+							"audio": "sounds/fr/Quand je suis en vacances je lis un peu.mp3"
+						},
+						{
+							"text": "je [nagent|*nage|nagez].",
+							"audio": "sounds/fr/Quand je suis en vacances je nage.mp3"
+						},
+						{
+							"text": "je [*fais|fait|font] du tourisme.",
+							"audio": "sounds/fr/Quand je suis en vacances je fais du tourisme.mp3"
+						},
+						{
+							"text": "je [*vois|voit|voient] des amis.",
+							"audio": "sounds/fr/Quand je suis en vacances je vois des amis.mp3"
+						},
+						{
+							"text": "nous [font|faites|*faisons] des randonnées ensemble.",
+							"audio": "sounds/fr/Quand je suis en vacances nous faisons des randonnées ensemble.mp3"
+						},
+						{
+							"text": "le soir, ils ne [*cuisinent|cuisinons|cuisine] pas.",
+							"audio": "sounds/fr/Quand je suis en vacances le soir, ils ne cuisinent pas.mp3"
+						},
+						{
+							"text": "nous [dînent|dînez|*dînons] au restaurant.",
+							"audio": "sounds/fr/Quand je suis en vacances nous dînons au restaurant.mp3"
+						}
 					],
 					"titleText": "3. Select the correct form of the verb each time in Adèle's description of her holiday activities."
 				}

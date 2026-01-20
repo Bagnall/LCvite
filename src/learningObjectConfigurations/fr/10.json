@@ -400,9 +400,11 @@
 					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> ('Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p><p>&copy; Jacqueline Rosen</p>",
-					"audio": [
-						"sounds/fr/Chacun à son goût !.mp3"
+					"items": [
+						{
+							"text": "Je [*veux|veut|voulons|voulez|veulent] sortir. Tu [*veux|veut|voulons|voulez|veulent] dormir. Annie [veux|*veut|voulons|voulez|veulent] courir.  Dani [veux|*veut|voulons|voulez|veulent] tricoter.  Lucie [veux|*veut|voulons|voulez|veulent] papoter. Millie [veux|*veut|voulons|voulez|veulent] méditer.  Nous [veux|veut|*voulons|voulez|veulent] bouquiner.  Vous [veux|veut|voulons|*voulez|veulent] bavarder. Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.  Les enfants [veux|veut|voulons|voulez|*veulent] grandir. Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir.  Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus ! \u00A9 Jacqueline Rosen",
+							"audio": "sounds/fr/Chacun à son goût !.mp3"
+						}
 					],
 					"titleText": "1. Chacun à son goût !"
 				}
@@ -463,29 +465,47 @@
 					"instructionsTextHTML": "Select <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je vais [au|*à la|à l'|aux] bibliothèque.",
-						"Ma copine travaille [au|*à la|à l'|aux] pharmacie.",
-						"Je vais [*au|à la|à l'|aux] centre commercial.",
-						"Nous allons [au|*à la|à l'|aux] piscine.",
-						"Les enfants sont [au|à la|*à l'|aux]école.",
-						"Mon bureau se trouve [*au|à la|à l'|aux] centre-ville.",
-						"Vous allez [au|à la|*à l'|aux]exposition ?",
-						"Le professeur écrit une lettre [au|à la|à l'|*aux] étudiants.",
-						"Tu veux dîner [*au|à la|à l'|aux] restaurant ce soir ?",
-						"J'aime passer mes vacances [au|à la|à l'|*aux] Pays-Bas."
-					],
-					"audio": [
-						"sounds/fr/Je vais à la bibliothèque.mp3",
-						"sounds/fr/Ma copine travaille à la pharmacie.mp3",
-						"sounds/fr/Je vais au centre commercial.mp3",
-						"sounds/fr/Nous allons à la piscine.mp3",
-						"sounds/fr/Les enfants sont à l'école.mp3",
-						"sounds/fr/Mon bureau se trouve au centre-ville.mp3",
-						"sounds/fr/Vous allez à l'exposition.mp3",
-						"sounds/fr/Le professeur écrit une lettre aux étudiants.mp3",
-						"sounds/fr/Tu veux dîner au restaurant ce soir.mp3",
-						"sounds/fr/J'aime passer mes vacances aux Pays-Bas.mp3"
+					"items": [
+						{
+							"text": "Je vais [au|*à la|à l'|aux] bibliothèque.",
+							"audio": "sounds/fr/Je vais à la bibliothèque.mp3"
+						},
+						{
+							"text": "Ma copine travaille [au|*à la|à l'|aux] pharmacie.",
+							"audio": "sounds/fr/Ma copine travaille à la pharmacie.mp3"
+						},
+						{
+							"text": "Je vais [*au|à la|à l'|aux] centre commercial.",
+							"audio": "sounds/fr/Je vais au centre commercial.mp3"
+						},
+						{
+							"text": "Nous allons [au|*à la|à l'|aux] piscine.",
+							"audio": "sounds/fr/Nous allons à la piscine.mp3"
+						},
+						{
+							"text": "Les enfants sont [au|à la|*à l'|aux]école.",
+							"audio": "sounds/fr/Les enfants sont à l'école.mp3"
+						},
+						{
+							"text": "Mon bureau se trouve [*au|à la|à l'|aux] centre-ville.",
+							"audio": "sounds/fr/Mon bureau se trouve au centre-ville.mp3"
+						},
+						{
+							"text": "Vous allez [au|à la|*à l'|aux]exposition ?",
+							"audio": "sounds/fr/Vous allez à l'exposition.mp3"
+						},
+						{
+							"text": "Le professeur écrit une lettre [au|à la|à l'|*aux] étudiants.",
+							"audio": "sounds/fr/Le professeur écrit une lettre aux étudiants.mp3"
+						},
+						{
+							"text": "Tu veux dîner [*au|à la|à l'|aux] restaurant ce soir ?",
+							"audio": "sounds/fr/Tu veux dîner au restaurant ce soir.mp3"
+						},
+						{
+							"text": "J'aime passer mes vacances [au|à la|à l'|*aux] Pays-Bas.",
+							"audio": "sounds/fr/J'aime passer mes vacances aux Pays-Bas.mp3"
+						}
 					],
 					"titleText": "3. Practise  the prepositions."
 				}

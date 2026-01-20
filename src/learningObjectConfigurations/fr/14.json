@@ -484,32 +484,48 @@
 			{
 				"dropdowns1": {
 					"component": "DropDowns",
-					"id": "dropdowns1",
 					"congratulationsText": "Excellent !",
+					"id": "dropdowns1",
 					"instructionsText": "Select the correct part of the verb to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je [*dois|doit|devons|devez|doivent] écrire une dissertation ce week-end.",
-						"Annie [dois|*doit|devons|devez|doivent] faire une présentation aujourd'hui.",
-						"Nous [dois|doit|*devons|devez|doivent] passer un examen demain.",
-						"Tu [*dois|doit|devons|devez|doivent] faire tes devoirs avant de sortir.",
-						"Marc [dois|*doit|devons|devez|doivent] terminer sa thèse.",
-						"Vous [dois|doit|devons|*devez|doivent] lire ce livre avant le tutorat.",
-						"Les étudiants [dois|doit|devons|devez|*doivent] étudier pendant les vacances.",
-						"On [dois|*doit|devons|devez|doivent] se concentrer pendant les cours.",
-						"Les étudiantes [dois|doit|devons|devez|*doivent] être fatiguées."
-					],
-					"audio": [
-						"sounds/fr/Je dois écrire une dissertation ce weekend.mp3",
-						"sounds/fr/Annie doit faire une présentation aujourd'hui.mp3",
-						"sounds/fr/Nous devons passer un examen demain.mp3",
-						"sounds/fr/Tu dois faire tes devoirs avant de sortir.mp3",
-						"sounds/fr/Marc doit terminer sa thèse.mp3",
-						"sounds/fr/Vous devez lire ce livre avant le tutorat.mp3",
-						"sounds/fr/Les étudiants doivent étudier pendant les vacances.mp3",
-						"sounds/fr/On doit se concentrer pendant les cours.mp3",
-						"sounds/fr/Les étudiantes doivent être fatiguées.mp3"
+					"items": [
+						{
+							"text": "Je [*dois|doit|devons|devez|doivent] écrire une dissertation ce week-end.",
+							"audio": "sounds/fr/Je dois écrire une dissertation ce weekend.mp3"
+						},
+						{
+							"text": "Annie [dois|*doit|devons|devez|doivent] faire une présentation aujourd'hui.",
+							"audio": "sounds/fr/Annie doit faire une présentation aujourd'hui.mp3"
+						},
+						{
+							"text": "Nous [dois|doit|*devons|devez|doivent] passer un examen demain.",
+							"audio": "sounds/fr/Nous devons passer un examen demain.mp3"
+						},
+						{
+							"text": "Tu [*dois|doit|devons|devez|doivent] faire tes devoirs avant de sortir.",
+							"audio": "sounds/fr/Tu dois faire tes devoirs avant de sortir.mp3"
+						},
+						{
+							"text": "Marc [dois|*doit|devons|devez|doivent] terminer sa thèse.",
+							"audio": "sounds/fr/Marc doit terminer sa thèse.mp3"
+						},
+						{
+							"text": "Vous [dois|doit|devons|*devez|doivent] lire ce livre avant le tutorat.",
+							"audio": "sounds/fr/Vous devez lire ce livre avant le tutorat.mp3"
+						},
+						{
+							"text": "Les étudiants [dois|doit|devons|devez|*doivent] étudier pendant les vacances.",
+							"audio": "sounds/fr/Les étudiants doivent étudier pendant les vacances.mp3"
+						},
+						{
+							"text": "On [dois|*doit|devons|devez|doivent] se concentrer pendant les cours.",
+							"audio": "sounds/fr/On doit se concentrer pendant les cours.mp3"
+						},
+						{
+							"text": "Les étudiantes [dois|doit|devons|devez|*doivent] être fatiguées.",
+							"audio": "sounds/fr/Les étudiantes doivent être fatiguées.mp3"
+						}
 					],
 					"titleText": "3 Practise using devoir"
 				}
@@ -522,27 +538,43 @@
 					"instructionsText": "Select the time that you hear.",
 					"showHintsText": "Show hints when moving",
 					"cheatText": "Show answers",
-					"phrases": [
-						"Je [*peux|peut|pouvons|pouvez|peuvent] ouvrir la fenêtre, s'il vous plaît ?",
-						"Max et moi [peux|peut|*pouvons|pouvez|peuvent] venir vous voir demain soir.",
-						"Tu [*peux|peut|pouvons|pouvez|peuvent] expliquer en anglais, si tu veux.",
-						"Mon copain [peux|*peut|pouvons|pouvez|peuvent] traduire le texte.",
-						"Nos amis [peux|peut|pouvons|pouvez|*peuvent] dormir chez nous.",
-						"On [peux|*peut|pouvons|pouvez|peuvent] réviser ensemble.",
-						"Amélie [peux|*peut|pouvons|pouvez|peuvent] se détendre dans le jardin.",
-						"Tes amies [peux|peut|pouvons|pouvez|*peuvent] travailler avec nous.",
-						"Vous [peux|peut|pouvons|*pouvez|peuvent] étudier à la bibliothèque."
-					],
-					"audio": [
-						"sounds/fr/Je peux ouvrir la fenêtre, s'il vous plaît.mp3",
-						"sounds/fr/Max et moi pouvons venir vous voir demain soir.mp3",
-						"sounds/fr/Tu peux expliquer en anglais, si tu veux.mp3",
-						"sounds/fr/Mon copain peut traduire le texte.mp3",
-						"sounds/fr/Nos amis peuvent dormir chez nous.mp3",
-						"sounds/fr/On peut réviser ensemble.mp3",
-						"sounds/fr/Amélie peut se détendre dans le jardin.mp3",
-						"sounds/fr/Tes amies peuvent travailler avec nous.mp3",
-						"sounds/fr/Vous pouvez étudier à la bibliothèque.mp3"
+					"items": [
+						{
+							"text": "Je [*peux|peut|pouvons|pouvez|peuvent] ouvrir la fenêtre, s'il vous plaît ?",
+							"audio": "sounds/fr/Je peux ouvrir la fenêtre, s'il vous plaît.mp3"
+						},
+						{
+							"text": "Max et moi [peux|peut|*pouvons|pouvez|peuvent] venir vous voir demain soir.",
+							"audio": "sounds/fr/Max et moi pouvons venir vous voir demain soir.mp3"
+						},
+						{
+							"text": "Tu [*peux|peut|pouvons|pouvez|peuvent] expliquer en anglais, si tu veux.",
+							"audio": "sounds/fr/Tu peux expliquer en anglais, si tu veux.mp3"
+						},
+						{
+							"text": "Mon copain [peux|*peut|pouvons|pouvez|peuvent] traduire le texte.",
+							"audio": "sounds/fr/Mon copain peut traduire le texte.mp3"
+						},
+						{
+							"text": "Nos amis [peux|peut|pouvons|pouvez|*peuvent] dormir chez nous.",
+							"audio": "sounds/fr/Nos amis peuvent dormir chez nous.mp3"
+						},
+						{
+							"text": "On [peux|*peut|pouvons|pouvez|peuvent] réviser ensemble.",
+							"audio": "sounds/fr/On peut réviser ensemble.mp3"
+						},
+						{
+							"text": "Amélie [peux|*peut|pouvons|pouvez|peuvent] se détendre dans le jardin.",
+							"audio": "sounds/fr/Amélie peut se détendre dans le jardin.mp3"
+						},
+						{
+							"text": "Tes amies [peux|peut|pouvons|pouvez|*peuvent] travailler avec nous.",
+							"audio": "sounds/fr/Tes amies peuvent travailler avec nous.mp3"
+						},
+						{
+							"text": "Vous [peux|peut|pouvons|*pouvez|peuvent] étudier à la bibliothèque.",
+							"audio": "sounds/fr/Vous pouvez étudier à la bibliothèque.mp3"
+						}
 					],
 					"titleText": "4 Practise using pouvoir"
 				}
