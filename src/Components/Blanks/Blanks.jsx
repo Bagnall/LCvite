@@ -1,9 +1,11 @@
 import './Blanks.scss';
 import {
 	AudioClip,
-	ConcatenatedPlaylist,
+	// ConcatenatedPlaylist,
+	CircularAudioProgressAnimatedSpeakerDisplay,
 	IconButton,
 	Info,
+	SequenceAudioController,
 	Word,
 } from '../../Components';
 import {
@@ -38,6 +40,7 @@ export class Blanks extends React.Component {
 		// Grab some items from the DOM
 		// this.congratulationsRef = React.createRef();
 		this.placeholdersRef = React.createRef();
+		this.sequenceRef = React.createRef();
 		this.wordsContainerRef = React.createRef();
 		const {
 			config,
@@ -56,7 +59,7 @@ export class Blanks extends React.Component {
 		const {words = []} = config;
 		let wordTiles = [];
 		let nToPlace = 0;
-		const phraseList = [];
+		// const phraseList = [];
 		let mixer = [];
 		switch (blanksType) {
 			case 'phrases': {
@@ -65,7 +68,7 @@ export class Blanks extends React.Component {
 					const item = items[i];
 					// const phrase = item.text;
 					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
-					const phrase = [];
+					// const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
 							// span it as a target!
@@ -82,15 +85,15 @@ export class Blanks extends React.Component {
 							words.push(cleanedPhraseSplit);
 							nToPlace++;
 						}
-						if (item.audio) {
-							const soundFile = resolveAsset(`${item.audio}`);
-							phraseList.push(
-								<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-									className={`compact inset`}
-									soundFile={soundFile}
-								/></li>
-							);
-						}
+						// if (item.audio) {
+						// 	const soundFile = resolveAsset(`${item.audio}`);
+						// 	phraseList.push(
+						// 		<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
+						// 			className={`compact inset`}
+						// 			soundFile={soundFile}
+						// 		/></li>
+						// 	);
+						// }
 					}
 
 					// if (audio) {
@@ -184,6 +187,12 @@ export class Blanks extends React.Component {
 		this.inLimits = this.inLimits.bind(this);
 		this.pinTiles = this.pinTiles.bind(this);
 
+		// NEW: handlers
+		this.handleMasterTrackChange = this.handleMasterTrackChange.bind(this);
+		this.handleMasterTime = this.handleMasterTime.bind(this);
+		this.handleRowToggle = this.handleRowToggle.bind(this);
+		// this.handleRowSeek = this.handleRowSeek.bind(this);
+
 		this.state = ({
 			...config,
 			id: id,
@@ -192,6 +201,10 @@ export class Blanks extends React.Component {
 			showHints: false,
 			wordTiles: wordTiles,
 			words: words,
+
+			// NEW: playlist UI state
+			activeRowIndex: -1, // which row is currently playing
+			rowProgress: {}, // { [rowIndex]: { currentTime, duration } }
 		});
 	}
 
@@ -253,11 +266,56 @@ export class Blanks extends React.Component {
 		this.setState({ showHints: value });
 	};
 
+	handleMasterStopped = (playlistIndex, playlist) => {
+		const rowIndex = playlist[playlistIndex]?.rowIndex ?? -1;
+
+		this.setState((prev) => ({
+			activeRowIndex: -1,
+			rowProgress: rowIndex >= 0 ? {
+				...prev.rowProgress,
+				[rowIndex]: { currentTime: 0, duration: prev.rowProgress[rowIndex]?.duration || 0 },
+			} : prev.rowProgress
+		}));
+	};
+
+	handleMasterTrackChange(playlistIndex, playlist) {
+		// playlistIndex is 0..playlist.length-1
+		const rowIndex = playlist[playlistIndex]?.rowIndex ?? -1;
+		this.setState({ activeRowIndex: rowIndex });
+	}
+
+	handleMasterTime(playlistIndex, currentTime, duration, playlist) {
+		const rowIndex = playlist[playlistIndex]?.rowIndex;
+		if (rowIndex === undefined) return;
+
+		this.setState((prev) => ({
+			rowProgress: {
+				...prev.rowProgress,
+				[rowIndex]: { currentTime, duration },
+			},
+		}));
+	}
+
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
+		// 1️⃣ Let UI controls behave normally
+		if (this.isInteractiveElement(e.target)) {
+			return;
+		}
+
+		// 2️⃣ Only left mouse button
 		if (e.button && e.button !== 0) return;
+
+		// 3️⃣ ONLY draggable word tiles can start a drag
+		const draggableWord = e.target.closest(".word.draggable");
+		if (!draggableWord) {
+			return;
+		}
+
+		// 4️⃣ Now we know this is a valid tile drag
 		e.preventDefault();
 		e.stopPropagation();
+
 		const {
 			id,
 			firstMouseDown = true,
@@ -313,6 +371,9 @@ export class Blanks extends React.Component {
 
 	handleMouseMove = (e) => {
 		// console.log("handleMouseMove", this.movingPiece !== undefined);// , e);
+		if (this.isInteractiveElement(e.target)) {
+			return;
+		}
 
 		if (this.movingPiece && this.movingPiece.classList.contains("dragging")) {
 			let { height, marginLeft, marginTop, paddingLeft, paddingTop, width } = window.getComputedStyle(this.movingPiece);
@@ -459,6 +520,21 @@ export class Blanks extends React.Component {
 		});
 	};
 
+	handleRowToggle(rowIndex, rowToPlaylistIndex) {
+		const playlistIndex = rowToPlaylistIndex[rowIndex];
+		if (playlistIndex === undefined) return;
+
+		// If the user clicked the active row, toggle play/pause
+		if (this.sequenceRef.current) {
+			if (this.state.activeRowIndex === rowIndex) {
+				this.sequenceRef.current.toggle(); // play/pause
+			} else {
+				// Start playing from that row
+				this.sequenceRef.current.playItem(playlistIndex, { playSequence: false });
+			}
+		}
+	}
+
 	inLimits = () => {
 
 		// Is the piece close to its target position? Enough to show hint highlight or snap it in?
@@ -525,6 +601,16 @@ export class Blanks extends React.Component {
 		return { success: false };
 	};
 
+	isInteractiveElement = (target) => {
+		return (
+			target.closest(".sequence-audio-controller") ||
+			target.closest("input") ||
+			target.closest("button") ||
+			target.closest("select") ||
+			target.closest("textarea")
+		);
+	};
+
 	pinTiles = () => {
 		const { id } = this.state;
 		// console.log("pinTiles id=", id);
@@ -571,7 +657,7 @@ export class Blanks extends React.Component {
 			soundFiles = [],
 			words = [],
 		} = this.state;
-		let {
+		const {
 			wordTiles,
 		} = this.state;
 		const {
@@ -586,11 +672,24 @@ export class Blanks extends React.Component {
 		const tableRows = [];
 		const headerCells = [];
 
+		const playlist = (items || [])
+			.map((it, idx) => ({
+				rowIndex: idx,
+				src: it && it.audio ? resolveAsset(`${it.audio}`) : null,
+			}))
+			.filter(x => !!x.src); // only rows that actually have audio
+
+		const rowToPlaylistIndex = {};
+		playlist.forEach((p, pi) => { rowToPlaylistIndex[p.rowIndex] = pi; });
+
+
 		// phrases, table or questions/answers?
 		switch (blanksType) {
 			case 'phrases': {
 				for (let i = 0; i < items.length; i++) {
 					const item = items[i];
+					const isActive = this.state.activeRowIndex === i;
+					const prog = this.state.rowProgress[i] || { currentTime: 0, duration: 0 };
 					const phrase = [];
 					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
 					for (let j = 0; j < phraseSplit.length; j++) {
@@ -608,19 +707,39 @@ export class Blanks extends React.Component {
 							phrase.push(<span className='word' key={`phraseSpan${i}-${j}`}>{phraseSplit[j]} </span>);
 						}
 					}
-					let soundFile;
-					if (item.audio) {
-						soundFile = resolveAsset(`${item.audio}`);
-						soundFiles.push(soundFile);
-					}
+					// let soundFile;
+					// if (item.audio) {
+					// 	soundFile = resolveAsset(`${item.audio}`);
+					// 	soundFiles.push(soundFile);
+					// }
 					phraseList.push(
-						<li key={`phrase${i}`}><div className='phrase'>{item.audio ? <AudioClip
-							className={`super-compact-speaker inset`}
-							soundFile={soundFile}
-						/> : null}{phrase}</div> </li>
+						<li key={`phrase${i}`}>
+							<div className='phrase'>
+								{item.audio ? <CircularAudioProgressAnimatedSpeakerDisplay
+									className={`super-compact-speaker`}
+									status={isActive ? "playing" : "stopped"} // or "paused" if you track that too
+									progress={prog.currentTime}
+									duration={prog.duration}
+									handleClick={(e) => {
+										e.preventDefault();
+										e.stopPropagation();
+
+										const pi = rowToPlaylistIndex[i];
+										if (pi === undefined) return;
+
+										// click on the active row => toggle
+										if (isActive) {
+											this.sequenceRef.current?.toggle();
+										} else {
+											// play this row
+											this.sequenceRef.current?.playItem(pi, { playSequence: false });
+										}
+									}}
+									title={isActive ? "Click to pause" : "Click to play"}
+								/> : null}{phrase}</div> </li>
 					);
 				}
-				wordTiles = shuffleArray(wordTiles);
+				// wordTiles = shuffleArray(wordTiles);
 				break;
 			}
 			case "table": {
@@ -657,7 +776,7 @@ export class Blanks extends React.Component {
 			case "questions-answers": {
 				for (let i = 1; i <= questions.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
-					soundFiles.push(soundFile);
+					// soundFiles.push(soundFile);
 
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
@@ -710,7 +829,7 @@ export class Blanks extends React.Component {
 			case "pictures-answers": {
 				for (let i = 1; i <= pictures.length; i++) {
 					const soundFile = resolveAsset(`${soundFiles[i - 1]}`);
-					soundFiles.push(soundFile);
+					// soundFiles.push(soundFile);
 
 					tableRows.push(
 						<TableRow key={`${id}row${i}`}>
@@ -742,7 +861,8 @@ export class Blanks extends React.Component {
 			}
 		}
 		// console.log("showHints", showHints, showHints.constructor, typeof showHints);
-
+		console.log("playlist", playlist);
+		console.log(blanksType, "listenDescriptionText", listenDescriptionText, "soundFile", soundFile);
 		return (
 			<div
 				className={`blanks-container type-${blanksType} container ${complete ? 'complete' : ''}`}
@@ -767,12 +887,24 @@ export class Blanks extends React.Component {
 					:
 					null
 				}
-				{soundFiles.length > 0 && blanksType === 'phrases' ?
+				{/* {soundFiles.length > 0 && blanksType === 'phrases' ?
 					<ConcatenatedPlaylist
 						sources={soundFiles}
 						pauseSeconds={0.5}
-					/> : null}
+					/> : null} */}
 
+				{blanksType === "phrases" && playlist.length > 0 ? (
+					<SequenceAudioController
+						ref={this.sequenceRef}
+						sources={playlist.map(p => p.src)}
+						pauseSeconds={0.5}
+						onTrackChange={(playlistIndex) => this.handleMasterTrackChange(playlistIndex, playlist)}
+						onTimeUpdate={(playlistIndex, currentTime, duration) =>
+							this.handleMasterTime(playlistIndex, currentTime, duration, playlist)
+						}
+						onStopped={(playlistIndex) => this.handleMasterStopped(playlistIndex, playlist)}
+					/>
+				) : null}
 
 				<div
 					className={`blanks ${showHints ? 'show-hints' : ''} ${blanksType} mb-8`}

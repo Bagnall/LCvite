@@ -137,6 +137,32 @@ export class IconButton extends React.PureComponent {
 				);
 				break;
 			}
+			case 'pause': {
+				svgContent = (
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 5.518 5.518"
+						// fill="currentColor"
+					>
+						<path
+							d="M95.811 120.052h1.129v4.015h-1.129zM98.012 120.052h1.129v4.015h-1.129z"
+						/>
+					</svg>
+				);
+				break;
+			}
+			case 'play': {
+				svgContent = (
+					<svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 5.518 5.518"
+						// fill="currentColor"
+					>
+						<path
+							d="m98.604 119.736-2.252 1.3-2.252 1.3v-5.2l2.252 1.3z"/>
+					</svg>
+				);
+				break;
+			}
 			case 'alphabetic': {
 				svgContent = (
 					<svg

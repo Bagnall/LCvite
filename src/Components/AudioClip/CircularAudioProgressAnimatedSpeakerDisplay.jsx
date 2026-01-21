@@ -68,7 +68,7 @@ export class CircularAudioProgressAnimatedSpeakerDisplay extends React.PureCompo
 			<span
 				className={`audio-container ${inline ? 'inline' : ''} super-compact-speaker circular-audio-progress-speaker ${status} ${className}`}
 				onClick={handleClick}
-				title={title || (status !== 'playing' ? 'Click to play' : 'Click to pause')}
+				title={title || (status === 'playing' ? 'Click to pause' : 'Click to play')}
 			>
 				<svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
 					{/* Background ring */}

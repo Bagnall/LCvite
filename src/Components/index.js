@@ -36,6 +36,7 @@ export * from './RadioTest';
 export * from './ReadAloud';
 export * from './IconButton';
 export * from './Section';
+export * from './SequenceAudioController';
 export * from './Social';
 export * from './Sortable';
 export * from './TopButton';
