@@ -57,7 +57,7 @@ footer {
 		.elearninglogo {
 			img,
 			svg {
-				height: 53px;
+				height: 45px;
 			}
 		}
 		.copyright {
@@ -207,7 +207,8 @@ html.dark-mode {
 			// 	// justify-self: center;
 			// }
 			.lclogo,
-			.cclogo {
+			.cclogo,
+			.elearninglogo {
 				img,
 				svg {
 					height: 60px;
@@ -249,6 +250,7 @@ html.dark-mode {
 			grid-row-gap: 0;
 			.lclogo,
 			.cclogo,
+			.elearninglogo,
 			.uclogo {
 				img,
 				svg {

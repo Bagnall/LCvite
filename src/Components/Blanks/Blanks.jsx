@@ -287,19 +287,19 @@ export class Blanks extends React.Component {
 
 	handleMouseDown = (e) => {
 		// console.log("handleMouseDown", e);
-		// 1️⃣ Let UI controls behave normally
-		if (this.isInteractiveElement(e.target)) {
-			return;
-		}
+		// // 1️⃣ Let UI controls behave normally
+		// if (this.isInteractiveElement(e.target)) {
+		// 	return;
+		// }
 
-		// 2️⃣ Only left mouse button
-		if (e.button && e.button !== 0) return;
+		// // 2️⃣ Only left mouse button
+		// if (e.button && e.button !== 0) return;
 
-		// 3️⃣ ONLY draggable word tiles can start a drag
-		const draggableWord = e.target.closest(".word.draggable");
-		if (!draggableWord) {
-			return;
-		}
+		// // 3️⃣ ONLY draggable word tiles can start a drag
+		// const draggableWord = e.target.closest(".word.draggable");
+		// if (!draggableWord) {
+		// 	return;
+		// }
 
 		// 4️⃣ Now we know this is a valid tile drag
 		e.preventDefault();
@@ -860,12 +860,10 @@ export class Blanks extends React.Component {
 			<div
 				className={`blanks-container type-${blanksType} container ${complete ? 'complete' : ''}`}
 				id={`${id ? id : ''}`}
-				onMouseDown={this.handleMouseDown}
-				onMouseMove={this.handleMouseMove}
-				onMouseUp={this.handleMouseUp}
-				onTouchStart={this.handleMouseDown}
-				onTouchMove={this.handleMouseMove}
-				onTouchEnd={this.handleMouseUp}
+				onPointerDown={this.handleMouseDown}
+				onPointerMove={this.handleMouseMove}
+				onPointerUp={this.handleMouseUp}
+				onPointerCancel={this.handleMouseUp}
 				key={`${id}Blanks`}
 			>
 				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
