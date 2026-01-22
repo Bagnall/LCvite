@@ -22,7 +22,8 @@ footer {
 		font-family: "OpenSans SemiBold", sans-serif;
 		.copyright,
 		.lclogo,
-		.uclogo {
+		.uclogo,
+		.elearninglogo {
 			margin: 0;
 			justify-self: center;
 		}
@@ -51,6 +52,12 @@ footer {
 			img,
 			svg {
 				height: 45px;
+			}
+		}
+		.elearninglogo {
+			img,
+			svg {
+				height: 53px;
 			}
 		}
 		.copyright {
@@ -127,7 +134,8 @@ footer {
 				color: red;
 			}
 		}
-		.cclogo {
+		.cclogo,
+		.elearninglogo {
 			margin-left: 16px;
 			// grid-area: cclogo;
 			// background: yellow;
@@ -312,7 +320,8 @@ html.dark-mode {
 			// max-width: 1024px;
 			.lclogo,
 			.cclogo,
-			.uclogo {
+			.uclogo,
+			.elearninglogo {
 				width: auto;
 				max-width: none;
 				img,

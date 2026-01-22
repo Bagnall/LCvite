@@ -154,11 +154,14 @@ export class Blanks extends React.Component {
 		this.autoSolve = this.autoSolve.bind(this);
 		this.handleHints = this.handleHints.bind(this);
 		this.handleToggle = this.handleToggle.bind(this);
+		this.handleMasterStopped = this.handleMasterStopped.bind(this);
+		this.handleMasterPlayStateChange =	this.handleMasterPlayStateChange.bind(this);
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
 		this.handleReset = this.handleReset.bind(this);
 		this.inLimits = this.inLimits.bind(this);
+		this.isInteractiveElement =	this.isInteractiveElement.bind(this);
 		this.pinTiles = this.pinTiles.bind(this);
 
 		// NEW: handlers
@@ -263,7 +266,6 @@ export class Blanks extends React.Component {
 		// optional: if stopped, clear activeRowIndex too (you may already do this via onStopped)
 		// if (playState === "stopped") this.setState({ activeRowIndex: -1 });
 	};
-
 
 	handleMasterTrackChange(playlistIndex, playlist) {
 		// playlistIndex is 0..playlist.length-1
@@ -852,8 +854,8 @@ export class Blanks extends React.Component {
 			}
 		}
 		// console.log("showHints", showHints, showHints.constructor, typeof showHints);
-		console.log("playlist", playlist);
-		console.log(blanksType, "listenDescriptionText", listenDescriptionText, "soundFile", soundFile);
+		// console.log("playlist", playlist);
+		// console.log(blanksType, "listenDescriptionText", listenDescriptionText, "soundFile", soundFile);
 		return (
 			<div
 				className={`blanks-container type-${blanksType} container ${complete ? 'complete' : ''}`}

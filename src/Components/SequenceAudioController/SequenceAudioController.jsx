@@ -370,7 +370,11 @@ export class SequenceAudioController extends React.Component {
 				<audio ref={this.audioRef} />
 
 				<div className="controls">
-					<button onClick={this.toggleMasterPlay} title={playState === "playing" ? "Pause" : "Play"}>
+					<button
+						className={`play-pause`}
+						onClick={this.toggleMasterPlay}
+						title={playState === "playing" ? "Pause" : "Play"}
+					>
 						{playState === "playing" ? (
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
 								<path d="M.682.003H7v19.994H.682ZM13 .003h6.318v19.994H13z" style={{ fill: "currentColor" }} />
@@ -387,6 +391,7 @@ export class SequenceAudioController extends React.Component {
 
 					{/* MASTER scrubber (pointer events = mouse + touch) */}
 					<input
+						className={`play-scrubber`}
 						type="range"
 						min="0"
 						max={masterDuration || 0}
@@ -400,7 +405,13 @@ export class SequenceAudioController extends React.Component {
 					/>
 
 					{/* volume icon (unchanged) */}
-					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.001 20">
+					<svg
+						className={`volume-icon`}
+						width="24"
+						height="24"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20.001 20"
+					>
 						<path
 							className="vol1"
 							d="M98.024 132.952h3.269v2.513h-3.269z"
@@ -428,6 +439,7 @@ export class SequenceAudioController extends React.Component {
 					</svg>
 
 					<input
+						className={`volume-slider`}
 						type="range"
 						min="0"
 						max="1"

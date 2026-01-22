@@ -315,7 +315,7 @@
 		],
 		"expandable": false,
 		"id": "grammar",
-		"instructionsTextHTML": "<div style='display: flex'><p>This section introduces key grammar and usage points to show how forms of address and the \"<i>tu</i>\" vs \"<i>vous</i>\" distinction reflect levels of politeness and familiarity in French.</p><img src='images/grammar.png' title='Grammar' alt='Grammar' style='margin-left: 0.8rem;width: 300px; height: 300px;border: 1px solid black;'/></div>",
+		"instructionsTextHTML": "<div style='display: flex'><p>This section introduces key grammar and usage points to show how forms of address and the \"<i>tu</i>\" vs \"<i>vous</i>\" distinction reflect levels of politeness and familiarity in French.</p><img src='images/grammar.svg' title='Grammar' alt='Grammar' style='margin-left: 0.8rem;width: 300px; height: 300px;border: 1px solid black;'/></div>",
 		"menuText": "Grammar",
 		"comment": "menuText wins over titleText",
 		"titleText": "Grammar and Usage"
