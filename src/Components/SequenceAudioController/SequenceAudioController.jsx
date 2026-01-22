@@ -10,13 +10,16 @@ export class SequenceAudioController extends React.Component {
 		// Not in state: avoids rerenders while we fill it
 		this.durations = []; // seconds per track (index -> number)
 
+		// Instance flags (not state) so we don't rerender during pointer interactions
+		this.isScrubbing = false;
+
 		this.state = {
 			clipDuration: 0,
-			clipTime: 0, // committed playback time
-			scrubTime: null, // transient UI-only time while scrubbing
+			clipTime: 0, // current track time
+			scrubTime: null, // transient UI-only MASTER time while scrubbing
 			currentIndex: 0,
 			masterDuration: 0,
-			masterTime: 0,
+			masterTime: 0, // overall sequence time
 			playSequence: false,
 			playState: "stopped", // "playing" | "paused" | "stopped"
 			volume: 1,
@@ -29,7 +32,6 @@ export class SequenceAudioController extends React.Component {
 		audio.addEventListener("ended", this.handleEnded);
 		audio.addEventListener("loadedmetadata", this.handleLoadedMetadata);
 
-		// Optional but very helpful: preload durations so masterDuration is correct from the start.
 		this.preloadDurations();
 	}
 
@@ -39,6 +41,12 @@ export class SequenceAudioController extends React.Component {
 		audio.removeEventListener("ended", this.handleEnded);
 		audio.removeEventListener("loadedmetadata", this.handleLoadedMetadata);
 	}
+
+	emitPlayState = () => {
+		if (this.props.onPlayStateChange) {
+			this.props.onPlayStateChange(this.state.playState);
+		}
+	};
 
 	/* ---------- Duration preload (optional) ---------- */
 
@@ -91,9 +99,14 @@ export class SequenceAudioController extends React.Component {
 
 		for (let i = 0; i < sources.length; i++) {
 			const d = this.durations[i] || 0;
+
+			// if duration unknown (0), treat as "current bucket" to avoid NaNs
+			if (d <= 0) return { index: i, offset: Math.max(0, t) };
+
 			if (t <= d || i === sources.length - 1) {
-				return { index: i, offset: Math.max(0, Math.min(t, d || t)) };
+				return { index: i, offset: Math.max(0, Math.min(t, d)) };
 			}
+
 			t -= d;
 		}
 		return { index: 0, offset: 0 };
@@ -120,7 +133,7 @@ export class SequenceAudioController extends React.Component {
 			this.setState({
 				playSequence: true,
 				playState: "playing",
-			});
+			}, this.emitPlayState);
 			return;
 		}
 
@@ -130,7 +143,7 @@ export class SequenceAudioController extends React.Component {
 		}
 
 		audio.pause();
-		this.setState({ playState: "paused" });
+		this.setState({ playState: "paused" }, this.emitPlayState);
 	};
 
 	toggle = () => {
@@ -139,10 +152,10 @@ export class SequenceAudioController extends React.Component {
 
 		if (playState === "playing") {
 			audio.pause();
-			this.setState({ playState: "paused" });
+			this.setState({ playState: "paused" }, this.emitPlayState);
 		} else if (playState === "paused") {
 			audio.play();
-			this.setState({ playState: "playing" });
+			this.setState({ playState: "playing" }, this.emitPlayState);
 		} else {
 			this.toggleMasterPlay();
 		}
@@ -161,8 +174,6 @@ export class SequenceAudioController extends React.Component {
 		audio.src = src;
 		audio.load();
 
-		// If we can, start at an offset.
-		// Wait for metadata before setting currentTime reliably.
 		const start = () => {
 			try {
 				audio.currentTime = offset || 0;
@@ -173,12 +184,21 @@ export class SequenceAudioController extends React.Component {
 			const shouldPlay = opts.autoplay !== false;
 			if (shouldPlay) audio.play().catch(console.error);
 
+			const d = Number.isFinite(audio.duration) ? audio.duration : (this.durations[index] || 0);
+			this.durations[index] = d;
+
+			const masterDuration = this.computeMasterDuration();
+			const masterTime = this.getMasterTime(index, audio.currentTime);
+
 			this.setState({
-				clipTime: offset || 0,
+				clipDuration: d,
+				clipTime: audio.currentTime,
 				currentIndex: index,
 				playSequence,
 				playState: shouldPlay ? "playing" : "paused",
-			});
+				masterDuration,
+				masterTime,
+			}, this.emitPlayState);
 
 			this.emitTrackChange(index);
 		};
@@ -194,8 +214,8 @@ export class SequenceAudioController extends React.Component {
 	seekMaster = (masterTime) => {
 		const { playState, playSequence } = this.state;
 		const { index, offset } = this.locateMasterTime(masterTime);
-
 		const autoplay = playState === "playing";
+
 		this.playItem(index, { playSequence, offset, autoplay });
 	};
 
@@ -224,14 +244,14 @@ export class SequenceAudioController extends React.Component {
 	};
 
 	handleTimeUpdate = () => {
-		if (this.isScrubbing) return; // 🔴 critical
+		if (this.isScrubbing) return; // ✅ critical: stop flicker + stop tile jump
+
 		const audio = this.audioRef.current;
 		const { currentIndex } = this.state;
 
 		const clipTime = audio.currentTime;
 		const clipDuration = audio.duration || 0;
 
-		// keep masterTime stable across boundaries
 		const masterTime = this.getMasterTime(currentIndex, clipTime);
 		const masterDuration = this.computeMasterDuration();
 
@@ -253,7 +273,10 @@ export class SequenceAudioController extends React.Component {
 		const { currentIndex, playSequence } = this.state;
 
 		if (!playSequence) {
-			this.setState({ playState: "stopped" }, () => this.emitStopped());
+			this.setState({ playState: "stopped" }, () => {
+				this.emitPlayState();
+				this.emitStopped();
+			});
 			return;
 		}
 
@@ -269,105 +292,141 @@ export class SequenceAudioController extends React.Component {
 		}, pauseSeconds * 1000);
 	};
 
+	/* ---------- Scrubber (Pointer events = mouse + touch, no duplication) ---------- */
+
+	startScrub = (e) => {
+		e.stopPropagation();
+		this.isScrubbing = true;
+
+		// Capture pointer so we still get the up event if the user drags off the control
+		if (e.currentTarget && e.pointerId != null) {
+			try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+		}
+
+		// initialise scrub to current masterTime
+		this.setState((prev) => ({ scrubTime: prev.masterTime }));
+	};
+
+	moveScrub = (e) => {
+		// For <input type="range">, the value is already updated on change
+		// We use onChange for the value; no need to do anything here.
+		e.stopPropagation();
+	};
+
+	changeScrub = (e) => {
+		e.stopPropagation();
+		const t = parseFloat(e.target.value);
+		if (!Number.isFinite(t)) return;
+
+		// UI-only while dragging
+		this.setState({ scrubTime: t });
+	};
+
+	endScrub = (e) => {
+		e.stopPropagation();
+
+		if (e.currentTarget && e.pointerId != null) {
+			try {
+				e.currentTarget.releasePointerCapture(e.pointerId);
+			} catch {}
+		}
+
+		this.isScrubbing = false;
+
+		this.setState((prev) => {
+			const commitTime = prev.scrubTime;
+
+			// commit AFTER state clears scrubTime
+			queueMicrotask(() => {
+				if (commitTime != null) {
+					this.seekMaster(commitTime);
+				}
+			});
+
+			return { scrubTime: null };
+		});
+	};
+
+
 	/* ---------- Render ---------- */
 
 	render() {
 		const {
 			masterTime,
 			masterDuration,
+			scrubTime,
 			playState,
 			volume,
 		} = this.state;
 
+		const displayTime = scrubTime !== null ? scrubTime : masterTime;
+
 		return (
-			<div className="sequence-audio-controller"
+			<div
+				className="sequence-audio-controller"
 				onMouseDown={(e) => e.stopPropagation()}
 				onTouchStart={(e) => e.stopPropagation()}
 			>
 				<audio ref={this.audioRef} />
 
 				<div className="controls">
-					<button onClick={this.toggleMasterPlay}>
-						{playState === 'playing' ?
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="16"
-								height="16"
-								viewBox="0 0 20 20">
-								<path d="M.682.003H7v19.994H.682ZM13 .003h6.318v19.994H13z" style={{ "fill": "currentColor" }} />
+					<button onClick={this.toggleMasterPlay} title={playState === "playing" ? "Pause" : "Play"}>
+						{playState === "playing" ? (
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
+								<path d="M.682.003H7v19.994H.682ZM13 .003h6.318v19.994H13z" style={{ fill: "currentColor" }} />
 							</svg>
-							:
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 14 17"
-								xmlns="http://www.w3.org/2000/svg"
-							>
+						) : (
+							<svg width="16" height="16" viewBox="0 0 14 17" xmlns="http://www.w3.org/2000/svg" title="Play">
 								<path
 									d="M12.8378 7.01827L2.19005 0.21473C1.32492 -0.337792 0 0.198383 0 1.56498V15.1688C0 16.3948 1.23114 17.1337 2.19005 16.519L12.8378 9.71877C13.7876 9.11394 13.7906 7.62311 12.8378 7.01827Z"
-									fill="currentColor" />
+									fill="currentColor"
+								/>
 							</svg>
-						}					</button>
+						)}
+					</button>
 
-					{/* MASTER scrubber */}
+					{/* MASTER scrubber (pointer events = mouse + touch) */}
 					<input
 						type="range"
 						min="0"
 						max={masterDuration || 0}
 						step="0.01"
-						value={
-							this.state.scrubTime !== null
-								? this.state.scrubTime
-								: clipTime
-						}
-
-						onMouseDown={() => {
-							this.isScrubbing = true;
-							this.setState({ scrubTime: clipTime });
-						}}
-
-						onChange={(e) => {
-							const time = parseFloat(e.target.value);
-							this.audioRef.current.currentTime = time;
-							this.setState({ scrubTime: time }); // local only
-						}}
-
-						onMouseUp={() => {
-							this.isScrubbing = false;
-
-							if (this.props.onTimeUpdate) {
-								this.props.onTimeUpdate(
-									this.state.currentIndex,
-									this.audioRef.current.currentTime,
-									this.audioRef.current.duration
-								);
-							}
-						}}
-
+						value={displayTime}
+						onPointerDown={this.startScrub}
+						onPointerMove={this.moveScrub}
+						onPointerUp={this.endScrub}
+						onChange={this.changeScrub}
+						title="Play progress"
 					/>
-					<svg
-						width="24"
-						height="24"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20.001 20"
-					>
-						<path className={`vol1`}
+
+					{/* volume icon (unchanged) */}
+					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.001 20">
+						<path
+							className="vol1"
 							d="M98.024 132.952h3.269v2.513h-3.269z"
-							style={{"fill": "currentColor", "opacity": volume > 0.20 ? 1 : volume + 0.1}}
-							transform="translate(-95.102 -119.3)" />
-						<path className={`vol2`}
+							style={{ fill: "currentColor", opacity: volume > 0.2 ? 1 : volume + 0.1 }}
+							transform="translate(-95.102 -119.3)"
+						/>
+						<path
+							className="vol2"
 							d="M102.427 130.321h3.531v5.143h-3.531z"
-							style={{ "fill": "currentColor", "opacity": volume > 0.40 ? 1 : volume + 0.1}}
-							transform="translate(-95.102 -119.3)" />
-						<path className={`vol2`}
+							style={{ fill: "currentColor", opacity: volume > 0.4 ? 1 : volume + 0.1 }}
+							transform="translate(-95.102 -119.3)"
+						/>
+						<path
+							className="vol2"
 							d="M107.025 127.282h3.4v8.182h-3.4z"
-							style={{ "fill": "currentColor", "opacity": volume > 0.60 ? 1 : volume + 0.1}}
-							transform="translate(-95.102 -119.3)" />
-						<path className={`vol3`}
+							style={{ fill: "currentColor", opacity: volume > 0.6 ? 1 : volume + 0.1 }}
+							transform="translate(-95.102 -119.3)"
+						/>
+						<path
+							className="vol3"
 							d="M111.428 124.535h3.662v10.929h-3.662z"
-							style={{"fill": "currentColor", "opacity": volume > 0.80 ? 1 : volume + 0.1}}
-							transform="translate(-95.102 -119.3)" />
+							style={{ fill: "currentColor", opacity: volume > 0.8 ? 1 : volume + 0.1 }}
+							transform="translate(-95.102 -119.3)"
+						/>
 					</svg>
+
 					<input
 						type="range"
 						min="0"
@@ -375,6 +434,9 @@ export class SequenceAudioController extends React.Component {
 						step="0.01"
 						value={volume}
 						onChange={(e) => this.setVolume(parseFloat(e.target.value))}
+						onPointerDown={(e) => e.stopPropagation()}
+						onPointerUp={(e) => e.stopPropagation()}
+						title="Volume"
 					/>
 				</div>
 			</div>

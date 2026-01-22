@@ -47,28 +47,22 @@ export class Blanks extends React.Component {
 		} = props;
 		const {
 			answers,
-			// audio,
 			blanksType,
 			id,
 			items,
-			// phrases,
 			pictures,
 			questions,
 		} = config;
-		// console.log("id", id);
 		const {words = []} = config;
 		let wordTiles = [];
 		let nToPlace = 0;
-		// const phraseList = [];
 		let mixer = [];
 		switch (blanksType) {
 			case 'phrases': {
 				let wordTileIndex = 0;
 				for (let i = 0; i < items.length; i++) {
 					const item = items[i];
-					// const phrase = item.text;
 					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
-					// const phrase = [];
 					for (let j = 0; j < phraseSplit.length; j++) {
 						if (phraseSplit[j][0] === '[') {
 							// span it as a target!
@@ -85,26 +79,7 @@ export class Blanks extends React.Component {
 							words.push(cleanedPhraseSplit);
 							nToPlace++;
 						}
-						// if (item.audio) {
-						// 	const soundFile = resolveAsset(`${item.audio}`);
-						// 	phraseList.push(
-						// 		<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-						// 			className={`compact inset`}
-						// 			soundFile={soundFile}
-						// 		/></li>
-						// 	);
-						// }
 					}
-
-					// if (audio) {
-					// 	const soundFile = resolveAsset(`${audio[i]}`);
-					// 	phraseList.push(
-					// 		<li key={`phrase${i}`}><div className='phrase'>{phrase}</div> <AudioClip
-					// 			className={`compact inset`}
-					// 			soundFile={soundFile}
-					// 		/></li>
-					// 	);
-					// }
 				}
 				wordTiles = shuffleArray(wordTiles);
 				break;
@@ -136,7 +111,7 @@ export class Blanks extends React.Component {
 				wordTiles = shuffleArray(wordTiles);
 				break;
 			}
-			case "pictures-answers":
+			case "pictures-answers": {
 				nToPlace = pictures.length;
 
 				for (let i = 0; i < nToPlace; i++) {
@@ -154,7 +129,7 @@ export class Blanks extends React.Component {
 				}
 
 				break;
-
+			}
 			case "questions-answers": {
 				nToPlace = questions.length;
 
@@ -179,7 +154,6 @@ export class Blanks extends React.Component {
 		this.autoSolve = this.autoSolve.bind(this);
 		this.handleHints = this.handleHints.bind(this);
 		this.handleToggle = this.handleToggle.bind(this);
-		// this.handleChange = this.handleChange.bind(this);
 		this.handleMouseDown = this.handleMouseDown.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseUp = this.handleMouseUp.bind(this);
@@ -191,7 +165,6 @@ export class Blanks extends React.Component {
 		this.handleMasterTrackChange = this.handleMasterTrackChange.bind(this);
 		this.handleMasterTime = this.handleMasterTime.bind(this);
 		this.handleRowToggle = this.handleRowToggle.bind(this);
-		// this.handleRowSeek = this.handleRowSeek.bind(this);
 
 		this.state = ({
 			...config,
@@ -204,6 +177,7 @@ export class Blanks extends React.Component {
 
 			// NEW: playlist UI state
 			activeRowIndex: -1, // which row is currently playing
+			masterPlayState: "stopped",
 			rowProgress: {}, // { [rowIndex]: { currentTime, duration } }
 		});
 	}
@@ -271,12 +245,25 @@ export class Blanks extends React.Component {
 
 		this.setState((prev) => ({
 			activeRowIndex: -1,
+			masterPlayState: "stopped",
 			rowProgress: rowIndex >= 0 ? {
 				...prev.rowProgress,
-				[rowIndex]: { currentTime: 0, duration: prev.rowProgress[rowIndex]?.duration || 0 },
+				[rowIndex]: {
+					currentTime: 0,
+					duration: prev.rowProgress[rowIndex]?.duration || 0
+				},
 			} : prev.rowProgress
 		}));
 	};
+
+	handleMasterPlayStateChange = (playState, playlistIndex, playlist) => {
+		// playState = "playing" | "paused" | "stopped"
+		this.setState({ masterPlayState: playState });
+
+		// optional: if stopped, clear activeRowIndex too (you may already do this via onStopped)
+		// if (playState === "stopped") this.setState({ activeRowIndex: -1 });
+	};
+
 
 	handleMasterTrackChange(playlistIndex, playlist) {
 		// playlistIndex is 0..playlist.length-1
@@ -689,6 +676,10 @@ export class Blanks extends React.Component {
 				for (let i = 0; i < items.length; i++) {
 					const item = items[i];
 					const isActive = this.state.activeRowIndex === i;
+					const { masterPlayState } = this.state;
+
+					const status = isActive ? (masterPlayState === "playing" ? "playing" : "stopped") : "stopped";
+
 					const prog = this.state.rowProgress[i] || { currentTime: 0, duration: 0 };
 					const phrase = [];
 					const phraseSplit = item.text.match(/\[[^\]]+\]|\S+/g);
@@ -717,7 +708,7 @@ export class Blanks extends React.Component {
 							<div className='phrase'>
 								{item.audio ? <CircularAudioProgressAnimatedSpeakerDisplay
 									className={`super-compact-speaker`}
-									status={isActive ? "playing" : "stopped"} // or "paused" if you track that too
+									status={status}
 									progress={prog.currentTime}
 									duration={prog.duration}
 									handleClick={(e) => {
@@ -898,10 +889,28 @@ export class Blanks extends React.Component {
 						ref={this.sequenceRef}
 						sources={playlist.map(p => p.src)}
 						pauseSeconds={0.5}
+
 						onTrackChange={(playlistIndex) => this.handleMasterTrackChange(playlistIndex, playlist)}
-						onTimeUpdate={(playlistIndex, currentTime, duration) =>
-							this.handleMasterTime(playlistIndex, currentTime, duration, playlist)
+
+						onTimeUpdate={(
+							playlistIndex,
+							clipTime,
+							clipDuration,
+							masterTime,
+							masterDuration
+						) =>
+							this.handleMasterTime(
+								playlistIndex,
+								clipTime,
+								clipDuration,
+								playlist
+							)
 						}
+
+						onPlayStateChange={(playState, playlistIndex) =>
+							this.handleMasterPlayStateChange(playState, playlistIndex, playlist)
+						}
+
 						onStopped={(playlistIndex) => this.handleMasterStopped(playlistIndex, playlist)}
 					/>
 				) : null}
