@@ -80,7 +80,7 @@ export class Section extends React.PureComponent {
 						</CardTitle>
 						{/* <Info className={`text accordionarticle`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/> */}
 						{instructionsText ? <p className={`instructions text section`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions html section`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null}
+						{instructionsTextHTML ? <div className={`instructions html section`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null}
 
 					</CardHeader>
 

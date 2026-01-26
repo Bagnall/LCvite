@@ -130,7 +130,7 @@ export class MainMenu extends React.Component {
 	};
 
 	render = () => {
-		const { config, subTitle, toggleDark } = this.props;
+		const { config, title, toggleDark } = this.props;
 		const { menuHighlight, mobileOpen } = this.state;
 
 		if (!config) return null;
@@ -204,7 +204,7 @@ export class MainMenu extends React.Component {
 										href="#special-anchor-top"
 										onClick={this.handleNavClick}
 									>
-										{subTitle}
+										{title}
 									</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>

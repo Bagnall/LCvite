@@ -26,7 +26,6 @@ export class LandingPage extends React.Component{
 							target={`_blank`}
 						>
 							<h1>{learningObject.title}</h1>
-							<h2>{learningObject.subTitle}</h2>
 						</a>
 						{/* {index <= 14 ? index + 1 : 'Demo'}</a> */}
 					</li>

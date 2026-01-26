@@ -7,30 +7,52 @@ footer {
 	background-color: black;
 	.footer-container {
 		color: white;
+		padding: 40px 36px 60px;
+		font-family: "OpenSans SemiBold", sans-serif;
+
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 2fr 80px 45px;
+		grid-template-rows: auto auto auto auto; //2fr 80px 45px 80px;
 		grid-column-gap: 20px;
-		grid-row-gap: 60px;
+		grid-row-gap: 40px;
 		grid-template-areas:
-			"copyright"
 			"uclogo"
-			"squarelogos";
-		padding: 60px 36px; //2.5rem 0;
-		margin: auto;
-		width: 100%;
-		font-family: "OpenSans SemiBold", sans-serif;
-		.copyright,
-		.lclogo,
-		.uclogo,
-		.elearninglogo {
-			margin: 0;
-			justify-self: center;
+			"square-logos"
+			"license"
+			"copyright";
+
+		.uclogo {
+			display: flex;
+			justify-content: flex-end;
+			grid-area: uclogo;
+			a {
+				width: 216px;
+				justify-self: right;
+				grid-area: uclogo;
+				display: inline-block;
+				img {
+					max-width: 100%;
+					&.logo {
+						&.black {
+							display: none;
+						}
+						&.white {
+							&.horizontal {
+								display: none;
+							}
+							&.vertical {
+								display: block;
+							}
+						}
+					}
+				}
+			}
 		}
+
 		.square-logos {
 			display: flex;
-			grid-area: squarelogos;
-			justify-content: end;
+			grid-area: square-logos;
+			justify-content: space-around;
 			a {
 				display: block;
 				&:hover {
@@ -40,28 +62,51 @@ footer {
 				}
 			}
 		}
-		.uclogo {
-			width: 216px;
-			justify-self: right;
-			img {
-				max-width: 100%;
-			}
+
+		$square-logo-height: 50px;
+
+		.square-logo {
+			grid-area: square-logos;
+			display: flex;
+			// background: red;
+			height: $square-logo-height;
+			align-items: flex-end;
 		}
+
 		.lclogo,
 		.cclogo {
-			img,
 			svg {
-				height: 45px;
+				height: 45px; // leaves a little space at the top for the mortar board on elearninglogo
 			}
 		}
 		.elearninglogo {
-			img,
 			svg {
-				height: 45px;
+				height: $square-logo-height;
 			}
 		}
+
+		.license {
+			grid-area: license;
+			font-style: normal;
+			font-family: "OpenSans Regular", sans-serif;
+
+			// font-weight: 400;
+			line-height: 26px; /* 162.5% */
+			font-size: 16px;
+			// margin-top: 32px;
+			color: #b5bdc8;
+			a {
+				font-family: "OpenSans SemiBold", sans-serif;
+				&:hover {
+					color: #00bdb6;
+				}
+			}
+		}
+
 		.copyright {
-			// background: red;
+			grid-area: copyright;
+			justify-self: start;
+			margin: 0;
 			color: #fff;
 			a {
 				text-decoration-line: underline;
@@ -77,165 +122,108 @@ footer {
 			}
 			.copy {
 				font-size: 16px;
-				// font-style: normal;
-				// font-weight: 600;
-				// line-height: 26px; /* 130% */
-			}
-			.developed,
-			.license {
-				font-style: normal;
-				font-family: "OpenSans Regular", sans-serif;
-
-				// font-weight: 400;
-				line-height: 26px; /* 162.5% */
-				font-size: 16px;
-				margin-top: 32px;
-				color: #b5bdc8;
-				a {
-					font-family: "OpenSans SemiBold", sans-serif;
-
-					margin-left: 2px;
-				}
 			}
 			.developed {
 				font-size: 12px;
 				margin-top: 0;
-			}
-
-			grid-area: copyright;
-			// align-self: start;
-			justify-self: start;
-			// max-width: 300px;
-			margin: 0;
-		}
-		img {
-			&.logo {
-				&.black {
-					display: none;
-				}
-				&.white {
-					&.horizontal {
-						display: none;
-					}
-					&.vertical {
-						display: block;
-					}
-				}
-			}
-		}
-
-		.lclogo {
-			// grid-area: lclogo;
-			// background: blue;
-			max-width: 300px;
-			// padding-top: 9px; // To align top of text with top of CC text
-			// height: 80px;
-			&:hover {
-				color: red;
-			}
-		}
-		.cclogo,
-		.elearninglogo {
-			margin-left: 16px;
-			// grid-area: cclogo;
-			// background: yellow;
-			max-width: 300px;
-			// height: 80px;
-		}
-		.uclogo {
-			// grid-area: cclogo;
-			// background: yellow;
-			max-width: 300px;
-			// height: 80px;
-		}
-	}
-}
-
-html.dark-mode {
-	footer {
-		background-color: white;
-		.footer-container {
-			color: black;
-			img {
-				&.logo {
-					&.black {
-						display: block;
-						&.horizontal {
-							display: none;
-						}
-						&.vertical {
-							display: block;
-						}
-					}
-					&.white {
-						display: none;
-						&.horizontal {
-							display: none;
-						}
-						&.vertical {
-							display: none;
-						}
-					}
-				}
+				font-style: normal;
+				font-family: "OpenSans Regular", sans-serif;
 			}
 		}
 	}
 }
 
-// @include respond-above(s) {
+// html.dark-mode {
 // 	footer {
+// 		background-color: white;
 // 		.footer-container {
-// 			// max-width: 320px;
+// 			color: black;
+// 			img {
+// 				&.logo {
+// 					&.black {
+// 						display: block;
+// 						&.horizontal {
+// 							display: none;
+// 						}
+// 						&.vertical {
+// 							display: block;
+// 						}
+// 					}
+// 					&.white {
+// 						display: none;
+// 						&.horizontal {
+// 							display: none;
+// 						}
+// 						&.vertical {
+// 							display: none;
+// 						}
+// 					}
+// 				}
+// 			}
 // 		}
 // 	}
 // }
+
+@include respond-above(s) {
+	footer {
+		.footer-container {
+			.uclogo {
+				justify-content: center;
+				a {
+					width: 320px;
+					img {
+						&.logo {
+							&.white {
+								&.horizontal {
+									display: block;
+								}
+								&.vertical {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @include respond-above(m) {
 	footer {
 		.footer-container {
 			// max-width: 640px;
 			grid-template-columns: 3fr 2fr;
-			grid-template-rows: 60px 81px;
+			grid-template-rows: auto auto auto;
 			grid-template-areas:
-				"copyright squarelogos"
-				"copyright uclogo";
-			grid-row-gap: 36px;
+				"uclogo square-logos"
+				"license license"
+				"copyright copyright";
+			// grid-row-gap: 36px;
 
-			padding: 130px 80px; //2.5rem 0;
-			// .copyright,
-			// .lclogo,
-			// .cclogo {
-			// 	// justify-self: center;
-			// }
-			.lclogo,
-			.cclogo,
-			.elearninglogo {
-				img,
-				svg {
-					height: 60px;
+			.uclogo {
+				justify-content: start;
+			}
+
+			// padding: 130px 80px; //2.5rem 0;
+			.square-logos {
+				// grid-area: square-logos;
+				justify-content: flex-end;
+				gap: 40px;
+				.lclogo,
+				.cclogo {
+					img,
+					svg {
+						height: 52px;
+					}
+				}
+				.elearninglogo {
+					img,
+					svg {
+						height: 58px;
+					}
 				}
 			}
-			// .uclogo {
-			// 	justify-self: bottom;
-			// }
-			// .copyright {
-			// background: red;
-			// grid-area: copyright;
-			// max-width: 1000px;
-			// }
-			// .lclogo {
-			// 	// grid-area: lclogo;
-			// 	// background: blue;
-			// 	max-width: 300px;
-			// 	// height: 80px;
-			// 	justify-self: start;
-			// }
-			// .uclogo {
-			// 	// grid-area: cclogo;
-			// 	// background: yellow;
-			// 	max-width: 300px;
-			// 	// height: 80px;
-			// 	justify-self: end;
-			// }
 		}
 	}
 }
@@ -243,16 +231,15 @@ html.dark-mode {
 	footer {
 		.footer-container {
 			// max-width: 768px;
-			grid-template-columns: 2fr 1fr 3fr; //repeat(2, 1fr);
-			grid-template-rows: 1fr;
-			grid-column-gap: 20px;
-			grid-template-areas: "copyright squarelogos uclogo";
-			grid-row-gap: 0;
+			// grid-template-columns: 2fr 1fr 3fr; //repeat(2, 1fr);
+			// grid-template-rows: 1fr;
+			// grid-column-gap: 20px;
+			// grid-template-areas: "copyright square-logos uclogo";
+			// grid-row-gap: 0;
 			.lclogo,
 			.cclogo,
-			.elearninglogo,
-			.uclogo {
-				img,
+			.elearninglogo {
+				// img,
 				svg {
 					height: 54px;
 				}
@@ -260,6 +247,14 @@ html.dark-mode {
 			.uclogo {
 				width: auto;
 				max-width: none;
+				a {
+					height: 56px; //54px;
+					width: auto;
+					img {
+						height: 100%;
+						width: auto;
+					}
+				}
 				// img {
 				// 	height: 70px;
 				// 	// width: 580px;
@@ -284,36 +279,36 @@ html.dark-mode {
 		}
 	}
 
-	html.dark-mode {
-		footer {
-			background-color: white;
-			.footer-container {
-				color: black;
-				img {
-					&.logo {
-						&.black {
-							display: block;
-							&.horizontal {
-								display: block;
-							}
-							&.vertical {
-								display: none;
-							}
-						}
-						&.white {
-							display: none;
-							&.horizontal {
-								display: none;
-							}
-							&.vertical {
-								display: none;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	// html.dark-mode {
+	// 	footer {
+	// 		background-color: white;
+	// 		.footer-container {
+	// 			color: black;
+	// 			img {
+	// 				&.logo {
+	// 					&.black {
+	// 						display: block;
+	// 						&.horizontal {
+	// 							display: block;
+	// 						}
+	// 						&.vertical {
+	// 							display: none;
+	// 						}
+	// 					}
+	// 					&.white {
+	// 						display: none;
+	// 						&.horizontal {
+	// 							display: none;
+	// 						}
+	// 						&.vertical {
+	// 							display: none;
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 @include respond-above(xxxl) {

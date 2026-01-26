@@ -337,19 +337,19 @@ export default class App extends React.Component {
 		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
 			.then((res) => {
-				const { learningObjects } = res;
-				let title, subTitle, subTitleShort;
+				const { learningObjects, title: siteTitle } = res;
+				let title, titleShort;
 				if (learningObjects[currentLearningObject]) {
-					({ subTitle, title, subTitleShort = '' } = learningObjects[currentLearningObject]);
+					({ title, titleShort = '' } = learningObjects[currentLearningObject]);
 					document.title = title;
 				}
 
 				this.setState({
 					currentLearningObject: currentLearningObject,
 					learningObjects: learningObjects,
-					subTitle: subTitle,
-					subTitleShort: subTitleShort,
+					siteTitle: siteTitle,
 					title: title,
+					titleShort: titleShort,
 				});
 			})
 			.catch((error) => {
@@ -602,6 +602,7 @@ export default class App extends React.Component {
 			showDialog = false,
 			settings,
 			showSpeechError = false,
+			siteTitle,
 		} = this.state;
 		const articles = [];
 		let intro, introHTML, informationHTML;
@@ -618,10 +619,9 @@ export default class App extends React.Component {
 			}
 		}
 
-		let subTitle, subTitleShort;
-		let title;
+		let title, titleShort;
 		if (learningObjects[currentLearningObject]) {
-			({ subTitle = "", title, subTitleShort = '' } =
+			({ title = "", title, titleShort = '' } =
         learningObjects[currentLearningObject - 1] || {});
 		}
 
@@ -659,7 +659,7 @@ export default class App extends React.Component {
 
 					<MainMenu
 						config={config}
-						subTitle={subTitleShort !== '' ? subTitleShort : subTitle}
+						title={titleShort !== '' ? titleShort : title}
 						toggleDark={this.toggleDark}
 					/>
 
@@ -681,10 +681,10 @@ export default class App extends React.Component {
 						<>
 
 							<div id="hero">
-								<h1>{title}</h1>
-								<h1>{subTitle}</h1>
+								<h1>{siteTitle}</h1>
 							</div>
 							<div id="content" key="content">
+								<h1>{title}</h1>
 								<div id="fontSamples">
 									<h1>Heading 1 Feijoa Bold</h1>
 									<h2>Heading 2 Feijoa Medium</h2>
@@ -963,19 +963,19 @@ export default class App extends React.Component {
 							if (defaultTabValue === null) defaultTabValue = tabValue;
 
 							const tabLabel =
-                v.menuText ||
-                v.titleText ||
-                (typeof v.titleTextHTML === "string"
-                	? v.titleTextHTML.replace(/<[^>]+>/g, "")
-                	: "") ||
-                childId;
+								v.menuText ||
+								v.titleText ||
+								(typeof v.titleTextHTML === "string"
+									? v.titleTextHTML.replace(/<[^>]+>/g, "")
+									: "") ||
+								childId;
 
 							const contentNode = this.renderComponentForTab(v);
 
 							tabItems.push({
-								value: tabValue,
-								label: tabLabel,
 								content: contentNode,
+								label: tabLabel,
+								value: tabValue,
 							});
 						}
 					});

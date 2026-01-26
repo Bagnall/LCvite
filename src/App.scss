@@ -349,7 +349,7 @@ hr {
 }
 
 #hero {
-	align-items: center;
+	// align-items: center;
 	background-image: url(/images/fr_banner.svg);
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -357,16 +357,18 @@ hr {
 	display: flex;
 	flex-direction: column;
 	height: 282px;
-	justify-content: space-evenly;
+	// justify-content: space-evenly;
 	margin-bottom: 0.5rem;
 	margin-top: $header-height;
 	max-width: 100%;
 	overflow-y: hidden;
 	padding: 1rem;
+	justify-content: flex-start;
+	align-items: flex-end;
 
 	h1 {
 		margin: 0;
-		background: rgba(255, 255, 255, 0.6);
+		// background: rgba(255, 255, 255, 0.6);
 		color: rgb(0, 0, 161);
 		text-align: center;
 		font-size: 1.5rem;
@@ -374,8 +376,9 @@ hr {
 			0 0 3px white,
 			0 0 3px white,
 			0 0 3px white,
-			0 0 3px white;
-		box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+			0 0 3px white,
+			0 0 12px white;
+		// box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 		padding: 0.2rem 0.4rem;
 		border-radius: 8px;
 	}
@@ -467,8 +470,8 @@ hr {
 		background-position: center center;
 		// background-size: cover;
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-end;
 	}
 	#content {
 		#radio2 {

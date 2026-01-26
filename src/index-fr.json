@@ -1,94 +1,78 @@
 {
 	"learningObjects": [
 		{
-			"title": "French Learning Object 1",
-			"subTitle": "First Contact: greetings, farewells and social niceties",
-			"subTitleShort": "First Contact",
+			"title": "First Contact: greetings, farewells and social niceties",
+			"titleShort": "First Contact",
 			"file": "1"
 		},
 		{
-			"title": "French Learning Object 2",
-			"subTitle": "About me: marital status, occupation",
-			"subTitleShort": "About me",
+			"title": "About me: marital status, occupation",
+			"titleShort": "About me",
 			"file": "2"
 		},
 		{
-			"title": "French Learning Object 3",
-			"subTitle": "Origins and Languages",
+			"title": "Origins and Languages",
 			"file": "3"
 		},
 		{
-			"title": "French Learning Object 4",
-			"subTitle": "Current location",
+			"title": "Current location",
 			"file": "4"
 		},
 		{
-			"title": "French Learning Object 5",
-			"subTitle": "House and Home",
+			"title": "House and Home",
 			"file": "5"
 		},
 		{
-			"title": "French Learning Object 6",
-			"subTitle": "Family, friends and neighbours",
+			"title": "Family, friends and neighbours",
 			"file": "6"
 		},
 		{
-			"title": "French Learning Object 7",
-			"subTitle": "Opinions matter: Likes and dislikes",
-			"subTitleShort": "Opinions matter",
+			"title": "Opinions matter: Likes and dislikes",
+			"titleShort": "Opinions matter",
 			"file": "7"
 		},
 		{
-			"title": "French Learning Object 8",
-			"subTitle": "Free Time",
+			"title": "Free Time",
 			"file": "8"
 		},
 		{
-			"title": "French Learning Object 9",
-			"subTitle": "Phoning in France",
+			"title": "Phoning in France",
 			"file": "9"
 		},
 		{
-			"title": "French Learning Object 10",
-			"subTitle": "Making Arrangements",
+			"title": "Making Arrangements",
 			"file": "10"
 		},
 		{
-			"title": "French Learning Object 11",
-			"subTitle": "Out and about: going to a café",
-			"subTitleShort": "Going to a café",
+			"title": "Out and about: going to a café",
+			"titleShort": "Going to a café",
 			"file": "11"
 		},
 		{
-			"title": "French Learning Object 12",
-			"subTitle": "Out and about: Shopping in the market",
-			"subTitleShort": "Shopping in the market",
+			"title": "Out and about: Shopping in the market",
+			"titleShort": "Shopping in the market",
 			"file": "12"
 		},
 		{
-			"title": "French Learning Object 13",
-			"subTitle": "Daily routine",
+			"title": "Daily routine",
 			"file": "13"
 		},
 		{
-			"title": "French Learning Object 14",
-			"subTitle": "Studying at university",
+			"title": "Studying at university",
 			"file": "14"
 		},
 		{
-			"title": "French Learning Object 15",
-			"subTitle": "Making Arrangements",
+			"title": "Making Arrangements",
 			"file": "15"
 		},
 		{
-			"title": "DEMO",
-			"subTitle": "Sample components to pick from",
+			"title": "Sample components to pick from",
 			"file": "demo"
 		},
 		{
-			"title": "ANSWER",
-			"subTitle": "Answer Table Test",
+			"title": "Answer Table Test",
 			"file": "answer"
 		}
-	]
+	],
+	"title": "French Basic"
 }
