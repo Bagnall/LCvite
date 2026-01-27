@@ -1,75 +1,79 @@
 // Word.scss
+// Styling for draggable word tiles and target blanks
 
 @use "../../../styles/colours.module" as *;
 @use "../../../styles/media-queries" as *;
 @use "../../../styles/variables.module" as *;
 @use "../../../styles/mixins.module" as *;
 
-.word {
-	&.highlight {
-		span {
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: rgb(122, 255, 255);
-				background: radial-gradient(circle, rgba(122, 255, 255, 1) 0%, rgba(0, 212, 255, 0) 100%);
-				z-index: 14;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-		}
-	}
+/* ==========================================================
+   Highlight overlays (drag proximity + hints)
+========================================================== */
+.word.highlight span::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	z-index: 14;
+
+	background: radial-gradient(circle, rgba(122, 255, 255, 1) 0%, rgba(0, 212, 255, 0) 100%);
 }
-.show-hints {
-	.word {
-		&.success.highlight {
-			span {
-				&::after {
-					background: rgb(201, 255, 122);
-					background: radial-gradient(circle, rgba(201, 255, 122, 1) 0%, rgba(0, 212, 255, 0) 100%);
-				}
-			}
-		}
-	}
+
+.show-hints .word.success.highlight span::after {
+	background: radial-gradient(circle, rgba(201, 255, 122, 1) 0%, rgba(0, 212, 255, 0) 100%);
 }
+
+/* ==========================================================
+   Base tile appearance
+========================================================== */
 @mixin ph {
-	// box-shadow: 8px 8px 8px gray;
-	border: 0px; //1px solid transparent;
+	border: 0;
 	padding: 0.25rem 0.5rem;
+
 	background: $ivory;
+
 	font-size: 1.2rem;
 	font-weight: bold;
 	line-height: 1.4rem;
 	min-height: 1.4rem;
+
 	display: inline-block;
 
 	@include respond-above(s) {
 		padding: 0.4rem 1rem;
 	}
 }
+
+/* ==========================================================
+   Structural layout
+========================================================== */
 div.word {
 	display: inline-flex;
 	justify-content: center;
 }
+
 span.word {
 	display: inline;
 }
+
 .word {
-	// cursor: pointer;
 	user-select: none;
-	// display: inline-block;
+
+	/* ---------------- Blank tile ---------------- */
 	&.blank {
 		position: relative;
 
 		span {
 			position: relative;
 			z-index: 10;
-			border-radius: 6px;
-			transition-property: left, top, box-shadow;
-			transition-duration: 1s; //$word-transition-time;
 			margin: 0.25rem;
+
+			border-radius: 6px;
+			@include ph;
+
+			transition-property: left, top, box-shadow;
+			transition-duration: 1s;
+
 			&::after {
 				@include standard-pseudo();
 				position: absolute;
@@ -78,62 +82,57 @@ span.word {
 					-2px -2px 2px inset black,
 					2px 2px 2px inset white;
 			}
-			@include ph;
 		}
 	}
-	// &.placeholder,
-	// &.target {
-	// 	position: relative;
-	// }
+
+	/* ---------------- Drag lifecycle ---------------- */
 
 	&.dragged {
 		position: absolute;
+		cursor: grab;
+
 		span {
 			transition-property: left, top, box-shadow;
-			transition-duration: 1s; //$word-transition-time;
+			transition-duration: 1s;
 		}
-		cursor: grab;
 	}
 
 	&.dragging {
 		position: absolute;
-		z-index: 11; // Over the other pieces
+		z-index: 11;
+		cursor: grab;
+
 		transition:
 			left 0s,
 			top 0s,
-			box-shadow 1s; // $word-transition-time;
-		// transition-duration: 0s;
-		cursor: grab;
+			box-shadow 1s;
+
 		span {
-			transition: box-shadow 1s; // $word-transition-time;
 			box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+			transition: box-shadow 1s;
 		}
 	}
 
 	&.placed {
 		position: absolute;
 		cursor: default;
+
 		span {
 			transition-property: left, top;
-			transition-duration: 1s; //$word-transition-time;
+			transition-duration: 1s;
 		}
 	}
 }
+
+/* ==========================================================
+   Large-screen spacing
+========================================================== */
 @include respond-above(l) {
-	.word {
-		&.blank {
-			span {
-				margin: 0.2rem 1rem;
-			}
-		}
+	.word.blank span {
+		margin: 0.2rem 1rem;
 	}
-	.type-group-table {
-		.word {
-			&.blank {
-				span {
-					margin: 0.2rem 0.2rem;
-				}
-			}
-		}
+
+	.type-group-table .word.blank span {
+		margin: 0.2rem 0.2rem;
 	}
 }

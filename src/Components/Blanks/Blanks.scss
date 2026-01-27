@@ -1,4 +1,5 @@
 // Blanks.scss
+// Main layout + behaviour for Blanks exercises (phrases, tables, pictures, etc.)
 
 @use "../../styles/colours.module" as *;
 @use "../../styles/variables.module" as *;
@@ -6,16 +7,23 @@
 @use "../../styles/mixins.module" as *;
 
 $max-tile-width: 360px;
-@mixin blanks() {
+
+/* ----------------------------------------------------------
+   Shared tile sizing (used for blanks + draggable words)
+---------------------------------------------------------- */
+@mixin blanks-tile() {
 	color: black;
 	width: $max-tile-width;
 	max-width: $max-tile-width;
 	box-sizing: border-box;
-	// padding: 10px;
-	text-align: left;
-	// position: relative;
+	text-align: center;
 }
+
+/* ==========================================================
+   ROOT CONTAINER
+========================================================== */
 .blanks-container {
+	// touch-action intentionally disabled at times; keep commented unless needed
 	// touch-action: none;
 
 	> .blanks,
@@ -24,52 +32,63 @@ $max-tile-width: 360px;
 		z-index: 1;
 	}
 
+	/* --------------------------------------------------------
+     Main exercise column
+  -------------------------------------------------------- */
 	.blanks {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
 		line-height: 1.4em;
 		overflow: visible;
 		box-sizing: border-box;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
-		flex-direction: column;
+
 		color: $text;
 	}
 
+	/* --------------------------------------------------------
+     Draggable words container
+  -------------------------------------------------------- */
 	.words-container {
-		overflow: visible;
-
 		padding: 0.5rem 1rem;
-		top: 0;
-		z-index: 20;
-		transition-property: width;
-		transition-duration: 1s;
 		line-height: 0.5rem;
+		overflow: visible;
+		z-index: 20;
+
+		transition: width 1s;
+
 		.draggable {
+			cursor: pointer;
+			text-align: center;
+			z-index: 23;
+
 			span {
 				box-shadow: 1px 1px 1px black;
 			}
-			cursor: pointer;
-			z-index: 23;
-			text-align: center;
 		}
+
 		.dragging {
 			z-index: 24;
 		}
+
 		.placed {
 			z-index: 22;
 		}
 	}
 
+	/* --------------------------------------------------------
+     Hidden placeholders (measurement only)
+  -------------------------------------------------------- */
 	.placeholders {
-		visibility: hidden; // It's just to get dimensions from a flexible/configurable list of content
+		position: absolute;
 		top: 0;
 		padding: 2rem 3rem;
-		position: absolute;
-		.word {
-			span {
-				opacity: 0.5;
-			}
+		visibility: hidden;
+
+		.word span {
+			opacity: 0.5;
 		}
 	}
 
@@ -78,25 +97,19 @@ $max-tile-width: 360px;
 		font-weight: bold;
 	}
 
+	/* --------------------------------------------------------
+     Help / controls
+  -------------------------------------------------------- */
 	.help {
-		// padding: 0 1rem;
-		// display: flex;
-		// justify-content: space-between;
 		@include help();
-		// width: 100%;
-		// align-items: center;
-		// display: flex;
-		// flex-direction: column;
-		// row-gap: 8px;
-		// justify-content: flex-between;
 	}
 
 	.hidden-help {
 		opacity: 0;
 		transition: opacity 4s;
+
 		&.show {
 			opacity: 1;
-			transition: opacity 4s;
 		}
 	}
 
@@ -105,174 +118,152 @@ $max-tile-width: 360px;
 		align-items: center;
 	}
 
+	/* ==========================================================
+     TYPE MODIFIERS
+  ========================================================== */
+
 	&.type-table,
 	&.type-pictures-answers,
 	&.type-questions-answers {
 		.target-board {
 			padding: 1rem;
 		}
-		// .dragging,
-		// .placed {
-		// 	// margin: 4px;
-		// }
 	}
+
+	/* Drag shadow when moving tiles */
 	&.type-table,
 	&.type-pictures-answers,
 	&.type-questions-answers,
 	&.type-phrases {
-		.dragging {
-			span {
-				box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
-			}
-		}
-	}
-	&.type-pictures-answers,
-	&.type-questions-answers,
-	&.type-phrases,
-	&.type-group-table,
-	&.type-table {
-		.placed {
-			span {
-				// box-shadow: 1px 1px 1px black;
-				// visibility: hidden;
-				// transition:
-				// 	box-shadow 1s,
-				// 	visibility 0s 1s;
-			}
-		}
-	}
-	&.type-pictures-answers {
-		td {
-			img {
-				width: 50px;
-				// transition: width 0.5s;
-				// &:hover {
-				// 	width: 100px;
-				// 	transition: width 0.5s;
-				// 	cursor: zoom-in;
-				// }
-			}
+		.dragging span {
+			box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
 		}
 	}
 
+	/* Pictures in tables */
+	&.type-pictures-answers td img {
+		width: 50px;
+	}
+
+	/* --------------------------------------------------------
+     Phrase layout
+  -------------------------------------------------------- */
 	&.type-phrases {
 		.target-board {
-			padding: 0; // 1rem 0 0;
-			ul {
-				li {
-					min-height: 40px;
-					justify-content: flex-start;
-					align-items: center;
-					column-gap: 12px;
-					margin: 0;
-					flex-direction: row;
-					flex-wrap: wrap;
-					line-height: 2.6rem;
-				}
+			padding: 0;
+
+			ul li {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: flex-start;
+
+				min-height: 40px;
+				column-gap: 12px;
+				line-height: 2.6rem;
+				margin: 0;
 			}
 		}
+
 		.phrase {
-			margin-right: 1rem;
-			column-gap: 8px;
 			display: flex;
-			align-items: center;
-			margin: 2px 1rem 2px 0;
-			flex-direction: row;
 			flex-wrap: wrap;
+			align-items: center;
+
+			column-gap: 8px;
+			margin: 2px 1rem 2px 0;
 		}
 	}
+
+	/* --------------------------------------------------------
+     Pictures / questions layouts
+  -------------------------------------------------------- */
 	&.type-pictures-answers,
 	&.type-questions-answers {
-		> .blanks {
-			> .target-board {
-				.blank {
-					span {
-						opacity: 0;
-						@include blanks();
-						width: $max-tile-width;
-					}
-				}
-			}
-		}
-		.words-container {
-			span {
-				@include blanks();
+		> .blanks > .target-board {
+			.blank span {
+				opacity: 0;
+				@include blanks-tile();
 				width: $max-tile-width;
 			}
+		}
 
+		.words-container {
 			display: flex;
-			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: flex-start;
-		}
-		&.complete {
-			> .blanks {
-				> .target-board {
-					table {
-						td:nth-child(3) {
-							background: white;
-							// opacity: 1;
-							max-width: 1000px;
-							border-color: black;
-							border-width: 1px;
-							border-style: solid;
-							pointer-events: all;
-							transition:
-								max-width 6s 1s,
-								border-color 1s 1s;
-						}
-					}
-				}
+
+			span {
+				@include blanks-tile();
+				width: $max-tile-width;
 			}
 		}
-		// .word {
-		// 	&.blank {
-		// 		@include blanks();
-		// 	}
-		// }
+
+		&.complete table td:nth-child(3) {
+			background: white;
+			max-width: 1000px;
+			border: 1px solid black;
+			pointer-events: all;
+
+			transition:
+				max-width 6s 1s,
+				border-color 1s 1s;
+		}
 	}
+
+	/* ==========================================================
+     TARGET BOARD (merged & deduplicated)
+  ========================================================== */
 	.target-board {
+		background: hsl(0deg, 0%, 90%);
+		padding: 0.3rem;
+
+		font-size: 1.2rem;
+		font-weight: bold;
+
+		.audio-clip {
+			opacity: 0;
+			transition: opacity 1s;
+		}
+
+		/* Blank targets */
 		.word.blank {
-			box-shadow: 0 0 4px red inset;
 			min-width: 140px;
+			box-shadow: 0 0 4px red inset;
+
 			&::before {
 				content: "?";
-				color: red;
-				width: 100%;
-				height: 100%;
+				position: absolute;
+				inset: 0;
+
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				// z-index: 2;
-				position: absolute;
+
+				color: red;
 			}
-		}
 
-		background: hsl(0deg, 0%, 90%); //#ababab;
-		// background: linear-gradient(45deg, rgba(171, 171, 171, 1) 0%, rgba(209, 209, 209, 1) 50%, rgb(218, 218, 218) 73%, rgba(212, 212, 212, 1) 77%, rgba(217, 217, 217, 1) 100%);
-
-		// padding: 0 1rem 0 0;
-		font-size: 1.2rem;
-		font-weight: bold;
-
-		.audio-clip {
-			opacity: 0;
-			transition: opacity 1s;
+			span {
+				opacity: 0;
+				color: $text;
+			}
 		}
 
 		ul {
 			list-style: none;
 			padding-left: 0;
+
 			li {
-				inset: 0;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				margin: 0;
+
 				.word {
 					position: relative;
 				}
+
 				label {
 					font-weight: normal;
 					display: inline-flex;
@@ -280,129 +271,69 @@ $max-tile-width: 360px;
 				}
 			}
 		}
-		.word {
-			&.blank {
-				span {
-					opacity: 0;
-					color: $text;
-				}
-			}
-		}
-	}
-	&.type-table {
-		.target-board {
-			.word.blank {
-				// box-shadow: 0 0 4px red inset;
-				min-width: 150px;
-				// .help {
-				// 	margin-top: 0.5rem;
-			}
-		}
-	}
 
-	.target-board {
-		background: hsl(0deg, 0%, 90%); //#ababab;
-		// background: linear-gradient(45deg, rgba(171, 171, 171, 1) 0%, rgba(209, 209, 209, 1) 50%, rgb(218, 218, 218) 73%, rgba(212, 212, 212, 1) 77%, rgba(217, 217, 217, 1) 100%);
-
-		padding: 0.3rem;
-		font-size: 1.2rem;
-		font-weight: bold;
-
-		.audio-clip {
-			opacity: 0;
-			transition: opacity 1s;
-		}
-
-		ul {
-			list-style: none;
-			padding-left: 0;
-			li {
-				inset: 0;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin: 0;
-				.word {
-					position: relative;
-				}
-				label {
-					font-weight: normal;
-					display: inline-flex;
-					margin-left: 3rem;
-				}
-			}
-		}
-		.word {
-			&.blank {
-				span {
-					opacity: 0;
-				}
-			}
-		}
 		table {
+			border-collapse: collapse;
+			text-align: left;
+
 			box-shadow:
 				-3px -3px 3px rgba(0, 0, 0, 0.4),
 				-3px 3px 3px rgba(0, 0, 0, 0.4),
 				3px 3px 3px rgba(2555, 255, 255, 0.4),
 				3px -3px 3px rgba(2555, 255, 255, 0.4);
 
-			text-align: left;
-			border-collapse: collapse;
 			td,
 			th {
 				font-size: 1rem;
-				border: 1px solid #000000;
-				padding: 0 4px;
 				font-weight: bold;
 				text-align: center;
 				background: white;
-				// span {
-				// 	margin: 4px;
-				// }
+
+				border: 1px solid #000;
+				padding: 0 4px;
 			}
+
 			td:nth-of-type(2),
 			td:nth-of-type(4) {
 				text-align: left;
 			}
-			tbody {
-				border: none;
-				tr {
-					&.spacer {
-						border-right: none;
-						td {
-							border-left: none;
-							border-right: none;
-						}
-					}
-				}
+
+			tbody tr.spacer td {
+				border-left: none;
+				border-right: none;
 			}
 		}
 	}
+
+	&.type-table .target-board .word.blank {
+		min-width: 150px;
+	}
+
 	&.type-group-table {
 		.target-board {
 			padding: 1rem;
 		}
-		table {
-			td {
-				text-align: left;
-			}
+
+		table td {
+			text-align: left;
 		}
 	}
-	&.complete {
-		.audio-clip {
-			opacity: 1;
-			transition: opacity 1s 1s;
-		}
+
+	&.complete .audio-clip {
+		opacity: 1;
+		transition: opacity 1s 1s;
 	}
 }
 
+/* ==========================================================
+   Responsive tweaks
+========================================================== */
 @include respond-above(s) {
 	.words-container {
 		line-height: 3.5rem;
 	}
-	.blanks-container {
-		> .target-board {
-			padding: 1rem 2rem;
-		}
+
+	.blanks-container > .target-board {
+		padding: 1rem 2rem;
 	}
 }
