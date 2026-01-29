@@ -621,7 +621,7 @@ export default class App extends React.Component {
 
 		let title, titleShort;
 		if (learningObjects[currentLearningObject]) {
-			({ title = "", title, titleShort = '' } =
+			({ title = "", titleShort = '' } =
         learningObjects[currentLearningObject - 1] || {});
 		}
 
@@ -637,10 +637,13 @@ export default class App extends React.Component {
 					className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ""}`}
 					key={`languageDiv`}
 				>
-					<a
+					<span
+						aria-hidden="true"
 						className={`special-anchor-target`}
-						id={`special-anchor-top`}
+						id="special-anchor-top"
 						name={`special-anchor-top`}
+						style={{ "position": "absolute", "top": "-4rem" }}
+						tabindex="-1"
 					/>
 					<IconButton
 						id={`backToLinkButton`}

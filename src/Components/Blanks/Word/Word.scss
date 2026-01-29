@@ -16,7 +16,7 @@
 
 	z-index: 14;
 
-	background: radial-gradient(circle, rgba(122, 255, 255, 1) 0%, rgba(0, 212, 255, 0) 100%);
+	// background: radial-gradient(circle, rgba(122, 255, 255, 1) 0%, rgba(0, 212, 255, 0) 100%);
 }
 
 .show-hints .word.success.highlight span::after {
@@ -30,7 +30,9 @@
 	border: 0;
 	padding: 0.25rem 0.5rem;
 
-	background: $ivory;
+	// background: $ivory;
+	background: linear-gradient(135deg, #15466a, #6086a1);
+	color: white;
 
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -68,20 +70,20 @@ span.word {
 			z-index: 10;
 			margin: 0.25rem;
 
-			border-radius: 6px;
+			border-radius: $tile-border-radius;
 			@include ph;
 
 			transition-property: left, top, box-shadow;
 			transition-duration: 1s;
 
-			&::after {
-				@include standard-pseudo();
-				position: absolute;
-				border-radius: 6px;
-				box-shadow:
-					-2px -2px 2px inset black,
-					2px 2px 2px inset white;
-			}
+			// &::after {
+			// 	@include standard-pseudo();
+			// 	position: absolute;
+			// 	border-radius: 6px;
+			// 	box-shadow:
+			// 		-2px -2px 2px inset black,
+			// 		2px 2px 2px inset white;
+			// }
 		}
 	}
 

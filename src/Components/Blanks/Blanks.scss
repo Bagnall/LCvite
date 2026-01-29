@@ -12,7 +12,7 @@ $max-tile-width: 360px;
    Shared tile sizing (used for blanks + draggable words)
 ---------------------------------------------------------- */
 @mixin blanks-tile() {
-	color: black;
+	color: white;
 	width: $max-tile-width;
 	max-width: $max-tile-width;
 	box-sizing: border-box;
@@ -34,7 +34,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Main exercise column
-  -------------------------------------------------------- */
+  	-------------------------------------------------------- */
 	.blanks {
 		display: flex;
 		flex-direction: column;
@@ -50,7 +50,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Draggable words container
-  -------------------------------------------------------- */
+	-------------------------------------------------------- */
 	.words-container {
 		padding: 0.5rem 1rem;
 		line-height: 0.5rem;
@@ -80,7 +80,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Hidden placeholders (measurement only)
-  -------------------------------------------------------- */
+	-------------------------------------------------------- */
 	.placeholders {
 		position: absolute;
 		top: 0;
@@ -99,7 +99,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Help / controls
-  -------------------------------------------------------- */
+	-------------------------------------------------------- */
 	.help {
 		@include help();
 	}
@@ -120,7 +120,7 @@ $max-tile-width: 360px;
 
 	/* ==========================================================
      TYPE MODIFIERS
-  ========================================================== */
+	========================================================== */
 
 	&.type-table,
 	&.type-pictures-answers,
@@ -147,7 +147,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Phrase layout
-  -------------------------------------------------------- */
+	-------------------------------------------------------- */
 	&.type-phrases {
 		.target-board {
 			padding: 0;
@@ -177,7 +177,7 @@ $max-tile-width: 360px;
 
 	/* --------------------------------------------------------
      Pictures / questions layouts
-  -------------------------------------------------------- */
+	-------------------------------------------------------- */
 	&.type-pictures-answers,
 	&.type-questions-answers {
 		> .blanks > .target-board {
@@ -214,7 +214,7 @@ $max-tile-width: 360px;
 
 	/* ==========================================================
      TARGET BOARD (merged & deduplicated)
-  ========================================================== */
+	========================================================== */
 	.target-board {
 		background: hsl(0deg, 0%, 90%);
 		padding: 0.3rem;
@@ -230,23 +230,28 @@ $max-tile-width: 360px;
 		/* Blank targets */
 		.word.blank {
 			min-width: 140px;
-			box-shadow: 0 0 4px red inset;
+			// box-shadow: 0 0 4px red inset;
+			border: dashed 1px rgb(146, 146, 146);
+			border-radius: $tile-border-radius;
 
-			&::before {
-				content: "?";
-				position: absolute;
-				inset: 0;
-
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				color: red;
+			&.highlight {
+				background: radial-gradient(circle, rgba(122, 255, 255, 1) 0%, rgba(0, 212, 255, 0) 100%);
 			}
+			// &::before {
+			// 	content: "?";
+			// 	position: absolute;
+			// 	inset: 0;
+
+			// 	display: flex;
+			// 	align-items: center;
+			// 	justify-content: center;
+
+			// 	color: red;
+			// }
 
 			span {
 				opacity: 0;
-				color: $text;
+				// color: $text;
 			}
 		}
 

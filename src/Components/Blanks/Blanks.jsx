@@ -152,6 +152,7 @@ export class Blanks extends React.Component {
 		}
 
 		this.autoSolve = this.autoSolve.bind(this);
+		this.clearTargetHighlights = this.clearTargetHighlights.bind(this);
 		this.handleHints = this.handleHints.bind(this);
 		this.handleToggle = this.handleToggle.bind(this);
 		this.handleMasterStopped = this.handleMasterStopped.bind(this);
@@ -259,7 +260,7 @@ export class Blanks extends React.Component {
 		}));
 	};
 
-	handleMasterPlayStateChange = (playState, playlistIndex, playlist) => {
+	handleMasterPlayStateChange = (playState) => {// , playlistIndex, playlist) => {
 		// playState = "playing" | "paused" | "stopped"
 		this.setState({ masterPlayState: playState });
 
@@ -364,6 +365,7 @@ export class Blanks extends React.Component {
 			return;
 		}
 
+
 		if (this.movingPiece && this.movingPiece.classList.contains("dragging")) {
 			let { height, marginLeft, marginTop, paddingLeft, paddingTop, width } = window.getComputedStyle(this.movingPiece);
 			height = parseInt(height);
@@ -381,17 +383,25 @@ export class Blanks extends React.Component {
 				this.movingPiece.style.left = `${relMouseX}px`;
 				this.movingPiece.style.top = `${relMouseY}px`;
 
-				if (this.inLimits().success) {
+				const { success, overTarget, targetWord } = this.inLimits();
+				// console.log("targetWord", targetWord);
+
+				if (success) {
 					this.movingPiece.classList.add('highlight');
 					this.movingPiece.classList.add('success');
+					this.clearTargetHighlights();
+					targetWord ? targetWord.classList.add('highlight') : null;
 				}
-				else if (this.inLimits().overTarget){
+				else if (overTarget){
 					this.movingPiece.classList.add('highlight');
 					this.movingPiece.classList.remove('success');
+					targetWord ? targetWord.classList.add('highlight') : null;
 				}
 				else {
 					this.movingPiece.classList.remove('highlight');
 					this.movingPiece.classList.remove('success');
+					// targetWord ? targetWord.classList.remove('highlight') : null;
+					this.clearTargetHighlights();
 				}
 			}
 		}
@@ -405,6 +415,7 @@ export class Blanks extends React.Component {
 		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
+			// id,
 		} = this.state;
 
 		// Check valid spot and valid set of tiles
@@ -472,6 +483,21 @@ export class Blanks extends React.Component {
 				this.movingPiece = undefined;
 			}
 		}
+
+		this.clearTargetHighlights();
+
+	};
+
+	clearTargetHighlights = () => {
+		const { id } = this.state;
+		const targetWords = document.querySelectorAll(`#${id} .target.word`);
+		if (targetWords) {
+			for (let i = 0; i < targetWords.length; i++) { // [...targetWords].forEach((targetWord) => {
+				const targetWord = targetWords[i];
+				targetWord.classList.remove('highlight');
+			}
+		}
+
 	};
 
 	handleReset = () => {
@@ -557,6 +583,7 @@ export class Blanks extends React.Component {
 					"targetLeft": targetLeft,
 					"targetSpan": targetSpan,
 					"targetTop": targetTop,
+					"targetWord": targetWord,
 				};
 			}
 		}
@@ -583,6 +610,7 @@ export class Blanks extends React.Component {
 					// console.log("Boom");
 					return {
 						overTarget: true,
+						"targetWord": targetWord,
 					};
 				}
 			};
@@ -833,7 +861,7 @@ export class Blanks extends React.Component {
 								/>
 							</TableCell>
 							<TableCell>
-								<img src={`${pictures[i - 1]}`}/>
+								<img src={`${pictures[i - 1]}`} alt={`${answers[i - 1]}`} />
 							</TableCell>
 							<TableCell>
 								<Word
@@ -963,6 +991,7 @@ export class Blanks extends React.Component {
 
 
 					<Switch
+						aria-label="Show hints"
 						id={`showHintsId-${id ? id : ''}`}
 						checked={showHints}
 						onCheckedChange={this.handleToggle}

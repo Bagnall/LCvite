@@ -135,17 +135,22 @@ export class Monologue extends React.PureComponent {
 											id={`monologue${id}text`}
 											name={`monologue${id}text`}
 											onChange={this.handleChange}
+											placeHolder={`type your answer`}
 											type='text'
 											value={userInput}
 										/>
 										:
-										<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
+										<Textarea
+											onChange={this.handleChange}
+											placeHolder={`type your answer`}
+											value={userInput}
+										></Textarea>
 									}
 									<Button
 										className={`${compact ? 'sm' : null}`}
 										htmlFor={`monologue${id}text`}
-										type={`submit`}
 										onClick={this.handleValidation}
+										type={`submit`}
 									>Check</Button>
 								</form>
 							)
@@ -166,7 +171,11 @@ export class Monologue extends React.PureComponent {
 							:
 							(
 								<>
-									<Textarea value={userInput} onChange={this.handleChange} ></Textarea>
+									<Textarea
+										onChange={this.handleChange}
+										placeHolder={`type your answer`}
+										value={userInput}
+									></Textarea>
 								</>
 							)
 						}
