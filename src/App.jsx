@@ -637,6 +637,8 @@ export default class App extends React.Component {
 					className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ""}`}
 					key={`languageDiv`}
 				>
+
+
 					<span
 						aria-hidden="true"
 						className={`special-anchor-target`}
@@ -1024,13 +1026,13 @@ export default class App extends React.Component {
 					articles.push(
 						outerWrapper(
 							<Tabs
-								className="group-tabs"
+								className="group-tabs w-full "
 								defaultValue={defaultTabValue || (tabItems[0] && tabItems[0].value)}
 							>
-								<TabsList className="group-tabs-list">
+								<TabsList className="group-tabs-list  py-5 inline-flex rounded-lg border border-border/60 bg-background/80">
 									{tabItems.map((item) => (
 										<TabsTrigger
-											className="cursor-pointer"
+											className="cursor-pointer rounded-none border-r border-border/60 px-4 py-1.5 text-sm data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
 											key={item.value}
 											value={item.value}>
 											{item.label}

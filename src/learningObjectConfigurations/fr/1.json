@@ -315,7 +315,8 @@
 		],
 		"expandable": false,
 		"id": "grammar",
-		"instructionsTextHTML": "<div style='display:flex;flex-wrap:wrap;align-items:flex-start;gap:0.8rem'><p style='flex:1 1 260px;min-width:220px;margin:0'>This section introduces key grammar and usage points to show how forms of address and the \\\"<i>tu</i>\\\" vs \\\"<i>vous</i>\\\" distinction reflect levels of politeness and familiarity in French.</p><img src='images/grammar.svg' title='Grammar' alt='Grammar' style='flex:0 0 auto;width:300px;max-width:100%;height:auto;max-height:300px;box-shadow:4px 4px 4px gray'/></div>",
+		"instructionsTextHTML_OLD": "<div style='display:flex;flex-wrap:wrap;align-items:flex-start;gap:0.8rem'><p style='flex:1 1 260px;min-width:220px;margin:0'>This section introduces key grammar and usage points to show how forms of address and the \"<i>tu</i>\" vs \"<i>vous</i>\" distinction reflect levels of politeness and familiarity in French.</p><img src='images/grammar.svg' title='Grammar' alt='Grammar' style='flex:0 0 auto;width:300px;max-width:100%;height:auto;max-height:300px;box-shadow:4px 4px 4px #8080802e'/></div>",
+		"instructionsTextHTML": "<div style='display:flex;flex-wrap:wrap;align-items:flex-start;gap:0.8rem'><p style='flex:1 1 260px;min-width:220px;margin:0'>This section introduces key grammar and usage points to show how forms of address and the \"<i>tu</i>\" vs \"<i>vous</i>\" distinction reflect levels of politeness and familiarity in French.</p><div style='flex:1 1 300px;display:flex;justify-content:center'><img src='images/grammar.svg' title='Grammar' alt='Grammar' style='width:300px;max-width:100%;height:auto;max-height:300px;box-shadow:4px 4px 4px #8080802e'/></div></div>",
 		"menuText": "Grammar",
 		"comment": "menuText wins over titleText",
 		"titleText": "Grammar and Usage"
