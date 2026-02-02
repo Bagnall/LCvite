@@ -1,6 +1,9 @@
 import './AudioClip.scss';
-import React from 'react';
 import { CircularAudioProgressAnimatedSpeakerDisplay } from '.';
+import React from 'react';
+import {
+	resolveAsset,
+} from '../../utility';
 
 
 export class AudioClip extends React.PureComponent {
@@ -16,6 +19,7 @@ export class AudioClip extends React.PureComponent {
 	}
 
 	notePlaying = (e, useRef) => {
+		// console.log("notePlaying");
 		e.preventDefault();
 		e.stopPropagation();
 		// useRef is true when the player is an audio control
@@ -35,9 +39,11 @@ export class AudioClip extends React.PureComponent {
 			soundFileAudio,
 			status = 'stopped',
 		} = this.state;
+		// console.log("soundFileAudio", soundFileAudio);
 		switch (status) {
 			case 'stopped':
 				this.playSound(e);
+				// soundFileAudio.play();
 				break;
 			case 'paused':
 				this.setState({
@@ -68,7 +74,7 @@ export class AudioClip extends React.PureComponent {
 		e.stopPropagation();
 		const { soundFile } = this.props;
 		this.notePlaying(e, false);
-		const soundFileAudio = new Audio(soundFile);
+		const soundFileAudio = new Audio(resolveAsset(soundFile));
 		this.initialiseProgress(soundFileAudio);
 		soundFileAudio.onended = () => {
 			this.setState({

@@ -28,29 +28,29 @@
 								"instructionsText": "To say hello",
 								"phrases": [
 									[
+										"sounds/sp/¡Hola!.mp3",
 										"¡Hola!",
-										"Hello (formal and informal)",
-										"sounds/sp/¡Hola!.mp3"
+										"Hello (formal and informal)"
 									],
 									[
+										"sounds/sp/Buenos dias.mp3",
 										"Buenos dias",
-										"Good morning",
-										"sounds/sp/Buenos dias.mp3"
+										"Good morning"
 									],
 									[
+										"sounds/sp/Buenas tardes.mp3",
 										"Buenas tardes",
-										"Good afternoon",
-										"sounds/sp/Buenas tardes.mp3"
+										"Good afternoon"
 									],
 									[
+										"sounds/sp/Buenas noches.mp3",
 										"Buenas noches",
-										"Good evening/Good night",
-										"sounds/sp/Buenas noches.mp3"
+										"Good evening/Good night"
 									],
 									[
+										"sounds/sp/¡Qué tal!.mp3",
 										"¡Qué tal!",
-										"What's new",
-										"sounds/sp/¡Qué tal!.mp3"
+										"What's new"
 									]
 								],
 								"titleText": "Hello"
@@ -63,49 +63,49 @@
 								"instructionsText": "To say goodbye",
 								"phrases": [
 									[
+										"sounds/sp/Chao.mp3",
 										"Chao",
-										"Bye bye (informal)",
-										"sounds/sp/Chao.mp3"
+										"Bye bye (informal)"
 									],
 									[
+										"sounds/sp/Adiós.mp3",
 										"Adiós",
-										"Good bye",
-										"sounds/sp/Adiós.mp3"
+										"Good bye"
 									],
 									[
+										"sounds/sp/Adiós, buenas noches.mp3",
 										"Adiós, buenas noches",
-										"Bye, (have a) good evening",
-										"sounds/sp/Adiós, buenas noches.mp3"
+										"Bye, (have a) good evening"
 									],
 									[
+										"sounds/sp/Nos vemos.mp3",
 										"Nos vemos",
-										"See you soon (formal)",
-										"sounds/sp/Nos vemos.mp3"
+										"See you soon (formal)"
 									],
 									[
+										"sounds/sp/Hasta pronto.mp3",
 										"Hasta pronto",
-										"See you soon",
-										"sounds/sp/Hasta pronto.mp3"
+										"See you soon"
 									],
 									[
+										"sounds/sp/Hasta luego.mp3",
 										"Hasta luego",
-										"See you later",
-										"sounds/sp/Hasta luego.mp3"
+										"See you later"
 									],
 									[
+										"sounds/sp/Hasta la vista.mp3",
 										"Hasta la vista",
-										"See you later",
-										"sounds/sp/Hasta la vista.mp3"
+										"See you later"
 									],
 									[
+										"sounds/sp/Hasta mañana.mp3",
 										"Hasta mañana",
-										"See you tomorrow",
-										"sounds/sp/Hasta mañana.mp3"
+										"See you tomorrow"
 									],
 									[
+										"sounds/sp/Hasta el lunes.mp3",
 										"Hasta el lunes",
-										"(+ other days of the week) See you on Monday",
-										"sounds/sp/Hasta el lunes.mp3"
+										"(+ other days of the week) See you on Monday"
 									]
 								],
 								"titleText": "Goodbye"
@@ -138,24 +138,24 @@
 								"id": "PhraseTable3",
 								"phrases": [
 									[
+										"sounds/sp/Hola, Señora Martínez, ¿cómo está.mp3",
 										"Hola, Señora Martínez, ¿cómo está?",
-										"Hello Mrs. Martínez, how are you?",
-										"sounds/sp/Hola, Señora Martínez, ¿cómo está.mp3"
+										"Hello Mrs. Martínez, how are you?"
 									],
 									[
+										"sounds/sp/Muy bien, gracias. ¿Y usted.mp3",
 										"Muy bien, gracias. ¿Y usted?",
-										"Very well, thanks. And you?",
-										"sounds/sp/Muy bien, gracias. ¿Y usted.mp3"
+										"Very well, thanks. And you?"
 									],
 									[
+										"sounds/sp/Buenos días, señor González, ¿Cómo está.mp3",
 										"Buenos días, señor González, ¿Cómo está?",
-										"Hello Mr. González, how are you?",
-										"sounds/sp/Buenos días, señor González, ¿Cómo está.mp3"
+										"Hello Mr. González, how are you?"
 									],
 									[
+										"sounds/sp/Bien, Gracias. Y usted, ¿cómo está.mp3",
 										"Bien, Gracias. Y usted, ¿cómo está?",
-										"Fine, thank you. How about you?",
-										"sounds/sp/Bien, Gracias. Y usted, ¿cómo está.mp3"
+										"Fine, thank you. How about you?"
 									]
 								],
 								"titleText": "Hello"
@@ -172,54 +172,54 @@
 								"id": "PhraseTable4",
 								"phrases": [
 									[
+										"sounds/sp/Hola. ¿Cómo estás.mp3",
 										"Hola. ¿Cómo estás?",
-										"Hello, how are you?",
-										"sounds/sp/Hola. ¿Cómo estás.mp3"
+										"Hello, how are you?"
 									],
 									[
+										"sounds/sp/Bien, gracias. ¿Y tú.mp3",
 										"Bien, gracias. ¿Y tú?",
-										"Fine thank you. And you?",
-										"sounds/sp/Bien, gracias. ¿Y tú.mp3"
+										"Fine thank you. And you?"
 									],
 									[
+										"sounds/sp/Así, Así… ¿Y tú.mp3",
 										"Así, Así… ¿Y tú?",
-										"So - so. And you?",
-										"sounds/sp/Así, Así… ¿Y tú.mp3"
+										"So - so. And you?"
 									],
 									[
+										"sounds/sp/Regular, ¿y tú.mp3",
 										"Regular, ¿y tú?",
-										"Not too bad. And you?",
-										"sounds/sp/Regular, ¿y tú.mp3"
+										"Not too bad. And you?"
 									],
 									[
+										"sounds/sp/Fatal.mp3",
 										"Fatal",
-										"awful",
-										"sounds/sp/Fatal.mp3"
+										"awful"
 									],
 									[
+										"sounds/sp/Fenomenal ¿Y tú qué tal.mp3",
 										"Fenomenal. ¿Y tú qué tal?",
-										"Great. And you?",
-										"sounds/sp/Fenomenal ¿Y tú qué tal.mp3"
+										"Great. And you?"
 									],
 									[
+										"sounds/sp/Desafortunadamente, no muy bien. ¿ Y Tú.mp3",
 										"Desafortunadamente, no muy bien. ¿ Y Tú?",
-										"Not so good, unfortunately. How about you?",
-										"sounds/sp/Desafortunadamente, no muy bien. ¿ Y Tú.mp3"
+										"Not so good, unfortunately. How about you?"
 									],
 									[
+										"sounds/sp/Hola, ¿Qué tal.mp3",
 										"Hola, ¿Qué tal?",
-										"Hi, how is it going?",
-										"sounds/sp/Hola, ¿Qué tal.mp3"
+										"Hi, how is it going?"
 									],
 									[
+										"sounds/sp/Todo bien. ¿Y Tú.mp3",
 										"Todo bien. ¿Y Tú?",
-										"All Fine. And you?",
-										"sounds/sp/Todo bien. ¿Y Tú.mp3"
+										"All Fine. And you?"
 									],
 									[
+										"sounds/sp/Todo bien, gracias. ¿Y tú.mp3",
 										"Todo bien, gracias. ¿Y tú?",
-										"Everything OK, thank you. And you?",
-										"sounds/sp/Todo bien, gracias. ¿Y tú.mp3"
+										"Everything OK, thank you. And you?"
 									]
 								],
 								"titleText": "Goodbye"
@@ -246,24 +246,24 @@
 		"instructionsText": "Listen to formal and informal ways to address people by clicking on the audio icons. The key language is summarised in the table.",
 		"phrases": [
 			[
+				"sounds/sp/¿Cómo estás (tú).mp3",
 				"¿Cómo estás (tú)?",
-				"How are you? (talking to one person)",
-				"sounds/sp/¿Cómo estás (tú).mp3"
+				"How are you? (talking to one person)"
 			],
 			[
+				"sounds/sp/¿Cómo está (usted).mp3",
 				"¿Cómo está (usted)?",
-				"How are you? (talking to one person)",
-				"sounds/sp/¿Cómo está (usted).mp3"
+				"How are you? (talking to one person)"
 			],
 			[
+				"sounds/sp/¿Cómo están (ustedes).mp3",
 				"¿Cómo están (ustedes)?",
-				"How are you? (talking to more than one person)",
-				"sounds/sp/¿Cómo están (ustedes).mp3"
+				"How are you? (talking to more than one person)"
 			],
 			[
+				"sounds/sp/¿Cómo estáis.mp3",
 				"¿Cómo estáis?",
-				"How are you? (talking to more than one person - in Spain)",
-				"sounds/sp/¿Cómo estáis.mp3"
+				"How are you? (talking to more than one person - in Spain)"
 			]
 		],
 		"titleText": "Addressing people: formality and informality"

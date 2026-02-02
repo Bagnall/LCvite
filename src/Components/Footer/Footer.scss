@@ -3,6 +3,8 @@
 @use "../../styles/media-queries.scss" as *;
 @use "../../styles/mixins.module" as *;
 
+$common-width: 216px;
+
 footer {
 	background-color: black;
 	.footer-container {
@@ -23,10 +25,10 @@ footer {
 
 		.uclogo {
 			display: flex;
-			justify-content: flex-end;
+			justify-content: center;
 			grid-area: uclogo;
 			a {
-				width: 216px;
+				width: $common-width;
 				justify-self: right;
 				grid-area: uclogo;
 				display: inline-block;
@@ -52,7 +54,9 @@ footer {
 		.square-logos {
 			display: flex;
 			grid-area: square-logos;
-			justify-content: space-around;
+			justify-content: space-between;
+			width: $common-width;
+			margin: auto;
 			a {
 				display: block;
 				&:hover {
@@ -165,12 +169,13 @@ footer {
 // }
 
 @include respond-above(s) {
+	$common-width: 320px;
 	footer {
 		.footer-container {
 			.uclogo {
 				justify-content: center;
 				a {
-					width: 320px;
+					width: $common-width;
 					img {
 						&.logo {
 							&.white {
@@ -184,6 +189,9 @@ footer {
 						}
 					}
 				}
+			}
+			.square-logos {
+				width: $common-width;
 			}
 		}
 	}

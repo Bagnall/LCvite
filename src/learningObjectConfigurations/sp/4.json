@@ -23,24 +23,24 @@
 					"instructionsText": "",
 					"phrases": [
 						[
+							"sounds/sp/Cómo te llamas. Cuál es tu nombre.mp3",
 							"¿Cómo te llamas? / ¿Cuál es tu nombre? (informal)",
-							"What is your name?",
-							"sounds/sp/Cómo te llamas. Cuál es tu nombre.mp3"
+							"What is your name?"
 						],
 						[
+							"sounds/sp/Me llamo Beatriz. Mi nombre es Beatriz. Y tú.mp3",
 							"Me llamo Beatriz / Mi nombre es Beatriz. ¿Y tú? (informal)",
-							"My name is Anna / I'm Beatriz. And you?",
-							"sounds/sp/Me llamo Beatriz. Mi nombre es Beatriz. Y tú.mp3"
+							"My name is Anna / I'm Beatriz. And you?"
 						],
 						[
+							"sounds/sp/Cuál es su nombre.mp3",
 							"¿Cuál es su nombre? (formal)",
-							"What is your name?",
-							"sounds/sp/Cuál es su nombre.mp3"
+							"What is your name?"
 						],
 						[
+							"sounds/sp/Mi nombre es Pedro. Y el suyo.mp3",
 							"Mi nombre es Pedro. ¿Y el suyo? (formal) ",
-							"My name is Pedro. And you're'?",
-							"sounds/sp/Mi nombre es Pedro. Y el suyo.mp3"
+							"My name is Pedro. And you're'?"
 						]
 					],
 					"titleText": "1."
@@ -53,14 +53,14 @@
 					"instructionsText": "In more formal situations your name can be asked with expressions of permission",
 					"phrases": [
 						[
+							"sounds/sp/Me puede decir su nombre, por favor.mp3",
 							"¿Me puede decir su nombre, por favor? (formal)",
-							"May I have your name please?/What's your name please?",
-							"sounds/sp/Me puede decir su nombre, por favor.mp3"
+							"May I have your name please?/What's your name please?"
 						],
 						[
+							"sounds/sp/Me llamo Laura. mi nombre es Laura.mp3",
 							"Me llamo Laura/ mi nombre es Laura",
-							"My name is Laura/ I'm Laura",
-							"sounds/sp/Me llamo Laura. mi nombre es Laura.mp3"
+							"My name is Laura/ I'm Laura"
 						]
 					],
 					"titleText": "2."

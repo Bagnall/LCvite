@@ -16,12 +16,12 @@ export class SequenceAudioController extends React.Component {
 		this.state = {
 			clipDuration: 0,
 			clipTime: 0, // current track time
-			scrubTime: null, // transient UI-only MASTER time while scrubbing
 			currentIndex: 0,
 			masterDuration: 0,
 			masterTime: 0, // overall sequence time
 			playSequence: false,
 			playState: "stopped", // "playing" | "paused" | "stopped"
+			scrubTime: null, // transient UI-only MASTER time while scrubbing
 			volume: 1,
 		};
 	}
@@ -182,7 +182,7 @@ export class SequenceAudioController extends React.Component {
 			}
 
 			const shouldPlay = opts.autoplay !== false;
-			if (shouldPlay) audio.play().catch(console.error);
+			if (shouldPlay) audio.play().catch(console.error); // eslint-disable-line
 
 			const d = Number.isFinite(audio.duration) ? audio.duration : (this.durations[index] || 0);
 			this.durations[index] = d;
@@ -194,10 +194,10 @@ export class SequenceAudioController extends React.Component {
 				clipDuration: d,
 				clipTime: audio.currentTime,
 				currentIndex: index,
-				playSequence,
-				playState: shouldPlay ? "playing" : "paused",
 				masterDuration,
 				masterTime,
+				playSequence,
+				playState: shouldPlay ? "playing" : "paused",
 			}, this.emitPlayState);
 
 			this.emitTrackChange(index);
@@ -216,7 +216,7 @@ export class SequenceAudioController extends React.Component {
 		const { index, offset } = this.locateMasterTime(masterTime);
 		const autoplay = playState === "playing";
 
-		this.playItem(index, { playSequence, offset, autoplay });
+		this.playItem(index, { autoplay, offset, playSequence });
 	};
 
 	setVolume = (volume) => {
@@ -255,7 +255,12 @@ export class SequenceAudioController extends React.Component {
 		const masterTime = this.getMasterTime(currentIndex, clipTime);
 		const masterDuration = this.computeMasterDuration();
 
-		this.setState({ clipTime, clipDuration, masterTime, masterDuration });
+		this.setState({
+			clipDuration,
+			clipTime,
+			masterDuration,
+			masterTime,
+		});
 
 		if (this.props.onTimeUpdate) {
 			this.props.onTimeUpdate(
@@ -300,7 +305,7 @@ export class SequenceAudioController extends React.Component {
 
 		// Capture pointer so we still get the up event if the user drags off the control
 		if (e.currentTarget && e.pointerId != null) {
-			try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+			try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* empty */ }
 		}
 
 		// initialise scrub to current masterTime
@@ -325,6 +330,7 @@ export class SequenceAudioController extends React.Component {
 	endScrub = (e) => {
 		e.stopPropagation();
 
+		// eslint-disable-next-line eqeqeq
 		if (e.currentTarget && e.pointerId != null) {
 			try {
 				e.currentTarget.releasePointerCapture(e.pointerId);

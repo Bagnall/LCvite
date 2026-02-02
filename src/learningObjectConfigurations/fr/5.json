@@ -19,19 +19,19 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"/sounds/fr/LO5 monologue1.mp3",
 							"J'habite dans un appartement au premier étage d'un grand immeuble.  J'ai une petite cuisine et une salle de séjour et un petit balcon aussi. Ma chambre n'est pas grande, mais elle est confortable. Derrière l'immeuble il y a un jardin communautaire.",
-							"I live in a flat on the first floor of a large block of flats. I've got a small kitchen, a living room and a small balcony as well. My bedroom isn't big, but it's comfortable. Behind the block of flats there's a communal garden.",
-							"/sounds/fr/LO5 monologue1.mp3"
+							"I live in a flat on the first floor of a large block of flats. I've got a small kitchen, a living room and a small balcony as well. My bedroom isn't big, but it's comfortable. Behind the block of flats there's a communal garden."
 						],
 						[
+							"/sounds/fr/LO5 monologue2.mp3",
 							"Cette année, je loue une maison.  Elle est petite. Au rez-de-chaussée, il y a la cuisine et la salle de séjour. A l'étage, il y a deux chambres, une pour moi et une autre pour mes invités. La salle de bains et les toilettes se trouvent à l'étage aussi.",
-							"This year I'm renting a house. It's small. On the ground floor there's the kitchen and the living room. Upstairs there are two bedrooms, one for me and another one for my guests. The bathroom and toilet are upstairs too.",
-							"/sounds/fr/LO5 monologue2.mp3"
+							"This year I'm renting a house. It's small. On the ground floor there's the kitchen and the living room. Upstairs there are two bedrooms, one for me and another one for my guests. The bathroom and toilet are upstairs too."
 						],
 						[
+							"/sounds/fr/LO5 monologue3.mp3",
 							"Mes parents ont une grande maison à la campagne.  Au rez-de-chaussée, il y a une grande cuisine et une buanderie ainsi qu'un salon et une salle à manger et une petite salle de séjour. Ils n'ont pas de bureau.  Au premier étage, il y a une salle de bains, des toilettes, une douche et quatre chambres. Ils ont une cave aussi où ils mettent leur vin !",
-							"My parents have a big house in the countryside. On the ground floor there's a big kitchen, a utility room as well as a lounge and a dining room and a small living room. They don't have a study. On the first floor there's a bathroom, a toilet, a shower room and four bedrooms. They've also got a cellar where they put their wine!",
-							"/sounds/fr/LO5 monologue3.mp3"
+							"My parents have a big house in the countryside. On the ground floor there's a big kitchen, a utility room as well as a lounge and a dining room and a small living room. They don't have a study. On the first floor there's a bathroom, a toilet, a shower room and four bedrooms. They've also got a cellar where they put their wine!"
 						]
 					],
 					"titleText": "Home"

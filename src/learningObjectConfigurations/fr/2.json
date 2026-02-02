@@ -19,19 +19,19 @@
 					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
+							"sounds/fr/Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.mp3",
 							"Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.",
-							"Hi, I'm Sylvain. I'm single. I'm a geography student.",
-							"sounds/fr/Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.mp3"
+							"Hi, I'm Sylvain. I'm single. I'm a geography student."
 						],
 						[
+							"sounds/fr/Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.mp3",
 							"Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.",
-							"Hello, my name's Jacqueline. I'm divorced. I'm a maths teacher",
-							"sounds/fr/Bonjour ! Je m'appelle Jacqueline. Je suis divorcée. Je suis prof de maths.mp3"
+							"Hello, my name's Jacqueline. I'm divorced. I'm a maths teacher"
 						],
 						[
+							"sounds/fr/Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.mp3",
 							"Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.",
-							"Good evening, my name's Olivier Durand. I've been married to Alex for three years and I'm a librarian.",
-							"sounds/fr/Bonsoir ! Je m'appelle Olivier Durand. Je suis marié avec Alex depuis trois ans et je suis bibliothécaire.mp3"
+							"Good evening, my name's Olivier Durand. I've been married to Alex for three years and I'm a librarian."
 						]
 					],
 					"titleText": "A bit about me"

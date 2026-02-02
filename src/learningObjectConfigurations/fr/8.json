@@ -17,14 +17,14 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Tu aimes l'escalade.mp3",
 							"Tu aimes l'escalade ?",
-							"Do you like climbing?",
-							"sounds/fr/Tu aimes l'escalade.mp3"
+							"Do you like climbing?"
 						],
 						[
+							"sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !.mp3",
 							"Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !",
-							"I don't like climbing at all. It's too dangerous! I prefer horse riding. I love horses!",
-							"sounds/fr/Je n'aime pas du tout l'escalade. C'est trop dangereux ! Je préfère l'équitation. J'adore les chevaux !.mp3"
+							"I don't like climbing at all. It's too dangerous! I prefer horse riding. I love horses!"
 						]
 					],
 					"titleText": "Dialogues 1"
@@ -37,29 +37,29 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Qu'est-ce que tu fais le weekend.mp3",
 							"Qu'est-ce que tu fais le weekend ?",
-							"What do you at the weekend?",
-							"sounds/fr/Qu'est-ce que tu fais le weekend.mp3"
+							"What do you at the weekend?"
 						],
 						[
+							"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.mp3",
 							"Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.",
-							"On Saturdays, I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend.",
-							"sounds/fr/Le samedi, je fais de l'aviron. Je prends mon petit-déjeuner au café avec mes amis. Je vais en ville pour faire du shopping. Le soir, je sors avec ma copine.mp3"
+							"On Saturdays, I go rowing. I have my breakfast in a café with my friends. I go into town to do some shopping. In the evening, I go out with my girlfriend."
 						],
 						[
+							"sounds/fr/Et le dimanche.mp3",
 							"Et le dimanche ?",
-							"And on Sundays?",
-							"sounds/fr/Et le dimanche.mp3"
+							"And on Sundays?"
 						],
 						[
+							"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3",
 							"Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi ?",
-							"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?",
-							"sounds/fr/Le dimanche, je fais de la natation. L'après-midi, s'il fait beau, je fais de la randonnée avec mon frère. S'il fait mauvais, je lis un peu ou je regarde la télé. Et toi.mp3"
+							"On Sundays, I go swimming. In the afternoon, if the weather's good, I go hiking with my brother. If the weather's bad. I read a bit, or I watch the tv. What about you?"
 						],
 						[
+							"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3",
 							"Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !",
-							"I don't do much. I have a lie-in. I see my friends. Sometimes I go to the cinema, or I go clubbing. It depends.",
-							"sounds/fr/Je ne fais pas grand' chose. Je fais la grasse matinée. Je vois mes amis. Quelquefois, je vais au cinéma ou je vais en boîte. Ça dépend !.mp3"
+							"I don't do much. I have a lie-in. I see my friends. Sometimes I go to the cinema, or I go clubbing. It depends."
 						]
 					],
 					"titleText": "Dialogues 2"
@@ -72,19 +72,19 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Vous jouez d'un instrument de musique.mp3",
 							"Vous jouez d'un instrument de musique ?",
-							"Do you play a musical instrument?",
-							"sounds/fr/Vous jouez d'un instrument de musique.mp3"
+							"Do you play a musical instrument?"
 						],
 						[
+							"sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3",
 							"Oui, je joue du piano et de la clarinette aussi. Et vous ?",
-							"Yes, I play the piano and the clarinet. What about you?",
-							"sounds/fr/Oui, je joue du piano et de la clarinette aussi. Et vous.mp3"
+							"Yes, I play the piano and the clarinet. What about you?"
 						],
 						[
+							"sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3",
 							"Je joue de l'accordéon et joue du piano aussi.",
-							"I play the accordion, and I play the piano too.",
-							"sounds/fr/Je joue de l'accordéon et joue du piano aussi.mp3"
+							"I play the accordion, and I play the piano too."
 						]
 					],
 					"titleText": "Dialogues 3"
@@ -97,14 +97,14 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3",
 							"Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous ?",
-							"On Saturdays, I play basketball. Do you fancy playing basketball with us?",
-							"sounds/fr/Le samedi, je joue au basket. Ça te dit de jouer au basket avec nous.mp3"
+							"On Saturdays, I play basketball. Do you fancy playing basketball with us?"
 						],
 						[
+							"sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage !.mp3",
 							"Le samedi, je ne peux pas - je joue au volley. C'est dommage !",
-							"On Saturdays, I can't - I play volleyball. It's a pity!",
-							"sounds/fr/Le samedi, je ne peux pas - je joue au volley. C'est dommage !.mp3"
+							"On Saturdays, I can't - I play volleyball. It's a pity!"
 						]
 					],
 					"titleText": "Dialogues 4"

@@ -19,19 +19,19 @@
 					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
+							"sounds/fr/Tu as des frères et des sœurs.mp3",
 							"Tu as des frères et des sœurs ?",
-							"Have you got brothers and sisters?",
-							"sounds/fr/Tu as des frères et des sœurs.mp3"
+							"Have you got brothers and sisters?"
 						],
 						[
+							"sounds/fr/Oui, j'ai un grand frère et deux petites sœurs. Et toi.mp3",
 							"Oui, j'ai un grand frère et deux petites sœurs. Et toi ?",
-							"Yes, I have a big (older) brother and two little (younger) sisters. What about you?",
-							"sounds/fr/Oui, j'ai un grand frère et deux petites sœurs. Et toi.mp3"
+							"Yes, I have a big (older) brother and two little (younger) sisters. What about you?"
 						],
 						[
+							"sounds/fr/Je n'ai pas de frères, mais j'ai une sœur-jumelle.mp3",
 							"Je n'ai pas de frères, mais j'ai une sœur-jumelle.",
-							"I haven't got any brothers, but I've got a twin sister.",
-							"sounds/fr/Je n'ai pas de frères, mais j'ai une sœur-jumelle.mp3"
+							"I haven't got any brothers, but I've got a twin sister."
 						]
 					],
 					"titleText": "Dialogues 1"
@@ -44,19 +44,19 @@
 					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
+							"sounds/fr/Vous avez des frères et des sœurs.mp3",
 							"Vous avez des frères et des sœurs ?",
-							"Have you got brothers and sisters?",
-							"sounds/fr/Vous avez des frères et des sœurs.mp3"
+							"Have you got brothers and sisters?"
 						],
 						[
+							"sounds/fr/Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous.mp3",
 							"Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous ?",
-							"No, I've got neither brothers nor sisters. I'm an only child. What about you?",
-							"sounds/fr/Non, je n'ai ni frères ni sœurs. Je suis enfant unique. Et vous.mp3"
+							"No, I've got neither brothers nor sisters. I'm an only child. What about you?"
 						],
 						[
+							"sounds/fr/J'ai un demi-frère et une demi-sœur.mp3",
 							"J'ai un demi-frère et une demi-sœur.",
-							"I've got a half-brother and a half-sister.",
-							"sounds/fr/J'ai un demi-frère et une demi-sœur.mp3"
+							"I've got a half-brother and a half-sister."
 						]
 					],
 					"titleText": "Dialogues 2"
@@ -69,29 +69,29 @@
 					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
+							"sounds/fr/Caroline, vous avez des enfants.mp3",
 							"Caroline, vous avez des enfants ?",
-							"Caroline, do you have any children?",
-							"sounds/fr/Caroline, vous avez des enfants.mp3"
+							"Caroline, do you have any children?"
 						],
 						[
+							"sounds/fr/Ah non, nous n'avons pas d'enfants, pas encore ! Et vous.mp3",
 							"Ah non, nous n'avons pas d'enfants, pas encore ! Et vous ?",
-							"Oh no, we haven't got any children, not yet. What about you?",
-							"sounds/fr/Ah non, nous n'avons pas d'enfants, pas encore ! Et vous.mp3"
+							"Oh no, we haven't got any children, not yet. What about you?"
 						],
 						[
+							"sounds/fr/Oui, j'ai un fils.mp3",
 							"Oui, j'ai un fils.",
-							"Yes, I've got a son.",
-							"sounds/fr/Oui, j'ai un fils.mp3"
+							"Yes, I've got a son."
 						],
 						[
+							"sounds/fr/Il a quel âge.mp3",
 							"Il a quel âge ?",
-							"How old is he?",
-							"sounds/fr/Il a quel âge.mp3"
+							"How old is he?"
 						],
 						[
+							"sounds/fr/C'est un bébé. Il a cinq mois.mp3",
 							"C'est un bébé. Il a cinq mois.",
-							"He's a baby. He's five months old.",
-							"sounds/fr/C'est un bébé. Il a cinq mois.mp3"
+							"He's a baby. He's five months old."
 						]
 					],
 					"titleText": "Dialogues 3"

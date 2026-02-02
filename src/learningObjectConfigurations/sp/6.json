@@ -22,34 +22,34 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Introducción.mp3",
 				"Introducción",
-				"Introduction",
-				"sounds/sp/Introducción.mp3"
+				"Introduction"
 			],
 			[
+				"sounds/sp/En español usamos diferentes estructuras para hablar del tiempo.mp3",
 				"En español usamos diferentes estructuras para hablar del tiempo.",
-				"In Spanish we use different structures to talk about the weather.",
-				"sounds/sp/En español usamos diferentes estructuras para hablar del tiempo.mp3"
+				"In Spanish we use different structures to talk about the weather."
 			],
 			[
+				"sounds/sp/Hace plus sustantivo gives Hace sol, Hace viento, Hace calor.mp3",
 				"Hace + sustantivo → Hace sol, Hace viento, Hace calor.",
-				"Hace + noun → It is sunny, It is windy, It is hot.",
-				"sounds/sp/Hace plus sustantivo gives Hace sol, Hace viento, Hace calor.mp3"
+				"Hace + noun → It is sunny, It is windy, It is hot."
 			],
 			[
+				"sounds/sp/Hay plus sustantivo gives Hay niebla, Hay tormenta.mp3",
 				"Hay + sustantivo → Hay niebla, Hay tormenta.",
-				"Hay + noun → There is fog, There is a storm.",
-				"sounds/sp/Hay plus sustantivo gives Hay niebla, Hay tormenta.mp3"
+				"Hay + noun → There is fog, There is a storm."
 			],
 			[
+				"sounds/sp/Está plus adjetivo gives Está nublado, Está despejado.mp3",
 				"Está + adjetivo → Está nublado, Está despejado.",
-				"Está + adjective → It is cloudy, It is clear.",
-				"sounds/sp/Está plus adjetivo gives Está nublado, Está despejado.mp3"
+				"Está + adjective → It is cloudy, It is clear."
 			],
 			[
+				"sounds/sp/Estas expresiones se usan para describir el clima y el estado del cielo.mp3",
 				"Estas expresiones se usan para describir el clima y el estado del cielo.",
-				"These expressions are used to describe the climate and the state of the sky.",
-				"sounds/sp/Estas expresiones se usan para describir el clima y el estado del cielo.mp3"
+				"These expressions are used to describe the climate and the state of the sky."
 			]
 		],
 		"titleText": "El tiempo y las estaciones / The Weather and the Seasons"
@@ -63,19 +63,19 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/España tiene muchos climas diferentes en el norte llueve mucho, en el sur hace calor y sol.mp3",
 				"España tiene muchos climas diferentes: en el norte llueve mucho, en el sur hace calor y sol.",
-				"Spain has many different climates: in the north it rains a lot, in the south it is hot and sunny.",
-				"sounds/sp/España tiene muchos climas diferentes en el norte llueve mucho, en el sur hace calor y sol.mp3"
+				"Spain has many different climates: in the north it rains a lot, in the south it is hot and sunny."
 			],
 			[
+				"sounds/sp/En algunos países latinoamericanos, las estaciones son opuestas a las de Europa.mp3",
 				"En algunos países latinoamericanos, las estaciones son opuestas a las de Europa.",
-				"In some Latin American countries, the seasons are opposite to those in Europe.",
-				"sounds/sp/En algunos países latinoamericanos, las estaciones son opuestas a las de Europa.mp3"
+				"In some Latin American countries, the seasons are opposite to those in Europe."
 			],
 			[
+				"sounds/sp/Por ejemplo, en Argentina la Navidad es en verano.mp3",
 				"Por ejemplo, en Argentina la Navidad es en verano.",
-				"For example, in Argentina Christmas is in summer.",
-				"sounds/sp/Por ejemplo, en Argentina la Navidad es en verano.mp3"
+				"For example, in Argentina Christmas is in summer."
 			]
 		],
 		"titleText": "Sabías que… / Did you know…"
@@ -89,24 +89,24 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/la primavera.mp3",
 				"la primavera 🌸",
-				"spring",
-				"sounds/sp/la primavera.mp3"
+				"spring"
 			],
 			[
+				"sounds/sp/el verano.mp3",
 				"el verano ☀️",
-				"summer",
-				"sounds/sp/el verano.mp3"
+				"summer"
 			],
 			[
+				"sounds/sp/el otoño.mp3",
 				"el otoño 🍂",
-				"autumn / fall",
-				"sounds/sp/el otoño.mp3"
+				"autumn / fall"
 			],
 			[
+				"sounds/sp/el invierno.mp3",
 				"el invierno ❄️",
-				"winter",
-				"sounds/sp/el invierno.mp3"
+				"winter"
 			]
 		],
 		"titleText": "Las estaciones / The seasons"
@@ -120,59 +120,59 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Hace sol.mp3",
 				"Hace sol ☀️",
-				"It is sunny",
-				"sounds/sp/Hace sol.mp3"
+				"It is sunny"
 			],
 			[
+				"sounds/sp/Hace viento.mp3",
 				"Hace viento 💨",
-				"It is windy",
-				"sounds/sp/Hace viento.mp3"
+				"It is windy"
 			],
 			[
+				"sounds/sp/Hace calor.mp3",
 				"Hace calor 🌡️",
-				"It is hot",
-				"sounds/sp/Hace calor.mp3"
+				"It is hot"
 			],
 			[
+				"sounds/sp/Hace frío.mp3",
 				"Hace frío ❄️",
-				"It is cold",
-				"sounds/sp/Hace frío.mp3"
+				"It is cold"
 			],
 			[
+				"sounds/sp/Está nublado.mp3",
 				"Está nublado ☁️",
-				"It is cloudy",
-				"sounds/sp/Está nublado.mp3"
+				"It is cloudy"
 			],
 			[
+				"sounds/sp/Está despejado.mp3",
 				"Está despejado 🌞",
-				"It is clear",
-				"sounds/sp/Está despejado.mp3"
+				"It is clear"
 			],
 			[
+				"sounds/sp/Está lloviendo.mp3",
 				"Está lloviendo 🌧️",
-				"It is raining",
-				"sounds/sp/Está lloviendo.mp3"
+				"It is raining"
 			],
 			[
+				"sounds/sp/Nieva.mp3",
 				"Nieva ❄️",
-				"It is snowing",
-				"sounds/sp/Nieva.mp3"
+				"It is snowing"
 			],
 			[
+				"sounds/sp/Hay tormenta.mp3",
 				"Hay tormenta ⛈️",
-				"There is a storm",
-				"sounds/sp/Hay tormenta.mp3"
+				"There is a storm"
 			],
 			[
+				"sounds/sp/Hay niebla.mp3",
 				"Hay niebla 🌫️",
-				"There is fog",
-				"sounds/sp/Hay niebla.mp3"
+				"There is fog"
 			],
 			[
+				"sounds/sp/Hay arcoíris.mp3",
 				"Hay arcoíris 🌈",
-				"There is a rainbow",
-				"sounds/sp/Hay arcoíris.mp3"
+				"There is a rainbow"
 			]
 		],
 		"titleText": "El tiempo / The weather"
@@ -186,29 +186,29 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Hace mucho calor.mp3",
 				"Hace mucho calor",
-				"It is very hot",
-				"sounds/sp/Hace mucho calor.mp3"
+				"It is very hot"
 			],
 			[
+				"sounds/sp/Hace un poco de frío.mp3",
 				"Hace un poco de frío",
-				"It is a bit cold",
-				"sounds/sp/Hace un poco de frío.mp3"
+				"It is a bit cold"
 			],
 			[
+				"sounds/sp/Está a veinte grados.mp3",
 				"Está a veinte grados",
-				"It is twenty degrees.",
-				"sounds/sp/Está a veinte grados.mp3"
+				"It is twenty degrees."
 			],
 			[
+				"sounds/sp/Está bajo cero.mp3",
 				"Está bajo cero",
-				"It is below zero.",
-				"sounds/sp/Está bajo cero.mp3"
+				"It is below zero."
 			],
 			[
+				"sounds/sp/El tiempo es templado.mp3",
 				"El tiempo es templado",
-				"The weather is mild.",
-				"sounds/sp/El tiempo es templado.mp3"
+				"The weather is mild."
 			]
 		],
 		"titleText": "Temperaturas e intensidad / Temperatures and intensity"
@@ -222,19 +222,19 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Qué tiempo hace hoy Hace sol y calor.mp3",
 				"— ¿Qué tiempo hace hoy? — Hace sol y calor.",
-				"— What's the weather like today? — It's sunny and hot.",
-				"sounds/sp/Qué tiempo hace hoy Hace sol y calor.mp3"
+				"— What's the weather like today? — It's sunny and hot."
 			],
 			[
+				"sounds/sp/Llueve en tu ciudad Sí, mucho.mp3",
 				"— ¿Llueve en tu ciudad? — Sí, mucho.",
-				"— Does it rain in your city? — Yes, a lot.",
-				"sounds/sp/Llueve en tu ciudad Sí, mucho.mp3"
+				"— Does it rain in your city? — Yes, a lot."
 			],
 			[
+				"sounds/sp/Qué estación prefieres Prefiero el otoño porque no hace tanto calor.mp3",
 				"— ¿Qué estación prefieres? — Prefiero el otoño porque no hace tanto calor.",
-				"— Which season do you prefer? — I prefer autumn because it's not so hot.",
-				"sounds/sp/Qué estación prefieres Prefiero el otoño porque no hace tanto calor.mp3"
+				"— Which season do you prefer? — I prefer autumn because it's not so hot."
 			]
 		],
 		"titleText": "Mini diálogos / Mini dialogues"
@@ -304,129 +304,129 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Hay chubascos.mp3",
 				"Hay chubascos 🌧️",
-				"There are showers",
-				"sounds/sp/Hay chubascos.mp3"
+				"There are showers"
 			],
 			[
+				"sounds/sp/Hay relámpagos.mp3",
 				"Hay relámpagos ⚡",
-				"There is lightning",
-				"sounds/sp/Hay relámpagos.mp3"
+				"There is lightning"
 			],
 			[
+				"sounds/sp/Hay truenos.mp3",
 				"Hay truenos 🌩️",
-				"There is thunder",
-				"sounds/sp/Hay truenos.mp3"
+				"There is thunder"
 			],
 			[
+				"sounds/sp/Hay tormentas eléctricas.mp3",
 				"Hay tormentas eléctricas ⛈️",
-				"There are electrical storms",
-				"sounds/sp/Hay tormentas eléctricas.mp3"
+				"There are electrical storms"
 			],
 			[
+				"sounds/sp/Está tronando.mp3",
 				"Está tronando ⚡",
-				"It is thundering",
-				"sounds/sp/Está tronando.mp3"
+				"It is thundering"
 			],
 			[
+				"sounds/sp/Cae granizo Hay granizo.mp3",
 				"Cae granizo / Hay granizo ❄️",
-				"Hail is falling / There is hail",
-				"sounds/sp/Cae granizo Hay granizo.mp3"
+				"Hail is falling / There is hail"
 			],
 			[
+				"sounds/sp/Está helando.mp3",
 				"Está helando ❄️",
-				"It is freezing",
-				"sounds/sp/Está helando.mp3"
+				"It is freezing"
 			],
 			[
+				"sounds/sp/Hay escarcha.mp3",
 				"Hay escarcha ❄️",
-				"There is frost",
-				"sounds/sp/Hay escarcha.mp3"
+				"There is frost"
 			],
 			[
+				"sounds/sp/Está lloviznando.mp3",
 				"Está lloviznando 🌦️",
-				"It is drizzling",
-				"sounds/sp/Está lloviznando.mp3"
+				"It is drizzling"
 			],
 			[
+				"sounds/sp/Hay lloviznas dispersas.mp3",
 				"Hay lloviznas dispersas 🌦️",
-				"There are scattered showers",
-				"sounds/sp/Hay lloviznas dispersas.mp3"
+				"There are scattered showers"
 			],
 			[
+				"sounds/sp/Hace bochorno.mp3",
 				"Hace bochorno 🌡️",
-				"It is humid / muggy",
-				"sounds/sp/Hace bochorno.mp3"
+				"It is humid / muggy"
 			],
 			[
+				"sounds/sp/Hay humedad.mp3",
 				"Hay humedad 💧",
-				"There is humidity",
-				"sounds/sp/Hay humedad.mp3"
+				"There is humidity"
 			],
 			[
+				"sounds/sp/El cielo está cubierto.mp3",
 				"El cielo está cubierto ☁️",
-				"The sky is overcast",
-				"sounds/sp/El cielo está cubierto.mp3"
+				"The sky is overcast"
 			],
 			[
+				"sounds/sp/El cielo está despejado.mp3",
 				"El cielo está despejado 🌞",
-				"The sky is clear",
-				"sounds/sp/El cielo está despejado.mp3"
+				"The sky is clear"
 			],
 			[
+				"sounds/sp/Se esperan precipitaciones.mp3",
 				"Se esperan precipitaciones 🌧️",
-				"Precipitation is expected",
-				"sounds/sp/Se esperan precipitaciones.mp3"
+				"Precipitation is expected"
 			],
 			[
+				"sounds/sp/Suben las temperaturas.mp3",
 				"Suben las temperaturas 🔼🌡️",
-				"Temperatures are rising",
-				"sounds/sp/Suben las temperaturas.mp3"
+				"Temperatures are rising"
 			],
 			[
+				"sounds/sp/Bajan las temperaturas.mp3",
 				"Bajan las temperaturas 🔽🌡️",
-				"Temperatures are dropping",
-				"sounds/sp/Bajan las temperaturas.mp3"
+				"Temperatures are dropping"
 			],
 			[
+				"sounds/sp/Hace un calor insoportable.mp3",
 				"Hace un calor insoportable 🔥",
-				"It is unbearably hot",
-				"sounds/sp/Hace un calor insoportable.mp3"
+				"It is unbearably hot"
 			],
 			[
+				"sounds/sp/Hace un frío que pela.mp3",
 				"Hace un frío que pela 🥶",
-				"It is freezing cold (colloquial)",
-				"sounds/sp/Hace un frío que pela.mp3"
+				"It is freezing cold (colloquial)"
 			],
 			[
+				"sounds/sp/Hace un día horrible.mp3",
 				"Hace un día horrible 🌧️",
-				"It is a horrible day",
-				"sounds/sp/Hace un día horrible.mp3"
+				"It is a horrible day"
 			],
 			[
+				"sounds/sp/Hace un día estupendo.mp3",
 				"Hace un día estupendo ☀️",
-				"It is a wonderful day",
-				"sounds/sp/Hace un día estupendo.mp3"
+				"It is a wonderful day"
 			],
 			[
+				"sounds/sp/Se espera una ola de calor frío.mp3",
 				"Se espera una ola de calor / frío 🔥❄️",
-				"A heatwave / cold spell is expected",
-				"sounds/sp/Se espera una ola de calor frío.mp3"
+				"A heatwave / cold spell is expected"
 			],
 			[
+				"sounds/sp/El pronóstico del tiempo.mp3",
 				"El pronóstico del tiempo 🌍",
-				"The weather forecast",
-				"sounds/sp/El pronóstico del tiempo.mp3"
+				"The weather forecast"
 			],
 			[
+				"sounds/sp/La alerta meteorológica.mp3",
 				"La alerta meteorológica 🚨",
-				"Weather alert",
-				"sounds/sp/La alerta meteorológica.mp3"
+				"Weather alert"
 			],
 			[
+				"sounds/sp/Hay viento fuerte.mp3",
 				"Hay viento fuerte 💨",
-				"There is strong wind",
-				"sounds/sp/Hay viento fuerte.mp3"
+				"There is strong wind"
 			]
 		],
 		"titleText": "Extensión – Vocabulario meteorológico avanzado / Advanced Weather Vocabulary"

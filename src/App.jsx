@@ -645,7 +645,7 @@ export default class App extends React.Component {
 						id="special-anchor-top"
 						name={`special-anchor-top`}
 						style={{ "position": "absolute", "top": "-4rem" }}
-						tabindex="-1"
+						tabIndex="-1"
 					/>
 					<IconButton
 						id={`backToLinkButton`}

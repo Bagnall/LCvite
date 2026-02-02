@@ -23,289 +23,289 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/cero.mp3",
 				"cero",
-				"Zero",
-				"sounds/sp/cero.mp3"
+				"Zero"
 			],
 			[
+				"sounds/sp/uno.mp3",
 				"uno",
-				"One",
-				"sounds/sp/uno.mp3"
+				"One"
 			],
 			[
+				"sounds/sp/dos.mp3",
 				"dos",
-				"Two",
-				"sounds/sp/dos.mp3"
+				"Two"
 			],
 			[
+				"sounds/sp/tres.mp3",
 				"tres",
-				"Three",
-				"sounds/sp/tres.mp3"
+				"Three"
 			],
 			[
+				"sounds/sp/cuatro.mp3",
 				"cuatro",
-				"Four",
-				"sounds/sp/cuatro.mp3"
+				"Four"
 			],
 			[
+				"sounds/sp/cinco.mp3",
 				"cinco",
-				"Five",
-				"sounds/sp/cinco.mp3"
+				"Five"
 			],
 			[
+				"sounds/sp/seis.mp3",
 				"seis",
-				"Six",
-				"sounds/sp/seis.mp3"
+				"Six"
 			],
 			[
+				"sounds/sp/siete.mp3",
 				"siete",
-				"Seven",
-				"sounds/sp/siete.mp3"
+				"Seven"
 			],
 			[
+				"sounds/sp/ocho.mp3",
 				"ocho",
-				"Eight",
-				"sounds/sp/ocho.mp3"
+				"Eight"
 			],
 			[
+				"sounds/sp/nueve.mp3",
 				"nueve",
-				"Nine",
-				"sounds/sp/nueve.mp3"
+				"Nine"
 			],
 			[
+				"sounds/sp/diez.mp3",
 				"diez",
-				"Ten",
-				"sounds/sp/diez.mp3"
+				"Ten"
 			],
 			[
+				"sounds/sp/once.mp3",
 				"once",
-				"Eleven",
-				"sounds/sp/once.mp3"
+				"Eleven"
 			],
 			[
+				"sounds/sp/doce.mp3",
 				"doce",
-				"Twelve",
-				"sounds/sp/doce.mp3"
+				"Twelve"
 			],
 			[
+				"sounds/sp/trece.mp3",
 				"trece",
-				"Thirteen",
-				"sounds/sp/trece.mp3"
+				"Thirteen"
 			],
 			[
+				"sounds/sp/catorce.mp3",
 				"catorce",
-				"Fourteen",
-				"sounds/sp/catorce.mp3"
+				"Fourteen"
 			],
 			[
+				"sounds/sp/quince.mp3",
 				"quince",
-				"Fifteen",
-				"sounds/sp/quince.mp3"
+				"Fifteen"
 			],
 			[
+				"sounds/sp/dieciséis.mp3",
 				"dieciséis",
-				"Sixteen",
-				"sounds/sp/dieciséis.mp3"
+				"Sixteen"
 			],
 			[
+				"sounds/sp/diecisiete.mp3",
 				"diecisiete",
-				"Seventeen",
-				"sounds/sp/diecisiete.mp3"
+				"Seventeen"
 			],
 			[
+				"sounds/sp/dieciocho.mp3",
 				"dieciocho",
-				"Eighteen",
-				"sounds/sp/dieciocho.mp3"
+				"Eighteen"
 			],
 			[
+				"sounds/sp/diecinueve.mp3",
 				"diecinueve",
-				"Nineteen",
-				"sounds/sp/diecinueve.mp3"
+				"Nineteen"
 			],
 			[
+				"sounds/sp/veinte.mp3",
 				"veinte",
-				"Twenty",
-				"sounds/sp/veinte.mp3"
+				"Twenty"
 			],
 			[
+				"sounds/sp/veintiuno.mp3",
 				"veintiuno",
-				"Twenty-one",
-				"sounds/sp/veintiuno.mp3"
+				"Twenty-one"
 			],
 			[
+				"sounds/sp/veintidós.mp3",
 				"veintidós",
-				"Twenty-two",
-				"sounds/sp/veintidós.mp3"
+				"Twenty-two"
 			],
 			[
+				"sounds/sp/veintitrés.mp3",
 				"veintitrés",
-				"Twenty-three",
-				"sounds/sp/veintitrés.mp3"
+				"Twenty-three"
 			],
 			[
+				"sounds/sp/veinticuatro.mp3",
 				"veinticuatro",
-				"Twenty-four",
-				"sounds/sp/veinticuatro.mp3"
+				"Twenty-four"
 			],
 			[
+				"sounds/sp/veinticinco.mp3",
 				"veinticinco",
-				"Twenty-five",
-				"sounds/sp/veinticinco.mp3"
+				"Twenty-five"
 			],
 			[
+				"sounds/sp/veintiséis.mp3",
 				"veintiséis",
-				"Twenty-six",
-				"sounds/sp/veintiséis.mp3"
+				"Twenty-six"
 			],
 			[
+				"sounds/sp/veintisiete.mp3",
 				"veintisiete",
-				"Twenty-seven",
-				"sounds/sp/veintisiete.mp3"
+				"Twenty-seven"
 			],
 			[
+				"sounds/sp/veintiocho.mp3",
 				"veintiocho",
-				"Twenty-eight",
-				"sounds/sp/veintiocho.mp3"
+				"Twenty-eight"
 			],
 			[
+				"sounds/sp/veintinueve.mp3",
 				"veintinueve",
-				"Twenty-nine",
-				"sounds/sp/veintinueve.mp3"
+				"Twenty-nine"
 			],
 			[
+				"sounds/sp/treinta.mp3",
 				"treinta",
-				"Thirty",
-				"sounds/sp/treinta.mp3"
+				"Thirty"
 			],
 			[
+				"sounds/sp/treinta y uno.mp3",
 				"treinta y uno",
-				"Thirty-one",
-				"sounds/sp/treinta y uno.mp3"
+				"Thirty-one"
 			],
 			[
+				"sounds/sp/cuarenta.mp3",
 				"cuarenta",
-				"Forty",
-				"sounds/sp/cuarenta.mp3"
+				"Forty"
 			],
 			[
+				"sounds/sp/cincuenta.mp3",
 				"cincuenta",
-				"Fifty",
-				"sounds/sp/cincuenta.mp3"
+				"Fifty"
 			],
 			[
+				"sounds/sp/sesenta.mp3",
 				"sesenta",
-				"Sixty",
-				"sounds/sp/sesenta.mp3"
+				"Sixty"
 			],
 			[
+				"sounds/sp/setenta.mp3",
 				"setenta",
-				"Seventy",
-				"sounds/sp/setenta.mp3"
+				"Seventy"
 			],
 			[
+				"sounds/sp/ochenta.mp3",
 				"ochenta",
-				"Eighty",
-				"sounds/sp/ochenta.mp3"
+				"Eighty"
 			],
 			[
+				"sounds/sp/noventa.mp3",
 				"noventa",
-				"Ninety",
-				"sounds/sp/noventa.mp3"
+				"Ninety"
 			],
 			[
+				"sounds/sp/cien.mp3",
 				"cien",
-				"One hundred",
-				"sounds/sp/cien.mp3"
+				"One hundred"
 			],
 			[
+				"sounds/sp/ciento uno.mp3",
 				"ciento uno",
-				"One hundred and one",
-				"sounds/sp/ciento uno.mp3"
+				"One hundred and one"
 			],
 			[
+				"sounds/sp/doscientos.mp3",
 				"doscientos",
-				"Two hundred",
-				"sounds/sp/doscientos.mp3"
+				"Two hundred"
 			],
 			[
+				"sounds/sp/trescientos.mp3",
 				"trescientos",
-				"Three hundred",
-				"sounds/sp/trescientos.mp3"
+				"Three hundred"
 			],
 			[
+				"sounds/sp/cuatrocientos.mp3",
 				"cuatrocientos",
-				"Four hundred",
-				"sounds/sp/cuatrocientos.mp3"
+				"Four hundred"
 			],
 			[
+				"sounds/sp/quinientos.mp3",
 				"quinientos",
-				"Five hundred",
-				"sounds/sp/quinientos.mp3"
+				"Five hundred"
 			],
 			[
+				"sounds/sp/seiscientos.mp3",
 				"seiscientos",
-				"Six hundred",
-				"sounds/sp/seiscientos.mp3"
+				"Six hundred"
 			],
 			[
+				"sounds/sp/setecientos.mp3",
 				"setecientos",
-				"Seven hundred",
-				"sounds/sp/setecientos.mp3"
+				"Seven hundred"
 			],
 			[
+				"sounds/sp/ochocientos.mp3",
 				"ochocientos",
-				"Eight hundred",
-				"sounds/sp/ochocientos.mp3"
+				"Eight hundred"
 			],
 			[
+				"sounds/sp/novecientos.mp3",
 				"novecientos",
-				"Nine hundred",
-				"sounds/sp/novecientos.mp3"
+				"Nine hundred"
 			],
 			[
+				"sounds/sp/mil.mp3",
 				"mil",
-				"One thousand",
-				"sounds/sp/mil.mp3"
+				"One thousand"
 			],
 			[
+				"sounds/sp/mil uno.mp3",
 				"mil uno",
-				"One thousand and one",
-				"sounds/sp/mil uno.mp3"
+				"One thousand and one"
 			],
 			[
+				"sounds/sp/seis mil.mp3",
 				"seis mil",
-				"Six thousand",
-				"sounds/sp/seis mil.mp3"
+				"Six thousand"
 			],
 			[
+				"sounds/sp/siete mil.mp3",
 				"siete mil",
-				"Seven thousand",
-				"sounds/sp/siete mil.mp3"
+				"Seven thousand"
 			],
 			[
+				"sounds/sp/ocho mil.mp3",
 				"ocho mil",
-				"Eight thousand",
-				"sounds/sp/ocho mil.mp3"
+				"Eight thousand"
 			],
 			[
+				"sounds/sp/nueve mil.mp3",
 				"nueve mil",
-				"Nine thousand",
-				"sounds/sp/nueve mil.mp3"
+				"Nine thousand"
 			],
 			[
+				"sounds/sp/diez mil.mp3",
 				"diez mil",
-				"Ten thousand",
-				"sounds/sp/diez mil.mp3"
+				"Ten thousand"
 			],
 			[
+				"sounds/sp/un millón.mp3",
 				"un millón",
-				"One million",
-				"sounds/sp/un millón.mp3"
+				"One million"
 			],
 			[
+				"sounds/sp/dos millones.mp3",
 				"dos millones",
-				"Two million",
-				"sounds/sp/dos millones.mp3"
+				"Two million"
 			]
 		],
 		"titleText": "Numbers: 0-1,000,000"
@@ -322,24 +322,24 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/un millón de personas visitaron Cambridge el año pasado.mp3",
 				"1.000.000 - un millón de personas visitaron Cambridge el año pasado",
-				"one million people visited Cambridge last year",
-				"sounds/sp/un millón de personas visitaron Cambridge el año pasado.mp3"
+				"one million people visited Cambridge last year"
 			],
 			[
+				"sounds/sp/El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil doscientos veintitrés dólares.mp3",
 				"16.789.223 - El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil doscientos veintitrés dólares",
-				"The GDP of Colombia is sixteen million seven hundred eighty-nine thousand two hundred twenty-three dollars",
-				"sounds/sp/El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil doscientos veintitrés dólares.mp3"
+				"The GDP of Colombia is sixteen million seven hundred eighty-nine thousand two hundred twenty-three dollars"
 			],
 			[
+				"sounds/sp/dos millones.mp3",
 				"2.000.000 - dos millones",
-				"two million",
-				"sounds/sp/dos millones.mp3"
+				"two million"
 			],
 			[
+				"sounds/sp/el premio de la lotería es de doce millones de euros.mp3",
 				"12.000.000 € - el premio de la lotería es de doce millones de euros",
-				"the lottery prize is twelve million euros",
-				"sounds/sp/el premio de la lotería es de doce millones de euros.mp3"
+				"the lottery prize is twelve million euros"
 			]
 		],
 		"titleText": "Millones y más"
@@ -354,14 +354,14 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/y medio.mp3",
 				"…y medio",
-				"…and a Half",
-				"sounds/sp/y medio.mp3"
+				"…and a Half"
 			],
 			[
+				"sounds/sp/En español, la expresión se coloca al revés que en inglés. En lugar de decir 'uno y medio millón', se dice 'un millón y medio.'.mp3",
 				"En español, la expresión se coloca al revés que en inglés. En lugar de decir 'uno y medio millón', se dice 'un millón y medio.'",
-				"In Spanish, the expression is placed the other way around compared to English. Instead of saying 'one and a half million,' you say 'one million and a half.'",
-				"sounds/sp/En español, la expresión se coloca al revés que en inglés. En lugar de decir 'uno y medio millón', se dice 'un millón y medio.'.mp3"
+				"In Spanish, the expression is placed the other way around compared to English. Instead of saying 'one and a half million,' you say 'one million and a half.'"
 			]
 		],
 		"titleText": "y medio"
@@ -376,39 +376,39 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Billones y trillones.mp3",
 				"Billones y trillones",
-				"Billions and Trillions",
-				"sounds/sp/Billones y trillones.mp3"
+				"Billions and Trillions"
 			],
 			[
+				"sounds/sp/En el mundo anglosajón, un billón es mil millones y un trillón es mil billones. Es decir, cada paso se multiplica por mil.mp3",
 				"En el mundo anglosajón, un billón es mil millones (1.000.000.000) y un trillón es mil billones (1.000.000.000.000). Es decir, cada paso se multiplica por mil.",
-				"In the English-speaking world, a billion is one thousand million (1,000,000,000) and a trillion is one thousand billion (1,000,000,000,000). In other words, each step up multiplies by one thousand.",
-				"sounds/sp/En el mundo anglosajón, un billón es mil millones y un trillón es mil billones. Es decir, cada paso se multiplica por mil.mp3"
+				"In the English-speaking world, a billion is one thousand million (1,000,000,000) and a trillion is one thousand billion (1,000,000,000,000). In other words, each step up multiplies by one thousand."
 			],
 			[
+				"sounds/sp/un millón.mp3",
 				"• un millón = 1.000.000",
-				"• un millón = 1.000.000",
-				"sounds/sp/un millón.mp3"
+				"• un millón = 1.000.000"
 			],
 			[
+				"sounds/sp/un millardo.mp3",
 				"• un millardo (o mil millones) = 1.000.000.000",
-				"• un millardo (o mil millones) = 1.000.000.000",
-				"sounds/sp/un millardo.mp3"
+				"• un millardo (o mil millones) = 1.000.000.000"
 			],
 			[
+				"sounds/sp/un billón.mp3",
 				"• un billón = 1.000.000.000.000",
-				"• un billón = 1.000.000.000.000",
-				"sounds/sp/un billón.mp3"
+				"• un billón = 1.000.000.000.000"
 			],
 			[
+				"sounds/sp/mil billones.mp3",
 				"• mil billones = 1.000.000.000.000.000",
-				"• mil billones = 1.000.000.000.000.000",
-				"sounds/sp/mil billones.mp3"
+				"• mil billones = 1.000.000.000.000.000"
 			],
 			[
+				"sounds/sp/un trillón.mp3",
 				"• un trillón = 1.000.000.000.000.000.000",
-				"• un trillón = 1.000.000.000.000.000.000",
-				"sounds/sp/un trillón.mp3"
+				"• un trillón = 1.000.000.000.000.000.000"
 			]
 		],
 		"titleText": "Billones y trillones"
@@ -428,139 +428,139 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/primero.mp3",
 				"primero(a)",
-				"First",
-				"sounds/sp/primero.mp3"
+				"First"
 			],
 			[
+				"sounds/sp/segundo.mp3",
 				"segundo(a)",
-				"Second",
-				"sounds/sp/segundo.mp3"
+				"Second"
 			],
 			[
+				"sounds/sp/tercero.mp3",
 				"tercero(a)",
-				"Third",
-				"sounds/sp/tercero.mp3"
+				"Third"
 			],
 			[
+				"sounds/sp/cuarto.mp3",
 				"cuarto(a)",
-				"Fourth",
-				"sounds/sp/cuarto.mp3"
+				"Fourth"
 			],
 			[
+				"sounds/sp/quinto.mp3",
 				"quinto(a)",
-				"Fifth",
-				"sounds/sp/quinto.mp3"
+				"Fifth"
 			],
 			[
+				"sounds/sp/sexto.mp3",
 				"sexto(a)",
-				"Sixth",
-				"sounds/sp/sexto.mp3"
+				"Sixth"
 			],
 			[
+				"sounds/sp/séptimo.mp3",
 				"séptimo(a)",
-				"Seventh",
-				"sounds/sp/séptimo.mp3"
+				"Seventh"
 			],
 			[
+				"sounds/sp/octavo.mp3",
 				"octavo(a)",
-				"Eighth",
-				"sounds/sp/octavo.mp3"
+				"Eighth"
 			],
 			[
+				"sounds/sp/noveno.mp3",
 				"noveno(a)",
-				"Ninth",
-				"sounds/sp/noveno.mp3"
+				"Ninth"
 			],
 			[
+				"sounds/sp/décimo.mp3",
 				"décimo(a)",
-				"Tenth",
-				"sounds/sp/décimo.mp3"
+				"Tenth"
 			],
 			[
+				"sounds/sp/undécimo. decimoprimero.mp3",
 				"undécimo(a) / decimoprimero(a)",
-				"Eleventh",
-				"sounds/sp/undécimo. decimoprimero.mp3"
+				"Eleventh"
 			],
 			[
+				"sounds/sp/duodécimo. decimosegundo.mp3",
 				"duodécimo(a) / decimosegundo(a)",
-				"Twelfth",
-				"sounds/sp/duodécimo. decimosegundo.mp3"
+				"Twelfth"
 			],
 			[
+				"sounds/sp/décimo tercero.mp3",
 				"décimo tercero(a)",
-				"Thirteenth",
-				"sounds/sp/décimo tercero.mp3"
+				"Thirteenth"
 			],
 			[
+				"sounds/sp/décimo cuarto.mp3",
 				"décimo cuarto(a)",
-				"Fourteenth",
-				"sounds/sp/décimo cuarto.mp3"
+				"Fourteenth"
 			],
 			[
+				"sounds/sp/vigésimo.mp3",
 				"vigésimo(a)",
-				"Twentieth",
-				"sounds/sp/vigésimo.mp3"
+				"Twentieth"
 			],
 			[
+				"sounds/sp/vigésimo primero.mp3",
 				"vigésimo primero(a)",
-				"Twenty-first",
-				"sounds/sp/vigésimo primero.mp3"
+				"Twenty-first"
 			],
 			[
+				"sounds/sp/vigésimo segundo.mp3",
 				"vigésimo segundo(a)",
-				"Twenty-second",
-				"sounds/sp/vigésimo segundo.mp3"
+				"Twenty-second"
 			],
 			[
+				"sounds/sp/trigésimo.mp3",
 				"trigésimo(a)",
-				"Thirtieth",
-				"sounds/sp/trigésimo.mp3"
+				"Thirtieth"
 			],
 			[
+				"sounds/sp/cuadragésimo.mp3",
 				"cuadragésimo(a)",
-				"Fortieth",
-				"sounds/sp/cuadragésimo.mp3"
+				"Fortieth"
 			],
 			[
+				"sounds/sp/quincuagésimo.mp3",
 				"quincuagésimo(a)",
-				"Fiftieth",
-				"sounds/sp/quincuagésimo.mp3"
+				"Fiftieth"
 			],
 			[
+				"sounds/sp/sexagésimo.mp3",
 				"sexagésimo(a)",
-				"Sixtieth",
-				"sounds/sp/sexagésimo.mp3"
+				"Sixtieth"
 			],
 			[
+				"sounds/sp/septuagésimo.mp3",
 				"septuagésimo(a)",
-				"Seventieth",
-				"sounds/sp/septuagésimo.mp3"
+				"Seventieth"
 			],
 			[
+				"sounds/sp/octogésimo.mp3",
 				"octogésimo(a)",
-				"Eightieth",
-				"sounds/sp/octogésimo.mp3"
+				"Eightieth"
 			],
 			[
+				"sounds/sp/nonagésimo.mp3",
 				"nonagésimo(a)",
-				"Ninetieth",
-				"sounds/sp/nonagésimo.mp3"
+				"Ninetieth"
 			],
 			[
+				"sounds/sp/centésimo.mp3",
 				"centésimo(a)",
-				"Hundredth",
-				"sounds/sp/centésimo.mp3"
+				"Hundredth"
 			],
 			[
+				"sounds/sp/milésimo.mp3",
 				"milésimo(a)",
-				"Thousandth",
-				"sounds/sp/milésimo.mp3"
+				"Thousandth"
 			],
 			[
+				"sounds/sp/último.mp3",
 				"último(a)",
-				"Last",
-				"sounds/sp/último.mp3"
+				"Last"
 			]
 		],
 		"titleText": "Números ordinales"
@@ -575,29 +575,29 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/6 por ciento.mp3",
 				"6 por ciento",
-				"6 percent (6%)",
-				"sounds/sp/6 por ciento.mp3"
+				"6 percent (6%)"
 			],
 			[
+				"sounds/sp/75 por ciento.mp3",
 				"75 por ciento",
-				"75 percent (75%)",
-				"sounds/sp/75 por ciento.mp3"
+				"75 percent (75%)"
 			],
 			[
+				"sounds/sp/99 por ciento.mp3",
 				"99 por ciento",
-				"99 percent (99%)",
-				"sounds/sp/99 por ciento.mp3"
+				"99 percent (99%)"
 			],
 			[
+				"sounds/sp/El diez por ciento de descuento.mp3",
 				"El diez por ciento de descuento",
-				"10% discount",
-				"sounds/sp/El diez por ciento de descuento.mp3"
+				"10% discount"
 			],
 			[
+				"sounds/sp/Veinte por ciento de interés.mp3",
 				"Veinte por ciento de interés",
-				"20% interest",
-				"sounds/sp/Veinte por ciento de interés.mp3"
+				"20% interest"
 			]
 		],
 		"titleText": "Porcentajes"

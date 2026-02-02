@@ -17,29 +17,29 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Tu te lèves à quelle heure.mp3",
 							"Tu te lèves à quelle heure ?",
-							"What time do you get up?",
-							"sounds/fr/Tu te lèves à quelle heure.mp3"
+							"What time do you get up?"
 						],
 						[
+							"sounds/fr/Ça dépend ! En semaine, je me lève à sept heures, mais le week-end, je me lève vers neuf heures et demie. Et toi.mp3",
 							"Ça dépend ! En semaine, je me lève à sept heures, mais le week-end, je me lève vers neuf heures et demie. Et toi ?",
-							"It depends. During the week I get up at seven o'clock, but at the weekend I get up at about half past nine. What about you?",
-							"sounds/fr/Ça dépend ! En semaine, je me lève à sept heures, mais le week-end, je me lève vers neuf heures et demie. Et toi.mp3"
+							"It depends. During the week I get up at seven o'clock, but at the weekend I get up at about half past nine. What about you?"
 						],
 						[
+							"sounds/fr/Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.mp3",
 							"Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.",
-							"I get up at 6 o'clock. At the weekend I wake up at about quarter past seven and I get up straight away. I'm a morning person.",
-							"sounds/fr/Je me lève à six heures. Le week-end, je me réveille vers sept heures et quart et je me lève tout de suite. Je suis matinal.mp3"
+							"I get up at 6 o'clock. At the weekend I wake up at about quarter past seven and I get up straight away. I'm a morning person."
 						],
 						[
+							"sounds/fr/Je suis plutôt une couche-tard. Je me couche vers minuit et demi.mp3",
 							"Je suis plutôt une couche-tard. Je me couche vers minuit et demi.",
-							"Well, I'm more of a night owl. I go to bed at about half past midnight.",
-							"sounds/fr/Je suis plutôt une couche-tard. Je me couche vers minuit et demi.mp3"
+							"Well, I'm more of a night owl. I go to bed at about half past midnight."
 						],
 						[
+							"sounds/fr/Vers minuit et demi Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.mp3",
 							"Vers minuit et demi ? Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.",
-							"At about half past midnight? Oh goodness! I go to bed at half past nine. In the evening I'm always very tired.",
-							"sounds/fr/Vers minuit et demi Oh là là ! Je me couche à neuf heures et demie. Le soir, je suis toujours très fatigué.mp3"
+							"At about half past midnight? Oh goodness! I go to bed at half past nine. In the evening I'm always very tired."
 						]
 					],
 					"titleText": "Dialogs 1"
@@ -52,24 +52,24 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Ça va les amis.mp3",
 							"Ça va les amis ?",
-							"Are you alright guys?",
-							"sounds/fr/Ça va les amis.mp3"
+							"Are you alright guys?"
 						],
 						[
+							"sounds/fr/Ça va mais nous sommes un peu fatigués. Notre fille a neuf semaines et elle se réveille trois fois la nuit. Nous ne dormons pas bien !.mp3",
 							"Ça va mais nous sommes un peu fatigués. Notre fille a neuf semaines et elle se réveille trois fois la nuit. Nous ne dormons pas bien !",
-							"Yes, we're alright, but we're a bit tired. Our daughter is nine weeks old, and she wakes up three times a night. We aren't sleeping well.",
-							"sounds/fr/Ça va mais nous sommes un peu fatigués. Notre fille a neuf semaines et elle se réveille trois fois la nuit. Nous ne dormons pas bien !.mp3"
+							"Yes, we're alright, but we're a bit tired. Our daughter is nine weeks old, and she wakes up three times a night. We aren't sleeping well."
 						],
 						[
+							"sounds/fr/Quelle horreur ! Mais vous vous reposez pendant la journée, j'imagine.mp3",
 							"Quelle horreur ! Mais vous vous reposez pendant la journée, j'imagine.",
-							"How awful! But you do rest during the day, I imagine.",
-							"sounds/fr/Quelle horreur ! Mais vous vous reposez pendant la journée, j'imagine.mp3"
+							"How awful! But you do rest during the day, I imagine."
 						],
 						[
+							"sounds/fr/Un peu, mais ce n'est pas toujours possible.mp3",
 							"Un peu, mais ce n'est pas toujours possible.",
-							"A bit, but it isn't always possible.",
-							"sounds/fr/Un peu, mais ce n'est pas toujours possible.mp3"
+							"A bit, but it isn't always possible."
 						]
 					],
 					"titleText": "Dialogs2"
@@ -82,29 +82,29 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Tu déjeunes à la cantine aujourd'hui.mp3",
 							"Tu déjeunes à la cantine aujourd'hui ?",
-							"Are you having lunch at the canteen today?",
-							"sounds/fr/Tu déjeunes à la cantine aujourd'hui.mp3"
+							"Are you having lunch at the canteen today?"
 						],
 						[
+							"sounds/fr/À la cantine Ah non, on ne mange pas bien à la cantine ! Je déjeune au café en face de la bibliothèque. Tu veux déjeuner avec moi.mp3",
 							"À la cantine ? Ah non, on ne mange pas bien à la cantine ! Je déjeune au café en face de la bibliothèque. Tu veux déjeuner avec moi ?",
-							"At the canteen? Oh no, the food isn't good at the canteen. (Literally: One doesn't eat well at the canteen.) I have lunch at the cafe opposite the library. Do you want to have lunch with me?",
-							"sounds/fr/À la cantine Ah non, on ne mange pas bien à la cantine ! Je déjeune au café en face de la bibliothèque. Tu veux déjeuner avec moi.mp3"
+							"At the canteen? Oh no, the food isn't good at the canteen. (Literally: One doesn't eat well at the canteen.) I have lunch at the cafe opposite the library. Do you want to have lunch with me?"
 						],
 						[
+							"sounds/fr/À quelle heure.mp3",
 							"À quelle heure ?",
-							"At what time?",
-							"sounds/fr/À quelle heure.mp3"
+							"At what time?"
 						],
 						[
+							"sounds/fr/À une heure.mp3",
 							"À une heure ?",
-							"At one o'clock?",
-							"sounds/fr/À une heure.mp3"
+							"At one o'clock?"
 						],
 						[
+							"sounds/fr/Oui, ça va très bien ! À tout à l'heure !.mp3",
 							"Oui, ça va très bien ! À tout à l'heure !",
-							"Yes, that's fine. See you later!",
-							"sounds/fr/Oui, ça va très bien ! À tout à l'heure !.mp3"
+							"Yes, that's fine. See you later!"
 						]
 					],
 					"titleText": "Dialogs 3"

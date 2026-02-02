@@ -216,7 +216,9 @@ $max-tile-width: 360px;
      TARGET BOARD (merged & deduplicated)
 	========================================================== */
 	.target-board {
-		background: hsl(0deg, 0%, 90%);
+		background: #f9f9f9; //red; // hsl(0deg, 0%, 90%);
+		border: 1px solid #ccc;
+		border-radius: 0.6rem;
 		padding: 0.3rem;
 
 		font-size: 1.2rem;

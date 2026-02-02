@@ -23,39 +23,39 @@
 		],
 		"phrases": [
 			[
+				"sounds/sp/Cómo te llamas.mp3",
 				"¿Cómo te llamas?",
-				"What is your name? (informal)",
-				"sounds/sp/Cómo te llamas.mp3"
+				"What is your name? (informal)"
 			],
 			[
+				"sounds/sp/Me llamo Ana.mp3",
 				"Me llamo Ana.",
-				"My name is Ana.",
-				"sounds/sp/Me llamo Ana.mp3"
+				"My name is Ana."
 			],
 			[
+				"sounds/sp/Cuál es tu nombre.mp3",
 				"¿Cuál es tu nombre?",
-				"What is your name?",
-				"sounds/sp/Cuál es tu nombre.mp3"
+				"What is your name?"
 			],
 			[
+				"sounds/sp/Y tú.mp3",
 				"¿Y tú?",
-				"And you? (informal)",
-				"sounds/sp/Y tú.mp3"
+				"And you? (informal)"
 			],
 			[
+				"sounds/sp/Cómo se llama usted.mp3",
 				"¿Cómo se llama usted?",
-				"What is your name? (formal)",
-				"sounds/sp/Cómo se llama usted.mp3"
+				"What is your name? (formal)"
 			],
 			[
+				"sounds/sp/Me llamo Laura Mi nombre es Laura.mp3",
 				"Me llamo Laura / Mi nombre es Laura.",
-				"My name is Laura.",
-				"sounds/sp/Me llamo Laura Mi nombre es Laura.mp3"
+				"My name is Laura."
 			],
 			[
+				"sounds/sp/Me puede decir su nombre, por favor.mp3",
 				"¿Me puede decir su nombre, por favor?",
-				"May I have your name please?",
-				"sounds/sp/Me puede decir su nombre, por favor.mp3"
+				"May I have your name please?"
 			]
 		],
 		"titleText": "Estructuras clave / Key structures"

@@ -18,73 +18,73 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"/sounds/fr/Où habites-tu.mp3",
 							"Où habites-tu ?",
-							"Where do you live?",
-							"/sounds/fr/Où habites-tu.mp3"
+							"Where do you live?"
 						],
 						[
+							"/sounds/fr/J'habite en Belgique.mp3",
 							"J'habite en Belgique.",
-							"I live in Belgium.",
-							"/sounds/fr/J'habite en Belgique.mp3"
+							"I live in Belgium."
 						],
 						[
+							"/sounds/fr/Où exactement.mp3",
 							"Où exactement ?",
-							"Where exactly?",
-							"/sounds/fr/Où exactement.mp3"
+							"Where exactly?"
 						],
 						[
+							"/sounds/fr/A Bruxelles Et toi.mp3",
 							"A Bruxelles. Et toi ?",
-							"In Brussels. What about you?",
-							"/sounds/fr/A Bruxelles Et toi.mp3"
+							"In Brussels. What about you?"
 						],
 						[
+							"/sounds/fr/J'habite à Cardiff au Pays de Galles.mp3",
 							"J'habite à Cardiff au Pays de Galles.",
-							"I live in Cardiff in Wales",
-							"/sounds/fr/J'habite à Cardiff au Pays de Galles.mp3"
+							"I live in Cardiff in Wales"
 						],
 						[
 							""
 						],
 						[
+							"/sounds/fr/Où habitez-vous.mp3",
 							"Où habitez-vous ?",
-							"Where do you live ?",
-							"/sounds/fr/Où habitez-vous.mp3"
+							"Where do you live ?"
 						],
 						[
+							"/sounds/fr/J'habite aux Etats Unis.mp3",
 							"J'habite aux Etats Unis.",
-							"I live in the USA",
-							"/sounds/fr/J'habite aux Etats Unis.mp3"
+							"I live in the USA"
 						],
 						[
+							"/sounds/fr/Et moi, j'habite au Maroc.mp3",
 							"Et moi, j'habite au Maroc.",
-							"And I live in Morocco.",
-							"/sounds/fr/Et moi, j'habite au Maroc.mp3"
+							"And I live in Morocco."
 						],
 						[
 							""
 						],
 						[
+							"/sounds/fr/Où se trouve la cathédrale de Notre Dame.mp3",
 							"Où se trouve la cathédrale de Notre Dame ?",
-							"Where is Notre Dame Cathedral?",
-							"/sounds/fr/Où se trouve la cathédrale de Notre Dame.mp3"
+							"Where is Notre Dame Cathedral?"
 						],
 						[
+							"/sounds/fr/La cathédrale de Notre Dame se trouve à Paris.mp3",
 							"La cathédrale de Notre Dame se trouve à Paris !",
-							"Notre Dame Cathedral is in Paris!",
-							"/sounds/fr/La cathédrale de Notre Dame se trouve à Paris.mp3"
+							"Notre Dame Cathedral is in Paris!"
 						],
 						[
 							""
 						],
 						[
+							"/sounds/fr/Tu habites au centre-ville.mp3",
 							"Tu habites au centre-ville ?",
-							"Do you live in the city centre? ",
-							"/sounds/fr/Tu habites au centre-ville.mp3"
+							"Do you live in the city centre? "
 						],
 						[
+							"/sounds/fr/Non, j'habite dans un petit village à une heure d'ici.mp3",
 							"Non, j'habite dans un petit village à une heure d'ici.",
-							"No, I live in a small village an hour away from here.",
-							"/sounds/fr/Non, j'habite dans un petit village à une heure d'ici.mp3"
+							"No, I live in a small village an hour away from here."
 						]
 					],
 					"titleText": "Where do you live?"

@@ -18,39 +18,39 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Qu'est-ce que tu fais aujourd'hui.mp3",
 							"Qu'est-ce que tu fais aujourd'hui ?",
-							"What are you doing today?",
-							"sounds/fr/Qu'est-ce que tu fais aujourd'hui.mp3"
+							"What are you doing today?"
 						],
 						[
+							"sounds/fr/Je fais mes courses.mp3",
 							"Je fais mes courses.",
-							"I'm doing my shopping.",
-							"sounds/fr/Je fais mes courses.mp3"
+							"I'm doing my shopping."
 						],
 						[
+							"sounds/fr/Tu vas au supermarché.mp3",
 							"Tu vas au supermarché ?",
-							"Are you going to the supermarket?",
-							"sounds/fr/Tu vas au supermarché.mp3"
+							"Are you going to the supermarket?"
 						],
 						[
+							"sounds/fr/Non, je vais au marché. Ce n'est pas loin de chez moi.mp3",
 							"Non, je vais au marché. Ce n'est pas loin de chez moi.",
-							"No, I'm going to the market. It isn't very far from me.",
-							"sounds/fr/Non, je vais au marché. Ce n'est pas loin de chez moi.mp3"
+							"No, I'm going to the market. It isn't very far from me."
 						],
 						[
+							"sounds/fr/C'est bien !.mp3",
 							"C'est bien !",
-							"That's good.",
-							"sounds/fr/C'est bien !.mp3"
+							"That's good."
 						],
 						[
+							"sounds/fr/Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a un très bon fleuriste aussi.mp3",
 							"Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a un très bon fleuriste aussi.",
-							"Yes, it's practical. And on Thursdays I go to the big market in the town centre. I often buy cheese and ham there. There's lots of choice. And there's a very good florist too.",
-							"sounds/fr/Oui, c'est pratique. Et le jeudi, je vais au grand marché au centre-ville. J'achète souvent du fromage et du jambon là-bas. Il y a beaucoup de choix. Et il y a un très bon fleuriste aussi.mp3"
+							"Yes, it's practical. And on Thursdays I go to the big market in the town centre. I often buy cheese and ham there. There's lots of choice. And there's a very good florist too."
 						],
 						[
+							"sounds/fr/Tu as de la chance ! Si nous voulons du pain, Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.mp3",
 							"Tu as de la chance ! Si nous voulons du pain, Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.",
-							"You're lucky. If we want bread, Marc goes to the baker's at the end of the road, but there isn't a market near us. On Saturday mornings Marc and I go to the supermarket.",
-							"sounds/fr/Tu as de la chance ! Si nous voulons du pain, Marc va à la boulangerie au bout de la rue, mais il n'y a pas de marché près de chez nous. Le samedi matin, Marc et moi allons au supermarché.mp3"
+							"You're lucky. If we want bread, Marc goes to the baker's at the end of the road, but there isn't a market near us. On Saturday mornings Marc and I go to the supermarket."
 						]
 					],
 					"titleText": "Dialogues 1"
@@ -63,49 +63,49 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Madame, bonjour ! Vous désirez.mp3",
 							"Madame, bonjour ! Vous désirez ?",
-							"Hello madam! What can I get you?",
-							"sounds/fr/Madame, bonjour ! Vous désirez.mp3"
+							"Hello madam! What can I get you?"
 						],
 						[
+							"sounds/fr/Donnez-moi deux kilos de pommes de terre, s'il vous plaît.mp3",
 							"Donnez-moi deux kilos de pommes de terre, s'il vous plaît.",
-							"Give me two kilos of potatoes please.",
-							"sounds/fr/Donnez-moi deux kilos de pommes de terre, s'il vous plaît.mp3"
+							"Give me two kilos of potatoes please."
 						],
 						[
+							"sounds/fr/Avec ça.mp3",
 							"Avec ça ?",
-							"Anything else ?",
-							"sounds/fr/Avec ça.mp3"
+							"Anything else ?"
 						],
 						[
+							"sounds/fr/Trois poireaux, oui... et deux poivrons, un poivron jaune et un poivron rouge.mp3",
 							"Trois poireaux, oui... et deux poivrons, un poivron jaune et un poivron rouge.",
-							"Three leeks, yes... and two peppers, one yellow pepper and one red pepper.",
-							"sounds/fr/Trois poireaux, oui... et deux poivrons, un poivron jaune et un poivron rouge.mp3"
+							"Three leeks, yes... and two peppers, one yellow pepper and one red pepper."
 						],
 						[
+							"sounds/fr/Voilà ! C'est tout.mp3",
 							"Voilà ! C'est tout ?",
-							"Here you are. Is that everything?",
-							"sounds/fr/Voilà ! C'est tout.mp3"
+							"Here you are. Is that everything?"
 						],
 						[
+							"sounds/fr/Les melons, c'est combien.mp3",
 							"Les melons, c'est combien ?",
-							"How much are the melons?",
-							"sounds/fr/Les melons, c'est combien.mp3"
+							"How much are the melons?"
 						],
 						[
+							"sounds/fr/Les melons, c'est 3 euros la pièce.mp3",
 							"Les melons, c'est 3 euros la pièce.",
-							"The melons are 3 euros each.",
-							"sounds/fr/Les melons, c'est 3 euros la pièce.mp3"
+							"The melons are 3 euros each."
 						],
 						[
+							"sounds/fr/Je vais prendre un melon, et puis c'est tout !.mp3",
 							"Je vais prendre un melon, et puis c'est tout !",
-							"I'll take one melon and then that's everything.",
-							"sounds/fr/Je vais prendre un melon, et puis c'est tout !.mp3"
+							"I'll take one melon and then that's everything."
 						],
 						[
+							"sounds/fr/Bien ! Ça fait 10 euros 50 s'il vous plaît Madame !.mp3",
 							"Bien ! Ça fait 10 &euro; 50 s'il vous plaît Madame !",
-							"Good! That comes to 10 &euro; 50 please madam.",
-							"sounds/fr/Bien ! Ça fait 10 euros 50 s'il vous plaît Madame !.mp3"
+							"Good! That comes to 10 &euro; 50 please madam."
 						]
 					],
 					"titleText": "Dialogues 2"

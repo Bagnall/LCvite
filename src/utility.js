@@ -508,6 +508,9 @@ export const replaceSelectWithSpan = (selectElement) => {
 };
 
 export const resolveAsset = (path = '') => {
+	// console.log(`resolveAsset(${path}) => ${import.meta.env.BASE_URL}${path}`);
+	// console.log(path.search(import.meta.env.BASE_URL));
+	if (path.search(import.meta.env.BASE_URL) === 0) return path; // Already resolved (belt & braces)
 	return `${import.meta.env.BASE_URL}${path}`;
 };
 

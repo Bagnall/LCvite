@@ -19,93 +19,93 @@
 					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
+							"sounds/fr/Tu es française.mp3",
 							"Tu es française ?",
-							"Are you French ?",
-							"sounds/fr/Tu es française.mp3"
+							"Are you French ?"
 						],
 						[
+							"sounds/fr/Ah non, je ne suis pas française !.mp3",
 							"Ah non, je ne suis pas française !",
-							"Oh no, I'm not French!",
-							"sounds/fr/Ah non, je ne suis pas française !.mp3"
+							"Oh no, I'm not French!"
 						],
 						[
+							"sounds/fr/Tu es de quelle nationalité.mp3",
 							"Tu es de quelle nationalité ?",
-							"What nationality are you?",
-							"sounds/fr/Tu es de quelle nationalité.mp3"
+							"What nationality are you?"
 						],
 						[
+							"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3",
 							"Je suis belge. Je viens de Bruxelles. Tu viens d'où ?",
-							"I'm Belgian. I come from Brussels. Where do you come from?",
-							"sounds/fr/Je suis belge. Je viens de Bruxelles. Tu viens d'où.mp3"
+							"I'm Belgian. I come from Brussels. Where do you come from?"
 						],
 						[
+							"sounds/fr/Je viens d'Espagne.mp3",
 							"Je viens d'Espagne.",
-							"I come from Spain.",
-							"sounds/fr/Je viens d'Espagne.mp3"
+							"I come from Spain."
 						],
 						[
 							""
 						],
 						[
+							"sounds/fr/D'où venez-vous, Monsieur.mp3",
 							"D'où venez-vous, Monsieur ?",
-							"Where do you come from, sir? ",
-							"sounds/fr/D'où venez-vous, Monsieur.mp3"
+							"Where do you come from, sir? "
 						],
 						[
+							"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse.mp3",
 							"Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse ?",
-							"I come from the USA. I'm American. My wife's Canadian. She comes from Quebec. And are you Swiss?",
-							"sounds/fr/Je viens des Etats-Unis. Je suis américain. Ma femme est canadienne. Elle vient du Québec. Et vous, vous êtes suisse.mp3"
+							"I come from the USA. I'm American. My wife's Canadian. She comes from Quebec. And are you Swiss?"
 						],
 						[
+							"sounds/fr/Ah non, je suis luxembourgeoise.mp3",
 							"Ah non, je suis luxembourgeoise.",
-							"Oh no, I'm Luxemburgish.",
-							"sounds/fr/Ah non, je suis luxembourgeoise.mp3"
+							"Oh no, I'm Luxemburgish."
 						],
 						[
 							""
 						],
 						[
+							"sounds/fr/Tu parles allemand.mp3",
 							"Tu parles allemand ?",
-							"Do you speak German?",
-							"sounds/fr/Tu parles allemand.mp3"
+							"Do you speak German?"
 						],
 						[
+							"sounds/fr/Non, je ne parle pas allemand.mp3",
 							"Non, je ne parle pas allemand.",
-							"No, I don't speak German.",
-							"sounds/fr/Non, je ne parle pas allemand.mp3"
+							"No, I don't speak German."
 						],
 						[
+							"sounds/fr/Quelles langues parles-tu.mp3",
 							"Quelles langues parles-tu ?",
-							"Which languages do you speak?",
-							"sounds/fr/Quelles langues parles-tu.mp3"
+							"Which languages do you speak?"
 						],
 						[
+							"sounds/fr/Je parle français. C'est tout.mp3",
 							"Je parle français. C'est tout.",
-							"I speak French. That's all.",
-							"sounds/fr/Je parle français. C'est tout.mp3"
+							"I speak French. That's all."
 						],
 						[
 							""
 						],
 						[
+							"sounds/fr/Quelles langues parlez-vous.mp3",
 							"Quelles langues parlez-vous ?",
-							"Which languages do you speak?",
-							"sounds/fr/Quelles langues parlez-vous.mp3"
+							"Which languages do you speak?"
 						],
 						[
+							"sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3",
 							"Je suis trilingue. Je parle français, arabe et un petit peu anglais.",
-							"I'm trilingual. I speak French, Arabic and a little bit of English.",
-							"sounds/fr/Je suis trilingue. Je parle français, arabe et un petit peu anglais.mp3"
+							"I'm trilingual. I speak French, Arabic and a little bit of English."
 						],
 						[
+							"sounds/fr/Et les enfants.mp3",
 							"Et les enfants ?",
-							"And the children?",
-							"sounds/fr/Et les enfants.mp3"
+							"And the children?"
 						],
 						[
+							"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3",
 							"Ils sont bilingues. Ils parlent français et arabe.",
-							"They're bilingual. They speak French and Arabic.",
-							"sounds/fr/Ils sont bilingues. Ils parlent français et arabe.mp3"
+							"They're bilingual. They speak French and Arabic."
 						]
 					],
 					"titleText": "Nationalities and languages"
@@ -293,44 +293,44 @@
 		"instructionsText": "",
 		"phrases": [
 			[
+				"sounds/fr/parler.mp3",
 				"parler",
-				"to speak",
-				"sounds/fr/parler.mp3"
+				"to speak"
 			],
 			[
+				"sounds/fr/Quelles langues parles-tu Tu parles quelles langues.mp3",
 				"Quelles langues parles-tu ? / Tu parles quelles langues ?",
-				"Which languages do you speak?",
-				"sounds/fr/Quelles langues parles-tu Tu parles quelles langues.mp3"
+				"Which languages do you speak?"
 			],
 			[
+				"sounds/fr/Quelles langues parlez-vous Vous parlez quelles langues.mp3",
 				"Quelles langues parlez-vous ? / Vous parlez quelles langues ?",
-				"Which languages do you speak?",
-				"sounds/fr/Quelles langues parlez-vous Vous parlez quelles langues.mp3"
+				"Which languages do you speak?"
 			],
 			[
+				"sounds/fr/Je parle anglais Je ne parle pas anglais.mp3",
 				"Je parle anglais / Je ne parle pas anglais",
-				"I speak / I don't speak English.",
-				"sounds/fr/Je parle anglais Je ne parle pas anglais.mp3"
+				"I speak / I don't speak English."
 			],
 			[
+				"sounds/fr/venir de.mp3",
 				"venir de",
-				"to come from",
-				"sounds/fr/venir de.mp3"
+				"to come from"
 			],
 			[
+				"sounds/fr/D'où viens-tu Tu viens d'où.mp3",
 				"D'où viens-tu ? / Tu viens d'où ?",
-				"Where do you come from?",
-				"sounds/fr/D'où viens-tu Tu viens d'où.mp3"
+				"Where do you come from?"
 			],
 			[
+				"sounds/fr/D'où venez-vous Vous venez d'où.mp3",
 				"D'où venez-vous ? / Vous venez d'où ?",
-				"Where do you come from?",
-				"sounds/fr/D'où venez-vous Vous venez d'où.mp3"
+				"Where do you come from?"
 			],
 			[
+				"sounds/fr/Je viens de  Je ne viens pas de.mp3",
 				"Je viens de … / Je ne viens pas de …",
-				"I come from … / don't come from …",
-				"sounds/fr/Je viens de  Je ne viens pas de.mp3"
+				"I come from … / don't come from …"
 			]
 		],
 		"titleText": "",

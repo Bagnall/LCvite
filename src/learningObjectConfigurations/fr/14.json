@@ -17,49 +17,49 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Qu'est-ce que tu fais comme études (m).mp3",
 							"Qu'est-ce que tu fais comme études ?",
-							"What are you studying ?",
-							"sounds/fr/Qu'est-ce que tu fais comme études (m).mp3"
+							"What are you studying ?"
 						],
 						[
+							"sounds/fr/Je suis étudiant en mathématiques.mp3",
 							"Je suis étudiant en mathématiques.",
-							"I'm a maths student.",
-							"sounds/fr/Je suis étudiant en mathématiques.mp3"
+							"I'm a maths student."
 						],
 						[
+							"sounds/fr/Tu fais un master.mp3",
 							"Tu fais un master ?",
-							"Are you doing a masters?",
-							"sounds/fr/Tu fais un master.mp3"
+							"Are you doing a masters?"
 						],
 						[
+							"sounds/fr/Non, je fais une licence.mp3",
 							"Non, je fais une licence.",
-							"No, I'm doing a bachelor's degree / I'm an undergrad.",
-							"sounds/fr/Non, je fais une licence.mp3"
+							"No, I'm doing a bachelor's degree / I'm an undergrad."
 						],
 						[
+							"sounds/fr/Tu es en première année.mp3",
 							"Tu es en première année ?",
-							"Are you in the first year?",
-							"sounds/fr/Tu es en première année.mp3"
+							"Are you in the first year?"
 						],
 						[
+							"sounds/fr/Non, je suis en deuxième année.mp3",
 							"Non, je suis en deuxième année.",
-							"No, I'm in the second year",
-							"sounds/fr/Non, je suis en deuxième année.mp3"
+							"No, I'm in the second year"
 						],
 						[
+							"sounds/fr/Moi, je fais une fac d'architecture. Je suis en première année de master.mp3",
 							"Moi, je fais une fac d'architecture. Je suis en première année de master.",
-							"I'm studying architecture. I'm in the first year of a masters.",
-							"sounds/fr/Moi, je fais une fac d'architecture. Je suis en première année de master.mp3"
+							"I'm studying architecture. I'm in the first year of a masters."
 						],
 						[
+							"sounds/fr/Et ton copain Il étudie l'architecture aussi.mp3",
 							"Et ton copain ? Il étudie l'architecture aussi ?",
-							"What about your boyfriend? Is he studying architecture too?",
-							"sounds/fr/Et ton copain Il étudie l'architecture aussi.mp3"
+							"What about your boyfriend? Is he studying architecture too?"
 						],
 						[
+							"sounds/fr/Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !.mp3",
 							"Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !",
-							"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy. He's spending hours at the library!",
-							"sounds/fr/Non, il est doctorant. Il fait un doctorat en langues médiévales. Il écrit sa thèse. Il est très occupé. Il passe des heures à la bibliothèque !.mp3"
+							"No, he's a PhD student. He's doing a PhD in medieval languages. He's writing his dissertation. He's very busy. He's spending hours at the library!"
 						]
 					],
 					"titleText": "Dialogues 1"
@@ -72,39 +72,39 @@
 					"instructionsText": "Read the phrases and play the audio clips.",
 					"phrases": [
 						[
+							"sounds/fr/Alice, ça va Tu as l'air très fatigué aujourd'hui !.mp3",
 							"Alice, ça va ? Tu as l'air très fatigué aujourd'hui !",
-							"Alice, are you alright? You look very tired today!",
-							"sounds/fr/Alice, ça va Tu as l'air très fatigué aujourd'hui !.mp3"
+							"Alice, are you alright? You look very tired today!"
 						],
 						[
+							"sounds/fr/Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.mp3",
 							"Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.",
-							"No, I'm not alright today. I'm very tired.",
-							"sounds/fr/Non, ça ne va pas aujourd'hui ! Je suis très fatiguée.mp3"
+							"No, I'm not alright today. I'm very tired."
 						],
 						[
+							"sounds/fr/pourquoi.mp3",
 							"Pourquoi ?",
-							"Why ?",
-							"sounds/fr/pourquoi.mp3"
+							"Why ?"
 						],
 						[
+							"sounds/fr/Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !.mp3",
 							"Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !",
-							"This week I've got five lectures, two seminars and two tutorials. And lots of reading!",
-							"sounds/fr/Cette semaine j'ai cinq cours magistraux, deux séminaires et deux tutorats ! Et beaucoup de lecture !.mp3"
+							"This week I've got five lectures, two seminars and two tutorials. And lots of reading!"
 						],
 						[
+							"sounds/fr/C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !.mp3",
 							"C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !",
-							"That really is a lot! You've got a very heavy timetable, Alice!",
-							"sounds/fr/C'est vraiment beaucoup ! Tu as un emploi du temps très chargé, Alice !.mp3"
+							"That really is a lot! You've got a very heavy timetable, Alice!"
 						],
 						[
+							"sounds/fr/Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !.mp3",
 							"Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !",
-							"Yes, and I have to write two essays as well. It's too much! I'm very stressed!",
-							"sounds/fr/Oui, et je dois écrire deux dissertations aussi ! C'est trop ! Je suis très stressée !.mp3"
+							"Yes, and I have to write two essays as well. It's too much! I'm very stressed!"
 						],
 						[
+							"sounds/fr/Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !.mp3",
 							"Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !",
-							"But it 'll be alright, Alice! It'll soon be the holidays, and you can have a rest!",
-							"sounds/fr/Mais ça va aller, Alice ! C'est bientôt les vacances et tu peux te reposer !.mp3"
+							"But it 'll be alright, Alice! It'll soon be the holidays, and you can have a rest!"
 						]
 					],
 					"titleText": "Dialogues 2"

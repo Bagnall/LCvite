@@ -1455,65 +1455,65 @@
 		"instructionsText": "",
 		"phrases": [
 			[
+				"sounds/fr/Salut, ça va.mp3",
 				"Salut, ça va ?",
-				"Hi, are you well?",
-				"sounds/fr/Salut, ça va.mp3"
+				"Hi, are you well?"
 			],
 			[
+				"sounds/fr/Salut ! Ça va ! Et toi.mp3",
 				"Salut ! Ça va ! Et toi ?",
-				"Hi, I'm fine and you?",
-				"sounds/fr/Salut ! Ça va ! Et toi.mp3"
+				"Hi, I'm fine and you?"
 			],
 			[
+				"sounds/fr/Très bien, merci !.mp3",
 				"Très bien, merci !",
-				"Very well, thank you!",
-				"sounds/fr/Très bien, merci !.mp3"
+				"Very well, thank you!"
 			],
 			[
+				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3",
 				"Bonjour, Madame Foucher ! Comment ça va ?",
-				"lo, Mme Foucher! How are you?",
-				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
+				"lo, Mme Foucher! How are you?"
 			],
 			[
+				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3",
 				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
-				"lo M Letort, I'm very well, thank you. And you?",
-				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
+				"lo M Letort, I'm very well, thank you. And you?"
 			],
 			[
+				"sounds/fr/Ça va, merci !.mp3",
 				"Ça va, merci !",
-				"I'm fine, thank you!",
-				"sounds/fr/Ça va, merci !.mp3"
+				"I'm fine, thank you!"
 			],
 			[
 				""
 			],
 			[
+				"sounds/fr/Comment t'appelles-tu.mp3",
 				"Comment t'appelles-tu* ?",
-				"What's your name?",
-				"sounds/fr/Comment t'appelles-tu.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Je m'appelle Max, et toi.mp3",
 				"Je m'appelle Max, et toi* ?",
-				"My name is Max. And you're….?",
-				"sounds/fr/Je m'appelle Max, et toi.mp3"
+				"My name is Max. And you're….?"
 			],
 			[
+				"sounds/fr/Je m'appelle Camille.mp3",
 				"Je m'appelle Camille.",
-				"My name's Camille.",
-				"sounds/fr/Je m'appelle Camille.mp3"
+				"My name's Camille."
 			],
 			[
 				""
 			],
 			[
+				"sounds/fr/Comment vous appelez-vous.mp3",
 				"Comment vous* appelez-vous ?",
-				"What's your name?",
-				"sounds/fr/Comment vous appelez-vous.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Je m'appelle Isabelle Martin.mp3",
 				"Je m'appelle Isabelle Martin.",
-				"My name is Isabelle Martin.",
-				"sounds/fr/Je m'appelle Isabelle Martin.mp3"
+				"My name is Isabelle Martin."
 			]
 		],
 		"titleText": "PhraseTable"
