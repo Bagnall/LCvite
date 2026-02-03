@@ -135,14 +135,14 @@ export class Monologue extends React.PureComponent {
 											id={`monologue${id}text`}
 											name={`monologue${id}text`}
 											onChange={this.handleChange}
-											placeHolder={`type your answer`}
+											placeholder={`type your answer`}
 											type='text'
 											value={userInput}
 										/>
 										:
 										<Textarea
 											onChange={this.handleChange}
-											placeHolder={`type your answer`}
+											placeholder={`type your answer`}
 											value={userInput}
 										></Textarea>
 									}
@@ -173,7 +173,7 @@ export class Monologue extends React.PureComponent {
 								<>
 									<Textarea
 										onChange={this.handleChange}
-										placeHolder={`type your answer`}
+										placeholder={`type your answer`}
 										value={userInput}
 									></Textarea>
 								</>

@@ -17,6 +17,7 @@ $max-tile-width: 360px;
 	max-width: $max-tile-width;
 	box-sizing: border-box;
 	text-align: center;
+	touch-action: none;
 }
 
 /* ==========================================================
@@ -56,7 +57,9 @@ $max-tile-width: 360px;
 		line-height: 0.5rem;
 		overflow: visible;
 		z-index: 20;
-
+		position: relative;
+		touch-action: none; // ✅ prevents scroll/pinch while interacting here
+		overscroll-behavior: contain; // ✅ stops "scroll chaining" on some browsers
 		transition: width 1s;
 
 		.draggable {
@@ -130,6 +133,7 @@ $max-tile-width: 360px;
 		}
 	}
 
+	&.type-group-table,
 	&.type-table {
 		.audio-clip {
 			margin-top: 1.4rem;

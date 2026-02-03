@@ -60,6 +60,13 @@ span.word {
 
 .word {
 	user-select: none;
+	transition-property: left, top, box-shadow; //, opacity;
+	transition-duration: 1s;
+	&.returning {
+		// position: absolute;
+		transition-property: left, top, box-shadow;
+		transition-duration: 1s;
+	}
 
 	/* ---------------- Blank tile ---------------- */
 	&.blank {
@@ -72,9 +79,6 @@ span.word {
 
 			border-radius: $tile-border-radius;
 			@include ph;
-
-			transition-property: left, top, box-shadow;
-			transition-duration: 1s;
 
 			// &::after {
 			// 	@include standard-pseudo();
@@ -118,7 +122,8 @@ span.word {
 	&.placed {
 		position: absolute;
 		cursor: default;
-
+		pointer-events: none;
+		opacity: 1 !important;
 		span {
 			transition-property: left, top;
 			transition-duration: 1s;
