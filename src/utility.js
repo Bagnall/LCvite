@@ -171,17 +171,78 @@ export const handleResponseText = (response) => {
 
 let backLink = 0;
 let programmaticScrollTimeout;
+
+
+// back-button scroll monitoring
+let backButtonScrollListenerAttached = false;
+let backButtonShownAtScrollY = 0; // scrollY when the button was shown (anchor)
+const backButtonHideThresholdVh = 0.5; // half a viewport height
+const getBackToLinkButton = () => document.getElementById('backToLinkButton');
+
+const hideBackButton = () => {
+	if (window.__backBtnHideTimer) {
+		clearTimeout(window.__backBtnHideTimer);
+		window.__backBtnHideTimer = null;
+	}
+	const btn = getBackToLinkButton();
+	if (btn) btn.classList.remove('show', 'flash');
+	stopMonitoringBackButtonScroll();
+};
+
+const onBackButtonScroll = () => {
+	// Ignore programmatic scroll (your scrollToElement sets this flag)
+	if (window.__programmaticScroll) return;
+
+	const btn = getBackToLinkButton();
+	if (!btn) return;
+
+	// Only do work if actually visible
+	if (!btn.classList.contains('show')) {
+		stopMonitoringBackButtonScroll();
+		return;
+	}
+
+	const thresholdPx = window.innerHeight * backButtonHideThresholdVh;
+	const delta = Math.abs(window.scrollY - backButtonShownAtScrollY);
+
+	if (delta >= thresholdPx) {
+		// give the user a brief chance to click before it fades
+		if (!window.__backBtnHideTimer) {
+			window.__backBtnHideTimer = setTimeout(() => {
+				hideBackButton();
+				window.__backBtnHideTimer = null;
+			}, 350); // tweak: 200–500ms feels good
+		}
+	}
+};
+
+const startMonitoringBackButtonScroll = () => {
+	if (backButtonScrollListenerAttached) return;
+	backButtonScrollListenerAttached = true;
+
+	// capture the anchor scroll position at the moment we begin monitoring
+	backButtonShownAtScrollY = window.scrollY;
+
+	window.addEventListener('scroll', onBackButtonScroll, { passive: true });
+};
+
+const stopMonitoringBackButtonScroll = () => {
+	if (!backButtonScrollListenerAttached) return;
+	backButtonScrollListenerAttached = false;
+
+	window.removeEventListener('scroll', onBackButtonScroll);
+};
+
 export const scrollBack = () => {
-	// Scroll to back to last position before link was clicked
 	window.scrollTo({
 		behavior: 'smooth',
 		left: 0,
 		top: backLink,
 	});
-	const backToLinkButton = document.getElementById('backToLinkButton');
-	backToLinkButton.classList.remove('show', 'flash');
 
+	hideBackButton(); // <- replaces manual class remove
 };
+
 
 export const scrollToElement = (element, showBackButton = true) => {
 	// console.log("scrollToElement");
@@ -221,7 +282,23 @@ export const scrollToElement = (element, showBackButton = true) => {
 
 	// Where is our current scroll position (for back button)
 	backLink = scrollTop;
-	if (showBackButton) backToLinkButton.classList.add('show', 'flash');
+
+	if (showBackButton) {
+		backToLinkButton.classList.add('show', 'flash');
+
+		// Start monitoring AFTER the programmatic scroll has finished,
+		// so we anchor to the user's landing position (not where they came from).
+		setTimeout(() => {
+		// If still visible, anchor to current position and begin monitoring
+			if (backToLinkButton.classList.contains('show')) {
+				backButtonShownAtScrollY = window.scrollY;
+				startMonitoringBackButtonScroll();
+			}
+		}, 600); // a small delay so smooth scroll has time to settle
+	} else {
+		hideBackButton();
+	}
+
 
 	// Flag this as a programmatic scroll so listeners can ignore it
 	window.__programmaticScroll = true;

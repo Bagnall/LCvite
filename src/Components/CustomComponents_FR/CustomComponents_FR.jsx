@@ -138,7 +138,7 @@ export class LO1Demystify1 extends PureComponent {
 					<div className={`text`}>
 						<p>1 <AudioClip className={`link`} soundFile={`sounds/fr/on om.mp3`} ><b>-on</b> / <b>om</b></AudioClip></p>
 						<p>In French there are some sounds known as nasal vowels: o followed by n or m is one of these. (sound file -on)
-						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/bonsoir.mp3`} >bonsoir</AudioClip>.
+						In this first topic you will have encountered this sound in the words <AudioClip className={`link`} soundFile={`sounds/fr/Bonjour.mp3`} >bonjour</AudioClip> and <AudioClip className={`link`} soundFile={`sounds/fr/Bonsoir.mp3`} >bonsoir</AudioClip>.
 						The sound is created as air comes through both nose and mouth. If you have a slight cold or pinch your nose you will be able to produce the sound without difficulty!</p>
 					</div>
 				</div>

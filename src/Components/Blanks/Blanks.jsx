@@ -185,72 +185,80 @@ export class Blanks extends React.Component {
 	autoSolve = () => {
 		const { id, nToPlace, firstMouseDown = true } = this.state;
 
-		// Ensure tiles have been pinned to absolute positions (otherwise you can't animate left/top)
+		// Ensure tiles have been pinned to absolute positions so left/top animations work
 		if (firstMouseDown) {
 			this.setState({ firstMouseDown: false });
 
-			if (this.wordsContainerRef.current) {
-			// stable containing block
-				this.wordsContainerRef.current.style.position = "relative";
+			const wc = this.wordsContainerRef.current;
+			if (wc) {
+			// Stable containing block for absolute children
+				wc.style.position = "relative";
 
-				// Fix container size
-				const { width, height } = window.getComputedStyle(this.wordsContainerRef.current);
-				this.wordsContainerRef.current.style.width = width;
-				this.wordsContainerRef.current.style.height = height;
+				// Freeze container size to prevent reflow after pinning
+				const { width, height } = window.getComputedStyle(wc);
+				wc.style.width = width;
+				wc.style.height = height;
 			}
 
-			this.pinTiles(); // two-pass pinning in your current version
+			this.pinTiles(); // your two-pass pinning (records home positions too)
 		}
 
-		// Animate each draggable tile to its corresponding target, then fade it out.
-		const tiles = document.querySelectorAll(`#${id} .words-container .word.draggable`);
 		const wc = this.wordsContainerRef.current;
 		if (!wc) return;
 
 		const wcRect = wc.getBoundingClientRect();
+
+		// Animate each still-draggable tile to its matching target and KEEP it visible.
+		const tiles = document.querySelectorAll(`#${id} .words-container .word.draggable`);
 
 		tiles.forEach((tile) => {
 			const key = this.getTileKey(tile); // e.g. "word3"
 			if (!key) return;
 
 			const targetWord = document.querySelector(`#${id} .target.${key}`);
-			const targetSpan = document.querySelector(`#${id} .target.${key} span`);
-			if (!targetWord || !targetSpan) return;
+			if (!targetWord) return;
 
-			// Compute target position in words-container coords
 			const tRect = targetWord.getBoundingClientRect();
+
+			// Convert viewport coords -> words-container coords
 			const targetLeft = tRect.left - wcRect.left;
 			const targetTop = tRect.top - wcRect.top;
 
-			// Fade in the answer text (with a transition)
-			targetSpan.style.transition = "opacity 1s";
-			targetSpan.style.opacity = 1;
+			// Make sure it's visible and animatable
+			tile.style.opacity = "1";
+			tile.style.position = "absolute";
 
-			// Animate tile to target and fade it out
-			tile.style.transition = "left 1s, top 1s, opacity 1s, box-shadow 1s";
-			tile.classList.add("returning"); // reuse your existing timing intent
+			// Apply transition (left/top driven by your CSS too, but inline is safest here)
+			tile.style.transition = "left 1s, top 1s, box-shadow 1s, opacity 1s";
+			tile.classList.add("returning");
 
-			// Force layout so transition is applied reliably
+			// Force reflow so the transition is applied
 			void tile.offsetWidth;
 
+			// Animate into place
 			tile.style.left = `${targetLeft}px`;
 			tile.style.top = `${targetTop}px`;
-			tile.style.opacity = 0;
 
-			// Once it arrives, mark as placed (so it behaves like normal placed tiles)
 			const onDone = (e) => {
+			// Only finalize once the movement finishes
 				if (e.propertyName !== "left" && e.propertyName !== "top") return;
 
 				tile.classList.remove("draggable");
+				tile.classList.remove("dragging");
 				tile.classList.add("placed");
 				tile.classList.remove("returning");
 
+				// Ensure it stays visible and can't be dragged again
+				tile.style.opacity = "1";
+				tile.style.pointerEvents = "none";
+
 				tile.removeEventListener("transitionend", onDone);
 			};
+
 			tile.addEventListener("transitionend", onDone);
 		});
 
-		// ✅ Make reset appear by updating state like a completed solve
+		// Update completion state so Reset appears immediately
 		this.setState({
 			nPlaced: nToPlace,
 			complete: true,
@@ -409,26 +417,29 @@ export class Blanks extends React.Component {
 			this.movingPiece.classList.remove('highlight');
 
 			if (inLimitsResult.success) {
-				const { targetLeft, targetTop, targetSpan } = inLimitsResult;
+				const { targetLeft, targetTop } = inLimitsResult;
 
 				clickAudio.play();
 
-				// targetLeft/targetTop are words-container coords
 				this.movingPiece.style.left = `${targetLeft}px`;
 				this.movingPiece.style.top = `${targetTop}px`;
-				this.movingPiece.style.opacity = `0`;
 
 				this.movingPiece.classList.remove("dragging");
+				this.movingPiece.classList.remove("returning");
 				this.movingPiece.classList.add("placed");
 				this.movingPiece.classList.remove("draggable");
+
+				// keep it visible
+				this.movingPiece.style.opacity = "1";
+
 				this.movingPiece = undefined;
 
-				targetSpan.style.opacity = 1;
-
 				nPlaced++;
-				if (nPlaced === nToPlace) this.setState({ complete: true });
+				if (nPlaced === nToPlace) {
+					this.setState({ complete: true });
+				}
 				this.setState({ nPlaced });
-			} else {
+			}			else {
 				this.movingPiece.classList.remove("dragging");
 				this.movingPiece.classList.add("returning");
 
@@ -476,30 +487,31 @@ export class Blanks extends React.Component {
 			const home = this.tileHomePositions[key];
 			if (!home) return;
 
+			// ✅ IMPORTANT: undo autoSolve "lock" + any leftover drag classes
+			tile.style.pointerEvents = ""; // <— this fixes “not draggable after reset”
+			tile.style.opacity = "1";
+			tile.classList.remove("placed", "dragging", "returning", "highlight", "success");
+			tile.classList.add("draggable");
+
 			// Freeze current position using rects relative to words-container
 			const r = tile.getBoundingClientRect();
 			const curLeft = r.left - wcRect.left;
 			const curTop = r.top - wcRect.top;
 
-			// Lock
+			// Lock at current spot with transitions off
 			tile.style.transition = "none";
 			tile.style.position = "absolute";
 			tile.style.left = `${curLeft}px`;
 			tile.style.top = `${curTop}px`;
-			tile.style.opacity = "1";
 			void tile.offsetWidth;
 
-			// Now switch state
-			tile.classList.remove('placed');
-			tile.classList.add('draggable');
-			tile.classList.add('returning');
+			// Animate home (CSS handles left/top transitions)
+			tile.classList.add("returning");
 			void tile.offsetWidth;
 
-			// Re-enable CSS transitions
-			tile.style.transition = "";
+			tile.style.transition = ""; // allow CSS/inline transition rules
 			void tile.offsetWidth;
 
-			// Animate home
 			tile.style.left = home.left;
 			tile.style.top = home.top;
 
@@ -516,8 +528,8 @@ export class Blanks extends React.Component {
 		objectSpans.forEach((s) => { s.style.opacity = 1; });
 
 		// Hide answers again
-		const targetSpans = document.querySelectorAll(`#${id} .target-board .blank span`);
-		targetSpans.forEach((s) => { s.style.opacity = 0; });
+		// const targetSpans = document.querySelectorAll(`#${id} .target-board .blank span`);
+		// targetSpans.forEach((s) => { s.style.opacity = 0; });
 
 		this.clearTargetHighlights();
 

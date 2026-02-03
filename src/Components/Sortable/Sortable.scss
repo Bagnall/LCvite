@@ -9,3 +9,13 @@
 .sortable [data-sortable-tile="1"] {
 	touch-action: none;
 }
+.sortable-tile {
+	color: #1f2937; // slate-800-ish for light mode
+}
+
+.dark .sortable-tile {
+	color: #f9fafb; // near-white for dark mode
+	&:hover {
+		color: #1f2937; // slate-800-ish for light mode
+	}
+}

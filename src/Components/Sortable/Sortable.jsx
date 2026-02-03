@@ -351,7 +351,7 @@ export class Sortable extends React.Component {
 										data-sortable-tile="1"
 										data-index={index}
 										className={
-											`bg-secondary flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 transition ${
+											`sortable-tile bg-secondary flex items-center justify-between text-sm font-medium cursor-ns-resize px-3 py-1 rounded-md border border-dashed border-slate-300 transition ${
 												isDragging
 													? "opacity-70 scale-[0.99]"
 													: "hover:bg-slate-100"

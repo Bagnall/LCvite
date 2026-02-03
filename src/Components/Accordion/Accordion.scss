@@ -6,7 +6,7 @@ Accordion.scss
 @use "../../styles/variables.module.scss" as *;
 @use "sass:color";
 $header-height: 40px;
-$header-font-size: 14px;
+$header-font-size: 1.2rem;
 $spacer: 20px;
 $transition-speed: 0.2s;
 
@@ -109,6 +109,9 @@ $common-left-margin: 20px;
 			flex-direction: row;
 			justify-content: flex-start;
 			align-items: center;
+			&:hover {
+				background-color: color-mix(in oklab, var(--muted) 50%, transparent);
+			}
 			svg.arrow {
 				transition: all $transition-speed;
 				margin-right: 0.5em;

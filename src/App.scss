@@ -43,6 +43,11 @@ body {
 	// background: $body-back;
 	// background: green;
 }
+.dark {
+	body {
+		background: #0f583b;
+	}
+}
 h1 {
 	font-family: "Feijoa Bold", times-roman;
 }
@@ -210,14 +215,16 @@ button.back-to-link-button {
 	right: 2px;
 	top: 50%;
 	z-index: 999;
-	display: none;
+	display: flex;
 	opacity: 0;
+	pointer-events: none;
 	transition:
-		display 1s 1s,
-		opacity 1s;
+		// display 1s 1s,
+		opacity 1s ease;
 	&.show {
-		display: flex;
+		// display: flex;
 		opacity: 1;
+		pointer-events: auto;
 		transition:
 			display 0s,
 			opacity 0.1s 1s;

@@ -16,7 +16,7 @@
 				"monologues1": {
 					"component": "PhraseTable",
 					"id": "monologues1",
-					"instructionsTextHTML": "<p>Read the phrases and play the audio clips.</p>",
+					"informationTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 					"phrases": [
 						[
 							"sounds/fr/Salut, je suis Sylvain. Je suis célibataire. Je suis étudiant en géographie.mp3",
@@ -45,7 +45,7 @@
 		"component": "PhraseTable",
 		"expandable": false,
 		"id": "vocabulary",
-		"instructionsText": "Read the phrases and play the audio clips.",
+		"informationTextHTML": "<p>Read the phrases and play the audio clips.</p>",
 		"phrases": [
 			[
 				"sounds/fr/être.mp3",
