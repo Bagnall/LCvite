@@ -130,6 +130,18 @@ $max-tile-width: 360px;
 		}
 	}
 
+	&.type-table {
+		.audio-clip {
+			margin-top: 1.4rem;
+			audio {
+				border: 1px solid #ccc;
+				border-radius: 0.6rem;
+				background: rgb(241, 241, 241); //#f9f9f9;
+				max-height: 40px;
+			}
+		}
+	}
+
 	/* Drag shadow when moving tiles */
 	&.type-table,
 	&.type-pictures-answers,
@@ -216,7 +228,7 @@ $max-tile-width: 360px;
      TARGET BOARD (merged & deduplicated)
 	========================================================== */
 	.target-board {
-		background: #f9f9f9; //red; // hsl(0deg, 0%, 90%);
+		background: rgb(241, 241, 241); //#f9f9f9; //red; // hsl(0deg, 0%, 90%);
 		border: 1px solid #ccc;
 		border-radius: 0.6rem;
 		padding: 0.3rem;
