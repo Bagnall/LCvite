@@ -344,7 +344,6 @@ class LinkAudioProgress extends CircularAudioProgress {
 			progress: 0,
 		});
 
-		this.updateUnderscoreOffset = this.updateUnderscoreOffset.bind(this);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
@@ -354,23 +353,23 @@ class LinkAudioProgress extends CircularAudioProgress {
 			soundFileAudio.addEventListener('timeupdate', this.handleTimeUpdate);
 			soundFileAudio.setup = true;
 		}
-		if (prevState.progress !== this.state.progress || prevState.duration !== this.state.duration) {
-			this.updateUnderscoreOffset();
-		}
 	}
 
-	updateUnderscoreOffset = () => {
-		const { progress, duration } = this.state;
-		// console.log("progress", progress, "duration", duration);
-		this.linkRef.current.style.setProperty('--progress-width', `${100 * progress / duration}%`);
-		// this.linkRef.current.setAttribute('title', 'Click to pause');
-	};
+	// updateUnderscoreOffset = () => {
+	// 	return;
+	// 	const { progress, duration } = this.state;
+	// 	// console.log("progress", progress, "duration", duration);
+	// 	this.linkRef.current.style.setProperty('--progress-width', `${100 * progress / duration}%`);
+	// 	// this.linkRef.current.setAttribute('title', 'Click to pause');
+	// };
 
 	render = () => {
 		const { children } = this.props;
-		const {
-			status = ''
-		} = this.state;
+		// const {
+		// 	status = ''
+		// } = this.state;
+
+		const { status = 'stopped', progress = 0, duration = 0 } = this.state;
 
 		return (
 			<span
@@ -378,9 +377,15 @@ class LinkAudioProgress extends CircularAudioProgress {
 				onClick={this.handleClick}
 				onPlay={(e) => this.notePlaying(e, false)}
 				ref={this.linkRef}
-				title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}
-			>
-				<svg xmlns="http://www.w3.org/2000/svg"
+				title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}>
+				<CircularAudioProgressAnimatedSpeakerDisplay
+					inline={true}
+					status={status}
+					progress={progress}
+					duration={duration}
+					handleClick={this.handleClick}
+				/>
+				{/* <svg xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
@@ -389,7 +394,7 @@ class LinkAudioProgress extends CircularAudioProgress {
 					strokeWidth="2"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-				><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /></svg>
+				><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /></svg> */}
 				{children}
 			</span>
 		);

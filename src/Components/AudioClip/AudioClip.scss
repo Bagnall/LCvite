@@ -48,7 +48,7 @@ audio.super-compact {
 		margin-right: -8px;
 	}
 	&::after {
-		content: "";
+		// content: "";
 		width: var(--progress-width);
 		height: 1px;
 		position: absolute;
@@ -126,6 +126,12 @@ $circle-duration: 0.2s;
 		width: 100%;
 		height: 100%;
 	}
+}
+
+span.audio-link {
+	// color: blue;
+	cursor: pointer;
+	// text-decoration: underline;
 }
 
 $cycle: 1600ms;
