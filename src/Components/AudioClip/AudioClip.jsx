@@ -353,6 +353,9 @@ class LinkAudioProgress extends CircularAudioProgress {
 			soundFileAudio.addEventListener('timeupdate', this.handleTimeUpdate);
 			soundFileAudio.setup = true;
 		}
+		// if (prevState.progress !== this.state.progress || prevState.duration !== this.state.duration) {
+		// 	this.updateUnderscoreOffset();
+		// }
 	}
 
 	// updateUnderscoreOffset = () => {
