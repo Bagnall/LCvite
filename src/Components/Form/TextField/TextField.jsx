@@ -8,8 +8,8 @@ export class TextField extends React.PureComponent {
 
 	constructor(props) {
 		super(props);
-		this.select = this.select.bind(this);
-		this.setSelectionRange = this.setSelectionRange.bind(this);
+		// this.select = this.select.bind(this);
+		// this.setSelectionRange = this.setSelectionRange.bind(this);
 
 		const {
 			parentRef
@@ -111,17 +111,17 @@ export class TextField extends React.PureComponent {
 	select = () => {
 		const inputRef = this.inputRef.current;
 		inputRef.select();
-	}
+	};
 
 	setSelectionRange = (from, to) => {
 		const inputRef = this.inputRef.current;
 		// structureCopyInput.value = structure;
 		inputRef.setSelectionRange(from, to);
-	}
+	};
 
 	selectAll = () => {
 		this.select();
 		this.setSelectionRange(0, 99999);
-	}
+	};
 
 }

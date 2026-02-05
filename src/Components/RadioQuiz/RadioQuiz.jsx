@@ -40,8 +40,8 @@ export class RadioQuiz extends React.Component {
 			nCorrect: 0,
 			showExplanation: [],
 		});
-		this.handleChange = this.handleChange.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 	}
 
 	handleChange = (e, rowNum, colNum) => {

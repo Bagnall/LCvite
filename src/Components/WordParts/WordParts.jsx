@@ -21,10 +21,10 @@ export class WordParts extends React.PureComponent {
 			failCount: 0,
 		});
 
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handlePartWordClick = this.handlePartWordClick.bind(this);
-		this.handlePartWordError = this.handlePartWordError.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handlePartWordClick = this.handlePartWordClick.bind(this);
+		// this.handlePartWordError = this.handlePartWordError.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 
 	}
 

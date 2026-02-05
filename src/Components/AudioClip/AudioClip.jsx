@@ -9,9 +9,9 @@ import {
 export class AudioClip extends React.PureComponent {
 	constructor(props) {
 		super(props);
-		this.initialiseProgress = this.initialiseProgress.bind(this);
-		this.notePlaying = this.notePlaying.bind(this);
-		this.playSound = this.playSound.bind(this);
+		// this.initialiseProgress = this.initialiseProgress.bind(this);
+		// this.notePlaying = this.notePlaying.bind(this);
+		// this.playSound = this.playSound.bind(this);
 		this.state = ({
 			status: 'stopped',
 		});
@@ -189,7 +189,7 @@ class CircularAudioProgress extends AudioClip {
 			progress: 0,
 		});
 
-		this.pause = this.pause.bind(this);
+		// this.pause = this.pause.bind(this);
 	}
 
 	componentDidMount = () => {
@@ -346,32 +346,17 @@ class LinkAudioProgress extends CircularAudioProgress {
 
 	}
 
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate() {
 		const { soundFileAudio } = this.state;
 		if (soundFileAudio !== undefined && soundFileAudio.setup !== true) {
 			soundFileAudio.addEventListener('loadedmetadata', this.handleMetadataLoaded);
 			soundFileAudio.addEventListener('timeupdate', this.handleTimeUpdate);
 			soundFileAudio.setup = true;
 		}
-		// if (prevState.progress !== this.state.progress || prevState.duration !== this.state.duration) {
-		// 	this.updateUnderscoreOffset();
-		// }
 	}
-
-	// updateUnderscoreOffset = () => {
-	// 	return;
-	// 	const { progress, duration } = this.state;
-	// 	// console.log("progress", progress, "duration", duration);
-	// 	this.linkRef.current.style.setProperty('--progress-width', `${100 * progress / duration}%`);
-	// 	// this.linkRef.current.setAttribute('title', 'Click to pause');
-	// };
 
 	render = () => {
 		const { children } = this.props;
-		// const {
-		// 	status = ''
-		// } = this.state;
-
 		const { status = 'stopped', progress = 0, duration = 0 } = this.state;
 
 		return (
@@ -388,7 +373,7 @@ class LinkAudioProgress extends CircularAudioProgress {
 					duration={duration}
 					handleClick={this.handleClick}
 				/>
-				{/* <svg xmlns="http://www.w3.org/2000/svg"
+				{/* Simple compact link SVG speaker icon <svg xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"

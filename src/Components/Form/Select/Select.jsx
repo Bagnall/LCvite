@@ -11,10 +11,10 @@ export class Select extends React.Component {
 			value: this.props.value,
 		});
 
-		this.renderSelect = this.renderSelect.bind(this);
+		// this.renderSelect = this.renderSelect.bind(this);
 
 		this.inputRef = React.createRef();
-		this.handleChange = this.handleChange.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange = (e) => {
@@ -33,7 +33,7 @@ export class Select extends React.Component {
 			// console.log(e.target.value);
 			handleChange(id, e.target.value);
 		}
-	}
+	};
 
 	renderSelect = () => {
 		const {
@@ -78,7 +78,7 @@ export class Select extends React.Component {
 				{renderedOptions}
 			</select >
 		);
-	}
+	};
 
 	render() {
 		const {

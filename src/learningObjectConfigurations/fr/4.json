@@ -283,52 +283,52 @@
 					"items": [
 						{
 							"text": "Ma famille habite:"
-						}
+						},
 						{
 							"text": "[à|*au|en|aux|dans le] Canada."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] France."
-						}
+						},
 						{
 							"text": "[*à|au|en|aux|dans le] Taiwan."
-						}
+						},
 						{
 							"text": "[à|*au|en|aux|dans le] Japon."
-						}
+						},
 						{
 							"text": "[*à|au|en|aux|dans le] Bordeaux."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Nouvelle Zélande."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Chine."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Turquie."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Suisse."
-						}
+						},
 						{
 							"text": "[à|*au|en|aux|dans le] Sénégal."
-						}
+						},
 						{
 							"text": "[à|au|en|*aux|dans le] Etats-Unis."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Angleterre."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Algérie."
-						}
+						},
 						{
 							"text": "[à|au|*en|aux|dans le] Afghanistan."
-						}
+						},
 						{
 							"text": "[*à|au|en|aux|dans le] Bruxelles."
-						}
+						},
 						{
 							"text": "[à|au|en|aux|*dans le] Yorkshire."
 						}

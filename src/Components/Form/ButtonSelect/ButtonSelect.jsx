@@ -7,7 +7,7 @@ export class ButtonSelect extends React.PureComponent {
 			expanded: false,
 		});
 
-		this.handleClick = this.handleClick.bind(this);
+		// this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick = () => {

@@ -37,10 +37,10 @@ export class Monologue extends React.PureComponent {
 			});
 		}
 
-		this.countCorrect = this.countCorrect.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleValidation = this.handleValidation.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.countCorrect = this.countCorrect.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
+		// this.handleValidation = this.handleValidation.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 		// this.highlightTextDiff = this.highlightTextDiff.bind(this);
 
 	}

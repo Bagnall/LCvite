@@ -40,7 +40,7 @@ export class RadioTest extends React.Component {
 			showExplanation: [],
 		});
 		// this.countCorrect = this.countCorrect.bind(this);
-		this.handleChange = this.handleChange.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
 		// this.handleClick = this.handleClick.bind(this);
 		// this.handleReset = this.handleReset.bind(this);
 	}

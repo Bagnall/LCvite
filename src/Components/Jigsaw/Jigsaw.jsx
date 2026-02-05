@@ -95,13 +95,13 @@ export class Jigsaw extends React.PureComponent {
 			tileSize: tileSize,
 		});
 
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handleHints = this.handleHints.bind(this);
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-		this.handleMouseMove = this.handleMouseMove.bind(this);
-		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.inLimits = this.inLimits.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handleHints = this.handleHints.bind(this);
+		// this.handleMouseDown = this.handleMouseDown.bind(this);
+		// this.handleMouseMove = this.handleMouseMove.bind(this);
+		// this.handleMouseUp = this.handleMouseUp.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.inLimits = this.inLimits.bind(this);
 
 	}
 

@@ -141,15 +141,15 @@ export class WordGrid extends PureComponent {
 			soundFiles: soundFiles,
 			words: foreignWords,
 		});
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-		this.handleMouseEnter = this.handleMouseEnter.bind(this);
-		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.handleHints = this.handleHints.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleShuffle = this.handleShuffle.bind(this);
-		this.getLinearSelection = this.getLinearSelection.bind(this);
-		this.clearSVG = this.clearSVG.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handleMouseDown = this.handleMouseDown.bind(this);
+		// this.handleMouseEnter = this.handleMouseEnter.bind(this);
+		// this.handleMouseUp = this.handleMouseUp.bind(this);
+		// this.handleHints = this.handleHints.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleShuffle = this.handleShuffle.bind(this);
+		// this.getLinearSelection = this.getLinearSelection.bind(this);
+		// this.clearSVG = this.clearSVG.bind(this);
 
 		this.SVGRef = React.createRef();
 	}

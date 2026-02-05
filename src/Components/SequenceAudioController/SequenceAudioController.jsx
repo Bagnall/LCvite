@@ -72,8 +72,12 @@ export class SequenceAudioController extends React.Component {
 		});
 
 		Promise.all(loads).then(() => {
-			const masterDuration = this.durations.reduce((sum, d) => sum + (d || 0), 0);
-			this.setState({ masterDuration });
+			const sum = this.durations.reduce((acc, d) => acc + (d || 0), 0);
+
+			// Never allow preload to shrink an already-better duration
+			this.setState((prev) => ({
+				masterDuration: Math.max(prev.masterDuration || 0, sum || 0),
+			}));
 		});
 	};
 
@@ -90,6 +94,28 @@ export class SequenceAudioController extends React.Component {
 		let sum = 0;
 		for (let i = 0; i < sources.length; i++) sum += this.durations[i] || 0;
 		return sum;
+	};
+
+	hasUnknownDurations = () => {
+		const { sources = [] } = this.props;
+		for (let i = 0; i < sources.length; i++) {
+			if (!(this.durations[i] > 0)) return true; // 0, NaN, undefined
+		}
+		return false;
+	};
+
+	/**
+	 * IMPORTANT:
+	 * If any durations are still unknown (0), the raw computed masterDuration
+	 * will be too small and the scrubber may "hit the end" early.
+	 * So while there are unknowns, we *never shrink* masterDuration.
+	 */
+	getSafeMasterDuration = () => {
+		const sum = this.computeMasterDuration();
+		if (!this.hasUnknownDurations()) return sum;
+
+		// While incomplete, keep the best (largest) duration we've ever had.
+		return Math.max(this.state.masterDuration || 0, sum || 0);
 	};
 
 	// Map a master time (seconds) to { index, offsetSeconds }
@@ -130,10 +156,13 @@ export class SequenceAudioController extends React.Component {
 
 		if (playState === "paused") {
 			audio.play();
-			this.setState({
-				playSequence: true,
-				playState: "playing",
-			}, this.emitPlayState);
+			this.setState(
+				{
+					playSequence: true,
+					playState: "playing",
+				},
+				this.emitPlayState
+			);
 			return;
 		}
 
@@ -177,6 +206,7 @@ export class SequenceAudioController extends React.Component {
 		const start = () => {
 			try {
 				audio.currentTime = offset || 0;
+			// eslint-disable-next-line no-unused-vars
 			} catch (e) {
 				// ignore
 			}
@@ -184,21 +214,27 @@ export class SequenceAudioController extends React.Component {
 			const shouldPlay = opts.autoplay !== false;
 			if (shouldPlay) audio.play().catch(console.error); // eslint-disable-line
 
-			const d = Number.isFinite(audio.duration) ? audio.duration : (this.durations[index] || 0);
+			const d = Number.isFinite(audio.duration)
+				? audio.duration
+				: this.durations[index] || 0;
+
 			this.durations[index] = d;
 
-			const masterDuration = this.computeMasterDuration();
+			const masterDuration = this.getSafeMasterDuration();
 			const masterTime = this.getMasterTime(index, audio.currentTime);
 
-			this.setState({
-				clipDuration: d,
-				clipTime: audio.currentTime,
-				currentIndex: index,
-				masterDuration,
-				masterTime,
-				playSequence,
-				playState: shouldPlay ? "playing" : "paused",
-			}, this.emitPlayState);
+			this.setState(
+				{
+					clipDuration: d,
+					clipTime: audio.currentTime,
+					currentIndex: index,
+					masterDuration,
+					masterTime,
+					playSequence,
+					playState: shouldPlay ? "playing" : "paused",
+				},
+				this.emitPlayState
+			);
 
 			this.emitTrackChange(index);
 		};
@@ -233,7 +269,7 @@ export class SequenceAudioController extends React.Component {
 		const d = Number.isFinite(audio.duration) ? audio.duration : 0;
 		this.durations[currentIndex] = d;
 
-		const masterDuration = this.computeMasterDuration();
+		const masterDuration = this.getSafeMasterDuration();
 		const masterTime = this.getMasterTime(currentIndex, audio.currentTime);
 
 		this.setState({
@@ -253,7 +289,7 @@ export class SequenceAudioController extends React.Component {
 		const clipDuration = audio.duration || 0;
 
 		const masterTime = this.getMasterTime(currentIndex, clipTime);
-		const masterDuration = this.computeMasterDuration();
+		const masterDuration = this.getSafeMasterDuration();
 
 		this.setState({
 			clipDuration,
@@ -304,8 +340,13 @@ export class SequenceAudioController extends React.Component {
 		this.isScrubbing = true;
 
 		// Capture pointer so we still get the up event if the user drags off the control
+		// eslint-disable-next-line eqeqeq
 		if (e.currentTarget && e.pointerId != null) {
-			try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* empty */ }
+			try {
+				e.currentTarget.setPointerCapture(e.pointerId);
+			} catch {
+				/* empty */
+			}
 		}
 
 		// initialise scrub to current masterTime
@@ -313,8 +354,6 @@ export class SequenceAudioController extends React.Component {
 	};
 
 	moveScrub = (e) => {
-		// For <input type="range">, the value is already updated on change
-		// We use onChange for the value; no need to do anything here.
 		e.stopPropagation();
 	};
 
@@ -334,7 +373,7 @@ export class SequenceAudioController extends React.Component {
 		if (e.currentTarget && e.pointerId != null) {
 			try {
 				e.currentTarget.releasePointerCapture(e.pointerId);
-			} catch {}
+			} catch { /* empty */ }
 		}
 
 		this.isScrubbing = false;
@@ -344,6 +383,7 @@ export class SequenceAudioController extends React.Component {
 
 			// commit AFTER state clears scrubTime
 			queueMicrotask(() => {
+				// eslint-disable-next-line eqeqeq
 				if (commitTime != null) {
 					this.seekMaster(commitTime);
 				}
@@ -353,17 +393,10 @@ export class SequenceAudioController extends React.Component {
 		});
 	};
 
-
 	/* ---------- Render ---------- */
 
 	render() {
-		const {
-			masterTime,
-			masterDuration,
-			scrubTime,
-			playState,
-			volume,
-		} = this.state;
+		const { masterTime, masterDuration, scrubTime, playState, volume } = this.state;
 
 		const displayTime = scrubTime !== null ? scrubTime : masterTime;
 
@@ -395,7 +428,6 @@ export class SequenceAudioController extends React.Component {
 						)}
 					</button>
 
-					{/* MASTER scrubber (pointer events = mouse + touch) */}
 					<input
 						className={`play-scrubber`}
 						type="range"
@@ -410,14 +442,7 @@ export class SequenceAudioController extends React.Component {
 						title="Play progress"
 					/>
 
-					{/* volume icon (unchanged) */}
-					<svg
-						className={`volume-icon`}
-						width="24"
-						height="24"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20.001 20"
-					>
+					<svg className={`volume-icon`} width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.001 20">
 						<path
 							className="vol1"
 							d="M98.024 132.952h3.269v2.513h-3.269z"

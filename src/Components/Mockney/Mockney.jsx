@@ -134,9 +134,9 @@ export class Mockney extends PureComponent {
 			...config
 		});
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSpeak = this.handleSpeak.bind(this);
-		this.initialiseSynth = this.initialiseSynth.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
+		// this.handleSpeak = this.handleSpeak.bind(this);
+		// this.initialiseSynth = this.initialiseSynth.bind(this);
 		this.mockneyRef = createRef();
 	}
 
@@ -254,5 +254,5 @@ export class Mockney extends PureComponent {
 				</div>
 			</div>
 		);
-	}
+	};
 }

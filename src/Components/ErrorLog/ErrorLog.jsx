@@ -18,9 +18,9 @@ export class ErrorLog extends React.Component {
 			collapse: false,
 		});
 
-		this.copyErrors = this.copyErrors.bind(this);
-		this.expand = this.expand.bind(this);
-		this.toggleCollapseLog = this.toggleCollapseLog.bind(this);
+		// this.copyErrors = this.copyErrors.bind(this);
+		// this.expand = this.expand.bind(this);
+		// this.toggleCollapseLog = this.toggleCollapseLog.bind(this);
 	}
 
 	copyErrors = () => {

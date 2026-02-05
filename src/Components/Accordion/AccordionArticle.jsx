@@ -23,7 +23,7 @@ export class AccordionArticle extends React.PureComponent {
 			id: id,
 		});
 
-		this.toggleExpanded = this.toggleExpanded.bind(this);
+		// this.toggleExpanded = this.toggleExpanded.bind(this);
 	}
 
 	componentDidUpdate = (prevProps) => {

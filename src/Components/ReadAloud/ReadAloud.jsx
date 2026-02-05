@@ -12,12 +12,12 @@ export class ReadAloud extends React.PureComponent {
 
 		const { phrase } = this.props;
 
-		this.recordAndScore = this.recordAndScore.bind(this);
-		this.diagnose = this.diagnose.bind(this);
-		this.handleNoMatch = this.handleNoMatch.bind(this);
-		this.handleError = this.handleError.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
+		// this.recordAndScore = this.recordAndScore.bind(this);
+		// this.diagnose = this.diagnose.bind(this);
+		// this.handleNoMatch = this.handleNoMatch.bind(this);
+		// this.handleError = this.handleError.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
 
 		this.comparisonRef = React.createRef();
 		this.resultRef = React.createRef();

@@ -52,9 +52,9 @@ export class MemoryMatchGame extends React.PureComponent {
 			nPairs: 0,
 			nTries: 0,
 		});
-		this.handleClick = this.handleClick.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleShuffle = this.handleShuffle.bind(this);
+		// this.handleClick = this.handleClick.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleShuffle = this.handleShuffle.bind(this);
 	}
 
 	handleClick = (card) => {

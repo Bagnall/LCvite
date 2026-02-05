@@ -1307,7 +1307,7 @@ export class LO9Grammar extends PureComponent {
 			// nPlaced: 0,
 			// nToSolve: 0,
 		});
-		this.handleClick = this.handleClick.bind(this);
+		// this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick = (e) => {
@@ -2218,87 +2218,6 @@ export class L13Grammar extends PureComponent {
 	};
 }
 
-// export class L13TrueFalse extends Component {
-
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = ({
-// 			showExplanation: false,
-// 		});
-// 		this.handleChange = this.handleChange.bind(this);
-// 	}
-
-// 	handleChange = (e) => {
-// 		const {
-// 			answer,
-// 			onAnswer,
-// 			id,
-// 		} = this.props;
-// 		const [rowNum] = e.target.id.match(/\d+/);
-
-// 		e.stopPropagation();
-// 		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
-// 		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
-
-// 		// console.log("handleChange", e.target);
-// 		// console.log("rowNum", rowNum);
-// 		let userChose = false;
-// 		if (e.target.id === `${id}true`) {
-// 			// console.log("TRUE");
-// 			userChose = true;
-// 			onAnswer(rowNum, true, userChose === answer);
-// 		}else{
-// 			// console.log("FALSE");
-// 			onAnswer(rowNum, false, userChose === answer);
-// 		}
-// 		// console.log(10, "userChose", userChose, answer, userChose === answer);
-
-// 		if (userChose === answer) {
-// 			tadaAudio.play();
-// 		} else {
-// 			errorAudio.play();
-// 			this.setState({
-// 				showExplanation: true,
-// 			});
-// 		}
-// 	};
-
-// 	render = () => {
-// 		const {
-// 			disabled,
-// 			explanation,
-// 			id,
-// 			value,
-// 		} = this.props;
-// 		const {
-// 			showExplanation = false,
-// 		} = this.state;
-// 		// console.log("showExplanation", showExplanation);
-// 		// console.log("value", value);
-
-// 		return (
-// 			<span>
-// 				<label>vrai<input
-// 					checked={value === true}
-// 					disabled={disabled}
-// 					id={`${id}true`}
-// 					name={`${id}trueFalse`}
-// 					type={`checkbox`}
-// 					onChange={this.handleChange}
-// 				/></label>&nbsp;/&nbsp;
-// 				<label>faux<input
-// 					checked={value === false}
-// 					disabled={disabled}
-// 					id={`${id}false`}
-// 					name={`${id}trueFalse`}
-// 					type={`checkbox`}
-// 					onChange={this.handleChange}
-// 				/></label>&nbsp;&nbsp;{showExplanation ? explanation : null}
-// 			</span>
-// 		);
-// 	};
-// }
-
 export class L13ASummersDay extends Component {
 
 	constructor(props) {
@@ -2312,7 +2231,7 @@ export class L13ASummersDay extends Component {
 			// test: false,
 			userChose: userChose,
 		});
-		this.answerRow = this.answerRow.bind(this);
+		// this.answerRow = this.answerRow.bind(this);
 	}
 
 	isTrue = (entry) => {

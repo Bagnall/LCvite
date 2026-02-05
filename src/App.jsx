@@ -69,15 +69,15 @@ export default class App extends React.Component {
 			showDialog: false,
 		};
 
-		this.loadConfig = this.loadConfig.bind(this);
-		this.loadIndex = this.loadIndex.bind(this);
-		this.hideDialog = this.hideDialog.bind(this);
-		this.hideSpeechError = this.hideSpeechError.bind(this);
-		this.initialiseSpeeches = this.initialiseSpeeches.bind(this);
-		this.initialiseSynth = this.initialiseSynth.bind(this);
-		this.renderComponent = this.renderComponent.bind(this);
-		this.selectLearningObject = this.selectLearningObject.bind(this);
-		this.toggleDark = this.toggleDark.bind(this);
+		// this.loadConfig = this.loadConfig.bind(this);
+		// this.loadIndex = this.loadIndex.bind(this);
+		// this.hideDialog = this.hideDialog.bind(this);
+		// this.hideSpeechError = this.hideSpeechError.bind(this);
+		// this.initialiseSpeeches = this.initialiseSpeeches.bind(this);
+		// this.initialiseSynth = this.initialiseSynth.bind(this);
+		// this.renderComponent = this.renderComponent.bind(this);
+		// this.selectLearningObject = this.selectLearningObject.bind(this);
+		// this.toggleDark = this.toggleDark.bind(this);
 
 		window.refs = [];
 		this.backLink = 0;
@@ -425,11 +425,38 @@ export default class App extends React.Component {
 		);
 	};
 
+	normaliseContentItems = (content = []) => {
+		// Supports BOTH:
+		// 1) New format: [{ id, component, ... }, ...]
+		// 2) Old format: [{ someKey: { id, component, ... } }, ...]
+		// Also tolerates accidental nulls.
+		return (content || [])
+			.map((item) => {
+				if (!item) return null;
+
+				// New format: looks like a config object already
+				if (item.component) return item;
+
+				// Old format wrapper: { "jigsaw1": { component:"Jigsaw", ... } }
+				const keys = Object.keys(item);
+				const values = Object.values(item);
+				if (keys.length === 1 && values.length === 1 && values[0]?.component) {
+					const cfg = values[0];
+					if (!cfg.id) cfg.id = keys[0];
+					return cfg;
+				}
+
+				return null;
+			})
+			.filter(Boolean);
+	};
+
+
 	/**
-   * NEW: renderComponentForTab
-   * Returns "bare" content for a component (no AccordionArticle / Section wrapper)
-   * so that we can render it as a tab panel inside a Group.
-   */
+	 * renderComponentForTab
+	 * Returns "bare" content for a component (no AccordionArticle / Section wrapper)
+	 * so that we can render it as a tab panel inside a Group.
+	*/
 	renderComponentForTab = (value) => {
 		const {
 			component,
@@ -909,11 +936,9 @@ export default class App extends React.Component {
 				const { id: groupId, displayAsTabs = false } = value;
 
 				if (!displayAsTabs) {
-					// ORIGINAL BEHAVIOUR: children as sub-accordions/sections
-					groupContent.forEach((child) => {
-						for (const [/* key */, v] of Object.entries(child)) {
-							this.renderComponent(v, renderedGroupContent);
-						}
+					// Children as sub-accordions/sections
+					this.normaliseContentItems(groupContent).forEach((v) => {
+						this.renderComponent(v, renderedGroupContent);
 					});
 
 					if (expandable) {
@@ -957,33 +982,32 @@ export default class App extends React.Component {
 						);
 					}
 				} else {
-					// NEW BEHAVIOUR: children rendered as tabs
+					// children rendered as tabs
 					const tabItems = [];
 					let defaultTabValue = null;
 
-					groupContent.forEach((child, index) => {
-						for (const [/* key */, v] of Object.entries(child)) {
-							const childId = v.id || `child-${index}`;
-							const tabValue = childId;
-							if (defaultTabValue === null) defaultTabValue = tabValue;
+					this.normaliseContentItems(groupContent).forEach((v, index) => {
+						const childId = v.id || `child-${index}`;
+						const tabValue = childId;
+						if (defaultTabValue === null) defaultTabValue = tabValue;
 
-							const tabLabel =
-								v.menuText ||
-								v.titleText ||
-								(typeof v.titleTextHTML === "string"
-									? v.titleTextHTML.replace(/<[^>]+>/g, "")
-									: "") ||
-								childId;
+						const tabLabel =
+							v.menuText ||
+							v.titleText ||
+							(typeof v.titleTextHTML === "string"
+								? v.titleTextHTML.replace(/<[^>]+>/g, "")
+								: "") ||
+							childId;
 
-							const contentNode = this.renderComponentForTab(v);
+						const contentNode = this.renderComponentForTab(v);
 
-							tabItems.push({
-								content: contentNode,
-								label: tabLabel,
-								value: tabValue,
-							});
-						}
+						tabItems.push({
+							content: contentNode,
+							label: tabLabel,
+							value: tabValue,
+						});
 					});
+
 
 					const outerWrapper = (inner) =>
 						expandable ? (
@@ -1234,10 +1258,8 @@ export default class App extends React.Component {
 				const renderedSectionContent = [];
 				const { content: sectionContent = [] } = value;
 
-				sectionContent.forEach((child) => {
-					for (const [/* key */, v] of Object.entries(child)) {
-						this.renderComponent(v, renderedSectionContent);
-					}
+				this.normaliseContentItems(sectionContent).forEach((v) => {
+					this.renderComponent(v, renderedSectionContent);
 				});
 
 				articles.push(

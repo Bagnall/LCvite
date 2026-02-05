@@ -29,8 +29,8 @@ export class AnswerTable extends React.PureComponent {
 			...props.config,
 			nCorrect: 0,
 		});
-		this.countCorrect = this.countCorrect.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.countCorrect = this.countCorrect.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 	}
 
 	// nCorrect = 0;
