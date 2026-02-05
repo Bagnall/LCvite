@@ -6,10 +6,16 @@ $total-pieces: $pieces-per-board * 2;
 $board-width: 5;
 $board-height: 4;
 $border-width: 14;
+$form-common-height: 38px;
+$info-diameter: 28px;
 $jigsaw-border-width: 14;
 $memory-card-transition-time: 1s;
+$progress-indicator-width: 200px;
+$progress-indicator-height: 26px;
 $transition-time: 1s;
 $word-transition-time: $transition-time;
+$card-size: 300px;
+$main-menu-height: 80px;
 
 // Use of :root is a runtime feature, so in JS you can use such as:
 // const root = getComputedStyle(document.documentElement);
@@ -33,6 +39,7 @@ $word-transition-time: $transition-time;
 :export {
 	borderWidth: $border-width;
 	jigsawBorderWidth: $border-width;
+	mainMenuHeight: $main-menu-height;
 	tabSize: $tab-size;
 	tileSize: $tile-size;
 	piecesPerBoard: $pieces-per-board;
@@ -62,3 +69,4 @@ $progress-indicator-width: 200px;
 $progress-indicator-height: 26px;
 $table-horizontal-margin: 40px;
 $toolbar-small-dimension: 36px;
+$tile-border-radius: 16px;

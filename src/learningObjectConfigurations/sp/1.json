@@ -7,10 +7,11 @@
 		"targetLanguageCode": "es-US",
 		"subtitle": "First Contact"
 	},
-	"customComponent1": {
+	"introduction": {
 		"component": "LO1Intro",
-		"id": "LO1Intro",
-		"titleText": "Introduction"
+		"expandable": false,
+		"id": "introduction",
+		"comment": "Introduction"
 	},
 	"group1": {
 		"component": "Group",
@@ -27,29 +28,29 @@
 								"instructionsText": "To say hello",
 								"phrases": [
 									[
+										"sounds/sp/¡Hola!.mp3",
 										"¡Hola!",
-										"Hello (formal and informal)",
-										"sounds/sp/¡Hola!.mp3"
+										"Hello (formal and informal)"
 									],
 									[
+										"sounds/sp/Buenos dias.mp3",
 										"Buenos dias",
-										"Good morning",
-										"sounds/sp/Buenos dias.mp3"
+										"Good morning"
 									],
 									[
+										"sounds/sp/Buenas tardes.mp3",
 										"Buenas tardes",
-										"Good afternoon",
-										"sounds/sp/Buenas tardes.mp3"
+										"Good afternoon"
 									],
 									[
+										"sounds/sp/Buenas noches.mp3",
 										"Buenas noches",
-										"Good evening/Good night",
-										"sounds/sp/Buenas noches.mp3"
+										"Good evening/Good night"
 									],
 									[
+										"sounds/sp/¡Qué tal!.mp3",
 										"¡Qué tal!",
-										"What's new",
-										"sounds/sp/¡Qué tal!.mp3"
+										"What's new"
 									]
 								],
 								"titleText": "Hello"
@@ -62,49 +63,49 @@
 								"instructionsText": "To say goodbye",
 								"phrases": [
 									[
+										"sounds/sp/Chao.mp3",
 										"Chao",
-										"Bye bye (informal)",
-										"sounds/sp/Chao.mp3"
+										"Bye bye (informal)"
 									],
 									[
+										"sounds/sp/Adiós.mp3",
 										"Adiós",
-										"Good bye",
-										"sounds/sp/Adiós.mp3"
+										"Good bye"
 									],
 									[
+										"sounds/sp/Adiós, buenas noches.mp3",
 										"Adiós, buenas noches",
-										"Bye, (have a) good evening",
-										"sounds/sp/Adiós, buenas noches.mp3"
+										"Bye, (have a) good evening"
 									],
 									[
+										"sounds/sp/Nos vemos.mp3",
 										"Nos vemos",
-										"See you soon (formal)",
-										"sounds/sp/Nos vemos.mp3"
+										"See you soon (formal)"
 									],
 									[
+										"sounds/sp/Hasta pronto.mp3",
 										"Hasta pronto",
-										"See you soon",
-										"sounds/sp/Hasta pronto.mp3"
+										"See you soon"
 									],
 									[
+										"sounds/sp/Hasta luego.mp3",
 										"Hasta luego",
-										"See you later",
-										"sounds/sp/Hasta luego.mp3"
+										"See you later"
 									],
 									[
+										"sounds/sp/Hasta la vista.mp3",
 										"Hasta la vista",
-										"See you later",
-										"sounds/sp/Hasta la vista.mp3"
+										"See you later"
 									],
 									[
+										"sounds/sp/Hasta mañana.mp3",
 										"Hasta mañana",
-										"See you tomorrow",
-										"sounds/sp/Hasta mañana.mp3"
+										"See you tomorrow"
 									],
 									[
+										"sounds/sp/Hasta el lunes.mp3",
 										"Hasta el lunes",
-										"(+ other days of the week) See you on Monday",
-										"sounds/sp/Hasta el lunes.mp3"
+										"(+ other days of the week) See you on Monday"
 									]
 								],
 								"titleText": "Goodbye"
@@ -137,24 +138,24 @@
 								"id": "PhraseTable3",
 								"phrases": [
 									[
+										"sounds/sp/Hola, Señora Martínez, ¿cómo está.mp3",
 										"Hola, Señora Martínez, ¿cómo está?",
-										"Hello Mrs. Martínez, how are you?",
-										"sounds/sp/Hola, Señora Martínez, ¿cómo está.mp3"
+										"Hello Mrs. Martínez, how are you?"
 									],
 									[
+										"sounds/sp/Muy bien, gracias. ¿Y usted.mp3",
 										"Muy bien, gracias. ¿Y usted?",
-										"Very well, thanks. And you?",
-										"sounds/sp/Muy bien, gracias. ¿Y usted.mp3"
+										"Very well, thanks. And you?"
 									],
 									[
+										"sounds/sp/Buenos días, señor González, ¿Cómo está.mp3",
 										"Buenos días, señor González, ¿Cómo está?",
-										"Hello Mr. González, how are you?",
-										"sounds/sp/Buenos días, señor González, ¿Cómo está.mp3"
+										"Hello Mr. González, how are you?"
 									],
 									[
+										"sounds/sp/Bien, Gracias. Y usted, ¿cómo está.mp3",
 										"Bien, Gracias. Y usted, ¿cómo está?",
-										"Fine, thank you. How about you?",
-										"sounds/sp/Bien, Gracias. Y usted, ¿cómo está.mp3"
+										"Fine, thank you. How about you?"
 									]
 								],
 								"titleText": "Hello"
@@ -171,54 +172,54 @@
 								"id": "PhraseTable4",
 								"phrases": [
 									[
-										"Hola. ¿Como estás?",
-										"Hello, how are you?",
-										"sounds/sp/Hola. ¿Como estás.mp3"
+										"sounds/sp/Hola. ¿Cómo estás.mp3",
+										"Hola. ¿Cómo estás?",
+										"Hello, how are you?"
 									],
 									[
+										"sounds/sp/Bien, gracias. ¿Y tú.mp3",
 										"Bien, gracias. ¿Y tú?",
-										"Fine thank you. And you?",
-										"sounds/sp/Bien, gracias. ¿Y tú.mp3"
+										"Fine thank you. And you?"
 									],
 									[
+										"sounds/sp/Así, Así… ¿Y tú.mp3",
 										"Así, Así… ¿Y tú?",
-										"So - so. And you?",
-										"sounds/sp/Así, Así… ¿Y tú.mp3"
+										"So - so. And you?"
 									],
 									[
+										"sounds/sp/Regular, ¿y tú.mp3",
 										"Regular, ¿y tú?",
-										"Not too bad. And you?",
-										"sounds/sp/Regular, ¿y tú.mp3"
+										"Not too bad. And you?"
 									],
 									[
+										"sounds/sp/Fatal.mp3",
 										"Fatal",
-										"awful",
-										"sounds/sp/Fatal.mp3"
+										"awful"
 									],
 									[
+										"sounds/sp/Fenomenal ¿Y tú qué tal.mp3",
 										"Fenomenal. ¿Y tú qué tal?",
-										"Great. And you?",
-										"sounds/sp/Fenomenal. ¿Y tú qué tal.mp3"
+										"Great. And you?"
 									],
 									[
+										"sounds/sp/Desafortunadamente, no muy bien. ¿ Y Tú.mp3",
 										"Desafortunadamente, no muy bien. ¿ Y Tú?",
-										"Not so good, unfortunately. How about you?",
-										"sounds/sp/Desafortunadamente, no muy bien. ¿ Y Tú.mp3"
+										"Not so good, unfortunately. How about you?"
 									],
 									[
+										"sounds/sp/Hola, ¿Qué tal.mp3",
 										"Hola, ¿Qué tal?",
-										"Hi, how is it going?",
-										"sounds/sp/Hola, ¿Qué tal.mp3"
+										"Hi, how is it going?"
 									],
 									[
+										"sounds/sp/Todo bien. ¿Y Tú.mp3",
 										"Todo bien. ¿Y Tú?",
-										"All Fine. And you?",
-										"sounds/sp/Todo bien. ¿Y Tú.mp3"
+										"All Fine. And you?"
 									],
 									[
+										"sounds/sp/Todo bien, gracias. ¿Y tú.mp3",
 										"Todo bien, gracias. ¿Y tú?",
-										"Everything OK, thank you. And you?",
-										"sounds/sp/Todo bien, gracias. ¿Y tú.mp3"
+										"Everything OK, thank you. And you?"
 									]
 								],
 								"titleText": "Goodbye"
@@ -245,31 +246,31 @@
 		"instructionsText": "Listen to formal and informal ways to address people by clicking on the audio icons. The key language is summarised in the table.",
 		"phrases": [
 			[
+				"sounds/sp/¿Cómo estás (tú).mp3",
 				"¿Cómo estás (tú)?",
-				"How are you? (talking to one person)",
-				"sounds/sp/¿Cómo estás (tú).mp3"
+				"How are you? (talking to one person)"
 			],
 			[
+				"sounds/sp/¿Cómo está (usted).mp3",
 				"¿Cómo está (usted)?",
-				"How are you? (talking to one person)",
-				"sounds/sp/¿Cómo está (usted).mp3"
+				"How are you? (talking to one person)"
 			],
 			[
+				"sounds/sp/¿Cómo están (ustedes).mp3",
 				"¿Cómo están (ustedes)?",
-				"How are you? (talking to more than one person)",
-				"sounds/sp/¿Cómo están (ustedes).mp3"
+				"How are you? (talking to more than one person)"
 			],
 			[
+				"sounds/sp/¿Cómo estáis.mp3",
 				"¿Cómo estáis?",
-				"How are you? (talking to more than one person - in Spain)",
-				"sounds/sp/¿Cómo estáis.mp3"
+				"How are you? (talking to more than one person - in Spain)"
 			]
 		],
 		"titleText": "Addressing people: formality and informality"
 	},
 	"customComponent3": {
 		"component": "LO1KnowHow2",
-		"id": "LO1KnowHow1",
+		"id": "LO1KnowHow2",
 		"titleText": "Know-how:"
 	},
 	"phraseTable6": {
@@ -315,7 +316,7 @@
 			],
 			[
 				"Hola Lucas. Esta es mi amiga Claudia.",
-				"sounds/sp/Hola Lucas. Esta es mi amiga Claudia.mp3",
+				"sounds/sp/Hola Lucas, Esta es mi amiga Claudia.mp3",
 				"Hola, es un placer conocerte. Soy Lucas.",
 				"sounds/sp/Hola, es un placer conocerte. Soy Lucas.mp3"
 			],
@@ -335,7 +336,7 @@
 				"sounds/sp/¡Mucho gusto!.mp3"
 			],
 			[
-				"These are Mr and Mrs Rossi.",
+				"These are Mr and Mrs Rivera.",
 				"",
 				"Nice to meet you!",
 				""
@@ -359,13 +360,13 @@
 				""
 			],
 			[
-				"Mamá, papá, les presento a los senores Fernandez.",
-				"sounds/sp/Mamá, papá, les presento a los senores Fernandez.mp3",
+				"Mamá, papá, les presento a los señores Fernandez.",
+				"sounds/sp/Mamá, papá, les presento a los señores Fernandez.mp3",
 				"¡Gusto en conocerlos!",
 				"sounds/sp/¡Gusto en conocerlos!.mp3"
 			],
 			[
-				"Mum, dad, may I introduce Mr and Mrs Ferri.",
+				"Mum, dad, may I introduce Mr. and Mrs. Fernandez.",
 				"",
 				"Pleased to meet you both!",
 				""
@@ -383,17 +384,42 @@
 		"id": "LO1UngenderedSpanish",
 		"titleText": "Ungendered Spanish (the future in our hands):"
 	},
-	"group2": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
+				"dropdowns1": {
+					"component": "DropDowns",
+					"id": "dropdowns1",
+					"congratulationsText": "Muy bien !",
+					"instructionsText": "Select the correct option from the dropdown.",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "una [*amiga|amigo|amigas|amigos] ruidosa"
+						},
+						{
+							"text": "un amigo ruidoso"
+						},
+						{
+							"text": "unas amigas ruidosas"
+						},
+						{
+							"text": "unos amigos ruidosos"
+						}
+					],
+					"titleTextHTML": "Ungendered Spanish."
+				}
+			},
+			{
 				"radio1": {
-					"component": "Radio",
+					"component": "RadioQuiz",
 					"id": "radio1",
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "sort-table",
 					"options": [
 						"Greeting",
@@ -431,10 +457,10 @@
 							"sounds/sp/Nos vemos mañana.mp3"
 						],
 						[
-							"Buenas noches",
+							"Hola, buenas noches",
 							0,
 							"",
-							"sounds/sp/Buenas noches.mp3"
+							"sounds/sp/Hola, buenas noches.mp3"
 						],
 						[
 							"Hasta el jueves",
@@ -460,12 +486,12 @@
 			},
 			{
 				"radio2": {
-					"component": "Radio",
+					"component": "HIDERadioQuizHIDE",
 					"id": "radio2",
 					"congratulationsText": "Well done!",
 					"instructionsText": "For each phrase, click Greeting or Goodbye.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "sort-table",
 					"options": [
 						"Formal",
@@ -519,32 +545,44 @@
 				}
 			},
 			{
-				"dropdowns1": {
+				"dropdowns2": {
 					"component": "DropDowns",
-					"id": "dropdowns1",
+					"id": "dropdowns2",
 					"congratulationsText": "Well done!",
 					"instructionsText": "Consider the greetings and replies below. Select whether they are formal or informal.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Bien, gracias. ¿Y usted? [*Formal|Informal]",
-						"¿Hola, cómo estás? [Formal|*Informal]",
-						"Hola Marta, ¿cómo estás? [Formal|*Informal]",
-						"Buenas noches, Sr. Gómez, ¿cómo está? [*Formal|Informal]",
-						"Señora, ¿cómo está? [*Formal|Informal]",
-						"Todo bien, gracias ¿y usted? [*Formal|Informal]",
-						"Así Así. Y tú ¿cómo estás? [Formal|*Informal]"
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "Bien, gracias. ¿Y usted? [*Formal|Informal]",
+							"audio": "sounds/sp/Bien, gracias. ¿Y usted.mp3"
+						},
+						{
+							"text": "¿Hola, cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/¿Hola, cómo estás.mp3"
+						},
+						{
+							"text": "Hola Marta, ¿cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/Hola Marta, ¿cómo estás.mp3"
+						},
+						{
+							"text": "Buenas noches, Sr. Gómez, ¿cómo está? [*Formal|Informal]",
+							"audio": "sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3"
+						},
+						{
+							"text": "Señora, ¿cómo está? [*Formal|Informal]",
+							"audio": "sounds/sp/Señora, ¿cómo está.mp3"
+						},
+						{
+							"text": "Todo bien, gracias ¿y usted? [*Formal|Informal]",
+							"audio": "sounds/sp/Todo bien, gracias ¿y usted.mp3"
+						},
+						{
+							"text": "Así Así. Y tú ¿cómo estás? [Formal|*Informal]",
+							"audio": "sounds/sp/Así Así, Y tú, ¿cómo estás.mp3"
+						}
 					],
-					"audio": [
-						"sounds/sp/Bien, gracias. ¿Y usted.mp3",
-						"sounds/sp/¿Hola, cómo estás.mp3",
-						"sounds/sp/Hola Marta, ¿cómo estás.mp3",
-						"sounds/sp/Buenas noches, Sr. Gómez, ¿cómo está.mp3",
-						"sounds/sp/Señora, ¿cómo está.mp3",
-						"sounds/sp/Todo bien, gracias ¿y usted.mp3",
-						"sounds/sp/Así Así. Y tú ¿cómo estás.mp3"
-					],
-					"titleText": "2. Formal or Informal? ALTERNATIVE"
+					"titleText": "2. Formal or Informal?"
 				}
 			},
 			{
@@ -554,7 +592,7 @@
 					"id": "wordsIntoSlots1",
 					"instructionsText": "Complete each dialogue by dragging the appropriate reply. If your choice is correct you will be able to listen to the dialogue using the audio icon . You can check your answers and reset the exercise any time.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Hola, Marcos. Esta es Charo.",
@@ -564,16 +602,16 @@
 						"Encantado de conocerles."
 					],
 					"answers": [
-						"Hola Charo, muy contenta en conocerte.",
+						"Hola Charo, muy contento en conocerte.",
 						"¡Por fin te conozco! Soy Valentina.",
+						"Un placer conocerles.",
 						"Un placer conocerle.",
-						"Es un placer conocerte.",
 						"¡Hola, también es un placer para nosotros!"
 					],
 					"soundFiles": [
-						"sounds/sp/Hola, Marcos. Esta es Charo.Hola Charo, muy contenta en conocerte.mp3",
+						"sounds/sp/Hola, Marcos. Esta es Charo. Hola Charo, muy contenta en conocerte.mp3",
 						"sounds/sp/Esta es mi hermana Sara.¡Por fin te conozco! Soy Valentina.mp3",
-						"sounds/sp/Conozca a los señores Serrano.Un placer conocerle.mp3",
+						"sounds/sp/Conozca a los señores Serrano. Un placer conocerles.mp3",
 						"sounds/sp/Sr. Romero, ésta es mi madre.Es un placer conocerte.mp3",
 						"sounds/sp/Encantado de conocerles.¡Hola, también es un placer para nosotros!.mp3"
 					],
@@ -581,46 +619,47 @@
 				}
 			},
 			{
-				"dropdowns1": {
+				"dropdowns3": {
 					"component": "DropDowns",
-					"id": "dropdowns1",
-					"congratulationsText": "Incroyable !",
-					"instructionsText": "Select the correct word to fill in the gaps",
+					"id": "dropdowns3",
+					"congratulationsText": "Well done!",
+					"instructionsTextHTML": "In the Dialogues below, select the correct conjugation of the verb <b>ESTAR</b>.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Amel [vais|vas|*va|allons|allez|vont] à la piscine.",
-						"Mes voisins [vais|vas|va|allons|allez|*vont] au supermarché.",
-						"Tu [vais|*vas|va|allons|allez|vont] à la boulangerie ?",
-						"Ma mère et moi [vais|vas|va|*allons|allez|vont] au marché.",
-						"Mon frère et son fils [vais|vas|va|allons|allez|*vont] à la bibliothèque.",
-						"Je [*vais|vas|va|allons|allez|vont] au centre sportif.",
-						"Thomas et Louise, vous [vais|vas|va|allons|*allez|vont] au centre-ville ?",
-						"[Je|Tu|Elle|Nous|Vous|*Elles] vont à l'épicerie. ",
-						"[*Je|Tu|Elle|Nous|Vous|Elles] vais à la boucherie.",
-						"[Je|Tu|*Elle|Nous|Vous|Elles] va chez le marchand de fruits et légumes.",
-						"[Je|Tu|Il|Nous|vous|*Ils] vont à la poissonnerie.",
-						"[Je|Tu|*Il|Nous|Vous|Ils] va chez la fleuriste."
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "Hola Marcos [estoy|*estás|está|estamos|estáis|están] bien?",
+							"audio": "sounds/sp/Hola Marcos estás bien.mp3"
+						},
+						{
+							"text": "Todo bien, [*estoy|estás|está|estamos|estáis|están] bien gracias. ¿Y tú?",
+							"audio": "sounds/sp/Todo bien, estoy bien gracias. ¿Y tú.mp3"
+						},
+						{},
+						{
+							"text": "Buenos dias ¿cómo [estoy|estás|*está|estamos|estáis|están] su familia?",
+							"audio": "sounds/sp/Buenos dias ¿cómo está su familia.mp3"
+						},
+						{
+							"text": "Sí, muy bien gracias. Y usted ¿cómo [estoy|estás|*está|estamos|estáis|están]?",
+							"audio": "sounds/sp/Sí, muy bien gracias. Y usted ¿cómo está.mp3"
+						},
+						{},
+						{
+							"text": "Buenas noches señores, ¿cómo [estoy|estás|está|estamos|estáis|*están]?",
+							"audio": "sounds/sp/Buenas noches señores, ¿cómo están.mp3"
+						},
+						{
+							"text": "Gracias Carmela. Y usted, ¿cómo [estoy|estás|*está|estamos|estáis|están]?",
+							"audio": "sounds/sp/Gracias Carmela. Y usted, ¿cómo está.mp3"
+						}
 					],
-					"audio": [
-						"sounds/fr/Amel va à la piscine.mp3",
-						"sounds/fr/Mes voisins vont au supermarché.mp3",
-						"sounds/fr/Tu vas à la boulangerie.mp3",
-						"sounds/fr/Ma mère et moi allons au marché.mp3",
-						"sounds/fr/Mon frère et son fils vont à la bibliothèque.mp3",
-						"sounds/fr/Je vais au centre sportif.mp3",
-						"sounds/fr/Thomas et Louise, vous allez au centre-ville.mp3",
-						"sounds/fr/Elles vont à l'épicerie.mp3",
-						"sounds/fr/Je vais à la boucherie.mp3",
-						"sounds/fr/Elle va chez le marchand de fruits et légumes.mp3",
-						"sounds/fr/Ils vont à la poissonnerie.mp3",
-						"sounds/fr/Il va chez la fleuriste.mp3"
-					],
-					"titleText": "1. Where is everyone going?"
+					"titleTextHTML": "4. Use of verb <b>ESTAR</b>"
 				}
 			}
 		],
-		"id": "group2",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

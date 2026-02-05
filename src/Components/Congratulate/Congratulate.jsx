@@ -16,11 +16,12 @@ export class Congratulate extends React.PureComponent {
 
 		if (enabled) {
 			return (
-
-				<dialog id='congratulate' className={`${className}`}>
-					<button className={`close`} onClick={hideDialog} >X</button>
-					{content}
-				</dialog>
+				<div className={`dialog-mask ${className}`}>
+					<dialog id='congratulate' className={`${className} ring ring-1 shadow-xs`}>
+						<button className={`close`} onClick={hideDialog} >X</button>
+						{content}
+					</dialog>
+				</div>
 			);
 		};
 	};

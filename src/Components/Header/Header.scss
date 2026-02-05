@@ -1,9 +1,9 @@
 // Header.scss
 
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
 header.main-header {
-	@include mixins.header-footer-background;
+	@include header-footer-background;
 	color: white;
 	display: block;
 	left: 0;
@@ -14,20 +14,20 @@ header.main-header {
 	width: 100%;
 	h1 {
 		margin: 0;
-		font-size: 1.3em;
+		// 	font-size: 1.3em;
 	}
-	h2 {
-		margin: 0;
-		&:before {
-			display: none;
-		}
-	}
+	// h2 {
+	// 	margin: 0;
+	// 	&:before {
+	// 		display: none;
+	// 	}
+	// }
 	box-shadow: 0 8px 8px lightgray;
 }
 @include respond-above(m) {
-	header.main-header {
-		h1 {
-			font-size: 2rem;
-		}
-	}
+	// header.main-header {
+	// 	h1 {
+	// 		font-size: 2rem;
+	// 	}
+	// }
 }

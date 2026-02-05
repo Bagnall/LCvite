@@ -1,0 +1,43 @@
+// LandingPage.scss
+
+// @use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
+
+ul.landing-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 20px;
+	column-gap: 20px;
+	li {
+		width: $card-size;
+		height: $card-size;
+		border: 1px solid black;
+		border-radius: 20px;
+		display: flex;
+		background: #0000ff;
+		background: linear-gradient(180deg, rgba(0, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+		// text-decoration: none !important;
+		&:hover {
+			background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 255, 1) 100%);
+		}
+		a {
+			padding: 20px;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			text-decoration: none !important;
+			h1,
+			h2 {
+				font-weight: bold;
+				color: white;
+				// text-decoration: none;
+			}
+		}
+	}
+}

@@ -3,6 +3,7 @@ import './Explanation.scss';
 // 	resolveAsset,
 // 	speak,
 // } from '../../utility';
+import DOMPurify from "dompurify";
 import { Panel } from "./Panel";
 import React from 'react';
 
@@ -14,7 +15,7 @@ export class Explanation extends React.PureComponent {
 	// "customComponent1": {
 	// 	"component": "LO9Grammar", // There must be a CustomComponet with this name present. "LO9" is the learning object, "Grammar" aludes to the section within the page.
 	// 	"id": "LO9Grammar", // Good practise to have the ID match the component name
-	// 	"titleText": "Grammar / Use of Language"
+	// 	"titleText": "Grammar and Usage"
 	// },
 
 	constructor(props) {
@@ -28,7 +29,7 @@ export class Explanation extends React.PureComponent {
 			htmlContent,
 			id
 		} = config;
-		const contents = new Array;
+		const contents = [];
 		if (content.length) {
 			for (let i = 0; i < content.length; i++) {
 				contents.push(
@@ -42,7 +43,7 @@ export class Explanation extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}PhraseTable`}
 			>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
 				{contents}
 			</div>

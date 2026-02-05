@@ -1,10 +1,10 @@
 /*
 Image.scss
 */
-// @use '../../styles/_variables.module.scss';
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
+// @use '../../styles/variables.module.scss';
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
 .image-anchor {
 	width: 100%;
 	img {
@@ -15,7 +15,7 @@ Image.scss
 @include respond-above(m) {
 	.image-anchor {
 		// &.frame{
-		// 	@include mixins.frame;
+		// 	@include frame;
 		// 	&.clearboth{
 		// 		margin-top: 0;
 		// 	}

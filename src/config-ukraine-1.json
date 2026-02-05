@@ -275,7 +275,7 @@
 					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "table",
 					"words": [
 						"moi",
@@ -304,7 +304,7 @@
 			},
 			{
 				"wordparts1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordParts",
 					"congratulationsText": "Superb!",
 					"id": "wordparts1",
@@ -332,7 +332,7 @@
 					"congratulationsText": "Well done!",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "phrases",
 					"phrases": [
 						"Coucou [mon] amour ! Ca [va] aujourd'hui ?",
@@ -351,7 +351,7 @@
 				"phrases2": {
 					"component": "Blanks",
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"congratulationsText": "Superbe !",
 					"id": "phrases2",
 					"instructionsText": "Drag the words to fill in the gaps.",
@@ -372,7 +372,7 @@
 			{
 				"phrases3": {
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Blanks",
 					"congratulationsText": "Très bien !",
 					"id": "phrases3",

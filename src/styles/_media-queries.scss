@@ -9,28 +9,13 @@ edit media-queries.scss in the styles directory */
 
 // A map of breakpoints.
 $breakpoints: (
-	s: 580px,
-	m: 760px,
+	s: 640px,
+	m: 768px,
 	l: 960px,
 	xl: 1024px,
-	xxl: 1260px,
+	xxl: 1280px,
 	xxxl: 1440px
 );
-
-// // min width 580px//480px
-// @screen-s: ~"only screen and (min-width: 580px)";
-
-// // min width 780px
-// @screen-m: ~"only screen and (min-width: 780px)";
-
-// // min width 960px
-// @screen-l: ~"only screen and (min-width: 960px)";
-
-// // min width 1024px
-// @screen-xl: ~"only screen and (min-width: 1024px)";
-
-// // min width 1200px
-// @screen-xxl: ~"only screen and (min-width: 1200px)";
 
 //
 //  RESPOND ABOVE
@@ -120,7 +105,7 @@ html body::before {
 	position: fixed;
 	left: -9999px; // Hide but have it possible to interrogate in JS
 	top: 0;
-	z-index: 99;
+	z-index: 9999;
 	text-align: center;
 	border-radius: 0 0 12px 0;
 }
@@ -164,6 +149,14 @@ html.debug body::before {
 		content: "XXL (P)";
 		@media screen and (orientation: landscape) {
 			content: "XXL (L)";
+		}
+	}
+}
+@include respond-above(xxxl) {
+	html body::before {
+		content: "XXXL (P)";
+		@media screen and (orientation: landscape) {
+			content: "XXXL (L)";
 		}
 	}
 }

@@ -3,314 +3,393 @@
 		"class": "lo-10",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Making Arrangements",
 		"targetLanguage": "french",
 		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object 10"
+		"intro": "This lesson focuses on making social arrangements in French using the verb vouloir (\"to want\") and expressions for inviting, accepting, or refusing. Learners practise dialogues for planning outings — such as going to the cinema, seaside, or shopping — while expressing enthusiasm (Je veux bien !), refusal (Je ne veux pas…), or regret (C'est dommage !). It introduces vocabulary for places and activities (e.g. cinéma, piscine, centre commercial), days of the week, and times of day. Grammar points include the conjugation of vouloir and the preposition à in its various forms (au, à la, à l', aux) meaning \"to the,\" \"in,\" or \"at.\" The topic helps learners arrange meetings politely and naturally in French conversation."
 	},
-	"phraseTable1": {
-		"component": "PhraseTable",
-		"id": "phraseTable1",
-		"instructionsText": "",
-		"phrases": [
-			[
-				"Tu veux aller au cinéma demain ?",
-				"Do you want to go to the cinema tomorrow?",
-				"sounds/fr/Tu veux aller au cinéma demain.mp3"
-			],
-			[
-				"Oui, je veux bien ! À quelle heure ?",
-				"Yes, I'd like to do that! At what time?",
-				"sounds/fr/Oui, je veux bien ! À quelle heure.mp3"
-			],
-			[
-				"À trois heures ? Ça va ?",
-				"At 3 o' clock? Is that alright?",
-				"sounds/fr/À trois heures Ça va.mp3"
-			],
-			[
-				"Ah oui, ça va très bien !",
-				"Oh yes, that's very good!",
-				"sounds/fr/Ah oui, ça va très bien !.mp3"
-			],
-			[
-				"D'accord ! À demain !",
-				"OK then! See you tomorrow!",
-				"sounds/fr/D'accord ! A demain !.mp3"
-			],
-			[
-				"À demain !",
-				"See you tomorrow!",
-				"sounds/fr/À demain ! (male).mp3"
-			],
-			[
-				""
-			],
-			[
-				"Vous voulez aller au bord de la mer samedi ?",
-				"Do you want to go to the seaside on Saturday?",
-				"sounds/fr/Vous voulez aller au bord de la mer samedi.mp3"
-			],
-			[
-				"Au bord de la mer ? Ah oui, je veux bien !",
-				"To the seaside? Oh yes, I'd like to do that!",
-				"sounds/fr/Au bord de la mer Ah oui, je veux bien !.mp3"
-			],
-			[
-				"Ah oui ! J'adore la mer !",
-				"Oh yes, I love the sea!",
-				"sounds/fr/Ah oui ! J'adore la mer !.mp3"
-			],
-			[
-				"Moi aussi ! Je veux partir à 9 heures. Ça va ?",
-				"Me too. I want to leave at 9 o'clock. Is that alright? ",
-				"sounds/fr/Moi aussi ! Je veux partir à 9 heures. Ça va.mp3"
-			],
-			[
-				"Oui, pas de problème !",
-				"Yes, no problem!",
-				"sounds/fr/Oui, pas de problème !.mp3"
-			],
-			[
-				"D'accord !",
-				"Alright!",
-				"sounds/fr/D'accord !.mp3"
-			],
-			[
-				""
-			],
-			[
-				"Marie, tu veux faire du shopping avec moi au centre commercial vendredi ?",
-				"Marie, do you want to do some shopping with me at the shopping centre on Friday?",
-				"sounds/fr/Marie, tu veux faire du shopping avec moi au centre commercial vendredi.mp3"
-			],
-			[
-				"Ah non, je ne veux pas aller au centre commercial ! Je n'ai pas d'argent !",
-				"Oh no, I don't want to go to the shopping centre. I haven't got any money!",
-				"sounds/fr/Ah non, je ne veux pas aller au centre commercial ! Je n'ai pas d'argent !.mp3"
-			],
-			[
-				"C'est dommage !",
-				"That's a pity !",
-				"sounds/fr/C'est dommage !.mp3"
-			],
-			[
-				"Et je déteste le shopping ! C'est ennuyeux !",
-				"And I hate shopping! It's boring!",
-				"sounds/fr/Et je déteste le shopping ! C'est ennuyeux !.mp3"
-			],
-			[
-				"D'accord ! Je n'aime pas beaucoup le shopping, mais je veux acheter des chaussures de marche pour les vacances.",
-				"That's alright! I don't like shopping much, but I want to buy some walking shoes for the holidays.",
-				"sounds/fr/D'accord ! Je n'aime pas beaucoup le shopping, mais je veux acheter des chaussures de marche pour les vacances.mp3"
-			]
+	"dialogues": {
+		"component": "Section",
+		"expandable": false,
+		"content": [
+			{
+				"phraseTable1": {
+					"component": "PhraseTable",
+					"id": "phraseTable1",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"/sounds/fr/Quel est ton numéro de portable.mp3",
+							"Quel est ton numéro de portable ?",
+							"What's your mobile number?"
+						],
+						[
+							"/sounds/fr/C'est le 07 23 35 44 52.mp3",
+							"C'est le 07 23 35 44 52.",
+							"It's 07 23 35 44 52."
+						],
+						[
+							"/sounds/fr/Quel est votre numéro de téléphone s'il vous plaît Madame.mp3",
+							"Quel est votre numéro de téléphone s'il vous plaît Madame ?",
+							"What's your phone number please, Madam?"
+						],
+						[
+							"/sounds/fr/C'est le 04 44 22 33 10 11.mp3",
+							"C'est le 04 44 22 33 10 11.",
+							"It's 04 44 22 33 10 11."
+						]
+					],
+					"titleText": "Dialogues 1"
+				}
+			},
+			{
+				"phraseTable2": {
+					"component": "PhraseTable",
+					"id": "phraseTable2",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"/sounds/fr/Oui, âllo.mp3",
+							"Oui, âllo ?",
+							"Yes, hello?"
+						],
+						[
+							"/sounds/fr/Bonjour Madame, c'est bien le 01 23 08 09 15.mp3",
+							"Bonjour Madame, c'est bien le 01 23 08 09 15 ?",
+							"Hello, this is 01 23 08 09 14, isn't it?"
+						],
+						[
+							"/sounds/fr/Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.mp3",
+							"Ah non, je suis désolée,  il y a une erreur ! C'est le 01 23 08 08 16.",
+							"Oh no, I'm sorry, there's a mistake. This is 01 23 08 08 16."
+						],
+						[
+							"/sounds/fr/Oh ! Excusez-moi ! Au revoir Madame !.mp3",
+							"Oh ! Excusez-moi ! Au revoir Madame !",
+							"Oh, excuse me! Goodbye!"
+						],
+						[
+							"/sounds/fr/Au revoir Monsieur !.mp3",
+							"Au revoir Monsieur !",
+							"Goodbye!"
+						]
+					],
+					"titleText": "Dialogues 2"
+				}
+			},
+			{
+				"phraseTable3": {
+					"component": "PhraseTable",
+					"id": "phraseTable3",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"/sounds/fr/Âllo, oui (male).mp3",
+							"Âllo, oui ?",
+							"Hello?"
+						],
+						[
+							"/sounds/fr/Bonjour, c'est bien le 01 23 08 09 15.mp3",
+							"Bonjour, c'est bien le 01 23 08 09 15 ?",
+							"Hello, this is 01 23 08 09 15, isn't it?"
+						],
+						[
+							"/sounds/fr/Oui, c'est bien ça (male).mp3",
+							"Oui, c'est bien ça.",
+							"Yes, that's right."
+						],
+						[
+							"/sounds/fr/André est là, s'iI vous plaît.mp3",
+							"André est là, s'iI vous plaît ?",
+							"Is André there please?"
+						],
+						[
+							"/sounds/fr/Oui, c'est André à l'appareil.mp3",
+							"Oui, c'est André à l'appareil.",
+							"Yes, this is André speaking"
+						],
+						[
+							"/sounds/fr/André, tu veux prendre un verre avec moi ce soir.mp3",
+							"André, tu veux prendre un verre avec moi ce soir ?",
+							"André, do you want to have a drink with me this evening?"
+						],
+						[
+							"/sounds/fr/Oui, je veux bien. À quelle heure (male).mp3",
+							"Oui, je veux bien. À quelle heure ?",
+							"Yes, I'd like that. At what time?"
+						],
+						[
+							"/sounds/fr/À huit heures.mp3",
+							"À huit heures ?",
+							"At 8 o'clock?"
+						],
+						[
+							"/sounds/fr/D'accord ! À ce soir ! (male).mp3",
+							"D'accord ! À ce soir !",
+							"Alright! See you this evening!"
+						],
+						[
+							"/sounds/fr/À plus tard !.mp3",
+							"À plus tard !",
+							"See you later!"
+						]
+					],
+					"titleText": "Dialogues 3"
+				}
+			},
+			{
+				"phraseTable4": {
+					"component": "PhraseTable",
+					"id": "phraseTable4",
+					"instructionsText": "Read the phrases and play the audio clips.",
+					"phrases": [
+						[
+							"sounds/fr/Tu veux aller au cinéma demain.mp3",
+							"Tu veux aller au cinéma demain ?",
+							"Do you want to go to the cinema tomorrow?"
+						],
+						[
+							"sounds/fr/Oui, je veux bien ! À quelle heure.mp3",
+							"Oui, je veux bien ! À quelle heure ?",
+							"Yes, I'd like to do that! At what time?"
+						],
+						[
+							"sounds/fr/À trois heures Ça va.mp3",
+							"À trois heures ? Ça va ?",
+							"At 3 o' clock? Is that alright?"
+						],
+						[
+							"sounds/fr/Ah oui, ça va très bien !.mp3",
+							"Ah oui, ça va très bien !",
+							"Oh yes, that's very good!"
+						],
+						[
+							"sounds/fr/D'accord ! A demain !.mp3",
+							"D'accord ! À demain !",
+							"OK then! See you tomorrow!"
+						],
+						[
+							"sounds/fr/À demain ! (male).mp3",
+							"À demain !",
+							"See you tomorrow!"
+						]
+					],
+					"titleText": "Dialogues 4"
+				}
+			}
 		],
+		"id": "dialogues",
 		"titleText": "Dialogues"
 	},
-	"phraseTable2": {
+	"vocabulary": {
 		"component": "PhraseTable",
-		"id": "phraseTable2",
-		"instructionsText": "",
+		"expandable": false,
+		"id": "vocabulary",
+		"instructionsText": "Read the phrases and play the audio clips.",
 		"phrases": [
 			[
+				"sounds/fr/vouloir.mp3",
 				"vouloir",
-				"to want ",
-				"sounds/fr/vouloir.mp3"
+				"to want "
 			],
 			[
+				"sounds/fr/Tu veux aller Vous voulez aller.mp3",
 				"Tu veux aller…? Vous voulez aller… ?",
-				"Do you want to go…?",
-				"sounds/fr/Tu veux aller Vous voulez aller.mp3"
+				"Do you want to go…?"
 			],
 			[
+				"sounds/fr/Je veux bien !.mp3",
 				"Je veux bien !",
-				"(Set expression when expressing acceptance) I'd like to. ",
-				"sounds/fr/Je veux bien !.mp3"
+				"(Set expression when expressing acceptance) I'd like to. "
 			],
 			[
+				"sounds/fr/demain.mp3",
 				"demain",
-				"tomorrow",
-				"sounds/fr/demain.mp3"
+				"tomorrow"
 			],
 			[
+				"sounds/fr/lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.mp3",
 				"lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche",
-				"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
-				"sounds/fr/lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.mp3"
+				"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
 			],
 			[
+				"sounds/fr/à une heure, à deux heures, à trois heures, à quatre heures.mp3",
 				"à une heure, à deux heures, à trois heures, à quatre heures …",
-				"At 1 o'clock, at 2 o'clock, at 3 o'clock, at 4 o'clock…",
-				"sounds/fr/à une heure, à deux heures, à trois heures, à quatre heures.mp3"
+				"At 1 o'clock, at 2 o'clock, at 3 o'clock, at 4 o'clock…"
 			],
 			[
+				"sounds/fr/à midi.mp3",
 				"à midi",
-				"At midday",
-				"sounds/fr/à midi.mp3"
+				"At midday"
 			],
 			[
+				"sounds/fr/à minuit.mp3",
 				"à minuit",
-				"At midnight",
-				"sounds/fr/à minuit.mp3"
+				"At midnight"
 			],
 			[
+				"sounds/fr/Pas de problème !.mp3",
 				"Pas de problème !",
-				"No problem! ",
-				"sounds/fr/Pas de problème !.mp3"
+				"No problem! "
 			],
 			[
+				"sounds/fr/bibliothèque.mp3",
 				"bibliothèque (f)",
-				"library",
-				"sounds/fr/bibliothèque.mp3"
+				"library"
 			],
 			[
+				"sounds/fr/café.mp3",
 				"café (m)",
-				"café",
-				"sounds/fr/café.mp3"
+				"café"
 			],
 			[
+				"sounds/fr/centre commercial.mp3",
 				"centre commercial (m)",
-				"shopping centre",
-				"sounds/fr/centre commercial.mp3"
+				"shopping centre"
 			],
 			[
+				"sounds/fr/cinéma.mp3",
 				"cinéma (m)",
-				"cinema",
-				"sounds/fr/cinéma.mp3"
+				"cinema"
 			],
 			[
+				"sounds/fr/exposition.mp3",
 				"exposition (f)",
-				"exhibition",
-				"sounds/fr/exposition.mp3"
+				"exhibition"
 			],
 			[
+				"sounds/fr/magasin.mp3",
 				"magasin (m)",
-				"shop",
-				"sounds/fr/magasin.mp3"
+				"shop"
 			],
 			[
+				"sounds/fr/piscine.mp3",
 				"piscine (f)",
-				"swimming pool",
-				"sounds/fr/piscine.mp3"
+				"swimming pool"
 			],
 			[
+				"sounds/fr/restaurant.mp3",
 				"restaurant (m)",
-				"restaurant",
-				"sounds/fr/restaurant.mp3"
+				"restaurant"
 			],
 			[
+				"sounds/fr/théâtre.mp3",
 				"théâtre (m)",
-				"theatre",
-				"sounds/fr/théâtre.mp3"
+				"theatre"
 			],
 			[
+				"sounds/fr/acheter.mp3",
 				"acheter",
-				"to buy",
-				"sounds/fr/acheter.mp3"
+				"to buy"
 			],
 			[
+				"sounds/fr/partir.mp3",
 				"partir",
-				"to leave, to depart",
-				"sounds/fr/partir.mp3"
+				"to leave, to depart"
 			],
 			[
+				"sounds/fr/chaussures de marche.mp3",
 				"chaussures de marche (fpl)",
-				"walking shoes",
-				"sounds/fr/chaussures de marche.mp3"
+				"walking shoes"
 			],
 			[
+				"sounds/fr/vacances.mp3",
 				"vacances (fpl)",
-				"holiday(s) (Always used in the plural in French) ",
-				"sounds/fr/vacances.mp3"
+				"holiday(s) (Always used in the plural in French) "
 			],
 			[
+				"sounds/fr/C'est dommage !.mp3",
 				"C'est dommage !",
-				"That's a pity !",
-				"sounds/fr/C'est dommage !.mp3"
+				"That's a pity !"
 			],
 			[
+				"sounds/fr/sortir.mp3",
 				"sortir",
-				"to go out",
-				"sounds/fr/sortir.mp3"
+				"to go out"
 			],
 			[
+				"sounds/fr/dormir.mp3",
 				"dormir",
-				"to sleep",
-				"sounds/fr/dormir.mp3"
+				"to sleep"
 			],
 			[
+				"sounds/fr/courir.mp3",
 				"courir",
-				"to run",
-				"sounds/fr/courir.mp3"
+				"to run"
 			],
 			[
+				"sounds/fr/tricoter.mp3",
 				"tricoter",
-				"to knit",
-				"sounds/fr/tricoter.mp3"
+				"to knit"
 			],
 			[
+				"sounds/fr/papoter.mp3",
 				"papoter",
-				"to natter",
-				"sounds/fr/papoter.mp3"
+				"to natter"
 			],
 			[
+				"sounds/fr/méditer.mp3",
 				"méditer",
-				"to meditate",
-				"sounds/fr/méditer.mp3"
+				"to meditate"
 			],
 			[
+				"sounds/fr/bouquiner.mp3",
 				"bouquiner (colloquial)",
-				"to read ",
-				"sounds/fr/bouquiner.mp3"
+				"to read "
 			],
 			[
+				"sounds/fr/bavarder.mp3",
 				"bavarder",
-				"to chat",
-				"sounds/fr/bavarder.mp3"
+				"to chat"
 			],
 			[
+				"sounds/fr/dessiner.mp3",
 				"dessiner",
-				"to draw",
-				"sounds/fr/dessiner.mp3"
+				"to draw"
 			],
 			[
+				"sounds/fr/grandir.mp3",
 				"grandir",
-				"to grow up",
-				"sounds/fr/grandir.mp3"
+				"to grow up"
 			],
 			[
+				"sounds/fr/rajeunir.mp3",
 				"rajeunir",
-				"to get younger",
-				"sounds/fr/rajeunir.mp3"
+				"to get younger"
 			],
 			[
+				"sounds/fr/vieillir.mp3",
 				"vieillir",
-				"to age, to grow old ",
-				"sounds/fr/vieillir.mp3"
+				"to age, to grow old "
 			],
 			[
+				"sounds/fr/Moi non plus !.mp3",
 				"Moi non plus !",
-				"Neither do I!",
-				"sounds/fr/Moi non plus !.mp3"
+				"Neither do I!"
 			],
 			[
+				"sounds/fr/Je ne sais pas.mp3",
 				"Je ne sais pas.",
-				"I don't know.",
-				"sounds/fr/Je ne sais pas.mp3"
+				"I don't know."
 			]
 		],
+		"sortable": true,
 		"titleText": "Vocabulary"
 	},
-	"L10Grammar": {
+	"grammar": {
 		"component": "L10Grammar",
-		"id": "L10Grammar",
-		"titleText": "Grammar / Use of Language"
+		"expandable": false,
+		"id": "grammar",
+		"menuText": "Grammar",
+		"titleText": "Grammar and Usage"
 	},
-	"L10Demystify": {
+	"pronunciation": {
 		"component": "L10Demystify",
-		"id": "L10Demystify",
+		"expandable": false,
+		"id": "pronunciation",
+		"menuText": "Pronunciation",
 		"titleText": "Demystifying French Pronunciation"
 	},
-	"group1": {
+	"exercises": {
 		"component": "Group",
 		"content": [
 			{
@@ -320,10 +399,12 @@
 					"congratulationsText": "Félicitations !",
 					"instructionsTextHTML": "Fill in the gaps in the rhyme <b>'Chacun à son goût !'</b> ('Each to their own!') with the correct part of <b>vouloir</b>:",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrasesHTML": "<h2></h2><p>Je [*veux|veut|voulons|voulez|veulent] sortir. <br/>Tu [*veux|veut|voulons|voulez|veulent] dormir.<br/>Annie [veux|*veut|voulons|voulez|veulent] courir.<br/><br/>Dani [veux|*veut|voulons|voulez|veulent] tricoter. <br/>Lucie [veux|*veut|voulons|voulez|veulent] papoter.<br/>Millie [veux|*veut|voulons|voulez|veulent] méditer.<br/><br/>Nous [veux|veut|*voulons|voulez|veulent] bouquiner. <br/>Vous [veux|veut|voulons|*voulez|veulent] bavarder.<br/>Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.<br/><br/>Les enfants [veux|veut|voulons|voulez|*veulent] grandir.<br/>Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir. <br/>Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus !</p><p>&copy; Jacqueline Rosen</p>",
-					"audio": [
-						"sounds/fr/Chacun à son goût !.mp3"
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "Je [*veux|veut|voulons|voulez|veulent] sortir. Tu [*veux|veut|voulons|voulez|veulent] dormir. Annie [veux|*veut|voulons|voulez|veulent] courir.  Dani [veux|*veut|voulons|voulez|veulent] tricoter.  Lucie [veux|*veut|voulons|voulez|veulent] papoter. Millie [veux|*veut|voulons|voulez|veulent] méditer.  Nous [veux|veut|*voulons|voulez|veulent] bouquiner.  Vous [veux|veut|voulons|*voulez|veulent] bavarder. Mes amis [veux|veut|voulons|voulez|*veulent] dessiner.  Les enfants [veux|veut|voulons|voulez|*veulent] grandir. Leurs parents [veux|veut|voulons|voulez|*veulent] rajeunir.  Ils ne [veux|veut|voulons|voulez|*veulent] pas vieillir ! Moi non plus ! \u00A9 Jacqueline Rosen",
+							"audio": "sounds/fr/Chacun à son goût !.mp3"
+						}
 					],
 					"titleText": "1. Chacun à son goût !"
 				}
@@ -335,7 +416,7 @@
 					"id": "wordsIntoSlots1",
 					"instructionsText": "Match the French with the English",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answers",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Martin veut acheter un vélo.",
@@ -383,30 +464,48 @@
 					"congratulationsText": "Excellent !",
 					"instructionsTextHTML": "Select <b>au</b>, <b>à la</b>, <b>à l'</b> or <b>aux</b> as appropriate.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Je vais [au|*à la|à l'|aux] bibliothèque.",
-						"Ma copine travaille [au|*à la|à l'|aux] pharmacie.",
-						"Je vais [*au|à la|à l'|aux] centre commercial.",
-						"Nous allons [au|*à la|à l'|aux] piscine.",
-						"Les enfants sont [au|à la|*à l'|aux]école.",
-						"Mon bureau se trouve [*au|à la|à l'|aux] centre-ville.",
-						"Vous allez [au|à la|*à l'|aux]exposition ?",
-						"Le professeur écrit une lettre [au|à la|à l'|*aux] étudiants.",
-						"Tu veux dîner [*au|à la|à l'|aux] restaurant ce soir ?",
-						"J'aime passer mes vacances [au|à la|à l'|*aux] Pays-Bas."
-					],
-					"audio": [
-						"sounds/fr/Je vais à la bibliothèque.mp3",
-						"sounds/fr/Ma copine travaille à la pharmacie.mp3",
-						"sounds/fr/Je vais au centre commercial.mp3",
-						"sounds/fr/Nous allons à la piscine.mp3",
-						"sounds/fr/Les enfants sont à l'école.mp3",
-						"sounds/fr/Mon bureau se trouve au centre-ville.mp3",
-						"sounds/fr/Vous allez à l'exposition.mp3",
-						"sounds/fr/Le professeur écrit une lettre aux étudiants.mp3",
-						"sounds/fr/Tu veux dîner au restaurant ce soir.mp3",
-						"sounds/fr/J'aime passer mes vacances aux Pays-Bas.mp3"
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "Je vais [au|*à la|à l'|aux] bibliothèque.",
+							"audio": "sounds/fr/Je vais à la bibliothèque.mp3"
+						},
+						{
+							"text": "Ma copine travaille [au|*à la|à l'|aux] pharmacie.",
+							"audio": "sounds/fr/Ma copine travaille à la pharmacie.mp3"
+						},
+						{
+							"text": "Je vais [*au|à la|à l'|aux] centre commercial.",
+							"audio": "sounds/fr/Je vais au centre commercial.mp3"
+						},
+						{
+							"text": "Nous allons [au|*à la|à l'|aux] piscine.",
+							"audio": "sounds/fr/Nous allons à la piscine.mp3"
+						},
+						{
+							"text": "Les enfants sont [au|à la|*à l'|aux]école.",
+							"audio": "sounds/fr/Les enfants sont à l'école.mp3"
+						},
+						{
+							"text": "Mon bureau se trouve [*au|à la|à l'|aux] centre-ville.",
+							"audio": "sounds/fr/Mon bureau se trouve au centre-ville.mp3"
+						},
+						{
+							"text": "Vous allez [au|à la|*à l'|aux]exposition ?",
+							"audio": "sounds/fr/Vous allez à l'exposition.mp3"
+						},
+						{
+							"text": "Le professeur écrit une lettre [au|à la|à l'|*aux] étudiants.",
+							"audio": "sounds/fr/Le professeur écrit une lettre aux étudiants.mp3"
+						},
+						{
+							"text": "Tu veux dîner [*au|à la|à l'|aux] restaurant ce soir ?",
+							"audio": "sounds/fr/Tu veux dîner au restaurant ce soir.mp3"
+						},
+						{
+							"text": "J'aime passer mes vacances [au|à la|à l'|*aux] Pays-Bas.",
+							"audio": "sounds/fr/J'aime passer mes vacances aux Pays-Bas.mp3"
+						}
 					],
 					"titleText": "3. Practise  the prepositions."
 				}
@@ -466,7 +565,8 @@
 				}
 			}
 		],
-		"id": "group1",
+		"expandable": false,
+		"id": "exercises",
 		"titleText": "Exercises"
 	}
 }

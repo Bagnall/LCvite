@@ -1,9 +1,9 @@
 // WordParts.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 html.debug {
 	.word-parts-container {
@@ -18,12 +18,20 @@ html.debug {
 	table {
 		p {
 			margin: 0;
-			letter-spacing: 0.5rem;
+			letter-spacing: 0.2rem;
 			perspective: 600px;
 		}
 	}
+	.help {
+		// padding: 0 1rem;
+		// display: flex;
+		// justify-content: space-between;
+		// width: 100%;
+		// align-items: center;
+		@include help();
+	}
 	span {
-		$tumble-iterations: 8;
+		$tumble-iterations: 1; //8;
 		$tumble-time: 0.5s; // Same as sound clip!
 		border: 1px solid transparent;
 		cursor: pointer;
@@ -38,12 +46,12 @@ html.debug {
 			animation-duration: $tumble-time;
 			animation-timing-function: linear;
 			animation-iteration-count: $tumble-iterations;
-			@include mixins.correct-highlight();
+			@include correct-highlight();
 			box-sizing: border-box;
 			display: inline-block;
 			&:before {
 				// shade
-				@include mixins.standard-pseudo();
+				@include standard-pseudo();
 				animation-name: shade;
 				animation-duration: calc($tumble-time / 2);
 				animation-timing-function: linear;
@@ -51,20 +59,16 @@ html.debug {
 			}
 		}
 		&:before {
-			@include mixins.standard-pseudo();
+			@include standard-pseudo();
 		}
 		&.error {
-			@include mixins.incorrect-highlight();
+			@include incorrect-highlight();
 		}
 	}
 
 	p.clue {
 		font-size: 1.4rem;
 		font-weight: bold;
-	}
-
-	.help {
-		padding: 1rem;
 	}
 
 	.hidden-help {
@@ -76,29 +80,9 @@ html.debug {
 		}
 	}
 
-	table {
-		text-align: left;
-		border-collapse: collapse;
-		background: white;
-		td {
-			border: 1px solid #000000;
-			font-weight: bold;
-			font-size: 0.8rem;
-			padding: 0.1rem;
-		}
-		tbody {
-			border: none;
-			tr {
-				&.spacer {
-					border-left: none;
-					border-right: none;
-					td {
-						border-left: none;
-						border-right: none;
-					}
-				}
-			}
-		}
+	.word-space {
+		display: inline-block;
+		width: 0.5em; /* tweak to match old visual spacing */
 	}
 }
 @keyframes vertical-rotate {
@@ -135,7 +119,7 @@ html.debug {
 }
 @include respond-above(m) {
 	.word-parts-container {
-		span {
+		> span {
 			font-size: 1.2rem;
 			padding: 0.5rem 0;
 		}

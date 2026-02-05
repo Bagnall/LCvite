@@ -1,5 +1,13 @@
 import './ErrorLog.scss';
 import React from 'react';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 
 export class ErrorLog extends React.Component {
 
@@ -10,9 +18,9 @@ export class ErrorLog extends React.Component {
 			collapse: false,
 		});
 
-		this.copyErrors = this.copyErrors.bind(this);
-		this.expand = this.expand.bind(this);
-		this.toggleCollapseLog = this.toggleCollapseLog.bind(this);
+		// this.copyErrors = this.copyErrors.bind(this);
+		// this.expand = this.expand.bind(this);
+		// this.toggleCollapseLog = this.toggleCollapseLog.bind(this);
 	}
 
 	copyErrors = () => {
@@ -103,25 +111,25 @@ export class ErrorLog extends React.Component {
 				statusText,
 			} = error;
 			rows.push(
-				<tr key={`errorLogRow${index}`}>
-					<td key={`errorLogCell${index}-0`}>{action}</td>
-					<td key={`errorLogCell${index}-1`}>{message}</td>
-					<td key={`errorLogCell${index}-2`}>{statusCode}</td>
-					<td key={`errorLogCell${index}-3`}>{statusText}</td>
-					<td
+				<TableRow key={`errorLogRow${index}`}>
+					<TableCell key={`errorLogCell${index}-0`}>{action}</TableCell>
+					<TableCell key={`errorLogCell${index}-1`}>{message}</TableCell>
+					<TableCell key={`errorLogCell${index}-2`}>{statusCode}</TableCell>
+					<TableCell key={`errorLogCell${index}-3`}>{statusText}</TableCell>
+					<TableCell
 						className='button'
 						key={`errorLogCell${index}-4`}>
 						<button
 							className='dismiss clear-error'
 							title='Dismiss error'
 							onClick={() => { clearError(index); }}
-						>X</button></td>
-				</tr >
+						>X</button></TableCell>
+				</TableRow >
 			);
 		});
 
 		return (
-			<div id='errorLog' className={`${errors.length > 0 ? 'show' : ''} ${collapse ? 'collapse' : ''}`}>
+			<div id='errorLog' className={`${errors.length > 0 ? 'show' : ''} ${collapse ? 'collapse' : ''} noprint`}>
 				<header>
 					Error Log
 					<div className='header-buttons-left'>
@@ -148,11 +156,11 @@ export class ErrorLog extends React.Component {
 					</div>
 				</header>
 				<div id='tableContainer'>
-					<table>
-						<tbody>
+					<Table>
+						<TableBody>
 							{rows}
-						</tbody>
-					</table>
+						</TableBody>
+					</Table>
 				</div>
 			</div>
 		);

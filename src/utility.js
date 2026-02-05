@@ -169,49 +169,325 @@ export const handleResponseText = (response) => {
 		});
 };
 
-export const handleSpecialLinkClick = (e) => {
-	// Wow, we need this (unfortunately) so that we can hyperlink between parts of the document, most importantly,
-	// a target that may be hidden in a collapsed accordion. We need to try to find the target, expand the accordion and any parent accordions,
-	// then do a nice scroll, rather than a jump, to the target. Maybe we can highlight it too?
+let backLink = 0;
+let programmaticScrollTimeout;
 
-	// console.log("handleSpecialLinkClick", e);
-	e.preventDefault();
-	const href = e.target.getAttribute('href');
 
-	const [, name] = href.split('#');
+// back-button scroll monitoring
+let backButtonScrollListenerAttached = false;
+let backButtonShownAtScrollY = 0; // scrollY when the button was shown (anchor)
+const backButtonHideThresholdVh = 0.5; // half a viewport height
+const getBackToLinkButton = () => document.getElementById('backToLinkButton');
 
-	const specialAnchorTargets = document.querySelectorAll(`a.special-anchor-target[name='${name}']`);
-	if (specialAnchorTargets.length === 1) { // Should only ever be one!
-		const [specialAnchorTarget] = specialAnchorTargets;
-		// And it should be within an accordion (or even nested accordions)
-		let accordionArticle = specialAnchorTarget.closest('article.accordion-article');
+const hideBackButton = () => {
+	if (window.__backBtnHideTimer) {
+		clearTimeout(window.__backBtnHideTimer);
+		window.__backBtnHideTimer = null;
+	}
+	const btn = getBackToLinkButton();
+	if (btn) btn.classList.remove('show', 'flash');
+	stopMonitoringBackButtonScroll();
+};
 
-		while (accordionArticle) {
-			// Expand it!
-			try {
-				const ref = window.refs.find((r) => {
-					return r !== null && r.props.id === accordionArticle.id;
-				});
+const onBackButtonScroll = () => {
+	// Ignore programmatic scroll (your scrollToElement sets this flag)
+	if (window.__programmaticScroll) return;
 
-				ref.setState({ expanded: true },
-					() => setTimeout(() => {
-						// Flash a highlight colour to help the user to spot it.
-						specialAnchorTarget.classList.add('flash');
-						// Smooth scroll to the target to give the user chance to track to it instead of just jumping to some unidentifiable part of a piece of text.
-						const targetRect = specialAnchorTarget.getBoundingClientRect();
-						scrollTo({ behavior: 'smooth', left: targetRect.left, top: 3000/* targetRect.top*/ });
-						setTimeout(() => {specialAnchorTarget.classList.remove('flash');}, 5000); // Remove the flashing highlight afte a suitable delay
-					}, 500)
-				);
-			}catch (err) {
-				console.log(err); // eslint-disable-line
+	const btn = getBackToLinkButton();
+	if (!btn) return;
+
+	// Only do work if actually visible
+	if (!btn.classList.contains('show')) {
+		stopMonitoringBackButtonScroll();
+		return;
+	}
+
+	const thresholdPx = window.innerHeight * backButtonHideThresholdVh;
+	const delta = Math.abs(window.scrollY - backButtonShownAtScrollY);
+
+	if (delta >= thresholdPx) {
+		// give the user a brief chance to click before it fades
+		if (!window.__backBtnHideTimer) {
+			window.__backBtnHideTimer = setTimeout(() => {
+				hideBackButton();
+				window.__backBtnHideTimer = null;
+			}, 350); // tweak: 200–500ms feels good
+		}
+	}
+};
+
+const startMonitoringBackButtonScroll = () => {
+	if (backButtonScrollListenerAttached) return;
+	backButtonScrollListenerAttached = true;
+
+	// capture the anchor scroll position at the moment we begin monitoring
+	backButtonShownAtScrollY = window.scrollY;
+
+	window.addEventListener('scroll', onBackButtonScroll, { passive: true });
+};
+
+const stopMonitoringBackButtonScroll = () => {
+	if (!backButtonScrollListenerAttached) return;
+	backButtonScrollListenerAttached = false;
+
+	window.removeEventListener('scroll', onBackButtonScroll);
+};
+
+export const scrollBack = () => {
+	window.scrollTo({
+		behavior: 'smooth',
+		left: 0,
+		top: backLink,
+	});
+
+	hideBackButton(); // <- replaces manual class remove
+};
+
+
+export const scrollToElement = (element, showBackButton = true) => {
+	// console.log("scrollToElement");
+	if (!element) return;
+
+	const mainMenu = document.getElementById('mainMenu');
+	if (!mainMenu) return;
+
+	// Start with the full mainMenu height (this was your original behaviour
+	// and works correctly on desktop).
+	let mainMenuHeight = mainMenu.offsetHeight;
+	// console.log(10, "mainMenuHight", mainMenuHeight);
+
+	// If the mobile dropdown is open, its height is included in mainMenuHeight.
+	// We want only the fixed header height, so subtract the dropdown height.
+	const mobileMenu = mainMenu.querySelector('.mobile-menu');
+	if (mobileMenu && mobileMenu.offsetHeight > 0) {
+		// dropdown visible -> remove its height from the offset
+		mainMenuHeight -= mobileMenu.offsetHeight;
+	}
+
+	// console.log("mainMenuHeight (adjusted)", mainMenuHeight);
+
+	const backToLinkButton = document.getElementById('backToLinkButton');
+	if (!backToLinkButton) return;
+
+	// Get bounding rectangle relative to viewport
+	const rect = element.getBoundingClientRect();
+
+	// Adjust by the current scroll position
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+	// Calculate coordinates relative to the page, minus header height
+	const top = rect.top + scrollTop - mainMenuHeight - 100; // 100 = fudge factor
+	const left = rect.left + scrollLeft;
+
+	// Where is our current scroll position (for back button)
+	backLink = scrollTop;
+
+	if (showBackButton) {
+		backToLinkButton.classList.add('show', 'flash');
+
+		// Start monitoring AFTER the programmatic scroll has finished,
+		// so we anchor to the user's landing position (not where they came from).
+		setTimeout(() => {
+		// If still visible, anchor to current position and begin monitoring
+			if (backToLinkButton.classList.contains('show')) {
+				backButtonShownAtScrollY = window.scrollY;
+				startMonitoringBackButtonScroll();
 			}
-			accordionArticle = accordionArticle.parentNode.closest('article.accordion-article'); // Go round again in case it's nested
+		}, 600); // a small delay so smooth scroll has time to settle
+	} else {
+		hideBackButton();
+	}
+
+
+	// Flag this as a programmatic scroll so listeners can ignore it
+	window.__programmaticScroll = true;
+	if (programmaticScrollTimeout) clearTimeout(programmaticScrollTimeout);
+
+	// Scroll to that position
+	window.scrollTo({
+		behavior: 'smooth',
+		left,
+		top,
+	});
+
+	programmaticScrollTimeout = setTimeout(() => {
+		window.__programmaticScroll = false;
+	}, 2000);
+
+	setTimeout(() => {
+		if (showBackButton) backToLinkButton.classList.remove('flash');
+	}, 2000);
+};
+
+
+export const handleSpecialLinkClick = (e, showBackButton = true) => {
+	// console.log("handleSpecialLinkClick");
+
+	// Stop the browser's default "jump to hash"
+	e.preventDefault();
+
+	const linkEl = e.currentTarget;
+
+	// Use currentTarget so nested spans inside the <a> don't confuse us
+	const href = linkEl.getAttribute("href");
+	if (!href) return;
+
+	// -------------------------------------------------------------------------
+	// Extract target name/id:
+	// - use the part after the LAST '#'
+	// - strip any leading '.' or '#' (so .#foo -> foo, #foo -> foo)
+	// -------------------------------------------------------------------------
+	const rawAfterHash = href.split("#").pop() || "";
+	const name = rawAfterHash.replace(/^[.#]+/, "").trim();
+	if (!name) return;
+
+	// -------------------------------------------------------------------------
+	// 1. Find target: MUST have .special-anchor-target, matched by id OR name
+	// -------------------------------------------------------------------------
+	const candidates = document.querySelectorAll(".special-anchor-target");
+	let specialAnchorTarget = null;
+
+	for (let i = 0; i < candidates.length; i += 1) {
+		const el = candidates[i];
+		if (!el) continue;
+
+		const elId = el.id || el.getAttribute("id");
+		const elName = el.getAttribute("name");
+
+		if (elId === name || elName === name) {
+			specialAnchorTarget = el;
+			break;
+		}
+	}
+
+	if (!specialAnchorTarget) {
+		// Nothing found – bail quietly
+		return;
+	}
+
+	// We'll use this to know whether we just activated a tab
+	let activatedTab = false;
+
+	// -------------------------------------------------------------------------
+	// 2. TAB SUPPORT (shadcn / Radix Tabs)
+	// -------------------------------------------------------------------------
+	const tabPanel = specialAnchorTarget.closest('[role="tabpanel"]');
+
+	if (tabPanel) {
+		// Try to find the Tabs "root" element – your markup uses .group-tabs as wrapper
+		let tabRoot =
+			tabPanel.closest(".group-tabs") || // your class
+			tabPanel.parentElement;
+
+		while (tabRoot && !tabRoot.querySelector('[role="tablist"]')) {
+			tabRoot = tabRoot.parentElement;
 		}
 
-	}
-	// console.log("specialAnchorTargets", specialAnchorTargets);
+		if (tabRoot) {
+			const panelId = tabPanel.id;
+			let trigger = null;
 
+			// Prefer matching by aria-controls (more robust than index)
+			if (panelId) {
+				trigger = tabRoot.querySelector(
+					`[role="tab"][aria-controls="${panelId}"]`
+				);
+			}
+
+			// Fallback: index-based matching if aria-controls fails
+			if (!trigger) {
+				const panels = Array.from(
+					tabRoot.querySelectorAll('[role="tabpanel"]')
+				);
+				const triggers = Array.from(tabRoot.querySelectorAll('[role="tab"]'));
+				const idx = panels.indexOf(tabPanel);
+				if (idx !== -1 && triggers[idx]) {
+					trigger = triggers[idx];
+				}
+			}
+
+			if (trigger) {
+				const isActive = trigger.getAttribute("data-state") === "active";
+
+				// Only poke Radix/Shadcn if it's not already the active tab
+				if (!isActive) {
+					activatedTab = true;
+
+					// Radix uses roving focus; make sure focus + click are both applied
+					trigger.focus();
+
+					// Dispatch a "realistic" click sequence so internal state updates cleanly
+					["pointerdown", "mousedown", "mouseup", "click"].forEach((type) => {
+						const ev = new MouseEvent(type, {
+							bubbles: true,
+							cancelable: true,
+							view: window,
+						});
+						trigger.dispatchEvent(ev);
+					});
+				}
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------
+	// 3. ACCORDION SUPPORT – your existing window.refs pattern
+	// -------------------------------------------------------------------------
+	let accordionArticle = specialAnchorTarget.closest("article.accordion-article");
+
+	if (accordionArticle !== null) {
+		while (accordionArticle) {
+			try {
+				const ref =
+					window.refs &&
+					window.refs.find(
+						(r) => r && r.props && r.props.id === accordionArticle.id
+					);
+
+				if (ref && typeof ref.setState === "function") {
+					ref.setState(
+						{ expanded: true },
+						() =>
+							setTimeout(() => {
+								// Highlight + scroll once accordion has animated
+								specialAnchorTarget.classList.add("flash");
+								scrollToElement(specialAnchorTarget, showBackButton);
+								setTimeout(() => {
+									specialAnchorTarget.classList.remove("flash");
+								}, 5000);
+							}, 500)
+					);
+				}
+			} catch (err) {
+				// eslint-disable-next-line no-console
+				console.log(err);
+			}
+
+			accordionArticle = accordionArticle.parentNode
+				? accordionArticle.parentNode.closest("article.accordion-article")
+				: null;
+		}
+	} else {
+		// -----------------------------------------------------------------------
+		// 4. Plain target: just scroll + flash
+		//    BUT: if we just activated a tab, give Radix a moment to switch panels
+		// -----------------------------------------------------------------------
+		const doScroll = () => {
+			if (showBackButton)specialAnchorTarget.classList.add("flash");
+			scrollToElement(specialAnchorTarget, showBackButton);
+			setTimeout(() => {
+				specialAnchorTarget.classList.remove("flash");
+			}, 5000);
+		};
+
+		if (activatedTab) {
+			// Small delay so the tab content is visible before we measure/scroll
+			setTimeout(doScroll, 250);
+		} else {
+			doScroll();
+		}
+	}
 };
 
 export const highlightTextDiff = (a, b, countCorrect, sounds = false) => {
@@ -291,7 +567,7 @@ export const isTouchChrome = () => {
 };
 
 export const playAudioLink = (soundFile) => {
-	console.log("playAudioLink", soundFile);
+	// console.log("playAudioLink", soundFile);
 	const soundFileAudio = new Audio(resolveAsset(soundFile));
 	soundFileAudio.play();
 };
@@ -309,6 +585,9 @@ export const replaceSelectWithSpan = (selectElement) => {
 };
 
 export const resolveAsset = (path = '') => {
+	// console.log(`resolveAsset(${path}) => ${import.meta.env.BASE_URL}${path}`);
+	// console.log(path.search(import.meta.env.BASE_URL));
+	if (path.search(import.meta.env.BASE_URL) === 0) return path; // Already resolved (belt & braces)
 	return `${import.meta.env.BASE_URL}${path}`;
 };
 

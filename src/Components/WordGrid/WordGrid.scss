@@ -1,9 +1,9 @@
 // WordGrid.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
 // html.debug {
 // 	.word-grid-container {
@@ -16,7 +16,7 @@
 .word-grid-container {
 	padding: 1rem;
 	position: RELATIVE;
-	// background: colours.$panel-back;
+	// background: $panel-back;
 	.word-grid-table-outer-container {
 		display: flex;
 		justify-content: center;
@@ -38,7 +38,7 @@
 	.word-list {
 		text-transform: capitalize;
 		span.found {
-			background: colours.$highlight;
+			background: $highlight;
 		}
 	}
 	table {
@@ -51,7 +51,7 @@
 			box-sizing: border-box;
 			width: var(--cell-dimension);
 			height: var(--cell-dimension);
-
+			font-size: 1rem;
 			text-align: center;
 			text-transform: uppercase;
 			// background: white;
@@ -70,11 +70,19 @@
 			letter-spacing: 0.5rem;
 		}
 	}
+	// .help {
+	// 	padding: 1rem;
+	// 	display: flex;
+	// 	justify-content: space-evenly;
+	// 	width: 600px;
+	// }
 	.help {
-		padding: 1rem;
-		display: flex;
-		justify-content: space-evenly;
-		width: 600px;
+		// padding: 1rem;
+		// display: flex;
+		// justify-content: space-between;
+		// width: 100%;
+		// align-items: center;
+		@include help();
 	}
 
 	.hidden-help {

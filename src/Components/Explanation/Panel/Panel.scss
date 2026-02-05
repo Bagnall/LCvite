@@ -1,10 +1,10 @@
 // Panel.scss
 
-@use "../../../styles/_colours.module.scss";
+@use "../../../styles/colours.module" as *;
 @use "sass:color";
 
 .panel {
-	// background: colours.$article-base-background;
+	// background: $article-base-background;
 	padding: 1rem;
 	width: calc(100% - 2rem);
 	margin-top: 1rem;

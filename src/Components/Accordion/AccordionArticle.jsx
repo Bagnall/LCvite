@@ -1,3 +1,5 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import DOMPurify from "dompurify";
 import {Info} from '..';
 import React from 'react';
 
@@ -21,7 +23,7 @@ export class AccordionArticle extends React.PureComponent {
 			id: id,
 		});
 
-		this.toggleExpanded = this.toggleExpanded.bind(this);
+		// this.toggleExpanded = this.toggleExpanded.bind(this);
 	}
 
 	componentDidUpdate = (prevProps) => {
@@ -63,6 +65,8 @@ export class AccordionArticle extends React.PureComponent {
 			children,
 			className,
 			info,
+			noCard = false,
+			target,
 			title = '',
 			titleHTML = '',
 		} = this.props;
@@ -76,6 +80,7 @@ export class AccordionArticle extends React.PureComponent {
 			<h2
 				onClick={this.toggleExpanded}
 				title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`}
 			>
 				{title}
 				{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
@@ -87,8 +92,9 @@ export class AccordionArticle extends React.PureComponent {
 				<h2
 					onClick={this.toggleExpanded}
 					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+					className={`special-anchor-target`} id={`special-anchor-${target}`} name={`special-anchor-${target}`}
 				>
-					<span dangerouslySetInnerHTML={{ __html: titleHTML }}/>
+					<span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(titleHTML) }}/>
 					{info ? <Info infoTitle={info.infoTitle} infoMessage={info.infoMessage} /> : null}
 				</h2>
 			);
@@ -100,17 +106,37 @@ export class AccordionArticle extends React.PureComponent {
 				id={`${id}`}
 				key={`article${id}`}
 			>
-				<header>
-					<div
-						className={`arrow ${expanded ? 'expanded' : ''}`}
-						onClick={this.toggleExpanded}
-						title={`${expanded ? 'Click to close' : 'Click to expand'}`}
-					/>
+				<header
+					onClick={this.toggleExpanded}
+					title={`${expanded ? 'Click to close' : 'Click to expand'}`}
+				>
+					<svg
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24" height="24"
+						viewBox="0 0 24 24" fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						className="arrow lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+					>
+						<path d="m6 9 6 6 6-6"></path>
+					</svg>
 					{h2}
 				</header>
-				<div className='content'>
-					{children}
-				</div>
+
+				{noCard ?
+					<div className='content'>
+						{children}
+					</div>
+					:
+					<Card className="content w-full sortable mt-4">
+						<CardContent className="p-2">
+							{children}
+						</CardContent>
+					</Card>
+				}
 			</article >
 		);
 	};

@@ -1,17 +1,20 @@
-import './Jigsaw.scss';
+import "./Jigsaw.scss";
 import {
 	arrayIncludesObject,
 	resolveAsset,
-} from '../../utility';
+} from "../../utility";
 import {
 	AudioClip,
+	IconButton,
 	Piece,
-} from '../../Components';
+} from "../../Components";
+import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import {
 	mouseRelativeTo,
-} from '../../mouseUtility';
-import React from 'react';
-import variables from '../../styles/_variables.module.scss';
+} from "../../mouseUtility";
+import React from "react";
+import Variables from "../../styles/_variables.module.scss";
 
 export class Jigsaw extends React.PureComponent {
 
@@ -26,16 +29,16 @@ export class Jigsaw extends React.PureComponent {
 		super(props);
 
 		// Import some variables from scss (they are also used in other scss files and so should never get out of step unlike duplicated variables).
-		const piecesPerBoard = parseInt(variables.piecesPerBoard);
-		const boardWidth = parseInt(variables.boardWidth);
-		const boardHeight = parseInt(variables.boardHeight);
-		const tabSize = parseInt(variables.tabSize);
-		const tileSize = parseInt(variables.tileSize);
-		const jigsawBorderWidth = parseInt(variables.jigsawBorderWidth);
+		const piecesPerBoard = parseInt(Variables.piecesPerBoard);
+		const boardWidth = parseInt(Variables.boardWidth);
+		const boardHeight = parseInt(Variables.boardHeight);
+		const tabSize = parseInt(Variables.tabSize);
+		const tileSize = parseInt(Variables.tileSize);
+		const jigsawBorderWidth = parseInt(Variables.jigsawBorderWidth);
 
 		// We will use Pieces to build up our JSX for the pieces
-		const Pieces = new Array;
-		const usedSpaces = new Array; // So we can track where pieces have been randomised to and therefore not get conflicts
+		const Pieces = [];
+		const usedSpaces = []; // So we can track where pieces have been randomised to and therefore not get conflicts
 
 		// Initial x,y
 		let r = Math.random();
@@ -92,13 +95,13 @@ export class Jigsaw extends React.PureComponent {
 			tileSize: tileSize,
 		});
 
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handleHints = this.handleHints.bind(this);
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-		this.handleMouseMove = this.handleMouseMove.bind(this);
-		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.inLimits = this.inLimits.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handleHints = this.handleHints.bind(this);
+		// this.handleMouseDown = this.handleMouseDown.bind(this);
+		// this.handleMouseMove = this.handleMouseMove.bind(this);
+		// this.handleMouseUp = this.handleMouseUp.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.inLimits = this.inLimits.bind(this);
 
 	}
 
@@ -127,7 +130,7 @@ export class Jigsaw extends React.PureComponent {
 		const targetTrayX = parseInt(window.getComputedStyle(targetTray).left);
 		const targetTrayY = parseInt(window.getComputedStyle(targetTray).top);
 
-		const newPieces = new Array;
+		const newPieces = [];
 		for (let i = 0; i < 40; i++) {
 			const piece = Pieces[i];
 			const { index, correctSet, correctx, correcty, x, y } = piece.props;
@@ -177,6 +180,7 @@ export class Jigsaw extends React.PureComponent {
 
 	handleHints = (e) => {
 		// console.log("handleHints", e);
+		e.stopPropagation();
 		this.setState({showHints: e.target.checked});
 	};
 
@@ -231,9 +235,9 @@ export class Jigsaw extends React.PureComponent {
 		// console.log("handleMouseUp", e)
 		e.target.classList.remove("dragging");
 		const targetTray = this.targetRef.current;
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 		const clickAudio = new Audio(resolveAsset('/sounds/click.mp3'));
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		let {
 			failCount = 0,
 		} = this.state;
@@ -241,7 +245,7 @@ export class Jigsaw extends React.PureComponent {
 		// Check valid spot and valid set of tiles
 		if (this.movingPiece !== undefined && !this.movingPiece.classList.contains('correct-set')) {
 			// Not from the correct set of pieces
-			errorAudio.play();
+			// errorAudio.play();
 			this.movingPiece.style.left = `${this.startX}px`;
 			this.movingPiece.style.top = `${this.startY}px`;
 			failCount++;
@@ -252,7 +256,7 @@ export class Jigsaw extends React.PureComponent {
 			// Check to see if it is close enough to its intended position
 			const {
 				jigsawBorderWidth,
-				congratulationsText,
+				// congratulationsText,
 				piecesPerBoard,
 				startTime,
 				tabSize,
@@ -291,11 +295,11 @@ export class Jigsaw extends React.PureComponent {
 					}
 					this.setState({
 						timeReport: timeReport,
-					}, () => {
-						const { showDialog } = this.props;
-						showDialog(congratulationsText);
-						tadaAudio.play();
-					});
+					});// , () => {
+					// 	const { showDialog } = this.props;
+					// 	showDialog(congratulationsText);
+					// 	// tadaAudio.play();
+					// });
 				}
 				this.setState({ nPlaced: nPlaced });
 			} else {
@@ -307,7 +311,7 @@ export class Jigsaw extends React.PureComponent {
 				this.setState({
 					failCount: failCount
 				});
-				errorAudio.play();
+				// errorAudio.play();
 			}
 		}
 		if (this.movingPiece) {
@@ -357,8 +361,8 @@ export class Jigsaw extends React.PureComponent {
 			failCount,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			listenDescriptionText,
 			Pieces,
 			showHints = false,
@@ -379,10 +383,7 @@ export class Jigsaw extends React.PureComponent {
 				onMouseMove={this.handleMouseMove}
 				onMouseUp={this.handleMouseUp}
 			>
-				{/* <button className={`reset`} onClick={this.handleReset}>Reset</button> */}
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 				<p className='clue'>{descriptionText}&nbsp;</p>
 
 				<AudioClip
@@ -391,10 +392,6 @@ export class Jigsaw extends React.PureComponent {
 					soundFile={resolveAsset(soundFile)}
 				/>
 
-				<div className='help'>
-					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
-				</div>
 				<div
 					className={`jigsaw ${showHints ? 'show-hints' : ''}`}
 					onTouchStart={this.handleMouseDown}
@@ -418,6 +415,10 @@ export class Jigsaw extends React.PureComponent {
 					>
 					</div>
 					<p className='time-taken'>{timeReport}</p>
+				</div>
+				<div className='help'>
+					<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} checked={showHints} /></label>
+					<IconButton className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} theme={`eye`} onClick={this.autoSolve}>{cheatText}</IconButton>
 				</div>
 			</div>
 		);

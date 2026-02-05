@@ -1,89 +1,48 @@
 /*
 Info.scss
 */
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
 
-.pop-over,
-#info {
-	display: none;
-	max-width: 800px;
-	&.show {
-		display: block;
+$info-blue: #1c398e;
+
+.information {
+	background-color: #eff6ff;
+	padding: 12px 16px 12px 16px;
+	position: relative;
+	border-radius: 0.6rem;
+	display: flex;
+	column-gap: 0.75rem;
+	color: $info-blue;
+	font-size: 0.9rem;
+	margin-top: 1.4rem;
+	&::before {
+		content: "";
+		position: absolute;
+		width: $info-diameter;
+		height: $info-diameter;
+		mask: url("/public/images/icons/info-icon.svg");
+		background-color: $info-blue;
+		top: 8px;
 	}
-	min-width: 800px;
-	position: fixed;
-	padding: 4vh 4vw;
-	top: 4vh;
-	left: 4vw;
-	border: 4px solid lightgray;
-	box-shadow: 4px 4px 4px gray;
-	background: white;
-	z-index: 998;
-	h1,
-	h2,
-	h3,
-	h4 {
-		text-indent: 0;
+	.info-icon {
+		// position: absolute;
+		// top: 8px;
+		// left: 8px;
+		width: $info-diameter;
+		height: $info-diameter;
+		// grid-column: 0;
 	}
-	p {
-		line-height: 1.6rem;
-		font-weight: normal;
-		text-indent: 0;
-		font-size: 1.2rem;
-	}
-	> .for-scrolling {
-		overflow-y: auto;
-		max-height: 62vh;
-		// height: 62vh;
-	}
-	> .sortable-tree-container {
-		height: 62vh;
-	}
-	ol,
-	ul {
-		font-weight: normal;
-		li {
-			margin: 1.5rem 0;
-			font-weight: normal;
+	> div.info-content {
+		margin-left: 2rem;
+		h3 {
+			font-size: 1.2rem;
+			margin-top: 1px;
+		}
+		h4 {
 			font-size: 1rem;
+			margin-top: 0rem;
 		}
-	}
-	button {
-		&.window-close {
-			background-color: lightGray;
-			position: absolute;
-			display: block; // To override window-close display: none elsewhere
-			top: 4px;
-			right: 4px;
-			width: 40px;
-			height: 40px;
-			padding: 0;
-			background-image: URL("../../images/cross.svg");
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-	}
-}
-.pop-over {
-	max-width: 1200px;
-	right: 4vh;
-	bottom: 4vh;
-}
-button {
-	&.button-info {
-		@include mixins.button-common;
-		background-color: lightGray;
-		border-radius: 10px;
-		width: 20px;
-		height: 20px;
-		padding: 0;
-		// border: 1px solid $button-border;
-		font-size: 1rem;
-		line-height: 20px;
-		font-family: "Times New Roman", Times, serif;
-		font-weight: bold;
-		margin-left: 8px;
 	}
 }

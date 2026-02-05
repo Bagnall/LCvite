@@ -27,3 +27,4 @@ dist-ssr
 *.bak
 public/images/table-top.png
 yarn.lock
+.vite-index-backup.html

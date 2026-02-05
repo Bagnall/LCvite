@@ -42,7 +42,7 @@ export default [
 				"warn"
 			],
 			"eqeqeq": [
-				"error"
+				"warn"
 			],
 			"indent": [
 				"error",

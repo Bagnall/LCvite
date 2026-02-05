@@ -1,28 +1,49 @@
 {
 	"learningObjects": [
 		{
-			"title": "Learning Object 1",
-			"file": "1"
+			"file": "1",
+			"subTitle": "Primer Contacto",
+			"title": "Learning Object 1"
 		},
 		{
-			"title": "Learning Object 2",
-			"file": "2"
+			"file": "2",
+			"subTitle": "",
+			"title": "Learning Object 2"
 		},
 		{
-			"title": "Learning Object 3",
-			"file": "3"
+			"file": "3",
+			"subTitle": "LOS NÚMEROS en Español",
+			"title": "Learning Object 3"
 		},
 		{
-			"title": "Learning Object 4",
-			"file": "4"
+			"file": "4",
+			"subTitle": "",
+			"title": "Learning Object 4"
 		},
 		{
-			"title": "Learning Object 5",
-			"file": "5"
+			"file": "5",
+			"subTitle": "",
+			"title": "Learning Object 5"
 		},
 		{
-			"title": "Learning Object 6",
-			"file": "6"
+			"file": "6",
+			"subTitle": "",
+			"title": "Learning Object 6"
+		},
+		{
+			"file": "7",
+			"subTitle": "",
+			"title": "Learning Object 7"
+		},
+		{
+			"file": "8",
+			"subTitle": "",
+			"title": "Learning Object 8"
+		},
+		{
+			"file": "9",
+			"subTitle": "",
+			"title": "Learning Object 9"
 		}
 	]
 }

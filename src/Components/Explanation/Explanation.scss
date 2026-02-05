@@ -1,11 +1,11 @@
 // Explanation.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
 @use "sass:color";
 
 .explanation-container .panel {
-	@include mixins.standard-table();
+	@include standard-table();
 
 	// .speak {
 	// 	color: blue;

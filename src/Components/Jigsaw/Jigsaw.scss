@@ -1,8 +1,9 @@
 // Jigsaw.scss
 
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/colours.module" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/mixins.module.scss" as *;
+@use "../../styles/variables.module" as *;
 
 .jigsaw-container {
 	max-height: 790px;
@@ -18,21 +19,21 @@
 		line-height: 1.4em;
 		position: relative;
 		overflow: visible;
-		width: variables.$tile-size * 10px;
-		height: variables.$tile-size * 8px;
+		width: $tile-size * 10px;
+		height: $tile-size * 8px;
 		max-height: 1300px;
 		&::before {
 			content: "";
-			width: variables.$tile-size * 10px;
-			height: variables.$tile-size * 4px;
+			width: $tile-size * 10px;
+			height: $tile-size * 4px;
 			background: lightgray;
 			position: absolute;
 			top: 0;
 			left: 0;
 		}
 		transform: scale(0.2);
-		transform-origin: center top;
-		margin-bottom: variables.$tile-size * -2.4px;
+		transform-origin: left top;
+		margin-bottom: $tile-size * -2.4px;
 		box-sizing: border-box;
 		display: flex;
 		flex-wrap: nowrap;
@@ -47,10 +48,11 @@
 	}
 
 	.help {
-		padding: 1rem;
-		display: flex;
-		justify-content: space-evenly;
-		width: 600px;
+		// padding: 1rem;
+		// display: flex;
+		// justify-content: space-evenly;
+		// width: 600px;
+		@include help();
 	}
 
 	.hidden-help {
@@ -69,16 +71,16 @@
 
 	.target {
 		// border-radius: 16px;
-		width: variables.$tile-size * 4px - variables.$tab-size * 3 - 10;
-		height: variables.$tile-size * 3px - variables.$tab-size - 8;
+		width: $tile-size * 4px - $tab-size * 3 - 10;
+		height: $tile-size * 3px - $tab-size - 8;
 		background: lightgray;
-		border: (variables.$border-width * 1px) rgb(238, 238, 238) ridge;
+		border: ($border-width * 1px) rgb(238, 238, 238) ridge;
 		box-sizing: border-box;
 	}
 	.target,
 	.time-taken {
 		position: absolute;
-		top: variables.$tile-size * 4px + variables.$border-width * 3;
+		top: $tile-size * 4px + $border-width * 3;
 	}
 	.time-taken {
 		right: 0;
@@ -97,14 +99,15 @@
 	.jigsaw-container {
 		max-height: 990px;
 		.jigsaw {
-			transform: scale(0.5);
+			transform: scale(0.45);
 		}
 	}
 }
 @include respond-above(xl) {
 	.jigsaw-container {
+		max-height: 990px;
 		.jigsaw {
-			transform: scale(0.5);
+			transform: scale(0.45);
 		}
 	}
 }

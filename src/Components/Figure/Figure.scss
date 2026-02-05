@@ -1,10 +1,10 @@
 /*
 Figure.scss
 */
-@use "../../styles/_variables.module.scss";
-@use "../../styles/_colours.module.scss";
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
+@use "../../styles/variables.module" as *;
+@use "../../styles/colours.module" as *;
+@use "../../styles/mixins.module" as *;
+@use "../../styles/media-queries.scss" as *;
 figure {
 	display: flex;
 	align-items: center;
@@ -36,7 +36,7 @@ figure {
 		clear: left;
 		margin-top: 1rem;
 		text-align: center;
-		font-style: italic;
+		// font-style: italic;
 	}
 }
 @include respond-above(s) {
@@ -94,7 +94,7 @@ figure {
 			clear: left;
 			margin-top: 1rem;
 			text-align: center;
-			font-style: italic;
+			// font-style: italic;
 		}
 	}
 }

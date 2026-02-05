@@ -1,6 +1,6 @@
 import './TreasureGrid.scss';
 import React, { PureComponent } from 'react';
-import Colours from '../../styles/_colours.module.scss';
+import Colours from '../../styles/colours.module.scss';
 import {resolveAsset} from '../../utility';
 
 const gridData = [

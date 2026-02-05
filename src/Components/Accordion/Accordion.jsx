@@ -18,5 +18,5 @@ export class Accordion extends React.PureComponent {
 				{children}
 			</div>
 		);
-	}
+	};
 }

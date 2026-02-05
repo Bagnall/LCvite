@@ -1,7 +1,7 @@
 // Piece.scss
 
-@use "../../../styles/_mixins.module.scss";
-@use "../../../styles/_variables.module.scss";
+@use "../../../styles/mixins.module" as *;
+@use "../../../styles/variables.module" as *;
 @use "sass:math";
 
 .show-hints {
@@ -37,8 +37,8 @@
 
 .piece {
 	position: absolute;
-	width: variables.$tile-size * 1px;
-	height: variables.$tile-size * 1px;
+	width: $tile-size * 1px;
+	height: $tile-size * 1px;
 	mask-image: url("../images/iifi.png");
 	mask-repeat: no-repeat;
 	mask-size: auto;
@@ -96,15 +96,15 @@
 	@for $x from 0 through 4 {
 		@for $y from 0 through 3 {
 			&:nth-of-type(#{$x + $y*5 + 1}) {
-				left: Calc($x * variables.$tile-size * 1px);
-				top: Calc($y * variables.$tile-size * 1px);
+				left: Calc($x * $tile-size * 1px);
+				top: Calc($y * $tile-size * 1px);
 				background-position: calc($x * -119px) calc($y * -119px);
 				// &::before {
 				// 	mask-image: url("../images/iifi.png");
 				// 	mask-repeat: no-repeat;
 				// 	// background-image: url("../images/correct.jpg");
-				// 	left: Calc($x * variables.$tile-size * 1px - 4px);
-				// 	top: Calc($y * variables.$tile-size * 1px - 4px);
+				// 	left: Calc($x * $tile-size * 1px - 4px);
+				// 	top: Calc($y * $tile-size * 1px - 4px);
 				// 	background-position: calc($x * -119px) calc($y * -119px);
 				// }
 				// For debug
@@ -118,8 +118,8 @@
 			}
 			// @debug "x #{$x}, y #{$y}";
 			&:nth-of-type(#{$x + $y * 5 + 21}) {
-				left: Calc(($x + 5) * variables.$tile-size * 1px);
-				top: Calc($y * variables.$tile-size * 1px);
+				left: Calc(($x + 5) * $tile-size * 1px);
+				top: Calc($y * $tile-size * 1px);
 				background-position: calc($x * -119px) calc($y * -119px);
 				background-color: red;
 			}

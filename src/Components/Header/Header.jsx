@@ -7,7 +7,6 @@ export class Header extends React.PureComponent {
 		return (
 			<header className={`main-header`}>
 				<h1>Cambridge University Language Centre Learning Objects</h1>
-				{/* <h2>Richard Bagnall</h2> */}
 			</header>
 		);
 	};

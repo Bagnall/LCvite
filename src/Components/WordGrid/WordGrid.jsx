@@ -1,8 +1,11 @@
-import './WordGrid.scss';
-import '../../styles/_variables.module.scss';
-import React, { PureComponent } from 'react';
-import colours from '../../styles/_colours.module.scss';
-import {resolveAsset} from '../../utility';
+import "./WordGrid.scss";
+// import "../../styles/variables.module.scss";
+import React, { PureComponent } from "react";
+import { Button } from "@/components/ui/button";
+import colours from "../../styles/_colours.module.scss";
+import DOMPurify from "dompurify";
+import { IconButton } from "..";
+import {resolveAsset} from "../../utility";
 
 const directions = [
 	{ x: 1, y: 0 }, // right
@@ -118,7 +121,7 @@ export class WordGrid extends PureComponent {
 		const soundFiles = words.map(w => w[2]);
 		const foreignWords = words.map(w => w[0]);
 		const localWords = words.map(w => w[1]);
-		const solutionLines = new Array;
+		const solutionLines = [];
 		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
 		this.state = ({
 			...props.config,
@@ -138,14 +141,17 @@ export class WordGrid extends PureComponent {
 			soundFiles: soundFiles,
 			words: foreignWords,
 		});
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-		this.handleMouseEnter = this.handleMouseEnter.bind(this);
-		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.handleHints = this.handleHints.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleShuffle = this.handleShuffle.bind(this);
-		this.getLinearSelection = this.getLinearSelection.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handleMouseDown = this.handleMouseDown.bind(this);
+		// this.handleMouseEnter = this.handleMouseEnter.bind(this);
+		// this.handleMouseUp = this.handleMouseUp.bind(this);
+		// this.handleHints = this.handleHints.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleShuffle = this.handleShuffle.bind(this);
+		// this.getLinearSelection = this.getLinearSelection.bind(this);
+		// this.clearSVG = this.clearSVG.bind(this);
+
+		this.SVGRef = React.createRef();
 	}
 
 	handleMouseDown = (e, row, col) => {
@@ -199,7 +205,7 @@ export class WordGrid extends PureComponent {
 
 	handleMouseUp = () => {
 		const {
-			congratulationsText,
+			// congratulationsText,
 			line,
 			foundLines,
 			foundWords,
@@ -216,9 +222,9 @@ export class WordGrid extends PureComponent {
 		} = this.state;
 		const { showDialog } = this.props;
 		if(nPlaced === nToSolve) return;
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3'));
 		// const correctAudio = new Audio(resolveAsset('/sounds/ting.mp3'));
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const positions = this.getLinearSelection(selection);
 		let letters = positions.map(pos => grid[pos.row][pos.col]).join('');
@@ -251,11 +257,11 @@ export class WordGrid extends PureComponent {
 					timeReport: timeReport,
 				});
 
-				const { showDialog } = this.props;
-				soundFile.onended = () => {
-					tadaAudio.play();
-					showDialog(congratulationsText);
-				};
+				// const { showDialog } = this.props;
+				// soundFile.onended = () => {
+				// 	// tadaAudio.play();
+				// 	showDialog(congratulationsText);
+				// };
 				soundFile.play();
 				// tadaAudio.play();
 			} else {
@@ -280,7 +286,7 @@ export class WordGrid extends PureComponent {
 				selection: [],
 			});
 		} else {
-			errorAudio.play();
+			// errorAudio.play();
 			failCount++,
 			failCount = Math.min(words.length, failCount);
 
@@ -296,20 +302,32 @@ export class WordGrid extends PureComponent {
 
 	handleHints = (e) => {
 		// console.log("handleHints", e);
+		e.stopPropagation();
 		this.setState({showHints: e.target.checked});
 	};
 
 	handleReset = () => {
 		// console.log("handleReset");
 		const { words } = this.state;
+		this.clearSVG();
 
 		this.setState({
+			failCount: 0,
 			foundLines: [],
 			foundWords: [],
 			nPlaced: 0,
 			nToSolve: words.length,
+			showSolution: false,
+			// solutionLines:[],
 			startTime: undefined,
 			timeReport: '',
+		});
+	};
+
+	clearSVG = () => {
+		this.setState({
+			foundLines:[],
+			// solutionLines: [],
 		});
 	};
 
@@ -318,14 +336,17 @@ export class WordGrid extends PureComponent {
 		const { config, logError } = this.props;
 		const { words } = config;
 		const foreignWords = words.map(w => w[0]);
-		const solutionLines = new Array;
+		const solutionLines = [];
 		const grid = generateWordGrid(foreignWords || [], solutionLines, logError);
+		this.clearSVG();
 		this.setState({
 			foundLines: [],
 			foundWords: [],
 			grid: grid,
 			nPlaced: 0,
 			nToSolve: words.length,
+			showSolution: false,
+			solutionLines: solutionLines,
 			startTime: undefined,
 			timeReport: '',
 		});
@@ -362,12 +383,13 @@ export class WordGrid extends PureComponent {
 			grid,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			line,
 			localWords,
 			nPlaced,
 			nToSolve,
+			// showAnswer = false,
 			showHints = false,
 			showHintsText,
 			solutionLines,
@@ -381,7 +403,7 @@ export class WordGrid extends PureComponent {
 		const cellDimension = parseInt(root.getPropertyValue('--cell-dimension').trim());
 		// console.log("cellDimension", cellDimension);
 
-		const renderedFoundLines = new Array();
+		const renderedFoundLines = [];
 		const strokeWidth = cellDimension / 1.2;
 
 		const {highlight} = colours;
@@ -399,7 +421,7 @@ export class WordGrid extends PureComponent {
 				strokeLinecap="round"
 			/>
 		));
-		const renderedSolutionLines = new Array();
+		const renderedSolutionLines = [];
 		if (showSolution) {
 			solutionLines.forEach((l, index) => renderedSolutionLines.push(
 				<line
@@ -415,8 +437,8 @@ export class WordGrid extends PureComponent {
 			));
 		}
 
-		const foreignWordsRendered = new Array();
-		const localWordsRendered = new Array();
+		const foreignWordsRendered = [];
+		const localWordsRendered = [];
 		for (let i = 0; i < localWords.length; i++){
 			if (foundWords.includes(foreignWords[i])) {
 				foreignWordsRendered.push(<span key={`lw${i}`} className={`found`}>{foreignWords[i]}{i === foreignWords.length - 1 ? '' : ', '}</span>);
@@ -430,34 +452,29 @@ export class WordGrid extends PureComponent {
 
 		return (
 			<div className="word-grid-container" id={id} key={id}>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
-				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
+				{/* {instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
+				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(instructionsTextHTML) }} /> : null} */}
 				<p className={`word-list`}>{localWordsRendered}</p>
 
 				<p className={`hidden-hints ${showHints ? 'show' : ''}`}>You're looking for these words:</p>
 				<p className={`hidden-hints word-list ${showHints ? 'show' : ''}`} >{foreignWordsRendered}</p>
 
-
 				<div className="word-grid-table-outer-container">
-					<div className='help'>
-						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label>
-						<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
-					</div>
 					<div className={`table-top`}>
 						<div className="word-grid-table-container"
 							onMouseUp={this.handleMouseUp}
 							onTouchEnd={this.handleMouseUp}
 						>
 							<svg
+								id={`${id}SVG`}
 								width={grid.length * cellDimension}
 								height={grid.length * cellDimension}
+								ref={this.SVGRef}
 								style={{ left: 0, pointerEvents: 'none', position: 'absolute', top: 0 }}
 							>
 								{renderedFoundLines}
-								{renderedSolutionLines}
+								{showSolution ? renderedSolutionLines : null}
 								{line && (
 									<line
 										x1={line.start.col * cellDimension + cellDimension / 2}
@@ -507,6 +524,12 @@ export class WordGrid extends PureComponent {
 								</tbody>
 							</table>
 						</div>
+					</div>
+					<div className='help'>
+						<label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onClick={this.handleHints} /></label>
+						<IconButton className={`hidden-help  reset ${nPlaced > 0 || failCount >= 2 ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+						<IconButton className={`hidden-help  ${failCount >= 2 ? 'show' : ''}`} disabled={failCount < 2} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+						<IconButton className={`shuffle  `} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
 					</div>
 					<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 					<p className='time-taken'>{timeReport}</p>

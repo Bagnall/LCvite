@@ -1,9 +1,15 @@
 // React component for bilingual memory matching game
-import './MemoryMatchGame.scss';
-import {Card, Congratulate} from '../../Components';
-import React from 'react';
-import {resolveAsset} from '../../utility';
-import Variables from '../../styles/_variables.module.scss';
+import "./MemoryMatchGame.scss";
+import {
+	Card,
+	// Congratulate,
+	IconButton
+} from "../../Components";
+import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
+import React from "react";
+import {resolveAsset} from "../../utility";
+import Variables from "../../styles/_variables.module.scss";
 
 const getShuffledDeck = (cards, nCards) => {
 	cards = cards.sort(() => Math.random() - 0.5);
@@ -46,16 +52,16 @@ export class MemoryMatchGame extends React.PureComponent {
 			nPairs: 0,
 			nTries: 0,
 		});
-		this.handleClick = this.handleClick.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleShuffle = this.handleShuffle.bind(this);
+		// this.handleClick = this.handleClick.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleShuffle = this.handleShuffle.bind(this);
 	}
 
 	handleClick = (card) => {
 		const {
 			beenFlipped,
 			cards,
-			congratulationsText,
+			// congratulationsText,
 			flipped,
 			matched,
 		} = this.state;
@@ -66,10 +72,10 @@ export class MemoryMatchGame extends React.PureComponent {
 		} = this.state;
 		if (!startTime)	startTime = new Date();
 
-		const { showDialog } = this.props;
+		// const { showDialog } = this.props;
 		if (flipped.length === 2 || flipped.includes(card.id) || matched.includes(card.id)) return;
 
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
 		const newFlipped = [...flipped, card.id];
 		beenFlipped.push(card.id);
@@ -109,10 +115,10 @@ export class MemoryMatchGame extends React.PureComponent {
 							}
 							this.setState({
 								timeReport: timeReport,
-							}, () => {
-								tadaAudio.play();
-								showDialog(congratulationsText);
-							});
+							});// , () => {
+							// tadaAudio.play();
+							// 	showDialog(congratulationsText);
+							// });
 						}
 					};
 					sound.onended = () => finishUp();
@@ -173,8 +179,8 @@ export class MemoryMatchGame extends React.PureComponent {
 			flipped,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			matched,
 			nPairs,
 			nTries,
@@ -194,17 +200,13 @@ export class MemoryMatchGame extends React.PureComponent {
 		});
 		return (
 			<div id={`${id}`} className={`memory-match-game-container`}>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
-				<button className={`shuffle`} onClick={this.handleShuffle}>Shuffle</button>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
+
 				<div className={`memory-match-game`}>
 					<p className='clue'>{descriptionText}&nbsp;</p>
 
 					<div
 						className={`memory-map-container num${cards.length}cards`}
-						// style={{ maxHeight: `${cards.length / 2 * 90}px` }}
 					>
 						{/* dirty max-height, but the container won't shrink down for the scaled down content :-( */}
 						<h2>Cards</h2>
@@ -239,6 +241,10 @@ export class MemoryMatchGame extends React.PureComponent {
 					</div>
 					<p>{`${nTries} tries. ${nPairs} matched.${timeReport}`}</p>
 
+				</div>
+				<div className={`help`}>
+					<IconButton className={`hidden-help`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+					<IconButton className={`shuffle`} onClick={this.handleShuffle} theme={`shuffle`}>Shuffle</IconButton>
 				</div>
 			</div>
 		);

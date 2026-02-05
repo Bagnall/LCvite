@@ -1,18 +1,32 @@
 // Header.scss
 
-@use "../../styles/_mixins.module.scss";
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_variables.module.scss";
+@use "../../styles/mixins.module" as *;
+@use "../../styles/variables.module" as *;
+@use "../../styles/media-queries" as *;
 
+.dialog-mask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: color-mix(in oklab, var(--color-zinc-950) 25%, transparent); //rgba(255, 0, 0, 0.2);
+	z-index: 999;
+	display: none;
+	&.show {
+		display: block;
+		cursor: not-allowed;
+	}
+}
 #congratulate {
 	background-color: white;
 	background: white;
-	border-radius: 20px;
-	// border: variables.$border-width * 1px ridge darkblue;
+	border-radius: 16px;
+	// border: $border-width * 1px ridge darkblue;
 	box-sizing: border-box;
-	color: darkblue;
+	// color: darkblue;
 	display: flex;
-	font-size: 40px;
+	// font-size: 40px;
 	height: fit-content;
 	inset: 0;
 	line-height: 60px;
@@ -21,7 +35,7 @@
 	// min-width: 80vw;
 	justify-self: center;
 	opacity: 0;
-	padding: 1rem;
+	padding: 32px; //1rem;
 	position: fixed;
 	text-align: center;
 	transform-origin: center center;
@@ -37,7 +51,7 @@
 		transform: scale(1);
 		opacity: 1;
 		transition-property: transform, opacity, box-shadow;
-		box-shadow: 16px 26px 16px rgba(0, 0, 0, 0.5);
+		// box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); //16px 26px 16px rgba(0, 0, 0, 0.5);
 	}
 	button {
 		top: 10px;
@@ -51,8 +65,8 @@
 		text-indent: -9999px;
 		border-radius: 8px;
 		&::after {
-			@include mixins.standard-pseudo();
-			mask-image: url("/images/cross.svg");
+			@include standard-pseudo();
+			mask-image: url(/images/cross.svg);
 			mask-position: center center;
 			mask-repeat: no-repeat;
 			background-color: rgb(0, 0, 139);

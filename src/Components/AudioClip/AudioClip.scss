@@ -1,6 +1,6 @@
 // AudioClip.scss
-@use "../../styles/_media-queries.scss" as *;
-@use "../../styles/_mixins.module.scss";
+@use "../../styles/media-queries" as *;
+@use "../../styles/mixins.module" as *;
 
 :root {
 	--compact-dimension: 27px;
@@ -42,8 +42,13 @@ audio.super-compact {
 	text-decoration: none !important;
 	--progress-width: 100%;
 	white-space: nowrap;
+	svg {
+		display: inline-block;
+		height: 16px;
+		margin-right: -8px;
+	}
 	&::after {
-		content: "";
+		// content: "";
 		width: var(--progress-width);
 		height: 1px;
 		position: absolute;
@@ -55,12 +60,14 @@ audio.super-compact {
 	&.playing {
 		--progress-width: 0%;
 	}
-	&.stopped {
-	}
 }
 
 .audio-container {
-	background-color: #f1f3f4;
+	// background-color: #f1f3f4;
+	background-color: transparent;
+	width: var(--compact-dimension);
+	height: var(--compact-dimension);
+
 	z-index: 1;
 	display: block;
 	position: relative;
@@ -70,51 +77,110 @@ audio.super-compact {
 	}
 }
 
+$circle-duration: 0.2s;
+.circular-audio-progress {
+	.play {
+		opacity: 1;
+		transition: opacity $circle-duration;
+	}
+	.pause {
+		opacity: 0;
+		transition: opacity $circle-duration;
+		// Doesn't work :-(
+		// animation-name: ge;
+		// animation-duration: calc($circle-duration / 10);
+		// animation-timing-function: linear;
+		// animation-iteration-count: infinite;
+	}
+	&.playing {
+		.play {
+			opacity: 0;
+			transition: opacity $circle-duration;
+		}
+		.pause {
+			opacity: 1;
+			transition: opacity $circle-duration;
+			fill: linear-gradient;
+		}
+	}
+}
+
+@keyframes ge {
+	0% {
+		// fill: #ff0000;
+		fill: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(110, 255, 0, 1) 48%, rgba(0, 0, 0, 1) 48%);
+	}
+	100% {
+		// fill: #ff0000;
+		fill: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(110, 255, 0, 1) 90%, rgba(0, 0, 0, 1) 90%);
+	}
+}
+
+.circular-audio-progress-speaker,
 .circular-audio-progress {
 	width: var(--compact-dimension);
 	height: var(--compact-dimension);
 	border-radius: calc(var(--compact-dimension) / 2);
 	cursor: pointer;
-	&:hover {
-		background-color: #e5e7e8;
-	}
-	&::after,
-	&::before {
-		@include mixins.standard-pseudo();
-		width: 0;
-		height: 0;
-	}
-	&::before {
-		// Arrow icon constructed from a border segment. Smart huh?
-		@include mixins.standard-pseudo();
-		width: 0;
-		height: 0;
-		border-width: 7.9px 10px;
-		border-color: transparent transparent transparent black;
-		border-style: solid;
-		top: 5.1px;
-		left: 10px;
-	}
-	&.playing {
-		// Pause icon (2 vertical bars)
-		&::before,
-		&::after {
-			width: 4px;
-			height: 14px;
-			top: 6px;
-			background-color: black;
-		}
-		&::after {
-			left: 8px;
-		}
-		&::before {
-			left: 15px;
-			border-width: 0; // Undo the arrow border thickness
-		}
-	}
 	svg {
 		width: 100%;
 		height: 100%;
+	}
+}
+
+span.audio-link {
+	// color: blue;
+	cursor: pointer;
+	// text-decoration: underline;
+}
+
+$cycle: 1600ms;
+
+.circular-audio-progress-speaker {
+	.speaker-arc {
+		opacity: 0;
+		transition: opacity calc($cycle / 2);
+	}
+	&.playing {
+		.speaker-arc {
+			transform-origin: 56% 50%;
+			animation-name: radiate;
+			animation-duration: $cycle;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+
+			transform: scale(0.5);
+			transition: opacity calc($cycle * 3);
+		}
+		.speaker-arc1 {
+			animation-delay: 0;
+		}
+		.speaker-arc2 {
+			animation-delay: calc($cycle / 2);
+		}
+		// .speaker-arc3 {
+		// 	animation-delay: $cycle * 2/3;
+		// }
+	}
+}
+
+@keyframes radiate {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+		// color: rgb(14, 231, 14);
+	}
+	10% {
+		opacity: 1;
+		transform: scale(0.6);
+	}
+	90% {
+		opacity: 1;
+		transform: scale(2);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2.2);
 	}
 }
 

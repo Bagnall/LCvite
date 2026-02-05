@@ -1,0 +1,840 @@
+{
+	"settings": {
+		"showCongratulations": true,
+		"flag": "sp-flag.png",
+		"title": "Spanish Learning Object 3",
+		"targetLanguage": "spanish",
+		"targetLanguageCode": "es-US",
+		"subtitle": "Numbers"
+	},
+	"customComponent1": {
+		"component": "LO3Intro",
+		"expandable": false,
+		"id": "LO3Intro",
+		"comment": "Introduction"
+	},
+	"phraseTable1": {
+		"component": "PhraseTable",
+		"id": "PhraseTable1",
+		"instructionsText": "The tables below show some Spanish cardinal numbers. For practice, you can listen to audio prompts.",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"sounds/sp/cero.mp3",
+				"cero",
+				"Zero"
+			],
+			[
+				"sounds/sp/uno.mp3",
+				"uno",
+				"One"
+			],
+			[
+				"sounds/sp/dos.mp3",
+				"dos",
+				"Two"
+			],
+			[
+				"sounds/sp/tres.mp3",
+				"tres",
+				"Three"
+			],
+			[
+				"sounds/sp/cuatro.mp3",
+				"cuatro",
+				"Four"
+			],
+			[
+				"sounds/sp/cinco.mp3",
+				"cinco",
+				"Five"
+			],
+			[
+				"sounds/sp/seis.mp3",
+				"seis",
+				"Six"
+			],
+			[
+				"sounds/sp/siete.mp3",
+				"siete",
+				"Seven"
+			],
+			[
+				"sounds/sp/ocho.mp3",
+				"ocho",
+				"Eight"
+			],
+			[
+				"sounds/sp/nueve.mp3",
+				"nueve",
+				"Nine"
+			],
+			[
+				"sounds/sp/diez.mp3",
+				"diez",
+				"Ten"
+			],
+			[
+				"sounds/sp/once.mp3",
+				"once",
+				"Eleven"
+			],
+			[
+				"sounds/sp/doce.mp3",
+				"doce",
+				"Twelve"
+			],
+			[
+				"sounds/sp/trece.mp3",
+				"trece",
+				"Thirteen"
+			],
+			[
+				"sounds/sp/catorce.mp3",
+				"catorce",
+				"Fourteen"
+			],
+			[
+				"sounds/sp/quince.mp3",
+				"quince",
+				"Fifteen"
+			],
+			[
+				"sounds/sp/dieciséis.mp3",
+				"dieciséis",
+				"Sixteen"
+			],
+			[
+				"sounds/sp/diecisiete.mp3",
+				"diecisiete",
+				"Seventeen"
+			],
+			[
+				"sounds/sp/dieciocho.mp3",
+				"dieciocho",
+				"Eighteen"
+			],
+			[
+				"sounds/sp/diecinueve.mp3",
+				"diecinueve",
+				"Nineteen"
+			],
+			[
+				"sounds/sp/veinte.mp3",
+				"veinte",
+				"Twenty"
+			],
+			[
+				"sounds/sp/veintiuno.mp3",
+				"veintiuno",
+				"Twenty-one"
+			],
+			[
+				"sounds/sp/veintidós.mp3",
+				"veintidós",
+				"Twenty-two"
+			],
+			[
+				"sounds/sp/veintitrés.mp3",
+				"veintitrés",
+				"Twenty-three"
+			],
+			[
+				"sounds/sp/veinticuatro.mp3",
+				"veinticuatro",
+				"Twenty-four"
+			],
+			[
+				"sounds/sp/veinticinco.mp3",
+				"veinticinco",
+				"Twenty-five"
+			],
+			[
+				"sounds/sp/veintiséis.mp3",
+				"veintiséis",
+				"Twenty-six"
+			],
+			[
+				"sounds/sp/veintisiete.mp3",
+				"veintisiete",
+				"Twenty-seven"
+			],
+			[
+				"sounds/sp/veintiocho.mp3",
+				"veintiocho",
+				"Twenty-eight"
+			],
+			[
+				"sounds/sp/veintinueve.mp3",
+				"veintinueve",
+				"Twenty-nine"
+			],
+			[
+				"sounds/sp/treinta.mp3",
+				"treinta",
+				"Thirty"
+			],
+			[
+				"sounds/sp/treinta y uno.mp3",
+				"treinta y uno",
+				"Thirty-one"
+			],
+			[
+				"sounds/sp/cuarenta.mp3",
+				"cuarenta",
+				"Forty"
+			],
+			[
+				"sounds/sp/cincuenta.mp3",
+				"cincuenta",
+				"Fifty"
+			],
+			[
+				"sounds/sp/sesenta.mp3",
+				"sesenta",
+				"Sixty"
+			],
+			[
+				"sounds/sp/setenta.mp3",
+				"setenta",
+				"Seventy"
+			],
+			[
+				"sounds/sp/ochenta.mp3",
+				"ochenta",
+				"Eighty"
+			],
+			[
+				"sounds/sp/noventa.mp3",
+				"noventa",
+				"Ninety"
+			],
+			[
+				"sounds/sp/cien.mp3",
+				"cien",
+				"One hundred"
+			],
+			[
+				"sounds/sp/ciento uno.mp3",
+				"ciento uno",
+				"One hundred and one"
+			],
+			[
+				"sounds/sp/doscientos.mp3",
+				"doscientos",
+				"Two hundred"
+			],
+			[
+				"sounds/sp/trescientos.mp3",
+				"trescientos",
+				"Three hundred"
+			],
+			[
+				"sounds/sp/cuatrocientos.mp3",
+				"cuatrocientos",
+				"Four hundred"
+			],
+			[
+				"sounds/sp/quinientos.mp3",
+				"quinientos",
+				"Five hundred"
+			],
+			[
+				"sounds/sp/seiscientos.mp3",
+				"seiscientos",
+				"Six hundred"
+			],
+			[
+				"sounds/sp/setecientos.mp3",
+				"setecientos",
+				"Seven hundred"
+			],
+			[
+				"sounds/sp/ochocientos.mp3",
+				"ochocientos",
+				"Eight hundred"
+			],
+			[
+				"sounds/sp/novecientos.mp3",
+				"novecientos",
+				"Nine hundred"
+			],
+			[
+				"sounds/sp/mil.mp3",
+				"mil",
+				"One thousand"
+			],
+			[
+				"sounds/sp/mil uno.mp3",
+				"mil uno",
+				"One thousand and one"
+			],
+			[
+				"sounds/sp/seis mil.mp3",
+				"seis mil",
+				"Six thousand"
+			],
+			[
+				"sounds/sp/siete mil.mp3",
+				"siete mil",
+				"Seven thousand"
+			],
+			[
+				"sounds/sp/ocho mil.mp3",
+				"ocho mil",
+				"Eight thousand"
+			],
+			[
+				"sounds/sp/nueve mil.mp3",
+				"nueve mil",
+				"Nine thousand"
+			],
+			[
+				"sounds/sp/diez mil.mp3",
+				"diez mil",
+				"Ten thousand"
+			],
+			[
+				"sounds/sp/un millón.mp3",
+				"un millón",
+				"One million"
+			],
+			[
+				"sounds/sp/dos millones.mp3",
+				"dos millones",
+				"Two million"
+			]
+		],
+		"titleText": "Numbers: 0-1,000,000"
+	},
+	"phraseTable2": {
+		"component": "PhraseTable",
+		"footnoteHTML": "<b>Know-how:</b> In Spanish notation a dot <code>.</code> separates thousands and a comma <code>,</code> separates decimals (e.g., <code>3.537,52</code>). Also, note the long-scale vs short-scale difference: in Spanish 'un billón' is one million million (1.000.000.000.000), not one thousand million.",
+		"id": "PhraseTable2",
+		"instructionsText": "The tables below show some Spanish cardinal numbers. For practice, you can listen to audio prompts.",
+		"header": [
+			"Español",
+			"English",
+			"Audio"
+		],
+		"phrases": [
+			[
+				"sounds/sp/un millón de personas visitaron Cambridge el año pasado.mp3",
+				"1.000.000 - un millón de personas visitaron Cambridge el año pasado",
+				"one million people visited Cambridge last year"
+			],
+			[
+				"sounds/sp/El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil doscientos veintitrés dólares.mp3",
+				"16.789.223 - El producto interno bruto de Colombia es dieciséis millones setecientos ochenta y nueve mil doscientos veintitrés dólares",
+				"The GDP of Colombia is sixteen million seven hundred eighty-nine thousand two hundred twenty-three dollars"
+			],
+			[
+				"sounds/sp/dos millones.mp3",
+				"2.000.000 - dos millones",
+				"two million"
+			],
+			[
+				"sounds/sp/el premio de la lotería es de doce millones de euros.mp3",
+				"12.000.000 € - el premio de la lotería es de doce millones de euros",
+				"the lottery prize is twelve million euros"
+			]
+		],
+		"titleText": "Millones y más"
+	},
+	"phraseTable5": {
+		"component": "PhraseTable",
+		"id": "PhraseTable5",
+		"header": [
+			"Español",
+			"English",
+			"Audio"
+		],
+		"phrases": [
+			[
+				"sounds/sp/y medio.mp3",
+				"…y medio",
+				"…and a Half"
+			],
+			[
+				"sounds/sp/En español, la expresión se coloca al revés que en inglés. En lugar de decir 'uno y medio millón', se dice 'un millón y medio.'.mp3",
+				"En español, la expresión se coloca al revés que en inglés. En lugar de decir 'uno y medio millón', se dice 'un millón y medio.'",
+				"In Spanish, the expression is placed the other way around compared to English. Instead of saying 'one and a half million,' you say 'one million and a half.'"
+			]
+		],
+		"titleText": "y medio"
+	},
+	"phraseTable6": {
+		"component": "PhraseTable",
+		"id": "PhraseTable6",
+		"header": [
+			"Español",
+			"English",
+			"Audio"
+		],
+		"phrases": [
+			[
+				"sounds/sp/Billones y trillones.mp3",
+				"Billones y trillones",
+				"Billions and Trillions"
+			],
+			[
+				"sounds/sp/En el mundo anglosajón, un billón es mil millones y un trillón es mil billones. Es decir, cada paso se multiplica por mil.mp3",
+				"En el mundo anglosajón, un billón es mil millones (1.000.000.000) y un trillón es mil billones (1.000.000.000.000). Es decir, cada paso se multiplica por mil.",
+				"In the English-speaking world, a billion is one thousand million (1,000,000,000) and a trillion is one thousand billion (1,000,000,000,000). In other words, each step up multiplies by one thousand."
+			],
+			[
+				"sounds/sp/un millón.mp3",
+				"• un millón = 1.000.000",
+				"• un millón = 1.000.000"
+			],
+			[
+				"sounds/sp/un millardo.mp3",
+				"• un millardo (o mil millones) = 1.000.000.000",
+				"• un millardo (o mil millones) = 1.000.000.000"
+			],
+			[
+				"sounds/sp/un billón.mp3",
+				"• un billón = 1.000.000.000.000",
+				"• un billón = 1.000.000.000.000"
+			],
+			[
+				"sounds/sp/mil billones.mp3",
+				"• mil billones = 1.000.000.000.000.000",
+				"• mil billones = 1.000.000.000.000.000"
+			],
+			[
+				"sounds/sp/un trillón.mp3",
+				"• un trillón = 1.000.000.000.000.000.000",
+				"• un trillón = 1.000.000.000.000.000.000"
+			]
+		],
+		"titleText": "Billones y trillones"
+	},
+	"customComponent2": {
+		"component": "LO3KnowHow1",
+		"id": "LO3KnowHow1",
+		"titleText": "Know-how"
+	},
+	"phraseTable3": {
+		"component": "PhraseTable",
+		"id": "PhraseTable3",
+		"instructionsText": "The tables below show some Spanish ordinal numbers. For practice, you can listen to audio prompts.",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"sounds/sp/primero.mp3",
+				"primero(a)",
+				"First"
+			],
+			[
+				"sounds/sp/segundo.mp3",
+				"segundo(a)",
+				"Second"
+			],
+			[
+				"sounds/sp/tercero.mp3",
+				"tercero(a)",
+				"Third"
+			],
+			[
+				"sounds/sp/cuarto.mp3",
+				"cuarto(a)",
+				"Fourth"
+			],
+			[
+				"sounds/sp/quinto.mp3",
+				"quinto(a)",
+				"Fifth"
+			],
+			[
+				"sounds/sp/sexto.mp3",
+				"sexto(a)",
+				"Sixth"
+			],
+			[
+				"sounds/sp/séptimo.mp3",
+				"séptimo(a)",
+				"Seventh"
+			],
+			[
+				"sounds/sp/octavo.mp3",
+				"octavo(a)",
+				"Eighth"
+			],
+			[
+				"sounds/sp/noveno.mp3",
+				"noveno(a)",
+				"Ninth"
+			],
+			[
+				"sounds/sp/décimo.mp3",
+				"décimo(a)",
+				"Tenth"
+			],
+			[
+				"sounds/sp/undécimo. decimoprimero.mp3",
+				"undécimo(a) / decimoprimero(a)",
+				"Eleventh"
+			],
+			[
+				"sounds/sp/duodécimo. decimosegundo.mp3",
+				"duodécimo(a) / decimosegundo(a)",
+				"Twelfth"
+			],
+			[
+				"sounds/sp/décimo tercero.mp3",
+				"décimo tercero(a)",
+				"Thirteenth"
+			],
+			[
+				"sounds/sp/décimo cuarto.mp3",
+				"décimo cuarto(a)",
+				"Fourteenth"
+			],
+			[
+				"sounds/sp/vigésimo.mp3",
+				"vigésimo(a)",
+				"Twentieth"
+			],
+			[
+				"sounds/sp/vigésimo primero.mp3",
+				"vigésimo primero(a)",
+				"Twenty-first"
+			],
+			[
+				"sounds/sp/vigésimo segundo.mp3",
+				"vigésimo segundo(a)",
+				"Twenty-second"
+			],
+			[
+				"sounds/sp/trigésimo.mp3",
+				"trigésimo(a)",
+				"Thirtieth"
+			],
+			[
+				"sounds/sp/cuadragésimo.mp3",
+				"cuadragésimo(a)",
+				"Fortieth"
+			],
+			[
+				"sounds/sp/quincuagésimo.mp3",
+				"quincuagésimo(a)",
+				"Fiftieth"
+			],
+			[
+				"sounds/sp/sexagésimo.mp3",
+				"sexagésimo(a)",
+				"Sixtieth"
+			],
+			[
+				"sounds/sp/septuagésimo.mp3",
+				"septuagésimo(a)",
+				"Seventieth"
+			],
+			[
+				"sounds/sp/octogésimo.mp3",
+				"octogésimo(a)",
+				"Eightieth"
+			],
+			[
+				"sounds/sp/nonagésimo.mp3",
+				"nonagésimo(a)",
+				"Ninetieth"
+			],
+			[
+				"sounds/sp/centésimo.mp3",
+				"centésimo(a)",
+				"Hundredth"
+			],
+			[
+				"sounds/sp/milésimo.mp3",
+				"milésimo(a)",
+				"Thousandth"
+			],
+			[
+				"sounds/sp/último.mp3",
+				"último(a)",
+				"Last"
+			]
+		],
+		"titleText": "Números ordinales"
+	},
+	"phraseTable4": {
+		"component": "PhraseTable",
+		"id": "PhraseTable4",
+		"instructionsText": "The tables below show some Spanish percentages. For practice, you can listen to audio prompts.",
+		"header": [
+			"Español",
+			"English"
+		],
+		"phrases": [
+			[
+				"sounds/sp/6 por ciento.mp3",
+				"6 por ciento",
+				"6 percent (6%)"
+			],
+			[
+				"sounds/sp/75 por ciento.mp3",
+				"75 por ciento",
+				"75 percent (75%)"
+			],
+			[
+				"sounds/sp/99 por ciento.mp3",
+				"99 por ciento",
+				"99 percent (99%)"
+			],
+			[
+				"sounds/sp/El diez por ciento de descuento.mp3",
+				"El diez por ciento de descuento",
+				"10% discount"
+			],
+			[
+				"sounds/sp/Veinte por ciento de interés.mp3",
+				"Veinte por ciento de interés",
+				"20% interest"
+			]
+		],
+		"titleText": "Porcentajes"
+	},
+	"group1": {
+		"component": "Group",
+		"content": [
+			{
+				"wordsIntoSlots2": {
+					"component": "Blanks",
+					"congratulationsText": "Well done!",
+					"id": "wordsIntoSlots2",
+					"instructionsText": "Write ramdom numbers which nedds to include the following which are the correct answers:",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Show answer",
+					"blanksType": "questions-answers",
+					"questions": [
+						"veinticuatro",
+						"dos cientos",
+						"un millón",
+						"cien",
+						"noventa",
+						"doce mil",
+						"sesenta y séis",
+						"setenta",
+						"catorce mil",
+						"quince",
+						"veintitrés",
+						"Treinta y tres"
+					],
+					"answers": [
+						"24",
+						"200",
+						"1.000.000",
+						"100",
+						"90",
+						"12.000",
+						"66",
+						"70",
+						"14.000",
+						"15",
+						"23",
+						"33"
+					],
+					"soundFiles": [
+						"sounds/sp/veinticuatro.mp3",
+						"sounds/sp/dos cientos.mp3",
+						"sounds/sp/un millón.mp3",
+						"sounds/sp/cien.mp3",
+						"sounds/sp/noventa.mp3",
+						"sounds/sp/doce mil.mp3",
+						"sounds/sp/sesenta y séis.mp3",
+						"sounds/sp/setenta.mp3",
+						"sounds/sp/catorce mil.mp3",
+						"sounds/sp/quince.mp3",
+						"sounds/sp/veintitrés.mp3",
+						"sounds/sp/Treinta y tres.mp3"
+					],
+					"titleText": "1.- LISTENING - Listen the audios and select, drag and drop the numbers that you can hear:"
+				}
+			},
+			{
+				"answerTable1": {
+					"component": "AnswerTable",
+					"congratulationsText": "Well done!",
+					"id": "AnswerTable1",
+					"header": [
+						"",
+						"CORRECT ANSWER"
+					],
+					"phrases": [
+						[
+							"80",
+							"[Ochenta]",
+							"sounds/sp/ochenta.mp3"
+						],
+						[
+							"20",
+							"[veinte]",
+							"sounds/sp/veinte.mp3"
+						],
+						[
+							"90",
+							"[noventa]",
+							"sounds/sp/noventa.mp3"
+						],
+						[
+							"100",
+							"[cien]",
+							"sounds/sp/cien.mp3"
+						],
+						[
+							"101",
+							"[Ciento uno]",
+							"sounds/sp/ciento uno.mp3"
+						],
+						[
+							"30",
+							"[treinta]",
+							"sounds/sp/treinta.mp3"
+						],
+						[
+							"40",
+							"[cuarenta]",
+							"sounds/sp/cuarenta.mp3"
+						],
+						[
+							"50",
+							"[cincuenta]",
+							"sounds/sp/cincuenta.mp3"
+						],
+						[
+							"60",
+							"[sesenta]",
+							"sounds/sp/sesenta.mp3"
+						],
+						[
+							"70",
+							"[setenta]",
+							"sounds/sp/setenta.mp3"
+						]
+					],
+					"titleText": "2.- WRITE IN SPANISH THE FOLLOWING NUMBERS"
+				}
+			},
+			{
+				"phrases3": {
+					"blanksType": "phrases",
+					"cheatText": "Show answer",
+					"component": "Blanks",
+					"congratulationsText": "Very good!",
+					"htmlContent": "<p>In the dialogues below, listen and choose the correct number. This will help you practise both reading and listening comprehension.</p>",
+					"id": "phrases3",
+					"instructionsTextHTML": "<p>Listen to Numbers in Use (Millions and More)</p><p>You'll hear 5 sentences. Click on the icon to listen, then select the correct number from the list. Drag and drop the icon into the sentence and complete the structure.</p>",
+					"showHintsText": "Show hints when moving",
+					"items": [
+						{
+							"text": "La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes. The European Union has [448] million inhabitants.",
+							"audio": "sounds/sp/La Unión Europea tiene cuatrocientos cuarenta y ocho millones de habitantes.mp3"
+						},
+						{
+							"text": "Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra. Scientists say that Mars' climate, about [three billion] years ago, was very similar to Earth's.",
+							"audio": "sounds/sp/Los científicos dicen que el clima del planeta Marte, hace unos tres mil millones de años, era muy similar al de la Tierra.mp3"
+						},
+						{
+							"text": "Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad. A woman from Medellín won [108.000.000] pesos in the Christmas lottery.",
+							"audio": "sounds/sp/Una señora de Medellín se ha ganado ciento ocho millones de pesos en la lotería de Navidad.mp3"
+						},
+						{
+							"text": "Se necesitan [trece millones doscientos noventa euros] para restaurar 8 monumentos importantes en Cancún. €13.000.290 are needed to restore 8 important monuments in Cancún.",
+							"audio": "sounds/sp/Se necesitan trece millones doscientos noventa euros para restaurar 8 monumentos importantes en Cancún.mp3"
+						},
+						{
+							"text": "En 2013, la población de la Tierra superó los siete mil millones de personas. In 2013, the world's population passed [seven billion] people.",
+							"audio": "sounds/sp/En 2013, la población de la Tierra superó los siete mil millones de personas.mp3"
+						}
+					],
+					"titleText": "3. Complete the Sentences (0–1,000,000)"
+				}
+			}
+		],
+		"id": "group1",
+		"htmlContent": "<h2>Español:</h2><p>Aquí tienes diferentes tipos de ejercicios para practicar los números.</p>",
+		"titleText": "EJERCICIOS PRACTICO|S: Ahora te toca a tí…."
+	},
+	"group2": {
+		"component": "Group",
+		"content": [
+			{
+				"dropdown1": {
+					"component": "DropDowns",
+					"id": "dropdown1",
+					"congratulationsText": "Muy bien !",
+					"instructionsText": "<p>Select the correct option from the dropdown.</p>",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Show answers",
+					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Cuántos gatos tienes? → Tengo dos gatos. (How many cats do you have? → I have two cats.)</p><p>¿Cuántos años tienes? → Tengo ocho años. (How old are you? → I’m eight years old.)</p>",
+					"items": [
+						{
+							"text": "Tengo [cero|uno|dos|tres|*cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
+							"audio": "sounds/sp/Tengo cuatro perros.mp3"
+						},
+						{
+							"text": "Hay [cero|uno|dos|tres|cuatro|cinco|seis|*siete|ocho|nueve|diez] estudiantes en la clase.",
+							"audio": "sounds/sp/Hay siete estudiantes en la clase.mp3"
+						},
+						{
+							"text": "Mi hermano tiene [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] años.",
+							"audio": "sounds/sp/Mi hermano tiene dos años.mp3"
+						},
+						{
+							"text": "En mi mochila hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|*nueve|diez] lápices.",
+							"audio": "sounds/sp/En mi mochila hay nueve lápices.mp3"
+						},
+						{
+							"text": "Hay [*cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] gatos en casa.",
+							"audio": "sounds/sp/Hay cero gatos en casa.mp3"
+						}
+					],
+					"titleText": "Actividad 1 - Escucha y elige / Listen and Choose"
+				}
+			},
+			{
+				"dropdown2": {
+					"component": "DropDowns",
+					"id": "dropdown2",
+					"congratulationsText": "Muy bien !",
+					"instructionsText": "<p>Select the correct option from the dropdown.</p>",
+					"showHintsText": "Show hints when moving",
+					"cheatText": "Show answers",
+					"footnoteHTML": "<h3>Extra oral practice / Práctica oral</h3><p>¿Qué ves en la foto? → Veo tres manzanas. (What do you see in the picture? → I see three aples.)</p><p>¿Cuántos perros hay? → Hay dos perros. (How many dogs are there? → There are two dogs.)</p><p>¿Cuántos zumos hay? → Hay diez zumos. (How many juices are there? → There are ten juices.)</p>",
+					"items": [
+						{
+							"text": "🍎🍎🍎 En la foto hay [cero|uno|dos|*tres|cuatro|cinco|seis|siete|ocho|nueve|diez] manzanas.",
+							"audio": "sounds/sp/En la foto hay tres manzanas.mp3"
+						},
+						{
+							"text": "🐶🐶 En la foto hay [cero|uno|*dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez] perros.",
+							"audio": "sounds/sp/En la foto hay tres perros.mp3"
+						},
+						{
+							"text": "🌼🌼🌼🌼🌼 En la foto hay [cero|uno|dos|tres|cuatro|*cinco|seis|siete|ocho|nueve|diez] flores.",
+							"audio": "sounds/sp/En la foto hay cinco flores.mp3"
+						},
+						{
+							"text": "🧃🧃🧃🧃🧃🧃🧃🧃🧃🧃En la foto hay [cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|*diez] zumos.",
+							"audio": "sounds/sp/En la foto hay diez zumos.mp3"
+						}
+					],
+					"audio": [],
+					"titleText": "Actividad 2 - En la foto hay... / In the picture there are..."
+				}
+			}
+		],
+		"expandable": false,
+		"id": "group2",
+		"instructionsTextHTML": "<p>Objetivo: Aprender, reconocer y usar correctamente los números del 0 al 10 en español.</p><p>Objective: Learn, recognize, and use correctly the numbers 0–10 in Spanish.</p>",
+		"titleText": "Los números del 0 al 10 - Bilingual Activities."
+	}
+}

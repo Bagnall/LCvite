@@ -1,7 +1,9 @@
 import './ReadAloud.scss';
+import DOMPurify from "dompurify";
 import {
 	highlightTextDiff,
 } from '../../utility';
+import { IconButton } from '..';
 import React from 'react';
 
 export class ReadAloud extends React.PureComponent {
@@ -10,12 +12,12 @@ export class ReadAloud extends React.PureComponent {
 
 		const { phrase } = this.props;
 
-		this.recordAndScore = this.recordAndScore.bind(this);
-		this.diagnose = this.diagnose.bind(this);
-		this.handleNoMatch = this.handleNoMatch.bind(this);
-		this.handleError = this.handleError.bind(this);
-		this.handleReset = this.handleReset.bind(this);
-		this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
+		// this.recordAndScore = this.recordAndScore.bind(this);
+		// this.diagnose = this.diagnose.bind(this);
+		// this.handleNoMatch = this.handleNoMatch.bind(this);
+		// this.handleError = this.handleError.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
+		// this.handleSpeechEnd = this.handleSpeechEnd.bind(this);
 
 		this.comparisonRef = React.createRef();
 		this.resultRef = React.createRef();
@@ -182,8 +184,8 @@ export class ReadAloud extends React.PureComponent {
 			firstTry = true,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			phrase,
 			recording,
 			understood = '',
@@ -196,27 +198,26 @@ export class ReadAloud extends React.PureComponent {
 		} else {
 			return (
 				<div className={`read-aloud-container ${recording ? 'recording' : ''}`} id={`monologue${id}`} >
-					<button className={`reset`} onClick={this.handleReset}>Reset</button>
 					<div className={`instructions`}>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
-						{/* <AudioClip soundFile={resolveAsset(soundFile)} label={``} /> */}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
+
 						<p><b><span className='speak phrase'>{phrase}</span></b></p>
 					</div>
-					{/* <div className='recording-container'>
-						<img src={resolveAsset('/images/microphone-on.png')} alt='microphone on air' style={{ "display": "none" }} /> */}
+
 					<button
 						className={`recording-container`}
 						onClick={this.recordAndScore}
 					>{firstTry ? 'Record' : 'Try again?'}</button>
-					{/* </div> */}
-					{/* <p>Recording: {recording ? 'true' : 'false'}</p> */}
+
 					<div className={`form`}>
 						<p ref={this.resultRef}>{`${understood !== '' ? 'I heard: ' : ''}`}<span className='understood'>{`${ understood !== '' ? understood : ''}`}</span></p>
-						{/* <label>Confidence: {confidence ? parseInt(parseFloat(confidence) * 100) : 0}%</label> */}
-						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: `${comparison}` }} />
+
+						<div className='comparison-result' ref={this.comparisonRef} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comparison) }} />
 					</div>
+					<div className={`help`}>
+						<IconButton className={`hidden-help reset`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton>
+					</div>
+
 				</div>
 			);
 		}

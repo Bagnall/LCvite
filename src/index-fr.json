@@ -1,68 +1,78 @@
 {
 	"learningObjects": [
 		{
-			"title": "Learning Object 1",
+			"title": "First Contact: greetings, farewells and social niceties",
+			"titleShort": "First Contact",
 			"file": "1"
 		},
 		{
-			"title": "Learning Object 2",
+			"title": "About me: marital status, occupation",
+			"titleShort": "About me",
 			"file": "2"
 		},
 		{
-			"title": "Learning Object 3",
+			"title": "Origins and Languages",
 			"file": "3"
 		},
 		{
-			"title": "Learning Object 4",
+			"title": "Current location",
 			"file": "4"
 		},
 		{
-			"title": "Learning Object 5",
+			"title": "House and Home",
 			"file": "5"
 		},
 		{
-			"title": "Learning Object 6",
+			"title": "Family, friends and neighbours",
 			"file": "6"
 		},
 		{
-			"title": "Learning Object 7",
+			"title": "Opinions matter: Likes and dislikes",
+			"titleShort": "Opinions matter",
 			"file": "7"
 		},
 		{
-			"title": "Learning Object 8",
+			"title": "Free Time",
 			"file": "8"
 		},
 		{
-			"title": "Learning Object 9",
+			"title": "Phoning in France",
 			"file": "9"
 		},
 		{
-			"title": "Learning Object 10",
+			"title": "Making Arrangements",
 			"file": "10"
 		},
 		{
-			"title": "Learning Object 11",
+			"title": "Out and about: going to a café",
+			"titleShort": "Going to a café",
 			"file": "11"
 		},
 		{
-			"title": "Learning Object 12",
+			"title": "Out and about: Shopping in the market",
+			"titleShort": "Shopping in the market",
 			"file": "12"
 		},
 		{
-			"title": "Learning Object 13",
+			"title": "Daily routine",
 			"file": "13"
 		},
 		{
-			"title": "Learning Object 14",
+			"title": "Studying at university",
 			"file": "14"
 		},
 		{
-			"title": "Learning Object 15",
+			"title": "Making Arrangements",
 			"file": "15"
 		},
 		{
-			"title": "DEMO",
+			"title": "Sample components to pick from",
 			"file": "demo"
+		},
+		{
+			"title": "Answer Table Test",
+			"file": "answer"
 		}
-	]
+	],
+	"title": "French Basic"
 }

@@ -1,9 +1,9 @@
 /*
 _mixins.module.scss
 */
-@use "./colours.module";
+@use "./colours.module" as *;
 @use "./media-queries" as *;
-@use "./variables.module";
+@use "./variables.module" as *;
 
 @mixin header-footer-background {
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00087c+0,0003d3+51,00087c+100 */
@@ -21,14 +21,23 @@ _mixins.module.scss
 	}
 }
 
+@mixin help() {
+	width: 100%;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+	align-items: center;
+}
+
 @mixin comparison() {
 	textarea,
 	.comparison-result {
-		margin: 1rem 0;
+		// margin: 1rem 0;
 		// min-width: 80vw;
-		width: calc(100% - 6px);
+		// width: calc(100% - 6px);
 		min-height: 30vh;
-		border: 1px solid black;
+		// border: 1px solid black;
 		white-space: break-spaces; // normal; /* allow wrapping at word boundaries */
 		overflow-wrap: anywhere; /* if a word is very long, break if needed */
 		word-break: keep-word; /* experimental: fallback is overflow-wrap */
@@ -63,11 +72,11 @@ _mixins.module.scss
 	&.compact {
 		flex-direction: row;
 		align-items: flex-start;
-		input {
-			border-style: solid;
-			border-width: 1px 0 1px 1px;
-			padding: 2px;
-		}
+		// input {
+		// 	border-style: solid;
+		// 	border-width: 1px 0 1px 1px;
+		// 	padding: 2px;
+		// }
 		.comparison-result {
 			margin: auto 0;
 			min-width: auto;
@@ -94,13 +103,25 @@ _mixins.module.scss
 			}
 		}
 	}
-	@include respond-above(s) {
-		textarea,
-		.comparison-result {
-			width: 60vw;
-			min-width: 60vw;
-		}
-	}
+	// @include respond-above(s) {
+	// 	textarea,
+	// 	.comparison-result {
+	// 		width: 60vw;
+	// 		min-width: 60vw;
+	// 	}
+	// }
+}
+
+@mixin form-field-common() {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 0.2fr;
+	grid-auto-rows: min-content;
+}
+
+@mixin form-field-common-font-padding() {
+	font-size: 16px;
+	padding: 8px 4px;
 }
 
 @mixin standard-table() {
@@ -151,16 +172,16 @@ _mixins.module.scss
 }
 
 @mixin correct-highlight() {
-	background-color: colours.$correct-background;
-	border: 1px solid colours.$correct-border;
+	background-color: $correct-background;
+	border: 1px solid $correct-border;
 }
 
 @mixin incorrect-highlight() {
 	// 	border: 1px solid red;
 	// 	background: rgba(255, 0, 0, 0.2);
 
-	border: 1px solid colours.$incorrect-border;
-	background: colours.$incorrect-background;
+	border: 1px solid $incorrect-border;
+	background: $incorrect-background;
 }
 
 @mixin threeSixtyRotate {
@@ -190,8 +211,8 @@ _mixins.module.scss
 	padding: 10px 20px;
 	font-weight: bold;
 	border: none;
-	border-radius: variables.$button-border-radius;
-	height: variables.$button-height;
+	border-radius: $button-border-radius;
+	height: $button-height;
 	outline: none;
 }
 
@@ -205,8 +226,8 @@ _mixins.module.scss
 	padding: 10px 20px;
 	font-weight: bold;
 	border: none;
-	border-radius: variables.$button-border-radius;
-	height: variables.$button-height;
+	border-radius: $button-border-radius;
+	height: $button-height;
 	outline: none;
 	&.disabled {
 		@include disabled;

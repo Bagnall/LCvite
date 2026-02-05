@@ -1,11 +1,17 @@
 import './Monologue.scss';
 import {
+	AudioClip,
+	IconButton,
+} from '../';
+import {
 	highlightTextDiff,
 	resolveAsset,
 } from '../../utility';
-import {AudioClip} from '../';
+import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
+import { Input } from "@/components/ui/input";
 import React from 'react';
-
+import { Textarea } from "@/components/ui/textarea";
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -31,9 +37,10 @@ export class Monologue extends React.PureComponent {
 			});
 		}
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleValidation = this.handleValidation.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.countCorrect = this.countCorrect.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
+		// this.handleValidation = this.handleValidation.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 		// this.highlightTextDiff = this.highlightTextDiff.bind(this);
 
 	}
@@ -66,25 +73,48 @@ export class Monologue extends React.PureComponent {
 		}
 	};
 
+	countCorrect = () => {
+		// console.log("countCorrect");
+		// const {
+		// 	congratulationsText,
+		// 	phrases,
+		// } = this.state;
+		let {
+			nCorrect,
+		} = this.state;
+		// let newNCorrect = nCorrect;
+		// const { showDialog } = this.props;
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+
+		nCorrect++;
+		// if (nCorrect === phrases.length) {
+		// 	// tadaAudio.play();
+		// 	showDialog(congratulationsText);
+		// }
+		this.setState({
+			nCorrect: nCorrect,
+		});
+	};
+
 	render = () => {
 		const {
 			compact,
 			content,
 			htmlContent,
 			id,
-			instructionsText,
-			instructionsTextHTML,
+			// instructionsText,
+			// instructionsTextHTML,
 			showResult = false,
 			soundFile,
 			userInput = ``,
 		} = this.state;
-		const {
-			countCorrect
-		} = this.props;
+		// const {
+		// 	countCorrect
+		// } = this.props;
 
 
 		let text = userInput;
-		if (showResult) text = highlightTextDiff(userInput, content, countCorrect, true);
+		if (showResult) text = highlightTextDiff(userInput, content, this.countCorrect, false);
 
 		if (compact) {
 			const {
@@ -95,28 +125,33 @@ export class Monologue extends React.PureComponent {
 				<>
 
 					<div className={`monologue-container compact` } id={`monologue${id}`} >
-						{!compact ? <button className={`reset`} onClick={this.handleReset}>Reset</button> : null}
 						{showResult ?
-							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							(<div className={`comparison-result compact`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}></div>)
 							:
 							(
 								<form onKeyPress={this.handleKeyPress}>
 									{compact ?
-										<input
+										<Input
 											id={`monologue${id}text`}
+											name={`monologue${id}text`}
 											onChange={this.handleChange}
+											placeholder={`type your answer`}
 											type='text'
 											value={userInput}
 										/>
 										:
-										<textarea value={userInput} onChange={this.handleChange} ></textarea>
+										<Textarea
+											onChange={this.handleChange}
+											placeholder={`type your answer`}
+											value={userInput}
+										></Textarea>
 									}
-									<button
-										className={``}
+									<Button
+										className={`${compact ? 'sm' : null}`}
 										htmlFor={`monologue${id}text`}
-										type={`submit`}
 										onClick={this.handleValidation}
-									>Check</button>
+										type={`submit`}
+									>Check</Button>
 								</form>
 							)
 						}
@@ -127,25 +162,32 @@ export class Monologue extends React.PureComponent {
 			return (
 				<>
 					<div className={`monologue-container`} id={`${id}`} key={`${id}`} >
-						<button className={`reset`} onClick={this.handleReset}>Reset</button>
-						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-						{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-						{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+						{/* <Button className={`reset btn`} onClick={this.handleReset}>Reset</Button> */}
+						{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
+
 						<AudioClip soundFile={resolveAsset(soundFile)} label={``} />
 						{showResult ?
-							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: `${text}` }}></div>)
+							(<div className={`result comparison-result`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}></div>)
 							:
 							(
 								<>
-									<textarea value={userInput} onChange={this.handleChange} ></textarea>
-									<button
-										className={``}
-										onClick={this.handleValidation}
-										type={`submit`}
-									>Check</button>
+									<Textarea
+										onChange={this.handleChange}
+										placeholder={`type your answer`}
+										value={userInput}
+									></Textarea>
 								</>
 							)
 						}
+					</div>
+					<div className={`help`}>
+						{!compact ? <IconButton className={`hidden-help`} onClick={this.handleReset} theme={`reset`} >Reset</IconButton> : null}
+						<IconButton
+							className={`${compact ? 'sm' : null}`}
+							onClick={this.handleValidation}
+							type={`submit`}
+							theme={`check`}
+						>Check</IconButton>
 					</div>
 				</>
 			);

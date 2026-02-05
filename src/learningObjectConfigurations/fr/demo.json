@@ -3,80 +3,8 @@
 		"class": "lo-demo",
 		"flag": "fr-flag.png",
 		"showCongratulations": true,
-		"subtitle": "Sample components to pick from",
 		"targetLanguage": "french",
-		"targetLanguageCode": "fr-FR",
-		"title": "French Learning Object, Component Demo"
-	},
-	"radio1": {
-		"component": "Radio",
-		"id": "radio1",
-		"congratulationsText": "Well done!",
-		"instructionsText": "Fill in the table below by dragging greetings and goodbye expressions into the appropriate column.",
-		"showHintsText": "Show hints when moving",
-		"cheatText": "Cheat",
-		"blanksType": "sort-table",
-		"options": [
-			"Greeting",
-			"Goodbye"
-		],
-		"phrases": [
-			[
-				"Buen día",
-				0,
-				"'Buen día' is a greeting in Spanish. It is used to wish someone a good day...",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Buenas tardes",
-				0,
-				"'Buenas tardes' can be used both as a greeting and as a goodbye in Spanish...",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Hola",
-				0,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Adiós",
-				1,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Nos vemos mañana",
-				1,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Buenas noches",
-				0,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Hasta el jueves",
-				1,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Hasta luego",
-				1,
-				"",
-				"sounds/sp/.mp3"
-			],
-			[
-				"Hasta pronto",
-				1,
-				"",
-				"sounds/sp/.mp3"
-			]
-		],
-		"titleText": "Radio"
+		"targetLanguageCode": "fr-FR"
 	},
 	"group1": {
 		"component": "Group",
@@ -84,7 +12,7 @@
 		"content": [
 			{
 				"jigsaw1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Jigsaw",
 					"congratulationsText": "Well done! You solved the puzzle!",
 					"correctImage": "/images/cyclist-horse.jpg",
@@ -111,7 +39,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/parrot-jaguar.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Parrot Jaguar"
 				}
@@ -128,7 +56,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/car-windmill.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Car Windmill"
 				}
@@ -145,7 +73,7 @@
 					"COMMENTalternativeDescriptionEnglish": "A beautiful parrot in a lush forest eating a Brazil nut while looking at a jaguar on the ground",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/car-cliff-lift.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Car Station"
 				}
@@ -162,7 +90,7 @@
 					"descriptionTextEnglish": "The scene is a river bank where people are in sun or in shade. Some have parasols. There are children and dogs. On the reiver thereis a rowing boat, some sailboats and two steamboats.",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/river-bank.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "River Bank"
 				}
@@ -179,13 +107,13 @@
 					"descriptionTextEnglish": "The scene is a river bank, in the shallows, three horses are standing, cooling, harnessed to a hay wain. On the left is a cottage where a woman is washing clothes. A dog runs along by the water and on the opposite bank a man is fishing next to a rowing boat.",
 					"showHintsText": "Show hints when moving",
 					"soundFile": "sounds/fr/hay-wain.mp3",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"listenDescriptionText": "Listen to the description",
 					"titleText": "Hay Wain"
 				}
 			}
 		],
-		"id": "groupJigsaws",
+		"id": "group1",
 		"titleText": "Jigsaws"
 	},
 	"group2": {
@@ -193,7 +121,7 @@
 		"content": [
 			{
 				"wordGrid1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid1",
@@ -256,7 +184,7 @@
 			},
 			{
 				"wordGrid2": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "That was a roaring success!",
 					"htmlContent": "<p>This <b>WordGrid</b> component takes a number of words, their translations and sound files and arranges them into a word grid puzzle.</p><p>The student must know the target language version of the word and drag the mouse from the first letter to the last to highlight the word. The word is then sounded.</p>",
@@ -300,7 +228,7 @@
 			},
 			{
 				"wordGrid3": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid3",
@@ -358,7 +286,7 @@
 			},
 			{
 				"wordGrid4": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid4",
@@ -511,7 +439,7 @@
 			},
 			{
 				"wordGrid5": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid5",
@@ -634,7 +562,7 @@
 			},
 			{
 				"wordGrid6": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordGrid",
 					"congratulationsText": "Well done, you found them all!",
 					"id": "WordGrid6",
@@ -754,7 +682,7 @@
 		"content": [
 			{
 				"memorycards1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You have a good memory!",
 					"htmlContent": "<p>This <b>MemoryMatchGame</b> component presents <i>nPairsToPlay</i> pairs of cards face dwon. The student can turn over two at a time. If either are word cards the student can play the audio of the word. If there is one word card and one picture card and they match, the audio is read out once more and the pair added to a collection of matches on the right.</p>",
@@ -763,85 +691,85 @@
 					"nPairsToPlay": 6,
 					"cards": [
 						{
-							"audio": "sounds/fr/memory/la lampe à lave.mp3",
+							"audio": "sounds/fr/la lampe à lave.mp3",
 							"localLanguage": "lava lamp",
 							"foreignLanguage": "la lampe à lave",
 							"image": "images/memory/lava-lamp.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/le télescope.mp3",
+							"audio": "sounds/fr/le télescope.mp3",
 							"localLanguage": "telescope",
 							"foreignLanguage": "le télescope",
 							"image": "images/memory/telescope.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le pinceau.mp3",
+							"audio": "sounds/fr/le pinceau.mp3",
 							"localLanguage": "paintbrush",
 							"foreignLanguage": "le pinceau",
 							"image": "images/memory/paint-brush.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/l'arrosoir.mp3",
+							"audio": "sounds/fr/l'arrosoir.mp3",
 							"localLanguage": "watering can",
 							"foreignLanguage": "l'arrosoir",
 							"image": "images/memory/watering-can.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/la fermeture éclair.mp3",
+							"audio": "sounds/fr/la fermeture éclair.mp3",
 							"localLanguage": "zipper",
 							"foreignLanguage": "la fermeture éclair",
 							"image": "images/memory/zip.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/l'échiquier.mp3",
+							"audio": "sounds/fr/l'échiquier.mp3",
 							"localLanguage": "chessboard",
 							"foreignLanguage": "l'échiquier",
 							"image": "images/memory/chess-board.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/le coquillage.mp3",
+							"audio": "sounds/fr/le coquillage.mp3",
 							"localLanguage": "seashell",
 							"foreignLanguage": "le coquillage",
 							"image": "images/memory/seashell.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/la tasse.mp3",
+							"audio": "sounds/fr/la tasse.mp3",
 							"localLanguage": "mug",
 							"foreignLanguage": "la tasse",
 							"image": "images/memory/mug.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le sac à dos.mp3",
+							"audio": "sounds/fr/le sac à dos.mp3",
 							"localLanguage": "backpack",
 							"foreignLanguage": "le sac à dos",
 							"image": "images/memory/backpack.webp"
 						},
 						{
-							"audio": "sounds/fr/memory/le parapluie.mp3",
+							"audio": "sounds/fr/le parapluie.mp3",
 							"localLanguage": "umbrella",
 							"foreignLanguage": "le parapluie",
 							"image": "images/memory/umbrella.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/l'agrafeuse.mp3",
+							"audio": "sounds/fr/l'agrafeuse.mp3",
 							"localLanguage": "stapler",
 							"foreignLanguage": "l'agrafeuse",
 							"image": "images/memory/stapler.png"
 						},
 						{
-							"audio": "sounds/fr/memory/les lunettes.mp3",
+							"audio": "sounds/fr/les lunettes.mp3",
 							"localLanguage": "spectacles",
 							"foreignLanguage": "les lunettes",
 							"image": "images/memory/spectacles.png"
 						},
 						{
-							"audio": "sounds/fr/memory/la brosse à cheveux.mp3",
+							"audio": "sounds/fr/la brosse à cheveux.mp3",
 							"localLanguage": "hair brush",
 							"foreignLanguage": "la brosse à cheveux",
 							"image": "images/memory/hairbrush.jpg"
 						},
 						{
-							"audio": "sounds/fr/memory/la carte postale.mp3",
+							"audio": "sounds/fr/la carte postale.mp3",
 							"localLanguage": "postcard",
 							"foreignLanguage": "la carte postale",
 							"image": "images/memory/postcard.jpg"
@@ -853,7 +781,7 @@
 			},
 			{
 				"memorycards2": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations! You know your way around the house!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
@@ -940,7 +868,7 @@
 			},
 			{
 				"memorycards3": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
@@ -1075,7 +1003,7 @@
 			},
 			{
 				"memorycards4": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"htmlContent": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 26 pairs from the stock pairs. It's a bit OTT, but challenging. Suggest reducing to 20 or less for acual incorporation.</p>",
@@ -1246,7 +1174,7 @@
 			},
 			{
 				"memorycards5": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "MemoryMatchGame",
 					"congratulationsText": "Congratulations!",
 					"instructionsText": "Match the picture to the French word.",
@@ -1527,65 +1455,65 @@
 		"instructionsText": "",
 		"phrases": [
 			[
+				"sounds/fr/Salut, ça va.mp3",
 				"Salut, ça va ?",
-				"Hi, are you well?",
-				"sounds/fr/Salut, ça va.mp3"
+				"Hi, are you well?"
 			],
 			[
+				"sounds/fr/Salut ! Ça va ! Et toi.mp3",
 				"Salut ! Ça va ! Et toi ?",
-				"Hi, I'm fine and you?",
-				"sounds/fr/Salut ! Ça va ! Et toi.mp3"
+				"Hi, I'm fine and you?"
 			],
 			[
+				"sounds/fr/Très bien, merci !.mp3",
 				"Très bien, merci !",
-				"Very well, thank you!",
-				"sounds/fr/Très bien, merci !.mp3"
+				"Very well, thank you!"
 			],
 			[
+				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3",
 				"Bonjour, Madame Foucher ! Comment ça va ?",
-				"lo, Mme Foucher! How are you?",
-				"sounds/fr/Bonjour, Madame Foucher ! Comment ça va.mp3"
+				"lo, Mme Foucher! How are you?"
 			],
 			[
+				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3",
 				"Bonjour Monsieur Letort ! Ça va très bien. Et vous* ?",
-				"lo M Letort, I'm very well, thank you. And you?",
-				"sounds/fr/Bonjour Monsieur Letort ! Ça va très bien. Et vous.mp3"
+				"lo M Letort, I'm very well, thank you. And you?"
 			],
 			[
+				"sounds/fr/Ça va, merci !.mp3",
 				"Ça va, merci !",
-				"I'm fine, thank you!",
-				"sounds/fr/Ça va, merci !.mp3"
+				"I'm fine, thank you!"
 			],
 			[
 				""
 			],
 			[
+				"sounds/fr/Comment t'appelles-tu.mp3",
 				"Comment t'appelles-tu* ?",
-				"What's your name?",
-				"sounds/fr/Comment t'appelles-tu.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Je m'appelle Max, et toi.mp3",
 				"Je m'appelle Max, et toi* ?",
-				"My name is Max. And you're….?",
-				"sounds/fr/Je m'appelle Max, et toi.mp3"
+				"My name is Max. And you're….?"
 			],
 			[
+				"sounds/fr/Je m'appelle Camille.mp3",
 				"Je m'appelle Camille.",
-				"My name's Camille.",
-				"sounds/fr/Je m'appelle Camille.mp3"
+				"My name's Camille."
 			],
 			[
 				""
 			],
 			[
+				"sounds/fr/Comment vous appelez-vous.mp3",
 				"Comment vous* appelez-vous ?",
-				"What's your name?",
-				"sounds/fr/Comment vous appelez-vous.mp3"
+				"What's your name?"
 			],
 			[
+				"sounds/fr/Je m'appelle Isabelle Martin.mp3",
 				"Je m'appelle Isabelle Martin.",
-				"My name is Isabelle Martin.",
-				"sounds/fr/Je m'appelle Isabelle Martin.mp3"
+				"My name is Isabelle Martin."
 			]
 		],
 		"titleText": "PhraseTable"
@@ -1604,29 +1532,35 @@
 		"id": "LO9Grammar",
 		"titleText": "Regional map example"
 	},
-	"group": {
+	"group4": {
 		"component": "Group",
 		"content": [
 			{
 				"wordparts1": {
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "WordParts",
 					"congratulationsText": "Superb!",
 					"htmlContent": "<p>The <b>WordParts</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase matches the question set. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p><p>After two mistakes, a cheat option is revealled.</p>",
 					"id": "wordparts1",
 					"instructionsText": "Listen to the following phrases. Each phrase contains at least 2 of the following:  on, oi, r, h. Can you identify them? Click on them to reveal them.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"b[on]jou[r] m[on] ché[r]i",
-						"b[on]s[oi][r] m[on] amou[r]",
-						"au [r]ev[oi][r] ma ché[r]ie",
-						"quelle [h]o[rr]eur Valé[r]ie"
-					],
-					"audio": [
-						"sounds/fr/bonjour mon chéri.mp3",
-						"sounds/fr/bonsoir mon amour.mp3",
-						"sounds/fr/au revoir ma chérie.mp3",
-						"sounds/fr/quelle horreur valérie.mp3"
+					"items": [
+						{
+							"text": "b[on]jou[r] m[on] ché[r]i",
+							"audio": "sounds/fr/bonjour mon chéri.mp3"
+						},
+						{
+							"text": "b[on]s[oi][r] m[on] amou[r]",
+							"audio": "sounds/fr/bonsoir mon amour.mp3"
+						},
+						{
+							"text": "au [r]ev[oi][r] ma ché[r]ie",
+							"audio": "sounds/fr/au revoir ma chérie.mp3"
+						},
+						{
+							"text": "quelle [h]o[rr]eu[r] Valé[r]ie !",
+							"audio": "sounds/fr/quelle horreur valérie !.mp3"
+						}
 					],
 					"titleText": "WordParts"
 				}
@@ -1639,22 +1573,32 @@
 					"htmlContent": "<p>The <b>DropDowns</b> component, uses phrases to populate the left column of a table. The set of phrases contains square brackets to indicate where a part of a phrase should be replaced by a 'dropdown' or 'select'. The verttical bar '|' separated phrases or words are used to populate the options of the select. The one preceded by the asterisk indicates the correct answer. If the student clicks on a correct part of the word or phrase, it spins and highlights in green. If incorrect, it highlights red. On the right hand side there are audio samples to assist the student if needed.</p>",
 					"instructionsText": "Listen to the speakers and select the correct adjective of nationality.",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
-					"phrases": [
-						"Female : Je suis [marocain|*marocaine|africain|africaine].",
-						"Female : Je suis [américain|américaine|mexicain|*mexicaine].",
-						"Male : Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
-						"Female: Je suis [français|*française|anglais /anglaise].",
-						"Male: Je suis [*chinois|chinoise|gallois|galloise].",
-						"Female : Je suis [anglais|anglaise|sénégalais|*sénégalaise]."
-					],
-					"audio": [
-						"sounds/fr/je suis marocaine.mp3",
-						"sounds/fr/je suis mexicaine.mp3",
-						"sounds/fr/je suis canadien.mp3",
-						"sounds/fr/je suis française.mp3",
-						"sounds/fr/je suis chinois.mp3",
-						"sounds/fr/je suis sénégalaise.mp3"
+					"cheatText": "Show answers",
+					"items": [
+						{
+							"text": "Je suis [marocain|*marocaine|africain|africaine].",
+							"audio": "sounds/fr/je suis marocaine.mp3"
+						},
+						{
+							"text": "Je suis [américain|américaine|mexicain|*mexicaine].",
+							"audio": "sounds/fr/je suis mexicaine.mp3"
+						},
+						{
+							"text": "Je suis [*canadien|canadienne|ghanéen|ghanéenne].",
+							"audio": "sounds/fr/je suis canadien.mp3"
+						},
+						{
+							"text": "Je suis [français|*française|anglais|anglaise].",
+							"audio": "sounds/fr/je suis française.mp3"
+						},
+						{
+							"text": "Je suis [*chinois|chinoise|gallois|galloise].",
+							"audio": "sounds/fr/je suis chinois.mp3"
+						},
+						{
+							"text": "Je suis [anglais|anglaise|sénégalais|*sénégalaise].",
+							"audio": "sounds/fr/je suis sénégalaise.mp3"
+						}
 					],
 					"titleText": "DropDowns"
 				}
@@ -1668,7 +1612,7 @@
 					"instructionsText": "Supply the feminine form of the adjectives and nouns listed below. If the forms are different, compare the Pronunciation Write the feminine form in the empty cells, then click the check button.",
 					"header": [
 						"Masculine",
-						"feminine"
+						"Feminine"
 					],
 					"phrases": [
 						[
@@ -1753,7 +1697,7 @@
 						],
 						[
 							"pharmacien",
-							"pharmacienne"
+							"[pharmacienne]"
 						]
 					],
 					"titleText": "AnswerTable"
@@ -1761,10 +1705,10 @@
 			}
 		],
 		"htmlContent": "<p>This <b>Group</b> component is for grouping a number of other components together. I have generally used it for grouping Exercises in the real learning objects.</p>",
-		"id": "group1",
+		"id": "group4",
 		"titleText": "Group"
 	},
-	"group4": {
+	"group5": {
 		"component": "Group",
 		"content": [
 			{
@@ -1776,7 +1720,7 @@
 					"instructionsText": "You will hear words containing on / om or oi or h as described in the pronunciation section. Drop each word into the boxes below as you hear it.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "table",
 					"words": [
 						"moi",
@@ -1811,7 +1755,7 @@
 					"id": "wordsIntoSlots2",
 					"instructionsText": "Match the questions and answers",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "questions-answers",
 					"questions": [
 						"Salut les enfants ! Tout va bien ?",
@@ -1841,7 +1785,7 @@
 					"id": "picturesAndWords1",
 					"instructionsText": "Match the pictures and words",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "pictures-answers",
 					"pictures": [
 						"images/memory-rooms/bathroom.jpg",
@@ -1891,28 +1835,38 @@
 			{
 				"phrases3": {
 					"blanksType": "phrases",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"component": "Blanks",
 					"congratulationsText": "Very good!",
 					"htmlContent": "<p>The <b>'blanksType': 'phrases'</b> configuration of the <b>Blanks</b> component, uses the words to make tiles which can be dropped into the set of phrases. The set of phrases contains square brackets to show where the words must be dropped, the word is hidden in the phrase. On the right hand side there are audio samples to assist the student if needed. Note: the blank spaces are all the same width even for small words, so they don't give an extra clue!</p><p>After two mistakes, help and cheat options are revealled.</p>",
 					"id": "phrases3",
 					"instructionsText": "Drag the words to fill in the gaps.",
 					"showHintsText": "Show hints when moving",
-					"phrases": [
-						"Bonjour les [enfants]. Comment vous [appelez]-vous ?",
-						"Bonjour Madame ! Je m' [appelle] Annie.",
-						"Et [moi], je m'appelle David.",
-						"D'accord. Très bien !",
-						"Merci Madame ! Bonne journée !",
-						"Au [revoir] les enfants !  Bonne journée !"
-					],
-					"audio": [
-						"sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3",
-						"sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3",
-						"sounds/fr/Et moi, je m'appelle David.mp3",
-						"sounds/fr/D'accord. Très bien !.mp3",
-						"sounds/fr/Merci Madame ! Bonne journée !.mp3",
-						"sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+					"items": [
+						{
+							"text": "Bonjour les [enfants]. Comment vous [appelez]-vous ?",
+							"audio": "sounds/fr/Bonjour les enfants. Comment vous appelez-vous.mp3"
+						},
+						{
+							"text": "Bonjour Madame ! Je m' [appelle] Annie.",
+							"audio": "sounds/fr/Bonjour Madame ! Je m' appelle Annie.mp3"
+						},
+						{
+							"text": "Et [moi], je m'appelle David.",
+							"audio": "sounds/fr/Et moi, je m'appelle David.mp3"
+						},
+						{
+							"text": "D'accord. Très bien !",
+							"audio": "sounds/fr/D'accord. Très bien !.mp3"
+						},
+						{
+							"text": "Merci Madame ! Bonne journée !",
+							"audio": "sounds/fr/Merci Madame ! Bonne journée !.mp3"
+						},
+						{
+							"text": "Au [revoir] les enfants !  Bonne journée !",
+							"audio": "sounds/fr/Au revoir les enfants !  Bonne journée !.mp3"
+						}
 					],
 					"titleText": "Blanks blanksType='phrases'"
 				}
@@ -1926,7 +1880,7 @@
 					"instructionsTextHTML": "You will hear a series of words containing either the sound <b>u</b> or the sound <b>ou</b>. Drag the words below into the correct box as you hear them.",
 					"listenDescriptionText": "Speech",
 					"showHintsText": "Show hints when moving",
-					"cheatText": "Cheat",
+					"cheatText": "Show answer",
 					"blanksType": "group-table",
 					"header": [
 						"u",
@@ -2001,7 +1955,7 @@
 				}
 			}
 		],
-		"id": "group4",
+		"id": "group5",
 		"titleText": "Blanks"
 	},
 	"custom2": {
@@ -2009,27 +1963,112 @@
 		"id": "L13ASummersDay",
 		"titleText": "A summer's day"
 	},
+	"RQConfig": {
+		"component": "RadioQuiz",
+		"congratulationsText": "Well done!",
+		"id": "L13SummersDayRadioQuiz",
+		"options": [
+			"Vrai",
+			"Faux"
+		],
+		"phrases": [
+			[
+				"Véronique se lève vers 7 heures le week-end.",
+				1,
+				"Véronique se lève vers 6 heures le week-end.",
+				""
+			],
+			[
+				"Elle se promène en ville.",
+				1,
+				"Elle se promène dans le village.",
+				""
+			],
+			[
+				"Elle aime être dehors quand il fait beau.",
+				0,
+				"",
+				""
+			],
+			[
+				"Après sa promenade, Véronique prend un bain.",
+				1,
+				"Elle prend une douche rapide.",
+				""
+			],
+			[
+				"Elle prend un bol de yaourt.",
+				1,
+				"Elle prend un bol de céréales.",
+				""
+			],
+			[
+				"Elle boit du café-crème.",
+				0,
+				"",
+				""
+			],
+			[
+				"Dans le jardin il y a deux arbres.",
+				1,
+				"Dans le jardin il y a trois arbres.",
+				""
+			],
+			[
+				"Véronique passe une heure dans le jardin.",
+				1,
+				"Véronique passe la matinée entière dans le jardin.",
+				""
+			],
+			[
+				"Elle passe l'après-midi avec ses parents.",
+				1,
+				"Elle passe l'après-midi avec ses amis.",
+				""
+			],
+			[
+				"Parfois, ils vont en ville.",
+				0,
+				"",
+				""
+			],
+			[
+				"Elle dîne dans la salle à manger.",
+				1,
+				"Elle dîne dans le jardin ou sur le balcon.",
+				""
+			],
+			[
+				"Le soir, elle se détend.",
+				0,
+				"",
+				""
+			]
+		],
+		"titleText": "RadioQuiz TEST!",
+		"menuText": "RQT"
+	},
 	"connectFour1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_ConnectFour",
 		"congratulationsText": "Congratulations!",
 		"htmlContentXXX": "<p>Another example of the <b>MemoryMatchGame</b> component, this time showing 12 pairs from the stock pairs.</p>",
 		"id": "ConnectFour1",
 		"instructionsText": "Simple Connect Four",
 		"showHintsText": "Show hints",
-		"titleText": "ConnectFour"
+		"titleText": "C4"
 	},
 	"mockney1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_Mockney",
 		"congratulationsText": "Congratulations!",
 		"id": "Mockney1",
 		"instructionsText": "Type text to translate to mockney",
 		"showHintsText": "Show hints",
-		"titleText": "Mockney"
+		"titleText": "M"
 	},
 	"crossword1": {
-		"cheatText": "Cheat",
+		"cheatText": "Show answer",
 		"component": "HIDE_CrossWord",
 		"congratulationsText": "Well done!",
 		"htmlContent": "<p>The <b>CrossWord</b> component is very experimental and incomplete.",
@@ -2078,6 +2117,30 @@
 			]
 		],
 		"showHintsText": "Show hints",
-		"titleText": "Shops Crossword"
+		"titleText": "Crossword"
+	},
+	"sortable1": {
+		"component": "Sortable",
+		"id": "sortable1",
+		"titleText": "Sortable",
+		"proinstructionsTextmpt": "Put the sentences in a natural order to form a short dialogue.",
+		"shuffleOnLoad": true,
+		"phrases": [
+			[
+				"grenouille",
+				"frog",
+				"sounds/fr/grenouille.mp3"
+			],
+			[
+				"chat",
+				"cat",
+				"sounds/fr/chat.mp3"
+			],
+			[
+				"chien",
+				"dog",
+				"sounds/fr/chien.mp3"
+			]
+		]
 	}
 }

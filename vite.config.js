@@ -1,7 +1,9 @@
 import { createLogger, defineConfig } from 'vite';
+import fs from 'fs';
+import path from 'path';
 import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-// https://vite.dev/config/
 
 const logger = createLogger();
 const loggerWarn = logger.warn;
@@ -16,12 +18,14 @@ export default defineConfig(({ command }) => ({
 	assetsInclude: [
 		'**/*.mp3',
 		'**/*.jpg',
-		'**/*.svg'
+		'**/*.otf',
+		'**/*.svg',
+		'**/*.ttf'
 	],
 	base: command === 'build' ? `./` : `/projects/richard/`,
 	build: {
 		assetsDir: "src",
-		emptyOutDir: false,
+		emptyOutDir: true,
 		rollupOptions: {
 			output: {
 				assetFileNames: `src/[name].[ext]`,
@@ -32,7 +36,28 @@ export default defineConfig(({ command }) => ({
 	},
 	customLogger: logger,
 	plugins: [
+		{
+			buildStart() {
+				const src = path.resolve('dist/index.html');
+				const backup = path.resolve('.vite-index-backup.html');
+				if (fs.existsSync(src)) {
+					fs.copyFileSync(src, backup);
+					console.log('✅ Backed up dist/index.html');
+				}
+			},
+			closeBundle() {
+				const dest = path.resolve('dist/index.html');
+				const backup = path.resolve('.vite-index-backup.html');
+				if (fs.existsSync(backup)) {
+					fs.copyFileSync(backup, dest);
+					fs.unlinkSync(backup);
+					console.log('✅ Restored custom dist/index.html');
+				}
+			},
+			name: 'preserve-dist-index'
+		},
 		react(),
+		tailwindcss(),
 		viteStaticCopy({
 			targets: [
 				{
@@ -54,8 +79,17 @@ export default defineConfig(({ command }) => ({
 				{
 					dest: '/images',
 					src: './public/images'
+				},
+				{
+					dest: '/fonts',
+					src: './public/fonts'
 				}
 			]
 		})
-	]
+	],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./src"),
+		},
+	}
 }));

@@ -1,7 +1,11 @@
 import './WordParts.scss';
 import {
 	AudioClip,
+	IconButton,
+	Info,
 } from '..';
+import { Button } from "@/components/ui/button";
+import DOMPurify from "dompurify";
 import React from 'react';
 import {resolveAsset} from '../../utility';
 
@@ -17,10 +21,10 @@ export class WordParts extends React.PureComponent {
 			failCount: 0,
 		});
 
-		this.autoSolve = this.autoSolve.bind(this);
-		this.handlePartWordClick = this.handlePartWordClick.bind(this);
-		this.handlePartWordError = this.handlePartWordError.bind(this);
-		this.handleReset = this.handleReset.bind(this);
+		// this.autoSolve = this.autoSolve.bind(this);
+		// this.handlePartWordClick = this.handlePartWordClick.bind(this);
+		// this.handlePartWordError = this.handlePartWordError.bind(this);
+		// this.handleReset = this.handleReset.bind(this);
 
 	}
 
@@ -33,14 +37,15 @@ export class WordParts extends React.PureComponent {
 
 		if (nPlaced < this.nToSolve) {
 			const targets = document.querySelectorAll(`#${id} span.target`);
-			const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+			// const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 
-			wofAudio.play();
+			// wofAudio.play();
 
 			for (let i = 0; i < targets.length; i++) {
 				targets[i].classList.add('animate');
 			}
 			this.setState({
+				complete: true,
 				nPlaced: this.nToSolve
 			});
 
@@ -48,25 +53,26 @@ export class WordParts extends React.PureComponent {
 	};
 
 	handlePartWordClick = (e) => {
-		const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
+		// const tadaAudio = new Audio(resolveAsset('/sounds/tada.mp3'));
 
-		const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
+		// const wofAudio = new Audio(resolveAsset('/sounds/wheel-of-fortune.mp3'));
 		// console.log("handlePartWordClick");
-		wofAudio.play();
-		const {
-			congratulationsText,
-		} = this.state;
+		// wofAudio.play();
+		// const {
+		// 	congratulationsText,
+		// } = this.state;
 		let {
 			nPlaced = 0,
 		} = this.state;
+		if (e.target.classList.contains("animate") || e.target.classList.contains("error")) return;
 		e.target.classList.add("animate");
 		nPlaced++;
 		if (nPlaced === this.nToSolve){
 
 			// Last piece of the jigsaw placed
-			const { showDialog } = this.props;
-			showDialog(congratulationsText);
-			tadaAudio.play();
+			// const { showDialog } = this.props;
+			// showDialog(congratulationsText);
+			// tadaAudio.play();
 			this.setState({
 				complete: true,
 			});
@@ -78,9 +84,9 @@ export class WordParts extends React.PureComponent {
 
 	handlePartWordError = (e) => {
 		// console.log("handlePartWordError");
-		const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
+		// const errorAudio = new Audio(resolveAsset('/sounds/error.mp3')); // error);
 		let { failCount } = this.state;
-		errorAudio.play();
+		// errorAudio.play();
 		e.target.classList.add("error");
 
 		failCount++;
@@ -97,43 +103,85 @@ export class WordParts extends React.PureComponent {
 			span.classList.remove('error');
 		});
 		this.setState({
+			complete: false,
+			failCount: 0,
 			nPlaced: 0,
-
 		});
 	};
 
 	render = () => {
 		const {
-			audio,
+			config
+		} = this.props;
+		const {
+			informationText,
+			informationTextHTML,
+		} = config;
+		const {
 			cheatText,
+			complete = false,
 			failCount = 0,
 			htmlContent,
 			id = [],
-			instructionsText,
-			instructionsTextHTML,
+			items,
 			nPlaced = 0,
-			phrases,
-			// showHintsText,
 		} = this.state;
 
-		const phraseList = new Array;
+		const phraseList = [];
 		let nToSolve = 0;
 
 		const reg = /(\[.*?\])/;
-		for (let i = 0; i < phrases.length; i++) {
+		for (let i = 0; i < items.length; i++) {
 
-			const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
-			const phrase = new Array;
+			// const phraseSplit = phrases[i].replace(/ /g, '\u00a0\u00a0').split(reg);
+			const phraseSplit = items[i].text.split(reg);
+
+			const phrase = [];
 			for (let j = 0; j < phraseSplit.length; j++) {
+				const part = phraseSplit[j];
 
-				if (phraseSplit[j][0] === '[') {
-					// span it as a target!
-					const cleanedPhraseSplit = phraseSplit[j].replace('[', '').replace(']', '');
+				if (!part) continue;
+
+				if (part[0] === '[') {
+					// target word
+					const cleaned = part.slice(1, -1);
 					nToSolve++;
-					phrase.push(<span className={`target`} onClick={this.handlePartWordClick} key={`${id}-phraseSpan${i}-${j}`}>{cleanedPhraseSplit}</span>);
-				}
-				else if(phraseSplit[j].length){
-					phrase.push(<span onClick={this.handlePartWordError} key={`${id}-phraseSpan${i}-${j}`}>{phraseSplit[j]}</span>);
+					phrase.push(
+						<span
+							className="target"
+							onClick={this.handlePartWordClick}
+							key={`${id}-phraseSpan${i}-${j}`}
+						>
+							{cleaned}
+						</span>
+					);
+				} else {
+					// split normal text into words + spaces
+					const tokens = part.split(/(\s+)/);
+					tokens.forEach((token, k) => {
+						if (!token) return;
+
+						if (token.trim() === "") {
+							// spacing span
+							phrase.push(
+								<span
+									className="word-space"
+									key={`${id}-phraseSpace${i}-${j}-${k}`}
+								>
+									{" "}
+								</span>
+							);
+						} else {
+							phrase.push(
+								<span
+									onClick={this.handlePartWordError}
+									key={`${id}-phraseText${i}-${j}-${k}`}
+								>
+									{token}
+								</span>
+							);
+						}
+					});
 				}
 			}
 
@@ -142,10 +190,10 @@ export class WordParts extends React.PureComponent {
 			);
 		}
 
-		const rows = new Array();
-		for (let i = 0; i < phrases.length; i++){
-			const phrase = phrases[i];
-			const cells = new Array();
+		const rows = [];
+		for (let i = 0; i < items.length; i++){
+			const phrase = items[i].text;
+			const cells = [];
 			if (phrase[0] === '' && phrase.length === 1) {
 				// blank row
 				rows.push(
@@ -159,11 +207,12 @@ export class WordParts extends React.PureComponent {
 						{phraseList[i]}
 					</td>
 				);
-				const soundFile = resolveAsset(`${audio[i]}`);
+				// const soundFile = resolveAsset(`${audio[i]}`);
+				const soundFile = resolveAsset(`${items[i].audio}`);
 
 				cells.push(
 					<td key={`row${i}cell2`}>
-						<AudioClip className={`compact`} soundFile={soundFile} />
+						<AudioClip className={`super-compact-speaker`} soundFile={soundFile} />
 					</td>
 				);
 
@@ -181,22 +230,20 @@ export class WordParts extends React.PureComponent {
 				id={`${id ? id : ''}`}
 				key={`${id}WordParts`}
 			>
-				<button className={`reset`} onClick={this.handleReset}>Reset</button>
-				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: htmlContent }} /> : null}
-				{instructionsText ? <p className={`instructions`}>{instructionsText}</p> : null}
-				{instructionsTextHTML ? <p className={`instructions`} dangerouslySetInnerHTML={{ __html: instructionsTextHTML }} /> : null}
+				<Info className={`text`} id={`info-${id}`} informationText={informationText} informationTextHTML={informationTextHTML}/>
+				{htmlContent ? <div className={`html-content`} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }} /> : null}
 
-
-				<div className='help'>
-					{/* <label className={`hidden-help ${failCount >= 2 ? 'show' : ''}`}>{showHintsText}: <input type='checkbox' onChange={this.handleHints} /></label> */}
-					<button className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve}>{cheatText}</button>&nbsp;
-				</div>
 
 				<table>
 					<tbody>
 						{rows}
 					</tbody>
 				</table>
+
+				<div className='help'>
+					<IconButton className={`hidden-help ${nPlaced >= 1 || failCount >= 1 || complete ? 'show' : ''}`} onClick={this.handleReset} theme={`reset`}>Reset</IconButton>
+					<IconButton className={`hidden-help ${failCount >= 2 ? 'show' : ''}`} disabled={nPlaced === this.nToSolve} onClick={this.autoSolve} theme={`eye`}>{cheatText}</IconButton>
+				</div>
 
 				<p>{`${nPlaced} correct out of ${nToSolve}`}</p>
 			</div>
