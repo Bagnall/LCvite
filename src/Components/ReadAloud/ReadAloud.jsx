@@ -22,7 +22,9 @@ export class ReadAloud extends React.PureComponent {
 		this.comparisonRef = React.createRef();
 		this.resultRef = React.createRef();
 
-		const { SpchRecognition, SpchGrammarList } = this.initialiseSpeechRecognition();
+		const speechSupport = this.initialiseSpeechRecognition();
+		const SpchRecognition = speechSupport?.SpchRecognition;
+		const SpchGrammarList = speechSupport?.SpchGrammarList;
 		const _this = this;
 		let cannotRun = '';
 		let recognition = null;
@@ -52,7 +54,11 @@ export class ReadAloud extends React.PureComponent {
 
 				recognition.onerror = _this.handleError;
 
-				navigator.getUserMedia({ audio: true }, () => { }, (error) => {
+				const getUserMedia =
+					navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+				if (!getUserMedia) {
+					cannotRun = 'Microphone access is not available in this browser';
+				} else getUserMedia.call(navigator, { audio: true }, () => { }, (error) => {
 					cannotRun = error;
 					if (error === 'NO_DEVICES_FOUND') {
 						cannotRun = 'You need an enabled microphone to complete this exercise';// NO_DEVICES_FOUND (no microphone or microphone disabled)
@@ -116,9 +122,7 @@ export class ReadAloud extends React.PureComponent {
 		const SpchRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 		const SpchGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
 
-		if (!SpchRecognition || !SpchGrammarList) {
-			return true; // Fallback or error indicator
-		}
+		if (!SpchRecognition || !SpchGrammarList) return null;
 
 		return {
 			SpchGrammarList,

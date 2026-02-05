@@ -32,7 +32,6 @@ export * from './Mockney';
 export * from './Monologue';
 export * from './PhraseTable';
 export * from './RadioQuiz';
-export * from './RadioTest';
 export * from './ReadAloud';
 export * from './IconButton';
 export * from './Section';

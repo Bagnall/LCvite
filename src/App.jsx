@@ -23,7 +23,6 @@ import {
 	Monologue,
 	PhraseTable,
 	RadioQuiz,
-	RadioTest,
 	ReadAloud,
 	Section,
 	Social,
@@ -541,14 +540,6 @@ export default class App extends React.Component {
 			case "RadioQuiz":
 				return (
 					<RadioQuiz
-						config={value}
-						logError={this.logError}
-						showDialog={this.showDialog}
-					/>
-				);
-			case "RadioTest":
-				return (
-					<RadioTest
 						config={value}
 						logError={this.logError}
 						showDialog={this.showDialog}
@@ -1202,28 +1193,6 @@ export default class App extends React.Component {
 						titleHTML={titleTextHTML}
 					>
 						<RadioQuiz
-							config={value}
-							logError={this.logError}
-							showDialog={this.showDialog}
-						/>
-					</AccordionArticle>
-				);
-				break;
-			}
-			case "RadioTest": {
-				articles.push(
-					<AccordionArticle
-						config={value}
-						id={`${compoundID}-Accordion`}
-						key={`${compoundID}-Accordion`}
-						ref={(AccordionArticle) => {
-							window.refs.push(AccordionArticle);
-						}}
-						target={id}
-						title={titleText}
-						titleHTML={titleTextHTML}
-					>
-						<RadioTest
 							config={value}
 							logError={this.logError}
 							showDialog={this.showDialog}
