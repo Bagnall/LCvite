@@ -4,13 +4,11 @@ import React from 'react';
 export class LandingPage extends React.Component{
 
 	render = () => {
-		const today = new Date();
-		const strYear = today.getFullYear();
 		const {
 			languageCode,
 			learningObjects = []
 		} = this.props;
-		console.log("LandingPage learningObjects", learningObjects.length);
+		// console.log("LandingPage learningObjects", learningObjects.length);
 		const { href } = window.location;
 		const [baseURL] = href.split('?');
 		if (learningObjects.length > 0) {
@@ -27,7 +25,6 @@ export class LandingPage extends React.Component{
 						>
 							<h1>{learningObject.title}</h1>
 						</a>
-						{/* {index <= 14 ? index + 1 : 'Demo'}</a> */}
 					</li>
 				);
 			});

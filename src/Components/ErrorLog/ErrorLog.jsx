@@ -7,7 +7,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 
 export class ErrorLog extends React.Component {
 

@@ -7,11 +7,11 @@ import {
 	highlightTextDiff,
 	resolveAsset,
 } from '../../utility';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import DOMPurify from "dompurify";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/Components/ui/input";
 import React from 'react';
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/Components/ui/textarea";
 export class Monologue extends React.PureComponent {
 	constructor(props) {
 		super(props);

@@ -16,7 +16,7 @@ import {
 	// TableHead,
 	// TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 import DOMPurify from "dompurify";
 import React from 'react';
 import {

@@ -4,7 +4,7 @@ import {
 	IconButton,
 	Info,
 } from '..';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import DOMPurify from "dompurify";
 import React from 'react';
 import {resolveAsset} from '../../utility';

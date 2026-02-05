@@ -8,7 +8,7 @@ import {
 	IconButton,
 	Piece,
 } from "../../Components";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import DOMPurify from "dompurify";
 import {
 	mouseRelativeTo,

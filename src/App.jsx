@@ -43,7 +43,7 @@ import{
 	TabsContent,
 	TabsList,
 	TabsTrigger,
-} from "@/components/ui/tabs";
+} from "@/Components/ui/tabs";
 
 import { AllCustomComponentsFR } from "./Components/CustomComponents_FR/index.js";
 import { AllCustomComponentsSP } from "./Components/CustomComponents_SP/index.js";
@@ -101,21 +101,34 @@ export default class App extends React.Component {
 		const urlParams = new URLSearchParams(queryString);
 
 		const { languageCode } = this.state;
-		const learningObjectConfigFile = urlParams.get("lo");
 
-		let configPromise;
+		// lo is a 1-based "ID" in your URLs (e.g. ?lo=1). -1 means landing page.
+		const loParamRaw = urlParams.get("lo");
+		const loId = loParamRaw !== null ? parseInt(loParamRaw, 10) : NaN;
+		const isValidLoId = Number.isInteger(loId) && loId >= 1;
+
+		const currentLearningObject = isValidLoId ? loId : -1;
+
+		// Always load the index so the menu/landing page can render
 		if (languageCode) {
-			this.loadIndex(learningObjectConfigFile, languageCode);
+			this.loadIndex(currentLearningObject, languageCode);
 		}
-		if (learningObjectConfigFile && languageCode) {
+
+		// Only load a config when we have a valid LO id
+		let configPromise;
+		if (isValidLoId && languageCode) {
 			configPromise = this.loadConfig(
-				`./src/learningObjectConfigurations/${languageCode}/${learningObjectConfigFile}.json`,
-				learningObjectConfigFile
+				`./src/learningObjectConfigurations/${languageCode}/${loId}.json`,
+				loId
 			);
 			this.initialiseSpecialAnchors();
 
 			configPromise.then(this.initialiseSynth);
+		} else {
+			// No valid lo: ensure we're in landing page mode (and clear config)
+			this.setState({ currentLearningObject: -1, config: null });
 		}
+
 		if (sessionStorage.getItem(`dark`)) {
 			const dark = JSON.parse(sessionStorage.getItem(`dark`));
 			if (dark) this.setDark(true);
@@ -314,7 +327,7 @@ export default class App extends React.Component {
 		});
 	};
 
-	loadIndex = (LO, languageCode) => {
+	loadIndex = (currentLearningObject, languageCode) => {
 		const headers = new Headers();
 		headers.append("Content-Type", "application/json");
 
@@ -324,27 +337,22 @@ export default class App extends React.Component {
 			redirect: "follow",
 		};
 
-		let currentLearningObject;
-		if (LO !== undefined && !isNaN(LO)) {
-			currentLearningObject = LO - 1;
-		} else {
-			if (sessionStorage.getItem("currentLearningObject"))
-				currentLearningObject = parseInt(
-					sessionStorage.getItem("currentLearningObject")
-				);
-		}
 		fetch(`./src/index-${languageCode}.json`, requestOptions)
 			.then(handleResponse)
 			.then((res) => {
 				const { learningObjects, title: siteTitle } = res;
+
+				// Translate LO "id" (1-based) to array index (0-based)
+				const loIndex = currentLearningObject >= 1 ? currentLearningObject - 1 : -1;
+
 				let title, titleShort;
-				if (learningObjects[currentLearningObject]) {
-					({ title, titleShort = '' } = learningObjects[currentLearningObject]);
+				if (loIndex >= 0 && learningObjects[loIndex]) {
+					({ title, titleShort = '' } = learningObjects[loIndex]);
 					document.title = title;
 				}
 
 				this.setState({
-					currentLearningObject: currentLearningObject,
+					currentLearningObject: currentLearningObject, // store ID or -1
 					learningObjects: learningObjects,
 					siteTitle: siteTitle,
 					title: title,
@@ -638,9 +646,10 @@ export default class App extends React.Component {
 		}
 
 		let title, titleShort;
-		if (learningObjects[currentLearningObject]) {
+		const loIndex = currentLearningObject >= 1 ? currentLearningObject - 1 : -1;
+		if (loIndex >= 0 && learningObjects[loIndex]) {
 			({ title = "", titleShort = '' } =
-        learningObjects[currentLearningObject - 1] || {});
+        learningObjects[loIndex] || {});
 		}
 
 		let targetLanguageCode = "";

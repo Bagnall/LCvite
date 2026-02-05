@@ -1,7 +1,7 @@
 import "./WordGrid.scss";
 // import "../../styles/variables.module.scss";
 import React, { PureComponent } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import colours from "../../styles/_colours.module.scss";
 import DOMPurify from "dompurify";
 import { IconButton } from "..";

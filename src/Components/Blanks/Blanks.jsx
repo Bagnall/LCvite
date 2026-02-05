@@ -16,11 +16,11 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 import DOMPurify from "dompurify";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/Components/ui/label";
 import React from 'react';
-import { Switch } from "@/components/ui/switch";
+import { Switch } from "@/Components/ui/switch";
 
 export class Blanks extends React.Component {
 

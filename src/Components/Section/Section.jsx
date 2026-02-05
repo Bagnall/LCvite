@@ -1,5 +1,5 @@
 // src/Components/Accordion/Section.jsx
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import {
 	Info,
 	TopButton

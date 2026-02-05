@@ -4,7 +4,7 @@ import {
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/Components/ui/navigation-menu";
 import { handleSpecialLinkClick } from "../../utility.js";
 import { IconButton } from "..";
 import React from "react";

@@ -10,13 +10,13 @@ import {
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
+} from "@/Components/ui/select";
 import {
 	Table,
 	TableBody,
 	TableCell,
 	TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 import DOMPurify from "dompurify";
 import React from "react";
 import { resolveAsset } from "../../utility";
