@@ -165,14 +165,14 @@ export class AudioClip extends React.PureComponent {
 				);
 			} else {
 				return (
-					<audio
+					<div className={`audio-clip`}><audio
 						className={`${className ? className : ''}`}
 						controls
 						id={id}
 						key={id}
 						onPlay={(e) => this.notePlaying(e, true)}
 						ref={this.audioRef}
-					><source src={soundFile} /></audio>
+					><source src={soundFile} /></audio></div>
 				);
 			}
 		}

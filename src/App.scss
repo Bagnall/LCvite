@@ -455,6 +455,16 @@ hr {
 		font-size: 0.8rem;
 	}
 
+	.audio-clip {
+		margin: 1.4rem 0;
+		audio {
+			border: 1px solid #ccc;
+			border-radius: 0.6rem;
+			background: rgb(241, 241, 241); //#f9f9f9;
+			max-height: 40px;
+		}
+	}
+
 	// span.audio-link,
 	a {
 		color: blue;
