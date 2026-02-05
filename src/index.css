@@ -53,7 +53,7 @@
 		/* shadcn */
 
 		--radius: 0.625rem;
-		--background: oklch(1 0 0);
+		--background: #fdf7e6; /* oklch(1 0 0); */
 		--foreground: oklch(0.145 0 0);
 		--card: oklch(1 0 0);
 		--card-foreground: oklch(0.145 0 0);
@@ -125,7 +125,7 @@
 
 		/* shadcn */
 
-		--background: oklch(0.145 0 0);
+		--background: #0f583b;/*oklch(0.145 0 0);*/
 		--foreground: oklch(0.985 0 0);
 		--card: oklch(0.205 0 0);
 		--card-foreground: oklch(0.985 0 0);
@@ -189,7 +189,9 @@
 	}
 
 	body {
-		@apply bg-surface-base text-text-primary font-sans antialiased;
+		/* @apply bg-surface-base text-text-primary font-sans antialiased; */
+		@apply bg-background text-foreground;
+
 	}
 }
 

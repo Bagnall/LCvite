@@ -35,6 +35,8 @@
 	display: flex;
 }
 body {
+	// @apply bg-background text-foreground;
+
 	font-family: "OpenSans Regular", sans-serif;
 	font-size: 16px;
 	// color: black;
@@ -43,11 +45,11 @@ body {
 	// background: $body-back;
 	// background: green;
 }
-.dark {
-	body {
-		background: #0f583b;
-	}
-}
+// .dark {
+// 	body {
+// 		background: #0f583b;
+// 	}
+// }
 h1 {
 	font-family: "Feijoa Bold", times-roman;
 }

@@ -658,13 +658,15 @@ export default class App extends React.Component {
 			this.targetLanguageCode = targetLanguageCode;
 		}
 
+		const showLandingPage = learningObjects.length > 0 && currentLearningObject === -1;
+
+
 		return (
 			<>
 				<div
 					className={`app ${this.targetLanguageCode ? this.targetLanguageCode : ""}`}
 					key={`languageDiv`}
 				>
-
 
 					<span
 						aria-hidden="true"
@@ -749,45 +751,45 @@ export default class App extends React.Component {
 									languageCode={languageCode}
 									learningObjects={learningObjects}
 								/>
-
-								<div className={`intro`} name={`intro`}>
-									<a
-										className={`special-anchor-target`}
-										name={`special-anchor-intro`}
-										id={`special-anchor-intro`}
-									>
-										<h2>Introduction</h2>
-									</a>
-									<div id='imagePlaceholder'/>
-									{intro ? (
-										<p className={`intro`}>{intro}</p>
-									) : null}
-									{introHTML ? (
-										<p
-											className={`intro`}
-											dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(introHTML) }}
-										/>
-									) : null}
-									{informationHTML ? (
-										<Info
-											id={currentLearningObject}
-											informationTextHTML={informationHTML}
-										/>
-									) : null}
-								</div>
+								{showLandingPage ? null :
+									<div className={`intro`} name={`intro`}>
+										<a
+											className={`special-anchor-target`}
+											name={`special-anchor-intro`}
+											id={`special-anchor-intro`}
+										>
+											<h2>Introduction</h2>
+										</a>
+										<div id='imagePlaceholder' />
+										{intro ? (
+											<p className={`intro`}>{intro}</p>
+										) : null}
+										{introHTML ? (
+											<p
+												className={`intro`}
+												dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(introHTML) }}
+											/>
+										) : null}
+										{informationHTML ? (
+											<Info
+												id={currentLearningObject}
+												informationTextHTML={informationHTML}
+											/>
+										) : null}
+									</div>
+								}
 
 								{currentLearningObject !== -1 ? (
 									<Accordion id={`accordion1`} key={`accordion1`}>
 										{articles}
 									</Accordion>
 								) : null}
-								{learningObjects.length > 0 &&
-                currentLearningObject === -1 ? (
-										<LandingPage
-											languageCode={languageCode}
-											learningObjects={learningObjects}
-										/>
-									) : null}
+								{learningObjects.length > 0 && currentLearningObject === -1 ? (
+									<LandingPage
+										languageCode={languageCode}
+										learningObjects={learningObjects}
+									/>
+								) : null}
 							</div>
 						</>
 					) : (

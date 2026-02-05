@@ -20,7 +20,6 @@ export class LandingPage extends React.Component{
 						key={`card-${index}`}>
 						<a
 							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
-							onClick={() => this.selectLearningObject(index)}
 							target={`_blank`}
 						>
 							<h1>{learningObject.title}</h1>
