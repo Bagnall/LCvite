@@ -202,17 +202,18 @@ export class WordParts extends React.PureComponent {
 					</tr>
 				);
 			} else {
-				cells.push(
-					<td key={`row${i}cell1`}>
-						{phraseList[i]}
-					</td>
-				);
-				// const soundFile = resolveAsset(`${audio[i]}`);
+
 				const soundFile = resolveAsset(`${items[i].audio}`);
 
 				cells.push(
 					<td key={`row${i}cell2`}>
 						<AudioClip className={`super-compact-speaker`} soundFile={soundFile} />
+					</td>
+				);
+
+				cells.push(
+					<td key={`row${i}cell1`}>
+						{phraseList[i]}
 					</td>
 				);
 
