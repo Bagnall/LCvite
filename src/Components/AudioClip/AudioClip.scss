@@ -1,20 +1,22 @@
-// AudioClip.scss
 @use "../../styles/media-queries" as *;
 @use "../../styles/mixins.module" as *;
 
 :root {
 	--compact-dimension: 27px;
 }
+
 .audio-clip {
 	display: flex;
 	align-items: center;
 }
+
 p > audio,
 audio.compact,
 audio.super-compact {
 	width: 200px;
-	height: var(--compact-dimension); // Half default height
+	height: var(--compact-dimension);
 	vertical-align: middle;
+
 	&.inset {
 		&.compact {
 			border-radius: calc(var(--compact-dimension) / 2);
@@ -23,47 +25,73 @@ audio.super-compact {
 		box-shadow:
 			-3px -3px 3px rgba(0, 0, 0, 0.4),
 			-3px 3px 3px rgba(0, 0, 0, 0.4),
-			3px 3px 3px rgba(2555, 255, 255, 0.4),
-			3px -3px 3px rgba(2555, 255, 255, 0.4);
+			3px 3px 3px rgba(255, 255, 255, 0.4),
+			3px -3px 3px rgba(255, 255, 255, 0.4);
 	}
 }
 
 @include respond-below(m) {
 	audio {
 		width: 200px;
-		height: var(--compact-dimension); // Half default height
+		height: var(--compact-dimension);
 		vertical-align: middle;
 	}
 }
 
+/* -------------------------
+   LINK underline progress
+   ------------------------- */
 .audio-link {
 	display: inline-block;
 	position: relative;
+	white-space: nowrap;
+	cursor: pointer;
+
 	text-decoration: none !important;
 	--progress-width: 100%;
-	white-space: nowrap;
+
 	svg {
 		display: inline-block;
 		height: 16px;
 		margin-right: -8px;
+		vertical-align: middle;
 	}
+
 	&::after {
-		// content: "";
+		content: "";
 		width: var(--progress-width);
 		height: 1px;
 		position: absolute;
 		bottom: 4px;
 		left: 0;
-		background-color: blue;
-		transition: width 0.5s;
+
+		/* Use currentColor so it works in light/dark modes */
+		background-color: currentColor;
+
+		/* Smooth updates */
+		transition: width 0.2s linear;
+
+		/* Helps with sub-pixel jitter */
+		will-change: width;
 	}
-	&.playing {
-		--progress-width: 0%;
-	}
+	// &.playing {
+	// 	--progress-width: 0%;
+
+	// 	/* Use currentColor so it works in light/dark modes */
+	// 	background-color: currentColor;
+
+	// 	/* Smooth updates */
+	// 	transition: width 0.2s linear;
+
+	// 	/* Helps with sub-pixel jitter */
+	// 	will-change: width;
+	// }
 }
 
+/* -------------------------
+   Circular button
+   ------------------------- */
 .audio-container {
-	// background-color: #f1f3f4;
 	background-color: transparent;
 	width: var(--compact-dimension);
 	height: var(--compact-dimension);
@@ -71,6 +99,7 @@ audio.super-compact {
 	z-index: 1;
 	display: block;
 	position: relative;
+
 	&.inline {
 		display: inline-block;
 		vertical-align: middle;
@@ -78,6 +107,7 @@ audio.super-compact {
 }
 
 $circle-duration: 0.2s;
+
 .circular-audio-progress {
 	.play {
 		opacity: 1;
@@ -86,33 +116,15 @@ $circle-duration: 0.2s;
 	.pause {
 		opacity: 0;
 		transition: opacity $circle-duration;
-		// Doesn't work :-(
-		// animation-name: ge;
-		// animation-duration: calc($circle-duration / 10);
-		// animation-timing-function: linear;
-		// animation-iteration-count: infinite;
 	}
+
 	&.playing {
 		.play {
 			opacity: 0;
-			transition: opacity $circle-duration;
 		}
 		.pause {
 			opacity: 1;
-			transition: opacity $circle-duration;
-			fill: linear-gradient;
 		}
-	}
-}
-
-@keyframes ge {
-	0% {
-		// fill: #ff0000;
-		fill: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(110, 255, 0, 1) 48%, rgba(0, 0, 0, 1) 48%);
-	}
-	100% {
-		// fill: #ff0000;
-		fill: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(110, 255, 0, 1) 90%, rgba(0, 0, 0, 1) 90%);
 	}
 }
 
@@ -122,6 +134,7 @@ $circle-duration: 0.2s;
 	height: var(--compact-dimension);
 	border-radius: calc(var(--compact-dimension) / 2);
 	cursor: pointer;
+
 	svg {
 		width: 100%;
 		height: 100%;
@@ -129,9 +142,7 @@ $circle-duration: 0.2s;
 }
 
 span.audio-link {
-	// color: blue;
 	cursor: pointer;
-	// text-decoration: underline;
 }
 
 $cycle: 1600ms;
@@ -141,6 +152,7 @@ $cycle: 1600ms;
 		opacity: 0;
 		transition: opacity calc($cycle / 2);
 	}
+
 	&.playing {
 		.speaker-arc {
 			transform-origin: 56% 50%;
@@ -152,15 +164,13 @@ $cycle: 1600ms;
 			transform: scale(0.5);
 			transition: opacity calc($cycle * 3);
 		}
+
 		.speaker-arc1 {
 			animation-delay: 0;
 		}
 		.speaker-arc2 {
 			animation-delay: calc($cycle / 2);
 		}
-		// .speaker-arc3 {
-		// 	animation-delay: $cycle * 2/3;
-		// }
 	}
 }
 
@@ -168,7 +178,6 @@ $cycle: 1600ms;
 	0% {
 		opacity: 0;
 		transform: scale(0.5);
-		// color: rgb(14, 231, 14);
 	}
 	10% {
 		opacity: 1;
