@@ -35,15 +35,11 @@
 	display: flex;
 }
 body {
-	// @apply bg-background text-foreground;
-
 	font-family: "OpenSans Regular", sans-serif;
 	font-size: 16px;
 	// color: black;
 	// background: #fdf7e6;
 	margin: 0;
-	// background: $body-back;
-	// background: green;
 }
 // .dark {
 // 	body {
@@ -411,14 +407,43 @@ hr {
 			margin-left: -40px;
 		}
 	}
-	#imagePlaceholder {
-		height: 300px;
-		width: 300px;
-		background: #0000ff;
-		background: linear-gradient(180deg, rgba(0, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
-		float: right;
-		margin: 0 0 1rem 1rem;
+
+	.intro-layout {
+		display: flex;
+		align-items: flex-start;
+		gap: 2vw;
+		flex-wrap: wrap;
 	}
+
+	.intro-text {
+		flex: 1 1 320px; // grows, shrinks, and has a sensible minimum
+		min-width: 220px;
+	}
+
+	#themeImage {
+		flex: 0 0 auto;
+		width: 300px;
+		height: 300px;
+		border: 1px solid gray;
+	}
+
+	/* breakpoint where you want it to drop below */
+	@media (max-width: 700px) {
+		#themeImage {
+			width: min(300px, 100%);
+			height: auto; // keep aspect ratio for SVGs
+			margin: 0 auto; // centers it
+			display: block;
+		}
+	}
+
+	// #themeImage {
+	// 	height: 300px;
+	// 	width: 300px;
+	// 	border: 1px solid gray;
+	// 	// float: right;
+	// 	margin: 0 0 1rem 2vw;
+	// }
 	.instructions,
 	.intro {
 		ul {

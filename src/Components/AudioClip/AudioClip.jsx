@@ -367,11 +367,12 @@ class LinkAudioProgress extends CircularAudioProgress {
 				ref={this.linkRef}
 				title={`${status !== 'playing' ? 'Click to play' : 'Click to pause'}`}>
 				<CircularAudioProgressAnimatedSpeakerDisplay
-					inline={true}
-					status={status}
-					progress={progress}
 					duration={duration}
 					handleClick={this.handleClick}
+					inline={true}
+					progress={progress}
+					size={20}
+					status={status}
 				/>
 				{/* Simple compact link SVG speaker icon <svg xmlns="http://www.w3.org/2000/svg"
 					width="24"

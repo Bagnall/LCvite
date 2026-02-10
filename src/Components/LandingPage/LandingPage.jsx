@@ -18,12 +18,20 @@ export class LandingPage extends React.Component{
 					<li
 						className={`card`}
 						key={`card-${index}`}>
-						<a
-							href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
-							target={`_blank`}
-						>
-							<h1>{learningObject.title}</h1>
-						</a>
+						<figure>
+							<a
+								href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
+								target={`_blank`}
+							>
+								<img src={`images/themes/LO${index + 1}.svg`} title={learningObject.title} alt={learningObject.title} />
+							</a>
+							<figcaption>						<a
+								href={`${baseURL}?lang=${languageCode}&lo=${learningObject.file}`}
+								target={`_blank`}
+							>
+								{learningObject.title}</a></figcaption>
+						</figure>
+						{/* <h1>{learningObject.title}</h1> */}
 					</li>
 				);
 			});
@@ -31,7 +39,7 @@ export class LandingPage extends React.Component{
 			return (
 				<>
 					<h1>Landing page!</h1>
-					<p>Yada yada yada.</p>
+					<p>Landing page intro.</p>
 					<ul className={`landing-page`}>
 						{cards}
 					</ul>

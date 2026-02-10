@@ -651,7 +651,7 @@ export default class App extends React.Component {
 			({ title = "", titleShort = '' } =
         learningObjects[loIndex] || {});
 		}
-
+		// console.log("currentLearningObject", currentLearningObject, `LO${currentLearningObject}`);
 		let targetLanguageCode = "";
 		if (settings) {
 			({ targetLanguageCode } = settings);
@@ -660,6 +660,7 @@ export default class App extends React.Component {
 
 		const showLandingPage = learningObjects.length > 0 && currentLearningObject === -1;
 
+		if (currentLearningObject == null) return null;
 
 		return (
 			<>
@@ -752,32 +753,38 @@ export default class App extends React.Component {
 									learningObjects={learningObjects}
 								/>
 								{showLandingPage ? null :
-									<div className={`intro`} name={`intro`}>
+									<div className="intro" name="intro">
 										<a
-											className={`special-anchor-target`}
-											name={`special-anchor-intro`}
-											id={`special-anchor-intro`}
+											className="special-anchor-target"
+											name="special-anchor-intro"
+											id="special-anchor-intro"
 										>
 											<h2>Introduction</h2>
 										</a>
-										<div id='imagePlaceholder' />
-										{intro ? (
-											<p className={`intro`}>{intro}</p>
-										) : null}
-										{introHTML ? (
-											<p
-												className={`intro`}
-												dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(introHTML) }}
+
+										<div className="intro-layout">
+											<div className="intro-text">
+												{intro ? <p className="intro">{intro}</p> : null}
+
+												{introHTML ? (
+													<p
+														className="intro"
+														dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(introHTML) }}
+													/>
+												) : null}
+
+												{informationHTML ? (
+													<Info id={currentLearningObject} informationTextHTML={informationHTML} />
+												) : null}
+											</div>
+
+											<img
+												id="themeImage"
+												src={`images/themes/LO${currentLearningObject}.svg`}
+												alt=""
 											/>
-										) : null}
-										{informationHTML ? (
-											<Info
-												id={currentLearningObject}
-												informationTextHTML={informationHTML}
-											/>
-										) : null}
-									</div>
-								}
+										</div>
+									</div>								}
 
 								{currentLearningObject !== -1 ? (
 									<Accordion id={`accordion1`} key={`accordion1`}>

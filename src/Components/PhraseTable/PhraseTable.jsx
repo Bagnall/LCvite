@@ -185,31 +185,31 @@ export class PhraseTable extends React.PureComponent {
 							theme="natural"
 							size="sm"
 							onClick={() => this.setState({ tableSort: "natural" })}
-							title={`Semantic`}
-							alt={`Semantic`}
+							title={`Semantically`}
+							alt={`Semantically`}
 
 						>
-							Semantic
+							Semantically
 						</IconButton>
 						{tableSort === "alphabetical" ?
 							<IconButton
 								theme="reverse"
 								size="sm"
 								onClick={() => this.setState({ tableSort: "reverse" })}
-								title={`Sort reverse alphabetical`}
-								alt={`Sort reverse alphabetical`}
+								title={`Sort reverse alphabetically`}
+								alt={`Sort reverse alphabetically`}
 							>
-								Alphabetical
+								Alphabetically
 							</IconButton>
 							:
 							<IconButton
 								theme="alphabetic"
 								size="sm"
 								onClick={() => this.setState({ tableSort: "alphabetical" })}
-								title={`Sort alphabetical`}
-								alt={`Sort alphabetical`}
+								title={`Sort alphabetically`}
+								alt={`Sort alphabetically`}
 							>
-								Alphabetical
+								Alphabetically
 							</IconButton>
 						}
 					</div>
