@@ -1290,7 +1290,7 @@ export class LO9Grammar extends PureComponent {
 									title={`Telephone Regions of France`}
 								/> */}
 								<figure className="figure centre max1000">
-									{/* <a className="image-anchor frame centre max1000" href="/projects/richard//images/Carte_indicatifs_téléphoniques_français.svg" target="_blank" rel="noreferrer"> */}
+									{/* <a className="image-anchor frame centre max1000" href="/public//images/Carte_indicatifs_téléphoniques_français.svg" target="_blank" rel="noreferrer"> */}
 									<div className="svg-container" title="Click to hear">
 										<svg
 											height="542.438"

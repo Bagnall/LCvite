@@ -179,7 +179,7 @@ h2 {
 .ar-AE {
 	#content {
 		#hero {
-			background-image: url(/projects/richard/images/uae.jpg);
+			background-image: url(/public/images/uae.jpg);
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: cover;
@@ -189,7 +189,7 @@ h2 {
 .fr-FR {
 	#content {
 		#hero {
-			background-image: url(/images/paris.jpg);
+			background-image: url("/public/images/paris.jpg");
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: cover;
@@ -207,7 +207,7 @@ h2 {
 .de-DE {
 	#content {
 		#hero {
-			background-image: url(/projects/richard/images/berlin.jpg);
+			background-image: url("/public/images/berlin.jpg");
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: cover;
@@ -217,7 +217,7 @@ h2 {
 .es-US {
 	#content {
 		#hero {
-			background-image: url(/projects/richard/images/barcelona.jpg);
+			background-image: url("/public/images/barcelona.jpg");
 			background-repeat: no-repeat;
 			background-position: center top;
 			background-size: auto;
@@ -227,7 +227,7 @@ h2 {
 .uk-UA {
 	#content {
 		#hero {
-			background-image: url(/projects/richard/images/kyiv.jpg);
+			background-image: url("/public/images/kyiv.jpg");
 			background-repeat: no-repeat;
 			background-position: center top;
 			background-size: cover;
@@ -283,7 +283,7 @@ h2 {
 
 	#hero {
 		align-items: center;
-		background-image: url(/projects/richard/images/paris.jpg);
+		background-image: url(/public/images/paris.jpg);
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		background-size: 50%;
