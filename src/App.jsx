@@ -104,9 +104,15 @@ export default class App extends React.Component {
 
 		// lo is a 1-based "ID" in your URLs (e.g. ?lo=1). -1 means landing page.
 		const loParamRaw = urlParams.get("lo");
-		const loId = loParamRaw !== null ? parseInt(loParamRaw, 10) : NaN;
-		const isValidLoId = Number.isInteger(loId) && loId >= 1;
-
+		let loId;
+		let isValidLoId;
+		if (loParamRaw === 'demo') {
+			loId = "demo";
+			isValidLoId = true;
+		} else {
+			loId = loParamRaw !== null ? parseInt(loParamRaw, 10) : NaN;
+			isValidLoId = Number.isInteger(loId) && loId >= 1;
+		}
 		const currentLearningObject = isValidLoId ? loId : -1;
 
 		// Always load the index so the menu/landing page can render
