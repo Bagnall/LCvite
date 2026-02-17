@@ -683,6 +683,7 @@ export default class App extends React.Component {
 						style={{ "position": "absolute", "top": "-4rem" }}
 						tabIndex="-1"
 					/>
+
 					<IconButton
 						id={`backToLinkButton`}
 						size={`sm`}
@@ -690,6 +691,7 @@ export default class App extends React.Component {
 						title={`Click to go back to the link you came from`}
 						className={`back-to-link-button cursor-pointer`}
 						onClick={scrollBack}>Back to link</IconButton>
+
 					<ErrorLog
 						dialog={this.dialog}
 						errors={errors}
@@ -710,6 +712,7 @@ export default class App extends React.Component {
 						hideDialog={this.hideDialog}
 						content={dialogContent}
 					/>
+
 					<Congratulate
 						className={`${showSpeechError ? "show" : ""}`}
 						enabled={true}
@@ -758,6 +761,7 @@ export default class App extends React.Component {
 									languageCode={languageCode}
 									learningObjects={learningObjects}
 								/>
+
 								{showLandingPage ? null :
 									<div className="intro" name="intro">
 										<a
@@ -787,7 +791,8 @@ export default class App extends React.Component {
 											<img
 												id="themeImage"
 												src={`images/themes/LO${currentLearningObject}.svg`}
-												alt=""
+												alt={title}
+												title={title}
 											/>
 										</div>
 									</div>								}

@@ -47,7 +47,12 @@ audio.super-compact {
 	white-space: nowrap;
 	cursor: pointer;
 
-	text-decoration: none !important;
+	color: blue;
+
+	// text-decoration: none !important;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+
 	--progress-width: 100%;
 
 	svg {
@@ -55,6 +60,7 @@ audio.super-compact {
 		height: 16px;
 		margin-right: -8px;
 		vertical-align: middle;
+		border-bottom: 1px solid blue;
 	}
 
 	&::after {
@@ -62,7 +68,7 @@ audio.super-compact {
 		width: var(--progress-width);
 		height: 1px;
 		position: absolute;
-		bottom: 4px;
+		bottom: 2px;
 		left: 0;
 
 		/* Use currentColor so it works in light/dark modes */
@@ -74,18 +80,22 @@ audio.super-compact {
 		/* Helps with sub-pixel jitter */
 		will-change: width;
 	}
-	// &.playing {
-	// 	--progress-width: 0%;
+	&.playing {
+		text-decoration: none !important;
+		svg {
+			border-bottom: 1px solid transparent;
+		}
+		// 	--progress-width: 0%;
 
-	// 	/* Use currentColor so it works in light/dark modes */
-	// 	background-color: currentColor;
+		// 	/* Use currentColor so it works in light/dark modes */
+		// 	background-color: currentColor;
 
-	// 	/* Smooth updates */
-	// 	transition: width 0.2s linear;
+		// 	/* Smooth updates */
+		// 	transition: width 0.2s linear;
 
-	// 	/* Helps with sub-pixel jitter */
-	// 	will-change: width;
-	// }
+		// 	/* Helps with sub-pixel jitter */
+		// 	will-change: width;
+	}
 }
 
 /* -------------------------
